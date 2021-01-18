@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="h-100">
 
   {% include head.html %}
 
-  <body>
+  <body class="d-flex flex-column h-100">
 
-    {% include header.html %}
+    {% include navigation.html %}
 
-    <div class="container">
+    <main class="flex-shrink-0">
+      <div class="container">
         {{ content }}
-    </div>
+      </div>
+    </main>
 
     {% include footer.html %}
 

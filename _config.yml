@@ -29,3 +29,11 @@ defaults:
       type: "pages"
     values:
       header: false
+
+collections:
+  optimist:
+    output: true
+  #imke:
+  #  output: true
+
+collections_dir: docs

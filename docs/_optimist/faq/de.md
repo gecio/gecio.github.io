@@ -4,7 +4,6 @@ title:  "FAQ"
 permalink: /de/faq/
 ref: faq
 lang: de
-order: 10
 ---
 
 FAQ (deutsch)

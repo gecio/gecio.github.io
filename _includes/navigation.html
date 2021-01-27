@@ -15,13 +15,15 @@
             <!-- Navbar items -->
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    {% assign collections = site.collections | where_exp: "collections", "collections.label != 'posts'" %}
+                    {% for collection in collections %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Content
+                            {{ collection.label }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            {% assign pages=site.pages | where:"lang", page.lang | where:"header", false | sort:"order" %}
+                            {% assign pages=site.[collection.label] | where:"lang", page.lang %}
                             {% for p in pages %}
                             {% if p.title %}
                             <a class="dropdown-item {% if p.url == page.url %}active{% endif %}"
@@ -36,6 +38,7 @@
                             <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                         </div>
                     </li>
+                    {% endfor %}
 
 
                     <!-- disabled for later use -->

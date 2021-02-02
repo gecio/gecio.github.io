@@ -1,0 +1,11 @@
+<ul class="language-list">
+  {% for language in site.languages %}
+  <li class="language-list-item">
+    <a
+      class="language-list-link{% if language == site.active_lang %} active{% endif %}"
+      href="{% if language == site.default_lang %} {{site.baseurl}}{{page.url}} {% else %} {{site.baseurl}}/{{ language }}{{page.url}} {% endif %}"
+      >{{ language }}</a
+    >
+  </li>
+  {% endfor %}
+</ul>

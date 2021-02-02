@@ -1,0 +1,30 @@
+.language-list {
+  display: flex;
+  align-self: center;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.language-list-item {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.language-list-link {
+  height: $nav-list-item-height;
+  line-height: $nav-list-item-height;
+  padding-left: $gutter-spacing-sm;
+  padding-right: $gutter-spacing-sm;
+  display: block;
+
+  &:hover {
+    background-color: rgba($grey-lt-200, 0.8);
+  }
+
+  &.active {
+    background-color: rgba($grey-lt-200, 0.8);
+    color: #2a4365;
+    font-weight: 600;
+  }
+}

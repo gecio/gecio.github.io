@@ -24,6 +24,11 @@
 
 // Footer
 
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .site-footer {
   display: none;
 }

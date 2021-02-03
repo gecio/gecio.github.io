@@ -5,6 +5,7 @@ lang: en
 permalink: /optimist/specs/
 parent: Optimist
 nav_order: 2
+last_modified_date: 2021-03-02
 ---
 
 # Flavor Specifications

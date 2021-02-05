@@ -1,4 +1,10 @@
-.footer-link {
+.footer-navigation-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-navigation-link {
   position: relative;
   width: calc(50% - #{$sp-4});
   padding: $sp-4 $sp-6;
@@ -10,31 +16,31 @@
     border-color: $link-color;
     background-color: $grey-lt-000;
 
-    .footer-link__icon {
+    .footer-navigation-link__icon {
       color: $link-color;
     }
   }
 }
 
-.footer-link--previous {
+.footer-navigation-link--previous {
   text-align: right;
 
-  .footer-link__icon {
+  .footer-navigation-link__icon {
     left: $sp-5;
     transform: rotateY(180deg);
   }
 }
 
-.footer-link--next {
+.footer-navigation-link--next {
   margin-left: auto; // Always push to right, even if previous link does not exist
   text-align: left;
 
-  .footer-link__icon {
+  .footer-navigation-link__icon {
     right: $sp-5;
   }
 }
 
-.footer-link__icon {
+.footer-navigation-link__icon {
   position: absolute;
   top: calc(50% - 12px);
   width: 24px;
@@ -42,15 +48,37 @@
   color: $grey-lt-300;
 }
 
-.footer-link__sublabel {
+.footer-navigation-link__sublabel {
   display: block;
   font-size: $font-size-2;
   color: $grey-dk-200;
   line-height: 1.2;
 }
 
-.footer-link__label {
+.footer-navigation-link__label {
   display: block;
   font-size: $font-size-4;
   font-weight: 600;
+}
+
+.footer-external-links {
+  margin-bottom: 0;
+  margin-top: -$sp-1 !important;
+  padding-left: 0 !important;
+  text-align: right;
+  font-size: $font-size-3;
+}
+
+.footer-external-link {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &::before {
+    display: none;
+  }
+}
+
+.footer-external-link + .footer-external-link {
+  margin-left: $sp-5;
 }

@@ -12,13 +12,12 @@
   &:hover {
     background-image: none;
   }
-
 }
 
 // Navigation
 
 .site-nav {
-  padding-top: 1.4rem;
+  padding-top: $sp-7;
 }
 
 .nav-list .nav-list-item .nav-list-link,
@@ -48,16 +47,18 @@
   color: $link-color;
 }
 
+.nav-list-expander {
+  height: 2.75rem !important;
+  width: 2.75rem !important;
+  padding: 0.75rem !important;
+  color: $grey-dk-000 !important;
+}
+
 .nav-list-expander:hover {
-  background-color: $grey-lt-200;
+  background: none !important;
 }
 
 // Footer
-
-footer {
-  display: flex;
-  justify-content: space-between;
-}
 
 .site-footer {
   display: none;
@@ -87,11 +88,4 @@ footer {
   h1 {
     font-weight: 500;
   }
-}
-
-// Breadcrumbs
-
-.breadcrumb-nav {
-  padding-top: $gutter-spacing-sm;
-  padding-bottom: $gutter-spacing-sm;
 }

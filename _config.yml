@@ -21,6 +21,8 @@ parallel_localization: false
 language_labels:
   en: English
   de: Deutsch
+
+# Footer
 footer_navigation:
   previous:
     de: Zurück
@@ -28,6 +30,21 @@ footer_navigation:
   next:
     de: Weiter
     en: Next
+footer_external_links:
+  de:
+    - label: Website
+      url: https://gec.io
+    - label: Impressum
+      url: https://gec.io/impressum/
+    - label: Datenschutz
+      url: https://gec.io/datenschutz/
+  en:
+    - label: Website
+      url: https://gec.io
+    - label: Imprint
+      url: https://gec.io/impressum/
+    - label: Data Privacy
+      url: https://gec.io/datenschutz/
 
 # Plugins
 plugins:

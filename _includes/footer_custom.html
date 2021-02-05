@@ -1,17 +1,31 @@
-{% for sitepage in site.pages %} {% if sitepage.permalink == page.previous %}
+<div class="footer-navigation-links">
+  {% for site_page in site.pages %} {% if site_page.permalink == page.previous %}
 
-<a class="footer-link footer-link--previous" href="{{ site.baseurl }}{{ sitepage.permalink }}">
-  <svg class="footer-link__icon" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-  <span class="footer-link__sublabel">{{ site.footer_navigation.previous[site.active_lang] }}</span>
-  <span class="footer-link__label">{{ sitepage.title }}</span>
-</a>
+  <a class="footer-navigation-link footer-navigation-link--previous" href="{{ site.baseurl }}{{ site_page.permalink }}">
+    <svg class="footer-navigation-link__icon" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+    <span class="footer-navigation-link__sublabel">{{ site.footer_navigation.previous[site.active_lang] }}</span>
+    <span class="footer-navigation-link__label">{{ site_page.title }}</span>
+  </a>
 
-{% endif %} {% endfor %} {% for sitepage in site.pages %} {% if sitepage.permalink == page.next %}
+  {% endif %} {% endfor %} {% for site_page in site.pages %} {% if site_page.permalink == page.next %}
 
-<a class="footer-link footer-link--next" href="{{ site.baseurl }}{{ sitepage.permalink }}">
-  <svg class="footer-link__icon" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-  <span class="footer-link__sublabel">{{ site.footer_navigation.next[site.active_lang] }}</span>
-  <span class="footer-link__label">{{ sitepage.title }}</span>
-</a>
+  <a class="footer-navigation-link footer-navigation-link--next" href="{{ site.baseurl }}{{ site_page.permalink }}">
+    <svg class="footer-navigation-link__icon" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+    <span class="footer-navigation-link__sublabel">{{ site.footer_navigation.next[site.active_lang] }}</span>
+    <span class="footer-navigation-link__label">{{ site_page.title }}</span>
+  </a>
 
-{% endif %} {% endfor %}
+  {% endif %} {% endfor %}
+</div>
+
+<hr />
+
+<ul class="footer-external-links">
+  {% for footer_external_link in site.footer_external_links[site.active_lang] %}
+  <li class="footer-external-link">
+    <a href="{{ footer_external_link.url }}" target="_blank" rel="noopener noreferrer"
+      >{{ footer_external_link.label }}</a
+    >
+  </li>
+  {% endfor %}
+</ul>

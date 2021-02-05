@@ -4,7 +4,6 @@
   padding: $sp-4 $sp-6;
   border: 1px solid $border-color;
   border-radius: $border-radius;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
 
   &:hover,
   &:focus {
@@ -24,13 +23,6 @@
     left: $sp-5;
     transform: rotateY(180deg);
   }
-
-  &:hover,
-  &:focus {
-    .footer-link__icon {
-      transform: rotateY(180deg) translateX($sp-1);
-    }
-  }
 }
 
 .footer-link--next {
@@ -40,13 +32,6 @@
   .footer-link__icon {
     right: $sp-5;
   }
-
-  &:hover,
-  &:focus {
-    .footer-link__icon {
-      transform: translateX($sp-1);
-    }
-  }
 }
 
 .footer-link__icon {
@@ -55,7 +40,6 @@
   width: 24px;
   height: 24px;
   color: $grey-lt-300;
-  transition: color 0.15s ease, transform 0.15s ease;
 }
 
 .footer-link__sublabel {

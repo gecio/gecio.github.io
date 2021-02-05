@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Getting Started
+title: 1. Getting Started
 lang: en
 permalink: /imke/01-getting-started/
+previous: /imke/
+next: /imke/02-managing-projects/
 parent: IMKE
 nav_order: 1
 ---

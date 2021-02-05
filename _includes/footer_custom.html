@@ -1,0 +1,17 @@
+{% for sitepage in site.pages %} {% if sitepage.permalink == page.previous %}
+
+<a class="footer-link footer-link--previous" href="{{ site.baseurl }}{{ sitepage.permalink }}">
+  <svg class="footer-link__icon" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+  <span class="footer-link__sublabel">{{ site.footer_navigation.previous[site.active_lang] }}</span>
+  <span class="footer-link__label">{{ sitepage.title }}</span>
+</a>
+
+{% endif %} {% endfor %} {% for sitepage in site.pages %} {% if sitepage.permalink == page.next %}
+
+<a class="footer-link footer-link--next" href="{{ site.baseurl }}{{ sitepage.permalink }}">
+  <svg class="footer-link__icon" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+  <span class="footer-link__sublabel">{{ site.footer_navigation.next[site.active_lang] }}</span>
+  <span class="footer-link__label">{{ sitepage.title }}</span>
+</a>
+
+{% endif %} {% endfor %}

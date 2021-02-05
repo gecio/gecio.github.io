@@ -18,12 +18,16 @@ exclude_from_localization: ["_sass", "README.md"]
 # WORKAROUND: Disable parallel builds due to Windows systems not supporting this feature
 # See <https://github.com/untra/polyglot#compatibility>
 parallel_localization: false
-
-# Footer
-back_to_top: true
-back_to_top_text: "Back to top"
-last_edit_timestamp: true
-last_edit_time_format: "%F"
+language_labels:
+  en: English
+  de: Deutsch
+footer_navigation:
+  previous:
+    de: Zurück
+    en: Previous
+  next:
+    de: Weiter
+    en: Next
 
 # Plugins
 plugins:

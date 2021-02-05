@@ -4,6 +4,8 @@ title: FAQ
 lang: en
 permalink: /optimist/faq/
 parent: Optimist
+previous: /optimist/
+next: /optimist/specs/
 nav_order: 1
 last_modified_date: 2021-03-02
 ---

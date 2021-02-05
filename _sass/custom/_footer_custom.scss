@@ -1,0 +1,72 @@
+.footer-link {
+  position: relative;
+  width: calc(50% - #{$sp-4});
+  padding: $sp-4 $sp-6;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+
+  &:hover,
+  &:focus {
+    border-color: $link-color;
+    background-color: $grey-lt-000;
+
+    .footer-link__icon {
+      color: $link-color;
+    }
+  }
+}
+
+.footer-link--previous {
+  text-align: right;
+
+  .footer-link__icon {
+    left: $sp-5;
+    transform: rotateY(180deg);
+  }
+
+  &:hover,
+  &:focus {
+    .footer-link__icon {
+      transform: rotateY(180deg) translateX($sp-1);
+    }
+  }
+}
+
+.footer-link--next {
+  margin-left: auto; // Always push to right, even if previous link does not exist
+  text-align: left;
+
+  .footer-link__icon {
+    right: $sp-5;
+  }
+
+  &:hover,
+  &:focus {
+    .footer-link__icon {
+      transform: translateX($sp-1);
+    }
+  }
+}
+
+.footer-link__icon {
+  position: absolute;
+  top: calc(50% - 12px);
+  width: 24px;
+  height: 24px;
+  color: $grey-lt-300;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.footer-link__sublabel {
+  display: block;
+  font-size: $font-size-2;
+  color: $grey-dk-200;
+  line-height: 1.2;
+}
+
+.footer-link__label {
+  display: block;
+  font-size: $font-size-4;
+  font-weight: 600;
+}

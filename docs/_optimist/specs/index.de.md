@@ -3,8 +3,6 @@ layout: default
 title: Flavor Spezifikationen
 lang: de
 permalink: /optimist/specs/
-parent: Optimist
-previous: /optimist/faq/
 nav_order: 2
 last_modified_date: 2021-03-02
 ---

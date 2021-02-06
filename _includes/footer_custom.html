@@ -1,21 +1,21 @@
 <div class="footer-navigation-links">
-  {% for site_page in site.pages %} {% if site_page.permalink == page.previous %}
+  {% if page.previous %}
 
-  <a class="footer-navigation-link footer-navigation-link--previous" href="{{ site.baseurl }}{{ site_page.permalink }}">
+  <a class="footer-navigation-link footer-navigation-link--previous" href="{{ site.baseurl }}{{ page.previous.permalink }}">
     <svg class="footer-navigation-link__icon" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
     <span class="footer-navigation-link__sublabel">{{ site.footer_navigation.previous[site.active_lang] }}</span>
-    <span class="footer-navigation-link__label">{{ site_page.title }}</span>
+    <span class="footer-navigation-link__label">{{ page.previous.title }}</span>
   </a>
 
-  {% endif %} {% endfor %} {% for site_page in site.pages %} {% if site_page.permalink == page.next %}
+  {% endif %} {% if page.next %}
 
-  <a class="footer-navigation-link footer-navigation-link--next" href="{{ site.baseurl }}{{ site_page.permalink }}">
+  <a class="footer-navigation-link footer-navigation-link--next" href="{{ site.baseurl }}{{ page.next.permalink }}">
     <svg class="footer-navigation-link__icon" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
     <span class="footer-navigation-link__sublabel">{{ site.footer_navigation.next[site.active_lang] }}</span>
-    <span class="footer-navigation-link__label">{{ site_page.title }}</span>
+    <span class="footer-navigation-link__label">{{ page.next.title }}</span>
   </a>
 
-  {% endif %} {% endfor %}
+  {% endif %}
 </div>
 
 <hr />

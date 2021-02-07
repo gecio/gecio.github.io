@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Projekte verwalten
 lang: de
 permalink: /imke/managing-projects/

@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Sub
 lang: en
 permalink: /imke/sub/

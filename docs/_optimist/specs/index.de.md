@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Flavor Spezifikationen
 lang: de
 permalink: /optimist/specs/

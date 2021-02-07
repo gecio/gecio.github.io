@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Erste Schritte
 lang: de
 permalink: /imke/getting-started/

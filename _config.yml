@@ -94,10 +94,28 @@ exclude:
 collections:
   optimist:
     output: true
+    layout: "default"
   imke:
     output: true
+    layout: "default"
 
 collections_dir: docs
+
+defaults:
+  - scope:
+      path: ""
+      type: "optimist"
+    values:
+      layout: "default"
+
+  - scope:
+      path: ""
+      type: "imke"
+    values:
+      layout: "default"
+
+
+
 
 just_the_docs:
   # Define which collections are used in just-the-docs

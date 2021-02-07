@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Getting Started
 lang: en
 permalink: /imke/getting-started/

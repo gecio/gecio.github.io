@@ -1,5 +1,4 @@
 ---
-layout: default
 title: FAQ
 lang: en
 permalink: /optimist/faq/

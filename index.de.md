@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Wilkommen!
+title: Willkommen!
 lang: de
 permalink: /
-next: /imke/
-nav_order: 1
 ---
 
 # Wilkommen!

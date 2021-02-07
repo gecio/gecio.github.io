@@ -94,10 +94,8 @@ exclude:
 collections:
   optimist:
     output: true
-    layout: "default"
   imke:
     output: true
-    layout: "default"
 
 collections_dir: docs
 

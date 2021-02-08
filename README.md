@@ -12,6 +12,8 @@ This repository contains the documentation for the Optimist platform.
 
 ## Setup
 
+Hint: A quickstart devcontainer is [down below](#Using-the-(experimental)-docker-environment).
+
 To be able to build and run this project, Ruby 2.4 or higher is required. In addition, RubyGems, GCC and Make must be installed. See
 **[Jekyll Installation](https://jekyllrb.com/docs/installation/)** for further details.
 

@@ -1,0 +1,116 @@
+@import "./footer_custom";
+@import "./header_custom";
+@import "./title";
+
+// Site dimensions
+// Double calc() is a workaround for sass/sass#2378
+.main {
+  @include mq(md) {
+    position: relative;
+    max-width: $content-width;
+    margin-left: $nav-width-md;
+  }
+
+  @include mq(lg) {
+    margin-left: calc( 
+      max( 
+        calc( (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width} ),
+        #{$nav-width}
+      )
+    );
+  }
+}
+
+
+// Title
+
+.site-title {
+  font-size: 24px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+
+  &:hover {
+    background-image: none;
+  }
+}
+
+// Navigation
+
+.site-nav {
+  padding-top: $sp-7;
+}
+
+.nav-category {
+  padding-left: $sp-4;
+
+}
+
+.nav-list .nav-list-item .nav-list-link,
+.nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-link {
+  padding-left: $sp-4;
+  padding-right: $sp-4;
+  padding-top: $sp-1;
+  padding-bottom: $sp-1;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  color: #333;
+}
+
+.nav-list .nav-list-item .nav-list-link:hover,
+.nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-link:hover {
+  background-image: none;
+  background-color: $grey-lt-200;
+  color: $link-color;
+}
+
+.nav-list .nav-list-item .nav-list-link.active,
+.nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-link.active {
+  background-image: none;
+  background-color: $white;
+  border-color: $border-color;
+  color: $link-color;
+}
+
+.nav-list-expander {
+  height: 2.75rem !important;
+  width: 2.75rem !important;
+  padding: 0.75rem !important;
+  color: $grey-dk-000 !important;
+}
+
+.nav-list-expander:hover {
+  background: none !important;
+}
+
+// Footer
+
+.site-footer {
+  display: none;
+}
+
+// Typography
+
+.main-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2.5em;
+    margin-bottom: 0.5em;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 1.75em;
+    margin-bottom: 0.5em;
+  }
+
+  h1 {
+    font-weight: 500;
+  }
+}

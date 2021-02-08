@@ -1,0 +1,65 @@
+//
+// Typography
+//
+
+$content-line-height: 1.6;
+
+//
+// Font size
+//
+
+$font-size-1: 10px;
+$font-size-1-sm: 11px;
+$font-size-2: 12px;
+$font-size-3: 14px;
+$font-size-4: 16px;
+$font-size-5: 16px;
+$font-size-6: 20px;
+$font-size-7: 28px;
+$font-size-8: 32px;
+$font-size-9: 36px;
+$font-size-10: 42px;
+$font-size-10-sm: 48px;
+
+//
+// Colors
+//
+
+$grey-dk-000: #aeb4bd;
+$grey-dk-100: #858a93;
+$grey-dk-200: #545961;
+$grey-dk-250: #353940;
+$grey-dk-300: #1e1f24;
+
+$grey-lt-000: #f7fafc;
+$grey-lt-100: #f0f4f7;
+$grey-lt-200: #e6eaf0;
+$grey-lt-300: #d5dae0;
+
+$body-background-color: #fefefe;
+$sidebar-color: $grey-lt-100;
+$body-text-color: $grey-dk-250;
+$nav-child-link-color: #2b6cb0;
+$link-color: #2b6cb0;
+
+//
+// Borders
+//
+
+$border-radius: 3px;
+$border-color: $grey-lt-200;
+
+//
+// Grid & sizes
+//
+
+$gutter-spacing: $sp-10;
+$gutter-spacing-sm: $sp-6;
+$nav-width: 280px;
+$nav-width-md: 280px;
+$nav-list-item-height: $sp-7;
+$nav-list-item-height-sm: $sp-9;
+$nav-list-expander-right: true;
+$content-width: 1000px;
+$header-height: 90px;
+$transition-duration: 250ms;

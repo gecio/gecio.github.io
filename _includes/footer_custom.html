@@ -1,0 +1,31 @@
+<div class="footer-navigation-links">
+  {% if page.previous %}
+
+  <a class="footer-navigation-link footer-navigation-link--previous" href="{{ site.baseurl }}{{ page.previous.permalink }}">
+    <svg class="footer-navigation-link__icon" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+    <span class="footer-navigation-link__sublabel">{{ site.footer_navigation.previous[site.active_lang] }}</span>
+    <span class="footer-navigation-link__label">{{ page.previous.title }}</span>
+  </a>
+
+  {% endif %} {% if page.next %}
+
+  <a class="footer-navigation-link footer-navigation-link--next" href="{{ site.baseurl }}{{ page.next.permalink }}">
+    <svg class="footer-navigation-link__icon" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+    <span class="footer-navigation-link__sublabel">{{ site.footer_navigation.next[site.active_lang] }}</span>
+    <span class="footer-navigation-link__label">{{ page.next.title }}</span>
+  </a>
+
+  {% endif %}
+</div>
+
+<hr />
+
+<ul class="footer-external-links">
+  {% for footer_external_link in site.footer_external_links[site.active_lang] %}
+  <li class="footer-external-link">
+    <a href="{{ footer_external_link.url }}" target="_blank" rel="noopener noreferrer"
+      >{{ footer_external_link.label }}</a
+    >
+  </li>
+  {% endfor %}
+</ul>

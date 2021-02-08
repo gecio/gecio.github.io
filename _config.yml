@@ -1,39 +1,139 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-title:
-  en: Optimist Documentation
-  de: Optimist Dokumentation
-language:
+title: Documentation
+description: Documentation
+
+# URLs
+baseurl: ""
+url: ""
+permalink: pretty
+
+# Theme
+theme: "just-the-docs"
+color_scheme: gec
+
+# i18n
+languages: ["en", "de"]
+default_lang: "en"
+exclude_from_localization: ["_sass", "README.md"]
+# WORKAROUND: Disable parallel builds due to Windows systems not supporting this feature
+# See <https://github.com/untra/polyglot#compatibility>
+parallel_localization: false
+language_labels:
   en: English
   de: Deutsch
-description:
-  en: TODO
-  de: TODO
-index:
+
+# Footer
+footer_navigation:
+  previous:
+    de: Zurück
+    en: Previous
+  next:
+    de: Weiter
+    en: Next
+footer_external_links:
+  de:
+    - label: Website
+      url: https://gec.io
+    - label: Impressum
+      url: https://gec.io/impressum/
+    - label: Datenschutz
+      url: https://gec.io/datenschutz/
   en:
-  de: de/home/
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://docs.innovo.cloud" # the base hostname & protocol for your site
+    - label: Website
+      url: https://gec.io
+    - label: Imprint
+      url: https://gec.io/impressum/
+    - label: Data Privacy
+      url: https://gec.io/datenschutz/
 
-# Build settings
-markdown: kramdown
+# Plugins
+plugins:
+  - jekyll-polyglot
 
-defaults:
-  - scope:
-      type: "pages"
-    values:
-      header: false
+# Styles
+# WORKAROUND
+# We disable sourcemaps, otherwhise i18n via polyglot leads to broken styles compiled from scss
+# See <https://github.com/untra/polyglot#compatibility>, <https://github.com/untra/polyglot/issues/107#issuecomment-598274075>
+sass:
+  sourcemap: never
 
+# Markdown
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# HTML
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+
+# Build
+exclude:
+  [
+    "node_modules/",
+    "just-the-docs.gemspec",
+    "Gemfile",
+    "Gemfile.lock",
+    "package.json",
+    "package-lock.json",
+    "script/",
+    "LICENSE.txt",
+    "lib/",
+    "bin/",
+    "README.md",
+    "Rakefile",
+    "docs/tests/",
+  ]
+
+# Collections
 collections:
   optimist:
     output: true
-  #imke:
-  #  output: true
+  imke:
+    output: true
 
 collections_dir: docs
+
+defaults:
+  - scope:
+      path: ""
+      type: "optimist"
+    values:
+      layout: "default"
+
+  - scope:
+      path: ""
+      type: "imke"
+    values:
+      layout: "default"
+
+
+
+
+just_the_docs:
+  # Define which collections are used in just-the-docs
+  collections:
+    # Reference the "docs" collection
+    optimist:
+      # Give the collection a name
+      name: Optimist
+      # Exclude the collection from the navigation
+      # Supports true or false (default)
+      nav_exclude: false
+      # Exclude the collection from the search
+      # Supports true or false (default)
+      search_exclude: false
+    
+    imke: 
+      name: IMKE
+      # Exclude the collection from the navigation
+      # Supports true or false (default)
+      nav_exclude: false
+      # Exclude the collection from the search
+      # Supports true or false (default)
+      search_exclude: false

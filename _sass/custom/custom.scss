@@ -2,6 +2,26 @@
 @import "./header_custom";
 @import "./title";
 
+// Site dimensions
+// Double calc() is a workaround for sass/sass#2378
+.main {
+  @include mq(md) {
+    position: relative;
+    max-width: $content-width;
+    margin-left: $nav-width-md;
+  }
+
+  @include mq(lg) {
+    margin-left: calc( 
+      max( 
+        calc( (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width} ),
+        #{$nav-width}
+      )
+    );
+  }
+}
+
+
 // Title
 
 .site-title {
@@ -18,6 +38,11 @@
 
 .site-nav {
   padding-top: $sp-7;
+}
+
+.nav-category {
+  padding-left: $sp-4;
+
 }
 
 .nav-list .nav-list-item .nav-list-link,

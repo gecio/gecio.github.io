@@ -1,0 +1,106 @@
+default:
+  tags:
+    - docker-autoscaling
+
+stages:
+  - build
+  - tagging
+  - deploy
+
+
+# Build Docs
+build_docs:
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+  variables:
+    IMAGE_TAG: $CI_REGISTRY_IMAGE/docs:${CI_COMMIT_SHA}
+    DOCKER_TLS_CERTDIR: ""
+    DOCKER_HOST: "tcp://docker:2375"
+  image: docker:stable
+  services:
+    - docker:dind
+  stage: build
+  script:
+    - docker build -t $IMAGE_TAG -f .devcontainer/Dockerfile .
+    - docker push $IMAGE_TAG
+
+
+# Dev
+Tag doc Dev Image:
+  variables:
+    GIT_STRATEGY: none
+    IMAGE_TAG: dev
+    DOCKER_TLS_CERTDIR: ""
+    DOCKER_HOST: "tcp://docker:2375"
+  stage: tagging
+  image: docker:stable # docker:git
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+  script:
+    - docker pull ${CI_REGISTRY_IMAGE}/docs:${CI_COMMIT_SHA}
+    - docker tag ${CI_REGISTRY_IMAGE}/docs:${CI_COMMIT_SHA} ${CI_REGISTRY_IMAGE}/docs:${IMAGE_TAG}
+    - docker push ${CI_REGISTRY_IMAGE}/docs:${IMAGE_TAG}
+  except:
+    - master
+
+# Tag Production (latest)
+Tag doc Prod Image:
+  variables:
+    GIT_STRATEGY: none
+    IMAGE_TAG: latest
+    DOCKER_TLS_CERTDIR: ""
+    DOCKER_HOST: "tcp://docker:2375"
+  stage: tagging
+  image: docker:stable # docker:git
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+  script:
+    - docker pull ${CI_REGISTRY_IMAGE}/docs:${CI_COMMIT_SHA}
+    - docker tag ${CI_REGISTRY_IMAGE}/docs:${CI_COMMIT_SHA} ${CI_REGISTRY_IMAGE}/docs:${IMAGE_TAG}
+    - docker push ${CI_REGISTRY_IMAGE}/docs:${IMAGE_TAG}
+  only:
+    - master
+
+
+
+
+
+# # Update DocsOnKubernetes (Production)
+# Update DocsOnKubernetes:
+#   variables:
+#     GIT_STRATEGY: none
+#   stage: deploy
+#   image: ainmosni/kube-deploy:latest
+#   script:
+#     - kubectl --kubeconfig=kubeconfig set image -n openstack-docs deployment/openstack-docs openstack-docs=${CI_REGISTRY_IMAGE}/docs:${CI_COMMIT_SHA}
+#   dependencies: []
+#   before_script:
+#     - echo ${KUBECONFIG_PROD} | base64 -d > kubeconfig
+#   only:
+#     refs:
+#       - master
+#     changes:
+#       - documentation/**/*
+
+# # Update DevDocsOnKubernetes
+# Update DevDocsOnKubernetes:
+#   variables:
+#     GIT_STRATEGY: none
+#   stage: deploy
+#   image: ainmosni/kube-deploy:latest
+#   script:
+#     - kubectl --kubeconfig=kubeconfig set image -n dev-openstack-docs deployment/dev-openstack-docs dev-openstack-docs=${CI_REGISTRY_IMAGE}/docs:${CI_COMMIT_SHA}
+#   dependencies: []
+#   before_script:
+#     - echo ${KUBECONFIG_DEV} | base64 -d > kubeconfig
+#   only:
+#     refs:
+#       - /^docs-.*$/
+#     changes:
+#       - documentation/**/*
+#   except:
+#     - master

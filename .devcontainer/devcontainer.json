@@ -5,7 +5,8 @@
 		"args": {
 			"NODE_VERSION": "lts/*"
 		},
-		"target": "devcontainer" 	
+		"target": "devcontainer",
+		"context": ".."
 	},
 
 	"mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],

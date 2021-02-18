@@ -7,53 +7,31 @@ stages:
   - tagging
   - deploy
 
+variables:
+  DOCKER_TLS_CERTDIR: ""
+  DOCKER_HOST: "tcp://docker:2375"
 
 # Build Docs
-build_docs:
+Build Image:
   before_script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-  variables:
-    IMAGE_TAG: $CI_REGISTRY_IMAGE/docs:${CI_COMMIT_SHA}
-    DOCKER_TLS_CERTDIR: ""
-    DOCKER_HOST: "tcp://docker:2375"
   image: docker:stable
   services:
     - docker:dind
   stage: build
   script:
-    - docker build -t $IMAGE_TAG -f .devcontainer/Dockerfile .
-    - docker push $IMAGE_TAG
-
-
-# Dev
-Tag doc Dev Image:
-  variables:
-    GIT_STRATEGY: none
-    IMAGE_TAG: dev
-    DOCKER_TLS_CERTDIR: ""
-    DOCKER_HOST: "tcp://docker:2375"
-  stage: tagging
-  image: docker:stable # docker:git
-  services:
-    - docker:dind
-  before_script:
-    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-  script:
-    - docker pull ${CI_REGISTRY_IMAGE}/docs:${CI_COMMIT_SHA}
-    - docker tag ${CI_REGISTRY_IMAGE}/docs:${CI_COMMIT_SHA} ${CI_REGISTRY_IMAGE}/docs:${IMAGE_TAG}
-    - docker push ${CI_REGISTRY_IMAGE}/docs:${IMAGE_TAG}
-  except:
+    - docker build -t $CI_REGISTRY_IMAGE/docs:${CI_COMMIT_SHA} -f .devcontainer/Dockerfile .
+    - docker push $CI_REGISTRY_IMAGE/docs:${CI_COMMIT_SHA}
+  only:
     - master
+    - merge_requests
 
-# Tag Production (latest)
-Tag doc Prod Image:
+
+.Tag Image:
   variables:
     GIT_STRATEGY: none
-    IMAGE_TAG: latest
-    DOCKER_TLS_CERTDIR: ""
-    DOCKER_HOST: "tcp://docker:2375"
   stage: tagging
-  image: docker:stable # docker:git
+  image: docker:stable
   services:
     - docker:dind
   before_script:
@@ -62,45 +40,47 @@ Tag doc Prod Image:
     - docker pull ${CI_REGISTRY_IMAGE}/docs:${CI_COMMIT_SHA}
     - docker tag ${CI_REGISTRY_IMAGE}/docs:${CI_COMMIT_SHA} ${CI_REGISTRY_IMAGE}/docs:${IMAGE_TAG}
     - docker push ${CI_REGISTRY_IMAGE}/docs:${IMAGE_TAG}
+    
+Tag Latest:
+  extends: .Tag Image
+  variables:
+    IMAGE_TAG: latest
   only:
     - master
 
+Tag Dev:
+  extends: .Tag Image
+  variables:
+    IMAGE_TAG: dev
+  only:
+    - merge_requests
 
 
+.Update Environment:
+  variables:
+    GIT_STRATEGY: none
+  stage: deploy
+  image: 
+    name: bitnami/kubectl:latest
+    entrypoint: [""]
+  script:
+    - kubectl --kubeconfig=/tmp/kubeconfig set image -n ${NAMESPACE} deployment/${NAMESPACE} ${NAMESPACE}=${CI_REGISTRY_IMAGE}/docs:${CI_COMMIT_SHA}
+  dependencies: []
 
+Update Prod:
+  extends: .Update Environment
+  variables:
+    NAMESPACE: gec-docs
+  before_script:
+    - echo ${PROD_GEC_DOCS_KUBECONFIG} | base64 -d > /tmp/kubeconfig
+  only: 
+    - master
 
-# # Update DocsOnKubernetes (Production)
-# Update DocsOnKubernetes:
-#   variables:
-#     GIT_STRATEGY: none
-#   stage: deploy
-#   image: ainmosni/kube-deploy:latest
-#   script:
-#     - kubectl --kubeconfig=kubeconfig set image -n openstack-docs deployment/openstack-docs openstack-docs=${CI_REGISTRY_IMAGE}/docs:${CI_COMMIT_SHA}
-#   dependencies: []
-#   before_script:
-#     - echo ${KUBECONFIG_PROD} | base64 -d > kubeconfig
-#   only:
-#     refs:
-#       - master
-#     changes:
-#       - documentation/**/*
-
-# # Update DevDocsOnKubernetes
-# Update DevDocsOnKubernetes:
-#   variables:
-#     GIT_STRATEGY: none
-#   stage: deploy
-#   image: ainmosni/kube-deploy:latest
-#   script:
-#     - kubectl --kubeconfig=kubeconfig set image -n dev-openstack-docs deployment/dev-openstack-docs dev-openstack-docs=${CI_REGISTRY_IMAGE}/docs:${CI_COMMIT_SHA}
-#   dependencies: []
-#   before_script:
-#     - echo ${KUBECONFIG_DEV} | base64 -d > kubeconfig
-#   only:
-#     refs:
-#       - /^docs-.*$/
-#     changes:
-#       - documentation/**/*
-#   except:
-#     - master
+Update Dev:
+  extends: .Update Environment
+  variables:
+    NAMESPACE: dev-gec-docs
+  before_script:
+    - echo ${DEV_GEC_DOCS_KUBECONFIG} | base64 -d > /tmp/kubeconfig
+  only:
+    - merge_requests

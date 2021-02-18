@@ -14,14 +14,14 @@ ENV LANG=en_US.UTF-8 \
 ADD Gemfile Gemfile
 ADD Gemfile.lock Gemfile.lock
 RUN gem install bundler
-RUN bundle install 
+RUN bundle install
 
 # [Option] Install Node.js
 ARG NODE_VERSION="lts/*"
 RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"
 
 # [Optional] Uncomment this section to install additional OS packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive 
+# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive
     # && apt-get -y install --no-install-recommends python3 python3-pip python3-setuptools python3-wheel
 
 # [Optional] Uncomment this line to install additional gems.

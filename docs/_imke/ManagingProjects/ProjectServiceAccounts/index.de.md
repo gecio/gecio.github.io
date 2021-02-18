@@ -1,7 +1,7 @@
 ---
 title: Service Account Tokens verwalten
 lang: de
-permalink: /imke/managingprojects/projectserviceaccounts
+permalink: /imke/managingprojects/projectserviceaccounts/
 nav_order: 3
 parent: iMKE-Projekte verwalten
 ---

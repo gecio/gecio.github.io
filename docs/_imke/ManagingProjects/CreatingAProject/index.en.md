@@ -1,7 +1,7 @@
 ---
 title: Creating a Project
 lang: en
-permalink: /imke/managingprojects/creatingaproject
+permalink: /imke/managingprojects/creatingaproject/
 nav_order: 1
 parent: Managing iMKE-Projects
 ---

@@ -1,7 +1,7 @@
 ---
 title: Das Web Terminal
 lang: de
-permalink: /imke/accessmanagement/webterminal
+permalink: /imke/accessmanagement/webterminal/
 nav_order: 3
 parent: Access Management
 ---

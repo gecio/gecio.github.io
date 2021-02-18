@@ -1,7 +1,7 @@
 ---
 title: Aktualisierung des Betriebssystems auf Worker-Nodes
 lang: de
-permalink: /imke/nodedeployments/upgradingnodeos
+permalink: /imke/nodedeployments/upgradingnodeos/
 nav_order: 4
 parent: Node Deployments
 ---

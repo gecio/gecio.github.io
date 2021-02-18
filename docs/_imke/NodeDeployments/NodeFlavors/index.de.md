@@ -1,7 +1,7 @@
 ---
 title: Node-Flavors (Leistung) konfigurieren
 lang: de
-permalink: /imke/nodedeployments/nodeflavors
+permalink: /imke/nodedeployments/nodeflavors/
 nav_order: 1
 parent: Node Deployments
 ---

@@ -1,7 +1,7 @@
 ---
 title: Openstack Credentials ändern
 lang: de
-permalink: /imke/clusterlifecycle/openstackcredentials
+permalink: /imke/clusterlifecycle/openstackcredentials/
 nav_order: 3
 parent: Cluster Lebenszyklus
 ---

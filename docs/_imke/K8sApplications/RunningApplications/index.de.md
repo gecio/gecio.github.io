@@ -1,7 +1,7 @@
 ---
 title: Eine Anwendung in Kubernetes starten
 lang: de
-permalink: /imke/k8sapplications/runningapplications
+permalink: /imke/k8sapplications/runningapplications/
 nav_order: 1
 parent: Anwendungen in Kubernetes
 ---

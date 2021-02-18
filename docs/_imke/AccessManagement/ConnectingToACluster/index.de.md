@@ -1,7 +1,7 @@
 ---
 title: Mit einem Cluster verbinden
 lang: de
-permalink: /imke/accessmanagement/connectingtoacluster
+permalink: /imke/accessmanagement/connectingtoacluster/
 nav_order: 1
 parent: Access Management
 ---

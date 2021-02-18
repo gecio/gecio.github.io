@@ -1,7 +1,7 @@
 ---
 title: Connecting to a Cluster
 lang: en
-permalink: /imke/accessmanagement/connectingtoacluster
+permalink: /imke/accessmanagement/connectingtoacluster/
 nav_order: 1
 parent: Access Management
 ---

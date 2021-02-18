@@ -1,7 +1,7 @@
 ---
 title: Kubernetes Service Accounts verwalten
 lang: de
-permalink: /imke/k8sapplications/serviceaccounts
+permalink: /imke/k8sapplications/serviceaccounts/
 nav_order: 2
 parent: Anwendungen in Kubernetes
 ---

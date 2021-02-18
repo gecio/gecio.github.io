@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 lang: en
-permalink: /imke/gettingstarted
+permalink: /imke/gettingstarted/
 nav_order: 2
 has_children: false
 ---

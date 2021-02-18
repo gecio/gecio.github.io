@@ -1,7 +1,7 @@
 ---
 title: About iMKE
 lang: en
-permalink: /imke/about
+permalink: /imke/about/
 nav_order: 1
 has_children: true
 ---

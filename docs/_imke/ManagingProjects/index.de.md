@@ -1,7 +1,7 @@
 ---
 title: iMKE-Projekte verwalten
 lang: de
-permalink: /imke/managingprojects
+permalink: /imke/managingprojects/
 nav_order: 3
 has_children: true
 ---

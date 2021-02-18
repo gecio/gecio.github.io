@@ -1,7 +1,7 @@
 ---
 title: Access Management
 lang: de
-permalink: /imke/accessmanagement
+permalink: /imke/accessmanagement/
 nav_order: 6
 has_children: true
 ---

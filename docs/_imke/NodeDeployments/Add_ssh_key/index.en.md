@@ -1,7 +1,7 @@
 ---
 title: Add ssh key to an existing cluster
 lang: en
-permalink: /imke/nodedeployments/add_ssh_key
+permalink: /imke/nodedeployments/add_ssh_key/
 nav_order: 3
 parent: Node Deployments
 ---

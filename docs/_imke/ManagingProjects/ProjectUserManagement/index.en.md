@@ -1,7 +1,7 @@
 ---
 title: Project User Management
 lang: en
-permalink: /imke/managingprojects/projectusermanagement
+permalink: /imke/managingprojects/projectusermanagement/
 nav_order: 2
 parent: Managing iMKE-Projects
 ---

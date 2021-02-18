@@ -1,7 +1,7 @@
 ---
 title: Benutzer Management im Projekt
 lang: de
-permalink: /imke/managingprojects/projectusermanagement
+permalink: /imke/managingprojects/projectusermanagement/
 nav_order: 2
 parent: iMKE-Projekte verwalten
 ---

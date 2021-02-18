@@ -1,7 +1,7 @@
 ---
 title: Cluster Lebenszyklus
 lang: de
-permalink: /imke/managingprojects/clusterlifecycle
+permalink: /imke/managingprojects/clusterlifecycle/
 nav_order: 4
 has_children: true
 ---

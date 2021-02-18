@@ -1,7 +1,7 @@
 ---
 title: Creating a Cluster
 lang: en
-permalink: /imke/clusterlifecycle/creatingacluster
+permalink: /imke/clusterlifecycle/creatingacluster/
 nav_order: 1
 parent: Cluster Lifecycle
 ---

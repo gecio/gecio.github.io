@@ -1,7 +1,7 @@
 ---
 title: Ein Projekt anlegen
 lang: de
-permalink: /imke/managingprojects/creatingaproject
+permalink: /imke/managingprojects/creatingaproject/
 nav_order: 1
 parent: iMKE-Projekte verwalten
 ---

@@ -1,7 +1,7 @@
 ---
 title: Einen Cluster löschen
 lang: de
-permalink: /imke/clusterlifecycle/deletingacluster
+permalink: /imke/clusterlifecycle/deletingacluster/
 nav_order: 4
 parent: Cluster Lebenszyklus
 ---

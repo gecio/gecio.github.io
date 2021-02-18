@@ -1,7 +1,7 @@
 ---
 title: Node Deployments
 lang: en
-permalink: /imke/nodedeployments
+permalink: /imke/nodedeployments/
 nav_order: 5
 has_children: true
 ---

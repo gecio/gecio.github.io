@@ -1,7 +1,7 @@
 ---
 title: Cluster Nodes Usage Rate
 lang: en
-permalink: /imke/nodedeployments/clusternodesusagerate
+permalink: /imke/nodedeployments/clusternodesusagerate/
 nav_order: 2
 parent: Node Deployments
 ---

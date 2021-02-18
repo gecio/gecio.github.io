@@ -1,7 +1,7 @@
 ---
 title: Erste Schritte
 lang: de
-permalink: /imke/gettingstarted
+permalink: /imke/gettingstarted/
 nav_order: 2
 has_children: false
 ---

@@ -1,7 +1,7 @@
 ---
 title: Time Zone Management
 lang: en
-permalink: /imke/k8sapplications/timezones
+permalink: /imke/k8sapplications/timezones/
 nav_order: 4
 parent: Kubernetes Applications
 ---

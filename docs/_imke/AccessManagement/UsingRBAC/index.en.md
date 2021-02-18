@@ -1,7 +1,7 @@
 ---
 title: Role-Based Access Control (RBAC)
 lang: en
-permalink: /imke/accessmanagement/usingrbac
+permalink: /imke/accessmanagement/usingrbac/
 nav_order: 2
 parent: Access Management
 ---

@@ -1,7 +1,7 @@
 ---
 title: Kubernetes Updates
 lang: de
-permalink: /imke/clusterlifecycle/upgradingacluster
+permalink: /imke/clusterlifecycle/upgradingacluster/
 nav_order: 2
 parent: Cluster Lebenszyklus
 ---

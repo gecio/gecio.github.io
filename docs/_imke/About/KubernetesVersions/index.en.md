@@ -1,7 +1,7 @@
 ---
 title: Supported Kubernetes Versions
 lang: en
-permalink: /imke/about/kubernetesversions
+permalink: /imke/about/kubernetesversions/
 nav_order: 4
 parent: About iMKE
 ---

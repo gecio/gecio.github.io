@@ -1,7 +1,7 @@
 ---
 title: Managing Service Account Tokens
 lang: en
-permalink: /imke/managingprojects/projectserviceaccounts
+permalink: /imke/managingprojects/projectserviceaccounts/
 nav_order: 3
 parent: Managing iMKE-Projects
 ---

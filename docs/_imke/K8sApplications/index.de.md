@@ -1,7 +1,7 @@
 ---
 title: Anwendungen in Kubernetes
 lang: de
-permalink: /imke/k8sapplications
+permalink: /imke/k8sapplications/
 nav_order: 7
 has_children: true
 ---

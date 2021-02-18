@@ -25,7 +25,6 @@ In order to apply port forwarding on a floating IP, the following information is
 
 The example below demonstrates creation of port forwarding on a floating IP, using the required options:
 
-
 ```
 $ openstack floating ip port forwarding create \
      --internal-ip-address 10.0.0.14 \
@@ -45,14 +44,12 @@ Within a project, a list of port forwarding rules applied to specific floating I
 The command above can be further refined using `--sort-column` `--port`, `--external-protcol-port` and `--protocol` flags before the floating IP.
 
 
-
 Display details of a specific port forwarding rule
 ---------------
 
 To display the specific details of a Port Forwarding rule for a Floating IP, the following command can be used:
 
 `$ openstack floating ip port forwarding show <floating-ip> <port-forwarding-id>`
-
 
 
 Modifying Floating IP Port Forwarding Properties
@@ -96,3 +93,5 @@ The following command removes the port forwarding rule from a floating ip:
 
 `$ openstack floating ip port forwarding delete <floating-ip> <port-forwarding-id>`
 
+     
+     

@@ -11,7 +11,8 @@ ENV LANG=en_US.UTF-8 \
 # Install jekyll
 ADD Gemfile Gemfile
 RUN gem install bundler 
-RUN bundle 
+##RUN bundle
+RUN bundle exec jekyll build
 
 # [Option] Install Node.js
 ARG NODE_VERSION="lts/*"

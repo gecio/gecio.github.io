@@ -10,10 +10,6 @@ Diese Anleitung beschreibt, wie Sie ihr erstes iMKE-Projekt inkl. einem ersten
 Kubernetes-Cluster erzeugen, wie Sie auf das Cluster zugreifen und anschließend
 die angelegten Ressourcen wieder vollständig löschen.
 
-This Guide describes how to create your first iMKE project with a first Kubernetes
-cluster, how to connect to that cluster and how to cleanup all resources
-afterwards.
-
 ## Das erste Projekt anlegen
 
 Nach dem Login in iMKE erscheint folgendes Fenster, in dem wir auf

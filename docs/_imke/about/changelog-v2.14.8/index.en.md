@@ -45,3 +45,26 @@ v1.18.x -> v1.18.6
 - Fixed missing Prometheus metrics.
 - Fix label for nodeport-proxy when deployed with the operator.
 - Create an RBAC role to allow kubeadm to get nodes. This fixes nodes failing to join kubeadm clusters running Kubernetes 1.18+.
+
+## Kubernetes related changes
+
+### What's new in Kubernetes 1.18
+
+- Kubernetes Topology Manager has been moved to Beta
+- Serverside Apply has reached Beta 2
+- Ingress has been extended with a `pathType` field
+- The `IngressClass` resource has been introduced
+- Addition of the `kubectl debug` feature
+- Node Local DNSCache graduated to GA
+
+### Upgrade notes for Kubernetes 1.18
+
+If you are planning to upgrade to Kubernetes 1.18, please have a look at the [Upgrade Notes](https://v1-18.docs.kubernetes.io/docs/setup/release/notes/#urgent-upgrade-notes) section of the official Kubernetes v1.18 release notes and make sure you familiarise yourself with the upcoming changes. 
+
+For an overview of the changes, please refer to the [Changes by Kind](https://v1-18.docs.kubernetes.io/docs/setup/release/notes/#changes-by-kind) section of the Changelog.
+
+* [Deprecations](https://v1-18.docs.kubernetes.io/docs/setup/release/notes/#deprecation)
+* [API changes](https://v1-18.docs.kubernetes.io/docs/setup/release/notes/#api-change)
+* [Configuration file changes](https://v1-18.docs.kubernetes.io/docs/setup/release/notes/#configuration-file-changes)
+* [Features](https://v1-18.docs.kubernetes.io/docs/setup/release/notes/#feature)
+* [Other changes/Bugfixes](https://v1-18.docs.kubernetes.io/docs/setup/release/notes/#other-bug-cleanup-or-flake)

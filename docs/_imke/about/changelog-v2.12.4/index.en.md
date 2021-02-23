@@ -2,7 +2,7 @@
 title: iMKE Changelog v2.12.4
 lang: en
 permalink: /imke/about/changelog-v2.12.4/
-nav_order: 3
+nav_order: 1300
 parent: About iMKE
 ---
 

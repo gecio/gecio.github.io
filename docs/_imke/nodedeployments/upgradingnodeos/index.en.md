@@ -2,7 +2,7 @@
 title: Upgrading the OS on Worker-Nodes
 lang: en
 permalink: /imke/nodedeployments/upgradingnodeos/
-nav_order: 4
+nav_order: 5400
 parent: Node Deployments
 ---
 

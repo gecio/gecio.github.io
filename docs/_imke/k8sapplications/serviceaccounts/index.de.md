@@ -2,7 +2,7 @@
 title: Kubernetes Service Accounts verwalten
 lang: de
 permalink: /imke/k8sapplications/serviceaccounts/
-nav_order: 2
+nav_order: 7200
 parent: Anwendungen in Kubernetes
 ---
 

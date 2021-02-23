@@ -2,7 +2,7 @@
 title: Kubernetes Updates
 lang: de
 permalink: /imke/clusterlifecycle/upgradingacluster/
-nav_order: 2
+nav_order: 4200
 parent: Cluster Lebenszyklus
 ---
 

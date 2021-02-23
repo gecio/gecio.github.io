@@ -2,7 +2,7 @@
 title: Anwendungen in Kubernetes
 lang: de
 permalink: /imke/k8sapplications/
-nav_order: 7
+nav_order: 7000
 has_children: true
 ---
 

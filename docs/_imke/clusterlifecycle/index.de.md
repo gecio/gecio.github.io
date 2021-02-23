@@ -2,7 +2,7 @@
 title: Cluster Lebenszyklus
 lang: de
 permalink: /imke/managingprojects/clusterlifecycle/
-nav_order: 4
+nav_order: 4000
 has_children: true
 ---
 

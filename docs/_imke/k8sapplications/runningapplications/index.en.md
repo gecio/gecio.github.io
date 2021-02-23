@@ -2,7 +2,7 @@
 title: Running Applications in Kubernetes
 lang: en
 permalink: /imke/k8sapplications/runningapplications/
-nav_order: 1
+nav_order: 7100
 parent: Kubernetes Applications
 ---
 

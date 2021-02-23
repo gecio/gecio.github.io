@@ -2,7 +2,7 @@
 title: StorageClass Setup
 lang: de
 permalink: /imke/nodedeployments/storageclasses/
-nav_order: 5
+nav_order: 5500
 parent: Node Deployments
 ---
 

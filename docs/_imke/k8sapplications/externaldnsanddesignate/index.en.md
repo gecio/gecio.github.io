@@ -2,7 +2,7 @@
 title: External-DNS with Designate
 lang: en
 permalink: /imke/k8sapplications/externaldnsanddesignate/
-nav_order: 3
+nav_order: 7300
 parent: Kubernetes Applications
 ---
 

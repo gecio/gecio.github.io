@@ -2,7 +2,7 @@
 title: Creating a Cluster
 lang: en
 permalink: /imke/clusterlifecycle/creatingacluster/
-nav_order: 1
+nav_order: 4100
 parent: Cluster Lifecycle
 ---
 

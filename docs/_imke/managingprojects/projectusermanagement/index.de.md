@@ -2,7 +2,7 @@
 title: Benutzer Management im Projekt
 lang: de
 permalink: /imke/managingprojects/projectusermanagement/
-nav_order: 2
+nav_order: 3200
 parent: iMKE-Projekte verwalten
 ---
 

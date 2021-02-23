@@ -2,7 +2,7 @@
 title: Erste Schritte
 lang: de
 permalink: /imke/gettingstarted/
-nav_order: 2
+nav_order: 2000
 has_children: false
 ---
 

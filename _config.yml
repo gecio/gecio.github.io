@@ -94,8 +94,10 @@ exclude:
 collections:
   optimist:
     output: true
+    sort_by: nav_order
   imke:
     output: true
+    sort_by: nav_order
 
 collections_dir: docs
 
@@ -134,3 +136,4 @@ just_the_docs:
       # Exclude the collection from the search
       # Supports true or false (default)
       search_exclude: false
+      

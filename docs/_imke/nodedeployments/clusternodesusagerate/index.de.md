@@ -2,7 +2,7 @@
 title: Nutzungsrate der Cluster Nodes
 lang: de
 permalink: /imke/nodedeployments/clusternodesusagerate/
-nav_order: 2
+nav_order: 5200
 parent: Node Deployments
 ---
 

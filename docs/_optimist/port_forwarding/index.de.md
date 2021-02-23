@@ -2,7 +2,7 @@
 title: Port Forwarding auf Floating IPs
 lang: de
 permalink: /optimist/port_forwarding/
-nav_order: 20
+nav_order: 3000
 ---
 
 Port Forwarding auf Floating IPs

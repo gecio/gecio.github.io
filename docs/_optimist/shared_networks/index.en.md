@@ -2,7 +2,7 @@
 title: Shared Networks
 lang: en
 permalink: /optimist/shared_networks/
-nav_order: 30
+nav_order: 4000
 ---
 
 Shared Networks

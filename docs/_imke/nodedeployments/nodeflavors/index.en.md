@@ -2,7 +2,7 @@
 title: Choosing Node Flavors / Sizes
 lang: en
 permalink: /imke/nodedeployments/nodeflavors/
-nav_order: 1
+nav_order: 5100
 parent: Node Deployments
 ---
 

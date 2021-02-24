@@ -94,8 +94,10 @@ exclude:
 collections:
   optimist:
     output: true
+    sort_by: nav_order
   imke:
     output: true
+    sort_by: nav_order
 
 collections_dir: docs
 
@@ -116,6 +118,15 @@ just_the_docs:
   # Define which collections are used in just-the-docs
   collections:
     # Reference the "docs" collection
+    imke: 
+      name: IMKE
+      # Exclude the collection from the navigation
+      # Supports true or false (default)
+      nav_exclude: false
+      # Exclude the collection from the search
+      # Supports true or false (default)
+      search_exclude: false
+      
     optimist:
       # Give the collection a name
       name: Optimist
@@ -126,11 +137,5 @@ just_the_docs:
       # Supports true or false (default)
       search_exclude: false
     
-    imke: 
-      name: IMKE
-      # Exclude the collection from the navigation
-      # Supports true or false (default)
-      nav_exclude: false
-      # Exclude the collection from the search
-      # Supports true or false (default)
-      search_exclude: false
+
+      

@@ -2,7 +2,7 @@
 title: Node Deployments
 lang: en
 permalink: /imke/nodedeployments/
-nav_order: 5
+nav_order: 5000
 has_children: true
 ---
 

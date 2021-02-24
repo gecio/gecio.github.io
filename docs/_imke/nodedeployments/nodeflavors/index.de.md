@@ -2,7 +2,7 @@
 title: Node-Flavors (Leistung) konfigurieren
 lang: de
 permalink: /imke/nodedeployments/nodeflavors/
-nav_order: 1
+nav_order: 5100
 parent: Node Deployments
 ---
 

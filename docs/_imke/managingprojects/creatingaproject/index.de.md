@@ -2,7 +2,7 @@
 title: Ein Projekt anlegen
 lang: de
 permalink: /imke/managingprojects/creatingaproject/
-nav_order: 1
+nav_order: 3100
 parent: iMKE-Projekte verwalten
 ---
 

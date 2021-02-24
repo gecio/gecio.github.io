@@ -2,7 +2,7 @@
 title: Eine Anwendung in Kubernetes starten
 lang: de
 permalink: /imke/k8sapplications/runningapplications/
-nav_order: 1
+nav_order: 7100
 parent: Anwendungen in Kubernetes
 ---
 

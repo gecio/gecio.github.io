@@ -2,7 +2,7 @@
 title: About iMKE
 lang: en
 permalink: /imke/about/
-nav_order: 1
+nav_order: 1000
 has_children: true
 ---
 

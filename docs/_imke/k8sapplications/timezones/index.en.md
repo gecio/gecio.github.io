@@ -2,7 +2,7 @@
 title: Time Zone Management
 lang: en
 permalink: /imke/k8sapplications/timezones/
-nav_order: 4
+nav_order: 7400
 parent: Kubernetes Applications
 ---
 

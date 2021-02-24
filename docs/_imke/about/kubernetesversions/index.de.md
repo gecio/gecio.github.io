@@ -2,7 +2,7 @@
 title: Unterstützte Kubernetes Versionen
 lang: de
 permalink: /imke/about/kubernetesversions/
-nav_order: 4
+nav_order: 1900
 parent: Über iMKE
 ---
 

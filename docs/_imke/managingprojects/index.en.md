@@ -2,7 +2,7 @@
 title: Managing iMKE-Projects
 lang: en
 permalink: /imke/managingprojects/
-nav_order: 3
+nav_order: 3000
 has_children: true
 ---
 

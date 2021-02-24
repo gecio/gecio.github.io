@@ -2,7 +2,7 @@
 title: Connecting to a Cluster
 lang: en
 permalink: /imke/accessmanagement/connectingtoacluster/
-nav_order: 1
+nav_order: 6100
 parent: Access Management
 ---
 

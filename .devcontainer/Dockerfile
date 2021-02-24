@@ -1,3 +1,5 @@
+#syntax=docker/dockerfile:1.2
+
 FROM mcr.microsoft.com/vscode/devcontainers/ruby:2 AS devcontainer
 
 # ENV Variables required by Jekyll

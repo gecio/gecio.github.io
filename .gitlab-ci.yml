@@ -4,7 +4,6 @@ default:
 
 stages:
   - build
-  - tagging
   - deploy
 
 variables:
@@ -12,44 +11,32 @@ variables:
   DOCKER_HOST: "tcp://docker:2375"
 
 # Build Docs
-Build Image:
+.Build Image:
   before_script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-  image: docker:stable
+  image: docker:20.10.3
   services:
     - docker:dind
   stage: build
   script:
-    - docker build -t $CI_REGISTRY_IMAGE/docs:${CI_COMMIT_SHA} -f .devcontainer/Dockerfile .
-    - docker push $CI_REGISTRY_IMAGE/docs:${CI_COMMIT_SHA}
+    - docker pull $CI_REGISTRY_IMAGE/docs:devcontainer || true
+    - docker build --cache-from $CI_REGISTRY_IMAGE/docs:devcontainer --tag $CI_REGISTRY_IMAGE/docs:devcontainer --target devcontainer -f .devcontainer/Dockerfile .
+    
+    - docker build --cache-from $CI_REGISTRY_IMAGE/docs:devcontainer --tag $CI_REGISTRY_IMAGE/docs:${CI_COMMIT_SHA} --tag $CI_REGISTRY_IMAGE/docs:${IMAGE_TAG} --file .devcontainer/Dockerfile .
+    - docker image push --all-tags $CI_REGISTRY_IMAGE/docs
   only:
     - master
     - merge_requests
-
-
-.Tag Image:
-  variables:
-    GIT_STRATEGY: none
-  stage: tagging
-  image: docker:stable
-  services:
-    - docker:dind
-  before_script:
-    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-  script:
-    - docker pull ${CI_REGISTRY_IMAGE}/docs:${CI_COMMIT_SHA}
-    - docker tag ${CI_REGISTRY_IMAGE}/docs:${CI_COMMIT_SHA} ${CI_REGISTRY_IMAGE}/docs:${IMAGE_TAG}
-    - docker push ${CI_REGISTRY_IMAGE}/docs:${IMAGE_TAG}
     
-Tag Latest:
-  extends: .Tag Image
+Build Latest:
+  extends: .Build Image
   variables:
     IMAGE_TAG: latest
   only:
     - master
 
-Tag Dev:
-  extends: .Tag Image
+Build Dev:
+  extends: .Build Image
   variables:
     IMAGE_TAG: dev
   only:

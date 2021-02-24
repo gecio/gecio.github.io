@@ -25,23 +25,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Jekyll Actions
-        uses: helaili/jekyll-action@2.1.0
+      # Use GitHub Actions' cache to shorten build times and decrease load on servers
+      - uses: actions/cache@v2
         with:
-          # The GITHUB_TOKEN secret
-          token: # optional
-          # The Jekyll environment to build
-          jekyll_env: # optional
-          # The Jekyll website source directory
-          jekyll_src: # optional
-          # Additional Jekyll build arguments (see https://jekyllrb.com/docs/configuration/options/#build-command-options)
-          jekyll_build_options: # optional
-          # The Jekyll Gemfile directory
-          gem_src: # optional
-          # The target branch name the sources get pushed to
-          target_branch: # optional
-          # Will build the Jekyll site without publishing it
-          build_only: # optional
-          # Commands to run prior to build and deploy. Useful for ensuring build dependencies are up to date or installing  new dependencies. For example, use `apk --update add  imagemagick` to install ImageMagick.
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
 
-          pre_build_commands: # optional
+      # Specify the target branch (optional)
+      - uses: helaili/jekyll-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target_branch: 'site'

@@ -1,0 +1,47 @@
+# Build Jekyll page and publish it
+
+name: CI Jekyll Page
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Jekyll Actions
+        uses: helaili/jekyll-action@2.1.0
+        with:
+          # The GITHUB_TOKEN secret
+          token: # optional
+          # The Jekyll environment to build
+          jekyll_env: # optional
+          # The Jekyll website source directory
+          jekyll_src: # optional
+          # Additional Jekyll build arguments (see https://jekyllrb.com/docs/configuration/options/#build-command-options)
+          jekyll_build_options: # optional
+          # The Jekyll Gemfile directory
+          gem_src: # optional
+          # The target branch name the sources get pushed to
+          target_branch: # optional
+          # Will build the Jekyll site without publishing it
+          build_only: # optional
+          # Commands to run prior to build and deploy. Useful for ensuring build dependencies are up to date or installing  new dependencies. For example, use `apk --update add  imagemagick` to install ImageMagick.
+
+          pre_build_commands: # optional

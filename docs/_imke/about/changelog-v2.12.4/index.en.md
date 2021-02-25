@@ -8,7 +8,7 @@ parent: About iMKE
 
 iMKE upgraded from v2.11.6 → v2.12.4
 
-## Supported Kubernetes versions:
+## Supported Kubernetes versions
 
 Kubernetes clusters will be upgraded as follows in order to deploy bugfixes and security fixes.
 
@@ -21,7 +21,7 @@ v1.15.x -> v1.15.5
 - Customers can now create Kubernetes clusters with version v1.16.x.
 - Kubernetes 1.13 which is end-of-life has been removed.
 
-## Major new features:
+## Major new features
 
 - Kubernetes 1.16 support was added
 - Removed K8S releases affected by CVE-2019-11253
@@ -30,7 +30,7 @@ v1.15.x -> v1.15.5
 - "Connect" button on cluster details will now open Kubernetes Dashboard
 - Pod Security Policies can now be enabled
 
-## Dashboard:
+## Dashboard
 
 - Kubernetes 1.13 which is end-of-life has been removed.
 - Redesign dialog to manage SSH keys on cluster

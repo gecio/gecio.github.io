@@ -10,18 +10,25 @@ iMKE upgraded from v2.13.10 → v2.14.9
 
 ## Supported Kubernetes versions
 
-Kubernetes clusters will be upgraded as follows in order to deploy bugfixes and security fixes.
+### New Kubernetes versions
+
+Customers can now create Kubernetes clusters with version v1.18.6.
+
+### Updates to the supported Kubernetes versions
+
+The list of the supported Kubernetes versions will be updated as follows in order to deploy bugfixes and security fixes:
 
 v1.15.x -> v1.15.11
 
-v1.16.x -> v1.16.13
+v1.16.x -> v1.16.15
 
 v1.17.x -> v1.17.9
 
 v1.18.x -> v1.18.6
 
-- Customers can now create Kubernetes clusters with version v1.18.x.
-- End-of-Life CoreOS no longer supported (replaced by Flatcar)
+### End of Life announcements
+
+End-of-Life: CoreOS is no longer supported (replaced by Flatcar).
 
 ## New features
 

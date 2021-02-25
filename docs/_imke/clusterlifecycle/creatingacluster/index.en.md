@@ -7,7 +7,7 @@ parent: Cluster Lifecycle
 ---
 
 We can create a cluster in iMKE with a couple of clicks.
-But before we can do that, there needs to be a project.
+Before we can do that, there needs to be a project.
 
 So if you don't have a project yet, [create a project first](/imke/managingprojects/creatingaproject).
 

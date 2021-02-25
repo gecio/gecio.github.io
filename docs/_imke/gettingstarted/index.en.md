@@ -8,7 +8,7 @@ has_children: false
 
 
 This Guide describes how to create your first iMKE project with a first Kubernetes
-cluster, how to connect to that cluster and how to cleanup all resources
+cluster, how to connect to that cluster and how to clean up all resources
 afterwards.
 
 ## Create your first project

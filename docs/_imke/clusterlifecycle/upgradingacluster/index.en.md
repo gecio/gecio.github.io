@@ -16,9 +16,12 @@ own infrastructure up-to-date. In this case the following section
 *The Cluster* can be skipped. However, nodes must still be updated
 manually by you.
 
+Before you upgrade a cluster, please refer to the target version's [Changelog](/imke/about/kubernetesversions)
+and make sure you familiarise yourself with the upcoming changes.
+
 ## The Cluster
 
-In Kubernetes the infrastructure is divided into master (= Kubernetes controlplane) and (worker-)nodes.
+In Kubernetes the infrastructure is divided into master (= Kubernetes control plane) and (worker-)nodes.
 The master is managed by iMKE itself.
 
 Since several versions for the master are offered, you have the

@@ -45,3 +45,26 @@ v1.18.x -> v1.18.6
 - Fehlende Prometheus-Metriken wurden ergänzt.
 - Nodeport Proxy-Label bei Bereitstellung mit dem Operator korrigiert.
 - RBAC-Rolle erstellt, damit kubeadm "Node"-Ressourcen abrufen kann. Diese Korrektur führt dazu, dass Worker-Nodes mit Kubeadm-Clustern verbunden werden können, auf denen Kubernetes 1.18+ ausgeführt wird.
+
+## Änderungen in Kubernetes
+
+### Was ist neu in Kubernetes 1.18
+
+- Kubernetes Topology Manager wurde in die Beta Phase verschoben 
+- Serverside Apply hat den Stand Beta 2 erreicht
+- Ingress wurde um ein Feld `pathType` erweitert
+- Die Ressource `IngressClass` wurde eingeführt
+- Die neue Funktion `kubectl debug` wurde eingeführt
+- Node Local DNSCache wurde auf GA abgestuft
+
+### Upgrade-Hinweise für Kubernetes 1.18
+
+Wenn Sie ein Upgrade auf Kubernetes 1.18 planen, lesen Sie bitte den Abschnitt [Upgrade Notes](https://v1-18.docs.kubernetes.io/docs/setup/release/notes/#urgent-upgrade-notes) des offiziellen Kubernetes v1.18 Changelogs und machen Sie sich mit den bevorstehenden Änderungen vertraut.
+
+Eine Übersicht über die Änderungen finden Sie im Abschnitt [Changes by Kind](https://v1-18.docs.kubernetes.io/docs/setup/release/notes/#changes-by-kind) des Changelogs.
+
+* [Deprecations](https://v1-18.docs.kubernetes.io/docs/setup/release/notes/#deprecation)
+* [API-Änderungen](https://v1-18.docs.kubernetes.io/docs/setup/release/notes/#api-change)
+* [Änderungen an den Konfigurationsdateien](https://v1-18.docs.kubernetes.io/docs/setup/release/notes/#configuration-file-changes)
+* [Funktionen](https://v1-18.docs.kubernetes.io/docs/setup/release/notes/#feature)
+* [Weitere Änderungen/Bugfixes](https://v1-18.docs.kubernetes.io/docs/setup/release/notes/#other-bug-cleanup-or-flake)

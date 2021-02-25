@@ -52,3 +52,23 @@ v1.17.x -> v1.17.9
 - Fixed swagger and API client for ssh key creation.
 - Fixed a bug preventing editing of existing cluster credential secrets
 - Fix `componentsOverride` of a cluster affecting other clusters
+
+## Kubernetes related changes
+
+### What's new in Kubernetes 1.17
+
+- Cloud Provider Labels reached GA
+- Volume Snapshot moved to Beta
+- CSI Migration is in Beta
+
+### Upgrade notes for Kubernetes 1.17
+
+If you are planning to upgrade, please have a look at the [Upgrade Notes](https://v1-17.docs.kubernetes.io/docs/setup/release/notes/#urgent-upgrade-notes) section of the official Kubernetes v1.18 release notes and make sure you familiarise yourself with the upcoming changes.
+
+For an overview of the changes, please refer to the [Changes](https://v1-17.docs.kubernetes.io/docs/setup/release/notes/#changes) section of the Changelog.
+
+* [Deprecations](https://v1-17.docs.kubernetes.io/docs/setup/release/notes/#deprecations-and-removals)
+* [API changes](https://v1-17.docs.kubernetes.io/docs/setup/release/notes/#api-changes)
+* [Metrics changes](https://v1-17.docs.kubernetes.io/docs/setup/release/notes/#metrics-changes)
+* [Features](https://v1-17.docs.kubernetes.io/docs/setup/release/notes/#notable-features)
+* [Other changes/Bugfixes](https://v1-17.docs.kubernetes.io/docs/setup/release/notes/#other-notable-changes)

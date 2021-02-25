@@ -10,16 +10,23 @@ iMKE upgraded from v2.12.4 → v2.13.10
 
 ## Supported Kubernetes versions
 
-Kubernetes clusters will be upgraded as follows in order to deploy bugfixes and security fixes.
+### New Kubernetes versions
+
+Customers can now create Kubernetes clusters with version v1.17.9.
+
+### Updates to the supported Kubernetes versions
+
+The list of the supported Kubernetes versions will be updated as follows in order to deploy bugfixes and security fixes:
 
 v1.15.x -> v1.15.10
 
-v1.16.x -> v1.16.13
+v1.16.x -> v1.16.15
 
 v1.17.x -> v1.17.9
 
-- Customers can now create Kubernetes clusters with version v1.17.x.
-- End-of-Life Kubernetes v1.14 is no longer supported.
+### End of Life announcements
+
+End-of-Life: Kubernetes v1.14 is no longer supported. Existing v1.14 clusters should be upgraded to a newer version, otherwise they will be force upgraded automatically at a later time. Please see our related [deprecation and force upgrade policy](../../clusterlifecycle/deprecationpolicy).
 
 ## Major new features
 

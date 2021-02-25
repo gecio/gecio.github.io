@@ -19,7 +19,7 @@ Das Ändert die Credentials mit folgenen einfachen Schritten:
 
 2. Klicke die drei Punkte, um das Untermenü zu öffnen
 
-    ![Trhee-Dots](three-dots.png)
+    ![Three-Dots](three-dots.png)
 
 3. Wähle `Edit Cluster`
 

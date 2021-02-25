@@ -8,7 +8,7 @@ parent: Über iMKE
 
 iMKE aktualisiert von v2.11.6 → v2.12.4
 
-## Unterstützte Kubernetes Versionen:
+## Unterstützte Kubernetes Versionen
 
 Kubernetes-Cluster werden wie folgt aktualisiert, um Bugfixes und Sicherheitskorrekturen bereitzustellen
 
@@ -21,7 +21,7 @@ v1.15.x -> v1.15.5
 - Kunden können jetzt Kubernetes-Cluster mit Version 1.16.x erstellen
 - Das auslaufende Kubernetes 1.13 wurde entfernt
 
-## Wichtige neue Funktionen:
+## Wichtige neue Funktionen
 
 - Unterstützung für Kubernetes 1.16 wurde hinzugefügt
 - K8S-Versionen, die von CVE-2019-11253 betroffen sind, wurden entfernt
@@ -30,7 +30,7 @@ v1.15.x -> v1.15.5
 - Die Schaltfläche "Verbinden" in den Clusterdetails öffnet jetzt das Kubernetes Dashboard
 - Pod-Sicherheitsrichtlinien können jetzt aktiviert werden
 
-## Instrumententafel:
+## Dashboard
 
 - Das auslaufende Kubernetes 1.13 wurde entfernt
 - Neugestaltung des Dialogfelds zur Verwaltung von SSH-Schlüsseln im Cluster

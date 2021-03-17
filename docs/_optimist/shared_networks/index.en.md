@@ -63,5 +63,7 @@ Network Topology Project 2
 ![](attachments/SharedNetwork2.png)
 
 The network "shared" is also visible in project 2 and was attached to the router "router2". In addition, we have the network "network" from which the services in the network "shared" should be accessed.
-You have to make sure that the corresponding route is set on the router "router1" in project 1 in the example in order to enable the correct return transport of the packets:
-10.0.1.0/24 via 10.0.0.1
+
+You have to make sure that the corresponding route is set in the subnet "host route" configuration of the "shared" network in project 1 in order to enable the correct return transport of the packets.
+
+In our example the following route is required: `10.0.1.0/24,10.0.0.1`

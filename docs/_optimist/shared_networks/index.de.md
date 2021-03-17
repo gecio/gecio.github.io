@@ -65,6 +65,7 @@ Netzwerk Topology Projekt 2
 Das Netzwerk "shared" ist auch in Projekt 2 sichtbar und wurde dort an den Router "router2" angehangen.
 Zusätzlich existiert dort das Netzwerk "network", aus dem auf die Services in dem Netzwerk "shared" zugegriffen wird.
 
-Dabei muss berücksichtigt werden das auf dem Router "router1" im Projekt 1 hier im Beispiel die entsprechende Route gesetzt wird, um einen korrekten Rücktransport der Pakete zu ermöglichen
-10.0.1.0/24 via 10.0.0.1
+Dabei muss berücksichtigt werden, das im Subnet des "shared" Networks in Projekt 1 die entsprechende Route unter dem Eintrag "Host Routes" gesetzt wird, um einen korrekten Rücktransport der Pakete zu ermöglichen.
+
+Im unserem Beispiel ist die folgende Route notwendig: `10.0.1.0/24,10.0.0.1`
 

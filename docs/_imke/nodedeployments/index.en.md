@@ -17,3 +17,8 @@ The Worker-Nodes of a cluster need to be configured via a `Node Deployment`. The
 * *SSH-Keys* if enabled for your cluster and if your Nodes have a public IP (Floating IP), you can connect to your Worker-Nodes via SSH, i.e. for extended debugging.
 * *Operating System of the Nodes* although the OS of the Worker-Nodes should not matter for the Kubernetes workloads, it might matters for you and your debugging.
 
+**Further reading**
+* [Sizing: Choosing Node Flavors](/imke/nodedeployments/nodeflavors/)
+* [Debugging: Cluster Nodes Usage Rate](/imke/nodedeployments/clusternodesusagerate/)
+* [Debugging: Adding SSH-Keys to worker nodes](/imke/nodedeployments/add_ssh_key/)
+* [Upgrading the OS on Worker-Nodes](/imke/nodedeployments/upgradingnodeos/)

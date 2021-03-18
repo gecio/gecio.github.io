@@ -21,3 +21,7 @@ Alle Kubernetes-Cluster in einem iMKE-Projekt:
 Projekte sind im o.g. Sinn  nur für die Verwaltung wichtig und haben technisch weiter keine
 Auswirkungen auf die enthaltenen Kubernetes Cluster.
 
+**Weiterführende Themen**
+* [Ein iMKE-Projekt anlegen](/imke/managingprojects/creatingaproject/)
+* [Benutzer-Management in iMKE-Projekten](/imke/managingprojects/projectusermanagement/)
+* [Service-Accounts in iMKE-Projekten](/imke/managingprojects/projectserviceaccounts/)

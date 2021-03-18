@@ -34,7 +34,7 @@ auswählen:
 Man kann ein existierendes Netzwerk verwenden, um den Cluster zu erstellen. Dazu müssen wir das Netzwerk und das Subnetz auswählen.
 Diese müssen mit einem Router verbunden sein.
 Also man soll einen Router erstellen, was auf dem Optimist Dashboard oder aus der OpenStack Kommandozeile durchgeführt werden kann.
-Hierfür kann man die OpenStack Dokumentation nutzen, um den Router zu erstellen und das Netzwerk zu verbinden. (<http://docs.innovo.cloud/guided_tour/en/step10/>)
+Hierfür kann man die OpenStack Dokumentation nutzen, um den Router zu erstellen und das Netzwerk zu verbinden. (<https://docs.innovo.cloud/guided_tour/de/schritt10/>)
 ![Add Cluster Network](create-cluster-network-exist.png)
 
 In den Node Settings konfigurieren wir, wie viele Server später im Kubernetes Cluster

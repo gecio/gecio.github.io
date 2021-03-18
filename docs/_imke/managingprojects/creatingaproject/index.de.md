@@ -28,4 +28,5 @@ sichtbar.
 
 Mit einem Klick auf die Seitenleiste links öffnen wir die Navigation im
 Projekt-Umfeld und können die weiteren Bereiche erkunden.
+
 ![Sidebar](sidebar.png?resize=300)

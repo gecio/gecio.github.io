@@ -17,7 +17,7 @@ Infrastruktur sicher zu halten. In diesem Fall kann der nächste
 Block übersprungen werden. Nodes müssen dann nämlich dennoch
 selbst geupdated werden.
 
-Bevor Sie einen Cluster upgraden, lesen Sie bitte das [Changelog](/imke/about/kubernetesversions) der Ziel-Kubernetes-Version,
+Bevor Sie einen Cluster upgraden, lesen Sie bitte das [Changelog](/imke/about/changelog-v2.14.8/) der Ziel-Kubernetes-Version,
 und stellen Sie sicher, dass Sie sich mit den bevorstehenden Änderungen vertraut machen.
 
 ## Der Cluster

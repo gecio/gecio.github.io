@@ -76,11 +76,11 @@ Um sich per SSH anmelden zu können, brauchen die Worker eine öffentliche (Floa
 
 Dazu Editieren Sie die Machinedeployments:
 
-![Edit-MD](Edit_machine_deployment.png)
+![Edit-MD](edit_machine_deployment.png)
 
 Dort sollten Sie sicher stellen, dass `Allocate Floating IP` aktiviert ist:
 
-![Enable-Floating_IP](enable-FIP.png)
+![Enable-Floating_IP](enable-fip.png)
 
 Wenn sich hier ein Setting ändert, werden alle Worker neu erstellt. Danach kann man sich per SSH einloggen.
 

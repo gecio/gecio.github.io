@@ -19,11 +19,11 @@ First, let's see how many nodes are in the cluster  and what is the current load
 
 The command `kubectl top node` shows the current node utilization. In the example, there are two running nodes.
 
-First the node is "cordoned", so that no new pods are scheduled to this node.
+First the node is *cordoned*, so that no new pods are scheduled to this node.
 
 ![Step 2](get_node_2.png)
 
-Then the node is "drained",  so it is completely empty and the pods that used to run on the native node are distributed to all other nodes of the cluster.
+Then the node is *drained*,  so it is completely empty and the pods that used to run on the native node are distributed to all other nodes of the cluster.
 With only two nodes, everything is placed on exactly the other node, then we will have a high loaded node.
 
 ![Step 3](top_node_3.png)
@@ -33,5 +33,5 @@ When the second node is back after the update, the pods will _not_ be automatica
 ## Some Tips
 
 * We recommend to use at least three nodes, because in that way loads could be better distributed during upgrades.
-* The webterminal has the tool `popeye`, which analyzes the cluster and makes suggestions for improvement based on best practices: <https://docs.imke.cloud/en/guides/webterminal>
-* Upgrade the nodes to the latest version and follow the final step in the guide: <https://docs.imke.cloud/en/guides/upgradingacluster>
+* The webterminal has the tool `popeye`, which analyzes the cluster and makes suggestions for improvement based on best practices: <https://gecio.github.io/imke/accessmanagement/webterminal/>
+* Upgrade the nodes to the latest version and follow the final step in the guide: <https://gecio.github.io/imke/clusterlifecycle/upgradingacluster/>

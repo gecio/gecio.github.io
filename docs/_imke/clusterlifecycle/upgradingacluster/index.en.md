@@ -16,7 +16,7 @@ own infrastructure up-to-date. In this case the following section
 *The Cluster* can be skipped. However, nodes must still be updated
 manually by you.
 
-Before you upgrade a cluster, please refer to the target version's [Changelog](/imke/about/changelog-v2.14.8)
+Before you upgrade a cluster, please refer to the target version's [Changelog](/imke/about/)
 and make sure you familiarise yourself with the upcoming changes.
 
 ## The Cluster

@@ -17,3 +17,8 @@ Dagegen können die Worker-Nodes sehr wohl auf verschiedenste Arten konfiguriert
 * *SSH-Keys* können für das Cluster aktiviert werden, so dass Sie sich auf den Worker-Nodes einloggen können. Dafür ist es weiterhin notwendig, dass die Nodes eine Public IP (Floating IP) besitzen, damit Sie diese erreichen können. Ein Login per SSH kann beispielsweise im Rahmen eines intensiven Debuggings der Kubernetes-Applikationen hilfreich sein.
 * *Betriebssystem der Worker-Nodes*: Auch wenn die Wahl des Betriebssystem irrelevant für die auf Kubernetes laufenden Applikationen ist, könnte es für Sie im Kontext des Debuggings eventuell eine Rolle spielen.
 
+**Weiterführende Themen**
+* [Sizing: Node Flavors konfigurieren](/imke/nodedeployments/nodeflavors/)
+* [Debugging: Auslastung der Cluster-Nodes](/imke/nodedeployments/clusternodesusagerate/)
+* [Debugging: SSH-Keys hinzufügen](/imke/nodedeployments/add_ssh_key/)
+* [Aktualisierung des Betriebssystems auf Worker-Nodes](/imke/nodedeployments/upgradingnodeos/)

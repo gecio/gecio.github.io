@@ -26,7 +26,7 @@ Wenn wir eine Kubernetes-Version aus dem Support nehmen, informieren wir die Kun
 
 Zu dem Zeitpunkt des angekündigten End-of-Life Datums wird dann die genannte Kubernetes-Version aus iMKE entfernt.
 
-Die Liste der unterstützten Kubernetes-Versionen und ihre geplanten End-of-Life Daten finden Sie [hier](../../01_about/kubernetesversions). Eine ausführliche Dokumentation zum Ausführen von Cluster-Upgrades finden Sie [hier](../upgradingacluster/).
+Die Liste der unterstützten Kubernetes-Versionen und ihre geplanten End-of-Life Daten finden Sie [hier](/imke/about/kubernetesversions). Eine ausführliche Dokumentation zum Ausführen von Cluster-Upgrades finden Sie [hier](../upgradingacluster/).
 
 **Was bedeutet eine End-of-Life Ankündigung für mich?**
 

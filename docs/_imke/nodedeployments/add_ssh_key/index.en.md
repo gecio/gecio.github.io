@@ -72,11 +72,11 @@ Your Key will now be added to all worker nodes in all machinedeployments.
 To access to the node via SSH you need to attach a Floating IP to them.
 
 To achieve this, you have edit the machinedeployment:
-![Edit-MD](Edit_machine_deployment.png)
+![Edit-MD](edit_machine_deployment.png)
 
 And ensure `Allocate Floating IP` is selected:
 
-![Enable-Floating_IP](enable-FIP.png)
+![Enable-Floating_IP](enable-fip.png)
 
 Once the node is fully created, and has an external ip, you can access to the node using the key.
 The default user for Ubuntu is `ubuntu` and for Flatcar `core`.

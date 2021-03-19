@@ -26,7 +26,7 @@ If we deprecate a Kubernetes version, we do this by informing the customers in a
 
 When this grace period is over, we remove the deprecated version from iMKE.
 
-You can find the list of supported Kubernetes versions and their planned End-of-Life dates [here](../../01_about/kubernetesversions). A detailed documentation about how to do cluster upgrades can be found [here](../upgradingacluster/).
+You can find the list of supported Kubernetes versions and their planned End-of-Life dates [here](/imke/about/kubernetesversions/). A detailed documentation about how to do cluster upgrades can be found [here](../upgradingacluster/).
 
 **What does an End-of-Life announcement mean for me?**
 

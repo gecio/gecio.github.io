@@ -21,3 +21,7 @@ All clusters in an iMKE-project:
 Projects are only required for management and have no impact
 on how you can use the Clusters within. You can have multiple projects.
 
+**Further reading**
+* [How to create an iMKE-Project](/imke/managingprojects/creatingaproject))
+* [How to manage users in an iMKE-Project](/imke/managingprojects/projectusermanagement))
+* [How to manage service accounts in an iMKE-Project](/imke/managingprojects/projectserviceaccounts/)

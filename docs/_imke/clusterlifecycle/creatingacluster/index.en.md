@@ -32,7 +32,7 @@ in:
 We can use an existing network to create the cluster. At this point, we must select the network and the subnet.
 Those must be attached to a router.
 So you have to create a router, this can be done from the Optimist Dashboard or from the OpenStack command line.
-We can use our OpenStack documentation to create the router and attach it. (<http://docs.innovo.cloud/guided_tour/en/step10/>)
+We can use our OpenStack documentation to create the router and attach it. (</optimist/guided_tour/step10/>)
 ![Add Cluster Network](create-cluster-network-exist.png)
 
 In Node Settings we define how many virtual machines will be available as worker nodes

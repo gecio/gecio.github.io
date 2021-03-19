@@ -29,3 +29,7 @@ A user with this level of access can download a specific kubeconfig, which can b
 
 More on Kubernetes RBAC can be found [here](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
 
+**Further reading**
+* [Project access: Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster/)
+* [Role-Based Access Control (RBAC)](/imke/accessmanagement/usingrbac/)
+* [The Web Terminal](/imke/accessmanagement/webterminal/)

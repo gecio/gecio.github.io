@@ -27,13 +27,13 @@
   align-items: center;
 
   &:hover {
-    background-color: #333;
+    background-color: #222;
     border-color: #e3006a;
   }
 
   &.active {
     font-weight: 600;
-    background-color: #333;
+    background-color: #222;
     border-color: #e3006a;
     color: $link-color;
   }

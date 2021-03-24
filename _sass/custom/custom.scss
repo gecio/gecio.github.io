@@ -197,3 +197,36 @@ table td,
 table th {
   background: #000;
 }
+
+.search-results {
+  background-color: #333;
+  border: 1px solid #676b6d;
+}
+
+.search-results-list-item:hover .search-result:hover {
+  background-color: #676b6d;
+}
+
+.search-result-preview {
+  color: #fff;
+}
+
+.search-result-doc {
+  font-weight: bold;
+  color: #e3006a;
+  opacity: 1 !important;
+}
+
+.search-result-section {
+  color: #fff;
+}
+
+span.na {
+  color: #e3006a !important;
+}
+
+//Requested By Christian Gruber
+.rp_title {
+  position: relative;
+  bottom: 3px;
+}

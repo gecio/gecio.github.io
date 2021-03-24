@@ -75,7 +75,7 @@ The worker-nodes of a customer cluster are dedicated VMs in the openstack tenant
 
 ## Certifications
 
-![Certified Kubernets Logo](certified-kubernetes.png?width=100px)
+<img src="certified-kubernetes.png" alt="Certified Kubernetes Logo" width="100"/>
 
 iMKE is a product to efficiently setup and operate Kubernetes cluster on GEC Cloud.
 Customers have the option to use a powerful webinterface to deploy and manage completely

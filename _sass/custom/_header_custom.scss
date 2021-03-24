@@ -3,6 +3,7 @@
   align-self: center;
   list-style-type: none;
   padding: $sp-2;
+  background-color: #000;
   margin-bottom: 0;
 }
 
@@ -21,18 +22,22 @@
   line-height: $nav-list-item-height;
   padding-left: $sp-6;
   padding-right: $sp-6;
-  border: 1px solid transparent;
-  color: inherit;
+  border: 1px solid #676b6d;
+  color: #676b6d;
 
   &:hover {
-    background-color: $grey-lt-000;
-    border-color: $grey-lt-200;
+    background-color: #333;
+    border-color: #e3006a;
   }
 
   &.active {
     font-weight: 600;
-    background-color: $grey-lt-000;
-    border-color: $grey-lt-300;
+    background-color: #333;
+    border-color: #e3006a;
     color: $link-color;
   }
+}
+
+.main-header {
+  background-color: #000 !important;
 }

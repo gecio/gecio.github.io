@@ -8,13 +8,13 @@
   position: relative;
   width: calc(50% - #{$sp-4});
   padding: $sp-4 $sp-6;
-  border: 1px solid $border-color;
+  border: 1px solid #fff;
   border-radius: $border-radius;
 
   &:hover,
   &:focus {
     border-color: $link-color;
-    background-color: $grey-lt-000;
+    background-color: #333;
 
     .footer-navigation-link__icon {
       color: $link-color;
@@ -24,7 +24,6 @@
 
 .footer-navigation-link--previous {
   text-align: right;
-
   .footer-navigation-link__icon {
     left: $sp-5;
     transform: rotateY(180deg);
@@ -45,13 +44,13 @@
   top: calc(50% - 12px);
   width: 24px;
   height: 24px;
-  color: $grey-lt-300;
+  color: #fff;
 }
 
 .footer-navigation-link__sublabel {
   display: block;
   font-size: $font-size-2;
-  color: $grey-dk-200;
+  color: #fff;
   line-height: 1.2;
 }
 

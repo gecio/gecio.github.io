@@ -12,15 +12,9 @@
   }
 
   @include mq(lg) {
-    margin-left: calc( 
-      max( 
-        calc( (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width} ),
-        #{$nav-width}
-      )
-    );
+    margin-left: calc(max(calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}), #{$nav-width}));
   }
 }
-
 
 // Title
 
@@ -28,6 +22,8 @@
   font-size: 24px !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
+  background-color: #000;
+  color: #fff !important;
 
   &:hover {
     background-image: none;
@@ -42,7 +38,8 @@
 
 .nav-category {
   padding-left: $sp-4;
-
+  color: #fff;
+  font-weight: bold;
 }
 
 .nav-list .nav-list-item .nav-list-link,
@@ -54,22 +51,20 @@
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   border-left: 1px solid transparent;
-  color: #333;
+  color: #fff;
 }
 
 .nav-list .nav-list-item .nav-list-link:hover,
 .nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-link:hover {
   background-image: none;
-  background-color: $grey-lt-200;
-  color: $link-color;
+  background-color: #676b6d;
 }
 
 .nav-list .nav-list-item .nav-list-link.active,
 .nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-link.active {
   background-image: none;
-  background-color: $white;
-  border-color: $border-color;
-  color: $link-color;
+  background-color: #676b6d;
+  border-left: 5px solid #e3006a;
 }
 
 .nav-list-expander {
@@ -90,6 +85,25 @@
 }
 
 // Typography
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+  font-weight: bold;
+  border: none;
+}
+
+hr {
+  background: #676b6d;
+  color: #676b6d;
+  width: 66%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .main-content {
   h1,
@@ -113,4 +127,68 @@
   h1 {
     font-weight: 500;
   }
+}
+
+//By RP
+nav {
+  background-color: #000;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.main-content-wrap {
+  background: #000;
+  color: #fff;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #e3006a;
+  background-image: none !important;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  background: #333;
+  color: #bbb;
+  border: 1px solid #676b6d;
+}
+
+.search {
+  background: #000;
+}
+
+input.search-input {
+  background: #000 !important;
+  color: #fff;
+}
+
+.highlighter-rouge {
+  background-color: #333 !important;
+}
+
+body,
+.side-bar {
+  background: #000 !important;
 }

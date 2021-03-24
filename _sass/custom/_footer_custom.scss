@@ -6,14 +6,13 @@
 
 .footer-navigation-link {
   position: relative;
-  width: calc(50% - #{$sp-4});
-  padding: $sp-4 $sp-6;
+  width: calc(50% - 12px);
+  padding: 12px;
   border: 1px solid #fff;
   border-radius: $border-radius;
 
   &:hover,
   &:focus {
-    border-color: $link-color;
     background-color: #333;
 
     .footer-navigation-link__icon {
@@ -61,11 +60,16 @@
 }
 
 .footer-external-links {
-  margin-bottom: 0;
-  margin-top: -$sp-1 !important;
-  padding-left: 0 !important;
+  padding: 12px;
+  padding-right: 32px;
+  background-color: #000;
   text-align: right;
   font-size: $font-size-3;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin: 0 !important;
+  width: 100%;
 }
 
 .footer-external-link {

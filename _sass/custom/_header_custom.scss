@@ -18,12 +18,13 @@
 
 .language-list-link {
   display: block;
-  height: $nav-list-item-height;
-  line-height: $nav-list-item-height;
-  padding-left: $sp-6;
-  padding-right: $sp-6;
+  height: 2.5rem;
+  line-height: 2.1rem;
+  padding-left: auto;
+  padding-right: auto;
   border: 1px solid #676b6d;
   color: #676b6d;
+  align-items: center;
 
   &:hover {
     background-color: #333;

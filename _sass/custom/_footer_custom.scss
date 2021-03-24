@@ -13,10 +13,10 @@
 
   &:hover,
   &:focus {
-    background-color: #333;
+    background-color: #222;
 
     .footer-navigation-link__icon {
-      color: $link-color;
+      color: #fff;
     }
   }
 }

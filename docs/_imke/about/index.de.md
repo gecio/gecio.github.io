@@ -8,7 +8,7 @@ has_children: true
 
 ## Was ist die iMKE-Plattform?
 
-Die iMKE-Plattform stellt **Managed Kubernetes Cluster** bereit. Als Kunde können Sie mit einem einfachen Klick in unserem Webinterface Kubernetes-Cluster erstellen, aktualiseren oder auch wieder löschen.
+Die iMKE-Plattform stellt **Managed Kubernetes Cluster** bereit. Als Kunde können Sie mit einem einfachen Klick in unserem Webinterface Kubernetes-Cluster erstellen, aktualisieren oder auch wieder löschen.
 
 ### Was ist ein "Managed Kubernetes Cluster"?
 

@@ -13,10 +13,11 @@
 
   &:hover,
   &:focus {
-    background-color: #222;
+    border-color: $link-color;
+    background-color: $grey-lt-000;
 
     .footer-navigation-link__icon {
-      color: #fff;
+      color: $link-color;
     }
   }
 }
@@ -43,13 +44,13 @@
   top: calc(50% - 12px);
   width: 24px;
   height: 24px;
-  color: #fff;
+  color: $grey-lt-300;
 }
 
 .footer-navigation-link__sublabel {
   display: block;
   font-size: $font-size-2;
-  color: #fff;
+  color: $grey-dk-200;
   line-height: 1.2;
 }
 
@@ -62,7 +63,6 @@
 .footer-external-links {
   padding: 12px;
   padding-right: 32px;
-  background-color: #000;
   text-align: right;
   font-size: $font-size-3;
   position: fixed;

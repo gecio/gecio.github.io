@@ -22,8 +22,6 @@
   font-size: 24px !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
-  background-color: #000;
-  color: #fff !important;
 
   &:hover {
     background-image: none;
@@ -56,7 +54,8 @@
 .nav-list .nav-list-item .nav-list-link:hover,
 .nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-link:hover {
   background-image: none;
-  background-color: #676b6d;
+  background-color: $grey-lt-200;
+  color: $link-color;
 }
 
 .nav-list .nav-list-item .nav-list-link.active,
@@ -127,9 +126,11 @@ hr {
   }
 }
 
+
 ::-webkit-scrollbar {
   width: 5px;
 }
+
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -140,6 +141,7 @@ hr {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
 
 a,
 a:visited {
@@ -156,11 +158,15 @@ code {
   border: 1px solid #676b6d;
 }
 
+
+
+
 .search-result-doc {
   font-weight: bold;
   color: #e3006a;
   opacity: 1 !important;
 }
+
 
 span.na {
   color: #e3006a !important;

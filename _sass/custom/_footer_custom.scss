@@ -60,16 +60,31 @@
   font-weight: 600;
 }
 
-.footer-external-links {
+.footer-links {
   padding: 12px;
-  padding-right: 32px;
-  text-align: right;
-  font-size: $font-size-3;
-  position: fixed;
+  position: relative;
   bottom: 0px;
   right: 0px;
   margin: 0 !important;
+  margin-top: 10px !important;
   width: 100%;
+}
+
+.footer-hosted-with-love {
+  text-align: left;
+  font-size: $font-size-3;
+  margin: 0 !important;
+  width: fit-content;
+  float: left;
+  padding-top: 7px;
+}
+
+.footer-external-links {
+  text-align: right;
+  font-size: $font-size-3;
+  margin: 0 !important;
+  width: fit-content;
+  float: right;
 }
 
 .footer-external-link {

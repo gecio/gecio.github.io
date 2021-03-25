@@ -27,18 +27,12 @@
   align-items: center;
 
   &:hover {
-    background-color: #222;
     border-color: #e3006a;
   }
 
   &.active {
     font-weight: 600;
-    background-color: #222;
     border-color: #e3006a;
     color: $link-color;
   }
-}
-
-.main-header {
-  background-color: #000 !important;
 }

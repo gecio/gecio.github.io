@@ -8,7 +8,7 @@ has_children: true
 
 ## Was ist die iMKE-Plattform?
 
-Die iMKE-Plattform stellt **Managed Kubernetes Cluster** bereit. Als Kunde können Sie mit einem einfachen Klick in unserem Webinterface Kubernetes-Cluster erstellen, aktualiseren oder auch wieder löschen.
+Die iMKE-Plattform stellt **Managed Kubernetes Cluster** bereit. Als Kunde können Sie mit einem einfachen Klick in unserem Webinterface Kubernetes-Cluster erstellen, aktualisieren oder auch wieder löschen.
 
 ### Was ist ein "Managed Kubernetes Cluster"?
 
@@ -74,7 +74,7 @@ Die Worker-Nodes eines Kundenclusters werden wiederum als selbstständige VMs im
 
 ## Zertifizierungen
 
-![Certified Kubernets Logo](certified-kubernetes.png?width=100px)
+<img src="certified-kubernetes.png" alt="Certified Kubernetes Logo" width="100"/>
 
 iMKE ist ein Produkt um effizient Kubernetes Cluster in der GEC Cloud zu betreiben.
 Kunden können über ein übersichtliches Webinterface mit nur ein paar Klicks komplett funktionale

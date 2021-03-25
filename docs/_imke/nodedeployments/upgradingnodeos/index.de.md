@@ -2,7 +2,7 @@
 title: Aktualisierung des Betriebssystems auf Worker-Nodes
 lang: de
 permalink: /imke/nodedeployments/upgradingnodeos/
-nav_order: 5400
+nav_order: 5500
 parent: Node Deployments
 ---
 

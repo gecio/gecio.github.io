@@ -19,6 +19,9 @@ manually by you.
 Before you upgrade a cluster, please refer to the target version's [Changelog](/imke/about/)
 and make sure you familiarise yourself with the upcoming changes.
 
+One Tool that can help to prepare the update will be [kubepug](https://github.com/rikatz/kubepug).  
+It will check all deployed resources against the new kubernetes version and warn about removals and deprecations.
+
 ## The Cluster
 
 In Kubernetes the infrastructure is divided into master (= Kubernetes control plane) and (worker-)nodes.

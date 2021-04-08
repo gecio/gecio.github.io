@@ -20,8 +20,8 @@ selbst geupdated werden.
 Bevor Sie einen Cluster upgraden, lesen Sie bitte das [Changelog](/imke/about/) der Ziel-Kubernetes-Version,
 und stellen Sie sicher, dass Sie sich mit den bevorstehenden Änderungen vertraut machen.
 
-Das Tool [Kubepug](https://github.com/rikatz/kubepug) könnte beim update helfen.  
-Es kann die Kompatibilität der benutzten Ressourcen überprüfen und vor Deprecated oder nicht mehr unterstützten Versionen warnen.
+Das Tool [Kubepug](https://github.com/rikatz/kubepug) kann bei der Vorbereitung eines Updates helfen.
+Es kann die Kompatibilität der benutzten Ressourcen zur neuen Kubernetes-Version überprüfen und vor deprecated oder nicht mehr unterstützten Versionen warnen.
 
 ## Der Cluster
 

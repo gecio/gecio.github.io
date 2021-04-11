@@ -1,9 +1,10 @@
 ---
 title: Create and Use S3 Credentials
 lang: en
-permalink: /optimist/s3_documentation/createanduses3credentials
-nav_order: 5100
+permalink: /optimist/storage/s3_documentation/createanduses3credentials
+nav_order: 3120
 parent: S3 Compatible Object Storage Introduction
+grand_parent: Storage
 ---
 
 Create and Use S3 Credentials

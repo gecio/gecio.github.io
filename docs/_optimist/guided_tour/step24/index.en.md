@@ -1,8 +1,8 @@
 ---
-title: Step 24 - The Octavia Loadbalancer
+title: "24: The Octavia Loadbalancer"
 lang: en
 permalink: /optimist/guided_tour/step24
-nav_order: 24
+nav_order: 1240
 parent: Guided Tour
 ---
 

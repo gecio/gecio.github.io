@@ -1,8 +1,8 @@
 ---
-title: Step 6 - Create and use our own SSH-Key
+title: "06: Create and use our own SSH-Key"
 lang: en
 permalink: /optimist/guided_tour/step06
-nav_order: 2600
+nav_order: 1060
 parent: Guided Tour
 ---
 

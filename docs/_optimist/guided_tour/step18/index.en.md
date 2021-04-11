@@ -1,8 +1,8 @@
 ---
-title: Step 18 - Our VM will be reachable via IPv4
+title: "18: Our VM will be reachable via IPv4"
 lang: en
 permalink: /optimist/guided_tour/step18
-nav_order: 3800
+nav_order: 1180
 parent: Guided Tour
 ---
 

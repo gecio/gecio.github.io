@@ -1,8 +1,8 @@
 ---
-title: Step 23 - Object Storage (S3 compatible)
+title: "23: Object Storage (S3 compatible)"
 lang: en
 permalink: /optimist/guided_tour/step23
-nav_order: 4300
+nav_order: 1230
 parent: Guided Tour
 ---
 

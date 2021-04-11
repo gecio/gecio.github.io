@@ -1,8 +1,9 @@
 ---
 title: Einführung in den S3 Kompatiblen Objekt Storage
 lang: de
-permalink: /optimist/s3_documentation/
-nav_order: 5000
+permalink: /optimist/storage/s3_documentation/
+nav_order: 3100
+parent: Storage
 has_children: true
 ---
 

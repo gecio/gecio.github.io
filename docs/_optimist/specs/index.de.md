@@ -2,7 +2,7 @@
 title: Flavor Spezifikationen
 lang: de
 permalink: /optimist/specs/
-nav_order: 6000
+nav_order: 9000
 last_modified_date: 2021-03-02
 ---
 

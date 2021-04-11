@@ -1,8 +1,8 @@
 ---
-title: Step 1 - The Horizon(Dashboard)
+title: "01: The Horizon(Dashboard)"
 lang: en
 permalink: /optimist/guided_tour/step01
-nav_order: 2100
+nav_order: 1010
 parent: Guided Tour
 ---
 
@@ -29,7 +29,7 @@ need a new password, please write an e-mail to info@innovo-cloud.de
 
 The URL for the dashboard is <https://dashboard.optimist.innovo.cloud>
 
-[![](/attachments/13536092.png)](https://dashboard.optimist.innovo.cloud/)
+[![](attachments/13536092.png)](https://dashboard.optimist.innovo.cloud/)
 
 You should see the login form, use *default* for the *Domain* field and also use
 your username and password in the appropriate fields.

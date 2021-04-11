@@ -1,8 +1,8 @@
 ---
-title: Schritt 13 - Der strukturierte Weg zu einer Instanz (mit Stacks)
+title: "13: Der strukturierte Weg zu einer Instanz (mit Stacks)"
 lang: de
 permalink: /optimist/guided_tour/step13
-nav_order: 3300
+nav_order: 1130
 parent: Guided Tour
 ---
 

@@ -1,8 +1,8 @@
 ---
-title: Schritt 3 - Einen Stack starten
+title: "03: Einen Stack starten"
 lang: de
 permalink: /optimist/guided_tour/step03
-nav_order: 2300
+nav_order: 1030
 parent: Guided Tour
 ---
 

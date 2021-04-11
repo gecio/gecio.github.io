@@ -1,8 +1,8 @@
 ---
-title: Schritt 9 - Die erste Security-Group
+title: "09: Die erste Security-Group"
 lang: de
 permalink: /optimist/guided_tour/step09
-nav_order: 2900
+nav_order: 1090
 parent: Guided Tour
 ---
 

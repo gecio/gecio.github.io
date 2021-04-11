@@ -1,8 +1,8 @@
 ---
-title: Schritt 10 - Zugriff aus dem Internet vorbereiten; Ein Netzwerk anlegen
+title: "10: Zugriff aus dem Internet vorbereiten; Ein Netzwerk anlegen"
 lang: de
 permalink: /optimist/guided_tour/step10
-nav_order: 3000
+nav_order: 1100
 parent: Guided Tour
 ---
 

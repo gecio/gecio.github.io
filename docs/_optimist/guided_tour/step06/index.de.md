@@ -1,8 +1,8 @@
 ---
-title: Schritt 6 - Einen eigenen SSH-Key per Konsole erstellen und nutzen
+title: "06: Einen eigenen SSH-Key per Konsole erstellen und nutzen"
 lang: de
 permalink: /optimist/guided_tour/step06
-nav_order: 2600
+nav_order: 1060
 parent: Guided Tour
 ---
 

@@ -1,8 +1,8 @@
 ---
-title: Step 21 - Start a VM via an SSD volume
+title: "21: Start a VM via an SSD volume"
 lang: en
 permalink: /optimist/guided_tour/step21
-nav_order: 4100
+nav_order: 1210
 parent: Guided Tour
 ---
 

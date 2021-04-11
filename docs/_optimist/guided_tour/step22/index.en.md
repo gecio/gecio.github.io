@@ -1,8 +1,8 @@
 ---
-title: Step 22 - Creating a DNS record in Designate
+title: "22: Creating a DNS record in Designate"
 lang: en
 permalink: /optimist/guided_tour/step22
-nav_order: 4200
+nav_order: 1220
 parent: Guided Tour
 ---
 

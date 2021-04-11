@@ -1,8 +1,8 @@
 ---
-title: Step 3 - Spawn a new Stack
+title: "03: Spawn a new Stack"
 lang: en
 permalink: /optimist/guided_tour/step03
-nav_order: 2300
+nav_order: 1030
 parent: Guided Tour
 ---
 

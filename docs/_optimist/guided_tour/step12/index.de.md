@@ -1,8 +1,8 @@
 ---
-title: Schritt 12 - Eine nutzbare Instanz
+title: "12: Eine nutzbare Instanz"
 lang: de
 permalink: /optimist/guided_tour/step12
-nav_order: 3200
+nav_order: 1120
 parent: Guided Tour
 ---
 

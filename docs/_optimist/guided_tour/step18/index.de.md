@@ -1,8 +1,8 @@
 ---
-title: Schritt 18 - Unsere Instanz wird von außen per IPv4 erreichbar
+title: "18: Unsere Instanz wird von außen per IPv4 erreichbar"
 lang: de
 permalink: /optimist/guided_tour/step18
-nav_order: 3800
+nav_order: 1180
 parent: Guided Tour
 ---
 

@@ -1,9 +1,10 @@
 ---
 title: Upload and delete an object
 lang: en
-permalink: /optimist/s3_documentation/uploadanddeleteobject
-nav_order: 5400
+permalink: /optimist/storage/s3_documentation/uploadanddeleteobject
+nav_order: 3130
 parent: S3 Compatible Object Storage Introduction
+grand_parent: Storage
 ---
 
 Upload and delete an object

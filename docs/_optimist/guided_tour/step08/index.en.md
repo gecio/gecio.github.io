@@ -1,8 +1,8 @@
 ---
-title: Step 8 - Delete the first VM
+title: "08: Delete the first VM"
 lang: en
 permalink: /optimist/guided_tour/step08
-nav_order: 2800
+nav_order: 1080
 parent: Guided Tour
 ---
 

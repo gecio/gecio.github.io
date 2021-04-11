@@ -2,7 +2,7 @@
 title: Guided Tour
 lang: en
 permalink: /optimist/guided_tour/
-nav_order: 4400
+nav_order: 1000
 has_children: true
 ---
 

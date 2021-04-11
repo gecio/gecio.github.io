@@ -1,8 +1,8 @@
 ---
-title: Step 19 - We will add IPv6 to our template
+title: "19: We will add IPv6 to our template"
 lang: en
 permalink: /optimist/guided_tour/step19
-nav_order: 3900
+nav_order: 1190
 parent: Guided Tour
 ---
 

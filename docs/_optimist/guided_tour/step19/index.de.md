@@ -1,8 +1,8 @@
 ---
-title: Schritt 19 - Unsere Instanz lernt IPv6
+title: "19: Unsere Instanz lernt IPv6"
 lang: de
 permalink: /optimist/guided_tour/step19
-nav_order: 3900
+nav_order: 1190
 parent: Guided Tour
 ---
 

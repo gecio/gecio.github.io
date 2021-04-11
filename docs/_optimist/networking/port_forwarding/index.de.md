@@ -1,8 +1,9 @@
 ---
 title: Port Forwarding auf Floating IPs
 lang: de
-permalink: /optimist/port_forwarding/
-nav_order: 3000
+permalink: /optimist/networking/port_forwarding/
+parent: Netzwerke
+nav_order: 2100
 ---
 
 Port Forwarding auf Floating IPs

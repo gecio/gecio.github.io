@@ -1,8 +1,8 @@
 ---
-title: Step 12 - A usable VM
+title: "12: A usable VM"
 lang: en
 permalink: /optimist/guided_tour/step12
-nav_order: 3200
+nav_order: 1120
 parent: Guided Tour
 ---
 

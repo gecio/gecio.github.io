@@ -1,8 +1,8 @@
 ---
-title: Schritt 7 - Die erste eigene Instanz
+title: "07: Die erste eigene Instanz"
 lang: de
 permalink: /optimist/guided_tour/step07
-nav_order: 2700
+nav_order: 1070
 parent: Guided Tour
 ---
 

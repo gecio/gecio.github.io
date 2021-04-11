@@ -1,8 +1,8 @@
 ---
-title: Schritt 17 - Das Netzwerk im Heat
+title: "17: Das Netzwerk im Heat"
 lang: de
 permalink: /optimist/guided_tour/step17
-nav_order: 3700
+nav_order: 1170
 parent: Guided Tour
 ---
 

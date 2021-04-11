@@ -1,8 +1,8 @@
 ---
-title: Schritt 22 - Anlegen eines DNS-Record in Designate
+title: "22: Anlegen eines DNS-Record in Designate"
 lang: de
 permalink: /optimist/guided_tour/step22
-nav_order: 4200
+nav_order: 1220
 parent: Guided Tour
 ---
 

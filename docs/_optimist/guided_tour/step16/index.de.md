@@ -1,8 +1,8 @@
 ---
-title: Schritt 16 - Wir lernen Heat besser kennen
+title: "16: Wir lernen Heat besser kennen"
 lang: de
 permalink: /optimist/guided_tour/step16
-nav_order: 3600
+nav_order: 1160
 parent: Guided Tour
 ---
 

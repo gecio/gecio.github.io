@@ -1,8 +1,8 @@
 ---
-title: Schritt 4 - Der Weg vom Horizon auf die Kommandozeile
+title: "04: Der Weg vom Horizon auf die Kommandozeile"
 lang: de
 permalink: /optimist/guided_tour/step04
-nav_order: 2400
+nav_order: 1040
 parent: Guided Tour
 ---
 

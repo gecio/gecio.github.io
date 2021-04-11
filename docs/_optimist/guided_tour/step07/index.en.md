@@ -1,8 +1,8 @@
 ---
-title: Step 7 - The first VM
+title: "07: The first VM"
 lang: en
 permalink: /optimist/guided_tour/step07
-nav_order: 2700
+nav_order: 1070
 parent: Guided Tour
 ---
 

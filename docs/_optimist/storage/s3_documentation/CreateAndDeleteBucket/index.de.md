@@ -1,9 +1,10 @@
 ---
 title: Einen Bucket erstellen und wieder löschen
 lang: de
-permalink: /optimist/s3_documentation/createanddeletebucket
-nav_order: 5200
+permalink: /optimist/storage/s3_documentation/createanddeletebucket
+nav_order: 3110
 parent: Einführung in den S3 Kompatiblen Objekt Storage
+grand_parent: Storage
 ---
 
 

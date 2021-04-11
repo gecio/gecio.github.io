@@ -119,3 +119,7 @@ _site/
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/jekyll,vscode,intellij
+
+### Mac-Stuff ###
+.DS_Store
+**/.DS_Store

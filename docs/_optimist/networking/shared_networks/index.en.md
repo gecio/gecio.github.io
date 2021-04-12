@@ -1,8 +1,9 @@
 ---
 title: Shared Networks
 lang: en
-permalink: /optimist/shared_networks/
-nav_order: 30
+permalink: /optimist/networking/shared_networks/
+nav_order: 2200
+parent: Networking
 ---
 
 Shared Networks

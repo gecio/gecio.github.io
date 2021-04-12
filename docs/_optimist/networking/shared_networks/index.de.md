@@ -1,8 +1,9 @@
 ---
 title: Geteilte Netzwerke
 lang: de
-permalink: /optimist/shared_networks/
-nav_order: 30
+permalink: /optimist/networking/shared_networks/
+nav_order: 2200
+parent: Netzwerke
 ---
 
 Geteilte Netzwerke

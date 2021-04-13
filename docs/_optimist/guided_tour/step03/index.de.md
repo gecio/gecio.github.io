@@ -33,8 +33,7 @@ welches in dem Stack eine Instanz startet.
 
 Hierfür nutzen wir die [SingleServer.yaml](https://github.com/innovocloud/openstack_examples/blob/master/heat/templates/SingleServer/SingleServer.yaml) aus dem [iNNOVO Github Repository](https://github.com/innovocloud).
 
-
-![](attachments/13536118.png)
+![](attachments/13536111.png)
 
 In dem sich nun öffnenden Fenster, wählen wir bei *Template Source* 
 **File** aus und nehmen bei *Template File*, die eben heruntergeladene
@@ -42,7 +41,7 @@ In dem sich nun öffnenden Fenster, wählen wir bei *Template Source*
 
 Den Rest belassen wir so wie es ist und klicken auf *Next*.
 
-![](attachments/13536119.png)
+![](attachments/13536112.png)
 
 Nun werden weitere Eingaben benötigt, genauer sind das folgende und am
 Ende klicken wir auf Launch:
@@ -56,18 +55,18 @@ Ende klicken wir auf Launch:
 -   machine\_name: singleserver
 -   public\_network\_id: provider
 
-![](attachments/9700785.png)
+![](attachments/13536113.png)
 
 Nun wird der Stack auch direkt gestartet und das Horizon Dashboard
 sieht dann so aus:
 
-![](attachments/13536121.png)
+![](attachments/13536114.png)
 
 Um nun zu überprüfen ob die Instanz korrekt gestartet wurde, wechseln
 wir in der Navigation auf *Compute* → *Instances* und die Übersicht sieht
 dann wie folgt aus:
 
-![](attachments/13536122.png)
+![](attachments/13536115.png)
 
 Nachdem nun also der Stack und auch die darin enthaltene Instanz
 gestartet wurden, löschen wir jetzt wieder den Stack inklusive Instanz.
@@ -81,7 +80,7 @@ Um den Stack zu löschen, wechseln wir in der Navigation wieder auf
 Klicken hinter dem Stack, unter *Actions*, auf den Pfeil nach unten und
 wählen dort *Delete Stack*.
 
-![](attachments/13536123.png)
+![](attachments/13536116.png)
 
 Abschluss
 ---------

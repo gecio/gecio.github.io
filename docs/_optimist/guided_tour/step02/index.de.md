@@ -31,13 +31,13 @@ Um nun den Schlüssel zu erstellen, wechseln wir im Horizon(Dashboard) in
 der Navigation auf *Compute* → *Key Pairs* und klicken dort auf *Create
 Key Pair*.
 
-![](attachments/13536103.png)
+![](attachments/13536100.png)
 
 Im sich öffnenden Fenster kann nun ein Name für den Key vergeben werden,
 in dem Beispiel wird *BeispielKey* verwendet, anschließend klicken wir
 auf *Create Key Pair*.
 
-![](attachments/13536104.png)
+![](attachments/13536101.png)
 
 Abschluss
 ---------

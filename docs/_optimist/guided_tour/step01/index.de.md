@@ -31,7 +31,7 @@ an <info@innovo-cloud.de>.
 Hierzu wechseln wir im Browser auf folgende
 URL: <https://dashboard.optimist.innovo.cloud/>
 
-![](attachments/13536094.png)
+[![](attachments/13536092.png)](https://dashboard.optimist.innovo.cloud/)
 
 Im sich öffnenden Fenster wählen wir bei Domain *default*, und tragen den
 zugesendeten Benutzer (User-Name) sowie das zugehörige Passwort(Password) ein
@@ -39,7 +39,7 @@ und klicken auf *Connect*.
 
 Nun öffnet sich das Horizon(Dashboard).
 
-![](attachments/13536095.png)
+![](attachments/13536090.png)
 
 Passwort ändern
 ---------------
@@ -48,7 +48,7 @@ Da aus Sicherheitsgründen empfohlen wird das Passwort nach Erhalt zu
 ändern, klicken wir im Horizon(Dashboard) dafür rechts oben auf den
 Benutzernamen(1) und auf *Settings*(2).
 
-![](attachments/13536096.png)
+![](attachments/13536091.png)
 
 Im sich nun öffnenden Fenster sehen wir zuerst Settings, wo unter
 anderem auch die Sprache umgestellt werden kann. 

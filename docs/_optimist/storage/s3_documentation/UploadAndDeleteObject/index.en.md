@@ -3,7 +3,7 @@ title: Upload and delete an object
 lang: en
 permalink: /optimist/storage/s3_documentation/uploadanddeleteobject
 nav_order: 3130
-parent: S3 Compatible Object Storage Introduction
+parent: S3 Compatible Object Storage
 grand_parent: Storage
 ---
 

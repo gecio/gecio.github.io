@@ -3,7 +3,7 @@ title: Enable and Disable Versioning, and Delete a versioned object
 lang: en
 permalink: /optimist/storage/s3_documentation/versioning
 nav_order: 3140
-parent: S3 Compatible Object Storage Introduction
+parent: S3 Compatible Object Storage
 grand_parent: Storage
 ---
 

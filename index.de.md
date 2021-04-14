@@ -5,4 +5,4 @@ lang: de
 permalink: /
 ---
 
-# Wilkommen!
+# Willkommen!

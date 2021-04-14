@@ -1,5 +1,5 @@
 ---
-title: Einführung in den S3 Kompatiblen Objekt Storage
+title: S3 Kompatiblen Objekt Storage
 lang: de
 permalink: /optimist/storage/s3_documentation/
 nav_order: 3100

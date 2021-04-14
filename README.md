@@ -2,9 +2,9 @@
 
 <div align="center">
 
-# Optimist Documentation
+# GEC Customer Documentation
 
-This repository contains the documentation for the Optimist platform.
+This repository contains the customer documentation for GEC.
 
 </div>
 

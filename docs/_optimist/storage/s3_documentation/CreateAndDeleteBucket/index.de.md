@@ -2,7 +2,7 @@
 title: Einen Bucket erstellen und wieder löschen
 lang: de
 permalink: /optimist/storage/s3_documentation/createanddeletebucket
-nav_order: 3110
+nav_order: 3120
 parent: S3 Kompatiblen Objekt Storage
 grand_parent: Storage
 ---
@@ -14,17 +14,17 @@ Einen Bucket erstellen und wieder löschen
 Inhalt:
 ---------
 - [S3cmd](#S3cmd)
-	- [Bucket erstellen](#createbuckets3cmd)
-	- [Bucket löschen](#deletebuckets3cmd)
+	- [Bucket erstellen](#bucket-erstellen)
+	- [Bucket löschen](#bucket-löschen)
 - [S3Browser](#s3browser)
-	- [Bucket erstellen](#createbuckets3Browser)
-	- [Bucket löschen](#deletebuckets3Browser)
+	- [Bucket erstellen](#bucket-erstellen-1)
+	- [Bucket löschen](#bucket-löschen-1)
 - [Cyberduck](#cyberduck)
-	- [Bucket erstellen](#createbucketcyberduck)
-	- [Bucket löschen](#deletebucketcyberduck)
+	- [Bucket erstellen](#bucket-erstellen-2)
+	- [Bucket löschen](#bucket-löschen-2)
 - [Boto3](#boto3)
-	- [Bucket erstellen](#createbucketboto3)
-	- [Bucket löschen](#deletebucketboto3)
+	- [Bucket erstellen](#bucket-erstellen-3)
+	- [Bucket löschen](#bucket-löschen-3)
 
 Zum Hochladen Ihrer Daten wie zum Beispiel (Dokumente, Fotos, Videos, usw.) ist es zunächst notwendig einen Bucket zu erstellen. Dieser dient als eine Art Ordner.
 
@@ -39,8 +39,8 @@ Es empfiehlt sich, Namen der Form inhaltsbeschreibung.bucket.meine-domain.tld  o
 [S3cmd](#S3cmd)
 =============
 
-[Bucket erstellen](#createbuckets3cmd)
------------------------
+# Bucket erstellen
+
 Um einen Bucket zu erstellen, nutzt man folgenden Befehl:
 
 ```bash
@@ -53,8 +53,9 @@ Die Ausgabe in der Kommandozeile kann dann so aussehen:
 $ s3cmd mb s3://iNNOVO-Test
 Bucket 's3://iNNOVO-Test/' created
 ```
-[Bucket löschen](#deletebuckets3cmd)
------------------------
+
+# Bucket löschen
+
 Um einen Bucket zu löschen, nutzt man folgenden Befehl:
 
 ```bash
@@ -71,15 +72,13 @@ Bucket 's3://iNNOVO-Test/' removed
 [S3Browser](#s3browser)
 =============
 
-[Bucket erstellen](#createbuckets3browser)
------------------------
+# Bucket erstellen
 
 Nach dem Öffnen von S3Browser, klicken wir oben links auf "New bucket"(1), in dem sich öffnenden Fenster vergeben wir unter "Bucket name"(2) den Namen des Buckets und klicken dann auf "Create new bucket"(3).
 
 ![](attachments/CreateAndDeleteBucket1.png)
 
-[Bucket löschen](#deletebuckets3browser)
------------------------
+# Bucket löschen
 
 Zuerst wird der zu löschende Bucket markiert(1) und danch oben links auf "Delete bucket" geklickt.
 
@@ -92,8 +91,7 @@ Im sich nun öffnenden Fenster, bestätigen mit dem markieren der Checkbox(1), d
 [Cyberduck](#cyberduck)
 =============
 
-[Bucket erstellen](#createbucketcyberduck)
------------------------
+# Bucket erstellen
 
 Nach dem Öffnen von Cyberduck, klicken wir oben in der Mitte auf "Aktion"(1) und auf "Neuer Ordner"(2)
 
@@ -103,8 +101,7 @@ Danach öffnet sich das folgende Fenster, hier können wir den Namen(1) festlege
 
 ![](attachments/CreateAndDeleteBucket5.png)
 
-[Bucket löschen](#deletebucketcyberduck)
------------------------
+# Bucket löschen
 
 Um einen Bucket zu löschen, wird dieser mit einem linken Mausklick makiert. Gelöscht wird der Bucket dann über "Aktion"(1) und "Löschen"(2).
 
@@ -119,8 +116,7 @@ Die Bestätigung erfolgt dann über das erneute klicken auf "Löschen"(1)
 
 Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: S3 Kennung erstellen und einlesen#boto3
 
-[Bucket erstellen](#createbucketboto3)
------------------------
+# Bucket erstellen
 
 Um nun einen Bucket zu erstellen, müssen wir einen Clienten nutzen und den Bucket dann erstellen.
 Eine Option sieht so aus:
@@ -155,8 +151,8 @@ s3 = boto3.client('s3')
 ## Erstellung des Buckets
 s3.create_bucket(Bucket='iNNOVO-Test')
 ```
-[Bucket löschen](#deletebucketboto3)
------------------------
+
+# Bucket löschen
 
 Wie bei der Erstellung des Buckets, wird zunächst ein Client benötigt um dann den Bucket zu löschen.
 Um nun einen Bucket zu erstellen, müssen wir einen Clienten nutzen und den Bucket dann erstellen.

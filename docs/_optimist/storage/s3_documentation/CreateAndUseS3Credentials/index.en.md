@@ -2,7 +2,7 @@
 title: Create and Use S3 Credentials
 lang: en
 permalink: /optimist/storage/s3_documentation/createanduses3credentials
-nav_order: 3120
+nav_order: 3110
 parent: S3 Compatible Object Storage
 grand_parent: Storage
 ---
@@ -91,6 +91,7 @@ Here we enter the following values and click on "Add new account".
 * Access Key ID: The corresponding Access Key (in our example: ddddddddddddddddddddddddddddddddddddd)
 * Secret Access Key: The corresponding secret (in our example: ddddddddddddddddddddddddddddddddddddd)
 ```
+
 [Cyberduck](#cyberduck)
 -----------------------
 

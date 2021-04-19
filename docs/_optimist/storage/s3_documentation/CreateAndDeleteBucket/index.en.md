@@ -2,7 +2,7 @@
 title: Create and Delete a Bucket
 lang: en
 permalink: /optimist/storage/s3_documentation/createanddeletebucket
-nav_order: 3110
+nav_order: 3120
 parent: S3 Compatible Object Storage
 grand_parent: Storage
 ---
@@ -13,27 +13,26 @@ Create and Delete a Bucket
 Contents:
 -----------
 - [S3cmd](#s3cmd)
-	- [Create a bucket](#createbuckets3cmd)
-	- [Delete a bucket](#deletebuckets3cmd)
+	- [Create a bucket](#create-a-bucket)
+	- [Delete a bucket](#delete-a-bucket)
 - [S3Browser](#s3browser)
-	- [Create a bucket](#createbuckets3browser)
-	- [Delete a bucket](#deletebuckets3browser)
+	- [Create a bucket](#create-a-bucket-1)
+	- [Delete a bucket](#delete-a-bucket-1)
 - [Cyberduck](#cyberduck)
-	- [Create a bucket](#createbucketcyberduck)
-	- [Delete a bucket](#deletebucketcyberduck)
+	- [Create a bucket](#create-a-bucket-2)
+	- [Delete a bucket](#delete-a-bucket-2)
 - [Boto3](#boto3)
-	- [Create a bucket](#createbucketboto3)
-	- [Delete a bucket](#deletebucketboto3)
+	- [Create a bucket](#create-a-bucket-3)
+	- [Delete a bucket](#delete-a-bucket-3)
 
 To upload your data (documents, photos, videos, etc.) it is necessary to create a bucket, which is similar to a folder. First create an S3 bucket and then you can upload as many objects as required into the bucket.
 
 [//]: # "Since the namespace for the iNNOVO S3 is used by all customers and the name of a bucket is unique. The name of a bucket after its creation cannot be used by another iNNOVO account until the bucket is deleted. Therefore, please do not rely on a specific name for buckets."
 
 [S3cmd](#s3cmd)
-=============
+---------------
 
-[Create a bucket](#createbuckets3cmd)
------------------------
+# Create a bucket
 
 To create a bucket, use the following command:
 
@@ -48,8 +47,7 @@ $ s3cmd mb s3://iNNOVO-Test
 Bucket 's3://iNNOVO-Test/' created
 ```
 
-[Delete a bucket](#DeleteBucketS3cmd)
------------------------
+# Delete a bucket
 
 To delete a bucket, use the following command:
 
@@ -66,15 +64,13 @@ Bucket 's3://iNNOVO-Test/' removed
 [S3Browser](#s3browser)
 =============
 
-[Create a bucket](#createbucketS3Browser)
------------------------
+# Create a bucket
 
 After opening S3Browser, we click on "New bucket"(1) in the upper left corner, in the newly opened window, we assign the name of the bucket via "Bucket name"(2) and then click on "Create new bucket"(3).
 
 ![](attachments/CreateAndDeleteBucket1.png)
 
-[Delete a bucket](#deletebuckets3browser)
------------------------
+# Delete a bucket
 
 First select the bucket you want to delete(1) and then click on "Delete bucket"(2) in the upper left corner.
 
@@ -87,8 +83,8 @@ In the window that opens, confirm that you want to delete the file by checking t
 [Cyberduck](#cyberduck)
 =============
 
-[Create a bucket](#createbucketcyberduck)
------------------------
+# Create a bucket
+
 After opening Cyberduck, we click on "Action"(1) and on "New folder"(2) in the middle of the top.
 
 ![](attachments/CreateAndDeleteBucket4.png)
@@ -97,8 +93,7 @@ A new window opens, here we can define the name(1) and confirm this with "Create
 
 ![](attachments/CreateAndDeleteBucket5.png)
 
-[Delete a bucket](#deletebucketcyberduck)
------------------------
+# Delete a bucket
 
 To delete a bucket, select it with a left mouse click. The bucket is then deleted via "Action"(1) and "Delete"(2).
 
@@ -113,8 +108,8 @@ Confirm the action by clicking on "Delete"(1) once again.
 
 In Boto3 we first need the S3 identifier so that a script can be used. For details see: [Create and use S3 credentials#Boto3](./CreateAndUseS3CredentialsEN/#boto3)
 
-[Create a bucket](#createbucketboto3)
------------------------
+# Create a bucket
+
 To create a bucket, we first need a client for it and we will then create the bucket afterwards.
 One option looks like this:
 ```bash
@@ -148,8 +143,7 @@ s3 = boto3.client('s3')
 s3.create_bucket(Bucket='iNNOVO-Test')
 ```
 
-[Delete a bucket](#deletebucketboto3)
------------------------
+# Delete a bucket
 
 As before, we first need a client to delete the bucket.
 One option looks like this:

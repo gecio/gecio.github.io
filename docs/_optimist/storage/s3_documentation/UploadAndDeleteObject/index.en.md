@@ -13,17 +13,17 @@ Upload and delete an object
 Contents:
 -----------
 - [S3cmd](#s3cmd)
-	- [Upload an object](#uploadobjects3cmd)
-	- [Delete an object](#deleteobjects3cmd) 
+	- [Upload an object](#upload-an-object)
+	- [Delete an object](#delete-an-object) 
 - [S3Browser](#s3browser)
-	- [Upload an object](#uploadobjects3browser)
-	- [Delete an object](#deleteobjects3browser) 
+	- [Upload an object](#upload-an-object-1)
+	- [Delete an object](#delete-an-object-1)
 - [Cyberduck](#cyberduck)
-	- [Upload an object](#uploadobjectcyberduck)
-	- [Delete an object](#deleteobjectcyberduck) 
+	- [Upload an object](#upload-an-object-2)
+	- [Delete an object](#delete-an-object-2)
 - [Boto3](#boto3)
-	- [Upload an object](#uploadobjectboto3)
-	- [Delete an object](#deleteobjectboto3) 
+	- [Upload an object](#upload-an-object-3)
+	- [Delete an object](#delete-an-object-3)
 
 To upload your data (documents, photos, videos, etc.) it is first necessary to [create a bucket](./CreateAndDeleteBucketEN.md).
 A file can only be saved in a bucket.
@@ -31,8 +31,7 @@ A file can only be saved in a bucket.
 [S3cmd](#s3cmd)
 =============
 
-[Upload an object](#uploadobjects3cmd)
------------------------
+# Upload an object
 
 To upload a file, use the following command:
 
@@ -48,8 +47,7 @@ upload: 'innovo.txt' -> 's3://innovo-test/innovo.txt'  [1 of 1]
  95 of 95   100% in    0s   176.63 B/s  done
 ```
 
-[Delete an object](#deleteobjects3cmd)
------------------------
+# Delete an object
 
 To delete a file, use the following command:
 
@@ -67,8 +65,7 @@ delete: 's3://innovo-test/innovo.txt'
 [S3Browser](#s3browser)
 =============
 
-[Upload an object](#uploadobjects3browser)
------------------------
+# Upload an object
 
 After opening S3Browser, we click on the desired "Bucket"(1), then select "Upload"(2) and finally "Upload file(s)"(3)
 
@@ -78,8 +75,7 @@ Here we select the file(1) and click on Open(2).
 
 ![](attachments/UploadAndDeleteObject2.png)
 
-[Delete an object](#deleteobjects3browser)
------------------------
+# Delete an object
 
 To delete a file, select it with a left mouse click(1). Then click on "Delete"(2).
 
@@ -91,16 +87,15 @@ Finally, confirm the action with "Yes".
 [Cyberduck](#cyberduck)
 =============
 
-[Upload an object](#uploadobjectcyberduck)
------------------------
+# Upload an object
+
 After opening Cyberduck, click on the Bucket(1), then click on Action(2) and then on Upload(3).
 
 ![](attachments/UploadAndDeleteObject4.png)
 
 Here we choose our file and click on Upload.
 
-[Delete an object](#deleteobjectcyberduck)
------------------------
+# Delete an object
 
 To delete a file, select it with a left mouse click(1). It is then deleted via "Action"(2) and "Delete"(3). 
 
@@ -115,8 +110,8 @@ At boto3 we first need the S3 identifier so that a script can be used. For detai
 [create and read S3 identifier # Boto3](#CreateandUseS3CredentialsEN.md)
 
 
-[Upload an object](#uploadobjectboto3)
------------------------
+# Upload an object
+
 To upload a file, we have to use a client and specify the bucket which the file should be uploaded to.
 One option could look like this:
 
@@ -151,8 +146,8 @@ s3 = boto3.client('s3')
 s3.upload_file(Bucket='iNNOVO-Test', Key='innovo.txt')
 ```
 
-[Delete an object](#deleteobjectboto3) 
------------------------
+# Delete an object
+
 As well as being used to upload a file, the client is also required to delete the file.
 For this, we specify the bucket in which the file is stored, in addition to the file itself. 
 One option could look like this:

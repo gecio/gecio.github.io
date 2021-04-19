@@ -10,10 +10,10 @@ has_children: true
 S3 Compatible Object Storage Introduction
 =================================================
 
-- [Create and use S3 credentials](./CreateAndUseS3CredentialsEN.md)
-- [Create and delete a bucket](./CreateAndDeleteBucketEN.md)
-- [Enable and disable versioning and also delete a versioned object](./VersioningEN.md)
-- [Upload and delete an object](./UploadAndDeleteObjectEN.md)
+- [Create and use S3 credentials](./CreateAndUseS3Credentials/index.en.md)
+- [Create and delete a bucket](./CreateAndDeleteBucket/index.en.md)
+- [Enable and disable versioning and also delete a versioned object](./Versioning/index.en.md)
+- [Upload and delete an object](./UploadAndDeleteObject/index.en.md)
 
 What exactly is Object Storage?
 -----

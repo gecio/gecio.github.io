@@ -13,17 +13,9 @@ Create and Delete a Bucket
 Contents:
 -----------
 - [S3cmd](#s3cmd)
-	- [Create a bucket](#create-a-bucket)
-	- [Delete a bucket](#delete-a-bucket)
 - [S3Browser](#s3browser)
-	- [Create a bucket](#create-a-bucket-1)
-	- [Delete a bucket](#delete-a-bucket-1)
 - [Cyberduck](#cyberduck)
-	- [Create a bucket](#create-a-bucket-2)
-	- [Delete a bucket](#delete-a-bucket-2)
 - [Boto3](#boto3)
-	- [Create a bucket](#create-a-bucket-3)
-	- [Delete a bucket](#delete-a-bucket-3)
 
 To upload your data (documents, photos, videos, etc.) it is necessary to create a bucket, which is similar to a folder. First create an S3 bucket and then you can upload as many objects as required into the bucket.
 

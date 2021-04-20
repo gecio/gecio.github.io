@@ -14,17 +14,9 @@ Einen Bucket erstellen und wieder löschen
 Inhalt:
 ---------
 - [S3cmd](#S3cmd)
-	- [Bucket erstellen](#bucket-erstellen)
-	- [Bucket löschen](#bucket-löschen)
 - [S3Browser](#s3browser)
-	- [Bucket erstellen](#bucket-erstellen-1)
-	- [Bucket löschen](#bucket-löschen-1)
 - [Cyberduck](#cyberduck)
-	- [Bucket erstellen](#bucket-erstellen-2)
-	- [Bucket löschen](#bucket-löschen-2)
 - [Boto3](#boto3)
-	- [Bucket erstellen](#bucket-erstellen-3)
-	- [Bucket löschen](#bucket-löschen-3)
 
 Zum Hochladen Ihrer Daten wie zum Beispiel (Dokumente, Fotos, Videos, usw.) ist es zunächst notwendig einen Bucket zu erstellen. Dieser dient als eine Art Ordner.
 

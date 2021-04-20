@@ -111,7 +111,7 @@ Um nun eine Verbindung herzustellen, wird als letzter Schritt auf "Verbinden" ge
 [Boto3](#boto3)
 -----------------------
 
-Um Boto3 nutzen zu können, wird ein Paketmanager wie zum Beispiel "pip" benötigt. Die Installation und Nutzung wird im [Schritt 4: "Der Weg vom Horizon auf die Kommandozeile"](https://docs.innovo.cloud/guided_tour/de/schritt04/) unserer Guided Tour erklärt.
+Um Boto3 nutzen zu können, wird ein Paketmanager wie zum Beispiel "pip" benötigt. Die Installation und Nutzung wird im [Schritt 4: "Der Weg vom Horizon auf die Kommandozeile"](https://docs.gec.io/de/optimist/guided_tour/step04) unserer Guided Tour erklärt.
 Der Befehl für die Installation lautet dann:
 
 ```

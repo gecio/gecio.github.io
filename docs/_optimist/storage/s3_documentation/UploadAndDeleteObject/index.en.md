@@ -106,8 +106,7 @@ This action is then confirmed by clicking on "Delete" again.
 
 [Boto3](#boto3)
 =======
-At boto3 we first need the S3 identifier so that a script can be used. For details: Create and use S3 credentials
-[create and read S3 identifier # Boto3](#CreateandUseS3CredentialsEN.md)
+At boto3 we first need the S3 identifier so that a script can be used. For details: [Create and use S3 credentials #Boto3](https://docs.gec.io/optimist/storage/s3_documentation/createanduses3credentials)
 
 
 # Upload an object

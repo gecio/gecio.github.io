@@ -101,7 +101,7 @@ Hier wird einfach die zu löschende Datei markiert(1) und über Aktion(2) → L�
 [Boto3](#Boto3)
 =============
 
-Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung Erstellen und Einlesen](CreateAndUseS3CredentialsDE.md)
+Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](https://docs.gec.io/de/optimist/storage/s3_documentation/createanduses3credentials)
 
 # Versionierung einschalten
 

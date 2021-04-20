@@ -114,7 +114,7 @@ Die Bestätigung erfolgt dann über das erneute klicken auf "Löschen"(1)
 [Boto3](#boto3)
 =============
 
-Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: S3 Kennung erstellen und einlesen#boto3
+Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](https://docs.gec.io/de/optimist/storage/s3_documentation/createanduses3credentials)
 
 # Bucket erstellen
 

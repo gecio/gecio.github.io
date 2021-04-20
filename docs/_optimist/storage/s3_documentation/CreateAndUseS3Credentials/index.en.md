@@ -54,7 +54,7 @@ Entering User Data in the Configuration File
 [S3cmd](#s3cmd)
 -----------------------
 
-To install s3cmd, we need a package manager such as "pip". The installation and usage is explained in [Step 4: "Our way to the console"](https://docs.innovo.cloud/guided_tour/en/step04/) of our Guided Tour.
+To install s3cmd, we need a package manager such as "pip". The installation and usage is explained in [Step 4: "Our way to the console"](https://docs.gec.io/optimist/guided_tour/step04) of our Guided Tour.
 Once pip is installed, the command for the installation of S3cmd is then: 
 
 `$ pip install s3cmd`

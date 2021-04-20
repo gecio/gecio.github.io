@@ -25,7 +25,7 @@ Contents:
 	- [Upload an object](#upload-an-object-3)
 	- [Delete an object](#delete-an-object-3)
 
-To upload your data (documents, photos, videos, etc.) it is first necessary to [create a bucket](./CreateAndDeleteBucketEN.md).
+To upload your data (documents, photos, videos, etc.) it is first necessary to [create a bucket](https://docs.gec.io/optimist/storage/s3_documentation/createanddeletebucket).
 A file can only be saved in a bucket.
 
 [S3cmd](#s3cmd)
@@ -106,7 +106,7 @@ This action is then confirmed by clicking on "Delete" again.
 
 [Boto3](#boto3)
 =======
-At boto3 we first need the S3 identifier so that a script can be used. For details: [Create and use S3 credentials #Boto3](https://docs.gec.io/optimist/storage/s3_documentation/createanduses3credentials)
+At boto3 we first need the S3 identifier so that a script can be used. For details: [Create and use S3 credentials #Boto3](https://docs.gec.io/optimist/storage/s3_documentation/createanduses3credentials).
 
 
 # Upload an object

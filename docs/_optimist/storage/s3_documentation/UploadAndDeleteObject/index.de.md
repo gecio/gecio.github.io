@@ -25,7 +25,7 @@ Inhalt:
 	- [Objekt hochladen](#objekt-hochladen-3)
 	- [Objekt löschen](#objekt-löschen-3)
 
-Zum Hochladen Ihrer Daten wie zum Beispiel (Dokumente, Fotos, Videos, usw.) ist es zunächst notwendig einen [Bucket zu erstellen](#CreateAndDeleteBucketDE.md).
+Zum Hochladen Ihrer Daten wie zum Beispiel (Dokumente, Fotos, Videos, usw.) ist es zunächst notwendig einen [Bucket zu erstellen](https://docs.gec.io/de/optimist/storage/s3_documentation/createanddeletebucket).
 Eine Datei kann dabei nur in einem Bucket gespeichert werden. 
 
 [S3cmd](#s3cmd)

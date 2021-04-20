@@ -110,7 +110,7 @@ Finally, to establish a connection, click on "Connect".
 [Boto3](#boto3)
 -----------------------
 
-To install boto3, we need a package manager such as "pip". The installation and usage of pip is explained in [Step 4: "Our way to the console"](https://docs.innovo.cloud/guided_tour/en/step04/) of our Guided Tour.
+To install boto3, we need a package manager such as "pip". The installation and usage of pip is explained in [Step 4: "Our way to the console"](https://docs.gec.io/optimist/guided_tour/step04) of our Guided Tour.
 Once pip is installed, the command for the installation of Boto3 is then: 
 
 `$ pip install boto3`

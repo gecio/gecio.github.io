@@ -52,7 +52,7 @@ Benutzerdaten in die Konfigurationsdatei eintragen
 [S3cmd](#s3cmd)
 -----------------------
 
-Um s3cmd zu installieren, brauchen wir einen Paketmanager wie zum Beispiel "pip". Die Installation und Nutzung erklären wir im [Schritt 4: "Der Weg vom Horizon auf die Kommandozeile"](https://docs.innovo.cloud/guided_tour/de/schritt04/) unserer Guided Tour.
+Um s3cmd zu installieren, brauchen wir einen Paketmanager wie zum Beispiel "pip". Die Installation und Nutzung erklären wir im [Schritt 4: "Der Weg vom Horizon auf die Kommandozeile"](https://docs.gec.io/de/optimist/guided_tour/step04) unserer Guided Tour.
 Der Befehl für die Installation lautet dann:
 
 ```

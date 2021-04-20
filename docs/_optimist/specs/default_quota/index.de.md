@@ -3,7 +3,7 @@ title: Default Quotas
 lang: de
 permalink: /optimist/specs/default_quota/
 parent: Spezifikationen
-nav_order: 9020
+nav_order: 9200
 last_modified_date: 2021-04-19
 ---
 

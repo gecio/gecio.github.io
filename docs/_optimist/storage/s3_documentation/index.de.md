@@ -10,11 +10,6 @@ has_children: true
 Einführung in den S3 Kompatiblen Objekt Storage
 =================================================
 
-- [S3 Kennung erstellen und einlesen](./CreateanduseS3credentials/index.de.md)
-- [Einen Bucket erstellen und wieder löschen](./CreateAndDeleteBucket/index.de.md)
-- [Versionierung aktivieren/deaktivieren und wie eine versioniertes Objekt gelöscht wird](./Versioning/index.de.md)
-- [Ein Objekt hochladen und löschen](./UploadAndDeleteObjectDE/index.de.md)
-
 Was genau ist Object Storage?
 -----
 

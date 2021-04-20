@@ -3,7 +3,7 @@ title: Flavor Spezifikationen
 lang: de
 permalink: /optimist/specs/flavor_specification
 parent: Spezifikationen
-nav_order: 9010
+nav_order: 9100
 last_modified_date: 2021-04-19
 ---
 

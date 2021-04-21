@@ -27,8 +27,7 @@ If the desired name is already in use by another customer, you must choose anoth
 
 It is advisable to use names of the format "content-description.bucket.my-domain.tld" or similar.
 
-[S3cmd](#s3cmd)
----------------
+# S3cmd
 
 ## Create a bucket
 
@@ -59,8 +58,7 @@ $ s3cmd rb s3://iNNOVO-Test
 Bucket 's3://iNNOVO-Test/' removed
 ```
 
-[S3Browser](#s3browser)
-=============
+# S3Browser
 
 ## Create a bucket
 
@@ -78,8 +76,7 @@ In the window that opens, confirm that you want to delete the file by checking t
 
 ![](attachments/CreateAndDeleteBucket3.png)
 
-[Cyberduck](#cyberduck)
-=============
+# Cyberduck
 
 ## Create a bucket
 
@@ -101,8 +98,7 @@ Confirm the action by clicking on "Delete"(1) once again.
 
 ![](attachments/CreateAndDeleteBucket7.png)
 
-[Boto3](#boto3)
-=============
+# Boto3
 
 In Boto3 we first need the S3 identifier so that a script can be used. For details see: [Create and use S3 credentials #Boto3](https://docs.gec.io/optimist/storage/s3_documentation/createanduses3credentials)
 

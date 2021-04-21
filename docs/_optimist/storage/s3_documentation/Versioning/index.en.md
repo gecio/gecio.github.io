@@ -21,13 +21,11 @@ Versioning makes it possible to store multiple versions of an object in a bucket
 For example, files named innovo.txt (version 1) and innovo.txt (version 2) can be stored in a single bucket.
 Versioning can protect you from the consequences of accidental overwrites or deletion.
 
-[S3cmd](#s3cmd)
-=============
+# S3cmd
 
 With S3cmd it is not possible to enable versioning or to delete versioned files.
 
-[S3Browser](#s3browser)
-=============
+# S3Browser
 
 ## Enable versioning
 
@@ -55,8 +53,8 @@ In the newly opened window, remove the checkbox at "Enable versioning for bucket
 
 This is not possible in the free version of S3Browser.
 
-[Cyberduck](#cyberduck)
-=============
+# Cyberduck
+
 To see the different versions of a file, hidden files must be displayed.
 This option can be found at View(1) → Show hidden files(2)
 
@@ -89,9 +87,9 @@ Simply select the file to be deleted(1) and click Action(2) → Delete(3) to rem
 
 ![](attachments/Versioning10.png)
 
-[Boto3](#Boto3)
-=============
-In Boto3 we first need S3 credentials so that a script can be used. For details see: [Create and use S3 credentials #Boto3](https://docs.gec.io/optimist/storage/s3_documentation/createanduses3credentials).
+# Boto3
+
+In Boto3 we first need S3 credentials so that a script can be used. For details see: [Create and use S3 credentials #Boto3](/optimist/storage/s3_documentation/createanduses3credentials#boto3).
 
 ## Enable versioning
 

@@ -17,11 +17,10 @@ Contents:
 - [Cyberduck](#cyberduck)
 - [Boto3](#boto3)
 
-To upload your data (documents, photos, videos, etc.) it is first necessary to [create a bucket](https://docs.gec.io/optimist/storage/s3_documentation/createanddeletebucket).
+To upload your data (documents, photos, videos, etc.) it is first necessary to [create a bucket](/optimist/storage/s3_documentation/createanddeletebucket).
 A file can only be saved in a bucket.
 
-[S3cmd](#s3cmd)
-=============
+# S3cmd
 
 ## Upload an object
 
@@ -54,8 +53,7 @@ $ s3cmd del s3://innovo-test/innovo.txt
 delete: 's3://innovo-test/innovo.txt'
 ```
 
-[S3Browser](#s3browser)
-=============
+# S3Browser
 
 ## Upload an object
 
@@ -76,8 +74,7 @@ To delete a file, select it with a left mouse click(1). Then click on "Delete"(2
 Finally, confirm the action with "Yes". 
 
 
-[Cyberduck](#cyberduck)
-=============
+# Cyberduck
 
 ## Upload an object
 
@@ -96,9 +93,9 @@ To delete a file, select it with a left mouse click(1). It is then deleted via "
 This action is then confirmed by clicking on "Delete" again.
 
 
-[Boto3](#boto3)
-=======
-At boto3 we first need the S3 identifier so that a script can be used. For details: [Create and use S3 credentials #Boto3](https://docs.gec.io/optimist/storage/s3_documentation/createanduses3credentials).
+# Boto3
+
+At boto3 we first need the S3 identifier so that a script can be used. For details: [Create and use S3 credentials #Boto3](https://docs.gec.io/optimist/storage/s3_documentation/createanduses3credentials#boto3).
 
 ## Upload an object
 

@@ -28,8 +28,7 @@ Sollte der gewünschte Name bereits von einem weiteren Kunden in Benutzung sein 
 
 Es empfiehlt sich, Namen der Form "inhaltsbeschreibung.bucket.meine-domain.tld"  oder vergleichbares zu verwenden.
 
-[S3cmd](#S3cmd)
-=============
+# S3cmd
 
 ## Bucket erstellen
 
@@ -61,8 +60,7 @@ $ s3cmd rb s3://iNNOVO-Test
 Bucket 's3://iNNOVO-Test/' removed
 ```
 
-[S3Browser](#s3browser)
-=============
+# S3Browser
 
 ## Bucket erstellen
 
@@ -80,8 +78,7 @@ Im sich nun öffnenden Fenster, bestätigen mit dem markieren der Checkbox(1), d
 
 ![](attachments/CreateAndDeleteBucket3.png)
 
-[Cyberduck](#cyberduck)
-=============
+# Cyberduck
 
 ## Bucket erstellen
 
@@ -103,10 +100,9 @@ Die Bestätigung erfolgt dann über das erneute klicken auf "Löschen"(1)
 
 ![](attachments/CreateAndDeleteBucket7.png)
 
-[Boto3](#boto3)
-=============
+# Boto3
 
-Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](https://docs.gec.io/de/optimist/storage/s3_documentation/createanduses3credentials)
+Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](/de/optimist/storage/s3_documentation/createanduses3credentials#boto3)
 
 ## Bucket erstellen
 

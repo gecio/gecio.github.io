@@ -17,11 +17,10 @@ Inhalt:
 - [Cyberduck](#cyberduck)
 - [Boto3](#boto3)
 
-Zum Hochladen Ihrer Daten wie zum Beispiel (Dokumente, Fotos, Videos, usw.) ist es zunächst notwendig einen [Bucket zu erstellen](https://docs.gec.io/de/optimist/storage/s3_documentation/createanddeletebucket).
+Zum Hochladen Ihrer Daten wie zum Beispiel (Dokumente, Fotos, Videos, usw.) ist es zunächst notwendig einen [Bucket zu erstellen](/de/optimist/storage/s3_documentation/createanddeletebucket).
 Eine Datei kann dabei nur in einem Bucket gespeichert werden. 
 
-[S3cmd](#s3cmd)
-=============
+# S3cmd
 
 ## Objekt hochladen
 
@@ -54,8 +53,7 @@ $ s3cmd del s3://innovo-test/innovo.txt<font></font>
 delete: 's3://innovo-test/innovo.txt'
 ```
 
-[S3Browser](#s3browser)
-=============
+# S3Browser
 
 ## Objekt hochladen
 
@@ -75,8 +73,7 @@ Um eine Datei zu löschen, wird dieser mit einem linken Mausklick markiert(1). D
 
 Die darauf folgende Abfrage wird mit "Ja" bestätigt. 
 
-[Cyberduck](#cyberduck)
-=============
+# Cyberduck
 
 ## Objekt hochladen
 
@@ -96,10 +93,9 @@ Um eine Datei zu löschen, wird dieser mit einem linken Mausklick markiert(1). G
 Die Bestätigung erfolgt dann über das erneute klicken auf "Löschen".
 
 
-[Boto3](#boto3)
-=============
+# Boto3
 
-Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](https://docs.gec.io/de/optimist/storage/s3_documentation/createanduses3credentials)
+Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](/de/optimist/storage/s3_documentation/createanduses3credentials#boto3)
 
 ## Objekt hochladen
 

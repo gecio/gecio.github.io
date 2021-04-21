@@ -21,12 +21,11 @@ Versionierung ermöglicht es, mehrere Versionen eines Objekts in einem Bucket au
 So können Beispielsweise innovo.txt (Version 1) und innovo.txt (Version 2) in einem einzigen Bucket speichern.
 Die Versionierung kann Sie vor den Folgen von unbeabsichtigtem Überschreiben oder Löschen bewahren.
 
-[S3cmd](#s3cmd)
-=============
+# S3cmd
+
 Mit S3cmd ist es nicht möglich die Versionierung einzuschalten und/oder versionierte Dateien zu löschen.
 
-[S3Browser](#s3browser)
-=============
+# S3Browser
 
 ## Versionierung einschalten
 
@@ -54,8 +53,7 @@ Im sich öffnenden Fenster entfernen wir die Checkbox bei "Enable versioning for
 
 Dies ist in der Free-Version von S3Browser nicht möglich.
 
-[Cyberduck](#cyberduck)
-=============
+# Cyberduck
 
 Um die verschiedenen Version einer Datei zu sehen, müssen versteckte Dateien angezeigt werden.
 Diese Option findet man unter Darstellung(1) → Versteckte Dateien anzeigen(2)
@@ -89,10 +87,9 @@ Hier wird einfach die zu löschende Datei markiert(1) und über Aktion(2) → L�
 
 ![](attachments/Versioning10.png)
 
-[Boto3](#Boto3)
-=============
+# Boto3
 
-Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](https://docs.gec.io/de/optimist/storage/s3_documentation/createanduses3credentials).
+Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](/de/optimist/storage/s3_documentation/createanduses3credentials#boto3).
 
 ## Versionierung einschalten
 

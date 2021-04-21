@@ -18,7 +18,7 @@ Contents:
 	- [Cyberduck](#cyberduck)
 	- [Boto3](#boto3)
 
-Create S3 credentials
+# Create S3 credentials
 
 In order to access Object Storage, we first need login data (credentials).
 To generate this data via the OpenStackAPI, we need to use the OpenStack Client and execute the following command there:

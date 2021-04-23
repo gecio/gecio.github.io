@@ -40,7 +40,7 @@ auswählen:
 
 Mit dem Hinzufügen der Credentials und dem Auswählen des OpenStack-Projekts sind alle
 notwendigen Eingaben getätigt, so dass wir mit dem nächsten Schritt fortfahren können. Wenn wir das tun,
-wird automatisch ein eigenes Netzwerk, Subnet sowie eine Securitygruppe für das neue Cluster erstellt.
+wird automatisch ein eigenes Netzwerk, Subnet sowie eine Security Gruppe für das neue Cluster erstellt.
 
 Es ist allerdings auch möglich, ein existierendes Netzwerk verwenden, um den Cluster zu erstellen.
 Dazu müssen wir das Netzwerk und das Subnetz auswählen. Diese müssen allerdings mit einem Router verbunden sein.

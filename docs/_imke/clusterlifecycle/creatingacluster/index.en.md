@@ -14,7 +14,7 @@ So if you don't have a project yet, [create a project first](/imke/managingproje
 To create the cluster, we click on `Add Cluster` in the top right corner:
 ![Add Cluster](projectview_addcluster.png)
 
-This opens the first page of the Cluster Creation procedure.
+This opens the first page of the cluster creation procedure.
 We choose the provider `openstack` and one of the three
 datacenters. In this example, we pick `IX2`:
 ![Add Cluster Step 1](add_step1.png)
@@ -50,7 +50,7 @@ Please refer to our [OpenStack documentation](/optimist/guided_tour/step10/) for
 In the next step, we define how many and what kind of virtual machines will be initially available as worker nodes
 in the cluster.
 
-First, this so called `Node Deployment` needs a name. For our test cluster we use the random name generator:
+First, this so called `Machine Deployment` needs a name. For our test cluster we use the random name generator:
 ![Add Cluster Step 4](add_step4.png)
 
 Next, we should specify the `Replicas` (number of worker nodes in your Kubernetes cluster) and the `Flavor` (machine type), which 

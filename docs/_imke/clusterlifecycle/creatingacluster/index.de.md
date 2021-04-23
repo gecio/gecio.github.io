@@ -51,7 +51,7 @@ und mit einem Netzwerk verbinden kann.
 Im nächsten Schritt definieren wir, wieviele und welche virtuelle Maschinen als Worker-Nodes im Cluster verfügbar
 sein sollen.
 
-Zuerst geben wir dem so genannten `Node Deployment` einen Namen. Für unser Testcluster nutzen wir dazu den Namensgenerator:
+Zuerst geben wir dem so genannten `Machine Deployment` einen Namen. Für unser Testcluster nutzen wir dazu den Namensgenerator:
 ![Add Cluster Step 4](add_step4.png)
 
 Danach spezifieren wir die `Replicas` (Anzahl der Worker-Nodes im Kubernetes-Cluster) und den `Flavor` (den Maschinentyp), welcher

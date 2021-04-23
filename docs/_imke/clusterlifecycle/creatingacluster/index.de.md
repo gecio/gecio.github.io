@@ -31,7 +31,7 @@ In dem sich öffnenden Dialog können wir dann unseren SSH Public Key eintragen
 und ihm einen passenden Namen geben:
 ![Add Cluster Step 2.3](add_step2_3.png)
 
-Damit iMKe in der OpenStack-Infrastruktur die notwendigen Ressourcen erzeugen kann,
+Damit iMKE in der OpenStack-Infrastruktur die notwendigen Ressourcen erzeugen kann,
 geben wir im nächsten Schritt unsere Zugangsdaten ein. Danach wird der Inhalt im Feld `Project`
 automatisch aktualisiert und wir können in der Dropdownliste unser gewünschtes OpenStack Projekt
 auswählen:

@@ -21,7 +21,7 @@ To get more details about a specific subcommand, you can append the
 To list all commands, you can use `--help` without any other
 information:
 
-```
+```bash
 openstack --help
 ```
 
@@ -163,3 +163,7 @@ Conclusion
 
 Now we know some common openstack commands, and have a better overview
 of the system.
+
+The commands mentioned are required in the next steps and thus form the basis for the rest of the guided tour.
+
+In step 6, we will create and use our own SSH key pairs.

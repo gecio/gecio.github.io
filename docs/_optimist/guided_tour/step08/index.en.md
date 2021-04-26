@@ -12,8 +12,7 @@ Step 8: Delete the first VM
 Preface
 -------
 
-Previously, we created a VM, in this step, we will delete it so that we
-can reuse its resources.
+Previously, in Step 7: The first VM, we created a VM, in this step, we will delete it so that we can reuse its resources.
 
 Start
 -----
@@ -25,7 +24,7 @@ strongly recommended that we use the ID.
 
 Let's get a list of all our VMs:
 
-```
+```bash
 $ openstack server list
 +--------------------------------------+--------------+--------+---------------------------------------------------+------------------------------------+
 | ID                                   | Name         | Status | Networks                                          | Image Name                         |
@@ -38,13 +37,13 @@ This returns a list of all our VMs, the ID is in the column "ID" and the name is
 
 Now that we have this information, let's delete it:
 
-```
+```bash
 $ openstack server delete 801b3021-0c00-4566-881e-b50d47152e63
 ```
 
 If we ask for a new list of our VMs, it should return nothing at all:
 
-```
+```bash
 $ openstack server list
 
 $
@@ -53,4 +52,6 @@ $
 Conclusion
 ----------
 
-We've now learnt how to delete VMs!
+We've now learned how to delete Instances. Additionally, with the command `openstack server list` an overview of all instances could be obtained.
+
+In Step 9: The first security group, we build on our previous experience and focus on the topic of security groups. 

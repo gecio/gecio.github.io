@@ -29,7 +29,7 @@ subnet.
 
 Let's list all existing pools:
 
-``` 
+```bash
 $ openstack subnet pool list
 +--------------------------------------+---------------+---------------------+
 | ID                                   | Name          | Prefixes            |
@@ -46,7 +46,7 @@ default from OpenStack.
 
 Let's create our subnet now:
 
-```
+```bash
 $ openstack subnet create --network BeispielNetzwerk --ip-version 6 --use-default-subnet-pool --ipv6-address-mode dhcpv6-stateful --ipv6-ra-mode dhcpv6-stateful BeispielSubnetIPv6
 +-------------------------+----------------------------------------------------------+
 | Field                   | Value                                                    |
@@ -82,7 +82,7 @@ Now that the subnet has been created, we'll add it to the router.
 
 We'll do so by executing this command:
 
-```
+```bash
 $ openstack router add subnet BeispielRouter BeispielSubnetIPv6
 ```
 
@@ -95,7 +95,7 @@ we'll have to add two more rules for IPv6.
 First, we'll allow SSH access via IPv6 (::/0 is the equivalent of 0.0.0.0/0
 but for IPv6):
 
-``` 
+```bash
 $ openstack security group rule create --remote-ip "::/0" --protocol tcp --dst-port 22:22 --ethertype IPv6 --ingress allow-ssh-from-anywhere
 +-------------------+--------------------------------------+
 | Field             | Value                                |
@@ -121,7 +121,7 @@ $ openstack security group rule create --remote-ip "::/0" --protocol tcp --dst-p
 And, just for completion's sake, we'll allow ICMP access so that we
 can ping our VM via IPv6:
 
-```
+```bash
 $ openstack security group rule create --remote-ip "::/0" --protocol ipv6-icmp --ingress allow-ssh-from-anywhere
 +-------------------+--------------------------------------+
 | Field             | Value                                |
@@ -197,9 +197,9 @@ sudo ifdown ens3 && sudo ifup ens3
 Once this is completed, we'll have working IPv4 and IPv6 addresses.
 
 If we want to automate the actions above, we can add this to the *cloud-init*
-part of our heat template (We'll go over cloud-init in step 19):
+part of our heat template (We'll go over cloud-init in [Step 19](/optimist/guided_tour/step19/):
 
-```
+```yaml
 #cloud-config
 write_files:
         - path: /etc/dhcp/dhclient6.conf
@@ -241,7 +241,7 @@ specified content.
 
 Now that we've created the files, we'll reenable the interface:
 
-```
+```bash
 sudo ifdown eth0 && sudo ifup eth0
 ```
 
@@ -250,7 +250,7 @@ Once this is completed, we'll have working IPv4 and IPv6 addresses.
 If we want to automate the actions above, we can add this to the *cloud-init*
 part of our heat template (We'll go over cloud-init in step 19):
 
-```
+```yaml
 #cloud-config
 write_files:
         - path: /etc/sysconfig/network
@@ -298,4 +298,6 @@ machine with IPv6, you can use some web based tools like
 Conclusion
 ----------
 
-Now we've enabled IPv6 next to IPv4!
+A connection via IPv4 was already established in the last step, access via IPv6 has now also been added.
+
+In the next step, the instance from [Step 7](/optimist/guided_tour/step07/) will be used as a template and made accessible from outside.

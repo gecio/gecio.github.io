@@ -19,7 +19,7 @@ In this step, we will create a fictitious zone (domain) with MX and A records an
 
 -----
 
-In order to start, we first read the access data as in "Step 4: Our way to the console" and ensure that the `python-designateclient` is installed (pip install python-openstackclient python-designateclient)
+In order to start, we first read the access data as in ["Step 4: Our way to the console"](/optimist/guided_tour/step04/) and ensure that the `python-designateclient` is installed (pip install python-openstackclient python-designateclient)
 Then we serve the Openstack client and create a zone for our project first.
 
 ```bash

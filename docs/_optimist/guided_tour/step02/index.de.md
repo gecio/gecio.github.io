@@ -42,5 +42,5 @@ auf *Create Key Pair*.
 Abschluss
 ---------
 
-Nachdem der Key erzeugt wurde, kann dieser direkt genutzt werden, um im
-[nächsten Schritt](schritt03.md) einen Stack inkl. einer Instanz zu erstellen. 
+Wir haben jetzt unser SSH Keypair erstellt und sind bereit für den Rest des
+Tutorial!

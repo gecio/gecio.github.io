@@ -202,4 +202,4 @@ Abschluss
 
 Nachdem Router, Subnet und Port angelegt und diese miteinander verknüpft
 wurden, ist die Einrichtung des Beispielnetzwerks abgeschlossen und im
-[nächsten Schritt](schritt11.md) fügen wir noch den Zugriff per IPv6 hinzu.
+nächsten Schritt fügen wir noch den Zugriff per IPv6 hinzu.

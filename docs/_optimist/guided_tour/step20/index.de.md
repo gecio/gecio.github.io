@@ -28,7 +28,7 @@ Dateien erstellt.
 Dies hat verschiedene Teile und den Start macht ein simples Template,
 welches nur ein Net und ein Subnet enthält:
 
-```
+```yaml
 heat_template_version: 2014-10-16
 
 description: Ein simples Template welches 2 Instanzen erstellt
@@ -67,7 +67,7 @@ Eine korrekte Image-ID bzw. einen korrekten Namen erhält man mit `openstack ima
 Es ist wichtig, dass kein Server-Namen definiert wird und
 `network_id` auch keinen Eintrag erfährt:
 
-```
+```yaml
 heat_template_version: 2014-10-16
 
 description: Ein einzelner Server der durch eine Ressourcen Gruppe verwendet wird
@@ -108,7 +108,7 @@ einzubinden.
 Auch ist so direkt die Möglichkeit gegeben, die Anzahl der Instanzen,
 die Namen etc. anzugeben:
 
-```
+```yaml
 heat_template_version: 2014-10-16
 
 description: Ein simples Template welches 2 Instanzen erstellt
@@ -148,7 +148,7 @@ resources:
 Nachdem die Arbeit an `Gruppen.yaml` abgeschlossen wurde, kann der so
 erstellte Stack direkt mit dem OpenStackClient gestartet werden:
 
-```
+```bash
 openstack stack create -t Gruppen.yaml <Name des Stacks>
 ```
 

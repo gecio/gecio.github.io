@@ -12,7 +12,7 @@ Schritt 11: Zugriff aus dem Internet vorbereiten: Wir ergänzen IPv6
 Vorwort
 -------
 
-In [Schritt 10](schritt10.md) wurde von uns bereits ein Netzwerk angelegt und
+In Schritt 10 wurde von uns bereits ein Netzwerk angelegt und
 in diesem Schritt erweitern wir selbiges um IPv6.
 
 Dabei nutzen wir die bereits bestehenden Router etc. Wichtig ist, dass
@@ -96,7 +96,7 @@ $ openstack router add subnet BeispielRouter BeispielSubnetIPv6
 Security Group
 --------------
 
-Die Regeln die wir zuvor in [Schritt 9](schritt09.md) angelegt haben, beziehen
+Die Regeln die wir zuvor in Schritt 9 angelegt haben, beziehen
 sich nur auf IPv4.
 
 Damit auch IPv6 genutzt werden kann, legen wir noch zwei weitere Regeln
@@ -271,8 +271,7 @@ korrekt erreicht werden.
 
 Damit man die beschriebenen Punkte nicht jedes mal manuell abarbeiten
 muss, kann man folgende `cloud-init` Konfiguration verwenden(Was
-`cloud-init` genau ist, erklären wir für Ubuntu 16.04 in [Schritt 19:
-Unsere Instanz lernt IPv6](schritt19.md)):
+`cloud-init` genau ist, erklären wir für Ubuntu 16.04 in [Schritt 19: Unsere Instanz lernt IPv6](/de/optimist/guided_tour/step19/):
 
 ```yaml
 #cloud-config
@@ -328,5 +327,4 @@ Abschluss
 Nachdem im letzten Schritt bereits eine Verbindung per IPv4 erfolgte,
 wurde nun auch noch der Zugriff per IPv6 hinzugefügt. 
 
-Im [nächsten Schritt](schritt12.md) wird dann die Instanz aus [Schritt
-7](schritt07.md) als Vorlage genutzt und erreichbar von außen.
+Im nächsten Schritt wird dann die Instanz aus [Schritt 7](de/optimist/guided_tour/step07/) als Vorlage genutzt und erreichbar von außen.

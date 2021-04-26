@@ -262,5 +262,5 @@ Abschluss
 In diesem Schritt wurden wichtige Bestandteile eines Heat-Templates
 vorgestellt. 
 
-Mit diesem Wissen wird im [nächsten Schritt](schritt15.md) das erste eigene
+Mit diesem Wissen wird im nächsten Schritt das erste eigene
 Heat-Template erstellt.

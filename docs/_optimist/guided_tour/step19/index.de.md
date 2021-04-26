@@ -12,7 +12,7 @@ Schritt 19: Unsere Instanz lernt IPv6
 Vorwort
 -------
 
-Nachdem im [letzten Schritt](schritt18.md) die Instanz mit einer öffentlichen
+Nachdem im letzten Schritt die Instanz mit einer öffentlichen
 IPv4 Adresse versehen wurde und diese auch per SSH erreichbar ist, wird es nun
 Zeit die Instanz selber anzupassen.
 
@@ -129,9 +129,7 @@ resources:
 
 Wir haben die Dateien erstellt und den entsprechenden Inhalt eingefügt.
 
-Wie in [Schritt 11: Zugriff aus dem Internet vorbereiten: Wir ergänzen
-IPv6](schritt11.md) beschrieben, ist es noch notwendig das Interface mit dem 
-Befehl `runcmd` neu zustarten.
+Wie in [Schritt 11: Zugriff aus dem Internet vorbereiten: Wir ergänzen IPv6](/de/optimist/guided_tour/step11) beschrieben, ist es noch notwendig das Interface mit dem Befehl `runcmd` neu zustarten.
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -330,8 +328,6 @@ resources:
 Abschluss
 ---------
 
-Wir haben nun die Möglichkeit Instanzen per Cloud-Init anzupassen und
-IPv6 nutzbar gemacht.
+Wir haben nun die Möglichkeit Instanzen per Cloud-Init anzupassen und IPv6 nutzbar gemacht.
 
-Im [nächsten und letzten Schritt](schritt20.md) werden wir mehrere
-Instanzen per Heat starten.
+Im nächsten und letzten Schritt werden wir mehrere Instanzen per Heat starten.

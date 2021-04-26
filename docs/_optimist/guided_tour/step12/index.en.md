@@ -12,16 +12,14 @@ Step 12: A usable VM
 Start
 -----
 
-Even though we already created a VM in step 7, that VM was not usable as it
-wasn't connected to a network, let alone the internet. Let's create one that
-we can actually log i to.
+Even though we already created a VM in [Step 7](/optimist/guided_tour/step07/), that VM was not usable as it wasn't connected to a network, let alone the internet. Let's create one that we can actually log in to.
 
 Installation
 ------------
 
-To create this VM, we'll add some parameters to the command we used in step 7:
+To create this VM, we'll add some parameters to the command we used in Step 7:
 
-``` 
+```bash
 $ openstack server create BeispielInstanz --flavor m1.small --key-name Beispiel --image "Ubuntu 16.04 Xenial Xerus - Latest" --security-group allow-ssh-from-anywhere --network=BeispielNetzwerk
 +-----------------------------+---------------------------------------------------------------------------+
 | Field                       | Value                                                                     |
@@ -70,7 +68,7 @@ If we want to reach our VM from the internet, we'll nee a floating IP address.
 
 Let's create one: 
 
-``` 
+```bash
 $ openstack floating ip create provider
 +---------------------+--------------------------------------+
 | Field               | Value                                |
@@ -107,7 +105,7 @@ To see if all worked correctly, let's try to log in to our VM via SSH.
 **IMPORTANT**: We can only log in if the specified ssh key exists and is
 accessible. (If this doesn't work, follow the guide in step 6)
 
-```
+```bash
 $ ssh ubuntu@185.116.245.145
 The authenticity of host '185.116.245.145 (185.116.245.145)' can't be established.
 ECDSA key fingerprint is SHA256:kbSkm8eJA0748911RkbWK2/pBVQOjJBASD1oOOXalk.
@@ -141,5 +139,8 @@ components that other components depend on.
 Conclusion
 ----------
 
-We have now created a VM based on all the parts we created before, it's
+We have now created a VM based on our knowledge from steps from 7 to 11, it's
 reachable from the internet and we've logged in via SSH!
+
+In the next step, we break away from individual instances and
+create a stack.

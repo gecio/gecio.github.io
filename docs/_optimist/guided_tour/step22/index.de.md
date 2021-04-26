@@ -20,7 +20,7 @@ Wir werden in diesem Schritt eine fiktive Zone (Domain) mit MX und A-Records ers
 
 -----
 
-Um zu starten, lesen wir uns zunächst wie in "Schritt 4: Der Weg vom Horizon auf die Kommandozeile" erklärt die Zugangsdaten ein und sorgen dafür das der `python-designateclient` installiert ist (pip install python-openstackclient python-designateclient)
+Um zu starten, lesen wir uns zunächst wie in ["Schritt 4: Der Weg vom Horizon auf die Kommandozeile"](/de/optimist/guided_tour/step04/) erklärt die Zugangsdaten ein und sorgen dafür das der `python-designateclient` installiert ist (pip install python-openstackclient python-designateclient)
 Anschliessend bedienen wir den Openstack-Client und erstellen zuerst eine Zone für unser Projekt.
 
 ```bash

@@ -99,5 +99,4 @@ Abschluss
 ---------
 
 Das Template wurde jetzt bereits über einen frei definierbaren Parameter
-erweitert und im [nächsten Schritt](schritt17.md) wird das Netzwerk
-hinzugefügt.
+erweitert und im nächsten Schritt wird das Netzwerk hinzugefügt.

@@ -25,7 +25,7 @@ How-to
 
 The base command for creating security groups is `openstack security group create`, for example:
 
-```
+```bash
 openstack security group create allow-ssh-from-anywhere --description Beispiel
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 | Field           | Value                                                                                                                                               |
@@ -62,7 +62,7 @@ Some commonly used options are:
 We're going to use these options to create a rule for our new seurity group to
 actually allow SSH from anywhere:
 
-```
+```bash
 $ openstack security group rule create allow-ssh-from-anywhere --protocol tcp --dst-port 22:22 --remote-ip 0.0.0.0/0
 +-------------------+--------------------------------------+
 | Field             | Value                                |
@@ -87,7 +87,7 @@ $ openstack security group rule create allow-ssh-from-anywhere --protocol tcp --
 
 Next, we verify if our security group was created correctly:
 
-```
+```bash
 $ openstack security group show allow-ssh-from-anywhere
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 | Field           | Value                                                                                                                                               |
@@ -111,4 +111,6 @@ $ openstack security group show allow-ssh-from-anywhere
 Conclusion
 ----------
 
-We've now created a security group that allows SSH access from anywhere!
+After successfully creating the security group, the next step is to add a network.
+
+We will learn how to do this in Step 10: Getting access to the Internet: Creating a network

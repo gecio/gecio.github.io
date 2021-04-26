@@ -93,5 +93,7 @@ $ openstack keypair list
 Conclusion
 ----------
 
-Now that we have a keypair generated and uploaded the public key, we can
-use it to log in to our new VMs!
+We have now generated a keypair and uploaded the public key, we can
+use it to log in to our new Instances.
+
+We explain exactly how this works in Step 7.

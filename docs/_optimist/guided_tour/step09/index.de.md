@@ -122,5 +122,5 @@ Abschluss
 Nach dem erfolgreichen erstellen der Security-Group, ist der nächste
 Schritt ein Netzwerk hinzuzufügen.
 
-Dies erfolgt im [Schritt 10: Zugriff aus dem Internet vorbereiten: Ein
-Netzwerk anlegen](schritt10.md).
+Dies erfolgt im Schritt 10: Zugriff aus dem Internet vorbereiten: Ein
+Netzwerk anlegen.

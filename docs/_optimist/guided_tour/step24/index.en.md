@@ -13,7 +13,7 @@ Preface
 -------
 
 In the previous steps we've learnt some interesting parts.
-Next, let's have a look at the [Ocatavia Loadbalancer] (https://wiki.openstack.org/wiki/Octavia).
+Next, let's have a look at the [Ocatavia Loadbalancer](https://wiki.openstack.org/wiki/Octavia).
 Octavia is an open source, operator-scale load balancing solution designed to work with OpenStack.
 Octavia accomplishes its delivery of load balancing services by managing a fleet of virtual machines -known as amphorae— which it spins up on demand.
 In the end, in these amphoras runs a [HAproxy](https://www.haproxy.com/).
@@ -22,13 +22,13 @@ In the end, in these amphoras runs a [HAproxy](https://www.haproxy.com/).
 First Steps
 -----
 
-To be able to use Octavia, it is necessary that the client is installed on your system. Instructions for this can be found at [Step 04](step04.md)
+To be able to use Octavia, it is necessary that the client is installed on your system. Instructions for this can be found in [Step 04](/optimist/guided_tour/step04/)) of our guide.
 
 
 Creation of an Octavia-Ladbalancer
 -----
 
-For our example we use the example subnet, we've already created in  [Step 10](step10.md).
+For our example we use the example subnet, we've already created in [Step 10](/optimist/guided_tour/step10/).
 
 ```bash
 $ openstack loadbalancer create --name Beispiel-LB --vip-subnet-id 32259126-dd37-44d5-922c-99d68ee870cd
@@ -436,7 +436,7 @@ If you get the following error when assigning the public IP address to the loadb
 ResourceNotFound: 404: Client Error for url: https://network.fra.optimist.innovo.cloud/v2.0/floatingips/46c0e8cf-783d-44a0-8256-79f8ae0be7fe, External network 54258498-a513-47da-9369-1a644e4be692 is not reachable from subnet 32259126-dd37-44d5-922c-99d68ee870cd.  Therefore, cannot associate Port 37fc5b34-ee07-49c8-b054-a8d591a9679f with a Floating IP.
 ``
 
-then a connection between its example network (router) and the provider network is missing [step 10](step10.md)
+then a connection between its example network (router) and the provider network is missing [Step 10](/optimist/guided_tour/step10/)
 
 
 The default connect settings of the haproxy processes within an amphora is 50 seconds. If a connection is to last longer than 50 seconds, you must configure these values on the listener.

@@ -17,7 +17,7 @@ einen Stack zu starten und damit auch das Horizon Dashboard besser
 kennenzulernen. 
 
 Wichtige Voraussetzung ist an dieser Stelle ein SSH-Key, den wir in
-[Schritt 2](schritt02.md) erzeugt haben.
+Schritt 2 erzeugt haben.
 
 Start
 -----
@@ -85,5 +85,4 @@ wählen dort *Delete Stack*.
 Abschluss
 ---------
 
-Nachdem nun der Stack erstellt und direkt wieder gelöscht ist, beschäftigen wir
-uns im [nächsten Schritt](schritt04.md) mit dem Wechsel auf die Konsole.
+Wir haben unseren ersten Stack erstellt ... und ihn dann gelöscht!

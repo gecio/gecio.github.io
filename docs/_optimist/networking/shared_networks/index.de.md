@@ -17,7 +17,7 @@ Es kommt oft die Frage auf, ob es möglich ist ein Netzwerk zwischen zwei Projek
 Netzwerk teilen
 ---------------
 
-Um ein Netzwerk mit einem Projekt zu teilen, schreiben Sie uns bitte eine E-Mail an support@innovo-cloud.de mit folgenden Angaben:
+Um ein Netzwerk mit einem Projekt zu teilen, schreiben Sie uns bitte eine E-Mail an <support@gec.io> mit folgenden Angaben:
 
 - Name und ID des Netzwerks, welches geteilt werden soll
 - Name und ID des Projekts, in welchem das Netzwerk sichtbar sein soll

@@ -24,7 +24,7 @@ additional options that we can list with `--help`.
 
 Let's create our network:
 
-```
+```bash
 $ openstack network create BeispielNetzwerk
 +---------------------------+--------------------------------------+
 | Field                     | Value                                |
@@ -70,7 +70,7 @@ The subnet creation command also has a few options, in our example we'll use:
 
 To create a subnet in our existing network we run:
 
-```
+```bash
 $ openstack subnet create BeispielSubnet --network BeispielNetzwerk --subnet-range 192.168.2.0/24
 +-------------------------+--------------------------------------+
 | Field                   | Value                                |
@@ -105,7 +105,7 @@ Router
 For our virtual network to be able to reach the internet, we'll have to
 create a router:
 
-```
+```bash
 $ openstack router create BeispielRouter
 +-------------------------+--------------------------------------+
 | Field                   | Value                                |
@@ -131,13 +131,13 @@ $ openstack router create BeispielRouter
 
 We need to define the external gateway to be able to access the internet:
 
-```
+```bash
 $ openstack router set BeispielRouter --external-gateway provider
 ```
 
 Now we'll add the subnet to the router:
 
-``` 
+```bash
 $ openstack router add subnet BeispielRouter BeispielSubnet
 ```
 
@@ -149,7 +149,7 @@ network.
 
 We can associate the port using the `--network` option:
 
-```
+```bash
 $ openstack port create BeispielPort --network BeispielNetzwerk
 +-----------------------+----------------------------------------------------------------------------+
 | Field                 | Value                                                                      |
@@ -190,4 +190,5 @@ $ openstack port create BeispielPort --network BeispielNetzwerk
 Conclusion
 ----------
 
-We've now created our virtual network infrastructure!
+After the router, subnet, and port have been created and linked together,
+the setup of the sample network is complete. In the next step we will add IPv6 access.

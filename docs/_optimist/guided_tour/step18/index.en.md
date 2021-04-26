@@ -24,7 +24,7 @@ We'll define a floating public IPv4 address, which is a resource with type
 Please note that it's important to define the external network that this IP
 will be assigned from and the port that this IP will lead to:
 
-```
+```yaml
 heat_template_version: 2014-10-16
   
 parameters:
@@ -101,7 +101,7 @@ resource itself, we'll specify the rules themselves. These rules will consist
 of the direction, port range, remote IP prefix and protool that these rules
 want to allow.
 
-```
+```yaml
 heat_template_version: 2014-10-16
   
 parameters:
@@ -177,4 +177,6 @@ resources:
 Conclusion
 ----------
 
-We can now create a stack that contains a reachable single VM.
+We can now create a stack that contains a single reachable instance. 
+
+In the next step, we will customize the instance using CloudConfig.

@@ -16,7 +16,7 @@ Previously, we created a VM, a security group and a virtual network separately.
 
 Now we will demonstrate a way to create all these in an integrated way so that
 we can create an entire setup at once. This requires *python-heatclient* to be
-installed, which we've already done in step 4.
+installed, which we've already done in [Step 4: Our way to the console](/optimist/guided_tour/step04).
 
 Installation
 ------------
@@ -43,7 +43,7 @@ virtual network (including router, port and subnet) and a floating-IP.
 When we create the stack, it's important that we're in the same directory as
 the template:
 
-```
+```bash
 $ openstack stack create -t SingleServer.yaml --parameter key_name=Beispiel SingleServer --wait
 2017-12-08 13:13:43Z [SingleServer]: CREATE_IN_PROGRESS  Stack CREATE started
 2017-12-08 13:13:44Z [SingleServer.router]: CREATE_IN_PROGRESS  state changed
@@ -98,7 +98,7 @@ immediately while the creation process would continue in the background.
 Once the command has completed, we should be able to connect to our VM. First,
 we acquire the floating IP of the VM:
 
-```
+```bash
 $ openstack stack output show 0f5cdf0e-24cc-4292-a0bc-adf2e9f8618a instance_fip
 +--------------+---------------------------------+
 | Field        | Value                           |
@@ -111,7 +111,7 @@ $ openstack stack output show 0f5cdf0e-24cc-4292-a0bc-adf2e9f8618a instance_fip
 
 Now we can log in to our VM:
 
-```
+```bash
 $ ssh ubuntu@185.116.245.70
 The authenticity of host '185.116.245.70 (185.116.245.70)' can't be established.
 ECDSA key fingerprint is SHA256:kbSkm8eJA0748911RkbWK2/pBVQOjJBASD1oOOXalk.
@@ -123,4 +123,6 @@ Enter passphrase for key '/Users/ubuntu/.ssh/id_rsa':
 Conclusion
 ----------
 
-Using a heat stack, we've recreated steps 9 through 12 in a single command!
+Using a heat stack, we've recreated steps 9 through 11 in a single command!
+
+In the following steps we will go into more detail on Heat and show some further examples.

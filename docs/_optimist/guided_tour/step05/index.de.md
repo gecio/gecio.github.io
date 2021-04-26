@@ -12,7 +12,7 @@ Schritt 5: Die wichtigsten Befehle des OpenStackClients
 Vorwort
 -------
 
-Nachdem in [Schritt 4](schritt04.md) der OpenStack Client installiert wurde,
+Nachdem in Schritt 4 der OpenStack Client installiert wurde,
 werden wir in diesem Schritt alle wichtigen Befehle einmal auflisten.
 
 Die Übersicht der spezifischen Subbefehle kann in der Kommandozeile mit
@@ -182,5 +182,5 @@ auch mit einer kleinen Erklärung versehen. 
 Die genannten Befehle werden in den nächsten Schritten benötigti und
 bilden somit die Grundlage für die Guided Tour.
 
-In [Schritt 6](schritt06.md) wird das Thema ein selbst erstelltes SSH Key Pair
+In Schritt 6 wird das Thema ein selbst erstelltes SSH Key Pair
 sein.

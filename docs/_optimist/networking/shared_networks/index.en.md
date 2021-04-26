@@ -17,7 +17,7 @@ The question often arises of whether it is possible to share a network between t
 Share Network
 -------------
 
-To share a network with a project, please send us an e-mail to support@innovo-cloud.de with the following information:
+To share a network with a project, please send us an e-mail to <support@gec.io> with the following information:
 
 - Name and ID of the network to be shared
 - Name and ID of the project in which the network should be visible

@@ -25,7 +25,7 @@ After you have received your credentials, we can log in to the
 dashboard.
 
 **IMPORTANT**: There is no automatic way to reset the password, if you
-need a new password, please write an e-mail to info@innovo-cloud.de
+need a new password, please write an e-mail to <support@gec.io>
 
 The URL for the dashboard is <https://dashboard.optimist.innovo.cloud>
 

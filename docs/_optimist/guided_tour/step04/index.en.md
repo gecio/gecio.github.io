@@ -265,5 +265,11 @@ set-item env:OS_IDENTITY_API_VERSION -value "3"
 Conclusion
 ----------
 
-We have a working OpenStack client with working credentials, we are now
-ready to follow the rest of the documentation.
+We now have an OpenStack client with working credentials, and the first
+commands can be tested.
+
+An overview of all OpenStack commands can be called up with the following command:
+
+`` bash
+$ openstack --help
+``

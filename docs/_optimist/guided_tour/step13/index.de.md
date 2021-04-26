@@ -19,7 +19,8 @@ wird in diesem Schritt eine Alternative aufgezeigt.
 Wie diese funktioniert und was es hierbei zu beachten gibt, wird auch
 wie gewohnt Schritt für Schritt erklärt. Voraussetzung für die folgenden
 Schritte ist die Installation des Paketes `python-heatclient`.
-Siehe [Schritt 4: Der Weg vom Horizon auf die Kommandozeile](schritt04.md).
+Siehe [Schritt 4: Der Weg vom Horizon auf die Kommandozeile](/de/optimist/guided_tour/step04).
+
 
 Installation
 -------------

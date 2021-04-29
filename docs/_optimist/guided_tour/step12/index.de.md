@@ -12,7 +12,7 @@ Schritt 12: Eine nutzbare Instanz
 Vorwort
 -------
 
-In [Schritt 7](/de/optimist/guided_tour/step07/) wurde bereits eine Instanz erstellt, diese konnte jedoch nur genutzt werden, wenn man ein paar Schritte übersprungen hat und das entsprechende Netzwerk mit erstellt.
+In [Schritt 7](/optimist/guided_tour/step07/) wurde bereits eine Instanz erstellt, diese konnte jedoch nur genutzt werden, wenn man ein paar Schritte übersprungen hat und das entsprechende Netzwerk mit erstellt.
 
 Es gab nur so die Möglichkeit eine Verbindung zu dieser herzustellen.
 

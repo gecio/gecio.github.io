@@ -19,7 +19,7 @@ Der Start (Benutzerdaten)
 -----
 
 Damit wir auf den Object Storage zugreifen können, benötigen wir zunächst Login Daten(Credentials), um auf diesen zugreifen zu können.
-Dafür benötigen wir den OpenStackClienten(siehe [Schritt 4]((/de/optimist/guided_tour/step04/))), damit wir per OpenstackAPI die entsprechenden Daten erstellen.
+Dafür benötigen wir den OpenStackClienten(siehe [Schritt 4](/optimist/guided_tour/step04/)), damit wir per OpenstackAPI die entsprechenden Daten erstellen.
 Der Befehl in der Kommandozeile dafür lautet:
 
 ```bash

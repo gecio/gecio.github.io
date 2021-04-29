@@ -43,4 +43,4 @@ Abschluss
 ---------
 
 Wir haben jetzt unser SSH Keypair erstellt und sind bereit für den Rest des
-Tutorial!
+Tutorials!

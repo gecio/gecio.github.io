@@ -49,7 +49,7 @@ Hierfür gibt es die unterschiedliche Möglichkeiten, in der Dokumentation stell
 
 ## S3cmd
 
-Um s3cmd zu installieren, brauchen wir einen Paketmanager wie zum Beispiel "pip". Die Installation und Nutzung erklären wir im [Schritt 4: "Der Weg vom Horizon auf die Kommandozeile"](de/optimist/guided_tour/step04) unserer Guided Tour.
+Um s3cmd zu installieren, brauchen wir einen Paketmanager wie zum Beispiel "pip". Die Installation und Nutzung erklären wir im [Schritt 4: "Der Weg vom Horizon auf die Kommandozeile"](/optimist/guided_tour/step04) unserer Guided Tour.
 Der Befehl für die Installation lautet dann:
 
 ```

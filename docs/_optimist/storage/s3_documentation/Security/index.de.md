@@ -1,11 +1,14 @@
 ---
-title: Security
+title: S3 Security
 lang: de
 permalink: /optimist/storage/s3_documentation/security
 nav_order: 3150
 parent: S3 Compatible Object Storage
 grand_parent: Storage
 ---
+
+S3 Security
+============
 
 # Einführung
 
@@ -105,7 +108,7 @@ Aufschlüsselung jedes Elements innerhalb des obigen Policy-Beispiels:
 * `Principal`: Gibt den Principal an, dem der Zugriff auf eine Ressource gestattet oder verweigert wird. Hier wird der Platzhalter "*" verwendet, um die Regel auf alle anzuwenden.
 * `Action`: Beschreibt die spezifischen Aktionen, die zugelassen oder abgelehnt werden.
 
-(Weitere Informationen zu den verfügbaren Policy-Optionen und zur Anpassung an Ihre spezifischen Anforderungen finden Sie in der offiziellen Dokumentation (hier <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html>).
+(Weitere Informationen zu den verfügbaren Policy-Optionen und zur Anpassung an Ihre spezifischen Anforderungen finden Sie in der [offiziellen AWS-Dokumentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html)).
 
 Wenden Sie als Nächstes die neu erstellte Policy auf `example-bucket` an:
 ```bash

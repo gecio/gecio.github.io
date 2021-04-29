@@ -123,7 +123,7 @@ resources:
 
 We have created the files and inserted the appropriate content.
 
-After we've written all the files, as in [Step 11: Prepare access to the internet: Add IPv6 to our network](optimist/guided_tour/step11), it is still necessary to restart the interface using the command `runcmd`.
+After we've written all the files, as in [Step 11: Prepare access to the internet: Add IPv6 to our network](/optimist/guided_tour/step11/), it is still necessary to restart the interface using the command `runcmd`.
 
 ```yaml
 heat_template_version: 2014-10-16

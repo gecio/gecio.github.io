@@ -15,7 +15,7 @@ nginx with a Load Balancer in front of the cluster.
 To successfully finish this guide, you need the following items.
 
 * `kubectl` [latest version](https://kubernetes.io/docs/tasks/tools/#kubectl)
-* A running Kubernetes Cluster, created with iMKE, with a ready node deployment.
+* A running Kubernetes Cluster, created with iMKE, with a ready Machine Deployment.
   * See [Creating a Cluster](/imke/clusterlifecycle/creatingacluster).
 * A valid `kubeconfig` for your cluster.
   * See [Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster).

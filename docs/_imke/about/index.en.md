@@ -71,7 +71,7 @@ Running the controlplane in Kubernetes has many advantages for management, such 
 
 ![iMKE platform](imke-platform.png)
 
-The worker-nodes of a customer cluster are dedicated VMs in the openstack tenant of a customer. The machine-controller automatically creates VMs there and adds them as worker-nodes to the cluster. It scales the number of nodes up or down as required and will perform any changes to a Node-Deployment as a rolling upgrade to minimize downtime.
+The worker-nodes of a customer cluster are dedicated VMs in the openstack tenant of a customer. The machine-controller automatically creates VMs there and adds them as worker-nodes to the cluster. It scales the number of nodes up or down as required and will perform any changes to a Machine Deployment as a rolling upgrade to minimize downtime.
 
 ## Certifications
 

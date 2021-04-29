@@ -3,10 +3,10 @@ title: Aktualisierung des Betriebssystems auf Worker-Nodes
 lang: de
 permalink: /imke/nodedeployments/upgradingnodeos/
 nav_order: 5500
-parent: Node Deployments
+parent: Machine Deployments
 ---
 
-Die iMKE-Plattform erlaubt es Ihnen, das Betriebssystem der Worker-Nodes ihrer Kubernetes-Cluster über das `Node Deployment`
+Die iMKE-Plattform erlaubt es Ihnen, das Betriebssystem der Worker-Nodes ihrer Kubernetes-Cluster über das `Machine Deployment`
 selbst zu wählen. Die iMKE-Plattform kümmert sich (sofern nicht explizit deaktiviert) um regelmäßige Betriebssystem-Upgrades wie das Anwenden von Sicherheitspatches. Einige Aktionen erfordern jedoch manuelle Aktionen der Clusterbesitzer:
 
 - Betriebssysteme werden "End of Life" und nicht mehr unterstützt
@@ -21,13 +21,13 @@ begründet, dass diese Linux-Distribution nicht mehr gepflegt wird und wir daher
 Verfügung stellen können. CoreOS wurde in unserer Plattform durch Flatcar Linux ersetzt. Im folgenden Abschnitt beschreiben wir,
 wie Sie das Upgrade von CoreOS auf Flatcar durchführen.
 
-### Identifizieren von Clustern mit EOL-Node-Deployments
+### Identifizieren von Clustern mit EOL-Machine Deployments
 
-Cluster mit Node-Deployments mit einem "End-of-Life" Betriebssystem sind mit einem roten Ausrufezeichen gekennzeichnet:
+Cluster mit Machine Deployments mit einem "End-of-Life" Betriebssystem sind mit einem roten Ausrufezeichen gekennzeichnet:
 
 ![EOL Clusters](eol_clusters.png)
 
-In der Detailansicht des Clusters wird das Ausrufezeichen auch auf dem betroffenen Node-Deployment angezeigt:
+In der Detailansicht des Clusters wird das Ausrufezeichen auch auf dem betroffenen Machine Deployment angezeigt:
 
 ![EOL Nodedeployment](eol_nodedeployment.png)
 
@@ -37,9 +37,9 @@ von uns explizit empfohlen.
 
 ### Ändern eines EOL-Betriebssystems auf Worker-Nodes
 
-Um das Betriebssystem auf den Worker-Nodes zu aktualisieren, müssen Sie mit der Bearbeitung des Node-Deployment beginnen:
+Um das Betriebssystem auf den Worker-Nodes zu aktualisieren, müssen Sie mit der Bearbeitung des Machine Deployment beginnen:
 
-![Edit Node-Deployment](nodes_edit_1.png)
+![Edit Machine Deployment](nodes_edit_1.png)
 
 Der folgende Bildschirm zeigt ein altes Image ("CoreOS Container Linux - Neueste"), das nicht mehr unterstützt wird (End-of-Life).
 Bitte wählen Sie ein unterstütztes Betriebssystem wie Flatcar aus:
@@ -50,5 +50,5 @@ Durch Auswahl eines unterstützten Betriebssystems wird auch das Image-Feld aktu
 
 ![Finally](nodes_edit_3.png)
 
-Nach dem Klicken auf `Edit Node Deployment` führen alle Worker-Nodes ein rollierendes Update durch und starten mit dem neuen
+Nach dem Klicken auf `Save Changes` führen alle Worker-Nodes ein rollierendes Update durch und starten mit dem neuen
 Betriebssystem neu.

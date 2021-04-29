@@ -55,7 +55,7 @@ End-of-Life: Kubernetes v1.14 is no longer supported. Existing v1.14 clusters sh
 - Fixed a bug that prevented clusters in working seeds from being listed in the- dashboard if any other seed was unreachable.
 - Prevented removing system labels during cluster edit
 - Fixed deleting user-selectable addons from clusters.
-- Fixed node name validation while creating clusters and node deployments
+- Fixed node name validation while creating clusters and Machine Deployments
 - Fixed swagger and API client for ssh key creation.
 - Fixed a bug preventing editing of existing cluster credential secrets
 - Fix `componentsOverride` of a cluster affecting other clusters

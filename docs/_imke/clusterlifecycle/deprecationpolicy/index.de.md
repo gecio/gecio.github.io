@@ -58,7 +58,7 @@ Um solche Situationen zu vermeiden, müssen wir für Cluster, die mit einer bere
 
 **Was passiert mit meinen Clustern während des Force-Upgrades?**
 
-Wir werden ein automatisiertes Kubernetes-Upgrade für die Control-Plane und für die Node Deployments initiieren.
+Wir werden ein automatisiertes Kubernetes-Upgrade für die Control-Plane und für die Machine Deployments initiieren.
 
 Dies **sollte** zwar funktionieren, aber ein erfolgreiches Upgrade kann aufgrund der Vielfalt der Anwendungen und Anwendungsfälle nicht garantiert werden.
 

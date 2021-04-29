@@ -36,9 +36,9 @@ v1.15.x -> v1.15.5
 - Redesign dialog to manage SSH keys on cluster
 - Redesign Wizard: Summary
 - Cluster type toggle in wizard is now hidden if only one cluster type is active
-- Disabled the possibility of adding new node deployments until the cluster is fully ready.
+- Disabled the possibility of adding new Machine Deployments until the cluster is fully ready.
 - The cluster name is now editable from the dashboard
-- Added warning about node deployment changes that will recreate all nodes.
+- Added warning about Machine Deployment changes that will recreate all nodes.
 - Pod Security Policy can now be activated from the wizard
 - Redesigned extended options in wizard
 - Various security improvements in authentication

@@ -3,7 +3,7 @@ title: Choosing Node Flavors / Sizes
 lang: en
 permalink: /imke/nodedeployments/nodeflavors/
 nav_order: 5200
-parent: Node Deployments
+parent: Machine Deployments
 ---
 
 During the setup of new nodes in a cluster you can select a respective "flavor" for that node.
@@ -32,7 +32,7 @@ Changing the flavor of a node at any point in time is as easy as following these
 
     ![Node-Selection](node-selection.png?resize=1500,700)
 
-1. Select the desired flavor and click the "Edit Node Deployment"-button when you're finished.
+1. Select the desired flavor and click the "Save Changes"-button when you're finished.
 
     ![Edit-Node](edit-node.png?resize=600,700)
 

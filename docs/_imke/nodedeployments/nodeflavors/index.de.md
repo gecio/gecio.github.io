@@ -3,7 +3,7 @@ title: Node-Flavors (Leistung) konfigurieren
 lang: de
 permalink: /imke/nodedeployments/nodeflavors/
 nav_order: 5200
-parent: Node Deployments
+parent: Machine Deployments
 ---
 
 Während der Erstellung von Nodes in einem Cluster kann man sich zwischen diversen sogenannten "Flavors" entscheiden.
@@ -32,7 +32,7 @@ Der Wechsel auf einen anderen Flavor ist denkbar einfach:
 
     ![Node-Selection](node-selection.png?resize=1500,700)
 
-1. In dem jetzt geöffneten Fenster selektiert man dann den gewünschten Flavor und klickt zuletzt auf "Node Deployment editieren", um den Prozess abzuschließen.
+1. In dem jetzt geöffneten Fenster selektiert man dann den gewünschten Flavor und klickt zuletzt auf "Save Changes", um den Prozess abzuschließen.
 
     ![Edit-Node](edit-node.png?resize=600,700)
 

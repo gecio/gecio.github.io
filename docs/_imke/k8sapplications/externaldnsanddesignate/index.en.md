@@ -13,7 +13,7 @@ To reduce manual effort and automate the configuration of DNS zones, you may wan
 To successfully finish this guide, you need the following items.
 
 * `kubectl` [latest version](https://kubernetes.io/de/docs/tasks/tools/install-kubectl/)
-* A running Kubernetes Cluster, created with iMKE, with a ready node deployment.
+* A running Kubernetes Cluster, created with iMKE, with a ready Machine Deployment.
   * See [Creating a Cluster](/imke/clusterlifecycle/creatingacluster).
 * A valid `kubeconfig` for your cluster.
   * See [Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster/).

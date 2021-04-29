@@ -3,7 +3,7 @@ title: Cluster Nodes Usage Rate
 lang: en
 permalink: /imke/nodedeployments/clusternodesusagerate/
 nav_order: 5300
-parent: Node Deployments
+parent: Machine Deployments
 ---
 
 When checking the cluster, we noticed an unusually high memory usage.

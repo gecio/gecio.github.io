@@ -3,7 +3,7 @@ title: Add ssh key to an existing cluster
 lang: en
 permalink: /imke/nodedeployments/add_ssh_key/
 nav_order: 5400
-parent: Node Deployments
+parent: Machine Deployments
 ---
 
 To be able to access to the worker node, you need to add your ssh key.
@@ -35,6 +35,7 @@ A SSH key will be created. The default path for the ssh key is: `~/.ssh/id_rsa.p
     ![Project-Menu](project-menu.png)
 
 3. Use the `Add SSH Key` button:
+
     ![SSH-Key-Page](ssh-key-page.png)
 
 4. Name the key and paste the public SSH key which was created by `ssh-keygen` (not the private key!):

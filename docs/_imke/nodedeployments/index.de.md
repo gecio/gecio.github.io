@@ -1,5 +1,5 @@
 ---
-title: Node Deployments
+title: Machine Deployments
 lang: de
 permalink: /imke/nodedeployments/
 nav_order: 5000

@@ -58,7 +58,7 @@ To overcome this issue, we need to actively force upgrade clusters running on an
 
 **What happens to my clusters during force upgrade?**
 
-We will initiate an automated Kubernetes upgrade for the control plane and the node deployment(s).
+We will initiate an automated Kubernetes upgrade for the control plane and the Machine Deployment(s).
 
 While this *should* work, it can not be guaranteed to work, given the diversity of applications and use cases.
 

@@ -41,7 +41,7 @@ neue Version für die Master.
 
 ![Step 2](update_2a.png)
 
-Wir empfehlen, dabei direkt `Upgrade Node Deployments` zu aktivieren, um die Worker-Nodes im gleichen Schritt mit zu upgraden:
+Wir empfehlen, dabei direkt `Upgrade Machine Deployments` zu aktivieren, um die Worker-Nodes im gleichen Schritt mit zu upgraden:
 
 ![Step 2](update_2b.png)
 
@@ -50,13 +50,13 @@ diesem Schritt fertig.
 
 ## Die Nodes
 
-Sofern der Master ohne Node-Deployments aktualisiert wurde oder ein Upgrade der iMKE-Plattform selbst zu einem impliziten Upgrade des Master geführt hat (i.d.R. nur Patchlevel), müssen wir nun noch manuell die Nodes aktualisieren. Auch hier hilft uns das iMKE Webinterface.
+Sofern der Master ohne Machine Deployments aktualisiert wurde oder ein Upgrade der iMKE-Plattform selbst zu einem impliziten Upgrade des Master geführt hat (i.d.R. nur Patchlevel), müssen wir nun noch manuell die Nodes aktualisieren. Auch hier hilft uns das iMKE Webinterface.
 
 Es ist jedoch zu beachten, dass bei einem Update neue Nodes erzeugt
 und die alten Nodes gelöscht werden. Dabei werden zwangsweise auch
 alle Pods neu gestartet.
 
-Als ersten Schritt klicken wir nun auf das Node Deployment.
+Als ersten Schritt klicken wir nun auf das Machine Deployment.
 
 ![Step 3](update_3.png)
 
@@ -67,7 +67,7 @@ aufzumachen.
 
 Bei kubelet Version wählen wir nun die Version aus, welche auch bei
 unserem Cluster Master konfiguriert ist. In diesem Beispiel
-`1.15.3` und bestätigen mit `Edit Node Deployment`
+`1.15.3` und bestätigen mit `Edit Machine Deployment`
 
 ![Step 5](update_5.png)
 

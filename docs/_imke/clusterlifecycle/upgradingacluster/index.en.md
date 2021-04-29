@@ -40,7 +40,7 @@ version for the master.
 
 ![Step 2](update_2a.png)
 
-It is recommend to select `Upgrade Node Deployments`, as this will upgrade the worker-nodes as well:
+It is recommend to select `Upgrade Machine Deployments`, as this will upgrade the worker-nodes as well:
 
 ![Step 2](update_2b.png)
 
@@ -49,7 +49,7 @@ step.
 
 ## The Nodes
 
-If the master has been updated without upgrading the Node Deployments or if a scheduled maintenance of the iMKE
+If the master has been updated without upgrading the Machine Deployments or if a scheduled maintenance of the iMKE
 platform has led to an implicit upgrade of the master (normally this just updates a patchlevel), we must still update the nodes.
 The iMKE web interface can help us here as well.
 
@@ -57,7 +57,7 @@ It's worth noting that this update process deletes the old nodes and
 replaces them with new ones. This also means that all pods will be
 restarted.
 
-The first step is to click on the node deployment.
+The first step is to click on the Machine Deployment.
 
 ![Step 3](update_3.png)
 
@@ -67,7 +67,7 @@ Next we click on the pencil icon to open the update view.
 
 Now, under `kubelet Version` we select the version, for example
 `1.15.3`, which matches the cluster's master version. Confirm the
-update by clicking `Edit Node Deployment`
+update by clicking `Edit Machine Deployment`
 
 ![Step 5](update_5.png)
 

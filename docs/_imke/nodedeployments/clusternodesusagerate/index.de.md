@@ -3,7 +3,7 @@ title: Nutzungsrate der Cluster Nodes
 lang: de
 permalink: /imke/nodedeployments/clusternodesusagerate/
 nav_order: 5300
-parent: Node Deployments
+parent: Machine Deployments
 ---
 
 Bei der Überprüfung des Clusters ist uns eine ungewöhnlich hohe Speicher-Auslastung aufgefallen.

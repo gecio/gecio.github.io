@@ -55,7 +55,7 @@ End of Life: Kubernetes v1.14 wurde eingestellt. Bestehende v1.14 Cluster sollte
 - Es wurde gefixt, dass ein Bug die funktionierenden Cluster im Seed nicht im Dashboard dargestellt hat.
 - Es wurde gefixt, dass die Entfernung der System-Label im Cluster nach einer Änderung blockiert wurde.
 - Das Entfernen der ausgesuchten Addons von den Clustern wurde gefixt.
-- Nodename-Validierung während des Aufsetzens der Cluster und Node-Deployment wurde gefixt.
+- Nodename-Validierung während des Aufsetzens der Cluster und Machine Deployment wurde gefixt.
 - Swagger und API-Client für das Erstellen von SSH keys wurden gefixt
 - Ein Bug wurde gefixt, welcher die Bearbeitung von bestehenden Cluster-Credentials verhindert hat
 - Die Einstellung `componentsOverride` eines Clusters beeinflusst nun keine anderen Clusters

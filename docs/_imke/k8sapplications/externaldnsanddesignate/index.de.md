@@ -14,7 +14,7 @@ Externen-DNS ist kein eigenständiger DNS-Server, sondern konfiguriert lediglich
 Um diesen Guide erfolgreich abzuschließen brauchen Sie folgendes:
 
 * `kubectl` [die neueste Version](https://kubernetes.io/de/docs/tasks/tools/install-kubectl/)
-* Ein laufender Kubernetes Cluster, von iMKE erstellt mit laufender Node Deployment.
+* Ein laufender Kubernetes Cluster, von iMKE erstellt mit laufender Machine Deployment.
   * Sehen Sie bitte [Einen Cluster anlegen](/imke/clusterlifecycle/creatingacluster)
 * Eine valide Konfigdatei `kubeconfig` für den Cluster.
   * Sehen Sie bitte [Mit einem Cluster verbinden](/imke/accessmanagement/connectingtoacluster/).

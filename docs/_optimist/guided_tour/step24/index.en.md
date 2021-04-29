@@ -22,7 +22,7 @@ In the end, in these amphoras runs a [HAproxy](https://www.haproxy.com/).
 First Steps
 -----
 
-To be able to use Octavia, it is necessary that the client is installed on your system. Instructions for this can be found in [Step 04](/optimist/guided_tour/step04/)) of our guide.
+To be able to use Octavia, it is necessary that the client is installed on your system. Instructions for this can be found in [Step 04](/optimist/guided_tour/step04/) of our guide.
 
 
 Creation of an Octavia-Ladbalancer

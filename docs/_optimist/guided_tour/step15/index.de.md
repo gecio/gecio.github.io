@@ -100,4 +100,4 @@ Abschluss
 ----------
 
 Damit ist das Erste eigenes Template fertiggestellt und kann, wenn es
-gespeichert wird, einfach mit dem OpenStackClienten wie in [Schritt 13: "Der strukturierte Weg zu einer Instanz (mit Stacks)"](/de/optimist/guided_tour/step13) beschrieben, gestartet werden.
+gespeichert wird, einfach mit dem OpenStackClienten wie in [Schritt 13: "Der strukturierte Weg zu einer Instanz (mit Stacks)"](/optimist/guided_tour/step13) beschrieben, gestartet werden.

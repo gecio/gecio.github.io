@@ -20,7 +20,7 @@ Credentials
 -----
 
 We will need another set of credentials to get access to the Object Storage.
-Therefore, we will need the OpenStackClient (as mentioned in [Step 4]((/optimist/guided_tour/step04/))), to create the credentials via the OpenStack API.
+Therefore, we will need the OpenStackClient (as mentioned in [Step 4](/optimist/guided_tour/step04/)), to create the credentials via the OpenStack API.
 Run the following command to create the credentials::
 
 ```bash

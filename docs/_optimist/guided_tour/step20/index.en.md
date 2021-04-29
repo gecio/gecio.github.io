@@ -26,7 +26,7 @@ It's best practice to break big setups up into multiple files.
 First, we'll start with a simple template containing only the network
 and the port.
 
-```
+```yaml
 heat_template_version: 2014-10-16
 
 description: A simple template which deploys 3 VMs
@@ -58,12 +58,12 @@ Now we'll create a template called *exampleserver.yaml,* we'll define
 the VM here.Now we will create a new template `exampleserver.yaml` and
 we will describe the vm here. 
 
-Make sure that name and network\_id are not defined.
+Make sure that `name` and `network_id` are not defined.
 
 Be sure to use a valid value to fill `image:`. You can use the image name or ID.
 You can get either of those by running `openstack image list`.
 
-```
+```yaml
 heat_template_version: 2014-10-16
 
 description: a single server description
@@ -94,7 +94,7 @@ resources:
 We'll now change our *groups.yaml* and add a resource group where we'll add
 the VMs with the required arguments.
 
-```
+```yaml
 heat_template_version: 2014-10-16
 
 description: A simple template which deploys 3 VMs
@@ -133,7 +133,7 @@ resources:
 
 Now that we've supplied all the data we can create our stack:
 
-```
+```bash
 openstack stack create -t groups.yaml <Name of the stack>
 ```
 
@@ -141,4 +141,5 @@ Conclusion
 ----------
 
 Congratulations, we went from creating a single VM via the web interface
-all the way to creating full stacks with the OpenStack client!
+all the way to creating full stacks with the OpenStack client! Several instances can now be rolled out at the same time using a template and are a good starting point for OpenStack administration. 
+

@@ -285,5 +285,4 @@ shell formatter:
 Conclusion
 ----------
 
-We have now created our first VM! Of course, it doesn't do anything and
-we can't even reach it but we'll get to that in later steps.
+We have now created our first Instance, and used some basic OpenStack commands. In Step 8 we will delete this Instance.

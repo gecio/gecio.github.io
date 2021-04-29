@@ -22,7 +22,7 @@ We'll continue using the template we previously created.
 First, we'll add a new parameter, the id of the external network and name it
 *public\_network\_id,* we'll also define a default *provider*:
 
-```
+```yaml
 heat_template_version: 2014-10-16
  
 parameters:
@@ -46,11 +46,11 @@ Network
 
 Next, we'll add the network.
 
-Like the Vm, the network is a resource, so we'll add it to that block.
+Like the Vm, the network is a `resource`, so we'll add it to that block.
 
 The type for network resources is *`OS::Neutron::Net`*
 
-```
+```yaml
 heat_template_version: 2014-10-16
  
 parameters:
@@ -90,7 +90,7 @@ property that also uses the *get\_resource* function to link it to the
 
 By now, our template will look like this:
 
-```
+```yaml
 heat_template_version: 2014-10-16
  
 parameters:
@@ -129,7 +129,7 @@ type *`OS::Neutron::Router`. *
 
 We will use our parameter to define the external network it will use:
 
-```
+```yaml
 heat_template_version: 2014-10-16
  
 parameters:
@@ -175,7 +175,7 @@ with type *`OS::Neutron::Subnet.`*
 It's in the subnet that we'll define IP information like nameserver(s), the
 IP version, the IP range and other IP related settings:
 
-```
+```yaml
 heat_template_version: 2014-10-16
  
 parameters:
@@ -235,7 +235,7 @@ so that VMs in that subnet will use the router.
 We wil also define the *depends\_on* property, which makes sure that the subnet
 bridge will only be created if *Subnet* is available:
 
-```
+```yaml
 heat_template_version: 2014-10-16
  
 parameters:
@@ -296,4 +296,4 @@ Conclusion
 ----------
 
 We have now defined the full network, if this stack is now created, it
-will create a VM and all the components needed to give it connectivity.
+will create a VM and all the components needed to give it connectivity. The next step is to assign a public IP address to the instance.

@@ -12,7 +12,7 @@ Schritt 8: Löschen der ersten eigenen Instanz
 Vorwort
 -------
 
-Nachdem in [Schritt 7: Die erste eigene Instanz](schritt07.md) die Instanz in
+Nachdem in Schritt 7: Die erste eigene Instanz die Instanz in
 der Kommandozeile angelegt wurde, wird in diesem Schritt erklärt, wie man eine
 Instanz wieder löscht.
 
@@ -75,6 +75,4 @@ wir diese Instanz hier gelöscht.
 Außerdem konnte mit dem Befehl `openstack server list` eine Übersicht
 über alle Instanzen gewonnen werden.
 
-In [Schritt 9: Die erste Security-Group](schritt09.md) wird an den bisherigen
-Erfahrungen angeknüpft und das gewonnene Wissen um das Thema
-Security-Groups erweitert. 
+In Schritt 9: Die erste Security-Group wird an den bisherigen Erfahrungen angeknüpft und das gewonnene Wissen um das Thema Security-Groups erweitert. 

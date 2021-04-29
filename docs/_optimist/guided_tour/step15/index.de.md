@@ -25,14 +25,14 @@ Dieser ist bei jedem Template gleich und ist immer
 Für das Beispiel wird Version `2016-10-14` genutzt und somit sieht das
 Template erst einmal so aus:
 
-```
+```yaml
 heat_template_version: 2016-10-14
 ```
 
 Nachdem die `heat_template_version` festgelegt ist, wird dem Template
 nun eine Beschreibung hinzugefügt:
 
-```
+```yaml
 heat_template_version: 2016-10-14
  
 description: Ein einfaches Template, um eine Instanz zu erstellen
@@ -50,7 +50,7 @@ wird.
 Dies dient der Übersichtlichkeit, außerdem würden Tabstops zu Fehlern
 führen und nur so kann das Template korrekt ausgeführt werden:
 
-```
+```yaml
 heat_template_version: 2016-10-14
 
 description: Ein einfaches Template, um eine Instanz zu erstellen
@@ -100,6 +100,4 @@ Abschluss
 ----------
 
 Damit ist das Erste eigenes Template fertiggestellt und kann, wenn es
-gespeichert wird, einfach mit dem OpenStackClienten wie in [Schritt 13: Der
-strukturierte Weg zu einer Instanz (mit Stacks)](schritt13.md) beschrieben,
-gestartet werden.
+gespeichert wird, einfach mit dem OpenStackClienten wie in [Schritt 13: "Der strukturierte Weg zu einer Instanz (mit Stacks)"](/optimist/guided_tour/step13) beschrieben, gestartet werden.

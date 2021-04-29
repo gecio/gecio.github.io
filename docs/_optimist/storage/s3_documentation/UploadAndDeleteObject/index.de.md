@@ -13,26 +13,16 @@ Ein Objekt hochladen und löschen
 Inhalt:
 ---------
 - [S3cmd](#s3cmd)
-	- [Objekt hochladen](#hochladenobjekts3cmd)
-	- [Objekt löschen](#loeschenobjekts3cmd) 
 - [S3Browser](#s3browser)
-	- [Objekt hochladen](#hochladenobjekts3browser)
-	- [Objekt löschen](#loeschenobjekts3browser)
 - [Cyberduck](#cyberduck)
-	- [Objekt hochladen](#hochladenobjektcyberduck)
-	- [Objekt löschen](#loeschenobjektcyberduck)
 - [Boto3](#boto3)
-	- [Objekt hochladen](#hochladenobjektboto3)
-	- [Objekt löschen](#loeschenobjektboto3)
 
-Zum Hochladen Ihrer Daten wie zum Beispiel (Dokumente, Fotos, Videos, usw.) ist es zunächst notwendig einen [Bucket zu erstellen](#CreateAndDeleteBucketDE.md).
+Zum Hochladen Ihrer Daten wie zum Beispiel (Dokumente, Fotos, Videos, usw.) ist es zunächst notwendig einen [Bucket zu erstellen](/optimist/storage/s3_documentation/createanddeletebucket).
 Eine Datei kann dabei nur in einem Bucket gespeichert werden. 
 
-[S3cmd](#s3cmd)
-=============
+# S3cmd
 
-[Objekt hochladen](#hochladenobjekts3cmd)
------------------------
+## Objekt hochladen
 
 Um eine Datei hochzuladen, nutzt man folgenden Befehl:
 
@@ -48,8 +38,7 @@ upload: 'innovo.txt' -> 's3://innovo-test/innovo.txt'  [1 of 1]<font></font>
  95 of 95   100% in    0s   176.63 B/s  done
 ```
 
-[Objekt löschen](#loeschenobjekts3cmd) 
------------------------
+## Objekt löschen
 
 Um eine Datei zu löschen, nutzt man folgenden Befehl:
 
@@ -64,11 +53,9 @@ $ s3cmd del s3://innovo-test/innovo.txt<font></font>
 delete: 's3://innovo-test/innovo.txt'
 ```
 
-[S3Browser](#s3browser)
-=============
+# S3Browser
 
-[Objekt hochladen](#hochladenobjekts3browser)
------------------------
+## Objekt hochladen
 
 Nach dem öffnen von S3Browser, klicken wir auf den gewünschten "Bucket"(1), wähle dann "Upload"(2) und zu letzt "Upload file(s)"(3)
 
@@ -78,8 +65,7 @@ Hier wählen wir nun die entsprechende Datei(1) aus und klicken auf Öffnen(2).
 
 ![](attachments/UploadAndDeleteObject2.png)
 
-[Objekt löschen](#loeschenobjekts3browser)
------------------------
+## Objekt löschen
 
 Um eine Datei zu löschen, wird dieser mit einem linken Mausklick markiert(1). Danach wird auf "Delete"(2) geklickt.
 
@@ -87,11 +73,9 @@ Um eine Datei zu löschen, wird dieser mit einem linken Mausklick markiert(1). D
 
 Die darauf folgende Abfrage wird mit "Ja" bestätigt. 
 
-[Cyberduck](#cyberduck)
-=============
+# Cyberduck
 
-[Objekt hochladen](#hochladenobjektcyberduck)
------------------------
+## Objekt hochladen
 
 Nach dem Öffnen von Cyberduck, klicken wir auf den gewünschten Bucket(1), klicken dann auf Aktion(2) und dort auf Upload(3).
 
@@ -100,8 +84,7 @@ Nach dem Öffnen von Cyberduck, klicken wir auf den gewünschten Bucket(1), klic
 Hier wählen wir nun unsere Wunsch-Datei und klicken auf Upload.
 
 
-[Objekt löschen](#loeschenobjektcyberduck)
------------------------
+## Objekt löschen
 
 Um eine Datei zu löschen, wird dieser mit einem linken Mausklick markiert(1). Gelöscht wird sie dann über "Aktion"(2) und "Löschen"(3). 
 
@@ -110,13 +93,11 @@ Um eine Datei zu löschen, wird dieser mit einem linken Mausklick markiert(1). G
 Die Bestätigung erfolgt dann über das erneute klicken auf "Löschen".
 
 
-[Boto3](#boto3)
-=============
+# Boto3
 
-Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: S3 Kennung erstellen und einlesen#boto3
+Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](/optimist/storage/s3_documentation/createanduses3credentials#boto3)
 
-[Objekt hochladen](#hochladenobjektboto3)
------------------------
+## Objekt hochladen
 
 Um nun eine Datei hochzuladen, müssen wir einen Clienten nutzen und den Bucket angeben in welchen die Datei hochgeladen werden soll. 
 Eine Option sieht so aus:
@@ -152,8 +133,8 @@ s3 = boto3.client('s3')
 s3.upload_file(Bucket='iNNOVO-Test', Key='innovo.txt')
 ```
 
-[Objekt löschen](#loeschenobjektboto3)
------------------------
+## Objekt löschen
+
 Wie beim hochladen einer Datei, wird zunächst ein Client benötigt um dann die Datei zu löschen.
 Dafür geben wir neben der Datei selber, auch noch den Bucket an, in dem die Datei gespeichert ist. 
 Eine Option sieht so aus:

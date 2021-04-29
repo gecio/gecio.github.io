@@ -12,7 +12,7 @@ Schritt 18: Unsere Instanz wird von außen per IPv4 erreichbar
 Vorwort
 -------
 
-Im [letzten Schritt](schritt17.md) wurde das komplette Netzwerk eingerichtet
+Im letzten Schritt wurde das komplette Netzwerk eingerichtet
 und es ist nun an der Zeit, die Instanz von außen zu erreichen (u.a. per ICMP
 und SSH Zugriff).
 
@@ -186,4 +186,4 @@ Abschluss
 Die erstellte Instanz ist von außen erreichbar inklusive einer
 öffentliche IP.
 
-Im [nächsten Schritt](schritt19.md) wird die Instanz per CloudConfig angepasst.
+Im nächsten Schritt wird die Instanz per CloudConfig angepasst.

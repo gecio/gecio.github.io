@@ -12,9 +12,7 @@ Schritt 12: Eine nutzbare Instanz
 Vorwort
 -------
 
-In [Schritt 7: Die erste eigene Instanz](schritt07.md) wurde bereits eine
-Instanz erstellt, diese konnte jedoch nur genutzt werden, wenn man ein paar
-Schritte übersprungen hat und das entsprechende Netzwerk mit erstellt.
+In [Schritt 7](/optimist/guided_tour/step07/) wurde bereits eine Instanz erstellt, diese konnte jedoch nur genutzt werden, wenn man ein paar Schritte übersprungen hat und das entsprechende Netzwerk mit erstellt.
 
 Es gab nur so die Möglichkeit eine Verbindung zu dieser herzustellen.
 
@@ -25,7 +23,7 @@ Installation
 ------------
 
 Damit die Instanz all die fehlenden Einstellungen enthält, wird der
-Befehl aus [Schritt 7](schritt07.md) modifiziert:
+Befehl aus Schritt 7 modifiziert:
 
 `openstack server create BeispielInstanz --flavor m1.small --key-name Beispiel --image "Ubuntu 16.04 Xenial Xerus - Latest" --security-group allow-ssh-from-anywhere --network=BeispielNetzwerk`
 
@@ -161,5 +159,5 @@ In den Schritten 7 bis 11 wurde eine Instanz Schritt für Schritt erstellt und
 jeder Schritt hat einen Teilbereich hinzugefügt (inklusive Netzwerk und einer
 eigenen Security-Group).
 
-Im [nächsten Schritt](schritt13.md) lösen wir uns von einzelnen Instanzen und
+Im nächsten Schritt lösen wir uns von einzelnen Instanzen und
 erstellen einen Stack.

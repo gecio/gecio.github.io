@@ -28,7 +28,7 @@ previous steps.
 
 We'll use it to write the files we mentioned earlier.
 
-```
+```yaml
 heat_template_version: 2014-10-16
    
 parameters:
@@ -121,9 +121,11 @@ resources:
                 - { direction: ingress, remote_ip_prefix: 0.0.0.0/0, protocol: icmp }
 ```
 
-We need to restart the interface after we've written all the files.
+We have created the files and inserted the appropriate content.
 
-```
+After we've written all the files, as in [Step 11: Prepare access to the internet: Add IPv6 to our network](/optimist/guided_tour/step11/), it is still necessary to restart the interface using the command `runcmd`.
+
+```yaml
 heat_template_version: 2014-10-16
    
 parameters:
@@ -221,7 +223,7 @@ resources:
 
 To get a connection via IPv6 it's necessary to update the SecurityGroup with rules for IPv6
 
-```
+```yaml
 heat_template_version: 2014-10-16
    
 parameters:
@@ -323,4 +325,6 @@ resources:
 Conclusion
 ----------
 
-Now we have configured IPv6 on the machine.
+We now have the ability to customize instances via Cloud Init and make IPv6 usable.
+
+In the next and final step we will start multiple instances via heat.

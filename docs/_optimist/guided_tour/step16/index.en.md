@@ -29,7 +29,7 @@ is that we can use a VM with different keys without changing our template.
 We need to define the parameter and also define its type, the proper type for
 what we want to accomplish is `string`:
 
-```
+```yaml
 heat_template_version: 2014-10-16
  
 parameters:
@@ -40,7 +40,7 @@ parameters:
 Now that we've defined our first parameter, we'll add the same resource to
 our template like this:
 
-```
+```yaml
 heat_template_version: 2014-10-16
 
 parameters:
@@ -65,7 +65,7 @@ This is done with the get\_param syntax (for getting the parameter).
 The template is now ready to use and we can define the key\_name from the
 command line like in our previous command line:
 
-```
+```yaml
 heat_template_version: 2014-10-16
 
 parameters:
@@ -84,4 +84,4 @@ resources:
 Conclusion
 ------------
 
-We've now added a variable parameter to our template!
+We've now added a variable parameter to our template! In the next step, we will add the network.

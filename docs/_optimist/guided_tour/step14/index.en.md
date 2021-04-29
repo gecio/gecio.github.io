@@ -21,7 +21,7 @@ The template
 
 Every heat template follows this structure:
 
-```
+```yaml
 heat_template_version: 
  
 description: 
@@ -53,17 +53,11 @@ We can use these versions, although it's recommended to use the latest
 one:
 
 -   2013-05-23
-
 -   2014-10-16
-
 -   2015-04-30
-
 -   2015-10-15
-
 -   2016-04-08
-
 -   2016-10-14
-
 -   2017-02-24
 
 Description
@@ -92,7 +86,7 @@ The groups are divided into a list, which contains single parameters.
 Every parameter should only have one group because of possible errors
 later and the structure looks like this:
 
-```
+```yaml
 parameter_groups: 
 - label: <name of the group> 
   description: <description of the group> 
@@ -101,10 +95,10 @@ parameter_groups:
   - <name of the parameter>
 ```
 
--   label: name of the group
--   description: Gives us the possibility to describe the group
--   parameter: A list of all parameters in this group
--   name of the parameter: the name of the parameter which we had
+-  `label`: name of the group
+-  `description`: Gives us the possibility to describe the group
+-  `parameter`: A list of all parameters in this group
+-   `name of the parameter`: the name of the parameter which we had
     defined in the parameter section
 
 Parameter
@@ -118,7 +112,7 @@ the template. (Like what SSH key is used.)
 Each parameter will be separately defined, starting with the name, with
 the attributes defined underneath:
 
-```
+```yaml
  parameters:
   <Parameter Name>:
     type: <string | number | json | comma_delimited_list | boolean>
@@ -131,19 +125,19 @@ the attributes defined underneath:
     immutable: <true | false>
 ```
 
--   Parameter Name: Name of the parameter
--   type: The type of the parameter (string, number, json,
+-   `Parameter Name`: Name of the parameter
+-   `type`: The type of the parameter (string, number, json,
     comma\_delimited\_list, boolean)
--   label: Name of the parameter (optional)
--   description: The description of the parameter (optional)
--   default: Default value of the parameter. Will be used, if the
+-   `label`: Name of the parameter (optional)
+-   `description`: The description of the parameter (optional)
+-   `default`: Default value of the parameter. Will be used, if the
     parameter isn't defined (optional)
--   hidden:  If the parameter should be hidden in the creation process,
+-   `hidden`:  If the parameter should be hidden in the creation process,
     you can set hidden: *true* as parameter (Optional and set to *false*
     by default)
--   constraints: You can set a list of constraints. If these aren't
+-   `constraints`: You can set a list of constraints. If these aren't
     fulfilled, the stack creation will fail. 
--   immutable: If this parameter is set to true, the parameter can't be
+-   `immutable`: If this parameter is set to true, the parameter can't be
     changed with a stack update. (This will raise an error if attempted)
 
 Resources
@@ -152,7 +146,7 @@ Resources
 This block specifies the resources that will be created, with every resource in
 its own sub block:
 
-```
+```yaml
 resources:
   <ID of the resource>:
     type: <resource type>
@@ -167,20 +161,20 @@ resources:
     condition: <condition name>
 ```
 
--   ID of the resource: Must be unique
--   type: type of a resource, for example: OS::NEUTRON::SecurityGroup
+-   `ID of the resourc`e: Must be unique
+-   `type`: type of a resource, for example: OS::NEUTRON::SecurityGroup
     (for a security group) (required)
--   properties: A list of properties for resources (optional) 
--   metadata: Metadata belonging to the resource  (optional)
--   depends\_on: resources that the resource depends on (optional)
--   update\_policy: We can specify rules for updates, if needed and
+-   `properties`: A list of properties for resources (optional) 
+-   `metadata`: Metadata belonging to the resource  (optional)
+-   `depends_on`: resources that the resource depends on (optional)
+-   `update_policy`: We can specify rules for updates, if needed and
     possible (optional)
--   deletion\_policy: Specifies rules for the deletion. The options are
+-   `deletion_policy`: Specifies rules for the deletion. The options are
     Delete, Retain and Snapshot. With heat\_template\_version 2016-10-14
     You can also write these in lower-case.
 
--   external\_id: We can use external IDs if needed.
--   condition: We can set specific conditions for this resource to be
+-   `external_id`: We can use external IDs if needed.
+-   `condition`: We can set specific conditions for this resource to be
     created. (Optional)
 
 Output
@@ -194,7 +188,7 @@ application.
 
 Outputs are specified in sub blocks like this:
 
-``` 
+```yaml
 outputs:
   <name of the output>:
     description: <description>
@@ -202,10 +196,10 @@ outputs:
     condition: <name of the condition>
 ```
 
--   name of the output: Must be unique
--   description: If needed, you can describe the output (optional)
--   value: Value of the output (needed)
--   condition: possible conditions (optional)
+-   `name of the output`: Must be unique
+-   `description`: If needed, you can describe the output (optional)
+-   `value`: Value of the output (needed)
+-   `condition`: possible conditions (optional)
 
 Condition
 ---------
@@ -215,17 +209,19 @@ Like other sections, conditions can also be specified in a block.
 You can set conditions, and if they aren't fulfilled, the stack creation will
 fail.
 
-```
+```yaml
 conditions:
   <name of condition 1>: {term1}
   <name of condition 2>: {term2}
 ```
 
--   name of condition: must be unique
--   term: true or false are expected as a result
+-   `name of condition`: must be unique
+-   `term`: true or false are expected as a result
 
 Conclusion
 ----------
 
 We have learned the basic structure of a heat template and can now start
 creating our own!
+
+With this knowledge, we will create our own heat template in the next step.

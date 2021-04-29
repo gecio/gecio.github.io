@@ -2,7 +2,7 @@
 title: S3 Kennung erstellen und einlesen
 lang: de
 permalink: /optimist/storage/s3_documentation/createanduses3credentials
-nav_order: 3120
+nav_order: 3110
 parent: S3 Kompatiblen Objekt Storage
 grand_parent: Storage
 ---
@@ -18,8 +18,7 @@ Inhalt:
 	- [Cyberduck](#cyberduck)
 	- [Boto3](#boto3)
 
-[Benutzerdaten erstellen](#benutzerdatenerstellen)
-=============
+# Benutzerdaten erstellen
 
 Damit wir auf den Object Storage zugreifen können, benötigen wir zunächst Login Daten(Credentials).
 Um diese Daten per OpenStackAPI erzeugen zu können, benötigen wir den OpenStackClient und führen dort folgenden Befehl aus:
@@ -46,13 +45,11 @@ $ openstack ec2 credentials create
 Nachdem die Zugangsdaten (Credentials) vorliegen, brauchen wir eine Möglichkeit auf den S3 kompatiblen ObjectStorage zuzugreifen.
 Hierfür gibt es die unterschiedliche Möglichkeiten, in der Dokumentation stellen wir hierfür vier Möglichkeiten vor, genauer: [S3cmd](https://s3tools.org/s3cmd) für Linux/Mac, [S3Browser](https://s3browser.com/) für  Windows, [Cyberduck](https://cyberduck.io/) und [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html).
 
-Benutzerdaten in die Konfigurationsdatei eintragen
-=============
+# Benutzerdaten in die Konfigurationsdatei eintragen
 
-[S3cmd](#s3cmd)
------------------------
+## S3cmd
 
-Um s3cmd zu installieren, brauchen wir einen Paketmanager wie zum Beispiel "pip". Die Installation und Nutzung erklären wir im [Schritt 4: "Der Weg vom Horizon auf die Kommandozeile"](https://docs.innovo.cloud/guided_tour/de/schritt04/) unserer Guided Tour.
+Um s3cmd zu installieren, brauchen wir einen Paketmanager wie zum Beispiel "pip". Die Installation und Nutzung erklären wir im [Schritt 4: "Der Weg vom Horizon auf die Kommandozeile"](/optimist/guided_tour/step04) unserer Guided Tour.
 Der Befehl für die Installation lautet dann:
 
 ```
@@ -74,8 +71,7 @@ secret_key = dddddddddddddddddddddddddddddddd
 use_https = True
 ```
 
-[S3Browser](#s3browser)
------------------------
+## S3Browser
 
 Für den S3Browser genügt es, diese [heruterzuladen](https://s3browser.com/) und zu installieren.
 Nach der erfolgreichen Installation, gilt es nun die entsprechenden Daten zu hinterlegen.
@@ -93,8 +89,7 @@ Dort tragen wir nun folgende Werte ein und klicken auf "Add new account"
 * Secret Access Key: Das entsprechende Secret (Im Beispiel: dddddddddddddddddddddddddddddddd)
 ```
 
-[Cyberduck](#cyberduck)
------------------------
+## Cyberduck
 
 Um Cyberduck zu nutzen, ist es notwendig diese [herunterzuladen](https://cyberduck.io/).
 Nach der Installation und dem ersten öffnen, ist es notwendig auf "Neue Verbindung" zu klicken. (1)
@@ -108,10 +103,9 @@ Danach öffnet sich ein neues Fenster in dem im Dropdown Menü(2) "Amazon S3" au
 
 Um nun eine Verbindung herzustellen, wird als letzter Schritt auf "Verbinden" geklickt.
 
-[Boto3](#boto3)
------------------------
+## Boto3
 
-Um Boto3 nutzen zu können, wird ein Paketmanager wie zum Beispiel "pip" benötigt. Die Installation und Nutzung wird im [Schritt 4: "Der Weg vom Horizon auf die Kommandozeile"](https://docs.innovo.cloud/guided_tour/de/schritt04/) unserer Guided Tour erklärt.
+Um Boto3 nutzen zu können, wird ein Paketmanager wie zum Beispiel "pip" benötigt. Die Installation und Nutzung wird im [Schritt 4: "Der Weg vom Horizon auf die Kommandozeile"](/optimist/guided_tour/step04) unserer Guided Tour erklärt.
 Der Befehl für die Installation lautet dann:
 
 ```

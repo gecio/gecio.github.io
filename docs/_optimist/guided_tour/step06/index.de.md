@@ -13,8 +13,8 @@ Vorwort
 -------
 
 Um später Zugriff auf den ersten deployten Stack per SSH zu erhalten, ist es
-notwendig, ein Key Pair zu erzeugen und dieses im Gegensatz zu [Schritt
-2](schritt02.md) auch zu nutzen.
+notwendig, ein Key Pair zu erzeugen und dieses im Gegensatz zu Schritt
+2 auch zu nutzen.
 
 Sollte bereits ein Keypair vorhanden sein, ist es nicht notwendig einen neuen
 zu erstellen. Eine Ausnahme besteht hier für ED25519 SSH Keys, diese können
@@ -106,4 +106,4 @@ Abschluss
 Da der SSH Key jetzt genutzt werden kann, wird es Zeit weiter vorzugehen und
 eine eigene Instanz zu erstellen.
 
-Wie das genau funktioniert, erklären wir in [Schritt 7: Die erste eigene Instanz](schritt07.md).
+Wie das genau funktioniert, erklären wir in Schritt 7.

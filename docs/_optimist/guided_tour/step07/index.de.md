@@ -302,4 +302,4 @@ Abschluss
 
 Nachdem wir in diesem Schritt nicht nur eine neue Instanz erstellt ,
 sondern auch noch einige Basis Befehle für OpenStack angewedet haben.
-Werden wir im [nächsten Schritt](schritt08.md) diese VM wieder löschen.
+Werden wir im Schritt 8 diese VM wieder löschen.

@@ -26,7 +26,7 @@ Nachdem die Zugangsdaten vorliegen, ist der erste Schritt der Login.
 
 **WICHTIG:** Es gibt keinen Reset-Knopf für das Passwort. Für
 ein neues Passwort, schreiben Sie uns bitte eine E-Mail
-an <info@innovo-cloud.de>.
+an <support@gec.io>.
 
 Hierzu wechseln wir im Browser auf folgende
 URL: <https://dashboard.optimist.innovo.cloud/>
@@ -66,5 +66,4 @@ Damit das neue Passwort auch übernommen wird, fehlt noch ein Klick auf
 Abschluss
 ---------
 
-Nachdem wir die ersten Schritte im Horizon geschafft habe, werden wir im
-[nächsten Schritt](schritt02.md) einen Stack mit einer Instanz starten.
+Sie haben Ihre ersten Schritte im Dashboard ausgeführt und Ihr Passwort geändert!

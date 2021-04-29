@@ -14,7 +14,7 @@ Start
 
 Previously we've created a vm from scratch and have also learned some basics about HEAT.
 In this step we are going to boot a vm from a SSD volume. There are different ways to achieve that. 
-For this example, we will use the Horizon(Dashboard) and also modify the HEAT-Template from Step 18.
+For this example, we will use the Horizon(Dashboard) and also modify the HEAT-Template from [Step 18](/optimist/guided_tour/step18).
 
 The Horizon(Dashboard) way
 -----
@@ -215,5 +215,5 @@ resources:
 Conclusion
 ---------
 
-We've learned to start a vm from a volume and can also use the ssd storage.
-In addition to that, we have learned something new in heat and can also include a volume now. 
+We've learned to start an instance from a volume and can use SSD storage.
+In addition to this, we have refreshed our heat knowledge and learned how to include a volume. 

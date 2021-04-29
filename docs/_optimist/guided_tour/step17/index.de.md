@@ -289,6 +289,6 @@ resources:
 Abschluss
 ---------
 
-Nachdem nun das komplette Netzwerk eingerichtet wurde, wird im [nächsten
-Schritt](schritt18.md) eine eigene Security Group erstellt und zusätzlich der Instanz
+Nachdem nun das komplette Netzwerk eingerichtet wurde, wird im nächsten
+Schritt eine eigene Security Group erstellt und zusätzlich der Instanz
 eine öffentliche IP-Adresse zugewiesen.

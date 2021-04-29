@@ -270,6 +270,6 @@ commands can be tested.
 
 An overview of all OpenStack commands can be called up with the following command:
 
-`` bash
+```bash
 $ openstack --help
-``
+```

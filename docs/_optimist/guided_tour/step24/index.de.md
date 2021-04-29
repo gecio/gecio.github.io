@@ -22,12 +22,12 @@ In diesen Amphoren wirkt schlussendlich ein [HAproxy](https://www.haproxy.com/).
 Der Start
 -----
 
-Für die Nutzung von Octavia ist es notwendig, dass der Client auf dem eigenen System installiert ist. Eine Anleitung für sein System findet man unter [Schritt 4](/de/optimist/guided_tour/step04/))
+Für die Nutzung von Octavia ist es notwendig, dass der Client auf dem eigenen System installiert ist. Eine Anleitung für sein System findet man unter [Schritt 4](/optimist/guided_tour/step04/))
 
 Erstellung eines Octavia-Ladbalancer
 -----
 
-Für unser Beispiel nutzen wir das aus [Schritt 10](/de/optimist/guided_tour/step10/) schon bestehende BeispielSubnet.
+Für unser Beispiel nutzen wir das aus [Schritt 10](/optimist/guided_tour/step10/) schon bestehende BeispielSubnet.
 
 ```bash
 $ openstack loadbalancer create --name Beispiel-LB --vip-subnet-id 32259126-dd37-44d5-922c-99d68ee870cd

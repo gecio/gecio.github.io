@@ -327,4 +327,4 @@ Abschluss
 Nachdem im letzten Schritt bereits eine Verbindung per IPv4 erfolgte,
 wurde nun auch noch der Zugriff per IPv6 hinzugefügt. 
 
-Im nächsten Schritt wird dann die Instanz aus [Schritt 7](de/optimist/guided_tour/step07/) als Vorlage genutzt und erreichbar von außen.
+Im nächsten Schritt wird dann die Instanz aus [Schritt 7](/optimist/guided_tour/step07/) als Vorlage genutzt und erreichbar von außen.

@@ -271,7 +271,7 @@ korrekt erreicht werden.
 
 Damit man die beschriebenen Punkte nicht jedes mal manuell abarbeiten
 muss, kann man folgende `cloud-init` Konfiguration verwenden(Was
-`cloud-init` genau ist, erklären wir für Ubuntu 16.04 in [Schritt 19: Unsere Instanz lernt IPv6](/de/optimist/guided_tour/step19/):
+`cloud-init` genau ist, erklären wir für Ubuntu 16.04 in [Schritt 19: Unsere Instanz lernt IPv6](/optimist/guided_tour/step19/):
 
 ```yaml
 #cloud-config

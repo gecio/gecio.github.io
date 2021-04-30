@@ -87,17 +87,11 @@ $ neutron lbaas-listener-list
 In der vorherigen Ausgabe (`lbass-loadbalancer-show`) sehen Sie eine Zeile `vip_port_id`. Mit dieser ID finden Sie mit nachfolgendem Befehl Ihre Floating IP (und deren UUID). In unserem Beispiel wäre das für den Port (ID: `2cc1b3f9-0457-410b-93dd-a96338de3b12`) die IP `45.94.110.184` (mit ID `cd17e8b1-3d4b-417a-9a80-a21a9879a8dc`). Diese Information brauchen wir später.
 
 ```bash
-$ openstack floating ip list
-neutron CLI is deprecated and will be removed in the future. Use openstack CLI instead.
+$ openstack floating ip list --port 2cc1b3f9-0457-410b-93dd-a96338de3b12
 +--------------------------------------+------------------+---------------------+--------------------------------------+
 | id                                   | fixed_ip_address | floating_ip_address | port_id                              |
 +--------------------------------------+------------------+---------------------+--------------------------------------+
-| 1856d701-a0c6-4d6c-a1c7-1f35072d3a34 |                  | 45.94.108.155       |                                      |
-| 419208fc-e6e0-450c-a503-516b1337d44e | 192.168.2.6      | 185.116.245.202     | ab0df913-52fb-42e6-be59-3f9c2fa0102f |
-| 90ad56e5-a3c8-4f9c-a12f-f534f11d7ed9 | 10.0.0.12        | 185.116.247.205     | 8a19cf54-e350-4f93-b572-db23dc650b30 |
-| c6788cd1-c03f-496e-9962-678c0c8b9216 | 10.0.0.19        | 185.116.245.226     | 35f4fb69-e86d-4859-93f3-aa0c91fab123 |
 | cd17e8b1-3d4b-417a-9a80-a21a9879a8dc | 192.168.5.7      | 45.94.110.184       | 2cc1b3f9-0457-410b-93dd-a96338de3b12 |
-| e9b6e51a-0946-43f0-95fb-4679adc2638d | 10.0.0.13        | 185.116.245.13      | 9b8c1d2a-843f-44c5-a109-07f2a7e7be5d |
 +--------------------------------------+------------------+---------------------+--------------------------------------+
 ```
 
@@ -120,7 +114,6 @@ Zuerst detachen wir die IP vom Neutron Port. Die UUID der Floating IP (`45.94.11
 
 ```bash
 $ openstack floating ip unset --port 2cc1b3f9-0457-410b-93dd-a96338de3b12 cd17e8b1-3d4b-417a-9a80-a21a9879a8dc
-neutron CLI is deprecated and will be removed in the future. Use openstack CLI instead.
 Disassociated floating IP cd17e8b1-3d4b-417a-9a80-a21a9879a8dc
 ```
 

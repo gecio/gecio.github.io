@@ -10,12 +10,12 @@ parent: About iMKE
 
 Current supported Kubernetes versions in iMKE.
 
-| Version | iMKE Deprecation| iMKE End-of-Life |
-|---------|-----------------|------------------|
-| v1.18   |                 |                  |
-| v1.17   |                 |                  |
-| v1.16   | 10.12.2020      | 10.03.2021       |
-| v1.15   | 10.12.2020      | 10.03.2021       |
+| Version | Changelog | iMKE Deprecation| iMKE End-of-Life |
+|---------|-----------|-----------------|------------------|
+| v1.18   | [Changelog](/imke/about/changelog-v2.14.8/#kubernetes-related-changes) | | |
+| v1.17   | [Changelog](/imke/about/changelog-v2.13.10/#kubernetes-related-changes) | 20th April, 2021 | 31st May, 2021 |
+| v1.16   | | 10th December, 2020 | 10th March, 2021 |
+| v1.15   | | 10th December, 2020 | 10th March, 2021 |
 
 ## Force upgrade policy
 

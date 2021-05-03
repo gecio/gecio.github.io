@@ -67,7 +67,7 @@ aufzumachen.
 
 Bei kubelet Version wählen wir nun die Version aus, welche auch bei
 unserem Cluster Master konfiguriert ist. In diesem Beispiel
-`1.15.3` und bestätigen mit `Edit Machine Deployment`
+`1.18.18` und bestätigen mit `Edit Machine Deployment`
 
 ![Step 5](update_5.png)
 

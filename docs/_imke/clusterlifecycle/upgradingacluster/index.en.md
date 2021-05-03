@@ -11,7 +11,7 @@ each release. In order to stay safe and up-to-date, means
 installing Kubernetes updates on a regular basis.
 
 In especially critical cases, we will automatically update the
-Cluster API to the latest Minor-Version in order to keep our
+Cluster API to the latest minor version in order to keep our
 own infrastructure up-to-date. In this case the following section
 *The Cluster* can be skipped. However, nodes must still be updated
 manually by you.
@@ -66,7 +66,7 @@ Next we click on the pencil icon to open the update view.
 ![Step 4](update_4.png)
 
 Now, under `kubelet Version` we select the version, for example
-`1.15.3`, which matches the cluster's master version. Confirm the
+`1.18.18`, which matches the cluster's master version. Confirm the
 update by clicking `Edit Machine Deployment`
 
 ![Step 5](update_5.png)

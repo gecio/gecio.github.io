@@ -8,4 +8,5 @@ gem "just-the-docs"
 group :jekyll_plugins do
   gem "jekyll-polyglot"
   gem "jekyll-postfiles"
+  gem 'jekyll-redirect-from'
 end

@@ -1,9 +1,11 @@
 ---
 title: Node-Flavors (Leistung) konfigurieren
 lang: de
-permalink: /imke/nodedeployments/nodeflavors/
+permalink: /imke/machinedeployments/nodeflavors/
 nav_order: 5200
 parent: Machine Deployments
+redirect_from:
+  - /imke/nodedeployments/nodeflavors/
 ---
 
 Während der Erstellung von Nodes in einem Cluster kann man sich zwischen diversen sogenannten "Flavors" entscheiden.

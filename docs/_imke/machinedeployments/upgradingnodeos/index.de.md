@@ -1,9 +1,11 @@
 ---
 title: Aktualisierung des Betriebssystems auf Worker-Nodes
 lang: de
-permalink: /imke/nodedeployments/upgradingnodeos/
+permalink: /imke/machinedeployments/upgradingnodeos/
 nav_order: 5500
 parent: Machine Deployments
+redirect_from:
+  - /imke/nodedeployments/upgradingnodeos
 ---
 
 Die iMKE-Plattform erlaubt es Ihnen, das Betriebssystem der Worker-Nodes ihrer Kubernetes-Cluster über das `Machine Deployment`

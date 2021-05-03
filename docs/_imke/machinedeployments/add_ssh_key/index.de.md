@@ -1,9 +1,11 @@
 ---
 title: SSH Key einem Cluster hinzufügen
 lang: de
-permalink: /imke/nodedeployments/add_ssh_key/
+permalink: /imke/machinedeployments/add_ssh_key/
 nav_order: 5400
 parent: Machine Deployments
+redirect_from:
+  - /imke/nodedeployments/add_ssh_key/
 ---
 
 Um sich auf einer Worker Node anmelden zu können muss man einen SSH-Key hinzufügen.

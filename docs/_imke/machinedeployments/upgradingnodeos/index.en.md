@@ -1,9 +1,11 @@
 ---
 title: Upgrading the OS on Worker-Nodes
 lang: en
-permalink: /imke/nodedeployments/upgradingnodeos/
+permalink: /imke/machinedeployments/upgradingnodeos/
 nav_order: 5500
 parent: Machine Deployments
+redirect_from:
+  - /imke/nodedeployments/upgradingnodeos/
 ---
 
 The iMKE platform gives you the control over choosing the OS of worker nodes in your Kubernetes cluster via the `Machine Deployment`.

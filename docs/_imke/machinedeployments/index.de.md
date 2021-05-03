@@ -1,9 +1,11 @@
 ---
 title: Machine Deployments
 lang: de
-permalink: /imke/nodedeployments/
+permalink: /imke/machinedeployments/
 nav_order: 5000
 has_children: true
+redirect_from:
+  - /imke/nodedeployments/
 ---
 
 Ein Kubernetes-Cluster besteht vereinfacht gesagt aus der Controlplane (dort läuft u.a. die Kubernetes-API, die etcd Datenbank und andere Steuerungskomponenten) und sogenannten Worker-Nodes - (virtuellen) Servern, auf denen die eigentlichen Kubernetes-Applikationen gestartet werden.
@@ -18,7 +20,7 @@ Dagegen können die Worker-Nodes sehr wohl auf verschiedenste Arten konfiguriert
 * *Betriebssystem der Worker-Nodes*: Auch wenn die Wahl des Betriebssystem irrelevant für die auf Kubernetes laufenden Applikationen ist, könnte es für Sie im Kontext des Debuggings eventuell eine Rolle spielen.
 
 **Weiterführende Themen**
-* [Sizing: Node Flavors konfigurieren](/imke/nodedeployments/nodeflavors/)
-* [Debugging: Auslastung der Cluster-Nodes](/imke/nodedeployments/clusternodesusagerate/)
-* [Debugging: SSH-Keys hinzufügen](/imke/nodedeployments/add_ssh_key/)
-* [Aktualisierung des Betriebssystems auf Worker-Nodes](/imke/nodedeployments/upgradingnodeos/)
+* [Sizing: Node Flavors konfigurieren](/imke/machinedeployments/nodeflavors/)
+* [Debugging: Auslastung der Cluster-Nodes](/imke/machinedeployments/clusternodesusagerate/)
+* [Debugging: SSH-Keys hinzufügen](/imke/machinedeployments/add_ssh_key/)
+* [Aktualisierung des Betriebssystems auf Worker-Nodes](/imke/machinedeployments/upgradingnodeos/)

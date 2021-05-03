@@ -1,9 +1,10 @@
 ---
 title: Machine Deployments
 lang: de
-permalink: /imke/nodedeployments/nodedeployment/
+permalink: /imke/machinedeployments/machinedeployment/
 nav_order: 5100
 parent: Machine Deployments
+  - /imke/nodedeployments/nodedeployment/
 ---
 
 # Machine Deployment hinzufügen

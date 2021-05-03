@@ -11,8 +11,8 @@ Doch bevor wir dies tun können, benötigen wir ein Projekt.
 
 Wenn Sie noch kein Projekt erstellt haben, [erstellen Sie bitte zuerst ein Projekt](/imke/managingprojects/creatingaproject).
 
-Um einen Cluster anzulegen, klicken wir im gewünschten Projekt oben rechts auf `Add Cluster`.
-![Add Cluster](projectview_addcluster.png)
+Um einen Cluster anzulegen, klicken wir im gewünschten Projekt oben rechts auf `Create Cluster`.
+![Create Cluster](projectview_addcluster.png)
 
 Jetzt öffnet sich die erste Seite für den Prozess, einen Cluster anzulegen.
 Dazu wählen wir den Provider `openstack` und eine der drei Verfügbarkeitszonen aus, in diesem Beispiel
@@ -58,10 +58,10 @@ Danach spezifieren wir die `Replicas` (Anzahl der Worker-Nodes im Kubernetes-Clu
 im wesentlichen die Anzahl der verfügbaren CPU-Kerne und des RAMs bestimmt:
 ![Add Cluster Step 4.2](add_step4_2.png)
 
-Weiterhin wählen wir `Ubuntu` als Betriebssystem für die Worker-Nodes:
+Weiterhin wählen wir `Flatcar` als Betriebssystem für die Worker-Nodes:
 ![Add Cluster Step 4.3](add_step4_3.png)
 
-Über einen Klick auf `Next` gelangen wir zum letzten Schritt, wo wir noch einmal alle Einstellungen verifizieren und mittels `Create`
+Über einen Klick auf `Next` gelangen wir zum letzten Schritt, wo wir noch einmal alle Einstellungen verifizieren und mittels `Create Cluster`
 die Cluster-Erstellung starten können:
 ![Add Cluster Step 5](add_step5.png)
 

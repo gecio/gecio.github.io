@@ -58,7 +58,6 @@ footer_hosted_with_love:
 # Plugins
 plugins:
   - jekyll-polyglot
-  - jekyll-redirect-from
 
 # Styles
 # WORKAROUND

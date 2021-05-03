@@ -4,8 +4,6 @@ lang: de
 permalink: /imke/machinedeployments/clusternodesusagerate/
 nav_order: 5300
 parent: Machine Deployments
-redirect_from:
-  - /imke/nodedeployments/clusternodesusagerate/
 ---
 
 Bei der Überprüfung des Clusters ist uns eine ungewöhnlich hohe Speicher-Auslastung aufgefallen.

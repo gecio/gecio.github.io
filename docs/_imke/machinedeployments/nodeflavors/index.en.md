@@ -4,8 +4,6 @@ lang: en
 permalink: /imke/machinedeployments/nodeflavors/
 nav_order: 5200
 parent: Machine Deployments
-redirect_from:
-  - /imke/nodedeployments/nodeflavors/
 ---
 
 During the setup of new nodes in a cluster you can select a respective "flavor" for that node.

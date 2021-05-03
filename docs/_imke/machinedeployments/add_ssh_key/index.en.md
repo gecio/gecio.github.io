@@ -4,8 +4,6 @@ lang: en
 permalink: /imke/machinedeployments/add_ssh_key/
 nav_order: 5400
 parent: Machine Deployments
-redirect_from:
- - /imke/nodedeployments/add_ssh_key/
 ---
 
 To be able to access to the worker node, you need to add your ssh key.

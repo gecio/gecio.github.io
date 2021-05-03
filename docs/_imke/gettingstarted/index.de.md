@@ -38,7 +38,7 @@ Cluster erstellt haben.
 ## Das erste Cluster erstellen
 
 
-Um einen Cluster anzulegen, klicken wir im gewünschten Projekt oben rechts auf `Add Cluster`.
+Um einen Cluster anzulegen, klicken wir im gewünschten Projekt oben rechts auf `Create Cluster`.
 ![Add Cluster](projectview_addcluster.png)
 
 Jetzt öffnet sich die erste Seite für den Prozess, einen Cluster anzulegen.

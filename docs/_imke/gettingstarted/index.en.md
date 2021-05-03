@@ -36,7 +36,7 @@ At the moment, this list is empty until we create our first managed Kubernetes c
 
 ## Create your first cluster
 
-To create the cluster, we click on `Add Cluster` in the top right corner:
+To create the cluster, we click on `Create Cluster` in the top right corner:
 ![Add Cluster](projectview_addcluster.png)
 
 This opens the first page of the cluster creation procedure.

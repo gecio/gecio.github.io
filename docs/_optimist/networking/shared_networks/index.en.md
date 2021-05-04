@@ -17,7 +17,33 @@ The question often arises of whether it is possible to share a network between t
 Share Network
 -------------
 
-To share a network with a project, please send us an e-mail to <support@gec.io> with the following information:
+## If access to both projects is available:
+In order to share the network, we needto use the [OpenStackClient](https://docs.openstack.org/python-openstackclient/latest/), the Project ID into which the network is to be shared, as well as the Network ID of the network to be shared.
+
+The Project ID can be found in the output under "id" if we use the following command:
+
+```bash
+$ openstack project show <Name of Project> -f value -c id 
+```
+
+Next, we need the Network ID of the network to be shared. We can find this in the output under "id" if the following command is used:
+
+```bash
+$ openstack network show <Name of Network> -f value -c id 
+``` 
+
+With the obtained IDs, the network can now be shared into the corresponding project. 
+To do this, we use Role-Based Access Control (RBAC):
+
+```bash
+$ openstack network rbac create --type network --action access_as_shared --target-project <ID of Project> <ID of Network to share>
+```
+
+## If access to both projects is not available:
+
+In this case, the network can only be shared by support after the approval of the other project owner.
+
+To share a network with a project, please send us an e-mail to [support@gec.io](mailto:support@gec.io) with the following information:
 
 - Name and ID of the network to be shared
 - Name and ID of the project in which the network should be visible

@@ -17,7 +17,32 @@ Es kommt oft die Frage auf, ob es möglich ist ein Netzwerk zwischen zwei Projek
 Netzwerk teilen
 ---------------
 
-Um ein Netzwerk mit einem Projekt zu teilen, schreiben Sie uns bitte eine E-Mail an <support@gec.io> mit folgenden Angaben:
+## Zugriff auf beide Projekte ist vorhanden:
+Damit das Netzwerk geteilt werden kann, brauchen wir zum einen den [OpenStackClient](https://docs.openstack.org/python-openstackclient/latest/), sowie die Projekt-ID in welches das Netzwerk geteilt werden soll und die Netzwerk-ID des zu teilenden Netzwerks.
+
+Die Projekt-ID findet sich in der Ausgabe unter "id" wenn wir folgenden Befehl benutzen:
+
+```bash
+$ openstack project show <Name des Projekts> -f value -c id
+```
+
+Als nächstes benötigen wir noch die Netzwerk-ID des zu teilenden Netzwerks, diese finden wir in der Ausgabe unter "id" wenn folgender Befehl genutzt wird:
+
+```bash
+$ openstack network show <Name des Netzwerks> -f value -c id
+``` 
+
+Mit den erhaltenen IDs kann nun das Netzwerk in das entsprechende Projekt geteilt werden, dafür benutzen wir die rollenbasierte Zugriffskontrolle (RBAC):
+
+```bash
+$ openstack network rbac create --type network --action access_as_shared --target-project <ID des Projekts> <ID des zu teilenden Netzwerks>
+```
+
+## Zugriff auf beide Projekte ist nicht vorhanden:
+
+In diesem Fall kann das Netzwerk nur vom Support, nach voriger Freigabe des anderen Projekt Inhabers, geteilt werden. 
+
+Um ein Netzwerk mit einem Projekt zu teilen, schreiben Sie uns bitte eine E-Mail an [support@gec.io](mailto:support@gec.io) mit folgenden Angaben:
 
 - Name und ID des Netzwerks, welches geteilt werden soll
 - Name und ID des Projekts, in welchem das Netzwerk sichtbar sein soll

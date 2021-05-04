@@ -15,7 +15,7 @@ The worker-nodes of a cluster need to be configured via a `Machine Deployment`. 
 * *Node Flavors* are the virtual machine types which are used to create the worker-nodes. The types usually differ in their size, i.e. in the available CPU and RAM.
 * *Number of Nodes* of course you can choose how many worker-nodes you want to have in total.
 * *SSH-Keys* if enabled for your cluster and if your Nodes have a public IP (Floating IP), you can connect to your worker-nodes via SSH, i.e. for extended debugging.
-* *Operating System of the Nodes* although the OS of the worker-nodes should not matter for the Kubernetes workloads, it might matters for you and your debugging.
+* *Operating System of the Nodes* although the OS of the worker-nodes should not matter for the Kubernetes workloads, it might matter for you and your debugging.
 
 **Further reading**
 * [Sizing: Choosing Node Flavors](/imke/machindeployments/nodeflavors/)

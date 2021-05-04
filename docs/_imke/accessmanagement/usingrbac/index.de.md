@@ -8,17 +8,15 @@ parent: Access Management
 
 Um einen Benutzer RBAC-basierten Zugriff auf ein Cluster zu geben, klicken Sie im RBAC-Widget auf `Add Binding`:
 
-
 ![RBAC Add Binding](rbac_add.png)
 
 ### Cluster-weiter Zugriff
 
 Um dann einen Cluster-weiten Zugriff zu gewähren, sollte im folgenden Popup weiter `Cluster` ausgewählt, die E-Mailadresse des Benutzers eingetragen und die entsprechende Rolle ausgewählt werden:
 
-
 ![Add a cluserrolebinding](add_binding_cluster.png)
 
-Dabei sollten Sie jedoch beachten, dass der Benutzer prinzipiell für iMKE authorisiert ist, da dieser Zugriff notwendig ist um die
+Dabei sollten Sie jedoch beachten, dass der Benutzer prinzipiell für iMKE autorisiert ist, da dieser Zugriff notwendig ist um die
 kubeconfig herunterladen zu können. Die auswählbaren Rollen sind übrigens als `ClusterRoles` angelegt und können via `kubectl` betrachtet werden:
 
 ```bash
@@ -31,11 +29,9 @@ Wenn der Zugriff auf einen Namespace beschränkt werden soll, muss im `Add Bindi
 
 Im nächsten Schritt muss wiederum die Rolle ausgewählt werden, die dem Benutzer zugewiesen werden soll:
 
-
 ![Add a rolebinding #1](add_binding_ns_role.png)
 
 Zuletzt muss noch der Namespace ausgewählt werden, in dem diese Berechtigung gelten soll:
-
 
 ![Add a rolebinding #2](add_binding_ns_namespace.png)
 
@@ -46,7 +42,6 @@ kubectl get role $NAME_OF_ROLE -n $NAMESPACE -o yaml
 ```
 
 Nachdem Sie den Zugriff entsprechend gewährt haben, sollten die gewährten Rechte im Dashboard sichtbar sein:
-
 
 ![RBAC option](rbac.png)
 
@@ -61,11 +56,9 @@ Um dies zu tun, müssen Sie den `Share kubeconfig` Link im iMKE Dashboard öffne
 
 Im nächsten Schritt müssen Sie den angezeigten Link kopieren und an den Nutzer schicken:
 
-
 ![Share kubeconfig dialog](share_kubeconfig_dialog.png)
 
 Der Link zeigt zu einer Login-Seite. Dort muss sich der Benutzer authentifizieren und kann danach direkt seine kubeconfig herunterladen:
-
 
 ![Login page](login.png)
 

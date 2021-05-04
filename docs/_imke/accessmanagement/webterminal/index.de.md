@@ -9,21 +9,21 @@ parent: Access Management
 Das iMKE Web Terminal erlaubt die Administration von
 Kubernetes Clustern in der Cloud. Benötigt wird lediglich
 ein Browser. Da hier eine Shell über den Browser umgeleitet
-wird fällt auch ein offener Port `22` für SSH weg.
+wird, fällt auch ein offener Port `22` für SSH weg.
 
-Das Web Terminal wird bei jedem Neustart zurück gesetzt. Auf dem
+Das Web Terminal wird bei jedem Neustart zurückgesetzt. Auf dem
 Dateisystem wird nichts behalten und auch nachträglich installierte
 Software muss für jede Session neu installiert werden.
 
 ## Verbinden
 
-Um sich mit dem Web Terminal zu verbinden gehen wir in iMKE in den Cluster.
+Um sich mit dem Web Terminal zu verbinden, gehen wir in iMKE in den Cluster.
 ![Step 1](terminal_1.png)
 
 Dort klicken wir nun auf `Open Web Terminal`.
 ![Step 2](terminal_2.png)
 
-Im folgenden wird das Web Terminal gestartet. Dies kann bis zu zwei Minuten
+Im Folgenden wird das Web Terminal gestartet. Dies kann bis zu zwei Minuten
 dauern.
 ![Step 3](terminal_3.png)
 
@@ -94,11 +94,11 @@ visualisiert es einem Ressourcen im Cluster, genau wie `htop`
 für Systemlast.
 ![k9s](k9s.png)
 
-Beenden lässt sich `k9s` mittels `Ctrl-c`
+Beenden lässt sich `k9s` mittels `Ctrl-c`.
 
 ## stern
 
-Sobald man Kopien von Containern im Cluster betreibt wünscht man
+Sobald man Kopien von Containern im Cluster betreibt, wünscht man
 sich schnell die Möglichkeit Logs von allen gleichzeitig zu betrachten.
 Als Alternative zu Log Management Lösungen gibt es `stern`. Dieses Tool
 hängt sich an die Log-Streams aller einem Filter entsprechenden Container

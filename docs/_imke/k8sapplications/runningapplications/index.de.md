@@ -12,18 +12,18 @@ per Load Balancer vor dem Cluster veröffentlicht wird.
 
 ## Voraussetzungen
 
-Um diesen Guide erfolgreich abzuschließen brauchen Sie folgendes:
+Um diesen Guide erfolgreich abzuschließen brauchen Sie Folgendes:
 
 * `kubectl` [die neueste Version](https://kubernetes.io/de/docs/tasks/tools/install-kubectl/)
 * Ein laufender Kubernetes Cluster, von iMKE erstellt mit laufender Machine Deployment.
-  * Sehen Sie bitte [Einen Cluster anlegen](/imke/clusterlifecycle/creatingacluster)
+  * Siehe hierzu auch: [Einen Cluster anlegen](/imke/clusterlifecycle/creatingacluster)
 * Eine valide Konfigdatei `kubeconfig` für den Cluster.
-  * Sehen Sie bitte [Mit einem Cluster verbinden](/imke/accessmanagement/connectingtoacluster/).
+  * Siehe hierzu auch: [Mit einem Cluster verbinden](/imke/accessmanagement/connectingtoacluster/).
 
 ## Datentypen
 
-Kubernetes ist im Endeffekt eine große Datenbank. Alle Dinge
-die es betreibt, speichert der api-server und dementsprechend
+Kubernetes ist im Endeffekt eine große Datenbank. Alle Dinge, die
+es betreibt, speichert der api-server und dementsprechend
 lassen sich Applikationen in Kubernetes auch betreiben.
 
 ### Deployment
@@ -43,7 +43,7 @@ auf Basis von Labels, die wir an die Deployments hängen.
 
 Ein Service kann mehrere Typen haben. In unserem Beispiel
 wählen wir `LoadBalancer`, damit unser Service von extern
-über eine öffentliche IP Adresse erreichbar ist.
+über eine öffentliche IP-Adresse erreichbar ist.
 
 ## Manifeste
 
@@ -87,7 +87,7 @@ Das sieht schon sehr gut aus. Dies speichern wir nun in eine Datei
 kubectl create deployment --dry-run -o yaml --image nginx nginx > deployment.yaml
 ```
 
-Als nächstes benötigen wir einen Service, der die Applikation von
+Als Nächstes benötigen wir einen Service, der die Applikation von
 der Öffentlichkeit aus zugänglich macht. Als Typ wählen wir
 `LoadBalancer`, dies erstellt in OpenStack direkt einen fertig
 konfigurierten LoadBalancer als Einstieg in den Cluster.
@@ -155,7 +155,7 @@ Der Service nginx wurde auch angelegt, die EXTERNAL-IP ist jedoch noch
 `pending`. Hier müssen wir ein bisschen warten bis der LoadBalancer
 provisioniert wurde.
 
-Nach etwa 1-2 Minuten kann man das Kommando erneut ausführen und bekommt
+Nach etwa 1–2 Minuten kann man das Kommando erneut ausführen und bekommt
 nun eine IP angezeigt:
 
 ```bash
@@ -188,7 +188,7 @@ NAME                 TYPE       CLUSTER-IP   EXTERNAL-IP   PORT(S)         AGE
 service/kubernetes   NodePort   10.10.10.1   <none>        443:31630/TCP   2d23h
 ```
 
-Wie man sieht ist alles wieder weg und wenn man die IP-Adresse im Browser noch einmal aufruft, wird ein Fehler angezeigt: Die Applikation läuft nicht mehr.
+Wie man sieht, ist alles wieder weg und wenn man die IP-Adresse im Browser noch einmal aufruft, wird ein Fehler angezeigt: Die Applikation läuft nicht mehr.
 
 ## Zusammenfassung
 

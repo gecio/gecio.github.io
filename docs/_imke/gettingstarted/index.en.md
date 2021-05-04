@@ -48,7 +48,7 @@ In the next step, we have to configure the cluster details. In the example,
 we call our Cluster `first-system` and select the desired Kubernetes version:
 ![Add Cluster Step 2](add_step2.png)
 
-For occassional SSH access to worker nodes, we need can optionally deploy an SSH Key.
+For occasional SSH access to worker nodes, we need can optionally deploy an SSH Key.
 To add an SSH-Key, we click on `Add SSH key`:
 ![Add Cluster Step 2.2](add_step2_2.png)
 
@@ -57,7 +57,7 @@ After that we can add the SSH Public Key and give it a memorable name:
 
 To allow iMKE to request the required resources from OpenStack, we add our
 OpenStack credentials now. After that, the contents of `Project` is refreshed
-automatically and we can choose the OpenStack project we want to run the cluster
+automatically, and we can choose the OpenStack project we want to run the cluster
 in:
 ![Add Cluster Step 3.1](add_step3.png)
 ![Add Cluster Step 3.2](add_step3_2.png)
@@ -98,7 +98,7 @@ This will open a page with all cluster details:
 ## Access your first cluster
 
 To access the cluster, we need to click on the downwards
-facing arrow at the top right corner.
+facing arrow in the top right corner.
 
 ![Step 2](connect_2.png)
 
@@ -150,7 +150,7 @@ musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.15.0
 
 ## Cleanup
 
-To cleanup the cluster we created, we need to click `Delete` in the iMKE-Dashboard:
+To clean up the cluster we created, we need to click `Delete` in the iMKE-Dashboard:
 ![Step 3](delete_3.png)
 
 This opens a window where we need to enter the cluster name

@@ -36,9 +36,9 @@ Of course you can use the iMKE-clusters like any Kubernetes cluster - just with 
 
 For example, you could install a [pre-packaged containerized application](https://artifacthub.io/) using [helm](https://helm.sh/):
 
-* Like a full [wordpress](https://artifacthub.io/packages/helm/bitnami/wordpress) installation,
-* a [drupal](https://artifacthub.io/packages/helm/bitnami/drupal) CMS,
-* or your own private [nextcloud](https://artifacthub.io/packages/helm/nextcloud/nextcloud) service.
+* Like a full [WordPress](https://artifacthub.io/packages/helm/bitnami/wordpress) installation,
+* a [Drupal](https://artifacthub.io/packages/helm/bitnami/drupal) CMS,
+* or your own private [Nextcloud](https://artifacthub.io/packages/helm/nextcloud/nextcloud) service.
 
 Besides pre-packaged and ready-to-use applications, Kubernetes is also the natural environment to develop, build and run your own, state-of-the-art "cloud-native" applications.
 
@@ -77,7 +77,7 @@ The worker-nodes of a customer cluster are dedicated VMs in the openstack tenant
 
 <img src="certified-kubernetes.png" alt="Certified Kubernetes Logo" width="100"/>
 
-iMKE is a product to efficiently setup and operate Kubernetes cluster on GEC Cloud.
+iMKE is a product to efficiently setup and operate Kubernetes clusters on GEC Cloud.
 Customers have the option to use a powerful webinterface to deploy and manage completely
 functional clusters that also pass the conformance checks and requirements by
 [Cloud Native Computing Foundation](https://cncf.io/ck).

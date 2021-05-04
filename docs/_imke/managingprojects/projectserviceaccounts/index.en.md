@@ -119,4 +119,4 @@ You can change the service account and token names when once created.
 
 The service account token is only visible to the user during creation.
 
-The user can also regenerate a token but the previous one will be revoked.
+The user can also regenerate a token, but the previous one will be revoked.

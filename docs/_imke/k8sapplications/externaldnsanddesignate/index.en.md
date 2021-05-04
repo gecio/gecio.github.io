@@ -104,7 +104,7 @@ Please install External-DNS to your cluster. In our example we will use Helm as 
 * [Install Helm](https://helm.sh/docs/intro/)
 * ```$ helm repo add stable https://kubernetes-charts.storage.googleapis.com/```
 * ```$ helm repo update```
-* Create this file `values.yaml` and configure it, for more informations see [values-external-dns](https://github.com/helm/charts/blob/master/stable/external-dns/values-production.yaml).
+* Create this file `values.yaml` and configure it, for more information see [values-external-dns](https://github.com/helm/charts/blob/master/stable/external-dns/values-production.yaml).
 
 ```yaml
 ## K8s resources type to be observed for new DNS entries by ExternalDNS

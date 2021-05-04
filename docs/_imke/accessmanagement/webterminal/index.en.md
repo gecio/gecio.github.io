@@ -12,7 +12,7 @@ port `22` for SSH is also needed, since the shell is redirected
 via the browser.
 
 The Web Terminal is reset with each new launch. Nothing is kept in
-the filesysytem, and any subsequently installed software must be reinstalled
+the filesystem, and any subsequently installed software must be reinstalled
 for each session.
 
 ## Connection
@@ -33,10 +33,10 @@ Finally the terminal opens automatically.
 
 The Web Terminal is a fully functional Linux Shell, using `zsh` by default.
 
-In order to make the administration of Kubernetes as sinple as possible,
-some pratical tools are already preinstalled. A list of these commands
+In order to make the administration of Kubernetes as simple as possible,
+some practical tools are already preinstalled. A list of these commands
 can be accessed via the command `help`. This is the same output seen at
-the start of each new Web Terminaln session.
+the start of each new Web Terminal session.
 
 ```bash
 Welcome to iMKE
@@ -69,7 +69,7 @@ kubectl get pods --all-namespaces
 
 Kubernetes offers the option to provide application namespaces.
 These namespaces are quite simple to switch using the `kubens` tool.
-As an example we will take a look in the MachineDeployments.
+We will take a look in the MachineDeployments as an example.
 
 ```bash
 ~ (☸ |default:default)$ kubectl get machinedeployment
@@ -84,9 +84,9 @@ musing-kalam   3d3h             3          3                   openstack   coreo
 
 ## k9s
 
-As an alternative to the Kuberetes Dashboard, many users desired a
+As an alternative to the Kubernetes Dashboard, many users desired a
 graphical version of `kubectl`. In response `k9s` was created. As a console tool,
-it visualizes the resources in the cluser, just like `htop` does for system load.
+it visualizes the resources in the cluster, just like `htop` does for system load.
 ![k9s](k9s.png)
 
 Exit `k9s` via the command `Ctrl-c`.
@@ -96,7 +96,7 @@ Exit `k9s` via the command `Ctrl-c`.
 As soon as one has deployed containers to the cluster, the wish arises for the
 ability to follow logs from all of them simultaneously. As an alternative to
 log management solutions there is `stern`. This tool connects to the log streams
-of all conatiners specified in the filter and prints them collectively to the console.
+of all containers specified in the filter and prints them collectively to the console.
 
 ```bash
 kubens kube-system
@@ -115,6 +115,6 @@ stern canal
 
 ## popeye
 
-`popeye` scans Kubernates clusters and provides recommendations for clean,
+`popeye` scans Kubernetes clusters and provides recommendations for clean,
 functional deployments. Simply enter `popeye` on the console and take
 a look at what's recommended.

@@ -6,7 +6,7 @@ nav_order: 7200
 parent: Anwendungen in Kubernetes
 ---
 
-Wir können eingeschränkten Zugriff auf unsere Cluster mit Hilfe von kubernetes
+Wir können eingeschränkten Zugriff auf unsere Cluster mithilfe von kubernetes
 Service Accounts und dem kubernetes RBAC Feature umsetzen.
 
 Dafür müssen wir folgendes tun:
@@ -68,7 +68,7 @@ Account zu, damit er die entsprechenden Rechte erhält.
 Grundsätzlich gibt es zwei Wege, einem Kubernetes Service Account Rechte zuzuweisen:
 Cluster-weite Rollen oder Rollen, die auf einen jeweiligen Namespace beschränkt sind.
 Da die Cluster-weiten Rollen Zugriff auf alle Namespaces geben, empfehlen wir, diese
-nur zu verwenden wenn es absolut notwendig ist. Unsere Beispiele definieren Rollen,
+nur zu verwenden, wenn es absolut notwendig ist. Unsere Beispiele definieren Rollen,
 die auf einen jeweiligen Namespace beschränkt sind.
 
 Alle Rechte einer Rolle werden explizit freigegeben -- das gilt sowohl für persönliche
@@ -130,5 +130,5 @@ In dieser Anleitung haben wir gelernt, wie wir über die Kommandozeile:
 
 - Kubernetes Service Accounts anlegen
 - Das automatisch generierte Bearer Token für einen Kubernetes Service Accounts auslesen können
-- Eine Rolle mit Hilfe des Kubernetes RBAC Features definieren
-- Mit Hilfe eines _role bindings_ solche Rollen einem Kubernetes Service Account zuordnen
+- Eine Rolle mithilfe des Kubernetes RBAC Features definieren
+- Mithilfe eines _role bindings_ solche Rollen einem Kubernetes Service Account zuordnen

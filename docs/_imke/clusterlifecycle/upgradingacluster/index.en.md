@@ -40,12 +40,12 @@ version for the master.
 
 ![Step 2](update_2a.png)
 
-It is recommend to select `Upgrade Machine Deployments`, as this will upgrade the worker-nodes as well:
+It is recommended to select `Upgrade Machine Deployments`, as this will upgrade the worker-nodes as well:
 
 ![Step 2](update_2b.png)
 
-Now iMKE automatically updates the master and optionally the worker nodes as well, and we are done with this
-step.
+Now iMKE automatically updates the master and optionally the
+worker nodes as well, and we are done with this step.
 
 ## The Nodes
 
@@ -67,7 +67,7 @@ Next we click on the pencil icon to open the update view.
 
 Now, under `kubelet Version` we select the version, for example
 `1.18.18`, which matches the cluster's master version. Confirm the
-update by clicking `Edit Machine Deployment`
+update by clicking `Edit Machine Deployment`:
 
 ![Step 5](update_5.png)
 

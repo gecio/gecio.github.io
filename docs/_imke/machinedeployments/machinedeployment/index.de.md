@@ -25,7 +25,7 @@ Das neue Machine Deployment auswählen:
 
 ![node_deployment_overview](node_deployment_overview.png)
 
-...und warten bis alle nodes Grün sind:
+…und warten bis alle nodes Grün sind:
 
 ![node_deployment_status](node_deployment_status.png)
 
@@ -35,7 +35,7 @@ Um ein Machine Deployment zu löschen, kann man das Löschsymbol in der Machine 
 
 ![delete_from_list](delete_from_list.png)
 
-...oder auf der Detailseite:
+…oder auf der Detailseite:
 
 ![delete_from_details](delete_from_details.png)
 

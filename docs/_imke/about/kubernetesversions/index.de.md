@@ -11,6 +11,8 @@ Folgende Kubernetes Versionen unterstützen wir aktuell in iMKE.
 
 | Version | iMKE Deprecation| iMKE End-of-Life |
 |---------|-----------------|------------------|
+| v1.20   |                 |                  |
+| v1.19   |                 |                  |
 | v1.18   |                 |                  |
 | v1.17   | 20.04.2021      | 31.05.2021       |
 | v1.16   | 10.12.2020      | 10.03.2021       |

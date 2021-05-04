@@ -31,7 +31,7 @@ Finally, we need to enter the user email and their desired role (Owner, Editor, 
 
 To remove a User from a Project go back to the member section of the project.
 
-First, we need to go the the project.
+First, we need to go the project.
 ![Get the Project](photo1.png)
 
 Then click on `Members` in the left sidebar.

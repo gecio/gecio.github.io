@@ -26,7 +26,7 @@ storageclass.storage.k8s.io/cinder-csi patched
 
 ### Vergrößern des PVC
 
-Nach dem Anpassen der o.g. Einstellung kann das zu betreffende PersistentVolumeClaim (PVC) direkt editiert werden - auch wenn es noch durch einen Pod benutzt wird. Um die Vergrößerung vorzunehmen, muss lediglich der Wert in `spec.resources.requests.storage` angepasst werden (bspw. mittels `kubectl edit pvc`):
+Nach dem Anpassen der o.g. Einstellung kann das zu betreffende PersistentVolumeClaim (PVC) direkt editiert werden – auch wenn es noch durch einen Pod benutzt wird. Um die Vergrößerung vorzunehmen, muss lediglich der Wert in `spec.resources.requests.storage` angepasst werden (bspw. mittels `kubectl edit pvc`):
 
 ```yaml
 apiVersion: v1
@@ -40,4 +40,4 @@ spec:
   storageClassName: cinder-csi
 ```
 
-Nachdem `storage` auf einen größeren Wert angepasst wurde, wird der zugrundeliegende Storage Provider automatisch das Volume vergrößern. Um den Prozess abzuschließen muss allerdings auch noch das Dateisystem erweitert werden, was automatisch passiert sobald das PVC von einem einem Pod benutzt wird. PVCs die während der Änderung an einen Pod gebunden sind, werden sofort und ohne Pod-Neustart aktualisiert.
+Nachdem `storage` auf einen größeren Wert angepasst wurde, wird der zugrundeliegende Storage Provider automatisch das Volume vergrößern. Um den Prozess abzuschließen, muss allerdings auch noch das Dateisystem erweitert werden, was automatisch passiert, sobald das PVC von einem Pod benutzt wird. PVCs die während der Änderung an einen Pod gebunden sind, werden sofort und ohne Pod-Neustart aktualisiert.

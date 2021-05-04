@@ -9,7 +9,6 @@ parent: Machine Deployments
 
 To add a new Machine Deployment, use the `Add Machine Deployment Button` in the right top corner.
 
-
 ![add_node_deployment](add_nodedep.png)
 
 This brings up the `Add Machine Deployment`-dialog, which has the same options as at cluster creation time:

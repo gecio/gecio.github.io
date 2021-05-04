@@ -26,7 +26,7 @@ Die erzeugten Schlüssel (öffentlich und privat) werden standardmäßig in `.ss
 
 ## Den SSH Key dem Projekt hinzufügen
 
-1. Zuerst muss das richtige Porjekt ausgewählt werden:
+1. Zuerst muss das richtige Projekt ausgewählt werden:
 
     ![Projects](projects.png)
 
@@ -52,7 +52,7 @@ Dies gilt auch für die Erstellung eines neuen Clusters im gleichen Projekt.
 
     ![Cluster](clusters.png)
 
-2. Umdas Cluster-Menü zu öffnen, bitte auf die drei Punkte klicken:
+2. Um das Cluster-Menü zu öffnen, bitte auf die drei Punkte klicken:
 
     ![Trhee-Dots](three-dots.png)
 
@@ -78,7 +78,7 @@ Dazu Editieren Sie die Machinedeployments:
 
 ![Edit-MD](edit_machine_deployment.png)
 
-Dort sollten Sie sicher stellen, dass `Allocate Floating IP` aktiviert ist:
+Dort sollten Sie sicherstellen, dass `Allocate Floating IP` aktiviert ist:
 
 ![Enable-Floating_IP](enable-fip.png)
 

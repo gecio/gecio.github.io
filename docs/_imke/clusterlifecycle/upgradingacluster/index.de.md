@@ -9,10 +9,10 @@ parent: Cluster Lebenszyklus
 Sicherheit des Clusters steht an erster Stelle, hinzu
 kommen noch einige neue Features mit jedem Release. Um
 hier auf der sicheren und modernen Seite zu sein empfiehlt
-es sich regelmässig Kubernetes-Updates zu installieren.
+es sich regelmäßig Kubernetes-Updates zu installieren.
 
 In besonders kritischen Fällen updaten wir die Cluster API
-automatisch auf die letzte Minor-Version um auch unsere eigene
+automatisch auf die letzte Minor-Version, um auch unsere eigene
 Infrastruktur sicher zu halten. In diesem Fall kann der nächste
 Block übersprungen werden. Nodes müssen dann nämlich dennoch
 selbst geupdated werden.
@@ -32,7 +32,7 @@ Da mehrere Versionen für die Master angeboten werden, hat man
 hier im Webinterface von iMKE die Wahl der Version offen. Ein
 Update der Master ist mit ein paar Mausklicks erledigt.
 
-Als erstes gehen wir in den Cluster, den wir updaten wollen.
+Als Erstes gehen wir in den Cluster, den wir updaten wollen.
 
 ![Step 1](update_1.png)
 
@@ -67,7 +67,7 @@ aufzumachen.
 
 Bei kubelet Version wählen wir nun die Version aus, welche auch bei
 unserem Cluster Master konfiguriert ist. In diesem Beispiel
-`1.18.18` und bestätigen mit `Edit Machine Deployment`
+`1.18.18` und bestätigen mit `Edit Machine Deployment`:
 
 ![Step 5](update_5.png)
 

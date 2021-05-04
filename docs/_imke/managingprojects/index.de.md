@@ -18,7 +18,7 @@ Alle Kubernetes-Cluster in einem iMKE-Projekt:
   zugreifen können.
 * können im Projekt hinterlegte *SSH-Keys* zugewiesen haben.
 
-Projekte sind im o.g. Sinn  nur für die Verwaltung wichtig und haben technisch weiter keine
+Projekte sind im o.g. Sinn nur für die Verwaltung wichtig und haben technisch weiter keine
 Auswirkungen auf die enthaltenen Kubernetes Cluster.
 
 **Weiterführende Themen**

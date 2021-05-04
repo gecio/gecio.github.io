@@ -8,13 +8,11 @@ parent: Access Management
 
 To grant a user access via RBAC, expand the RBAC-widget and hit `Add Binding`:
 
-
 ![RBAC Add Binding](rbac_add.png)
 
 ### Cluster-wide permissions
 
 To grant users cluster-wide permissions, leave the switch on `Cluster`, add the email of the user and select the role for the user:
-
 
 ![Add a cluserrolebinding](add_binding_cluster.png)
 
@@ -31,11 +29,9 @@ When access shall be granted on a namespace-level, switch to `Namespace` and add
 
 First you have to select the role which should be assigned to the user:
 
-
 ![Add a rolebinding #1](add_binding_ns_role.png)
 
 Finally, you need to select the namespace where this should be valid:
-
 
 ![Add a rolebinding #2](add_binding_ns_namespace.png)
 
@@ -47,7 +43,6 @@ kubectl get role $NAME_OF_ROLE -n $NAMESPACE -o yaml
 
 After you completed these steps, the rights should be visible in the RBAC widget of the Dashboard:
 
-
 ![RBAC option](rbac.png)
 
 ## Provide users with their kubeconfig
@@ -56,16 +51,13 @@ Once you assigned the user a cluster- oder namespace-wide role, you can provide 
 
 To do so, hit the `Share kubeconfig` button on the top of the Dashboard:
 
-
 ![Share kubeconfig button](share_kubeconfig.png)
 
 Next, copy the link and send to the user:
 
-
 ![Share kubeconfig dialog](share_kubeconfig_dialog.png)
 
 After the user has logged in, the download will start of the kubeconfig will start directly:
-
 
 ![Login page](login.png)
 

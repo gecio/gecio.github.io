@@ -36,6 +36,6 @@ Changing the flavor of a node at any point in time is as easy as following these
 
     ![Edit-Node](edit-node.png?resize=600,700)
 
-1. Soon after performing these steps, a confirmation message pops up and your node flavor has been changed successfully.
+1. Soon after performing these steps, a confirmation message pops up, and your node flavor has been changed successfully.
 
     ![Success-Message](success-message.png?resize=600,700)

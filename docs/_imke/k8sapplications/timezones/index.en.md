@@ -14,16 +14,16 @@ To successfully finish this guide, you need the following items.
 
 * `kubectl` [latest version](https://kubernetes.io/de/docs/tasks/tools/install-kubectl/)
 * A running Kubernetes Cluster, created with iMKE, with a ready Machine Deployment.
-  * See [Creating a Cluster](/imke/clusterlifecycle/creatingacluster/).
+  * See also [Creating a Cluster](/imke/clusterlifecycle/creatingacluster/).
 * A valid `kubeconfig` for your cluster.
-  * See [Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster/).
+  * See also [Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster/).
 
 
 ## Time zones in Kubernetes Environment
 
 ### Default Behaviour in Kubernetes Cluster
 
-Kubernetes clusters inherit the time zone configuration from worker node, so the default time zone in the Kubernetes cluster is the same as the one in your worker node - it's controlled by the kernel.
+Kubernetes clusters inherit the time zone configuration from worker node, so that the default time zone in the Kubernetes cluster is the same as the one in your worker node - it's controlled by the kernel.
 
 ### Pod & Container
 
@@ -35,7 +35,7 @@ To achieve this goal, you can follow the scenario below:
 
 ##### Start a test container
 
-Start a minimal container e. g. a one with busybox. For example:
+Start a minimal container e.g. a one with busybox. For example:
 
 ```yaml
 apiVersion: v1

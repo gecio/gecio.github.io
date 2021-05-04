@@ -37,7 +37,6 @@ Cluster erstellt haben.
 
 ## Das erste Cluster erstellen
 
-
 Um einen Cluster anzulegen, klicken wir im gewünschten Projekt oben rechts auf `Create Cluster`.
 ![Add Cluster](projectview_addcluster.png)
 
@@ -46,8 +45,8 @@ Dazu wählen wir den Provider `openstack` und eine der drei Verfügbarkeitszonen
 nehmen wir `IX2`:
 ![Add Cluster Step 1](add_step1.png)
 
-Im nächsten Schritt konfigurieren wir die Cluster-Details. Im unserem Beispiel nennen wir das Cluster `first-system` und
-wählen die gwünschte Kubernetes-Version aus:
+Im nächsten Schritt konfigurieren wir die Cluster-Details. In unserem Beispiel nennen wir das Cluster `first-system` und
+wählen die gewünschte Kubernetes-Version aus:
 ![Add Cluster Step 2](add_step2.png)
 
 Für den gelegentlichen SSH-Zugriff auf Worker-Nodes können wir optional einen öffentlichen SSH-Schlüssel hinterlegen.
@@ -75,14 +74,14 @@ In unserer [OpenStack Dokumentation](/optimist/guided_tour/step10/) ist beschrie
 und mit einem Netzwerk verbinden kann.
 ![Add Cluster Network](create-cluster-network-exist.png)
 
-Im nächsten Schritt definieren wir, wieviele und welche virtuelle Maschinen als Worker-Nodes im Cluster verfügbar
+Im nächsten Schritt definieren wir, wie viele und welche virtuellen Maschinen als Worker-Nodes im Cluster verfügbar
 sein sollen.
 
-Zuerst geben wir dem so genannten `Machine Deployment` einen Namen. Für unser Testcluster nutzen wir dazu den Namensgenerator:
+Zuerst geben wir dem sogenannten `Machine Deployment` einen Namen. Für unser Testcluster nutzen wir dazu den Namensgenerator:
 ![Add Cluster Step 4](add_step4.png)
 
-Danach spezifieren wir die `Replicas` (Anzahl der Worker-Nodes im Kubernetes-Cluster) und den `Flavor` (den Maschinentyp), welcher
-im wesentlichen die Anzahl der verfügbaren CPU-Kerne und des RAMs bestimmt:
+Danach spezifizieren wir die `Replicas` (Anzahl der Worker-Nodes im Kubernetes-Cluster) und den `Flavor` (den Maschinentyp), welcher
+im Wesentlichen die Anzahl der verfügbaren CPU-Kerne und des RAMs bestimmt:
 ![Add Cluster Step 4.2](add_step4_2.png)
 
 Weiterhin wählen wir `Ubuntu` als Betriebssystem für die Worker-Nodes:
@@ -122,17 +121,17 @@ Der Einfachheit halber und um auf unserem System die Standards
 nicht zu verändern, gehen wir hier mit Variante 2.
 
 Dafür benutzen wir eine Konsole. In den Screenshots verwenden
-ich iTerm2 auf macOS, es funktioniert jedoch auf Linux und Windows
+wir iTerm2 auf macOS, es funktioniert jedoch auf Linux und Windows
 bash genau so.
 
-Als erstes müssen wir die herunter geladene Datei finden.
+Als Erstes müssen wir die heruntergeladene Datei finden.
 Chrome und Firefox laden diese beide normalerweise in den Downloads
 Ordner. Der Dateiname setzt sich jetzt aus zwei Komponenten zusammen:
 
 * `kubeconfig-admin-`
 * unser Cluster ID
 
-Um diese dann zu registrieren nutzen wir folgendes Kommando:
+Um diese dann zu registrieren, nutzen wir folgendes Kommando:
 
 ```bash
 cd Downloads

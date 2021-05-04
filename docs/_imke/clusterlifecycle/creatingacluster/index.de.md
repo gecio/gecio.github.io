@@ -11,7 +11,7 @@ Doch bevor wir dies tun können, benötigen wir ein Projekt.
 
 Wenn Sie noch kein Projekt erstellt haben, [erstellen Sie bitte zuerst ein Projekt](/imke/managingprojects/creatingaproject).
 
-Um einen Cluster anzulegen, klicken wir im gewünschten Projekt oben rechts auf `Create Cluster`.
+Um einen Cluster anzulegen, klicken wir im gewünschten Projekt oben rechts auf `Create Cluster`:
 ![Create Cluster](projectview_addcluster.png)
 
 Jetzt öffnet sich die erste Seite für den Prozess, einen Cluster anzulegen.
@@ -19,7 +19,7 @@ Dazu wählen wir den Provider `openstack` und eine der drei Verfügbarkeitszonen
 nehmen wir `IX2`:
 ![Add Cluster Step 1](add_step1.png)
 
-Im nächsten Schritt konfigurieren wir die Cluster-Details. Im unserem Beispiel nennen wir das Cluster `first-system` und
+Im nächsten Schritt konfigurieren wir die Cluster-Details. In unserem Beispiel nennen wir das Cluster `first-system` und
 wählen die gwünschte Kubernetes-Version aus:
 ![Add Cluster Step 2](add_step2.png)
 
@@ -48,14 +48,14 @@ In unserer [OpenStack Dokumentation](/optimist/guided_tour/step10/) ist beschrie
 und mit einem Netzwerk verbinden kann.
 ![Add Cluster Network](create-cluster-network-exist.png)
 
-Im nächsten Schritt definieren wir, wieviele und welche virtuelle Maschinen als Worker-Nodes im Cluster verfügbar
+Im nächsten Schritt definieren wir, wie viele und welche virtuellen Maschinen als Worker-Nodes im Cluster verfügbar
 sein sollen.
 
 Zuerst geben wir dem so genannten `Machine Deployment` einen Namen. Für unser Testcluster nutzen wir dazu den Namensgenerator:
 ![Add Cluster Step 4](add_step4.png)
 
-Danach spezifieren wir die `Replicas` (Anzahl der Worker-Nodes im Kubernetes-Cluster) und den `Flavor` (den Maschinentyp), welcher
-im wesentlichen die Anzahl der verfügbaren CPU-Kerne und des RAMs bestimmt:
+Danach spezifizieren wir die `Replicas` (Anzahl der Worker-Nodes im Kubernetes-Cluster) und den `Flavor` (den Maschinentyp), welcher
+im Wesentlichen die Anzahl der verfügbaren CPU-Kerne und des RAMs bestimmt:
 ![Add Cluster Step 4.2](add_step4_2.png)
 
 Weiterhin wählen wir `Flatcar` als Betriebssystem für die Worker-Nodes:

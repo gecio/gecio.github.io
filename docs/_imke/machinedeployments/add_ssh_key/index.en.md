@@ -73,6 +73,7 @@ Your Key will now be added to all worker nodes in all machinedeployments.
 To access to the node via SSH you need to attach a Floating IP to them.
 
 To achieve this, you have edit the machinedeployment:
+
 ![Edit-MD](edit_machine_deployment.png)
 
 And ensure `Allocate Floating IP` is selected:

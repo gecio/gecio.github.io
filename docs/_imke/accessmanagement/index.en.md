@@ -9,14 +9,13 @@ has_children: true
 There are two ways how we can grant other users access to an iMKE cluster:
 
 * granting users access to a complete iMKE project (which grants access to all clusters in that project as well)
-* use role-based access control (RBAC) to define more fine-graned access control directly to the cluster.
+* use role-based access control (RBAC) to define more fine-grained access control directly to the cluster.
 
 ## Project-based access
 
 > This is the recommend of granting other users access to a cluster.
 
-Giving users access on a project level (like described [here](/imke/managingprojects/creatingaproject)) provides them access to *all* clusters in this project. Users with this level of access can login to the iMKE dashboard, see and (dependent on the level of access) also edit or create clusters. They can also [download their kubeconfig](connectingtoacluster/) directly:
-
+Giving users access on a project level (like described [here](/imke/managingprojects/creatingaproject)) provides them access to *all* clusters in this project. Users with this level of access can log in to the iMKE dashboard, see and (dependent on the level of access) also edit or create clusters. They can also [download their kubeconfig](connectingtoacluster/) directly:
 
 ![Download kubeconfig](download_kubeconfig.png)
 
@@ -24,8 +23,7 @@ All users with the same level of project-access effectively share the same kubec
 
 ## Role-based Access Control (RBAC)
 
-Using role-based access control allows an project admin to provide more fine grained access based on predefined `ClusterRoles` and `Roles`. Via the iMKE Dashboard, the admin can easily create (cluster-wide) `ClusterRoleBindings` and (namespace-scoped) `RoleBindings`:
-
+Using role-based access control allows a project admin to provide more fine-grained access based on predefined `ClusterRoles` and `Roles`. Via the iMKE Dashboard, the admin can easily create (cluster-wide) `ClusterRoleBindings` and (namespace-scoped) `RoleBindings`:
 
 ![RBAC option](rbac.png)
 

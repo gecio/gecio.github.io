@@ -12,13 +12,13 @@ Cluster in einem Projekt.
 
 ## Den Cluster finden
 
-Um einen Cluster zu löschen müssen wir in die Detailansicht
+Um einen Cluster zu löschen, müssen wir in die Detailansicht
 des Clusters gehen.
 Hierfür klicken wir auf den Eintrag `first-system`.
 ![Step 1](delete_1.png)
 
 Folgend müssen wir uns den Cluster-Namen merken. Um diesen
-in die Zwischenablage zu kopieren klicken wir auf den Namen.
+in die Zwischenablage zu kopieren, klicken wir auf den Namen.
 ![Step 2](delete_2.png)
 
 ## Den Cluster löschen

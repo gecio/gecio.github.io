@@ -15,14 +15,14 @@ nginx with a Load Balancer in front of the cluster.
 To successfully finish this guide, you need the following items.
 
 * `kubectl` [latest version](https://kubernetes.io/docs/tasks/tools/#kubectl)
-* A running Kubernetes Cluster, created with iMKE, with a ready node deployment.
-  * See [Creating a Cluster](/imke/clusterlifecycle/creatingacluster).
+* A running Kubernetes Cluster, created with iMKE, with a ready Machine Deployment.
+  * See also [Creating a Cluster](/imke/clusterlifecycle/creatingacluster).
 * A valid `kubeconfig` for your cluster.
-  * See [Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster).
+  * See also [Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster).
 
 ## Data types
 
-In a way, Kubernets is a big database. Everything running
+In a way, Kubernetes is a big database. Everything running
 in the cluster is tracked by the API server. This is how
 you run and manage applications in Kubernetes.
 
@@ -87,7 +87,7 @@ That's a good start. We store this in a file called
 kubectl create deployment --dry-run -o yaml --image nginx nginx > deployment.yaml
 ```
 
-Next we need the service making the application publically accessible.
+Next we need the service making the application publicly accessible.
 The type we choose is `LoadBalancer`. This automatically creates a fully
 configured LoadBalancer in OPenStack, and allows us to access the cluster.
 
@@ -120,7 +120,7 @@ Again, we save this into a file, this time we name it `service.yaml`.
 kubectl create service loadbalancer --dry-run --tcp=80 -o yaml nginx > service.yaml
 ```
 
-These two files are the basis for a publically accessible nginx running on
+These two files are the basis for a publicly accessible nginx running on
 kubernetes. There is no connection between the two manifests, except for the
 label `app: nginx` which you can find in the deployment's metadata and in the
 service as a selector.
@@ -154,7 +154,7 @@ As shown in the output, a deployment was created and is in the READY state.
 The service nginx was created as well, but EXTERNAL-IP is still pending. We need
 to wait a minute until the LoadBalancer has started up completely.
 
-A couple minutes later, we can run the command again and now we see an
+A couple of minutes later, we can run the command again and now we see an
 external IP address:
 
 ```bash

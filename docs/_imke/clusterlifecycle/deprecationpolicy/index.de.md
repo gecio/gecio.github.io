@@ -45,10 +45,11 @@ Nein, da dies in der Zukunft möglicherweise zu schwerwiegenden Sicherheitsprobl
 
 Wenn eine Kubernetes-Version das End-of-Life erreicht, müssen wir ihre Unterstützung von iMKE entfernen, da sie keine Bugfixes oder Sicherheitsupdates mehr erhält. Ab diesem Zeitpunkt ist es nicht mehr möglich, neue Cluster mit dieser Version zu erstellen.
 
-Es ist wichtig, zwei technische Einschränkungen in Kubernetes hervorzuheben:
+Es ist wichtig, die folgenden technischen Einschränkungen in Kubernetes hervorzuheben:
 
-* Ein Kubernetes-Cluster (bzw. seine Control Plane) kann jeweils um eine Version aktualisiert werden, z. von v1.15 -> v1.16.
+* Ein Kubernetes-Cluster (bzw. seine Control Plane) kann jeweils um eine Version aktualisiert werden, z. B. von v1.17 -> v1.18.
 * Es ist nicht möglich, mehrere Versionen in einem Schritt zu aktualisieren.
+* Es ist nicht möglich, einen Cluster downzugraden.
 
 Für unsere Kunden bedeutet dies, dass sie, wenn sie Ihre Cluster vor dem Entfernen der **nächsten** EOL-Version nicht aktualisieren, das Risiko eingehen, bei dem Entfernen der **nächsten** Version kein Upgrade durchführen zu können.
 
@@ -58,7 +59,7 @@ Um solche Situationen zu vermeiden, müssen wir für Cluster, die mit einer bere
 
 **Was passiert mit meinen Clustern während des Force-Upgrades?**
 
-Wir werden ein automatisiertes Kubernetes-Upgrade für die Control-Plane und für die Node Deployments initiieren.
+Wir werden ein automatisiertes Kubernetes-Upgrade für die Control-Plane und für die Machine Deployments initiieren.
 
 Dies **sollte** zwar funktionieren, aber ein erfolgreiches Upgrade kann aufgrund der Vielfalt der Anwendungen und Anwendungsfälle nicht garantiert werden.
 

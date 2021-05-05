@@ -13,7 +13,7 @@ To reduce manual effort and automate the configuration of DNS zones, you may wan
 To successfully finish this guide, you need the following items.
 
 * `kubectl` [latest version](https://kubernetes.io/de/docs/tasks/tools/install-kubectl/)
-* A running Kubernetes Cluster, created with iMKE, with a ready node deployment.
+* A running Kubernetes Cluster, created with iMKE, with a ready Machine Deployment.
   * See [Creating a Cluster](/imke/clusterlifecycle/creatingacluster).
 * A valid `kubeconfig` for your cluster.
   * See [Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster/).
@@ -104,7 +104,7 @@ Please install External-DNS to your cluster. In our example we will use Helm as 
 * [Install Helm](https://helm.sh/docs/intro/)
 * ```$ helm repo add stable https://kubernetes-charts.storage.googleapis.com/```
 * ```$ helm repo update```
-* Create this file `values.yaml` and configure it, for more informations see [values-external-dns](https://github.com/helm/charts/blob/master/stable/external-dns/values-production.yaml).
+* Create this file `values.yaml` and configure it, for more information see [values-external-dns](https://github.com/helm/charts/blob/master/stable/external-dns/values-production.yaml).
 
 ```yaml
 ## K8s resources type to be observed for new DNS entries by ExternalDNS

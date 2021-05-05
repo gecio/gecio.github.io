@@ -6,26 +6,27 @@ nav_order: 4300
 parent: Cluster Lebenszyklus
 ---
 
-Es ist Möglich die Credentials für einen Cluster zu ändern.
-Das wird vorallem nach dem ändern eines Passwortes, oder beim Wechsel des Users benötigt
+Es ist möglich die Credentials für einen Cluster zu ändern.
+Das wird vor allem nach dem Ändern eines Passwortes, oder beim Wechsel des Users benötigt.
 
 ## Credentials ändern
 
-Das Ändert die Credentials mit folgenen einfachen Schritten:
+Das Ändert die Credentials mit folgenden einfachen Schritten:
 
 1. Wähle den gewünschten Cluster aus.
 
     ![Clusters](clusters.png)
 
-2. Klicke die drei Punkte, um das Untermenü zu öffnen
+1. Klicke die drei Punkte, um das Untermenü zu öffnen
 
     ![Three-Dots](three-dots.png)
 
-3. Wähle `Edit Cluster`
+1. Wähle `Edit Cluster`
 
     ![Edit-Cluster](edit-cluster.png)
 
-4. Ändere Credentials
+1. Ändere die Credentials
+
     ![Credentials-Edit](credentials-edit.png)
 
-Kurz nach dem betätigen des Edit buttons, bekommt ihr ein Pop Up mit der Bestätigung.
+Kurz nach dem Betätigen des Edit buttons, bekommt ihr ein Pop Up mit der Bestätigung.

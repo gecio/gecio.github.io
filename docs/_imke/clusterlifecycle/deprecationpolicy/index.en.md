@@ -45,10 +45,11 @@ No, as this would possibly mean serious security issues in the future.
 
 If a Kubernetes version reaches End-of-Life, we have to remove its support from iMKE as it will not receive any bugfixes or security updates anymore. From this point on it is no longer possible to create new clusters with this version.
 
-It is important to underline two technical limitations in Kubernetes:
+It is important to underline the following technical limitations in Kubernetes:
 
-* A (control-plane of a) Kubernetes cluster can be upgraded by one version at a time, e.g. from v1.15 -> v1.16.
+* A (control-plane of a) Kubernetes cluster can be upgraded by one version at a time, e.g. from v1.17 -> v1.18.
 * It is not possible to upgrade more than one versions at once.
+* It is not possible to downgrade a cluster.
 
 What this means for customers is that if they don't update their clusters before the removal of the **next** EOL'd version, they risk not to be able to upgrade after the removal of the **next** deprecated version.
 
@@ -58,7 +59,7 @@ To overcome this issue, we need to actively force upgrade clusters running on an
 
 **What happens to my clusters during force upgrade?**
 
-We will initiate an automated Kubernetes upgrade for the control plane and the node deployment(s).
+We will initiate an automated Kubernetes upgrade for the control plane and the Machine Deployment(s).
 
 While this *should* work, it can not be guaranteed to work, given the diversity of applications and use cases.
 

@@ -69,13 +69,13 @@ Ein Client kann sich bei dem Server authentifizieren, indem er ein `Authorizatio
 Authorization: Bearer aaa.bbb.ccc
 ```
 
-Beispiel: Um eine Liste der Clusters abzufgragen, kann man den folgenden API-Anruf nutzen:
+Beispiel: Um eine Liste der Clusters abzufragen, kann man den folgenden API-Anruf nutzen:
 
 ```bash
 curl -X GET "https://imke.cloud/api/v1/projects?displayAll=true" -H "accept: application/json" -H "authorization: Bearer eyJhbXxXXxXxX..."  | jq
 ```
 
-Das Ergebnis sieht dann etwa so aus :
+Das Ergebnis sieht dann etwa so aus:
 
 ```JSON
 [
@@ -104,7 +104,7 @@ Der Anzeigename des Service Accounts und Tokens ist eine gute Möglichkeit, um w
 
 ### Service Accounts und Tokens verwalten
 
-Es ist möglich, ein Service Account zu löschen und mit dem gleichen Namen neu zu erstellen. Das gleiche gilt für den Service Account Token.
+Es ist möglich, ein Service Account zu löschen und mit dem gleichen Namen neu zu erstellen. Das Gleiche gilt für den Service Account Token.
 
 Der Name eines Service Accounts oder Tokens kann nach dem Anlegen geändert werden.
 

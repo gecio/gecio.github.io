@@ -7,7 +7,7 @@ parent: Cluster Lifecycle
 ---
 
 It's quick and simple to delete Clusters in iMKE. The
-only prerequisiste is that you need a running Cluster
+only prerequisite is that you need a running Cluster
 in an iMKE Project.
 
 ## Finding the Cluster
@@ -27,8 +27,7 @@ Now we click `Delete`.
 
 This opens a window where we need to enter the cluster name
 to avoid sudden and unwanted deletions. Since we copied the name
-into our clipboard previously, we can simply paste
-it here.
+into our clipboard previously, we can simply paste it here.
 ![Step 4](delete_4.png)
 
 Since we also want to free up the resources, we leave both check

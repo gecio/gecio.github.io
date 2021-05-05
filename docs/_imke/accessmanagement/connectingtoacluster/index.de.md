@@ -32,24 +32,24 @@ registrieren. Dafür gibt es zwei Möglichkeiten:
 
 1. `kubectl` schaut als Standard in die Datei `.kube/config`
     im Heimat-Verzeichnis des Benutzers.
-2. Wir können die `kubeconfig` temporär mittels einer Umgebungsvariable
+1. Wir können die `kubeconfig` temporär mittels einer Umgebungsvariable
     exportieren.
 
 Der Einfachheit halber und um auf unserem System die Standards
 nicht zu verändern, gehen wir hier mit Variante 2.
 
 Dafür benutzen wir eine Konsole. In den Screenshots verwenden
-ich iTerm2 auf macOS, es funktioniert jedoch auf Linux und Windows
+wir iTerm2 auf macOS, es funktioniert jedoch auf Linux und Windows
 bash genau so.
 
-Als erstes müssen wir die herunter geladene Datei finden.
+Als Erstes müssen wir die heruntergeladene Datei finden.
 Chrome und Firefox laden diese beide normalerweise in den Downloads
 Ordner. Der Dateiname setzt sich jetzt aus zwei Komponenten zusammen:
 
 * `kubeconfig-admin-`
 * unser Cluster ID
 
-Um diese dann zu registrieren nutzen wir folgendes Kommando:
+Um diese dann zu registrieren, nutzen wir folgendes Kommando:
 
 ```bash
 cd Downloads
@@ -72,12 +72,11 @@ musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.15.0
 
 In iMKE können wir mit einem Klick auf das Kubernetes Dashboard zugreifen.
 Um dies im Browser zu öffnen, müssen wir oben rechts auf die Schaltfläche `Open Dashboard` klicken.
-
-![Step 4](connect_4.png)
+![Step 3](connect_3.png)
 
 Nun sehen wir das Kubernetes Dashboard und können
 unseren Cluster grafisch erkunden.
-![Step 5](connect_5.png)
+![Step 4](connect_4.png)
 
 ## Zusammenfassung
 

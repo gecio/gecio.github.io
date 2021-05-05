@@ -6,7 +6,7 @@ nav_order: 7200
 parent: Kubernetes Applications
 ---
 
-Limited access to a kubernetes cluster can be achieved using kubernetes service accounts and the RBAC feature within kubernetes.
+Limited access to a kubernetes cluster can be achieved using kubernetes service accounts, and the RBAC feature within kubernetes.
 
 To achieve this, we will need to create:
 
@@ -56,7 +56,7 @@ Provide the token that has been printed with the name of the service account
 to a developer or third party to allow them to interact with the cluster.
 
 At this point the service account can authenticate with the kubernetes
-cluster, but is unable to use it do anything. We now need to create a role
+cluster, but is unable to use it do anything. We now need to create a role,
 and a role binding to provide permissions to the service account.
 
 ## Creating authorization permissions

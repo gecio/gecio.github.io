@@ -7,17 +7,17 @@ parent: Anwendungen in Kubernetes
 ---
 
 Um den Aufwand zu reduzieren, und die manuelle Verwaltung Ihrer DNS-Zone zu minimieren, sollte man [External-DNS](https://github.com/kubernetes-sigs/external-dns) verwenden. External-DNS ermöglicht Ihnen DNS-Einträge dynamisch über Kubernetes je nach DNS-Anbieter zu steuern.
-Externen-DNS ist kein eigenständiger DNS-Server, sondern konfiguriert lediglich DNS-Resourcen in externen DNS-Provider. Beispielsweise (OpenStack Designate, Amazon Route53, Google Cloud DNS, usw.)
+Externen-DNS ist kein eigenständiger DNS-Server, sondern konfiguriert lediglich DNS-Ressourcen in externen DNS-Provider. Beispielsweise (OpenStack Designate, Amazon Route53, Google Cloud DNS, usw.)
 
 ## Voraussetzungen
 
-Um diesen Guide erfolgreich abzuschließen brauchen Sie folgendes:
+Um diesen Guide erfolgreich abzuschließen brauchen Sie Folgendes:
 
 * `kubectl` [die neueste Version](https://kubernetes.io/de/docs/tasks/tools/install-kubectl/)
-* Ein laufender Kubernetes Cluster, von iMKE erstellt mit laufender Node Deployment.
-  * Sehen Sie bitte [Einen Cluster anlegen](/imke/clusterlifecycle/creatingacluster)
+* Ein laufender Kubernetes Cluster, von iMKE erstellt mit laufender Machine Deployment.
+  * Siehe hierzu auch: [Einen Cluster anlegen](/imke/clusterlifecycle/creatingacluster)
 * Eine valide Konfigdatei `kubeconfig` für den Cluster.
-  * Sehen Sie bitte [Mit einem Cluster verbinden](/imke/accessmanagement/connectingtoacluster/).
+  * Siehe hierzu auch: [Mit einem Cluster verbinden](/imke/accessmanagement/connectingtoacluster/).
 * Installierte [OpenStack-CLI Werkzeuge](https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html)
 * [OpenStack-API-Zugang](https://docs.innovo.cloud/guided_tour/de/schritt04/#zugangsdaten)
 
@@ -32,7 +32,7 @@ dns2.ddns.innovo.cloud
 
 ## DNS-Zone in OpenStack-Designate anlegen
 
-Bevor Sie beginnen External-DNs zu nutzen, sollen Sie Ihre DNS-Zone manuell in Ihrem DNS-Provider anlegen. In unserem Beispiel wird die Zone `foobar.cloud.` in OpenStack-Designate mit Hilfe der OpenStack-CLI-Tools wie folgt angelegt.
+Bevor Sie beginnen External-DNs zu nutzen, sollen Sie Ihre DNS-Zone manuell in Ihrem DNS-Provider anlegen. In unserem Beispiel wird die Zone `foobar.cloud.` in OpenStack-Designate mithilfe der OpenStack-CLI-Tools wie folgt angelegt.
 
 PS: Bitte fügen Sie immer am Ende Ihrer Zone einen `.` an.
 
@@ -97,7 +97,7 @@ $ openstack zone show foobar.cloud.
 
 ## Die Installation vom External-DNS über Helm
 
-Bitte installieren Sie External-DNS in Ihrem Cluster, in unserem Beispiel nutzen wir wie folgendens Helm für die Installtation:
+Bitte installieren Sie External-DNS in Ihrem Cluster, in unserem Beispiel nutzen wir wie folgendes Helm für die Installation:
 
 * [Helm-Installation](https://helm.sh/docs/intro/)
 * ```$ helm repo add stable https://kubernetes-charts.storage.googleapis.com/```
@@ -166,7 +166,7 @@ extraEnv:
 
 ## Nginx Deployment starten
 
-Um den FQDN bzw. den Domain zu testen, legen Sie beispielsweise diese Deploymentdate als `nginx.yaml` an:
+Um den FQDN bzw. den Domain zu testen, legen Sie beispielsweise dieses Deployment als `nginx.yaml` an:
 
 ```yaml
 apiVersion: apps/v1
@@ -205,7 +205,7 @@ spec:
       targetPort: 80
 ```
 
-Nachdem Sie diese Deklartationsdatei angelegt haben, wenden Sie diese an:
+Nachdem Sie diese Deklarationsdatei angelegt haben, wenden Sie diese an:
 
 ```bash
 kubectl apply -f nginx.yaml
@@ -227,7 +227,7 @@ Warten Sie ein paar Minuten und testen Sie dann die Verfügbarkeit über das Int
 
 Folgende Inhaltspunkte wurden erfolgreich durchgeführt:
 
-* Was ist External-DNS und wie die im Kubernetes-Cluster  zu installieren ist.
+* Was ist External-DNS und wie die im Kubernetes-Cluster zu installieren ist.
 * Die Konfiguration vom External-DNS über Helm, um OpenStack Designate anzusprechen
 * Erstellung eines Nginx-Deployments und das Testen der Konnektivität
 

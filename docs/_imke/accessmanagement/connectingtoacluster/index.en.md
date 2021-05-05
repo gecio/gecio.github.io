@@ -12,12 +12,13 @@ it. This is necessary to deploy and manage our applications.
 ## Finding our Cluster
 
 To find a cluster, we need to go to the detail view of the cluster.
-For that, we click on the entry `first-system`.
+For that, we click on the entry `first-system`:
+
 ![Step 1](connect_1.png)
 
 ## Getting Access
 
-We click on the downwards facing arrow at the top right corner.
+We click on the downwards facing arrow in the top right corner:
 
 ![Step 2](connect_2.png)
 
@@ -31,7 +32,7 @@ There are two ways to do this:
 
 1. `kubectl` by default tries to use the file `.kube/config`
    in your home directory.
-2. We can temporarily use the `kubeconfig` by exporting it to
+1. We can temporarily use the `kubeconfig` by exporting it to
    an environment variable.
 
 To keep things straightforward and to avoid changing standards
@@ -70,13 +71,14 @@ musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.15.0
 ## Kubernetes Dashboard
 
 In iMKE we can access the Kubernetes Dashboard with one click.
-We only need to click on the `Open Dashboard` button on the top right of the cluster view.
+We only need to click on the `Open Dashboard` button on the top right of the cluster view:
 
-![Step 4](connect_4.png)
+![Step 4](connect_3.png)
 
 Now we see the Kubernetes Dashboard and can explore our cluster
-graphically.
-![Step 5](connect_5.png)
+graphically:
+
+![Step 5](connect_4.png)
 
 ## Summary
 
@@ -84,7 +86,7 @@ By completing this guide you've learned the following:
 
 * How to get the `kubectl` configuration file
 * How to configure `kubectl` to use the `kubeconfig`file
-* How to access the Kuberneres Dashboard for a cluster
+* How to access the Kubernetes Dashboard for a cluster
 
 Congratulations! Now you know all that's needed to connect to a
 Kubernetes Cluster.

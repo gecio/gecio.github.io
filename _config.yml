@@ -127,7 +127,7 @@ just_the_docs:
   # Define which collections are used in just-the-docs
   collections:
     # Reference the "docs" collection
-    imke: 
+    imke:
       name: IMKE
       # Exclude the collection from the navigation
       # Supports true or false (default)
@@ -135,7 +135,7 @@ just_the_docs:
       # Exclude the collection from the search
       # Supports true or false (default)
       search_exclude: false
-      
+
     optimist:
       # Give the collection a name
       name: Optimist
@@ -145,6 +145,5 @@ just_the_docs:
       # Exclude the collection from the search
       # Supports true or false (default)
       search_exclude: false
-    
 
-      
+

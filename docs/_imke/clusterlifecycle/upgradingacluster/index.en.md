@@ -11,7 +11,7 @@ each release. In order to stay safe and up-to-date, means
 installing Kubernetes updates on a regular basis.
 
 In especially critical cases, we will automatically update the
-Cluster API to the latest Minor-Version in order to keep our
+Cluster API to the latest minor version in order to keep our
 own infrastructure up-to-date. In this case the following section
 *The Cluster* can be skipped. However, nodes must still be updated
 manually by you.
@@ -40,16 +40,16 @@ version for the master.
 
 ![Step 2](update_2a.png)
 
-It is recommend to select `Upgrade Node Deployments`, as this will upgrade the worker-nodes as well:
+It is recommended to select `Upgrade Machine Deployments`, as this will upgrade the worker-nodes as well:
 
 ![Step 2](update_2b.png)
 
-Now iMKE automatically updates the master and optionally the worker nodes as well, and we are done with this
-step.
+Now iMKE automatically updates the master and optionally the
+worker nodes as well, and we are done with this step.
 
 ## The Nodes
 
-If the master has been updated without upgrading the Node Deployments or if a scheduled maintenance of the iMKE
+If the master has been updated without upgrading the Machine Deployments or if a scheduled maintenance of the iMKE
 platform has led to an implicit upgrade of the master (normally this just updates a patchlevel), we must still update the nodes.
 The iMKE web interface can help us here as well.
 
@@ -57,7 +57,7 @@ It's worth noting that this update process deletes the old nodes and
 replaces them with new ones. This also means that all pods will be
 restarted.
 
-The first step is to click on the node deployment.
+The first step is to click on the Machine Deployment.
 
 ![Step 3](update_3.png)
 
@@ -66,8 +66,8 @@ Next we click on the pencil icon to open the update view.
 ![Step 4](update_4.png)
 
 Now, under `kubelet Version` we select the version, for example
-`1.15.3`, which matches the cluster's master version. Confirm the
-update by clicking `Edit Node Deployment`
+`1.18.18`, which matches the cluster's master version. Confirm the
+update by clicking `Edit Machine Deployment`:
 
 ![Step 5](update_5.png)
 

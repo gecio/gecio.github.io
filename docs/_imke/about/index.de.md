@@ -31,11 +31,11 @@ Bei allen Problemen im Clusterbetrieb können Sie sich dabei jederzeit an unsere
 
 ### Wie kann ich ein "Managed Kubernetes Cluster" benutzen?
 
-Selbstständlich können Sie ein iMKE-Cluster so benutzen wie jedes andere Kubernetes-Cluster auch. Da es sich bei einem iMKE-Cluster um ein gemanagtes Kubernetes Cluster handelt, können Sie sich dabei voll und ganz auf den Applikationsbetrieb konzentrieren.
+Selbstverständlich können Sie ein iMKE-Cluster so benutzen wie jedes andere Kubernetes-Cluster auch. Da es sich bei einem iMKE-Cluster um ein gemanagtes Kubernetes Cluster handelt, können Sie sich dabei voll und ganz auf den Applikationsbetrieb konzentrieren.
 
 Beispielsweise können Sie ein iMKE-Cluster nutzen, um bereits [paketierte, containerisierte Anwendungen](https://artifacthub.io/) via [helm](https://helm.sh/) zu installieren:
 
-* Beispielsweise eine vollständige [Wordpress](https://artifacthub.io/packages/helm/bitnami/wordpress)-Installation,
+* Beispielsweise eine vollständige [WordPress-Installation](https://artifacthub.io/packages/helm/bitnami/wordpress),
 * ein [Drupal](https://artifacthub.io/packages/helm/bitnami/drupal) CMS,
 * oder eine private [nextcloud](https://artifacthub.io/packages/helm/nextcloud/nextcloud) Filesharing-Umgebung.
 
@@ -66,7 +66,7 @@ Die iMKE-Plattform selbst basiert ebenfalls auf Kubernetes. Intern läuft die Co
 * machine-controller
 * ...sowie andere Komponenten der Controlplane.
 
-Die Controlplane selbst ebenfalls in Kubernetes zu betreiben hat dabei viele Vorteile: Einzelne Pods werden automatisch über verschiedene Server verteilt (Scheduling), das gesamte Setup ist skalierbar und weitgehend selbstheilend, da abgestürzte Pods automatisch neugestartet werden.
+Die Controlplane selbst ebenfalls in Kubernetes zu betreiben hat dabei viele Vorteile: einzelne Pods werden automatisch über verschiedene Server verteilt (Scheduling), das gesamte Setup ist skalierbar und weitgehend selbstheilend, da abgestürzte Pods automatisch neugestartet werden.
 
 ![iMKE platform](imke-platform.png)
 

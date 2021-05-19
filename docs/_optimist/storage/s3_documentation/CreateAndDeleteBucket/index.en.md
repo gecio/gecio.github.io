@@ -100,7 +100,7 @@ Confirm the action by clicking on "Delete"(1) once again.
 
 # Boto3
 
-In Boto3 we first need the S3 identifier so that a script can be used. For details see: [Create and use S3 credentials #Boto3](/optimist/storage/s3_documentation/createanduses3credentials#boto3)
+In Boto3 we first need the S3 identifier so that a script can be used. For details see: [Create and use S3 credentials #Boto3](/optimist/storage/s3_documentation/createanduses3credentials/#boto3)
 
 ## Create a bucket
 

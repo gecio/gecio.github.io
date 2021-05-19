@@ -89,7 +89,7 @@ Simply select the file to be deleted(1) and click Action(2) → Delete(3) to rem
 
 # Boto3
 
-In Boto3 we first need S3 credentials so that a script can be used. For details see: [Create and use S3 credentials #Boto3](/optimist/storage/s3_documentation/createanduses3credentials#boto3).
+In Boto3 we first need S3 credentials so that a script can be used. For details see: [Create and use S3 credentials #Boto3](/optimist/storage/s3_documentation/createanduses3credentials/#boto3).
 
 ## Enable versioning
 

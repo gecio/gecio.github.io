@@ -1,7 +1,7 @@
 ---
 title: "18: Our VM will be reachable via IPv4"
 lang: en
-permalink: /optimist/guided_tour/step18
+permalink: /optimist/guided_tour/step18/
 nav_order: 1180
 parent: Guided Tour
 ---

@@ -1,7 +1,7 @@
 ---
 title: "22: Anlegen eines DNS-Record in Designate"
 lang: de
-permalink: /optimist/guided_tour/step22
+permalink: /optimist/guided_tour/step22/
 nav_order: 1220
 parent: Guided Tour
 ---

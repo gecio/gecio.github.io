@@ -1,7 +1,7 @@
 ---
 title: "21: Eine Instanz von einem SSD-Volume starten"
 lang: de
-permalink: /optimist/guided_tour/step21
+permalink: /optimist/guided_tour/step21/
 nav_order: 1210
 parent: Guided Tour
 ---

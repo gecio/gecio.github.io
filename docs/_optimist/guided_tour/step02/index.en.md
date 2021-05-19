@@ -1,7 +1,7 @@
 ---
 title: "02: Create an SSH-Key via the Horizon(Dashboard)"
 lang: en
-permalink: /optimist/guided_tour/step02
+permalink: /optimist/guided_tour/step02/
 nav_order: 1020
 parent: Guided Tour
 ---

@@ -1,7 +1,7 @@
 ---
 title: "21: Start a VM via an SSD volume"
 lang: en
-permalink: /optimist/guided_tour/step21
+permalink: /optimist/guided_tour/step21/
 nav_order: 1210
 parent: Guided Tour
 ---

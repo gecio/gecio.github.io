@@ -1,7 +1,7 @@
 ---
 title: "08: Löschen der ersten eigenen Instanz"
 lang: de
-permalink: /optimist/guided_tour/step08
+permalink: /optimist/guided_tour/step08/
 nav_order: 1080
 parent: Guided Tour
 ---

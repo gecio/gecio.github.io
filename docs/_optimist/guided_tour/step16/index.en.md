@@ -1,7 +1,7 @@
 ---
 title: "16: Let's get to know HEAT better"
 lang: en
-permalink: /optimist/guided_tour/step16
+permalink: /optimist/guided_tour/step16/
 nav_order: 1160
 parent: Guided Tour
 ---

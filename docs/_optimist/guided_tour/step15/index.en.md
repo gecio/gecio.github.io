@@ -1,7 +1,7 @@
 ---
 title: "15: The first heat template"
 lang: en
-permalink: /optimist/guided_tour/step15
+permalink: /optimist/guided_tour/step15/
 nav_order: 1150
 parent: Guided Tour
 ---

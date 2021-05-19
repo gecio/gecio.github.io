@@ -1,7 +1,7 @@
 ---
 title: "14: Unsere ersten Schritte mit Heat"
 lang: de
-permalink: /optimist/guided_tour/step14
+permalink: /optimist/guided_tour/step14/
 nav_order: 1140
 parent: Guided Tour
 ---

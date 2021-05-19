@@ -1,7 +1,7 @@
 ---
 title: "11: Zugriff aus dem Internet vorbereiten; Wir ergänzen IPv6"
 lang: de
-permalink: /optimist/guided_tour/step11
+permalink: /optimist/guided_tour/step11/
 nav_order: 1110
 parent: Guided Tour
 ---

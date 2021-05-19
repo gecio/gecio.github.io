@@ -1,7 +1,7 @@
 ---
 title: "10: Getting access to the Internet; Creating a network"
 lang: en
-permalink: /optimist/guided_tour/step10
+permalink: /optimist/guided_tour/step10/
 nav_order: 1100
 parent: Guided Tour
 ---

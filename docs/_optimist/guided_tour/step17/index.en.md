@@ -1,7 +1,7 @@
 ---
 title: "17: The network in Heat"
 lang: en
-permalink: /optimist/guided_tour/step17
+permalink: /optimist/guided_tour/step17/
 nav_order: 1170
 parent: Guided Tour
 ---

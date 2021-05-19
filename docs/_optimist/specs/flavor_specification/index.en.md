@@ -1,7 +1,7 @@
 ---
 title: Flavor Specifications
 lang: en
-permalink: /optimist/specs/flavor_specification
+permalink: /optimist/specs/flavor_specification/
 parent: Specifications
 nav_order: 9100
 last_modified_date: 2021-04-19

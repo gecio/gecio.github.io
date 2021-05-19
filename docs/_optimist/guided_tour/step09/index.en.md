@@ -1,7 +1,7 @@
 ---
 title: "09: A Security Group"
 lang: en
-permalink: /optimist/guided_tour/step09
+permalink: /optimist/guided_tour/step09/
 nav_order: 1090
 parent: Guided Tour
 ---

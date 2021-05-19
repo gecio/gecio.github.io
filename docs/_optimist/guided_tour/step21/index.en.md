@@ -1,7 +1,7 @@
 ---
 title: "21: Start a VM via an SSD volume"
 lang: en
-permalink: /optimist/guided_tour/step21
+permalink: /optimist/guided_tour/step21/
 nav_order: 1210
 parent: Guided Tour
 ---
@@ -14,7 +14,7 @@ Start
 
 Previously we've created a vm from scratch and have also learned some basics about HEAT.
 In this step we are going to boot a vm from a SSD volume. There are different ways to achieve that. 
-For this example, we will use the Horizon(Dashboard) and also modify the HEAT-Template from [Step 18](/optimist/guided_tour/step18).
+For this example, we will use the Horizon(Dashboard) and also modify the HEAT-Template from [Step 18](/optimist/guided_tour/step18/).
 
 The Horizon(Dashboard) way
 -----

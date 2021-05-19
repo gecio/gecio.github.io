@@ -1,7 +1,7 @@
 ---
 title: "07: Die erste eigene Instanz"
 lang: de
-permalink: /optimist/guided_tour/step07
+permalink: /optimist/guided_tour/step07/
 nav_order: 1070
 parent: Guided Tour
 ---

@@ -1,7 +1,7 @@
 ---
 title: Einen Bucket erstellen und wieder löschen
 lang: de
-permalink: /optimist/storage/s3_documentation/createanddeletebucket
+permalink: /optimist/storage/s3_documentation/createanddeletebucket/
 nav_order: 3120
 parent: S3 Kompatiblen Objekt Storage
 grand_parent: Storage
@@ -102,7 +102,7 @@ Die Bestätigung erfolgt dann über das erneute klicken auf "Löschen"(1)
 
 # Boto3
 
-Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](/optimist/storage/s3_documentation/createanduses3credentials#boto3)
+Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](/optimist/storage/s3_documentation/createanduses3credentials/#boto3)
 
 ## Bucket erstellen
 

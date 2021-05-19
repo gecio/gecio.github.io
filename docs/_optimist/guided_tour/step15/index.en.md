@@ -1,7 +1,7 @@
 ---
 title: "15: The first heat template"
 lang: en
-permalink: /optimist/guided_tour/step15
+permalink: /optimist/guided_tour/step15/
 nav_order: 1150
 parent: Guided Tour
 ---
@@ -97,4 +97,4 @@ Conclusion
 -----------
 
 We've now defined a template that creates a single VM instance, if you want,
-you could run it like we did previously in [Step 13: "The structured way to create an instance (with stacks)"](/optimist/guided_tour/step13).
+you could run it like we did previously in [Step 13: "The structured way to create an instance (with stacks)"](/optimist/guided_tour/step13/).

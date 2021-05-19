@@ -1,7 +1,7 @@
 ---
 title: Versionierung aktivieren/deaktivieren und wie eine versioniertes Objekt gelöscht wird
 lang: de
-permalink: /optimist/storage/s3_documentation/versioning
+permalink: /optimist/storage/s3_documentation/versioning/
 nav_order: 3140
 parent: S3 Kompatiblen Objekt Storage
 grand_parent: Storage
@@ -89,7 +89,7 @@ Hier wird einfach die zu löschende Datei markiert(1) und über Aktion(2) → L�
 
 # Boto3
 
-Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](/optimist/storage/s3_documentation/createanduses3credentials#boto3).
+Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](/optimist/storage/s3_documentation/createanduses3credentials/#boto3).
 
 ## Versionierung einschalten
 

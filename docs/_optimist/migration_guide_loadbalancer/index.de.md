@@ -97,7 +97,7 @@ $ openstack floating ip list --port 2cc1b3f9-0457-410b-93dd-a96338de3b12
 
 ## Einen neuen Octavia-Balancer mit den gleichen Einstellungen anlegen
 
-Sobald der zu migrierende Neutron Loadbalancer identifiziert wurde, muss ein neuer Octavia-Balancer mit den gleichen Einstellungen angelegt werden (siehe auch [Schritt 24 in unserem Tutorial](/optimist/guided_tour/step24)). 
+Sobald der zu migrierende Neutron Loadbalancer identifiziert wurde, muss ein neuer Octavia-Balancer mit den gleichen Einstellungen angelegt werden (siehe auch [Schritt 24 in unserem Tutorial](/optimist/guided_tour/step24/)). 
 
 Nachdem der neue Balancer eingerichtet wurde, notieren Sie sich bitte die ID des VIP ports, diese Information wird im letzten Schritt benötigt:
 

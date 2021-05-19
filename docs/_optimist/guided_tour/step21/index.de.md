@@ -1,7 +1,7 @@
 ---
 title: "21: Eine Instanz von einem SSD-Volume starten"
 lang: de
-permalink: /optimist/guided_tour/step21
+permalink: /optimist/guided_tour/step21/
 nav_order: 1210
 parent: Guided Tour
 ---
@@ -19,7 +19,7 @@ Wir werden in diesem Schritt eine Instanz von einem Volume starten
 und dafür den SSD-Speicher nutzen. 
 Auch hier gibt es mehrere Wege unser Ziel zu erreichen, 
 daher werden wir in diesem Schritt sowohl das Horizon(Dashboard) nutzen, 
-als auch unser HEAT Template aus [Schritt 18](/optimist/guided_tour/step18) weiter modifizieren.
+als auch unser HEAT Template aus [Schritt 18](/optimist/guided_tour/step18/) weiter modifizieren.
 
 Der Weg über das Horizon(Dashboard)
 -----

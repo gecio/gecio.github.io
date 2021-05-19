@@ -1,7 +1,7 @@
 ---
 title: Ein Objekt hochladen und löschen
 lang: de
-permalink: /optimist/storage/s3_documentation/uploadanddeleteobject
+permalink: /optimist/storage/s3_documentation/uploadanddeleteobject/
 nav_order: 3130
 parent: S3 Kompatiblen Objekt Storage
 grand_parent: Storage
@@ -17,7 +17,7 @@ Inhalt:
 - [Cyberduck](#cyberduck)
 - [Boto3](#boto3)
 
-Zum Hochladen Ihrer Daten wie zum Beispiel (Dokumente, Fotos, Videos, usw.) ist es zunächst notwendig einen [Bucket zu erstellen](/optimist/storage/s3_documentation/createanddeletebucket).
+Zum Hochladen Ihrer Daten wie zum Beispiel (Dokumente, Fotos, Videos, usw.) ist es zunächst notwendig einen [Bucket zu erstellen](/optimist/storage/s3_documentation/createanddeletebucket/).
 Eine Datei kann dabei nur in einem Bucket gespeichert werden. 
 
 # S3cmd
@@ -95,7 +95,7 @@ Die Bestätigung erfolgt dann über das erneute klicken auf "Löschen".
 
 # Boto3
 
-Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](/optimist/storage/s3_documentation/createanduses3credentials#boto3)
+Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](/optimist/storage/s3_documentation/createanduses3credentials/#boto3)
 
 ## Objekt hochladen
 

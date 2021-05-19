@@ -1,7 +1,7 @@
 ---
 title: "13: Der strukturierte Weg zu einer Instanz (mit Stacks)"
 lang: de
-permalink: /optimist/guided_tour/step13
+permalink: /optimist/guided_tour/step13/
 nav_order: 1130
 parent: Guided Tour
 ---
@@ -19,7 +19,7 @@ wird in diesem Schritt eine Alternative aufgezeigt.
 Wie diese funktioniert und was es hierbei zu beachten gibt, wird auch
 wie gewohnt Schritt für Schritt erklärt. Voraussetzung für die folgenden
 Schritte ist die Installation des Paketes `python-heatclient`.
-Siehe [Schritt 4: Der Weg vom Horizon auf die Kommandozeile](/optimist/guided_tour/step04).
+Siehe [Schritt 4: Der Weg vom Horizon auf die Kommandozeile](/optimist/guided_tour/step04/).
 
 
 Installation

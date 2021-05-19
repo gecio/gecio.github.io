@@ -1,7 +1,7 @@
 ---
 title: "19: We will add IPv6 to our template"
 lang: en
-permalink: /optimist/guided_tour/step19
+permalink: /optimist/guided_tour/step19/
 nav_order: 1190
 parent: Guided Tour
 ---

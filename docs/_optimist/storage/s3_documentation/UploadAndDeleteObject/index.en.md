@@ -1,7 +1,7 @@
 ---
 title: Upload and delete an object
 lang: en
-permalink: /optimist/storage/s3_documentation/uploadanddeleteobject
+permalink: /optimist/storage/s3_documentation/uploadanddeleteobject/
 nav_order: 3130
 parent: S3 Compatible Object Storage
 grand_parent: Storage
@@ -17,7 +17,7 @@ Contents:
 - [Cyberduck](#cyberduck)
 - [Boto3](#boto3)
 
-To upload your data (documents, photos, videos, etc.) it is first necessary to [create a bucket](/optimist/storage/s3_documentation/createanddeletebucket).
+To upload your data (documents, photos, videos, etc.) it is first necessary to [create a bucket](/optimist/storage/s3_documentation/createanddeletebucket/).
 A file can only be saved in a bucket.
 
 # S3cmd

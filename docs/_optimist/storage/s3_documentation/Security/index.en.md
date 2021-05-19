@@ -1,7 +1,7 @@
 ---
 title: S3 Security
 lang: en
-permalink: /optimist/storage/s3_documentation/security
+permalink: /optimist/storage/s3_documentation/security/
 nav_order: 3150
 parent: S3 Compatible Object Storage
 grand_parent: Storage

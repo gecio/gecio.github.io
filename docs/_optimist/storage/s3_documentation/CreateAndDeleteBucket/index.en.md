@@ -1,7 +1,7 @@
 ---
 title: Create and Delete a Bucket
 lang: en
-permalink: /optimist/storage/s3_documentation/createanddeletebucket
+permalink: /optimist/storage/s3_documentation/createanddeletebucket/
 nav_order: 3120
 parent: S3 Compatible Object Storage
 grand_parent: Storage

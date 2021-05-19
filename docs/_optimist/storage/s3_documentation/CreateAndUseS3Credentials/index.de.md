@@ -1,7 +1,7 @@
 ---
 title: S3 Kennung erstellen und einlesen
 lang: de
-permalink: /optimist/storage/s3_documentation/createanduses3credentials
+permalink: /optimist/storage/s3_documentation/createanduses3credentials/
 nav_order: 3110
 parent: S3 Kompatiblen Objekt Storage
 grand_parent: Storage

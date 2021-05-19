@@ -16,7 +16,7 @@ Previously, we created a VM, a security group and a virtual network separately.
 
 Now we will demonstrate a way to create all these in an integrated way so that
 we can create an entire setup at once. This requires *python-heatclient* to be
-installed, which we've already done in [Step 4: Our way to the console](/optimist/guided_tour/step04).
+installed, which we've already done in [Step 4: Our way to the console](/optimist/guided_tour/step04/).
 
 Installation
 ------------

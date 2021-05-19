@@ -95,7 +95,7 @@ $ openstack floating ip list --port 2cc1b3f9-0457-410b-93dd-a96338de3b12
 
 ## Create an Octavia Loadbalancer
 
-Once we have identified the Neutron Loadbalancers we need to migrate, the next step is to mirror the setup in Octavia. We can create a new Octavia Loadbalancer (Refer to [Step 24](/optimist/guided_tour/step24) of our guide for instructions on setting up an Octavia Loadbalancer).
+Once we have identified the Neutron Loadbalancers we need to migrate, the next step is to mirror the setup in Octavia. We can create a new Octavia Loadbalancer (Refer to [Step 24](/optimist/guided_tour/step24/) of our guide for instructions on setting up an Octavia Loadbalancer).
 
 Once the new load balancer has been created, please ensure that you take the opportunity to check what the VIP port ID of the loadbalancer is with the following command, we will need it in the final step:
 

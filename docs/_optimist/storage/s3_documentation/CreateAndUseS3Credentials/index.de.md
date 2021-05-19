@@ -49,7 +49,7 @@ Hierfür gibt es die unterschiedliche Möglichkeiten, in der Dokumentation stell
 
 ## S3cmd
 
-Um s3cmd zu installieren, brauchen wir einen Paketmanager wie zum Beispiel "pip". Die Installation und Nutzung erklären wir im [Schritt 4: "Der Weg vom Horizon auf die Kommandozeile"](/optimist/guided_tour/step04) unserer Guided Tour.
+Um s3cmd zu installieren, brauchen wir einen Paketmanager wie zum Beispiel "pip". Die Installation und Nutzung erklären wir im [Schritt 4: "Der Weg vom Horizon auf die Kommandozeile"](/optimist/guided_tour/step04/) unserer Guided Tour.
 Der Befehl für die Installation lautet dann:
 
 ```
@@ -105,7 +105,7 @@ Um nun eine Verbindung herzustellen, wird als letzter Schritt auf "Verbinden" ge
 
 ## Boto3
 
-Um Boto3 nutzen zu können, wird ein Paketmanager wie zum Beispiel "pip" benötigt. Die Installation und Nutzung wird im [Schritt 4: "Der Weg vom Horizon auf die Kommandozeile"](/optimist/guided_tour/step04) unserer Guided Tour erklärt.
+Um Boto3 nutzen zu können, wird ein Paketmanager wie zum Beispiel "pip" benötigt. Die Installation und Nutzung wird im [Schritt 4: "Der Weg vom Horizon auf die Kommandozeile"](/optimist/guided_tour/step04/) unserer Guided Tour erklärt.
 Der Befehl für die Installation lautet dann:
 
 ```

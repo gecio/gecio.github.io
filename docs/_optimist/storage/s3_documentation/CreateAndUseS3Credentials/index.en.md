@@ -50,7 +50,7 @@ For this, there are different options, in this documentation we present 3 possib
 
 ## S3cmd
 
-To install s3cmd, we need a package manager such as "pip". The installation and usage is explained in [Step 4: "Our way to the console"](/optimist/guided_tour/step04) of our Guided Tour.
+To install s3cmd, we need a package manager such as "pip". The installation and usage is explained in [Step 4: "Our way to the console"](/optimist/guided_tour/step04/) of our Guided Tour.
 Once pip is installed, the command for the installation of S3cmd is then: 
 
 `$ pip install s3cmd`
@@ -104,7 +104,7 @@ Finally, to establish a connection, click on "Connect".
 
 ## Boto3
 
-To install boto3, we need a package manager such as "pip". The installation and usage of pip is explained in [Step 4: "Our way to the console"](/optimist/guided_tour/step04) of our Guided Tour.
+To install boto3, we need a package manager such as "pip". The installation and usage of pip is explained in [Step 4: "Our way to the console"](/optimist/guided_tour/step04/) of our Guided Tour.
 Once pip is installed, the command for the installation of Boto3 is then: 
 
 `$ pip install boto3`

@@ -129,7 +129,7 @@ resources:
 
 Wir haben die Dateien erstellt und den entsprechenden Inhalt eingefügt.
 
-Wie in [Schritt 11: Zugriff aus dem Internet vorbereiten: Wir ergänzen IPv6](/optimist/guided_tour/step11) beschrieben, ist es noch notwendig das Interface mit dem Befehl `runcmd` neu zustarten.
+Wie in [Schritt 11: Zugriff aus dem Internet vorbereiten: Wir ergänzen IPv6](/optimist/guided_tour/step11/) beschrieben, ist es noch notwendig das Interface mit dem Befehl `runcmd` neu zustarten.
 
 ```yaml
 heat_template_version: 2014-10-16

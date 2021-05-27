@@ -3,7 +3,7 @@ title: Swift - Serving a Static Website
 lang: de
 permalink: /optimist/storage/s3_documentation/swiftservestaticwebsite/
 nav_order: 3160
-parent: S3 Compatible Object Storage
+parent: S3 Kompatiblen Objekt Storage
 grand_parent: Storage
 ---
 

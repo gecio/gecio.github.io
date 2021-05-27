@@ -33,7 +33,7 @@ $ swift post -m 'web-index:index.html' example-webpage
 ```
 
 ## Enable file listing
-Next, enable file listing. If the index file has not been set, a list of objects in the container will instead be displayed:
+Optionally, we can also enable file listing. If you need to provide multiple downloads, enabling the directory listing makes sense:
 ```bash
 $ swift post -m 'web-listings: true' example-webpage
 ```

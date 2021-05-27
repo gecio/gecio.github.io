@@ -33,7 +33,7 @@ $ swift post -m 'web-index:index.html' example-webpage
 ```
 
 ## Dateiliste aktivieren
-Als nächstes aktivieren Sie das Dateilisting. Wenn die Indexdatei nicht gesetzt wurde, wird stattdessen eine Liste der Objekte im Container angezeigt:
+Optional können wir auch die Dateiliste aktivieren. Wenn Sie mehrere Downloads bereitstellen müssen, ist es sinnvoll, die Verzeichnisliste zu aktivieren:
 ```bash
 $ swift post -m 'web-listings: true' example-webpage
 ```

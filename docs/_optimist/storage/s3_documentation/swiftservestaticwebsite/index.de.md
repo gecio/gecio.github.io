@@ -96,7 +96,7 @@ Wir können auch benutzerdefinierte Fehlerseiten hinzufügen. Beachten Sie, dass
 
 ## Hochladen der Dateien index.html und page.html
 Nachdem die Inhalte der Dateien erstellt wurden, laden Sie die Dateien mit den folgenden Befehlen hoch:
-````bash
+```bash
 $ swift upload beispiel-webseite index.html
 $ swift upload beispiel-webseite meinewebseite/seite.html
 $ swift upload beispiel-webseite-meine-website/beispiel.png

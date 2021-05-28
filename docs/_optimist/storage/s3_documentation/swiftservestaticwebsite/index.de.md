@@ -21,9 +21,9 @@ $ swift post example-webpage
 ```
 
 ## Den Container öffentlich lesbar machen
-Als nächstes müssen wir sicherstellen, dass der Container öffentlich lesbar ist:
+Als nächstes müssen wir sicherstellen, dass der Container öffentlich lesbar ist. Weitere Informationen zum Sichern von Containern und zum Festlegen von Bucket-Richtlinien finden Sie [hier](/optimist/storage/s3_documentation/security/):
 ```bash
-$ swift post -r '.r:*,.rlistings' example-webpage
+$ swift post -r '.r:*' example-webpage
 ```
 
 ## Indexdatei der Seite setzen

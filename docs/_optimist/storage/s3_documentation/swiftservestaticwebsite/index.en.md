@@ -21,9 +21,9 @@ $ swift post example-webpage
 ```
 
 ## Make the container publically readable
-Next, we must ensure that the container is publically readable:
+Next, we must ensure that the container is publically readable. You can learn more about securing containers and setting bucket policies [here](/optimist/storage/s3_documentation/security/):
 ```bash
-$ swift post -r '.r:*,.rlistings' example-webpage
+$ swift post -r '.r:*' example-webpage
 ```
 
 ## Set site index file

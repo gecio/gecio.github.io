@@ -47,10 +47,20 @@ $ swift post -m 'web-listings-css:style.css' example-webpage
 ## Set error pages
 Finally, we should include a custom error page:
 ```bash
-$ swift post -m 'web-error:error.html' example-webpage
+$ swift post -m 'web-error:404error.html' example-webpage
 ```
 
 # Example Webpage
+
+Let's recap the steps we have taken so far to enable static webpages:
+```bash
+$ swift post example-webpage
+$ swift post -r '.r:*' example-webpage
+$ swift post -m 'web-index:index.html' example-webpage
+$ swift post -m 'web-listings: true' example-webpage
+$ swift post -m 'web-listings-css:style.css' example-webpage
+$ swift post -m 'web-error:404error.html' example-webpage
+```
 
 Once the steps above have been completed, we can now begin to customise our static webpage. The following demonstrates a quick setup using our container `example-webpage`
 

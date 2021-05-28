@@ -47,10 +47,20 @@ $ swift post -m 'web-listings-css:style.css' example-webpage
 ## Fehlerseiten einrichten
 Schließlich sollten wir eine benutzerdefinierte Fehlerseite einbinden:
 ```bash
-$ swift post -m 'web-error:error.html' example-webpage
+$ swift post -m 'web-error:404error.html' example-webpage
 ```
 
 # Beispiel-Webseite
+
+Lassen Sie uns die Schritte rekapitulieren, die wir bis jetzt unternommen haben, um statische Webseiten zu aktivieren:
+```bash
+$ swift post example-webpage
+$ swift post -r '.r:*' example-webpage
+$ swift post -m 'web-index:index.html' example-webpage
+$ swift post -m 'web-listings: true' example-webpage
+$ swift post -m 'web-listings-css:style.css' example-webpage
+$ swift post -m 'web-error:404error.html' example-webpage
+```
 
 Wenn die obigen Schritte abgeschlossen sind, können wir damit beginnen, unsere statische Webseite anzupassen. Das Folgende demonstriert eine schnelle Einrichtung unter Verwendung unseres Containers `example-webpage`
 

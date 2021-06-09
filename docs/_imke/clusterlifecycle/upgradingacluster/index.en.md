@@ -66,7 +66,7 @@ Next we click on the pencil icon to open the update view.
 ![Step 4](update_4.png)
 
 Now, under `kubelet Version` we select the version, for example
-`1.18.18`, which matches the cluster's master version. Confirm the
+`1.20.7`, which matches the cluster's master version. Confirm the
 update by clicking `Edit Machine Deployment`:
 
 ![Step 5](update_5.png)

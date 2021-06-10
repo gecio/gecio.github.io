@@ -51,7 +51,6 @@ Sobald einem Benutzer RBAC-Rechte zugewiesen wurden, können Sie diesem seine pe
 
 Um dies zu tun, müssen Sie den `Share kubeconfig` Link im iMKE Dashboard öffnen:
 
-
 ![Share kubeconfig button](share_kubeconfig.png)
 
 Im nächsten Schritt müssen Sie den angezeigten Link kopieren und an den Nutzer schicken:

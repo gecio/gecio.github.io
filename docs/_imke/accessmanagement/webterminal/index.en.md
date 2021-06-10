@@ -17,7 +17,7 @@ for each session.
 
 ## Connection
 
-In order to connect to the Web Terminal, we must first select a cluster.
+In order to connect to the Web Terminal, we select a cluster first.
 ![Step 1](terminal_1.png)
 
 There we click on `Open Web Terminal`.

@@ -13,7 +13,7 @@ There are two ways how we can grant other users access to an iMKE cluster:
 
 ## Project-based access
 
-> This is the recommend of granting other users access to a cluster.
+> This is the recommended method of granting other users access to a cluster.
 
 Giving users access on a project level (like described [here](/imke/managingprojects/creatingaproject)) provides them access to *all* clusters in this project. Users with this level of access can log in to the iMKE dashboard, see and (dependent on the level of access) also edit or create clusters. They can also [download their kubeconfig](connectingtoacluster/) directly:
 
@@ -27,7 +27,7 @@ Using role-based access control allows a project admin to provide more fine-grai
 
 ![RBAC option](rbac.png)
 
-A user with this level of access can download a specific kubeconfig, which can be directly downloaded using a direct link (see below). Such user does not need access to the iMKE Dashboard at all.
+A user with this level of access can download a specific kubeconfig, which can be directly downloaded using a direct link (see below). Such a user does not need access to the iMKE Dashboard at all.
 
 More on Kubernetes RBAC can be found [here](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
 

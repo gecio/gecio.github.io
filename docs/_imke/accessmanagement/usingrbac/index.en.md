@@ -61,4 +61,4 @@ After the user has logged in, the download will start of the kubeconfig will sta
 
 ![Login page](login.png)
 
-Once a user has downloaded his/her kubeconfig, any further changes made on the RBAC will have *immediate* effect. Especially there is no need to revoke cluster tokens to remove access for a user. Just remove his/her RoleBindings and access is no longer possible.
+Once a user has downloaded his/her kubeconfig, any further changes made on the RBAC will have *immediate* effect. Especially there is no need to revoke cluster tokens to remove access for a user. Just remove the RoleBindings and access is no longer possible.

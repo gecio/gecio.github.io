@@ -23,7 +23,7 @@ We click on the downwards facing arrow in the top right corner:
 ![Step 2](connect_2.png)
 
 This way we download a file which is called `kubeconfig` in
-kubernetes jargon. This file contains all end points, certificates
+Kubernetes jargon. This file contains all end points, certificates
 and other information about the cluster. The `kubectl`command uses
 this file to connect to the cluster.
 
@@ -47,7 +47,7 @@ like Chrome or Firefox usually store it in the Downloads folder.
 The name is constructed from two parts:
 
 * `kubeconfig-admin-`
-* the cluster id.
+* plus the cluster id.
 
  To register the kubeconfig, we use the following command:
 
@@ -63,9 +63,9 @@ all the nodes that comprise my cluster":
 kubectl get nodes
 
 NAME                           STATUS   ROLES    AGE   VERSION
-musing-kalam-XXXXXXXXX-ks4xz   Ready    <none>   10m   v1.15.0
-musing-kalam-XXXXXXXXX-txc4w   Ready    <none>   10m   v1.15.0
-musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.15.0
+musing-kalam-XXXXXXXXX-ks4xz   Ready    <none>   10m   v1.20.7
+musing-kalam-XXXXXXXXX-txc4w   Ready    <none>   10m   v1.20.7
+musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.20.7
 ```
 
 ## Kubernetes Dashboard

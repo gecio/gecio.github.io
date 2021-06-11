@@ -38,7 +38,7 @@ EOF
 ```
 
 Dadurch wird im Cluster automatisch ein neues Access Token angelegt. Dieses
-Token trägt einen Namen wir 'my-serviceaccount-token-####' wobei die '#'
+Token trägt einen Namen wir `my-serviceaccount-token-####` wobei die '#'
 zufällige alphanumerische Zeichen sind.
 
 Um die Token in einem Namespace zu sehen, verwenden wir folgendes Kommando:
@@ -76,7 +76,7 @@ Zugänge als auch für Kubernetes Service Accounts. Wenn ein Account über mehre
 verfügt, bekommt er die kombinierten Rechte aller Rollen.
 
 Um eine Rolle zu definieren, mit der ein Account die Informationen über Pods im
-Namespace 'my-namespace' auslesen kann, verwenden wir den folgenden Befehl:
+Namespace `my-namespace` auslesen kann, verwenden wir den folgenden Befehl:
 
 ```bash
 kubectl apply -f - <<EOF

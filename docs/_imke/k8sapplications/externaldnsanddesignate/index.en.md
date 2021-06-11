@@ -23,7 +23,7 @@ To successfully finish this guide, you need the following items.
 
 ## Configure your domain to use Designate
 
-Delegate your domains from your DNS provider to our following DNS name servers so that Designate can control the DNS resources of your domain
+Delegate your domains from your DNS provider to our following DNS name servers so that Designate can control the DNS resources of your domain.
 
 ```bash
 dns1.ddns.innovo.cloud
@@ -146,7 +146,7 @@ resources:
   requests:
     memory: 50Mi
     cpu: 10m
-## Configure you OS Access
+## Configure your OS Access
 ##
 extraEnv:
   - name: OS_AUTH_URL

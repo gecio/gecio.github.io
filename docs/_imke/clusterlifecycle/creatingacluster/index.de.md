@@ -46,6 +46,7 @@ Es ist allerdings auch möglich, ein existierendes Netzwerk verwenden, um den Cl
 Dazu müssen wir das Netzwerk und das Subnetz auswählen. Diese müssen allerdings mit einem Router verbunden sein.
 In unserer [OpenStack Dokumentation](/optimist/guided_tour/step10/) ist beschrieben, wie man einen Router erstellen 
 und mit einem Netzwerk verbinden kann.
+
 ![Add Cluster Network](create-cluster-network-exist.png)
 
 Im nächsten Schritt definieren wir, wie viele und welche virtuellen Maschinen als Worker-Nodes im Cluster verfügbar

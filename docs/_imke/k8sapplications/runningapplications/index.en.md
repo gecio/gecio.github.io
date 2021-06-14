@@ -43,7 +43,7 @@ running in the cluster. The containers are matched to the
 collection via labels which we apply to deployments.
 
 A service can have several types. In our example, we choose
-the type `LoadBalancer` to make out service accessible from
+the type `LoadBalancer` to make our service accessible from
 outside the cluster via a public IP address.
 
 ## Manifests
@@ -89,7 +89,7 @@ kubectl create deployment --dry-run -o yaml --image nginx nginx > deployment.yam
 
 Next we need the service making the application publicly accessible.
 The type we choose is `LoadBalancer`. This automatically creates a fully
-configured LoadBalancer in OPenStack, and allows us to access the cluster.
+configured LoadBalancer in OpenStack, and allows us to access the cluster.
 
 ```bash
 kubectl create service loadbalancer --dry-run --tcp=80 -o yaml nginx

@@ -36,7 +36,7 @@ EOF
 ```
 
 The cluster will then automatically create a new access token with a name
-like 'my-serviceaccount-token-#####' where the #s are alphanumeric characters.
+like `my-serviceaccount-token-#####` where the `#`s are alphanumeric characters.
 
 To get a list of the tokens in a specific namespace, run:
 
@@ -44,7 +44,7 @@ To get a list of the tokens in a specific namespace, run:
 kubectl get secrets --namespace=my-namespace
 ```
 
-Then we can print the token we want using the following command and
+Then we can print the token we want to use with the following command and
 replacing $SECRETNAME with the one that has been created for our service
 account:
 
@@ -56,7 +56,7 @@ Provide the token that has been printed with the name of the service account
 to a developer or third party to allow them to interact with the cluster.
 
 At this point the service account can authenticate with the kubernetes
-cluster, but is unable to use it do anything. We now need to create a role,
+cluster, but is unable to use it to do anything. We now need to create a role,
 and a role binding to provide permissions to the service account.
 
 ## Creating authorization permissions
@@ -71,7 +71,7 @@ service accounts) and when a user has multiple roles they can do anything
 that is granted by any of the roles.
 
 To create a role to allow a user to read information about pods in the
-namespace 'my-namespace' we use the following command:
+namespace `my-namespace` we use the following command:
 
 ```bash
 kubectl apply -f - <<EOF

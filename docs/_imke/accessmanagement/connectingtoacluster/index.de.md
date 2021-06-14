@@ -47,7 +47,7 @@ Chrome und Firefox laden diese beide normalerweise in den Downloads
 Ordner. Der Dateiname setzt sich jetzt aus zwei Komponenten zusammen:
 
 * `kubeconfig-admin-`
-* unser Cluster ID
+* und unsere Cluster ID
 
 Um diese dann zu registrieren, nutzen wir folgendes Kommando:
 
@@ -63,9 +63,9 @@ hier: "zeige mir alle Nodes meines Clusters":
 kubectl get nodes
 
 NAME                           STATUS   ROLES    AGE   VERSION
-musing-kalam-XXXXXXXXX-ks4xz   Ready    <none>   10m   v1.15.0
-musing-kalam-XXXXXXXXX-txc4w   Ready    <none>   10m   v1.15.0
-musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.15.0
+musing-kalam-XXXXXXXXX-ks4xz   Ready    <none>   10m   v1.20.7
+musing-kalam-XXXXXXXXX-txc4w   Ready    <none>   10m   v1.20.7
+musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.20.7
 ```
 
 ## Kubernetes Dashboard

@@ -99,7 +99,7 @@ Dein Key wird nur allen Worker-Nodes in allen Machinedeployments hinzugefügt.
 
 ## Einen SSH-Key während der CLuster-Erstellung hinzufügen
 
-Es ist auch möglich, einen SSH-Key bereits zum Zeitpunkt der Cluster Erstellung zu konfigurieren. Dies ist - für spezielle Use-Cases - auch ohne Aktivierung des User SSH Key Agents möglich. Das genaue Vorgehen dazu ist im Abschnitt "[Einen Cluster anlegen](/imke/clusterlifecycle/creatingacluster/)" beschrieben.
+Es ist auch möglich, einen SSH-Key bereits zum Zeitpunkt der Cluster Erstellung zu konfigurieren. Das genaue Vorgehen dazu ist im Abschnitt "[Einen Cluster anlegen](/imke/clusterlifecycle/creatingacluster/)" beschrieben.
 
 ## Am Worker anmelden
 

@@ -144,7 +144,7 @@ resources:
   requests:
     memory: 50Mi
     cpu: 10m
-## Configure you OS Access
+## Configure your OS Access
 ##
 extraEnv:
   - name: OS_AUTH_URL

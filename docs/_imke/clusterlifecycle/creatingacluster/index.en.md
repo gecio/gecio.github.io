@@ -45,6 +45,7 @@ It is also possible to use an **existing** network to create the cluster. For th
 the network and the subnet from the dropdown menu. Those must be attached to a router.
 Creating a router can be done from the Optimist Dashboard or from the OpenStack command line.
 Please refer to our [OpenStack documentation](/optimist/guided_tour/step10/) for details how to create the router and attach it.
+
 ![Add Cluster Network](create-cluster-network-exist.png)
 
 In the next step, we define how many and what kind of virtual machines will be initially available as worker nodes

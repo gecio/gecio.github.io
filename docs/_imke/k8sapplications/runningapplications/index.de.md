@@ -188,7 +188,7 @@ NAME                 TYPE       CLUSTER-IP   EXTERNAL-IP   PORT(S)         AGE
 service/kubernetes   NodePort   10.10.10.1   <none>        443:31630/TCP   2d23h
 ```
 
-Wie man sieht, ist alles wieder weg und wenn man die IP-Adresse im Browser noch einmal aufruft, wird ein Fehler angezeigt: Die Applikation läuft nicht mehr.
+Wie man sieht, ist alles wieder weg und wenn man die IP-Adresse im Browser noch einmal aufruft, wird ein Fehler angezeigt: die Applikation läuft nicht mehr.
 
 ## Zusammenfassung
 

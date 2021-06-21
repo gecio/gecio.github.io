@@ -2,7 +2,6 @@
 title: Changelog
 lang: de
 permalink: /optimist/changelog/
-parent: optimist
 nav_order: 10000
 ---
 

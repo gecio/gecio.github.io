@@ -12,6 +12,7 @@ Current supported Kubernetes versions in iMKE.
 
 | Version | iMKE Deprecation| iMKE End-of-Life |
 |---------|-----------------|------------------|
+| v1.21   |                 |                  |
 | v1.20   |                 |                  |
 | v1.19   |                 | November 2021    |
 | v1.18   | 14th Jun 2021   | 15th Sep 2021    |

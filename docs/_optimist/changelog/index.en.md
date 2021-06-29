@@ -33,13 +33,13 @@ All notable changes to the Optimist Platform will be documented on this page.
 
 ## 2021-06-23
 ### Completed
--  Optimist Nova Stein Upgrade
+-  Optimist Nova Upgrade (Stein)
 
 ## 2021-06-02
 ### Completed
-- Optimist Glance upgrade Stein
+- Optimist Glance upgrade (Stein)
 
 ## 2021-06-01
 ### Completed
-- Optimist Keystone upgrade Stein
+- Optimist Keystone upgrade (Stein)
 

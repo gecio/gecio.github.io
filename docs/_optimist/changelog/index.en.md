@@ -10,32 +10,30 @@ nav_order: 10000
 All notable changes to the Optimist Platform will be documented on this page.
 
 ## 2021 - Q4
-### Deprecation of Neutron LBaaS
-- Neutron LBaas Deprecation is scheduled for 2021 - Q4
+### Upcoming - Deprecation of Neutron LBaaS
+- With the Train release of OpenStack, which we expect to complete by Q4, 2021 support for Neutron LBaaS will be deprecated. 
+- We encourage customers using our Neutron LBaaS to migrate to Octavia Loadbalancers at their earliest available opportunity.
+- Please refer to our ["guide"](/optimist/migration_guide_loadbalancer/) for more information on migrating your existing Neutron LBaaS to Octavia Loadbalancers.
+
+---
+
+## 2021-07-14
+### Upcoming
+- Optimist Neutron Upgrade (Stein)
+
+## 2021-07-20
+### Upcoming
+- Optimist Cinder Upgrade (Stein)
+
+## 2021-07-22
+### Upcoming
+- Optimist Horizon Upgrade (Stein)
 
 ---
 
 ## 2021-06-23
-### Upcoming
--  Optimist Nova Stein Upgrade
-
-## 2021-06-29
-### Upcoming (Rescheduled)
-- High Availablity Router Maintenance Part 2
-
-## 2021-07-01
-### Upcoming
-- Network redundancy maintenance
-
-## 2021 - Q4
-### Upcoming
-- Neutron LBaas Deprecation
-
----
-
-## 2021-06-08
 ### Completed
-- High Availablity Router Maintenance Part 1
+-  Optimist Nova Stein Upgrade
 
 ## 2021-06-02
 ### Completed

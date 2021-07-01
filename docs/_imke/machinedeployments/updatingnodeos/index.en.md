@@ -6,11 +6,6 @@ nav_order: 5500
 parent: Machine Deployments
 ---
 
-The iMKE platform gives you the control over choosing the OS of worker nodes in your Kubernetes clusters via the `Machine Deployment`.
-
-* For Flatcar, the iMKE platform even takes care (if not explicitly deactivated) of regular operating system updates, such as installing security patches.
-* For the Ubuntu-based worker nodes, the updates and patches are also installed automatically, but the cluster owners have to take care of the reboots themselves.
-
 ## Flatcar
 
 ### Automatic updates of Flatcar worker nodes
@@ -102,24 +97,10 @@ $ sudo systemctl reboot
 
 ## Ubuntu
 
-### Update Ubuntu worker nodes automatically
+Ubuntu support got removed in July 2021. Read here how to update to supported Flatcar OS for existing machine deployments
 
-The tool `unattended-upgrade` is by default installed and enabled on Ubuntu based worker nodes, so that
-it automatically updates available patches and updates. Ubuntu doesn't have a cluster-aware tool like FLUO
-though, therefore `unattended-upgrade` by default doesn't perform reboots automatically.
+### Update to Flatcar
 
-In order to reboot worker nodes automatically after installing patches, one has to edit the file
-`/usr/share/unattended-upgrades/50unattended-upgrades` and enable the setting `Unattended-Upgrade::Automatic-Reboot`
-in line 69 and set it to `true`:
-
-```bash
-// Automatically reboot *WITHOUT CONFIRMATION*
-//  if the file /var/run/reboot-required is found after the upgrade
-Unattended-Upgrade::Automatic-Reboot "true";
-```
-
-Please note that the reboots of the individual nodes are not carried out in a coordinated manner,
-which may lead to downtime of the application(s) in your cluster.
 
 ## Summary
 
@@ -135,4 +116,4 @@ In this guide you've learned the following:
 * [Auto-Updating Flatcar Container Linux](https://kinvolk.io/docs/lokomotive/git-main/how-to-guides/auto-update-flatcar/)
 * [FLUO on Github](https://github.com/kinvolk/flatcar-linux-update-operator)
 * [The Flatcar partitioning scheme](https://kinvolk.io/docs/flatcar-container-linux/latest/reference/developer-guides/sdk-disk-partitions/)
-* [man:unattended-upgrade](http://manpages.ubuntu.com/manpages/bionic/man8/unattended-upgrade.8.html)
+

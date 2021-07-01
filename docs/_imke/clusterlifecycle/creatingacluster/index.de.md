@@ -59,9 +59,6 @@ Danach spezifizieren wir die `Replicas` (Anzahl der Worker-Nodes im Kubernetes-C
 im Wesentlichen die Anzahl der verfügbaren CPU-Kerne und des RAMs bestimmt:
 ![Add Cluster Step 4.2](add_step4_2.png)
 
-Weiterhin wählen wir `Flatcar` als Betriebssystem für die Worker-Nodes:
-![Add Cluster Step 4.3](add_step4_3.png)
-
 Über einen Klick auf `Next` gelangen wir zum letzten Schritt, wo wir noch einmal alle Einstellungen verifizieren und mittels `Create Cluster`
 die Cluster-Erstellung starten können:
 ![Add Cluster Step 5](add_step5.png)

@@ -58,9 +58,6 @@ Next, we should specify the `Replicas` (number of worker nodes in your Kubernete
 defines the amount of CPU and RAM for each worker node:
 ![Add Cluster Step 4.2](add_step4_2.png)
 
-We choose `Flatcar` as the operating system for the worker nodes:
-![Add Cluster Step 4.3](add_step4_3.png)
-
 To finish, we click on `Next`. After we verified all settings, we click on `Create Cluster`:
 ![Add Cluster Step 5](add_step5.png)
 

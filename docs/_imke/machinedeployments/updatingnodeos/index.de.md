@@ -98,8 +98,21 @@ $ sudo systemctl reboot
 
 Ubuntu wurde im July 2021 aus dem support genommen, bitte aktualisieren Sie ihre bestehenden Machine Deployments.
 
-### Auf Flatcar wechseln
+### Auf Flatcar aktualisieren 
 
+Um auf Flatcar zu aktualisieren, klicken sie bitte den Machine Deployment Edit Button.
+
+![Edit Machine Deployment](update_to_flatcar_edit.png)
+
+Dann auf das Flatcar Logo klicken.
+
+![Change to Flatcar](update_to_flatcar.png)
+
+Es wurde das Image gewechselt und die Autoupdate option angezeigt.
+
+![Save Flatcar](update_to_flatcar_save.png)
+
+Die Nodes werden nun neu gebaut und der Cluster ist wieder aktuell.
 
 ## Zusammenfassung
 

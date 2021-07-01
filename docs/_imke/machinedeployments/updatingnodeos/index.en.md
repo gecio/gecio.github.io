@@ -101,6 +101,19 @@ Ubuntu support got removed in July 2021. Read here how to update to supported Fl
 
 ### Update to Flatcar
 
+To update from Ubuntu to Flatcar click on the edit button of the machine deployment
+
+![Edit Machine Deployment](update_to_flatcar_edit.png)
+
+Then click on the flatcar logo
+
+![Change to Flatcar](update_to_flatcar.png)
+
+It changed the Image and enabled the auto-update feature.
+
+![Save Flatcar](update_to_flatcar_save.png)
+
+The node will now be recreated, and your cluster is up-to-date.
 
 ## Summary
 

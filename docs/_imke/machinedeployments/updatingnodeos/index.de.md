@@ -96,7 +96,7 @@ $ sudo systemctl reboot
 
 ## Ubuntu
 
-Ubuntu wurde im July 2021 aus dem support genommen, bitte aktualisieren Sie ihre bestehenden Machine Deployments.
+Ubuntu wurde im Juli 2021 aus dem Support genommen, bitte aktualisieren Sie Ihre bestehenden Machine Deployments.
 
 ### Auf Flatcar aktualisieren 
 
@@ -128,4 +128,3 @@ In dieser Anleitung haben wir Folgendes gelernt:
 * [Auto-Updating Flatcar Container Linux](https://kinvolk.io/docs/lokomotive/git-main/how-to-guides/auto-update-flatcar/)
 * [FLUO on Github](https://github.com/kinvolk/flatcar-linux-update-operator)
 * [The Flatcar partitioning scheme](https://kinvolk.io/docs/flatcar-container-linux/latest/reference/developer-guides/sdk-disk-partitions/)
-

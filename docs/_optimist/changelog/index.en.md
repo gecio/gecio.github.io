@@ -18,9 +18,6 @@ All notable changes to the Optimist Platform will be documented on this page.
 
 ## Upcoming
 
-### 2021-07-20
-- Optimist Neutron Upgrade (Stein)
-
 ### 2021-07-21
 - Optimist Cinder Upgrade (Stein)
 
@@ -30,6 +27,9 @@ All notable changes to the Optimist Platform will be documented on this page.
 ---
 
 ## Completed
+
+### 2021-07-20
+- Optimist Neutron Upgrade (Stein)
 
 ### 2021-06-23
 -  Optimist Nova Upgrade (Stein)

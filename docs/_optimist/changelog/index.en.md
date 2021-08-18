@@ -25,6 +25,12 @@ All notable changes to the Optimist Platform will be documented on this page.
 
 ## Completed
 
+### 2021-08-18
+- Optimist Neutron Feature:
+
+  We activated the internal DNS feature. This allows to assign dns names to neutron ports.   
+  Nova will automatically add the instance name as dns name to the neutron port.
+
 ### 2021-07-20
 - Optimist Neutron Upgrade (Stein)
 

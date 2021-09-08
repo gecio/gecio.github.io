@@ -15,6 +15,9 @@ To achieve this, we will need:
 * The project name
 * The user email
 
+
+**The user need to log in once, before it is usable.
+
 First, we should select the correct project.
 ![Get the Project](photo1.png)
 

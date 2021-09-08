@@ -12,8 +12,10 @@ Wir können mit ein paar Klicks einen Benutzer zu einem vorhandenen iMKE-Projekt
 
 Um dies zu erreichen, brauchen wir:
 
-* Projektname
+* Projektnam
 * Benutzer-E-Mail
+
+**Der Benutzer muss sich vorher einmalig in iMKE anmelden, bevor er verwendet werden kann.**
 
 Zuerst sollten wir das korrekte Projekt auswählen:
 ![Projekt selektieren](photo1.png)

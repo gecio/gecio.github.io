@@ -21,9 +21,9 @@ Changing the Credentials is as easy as following these steps:
 
     ![Trhee-Dots](three-dots.png)
 
-3. Select `Edit Cluster`
+3. Select `Edit Provider`
 
-    ![Edit-Cluster](edit-cluster.png)
+    ![Edit-Provider](edit-cluster.png)
 
 4. Change Credentials
 

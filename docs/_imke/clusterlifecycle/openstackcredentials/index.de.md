@@ -21,9 +21,9 @@ Das Ändert die Credentials mit folgenden einfachen Schritten:
 
     ![Three-Dots](three-dots.png)
 
-1. Wähle `Edit Cluster`
+1. Wähle `Edit Provider`
 
-    ![Edit-Cluster](edit-cluster.png)
+    ![Edit-Provider](edit-cluster.png)
 
 1. Ändere die Credentials
 

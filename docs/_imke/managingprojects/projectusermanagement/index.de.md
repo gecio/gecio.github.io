@@ -15,6 +15,8 @@ Um dies zu erreichen, brauchen wir:
 * Projektname
 * Benutzer-E-Mail
 
+**Der Benutzer muss sich vorher einmalig in iMKE anmelden, bevor er verwendet werden kann.**
+
 Zuerst sollten wir das korrekte Projekt auswählen:
 ![Projekt selektieren](photo1.png)
 

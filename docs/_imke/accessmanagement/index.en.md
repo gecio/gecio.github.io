@@ -34,4 +34,3 @@ More on Kubernetes RBAC can be found [here](https://kubernetes.io/docs/reference
 **Further reading**
 * [Project access: Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster/)
 * [Role-Based Access Control (RBAC)](/imke/accessmanagement/usingrbac/)
-* [The Web Terminal](/imke/accessmanagement/webterminal/)

@@ -33,6 +33,5 @@ Wenn der zweite Node nach dem Update wieder läuft, werden die Pods _nicht_ auto
 ## Ein paar Tipps
 
 * Wir empfehlen mindestens drei Nodes zu verwenden, da so auch bei Upgrades Last besser verteilt werden kann.
-* Im Webterminal gibt es das Tool `popeye`, welches den Cluster analysiert und Verbesserungsvorschläge auf Grundlage von  Best Practices macht: <https://gecio.github.io/imke/accessmanagement/webterminal/>
+* Das Tool `popeye` analysiert Cluster und macht Verbesserungsvorschläge auf Grundlage von Best Practices
 * Upgraden Sie die Nodes auf die neueste Version und beachten Sie den letzten Schritt in folgendem Guide: <https://gecio.github.io/imke/clusterlifecycle/upgradingacluster/>
-

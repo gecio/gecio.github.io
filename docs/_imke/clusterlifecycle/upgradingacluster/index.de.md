@@ -87,8 +87,7 @@ Als Lösung gibt es ein recht einfaches Bash-Script, welches in einem
 Namespace alle Pods noch einmal neu erstellen lässt:
 <https://github.com/truongnh1992/playing-with-istio/blob/master/upgrade-sidecar.sh>
 
-Dieses nutzen wir, sobald das Cluster komplett geupdated ist im
-WebTerminal.
+Dieses nutzen wir, nachdem das Cluster komplett geupdated wurde, in einem Terminal mit konfiguriertem `kubectl`. In unserem Kapitel [Mit einem Cluster verbinden](/imke/accessmanagement/connectingtoacluster/) zeigen wir, wie Sie Ihr `kubectl` mit Ihrem Cluster verbinden können.
 
 ```bash
 curl -o upgrade-node.sh https://raw.githubusercontent.com/truongnh1992/playing-with-istio/master/upgrade-sidecar.sh
@@ -105,7 +104,6 @@ default           Active   36m
 kube-node-lease   Active   36m
 kube-public       Active   36m
 kube-system       Active   36m
-webterminal       Active   4m42s
 
 # Wir interessieren uns für default Namespace:
 ./upgrade-node.sh default

@@ -86,7 +86,7 @@ As a solution to this is a simple bash script, which per-namespace triggers
 the regeneration of all pods.
 <https://github.com/truongnh1992/playing-with-istio/blob/master/upgrade-sidecar.sh>
 
-We can use this as soon as the cluster has completed updating in the web interface.
+We use this after the cluster has been completely updated in a terminal with `kubectl` configured. To get `kubectl` working with your cluster, look at our chapter [Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster/).
 
 ```bash
 curl -o upgrade-node.sh https://raw.githubusercontent.com/truongnh1992/playing-with-istio/master/upgrade-sidecar.sh
@@ -103,7 +103,6 @@ default           Active   36m
 kube-node-lease   Active   36m
 kube-public       Active   36m
 kube-system       Active   36m
-webterminal       Active   4m42s
 
 # So for default namespace we would run:
 ./upgrade-node.sh default

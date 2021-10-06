@@ -13,23 +13,23 @@ Kubernetes Cluster Autoscaler is a tool that automatically adjusts the size of t
 ## Cluster Autoscaler Usage
 
 The Kubernetes Autoscaler in the iMKE Cluster automatically scaled up/down when one of the following conditions is satisfied:
-* Some pods failed to run in the cluster due to insufficient resources.
-* There are nodes in the cluster that have been underutilised for an extended period (10 minutes by default) and can place their Pods on other existing nodes.
 
+* Some pods failed to run in the cluster due to insufficient resources
+* There are nodes in the cluster that have been underutilized for an extended period (10 minutes by default) and can place their Pods on other existing nodes
 
 ## Requirements
 
 Using a Kubernetes cluster autoscaler in the iMKE cluster must meet specific minimum requirement:
-* Kubernetes cluster running Kubernetes v1.18 or newer is required.
 
+* Kubernetes cluster running Kubernetes v1.18 or newer is required
 
-## Installing Kubernetes Auto-scaler on iMKE Cluster
+## Installing Kubernetes Autoscaler on iMKE Cluster
 
-You can install Kubernetes autoscaler on a running iMKE Cluster using the iMKE addon mechanism, which is already built into the iMKE Cluster dashboard.
+You can install Kubernetes Autoscaler on a running iMKE Cluster using the iMKE addon mechanism, which is already built into the iMKE Cluster dashboard.
 
 ### Step 1
 
-Create a iMKE Cluster by selecting your project on the dashboard and click on “create cluster”. More details can be found on the official documentation page.
+Create a iMKE Cluster by selecting your project on the dashboard and click on “Create Cluster”. More details can be found on [our documentation page](/imke/clusterlifecycle/creatingacluster/).
 
 ### Step 2
 
@@ -43,17 +43,17 @@ flatcar-linux-update-operator   1/1     1            1           1d
 openvpn-client                  1/1     1            1           1d
 ```
 
-As shown above, the Autoscaler is not part of the running Kubernetes components within the Namspace.
+As shown above, the Autoscaler is not part of the running Kubernetes components within the Namespace.
 
 ### Step 3
 
-Add the Autoscaler to the Cluster under the addon section on the dashboard by clicking on the Addons and then Install Addon.
+Add the Autoscaler to the Cluster under the addon section on the dashboard by clicking on the "Addons" and then "Install Addon".
 ![Step 3.1](overview.png)
 
-Select Cluster Autoscaler:
+Select `cluster-autoscaler`:
 ![Step 3.2](select.png)
 
-Select Install:
+Select `Install`:
 ![Step 3.3](install.png)
 ![Step 3.4](installed.png)
 
@@ -71,7 +71,7 @@ openvpn-client                  1/1     1            1           1d
 ```
 As shown above, the Autoscaler has been provisioned and running.
 
-## Annotating MachineDeployments for Autoscaling
+## Annotating MachineDeployments for autoscaling
 
 The Cluster Autoscaler only considers MachineDeployment with valid annotations. The annotations are used to control the minimum and the maximum number of replicas per MachineDeployment. You don’t need to apply those annotations to all MachineDeployment objects, but only on MachineDeployments that Cluster Autoscaler should consider.
 
@@ -84,7 +84,7 @@ You can apply the annotations to MachineDeployments once the Cluster is provisio
 
 ### Step 1
 
-Run the following kubectl command to check the available MachineDeployments:
+Run the following `kubectl` command to check the available MachineDeployments:
 
 ```
 $ kubectl get machinedeployments -n kube-system 
@@ -94,7 +94,7 @@ epic-goldwasser-worker-289mgt   1d              2          2                   o
 
 ### Step 2
 
-The annotation command will be used with one of the MachineDeployments above to annotate the desired MachineDeployments. In this case, the  test-cluster-worker-v5drmq will be annotated, and the minimum and maximum will be set.
+The annotation command will be used with one of the MachineDeployments above to annotate the desired MachineDeployments. In this case, the `test-cluster-worker-v5drmq` will be annotated, and the minimum and maximum will be set.
 
 Minimum annotation:
 
@@ -138,7 +138,7 @@ Metadata:
 
 As shown above, the MachineDeployment has been annotated with a minimum of 1 and a maximum of 5. Therefore, the Autoscaler will consider only the annotated MachineDeployment on the Cluster.
 
-## Delete KKP Autoscaler
+## Delete Autoscaler
 
 To delete the Autoscaler, click on the three dots in front of the Cluster Autoscaler in the Addons section of the Cluster dashboard and select delete.
 
@@ -149,7 +149,7 @@ Once it has been deleted, you can check the Cluster to ensure that the Autoscale
 
 ## Summary
 
-That is it! You have successfully deployed a Kubernetes Autoscaler on a KKP Cluster and annotated the desired MachineDeployment, which Autoscaler should consider. Please check the learn more below for more resources on Kubernetes Autoscaler and how to provision a KKP Cluster.
+That is it! You have successfully deployed a Kubernetes Autoscaler on a iMKE Cluster and annotated the desired MachineDeployment, which Autoscaler should consider. Please check the learn more section below for more resources on Kubernetes Autoscaler and how to provision a iMKE Cluster.
 
 ### Learn More
 

@@ -82,17 +82,17 @@ Now you can use the key in any cluster in this project.
 
 2. Click the three dots, to open the cluster sub menu:
 
-    ![Trhee-Dots](three-dots.png)
+    ![Three-Dots](three-dots.png)
 
 3. Select `Manage SSH keys`:
 
     ![Edit-Cluster](manage-ssh-keys.png)
 
-4. Add Key from project keys by clicking on the `+ Add SSH key` field. You can then select the key you just
-   created from a drop-down field.
+4. Now the SSH key just created can be selected from a drop-down list.
+
     ![Manage-Keys](manage-keys.png)
 
-5. Finalize by clicking the `Add SSH Key` button:
+5. After the selection, the key is displayed in the list and can also be deleted there if required.
 
     ![Key-List](key-list.png)
 

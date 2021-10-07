@@ -66,7 +66,7 @@ aufzumachen.
 ![Step 4](update_4.png)
 
 Bei kubelet Version wählen wir nun die Version aus, welche auch bei
-unserem Cluster Master konfiguriert ist. In diesem Beispiel
+unserer Cluster Control Plane konfiguriert ist. In diesem Beispiel
 `1.21.5` und bestätigen mit `Save Changes`:
 
 ![Step 5](update_5.png)

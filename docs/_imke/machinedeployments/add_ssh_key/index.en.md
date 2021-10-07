@@ -92,7 +92,7 @@ Now you can use the key in any cluster in this project.
 
     ![Manage-Keys](manage-keys.png)
 
-5. After the selection, the key is displayed in the list and can also be deleted there if required.
+5. After the selection, the key is displayed in the list and can also be deleted from it if required.
 
     ![Key-List](key-list.png)
 

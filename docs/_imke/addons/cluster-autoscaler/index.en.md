@@ -59,7 +59,7 @@ Select `Install`:
 
 ### Step 4
 
-Go over to the cluster and check the Pods in the kube-system Namespace using the kubectl command.
+Go over to the cluster and check the pods in the kube-system namespace using the kubectl command.
 
 ```bash
 $ kubectl get deployment -n kube-system

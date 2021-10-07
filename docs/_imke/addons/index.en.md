@@ -6,7 +6,7 @@ nav_order: 8000
 has_children: true
 ---
 
-Inside of iMKE you can run a list of curated applications applications as addons. In this section we show how to install and work with those addons on the iMKE platform.
+Inside of iMKE you can run a list of curated applications as addons. In this section we show how to install and work with those addons on the iMKE platform.
 
 **Learn more**
 * [Launch an application in Kubernetes](/imke/k8sapplications/runningapplications/)

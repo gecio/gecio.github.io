@@ -15,7 +15,7 @@ Ein Service Account ist ein spezielles Userkonto, welches einem iMKE **Projekt**
 ## Kernkonzept
 
 Service Accounts sind Ressourcen eines Projekts. Nur der Eigentümer eines Projekts kann einen Service Account anlegen.
-Es ist nicht notwendig, eine neue Gruppe für die SA zu erstellen, indem wir das SA zu einer der bereits existierenden Gruppen: `Project Manager`, `Editor` oder `Viewer` zuweisen möchten.
+Es ist nicht notwendig, eine neue Gruppe für die Service Accounts zu erstellen. Wir können die Service Accounts einer bereits existierenden Gruppen: `Project Manager`, `Editor` oder `Viewer` zuweisen.
 
 Ein Service Account ist automatisch durch ein `UserProjectBinding` mit dem Projekt verknüpft, welche eine Bindung zwischen dem Service Account und dem Projekt definiert. Ein Service Account wird nach dem Löschen eines Projekts automatisch entfernt.
 

@@ -136,7 +136,7 @@ Metadata:
 [...]
 ```
 
-As shown above, the MachineDeployment has been annotated with a minimum of 1 and a maximum of 5. Therefore, the Autoscaler will consider only the annotated MachineDeployment on the Cluster.
+As shown above, the MachineDeployment has been annotated with a minimum of 1 and a maximum of 5. Therefore the Autoscaler will consider only the annotated MachineDeployment on the Cluster.
 
 ## Delete Autoscaler
 

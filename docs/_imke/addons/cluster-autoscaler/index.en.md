@@ -94,7 +94,7 @@ epic-goldwasser-worker-289mgt   1d              2          2                   o
 
 ### Step 2
 
-The annotation command will be used with one of the MachineDeployments above to annotate the desired MachineDeployments. In this case, the `test-cluster-worker-v5drmq` will be annotated, and the minimum and maximum will be set.
+The annotation command will be used with one of the MachineDeployments above to annotate the desired MachineDeployments. In this case the `test-cluster-worker-v5drmq` will be annotated and the minimum and maximum will be set.
 
 Minimum annotation:
 

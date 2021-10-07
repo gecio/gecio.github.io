@@ -23,7 +23,7 @@ Using a Kubernetes cluster autoscaler in the iMKE cluster must meet specific min
 
 * Kubernetes cluster running Kubernetes v1.18 or newer is required
 
-## Installing Kubernetes Autoscaler on iMKE Cluster
+## Installing Kubernetes Autoscaler on iMKE Clusters
 
 You can install Kubernetes Autoscaler on a running iMKE Cluster using the iMKE addon mechanism, which is already built into the iMKE Cluster dashboard.
 

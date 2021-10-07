@@ -17,7 +17,7 @@ iMKE API. The JWT token by default expires after 3 years.
 
 ## Core Concept
 
-Service accounts are considered as a project's resource. Only the owner of the project can create a service account.
+Service accounts are considered a project's resource. Only the owner of the project can create a service account.
 There is no need to create a new groups for a SA, we want to assign a service account to one of the already defined groups:
 `Project Manager`, `Editor` or `Viewer`.
 

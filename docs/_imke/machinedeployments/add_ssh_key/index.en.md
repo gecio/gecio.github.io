@@ -88,7 +88,7 @@ Now you can use the key in any cluster in this project.
 
     ![Edit-Cluster](manage-ssh-keys.png)
 
-4. Now the SSH key just created can be selected from a drop-down list.
+4. Now the newly created SSH key can be selected from a drop-down list.
 
     ![Manage-Keys](manage-keys.png)
 

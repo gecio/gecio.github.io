@@ -103,7 +103,7 @@ Es ist auch möglich, einen SSH-Key bereits zum Zeitpunkt der Cluster Erstellung
 
 ## Am Worker anmelden
 
-Sobald den bzw. die SSH-Keys zum Cluster hinzugefügt hat, muss den Worker-Nodes noch eine öffentliche (Floating) IP zugewiesen werden, damit diese netzwerkseitig erreichbar sind.
+Sobald der bzw. die SSH-Keys zum Cluster hinzugefügt wurden, muss den Worker-Nodes noch eine öffentliche (Floating) IP zugewiesen werden, damit diese netzwerkseitig erreichbar sind.
 
 Dazu Editieren Sie die Machinedeployments:
 

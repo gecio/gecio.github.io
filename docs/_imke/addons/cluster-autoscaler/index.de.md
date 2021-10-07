@@ -8,7 +8,7 @@ parent: Add-On
 
 ## Was ist ein Cluster Autoscaler in Kubernetes?
 
-Der Kubernetes Cluster Autoscaler ist ein Tool, das die Größe der Worker-Knoten je nach Verbrauch automatisch nach oben oder unten anpasst. Das bedeutet, dass der Autoscaler zum Beispiel einen Cluster automatisch hochskaliert, indem er die Knotengröße vergrößert, wenn nicht genügend Knotenressourcen für das Cluster-Workload-Scheduling vorhanden sind. Aber auch herunterskaliert, wenn die Knotenressourcen ständig im Leerlauf sind oder mehr als genügend Knotenressourcen für das Cluster-Workload-Scheduling vorhanden sind. Kurz gesagt handelt es sich um eine Komponente, die die Größe eines Kubernetes-Clusters automatisch so anpasst, dass alle Pods einen Platz zum Ausführen haben und keine überflüssigen Knoten vorhanden sind.
+Der Kubernetes Cluster Autoscaler ist ein Tool, das die Anzahl der Worker-Knoten je nach Verbrauch automatisch nach oben oder unten anpasst. Das bedeutet, dass der Autoscaler zum Beispiel einen Cluster automatisch hochskaliert, indem er die Anzahl der Knoten erhöht, wenn nicht genügend Knotenressourcen für das Cluster-Workload-Scheduling vorhanden sind. Aber auch herunterskaliert, wenn die Knotenressourcen ständig im Leerlauf sind oder mehr als genügend Knotenressourcen für das Cluster-Workload-Scheduling vorhanden sind. Kurz gesagt handelt es sich um eine Komponente, die die Größe eines Kubernetes-Clusters automatisch so anpasst, dass alle Pods einen Platz zum Ausführen haben und keine überflüssigen Knoten vorhanden sind.
 
 ## Cluster-Autoscaler-Verwendung
 

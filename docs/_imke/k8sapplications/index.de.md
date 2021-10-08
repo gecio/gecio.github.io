@@ -14,4 +14,3 @@ Applikationen auf Kubernetes zu betreiben ist ein komplexes Thema. In diesem Abs
 * [External-DNS mit Designate](/imke/k8sapplications/externaldnsanddesignate/)
 * [Verwaltung der Zeitzonen](/imke/k8sapplications/timezones/)
 * [StorageClass Setup](/imke/k8sapplications/storageclasses/)
-* [Volumes vergrößern](/imke/k8sapplications/resizevolumes/)

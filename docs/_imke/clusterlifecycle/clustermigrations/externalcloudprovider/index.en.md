@@ -26,7 +26,7 @@ Press the update button and ok.
 
 That will trigger the control plane update and migrate al pv to the new cinder csi plugin.
 
-**Loadblancer will get a new IP**
+**Your Loadblancer will get a new IP**
 
 While migrating all old netron loadblancer will be replaced with a new octavia loadblancer.
 

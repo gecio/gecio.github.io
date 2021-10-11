@@ -1,7 +1,7 @@
 ---
 title: Migration ContainerRuntimeEngine
 lang: en
-permalink: /imke/clusterlifecycle/clustermigrations/containerruntimeengine
+permalink: /imke/managingprojects/clusterlifecycle/clustermigrations/containerruntimeengine
 nav_order: 5000
 has_children: false
 ---

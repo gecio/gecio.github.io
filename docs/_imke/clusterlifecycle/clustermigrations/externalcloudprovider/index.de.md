@@ -3,7 +3,7 @@ title: External Cloud Provider Migration (OCCM)
 lang: de
 permalink: /imke/clusterlifecycle/clustermigrations/externalcloudprovider
 nav_order: 4350
-parent: Cluster Lifecycle
+parent: Cluster Lebenszyklus
 ---
 
 E ist jetzt möglich alle Cluster die noch den In-tree Cloud Provider verwenden, zum External Cloud Provider zu migrieren.

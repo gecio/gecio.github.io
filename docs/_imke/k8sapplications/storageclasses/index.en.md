@@ -7,7 +7,8 @@ parent: Kubernetes Applications
 ---
 
 We are providing one default storage class per Cluster.  
-**Caution:** This is managed by iMKE and can be **overwritten at any time**. Please create a separate storage class for your changes.
+> __Caution:__
+> This is managed by iMKE and can be **overwritten at any time**. Please create a separate storage class for your changes.
 
 ```
 kubectl get storageclasses.storage.k8s.io

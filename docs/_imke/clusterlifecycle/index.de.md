@@ -9,8 +9,8 @@ has_children: true
 Das Management von iMKE-basierten Kubernetes-Clustern wird weitergehend von der iMKE-Plattform selbst übernommen. Jedoch gibt es einige Aufgaben im Lebenszyklus eines Clusters, die manuelle Aufmerksamkeit benötigen: Neben selbstverständlichen Dingen wie dem Erstellen oder auch Löschen eines nicht mehr benötigten Clusters zählen dazu auch gewisse Cluster-Updates, wie bspw. die Aktualisierung der Kubernetes-Version. Da solche Updates den rollierenden Restart der Worker-Nodes beinhalten, müssen diese (bspw. in einem Wartungsfenster Ihrer Wahl) manuell vorgenommen bzw. gestartet werden.
 
 **Weiterführende Themen**
-* [Ein Cluster anlegen](/imke/clusterlifecycle/creatingacluster/)
-* [Ein Cluster aktualisieren / Kubernetes-Updates](/imke/clusterlifecycle/upgradingacluster/)
-* [Ein Cluster aktualisieren / Openstack-Credentials ändern](/imke/clusterlifecycle/openstackcredentials/)
-* [Ein Cluster löschen](/imke/clusterlifecycle/deletingacluster/)
+* [Einen Cluster anlegen](/imke/clusterlifecycle/creatingacluster/)
+* [Einen Cluster aktualisieren / Kubernetes-Updates](/imke/clusterlifecycle/upgradingacluster/)
+* [Einen Cluster aktualisieren / Openstack-Credentials ändern](/imke/clusterlifecycle/openstackcredentials/)
+* [Einen Cluster löschen](/imke/clusterlifecycle/deletingacluster/)
 * [Deprecation Policy in IMKE](/imke/clusterlifecycle/deprecationpolicy/)

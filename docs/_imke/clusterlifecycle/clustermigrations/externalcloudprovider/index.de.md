@@ -12,7 +12,8 @@ E ist jetzt möglich alle Cluster die noch den In-tree Cloud Provider verwenden,
 
 Auf der Clusterdetailseite gibt is der Providerstatus zu sehen.
 
-[image]
+![migration needed](migration-needed.png)
+![migration not needed](migration-not-needed.png)
 
 # Migrationsprozess
 
@@ -21,7 +22,7 @@ Für Hilfe oder weiter Frage, Kontaktieren sie bitte den GEC Support.
 ## Schritt 1 Start der Migration
 
 Klicken sie bitte den Update Button und dann Bestätigen.
-[image]
+![migration needed](migration-needed.png)
 
 Als ersten werden die Prozesse auf der Control Plane upgedeted und alle PV/PVC auf das neue Cinder SCI Plugin migriert.
 
@@ -44,7 +45,7 @@ Das umziehen der alten IP(FIP) ist mit einer kurzen Downtume verbunden, während
 ## Schritt 3 Rotate Machinedeployment
 
 Zum Abschließen der Migratin muss das Machinedeployment einmalig rotiert werden.
-[image]
+![worker rotation](rotate-nodes.png)
 
 **Wichtig: der alte Neutron Loadblancer leitet ab hier den Traffic nicht mer richtig weiter.**
 

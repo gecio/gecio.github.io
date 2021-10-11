@@ -12,7 +12,8 @@ It is now possible to migrate cluster that still uses the in-tree to the externa
 
 You can verify the if you need to migrate in the cluster details page.
 
-[image]
+![migration needed](migration-needed.png)
+![migration not needed](migration-not-needed.png)
 
 # Migration Process
 
@@ -21,7 +22,7 @@ If you need special assistance, please contact the GEC Support.
 ## Step 1 start migration
 
 Press the update button and ok.
-[image]
+![migration needed](migration-needed.png)
 
 That will trigger the control plane update and migrate al pv to the new cinder csi plugin.
 
@@ -44,7 +45,7 @@ Change the FIP will lead to a small downtime, while detatching it from the neutr
 ## Step 3 rotate machinedeployment
 
 rotate your machines to finisch the migration.
-[image]
+![worker rotation](rotate-nodes.png)
 
 **Note: the old neutron loadblancer will stop working at that point**
 

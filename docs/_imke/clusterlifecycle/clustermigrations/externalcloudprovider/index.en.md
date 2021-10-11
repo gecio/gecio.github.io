@@ -24,7 +24,7 @@ If you need special assistance, please contact the GEC Support.
 Press the update button and ok.
 ![migration needed](migration-needed.png)
 
-That will trigger the control plane update and migrate al pv to the new cinder csi plugin.
+That will trigger the control plane update and migrate all PV/PVC to the new cinder CSI plugin.
 
 **Your Loadblancer will get a new IP**
 

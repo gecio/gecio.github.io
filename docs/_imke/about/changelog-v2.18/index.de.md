@@ -22,8 +22,8 @@ Bitte updaten Sie alle bestehenden Cluster mit Kubernetes Version 1.19 auf minde
 
 ## Neue Funktionen
 
-* [Cluster Templates](../../clusterlifecycle/clustertemplates/) werden ab sofort unterstützt
-* Ältere Cluster (erstellt vor0 1.17) können jetzt [auf den externen Cloud Controller Manager migriert werden](../../clusterlifecycle/clustermigrations/externalcloudprovider)
+* [Cluster Templates](/imke/clusterlifecycle/clustertemplates/) werden ab sofort unterstützt
+* Ältere Cluster (erstellt vor v1.17) können jetzt [auf den externen Cloud Controller Manager migriert werden](/imke/clusterlifecycle/clustermigrations/externalcloudprovider/)
 * `containerd` wird ab sofort als Container Runtime unterstützt ([Wie Sie Ihre Cluster zu containerd umziehen können](/imke/clusterlifecycle/clustermigrations/containerruntimeengine/))
 
 ## Bugfixes

@@ -28,7 +28,7 @@ That will trigger the control plane update and migrate all PV/PVC to the new cin
 
 **Your Loadblancer will get a new IP**
 
-While migrating all old netron loadblancer will be replaced with a new octavia loadblancer.
+While the migration is running, all Neutron loadblancers will be replaced with a new Octavia loadblancer, as [required in our Optimist platform](/optimist/migration_loadbalancer/).
 
 At this state you will have two lbs, the old neutron loadblancer with the old IP and a new octavia loadblancer with a new IP.
 
@@ -40,14 +40,16 @@ Changing DNS has no downtime and should be prepared with a reduction of the TTL 
 
 Change the FIP will lead to a small downtime, while detatching it from the neutron and reattachin to the octavia loadblancer.
 
-**NOTE: don't recreate your node before finisch this step! That will lead to a downtime, as the old loadblancer will not be updated**
+> __NOTE:__
+> Do not recreate your nodes before finishing this step! That will lead to a downtime, as the old loadblancer will not be updated
 
 ## Step 3 rotate machinedeployment
 
 rotate your machines to finisch the migration.
 ![worker rotation](rotate-nodes.png)
 
-**Note: the old neutron loadblancer will stop working at that point**
+> __Note:__
+> the old neutron loadblancer will stop working at that point
 
 ## Step 4 cleanup
 

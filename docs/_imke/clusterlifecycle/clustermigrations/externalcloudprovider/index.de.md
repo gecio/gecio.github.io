@@ -29,7 +29,7 @@ Als ersten werden die Prozesse auf der Control Plane upgedeted und alle PV/PVC a
 
 **Der Loadblancer bekommt eine neue IP**
 
-Wärend der Migratin werden alle alten Neutron Loadblancer mit Octavia Loadblancern ersetzt.
+Wärend der Migratin werden alle alten Neutron Loadblancer mit Octavia Loadblancern ersetzt, wie es auch in unserer [Optimist Platform beschrieben ist](/optimist/migration_loadbalancer/).
 
 Zu dieses Zeitpunkt haben sie 2 Loadblancer, den alten Neutron und den neuen Octavia Loadblancer mit einer neuen IP.
 
@@ -41,14 +41,16 @@ Das Ändern des DNS Eintrags sollte ohne Unterbrechnung von statten gehen. Um la
 
 Das umziehen der alten IP(FIP) ist mit einer kurzen Downtume verbunden, während man sie vom alten Neutron löst wird und an den neuen Octavia anhängt.
 
-**Wichtig: Bitte starten sie keine Workernode Rotation bevor sie dieses Schritt beendet haben. Der alte Loadblancer wird nicht mehr upgedated und die Anwendungen werden nicht mehr erreichbar sein.**
+> __Wichtig:__
+> Bitte starten sie keine Workernode Rotation bevor sie dieses Schritt beendet haben. Der alte Loadblancer wird nicht mehr upgedated und die Anwendungen werden nicht mehr erreichbar sein.
 
 ## Schritt 3 Rotate Machinedeployment
 
 Zum Abschließen der Migratin muss das Machinedeployment einmalig rotiert werden.
 ![worker rotation](rotate-nodes.png)
 
-**Wichtig: der alte Neutron Loadblancer leitet ab hier den Traffic nicht mer richtig weiter.**
+> __Wichtig:__ 
+> Der alte Neutron Loadblancer leitet ab hier den Traffic nicht mer richtig weiter.**
 
 ## Schritt 4 Aufräumen
 

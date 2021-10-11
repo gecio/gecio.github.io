@@ -52,3 +52,8 @@ rotate your machines to finisch the migration.
 ## Step 4 cleanup
 
 Delete the old neutron loadblancer.
+
+
+# Learn more
+* [Neutron deprecation in our Optimist OpenStack Platform](/optimist/migration_loadbalancer/)
+* [Neutron LBaaS Deprecation in the OpenStack Wiki](https://wiki.openstack.org/wiki/Neutron/LBaaS/Deprecation)

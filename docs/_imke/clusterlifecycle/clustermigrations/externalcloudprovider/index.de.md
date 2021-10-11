@@ -7,11 +7,11 @@ parent: Cluster Lebenszyklus
 ---
 <!-- LTeX:  language=de-DE -->
 
-E ist jetzt möglich alle Cluster die noch den In-tree Cloud Provider verwenden, zum External Cloud Provider zu migrieren.
+Es ist jetzt möglich alle Cluster die noch den In-Tree Cloud Provider verwenden, zum External Cloud Provider zu migrieren.
 
-**Das muss bis spätestens for dem kubernetes 1.22 update geschehen**, in dieser Version wird der In-tree Provider entfehrnt.
+**Das muss bis spätestens vor dem Kubernetes 1.22 Update geschehen**, in dieser Version wird der In-Tree Provider entfernt.
 
-Auf der Clusterdetailseite gibt is der Providerstatus zu sehen.
+Auf der Clusterdetailseite ist der Providerstatus zu sehen.
 
 ![migration needed](migration-needed.png)
 ![migration not needed](migration-not-needed.png)
@@ -22,39 +22,39 @@ Für Hilfe oder weiter Frage, Kontaktieren sie bitte den GEC Support.
 
 ## Schritt 1 Start der Migration
 
-Klicken sie bitte den Update Button und dann Bestätigen.
+Klicken Sie bitte den Update Button und dann Bestätigen.
 ![migration needed](migration-needed.png)
 
-Als ersten werden die Prozesse auf der Control Plane upgedeted und alle PV/PVC auf das neue Cinder SCI Plugin migriert.
+Als ersten werden die Prozesse auf der Control Plane upgedatet und alle PV/PVC auf das neue Cinder CSI Plugin migriert.
 
 **Der Loadblancer bekommt eine neue IP**
 
-Wärend der Migratin werden alle alten Neutron Loadblancer mit Octavia Loadblancern ersetzt, wie es auch in unserer [Optimist Platform beschrieben ist](/optimist/migration_loadbalancer/).
+Während der Migration werden alle alten Neutron Loadbalancer mit Octavia Loadbalancer ersetzt, wie es auch in unserer [Optimist Platform beschrieben ist](/optimist/migration_loadbalancer/).
 
-Zu dieses Zeitpunkt haben sie 2 Loadblancer, den alten Neutron und den neuen Octavia Loadblancer mit einer neuen IP.
+Zu diesem Zeitpunkt haben sie 2 Loadbalancer, den alten Neutron und den neuen Octavia Loadbalancer mit einer neuen IP.
 
 ## Schritt 2 Fix/Update IP/DNS Einstellungen
 
-Jetzt sollten sie entweder ihre DNS Einträge mit der neuen IP updaten, oder die alte IP vom Neutron zum Octavia Loadblancer umziehen.
+Jetzt sollten sie entweder ihre DNS Einträge mit der neuen IP updaten, oder die alte IP vom Neutron zum Octavia Loadbalancer umziehen.
 
-Das Ändern des DNS Eintrags sollte ohne Unterbrechnung von statten gehen. Um lange Wartezeiten zu vermeiden, sollte als Vorbereitung die TTL angepasst sein.
+Das Ändern des DNS Eintrags sollte ohne Unterbrechung vonstattengehen. Um lange Wartezeiten zu vermeiden, sollte als Vorbereitung die TTL angepasst sein.
 
-Das umziehen der alten IP(FIP) ist mit einer kurzen Downtume verbunden, während man sie vom alten Neutron löst wird und an den neuen Octavia anhängt.
+Das Umziehen der alten IP(FIP) ist mit einer kurzen Downtime verbunden, während man sie vom alten Neutron löst wird und an den neuen Octavia anhängt.
 
 > __Wichtig:__
-> Bitte starten sie keine Workernode Rotation bevor sie dieses Schritt beendet haben. Der alte Loadblancer wird nicht mehr upgedated und die Anwendungen werden nicht mehr erreichbar sein.
+> Bitte starten Sie keine Workernode Rotation bevor sie diesen Schritt beendet haben. Der alte Loadbalancer wird nicht mehr upgedatet und die Anwendungen werden nicht mehr erreichbar sein.
 
 ## Schritt 3 Rotate Machinedeployment
 
-Zum Abschließen der Migratin muss das Machinedeployment einmalig rotiert werden.
+Zum Abschließen der Migration muss das Machinedeployment einmalig rotiert werden.
 ![worker rotation](rotate-nodes.png)
 
 > __Wichtig:__ 
-> Der alte Neutron Loadblancer leitet ab hier den Traffic nicht mer richtig weiter.**
+> Der alte Neutron Loadbalancer leitet ab hier den Traffic nicht mehr richtig weiter.**
 
 ## Schritt 4 Aufräumen
 
-Der alte Neutron Loadblancer muss noch von Hand gelöscht werden.
+Der alte Neutron Loadbalancer muss noch von Hand gelöscht werden.
 
 # Weitere Informationen
 * [Neutron deprecation in unserer Optimist OpenStack Umgebung](/optimist/migration_loadbalancer/)

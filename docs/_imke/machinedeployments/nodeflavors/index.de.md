@@ -5,6 +5,7 @@ permalink: /imke/machinedeployments/nodeflavors/
 nav_order: 5200
 parent: Machine Deployments
 ---
+<!-- LTeX:  language=de-DE -->
 
 Während der Erstellung von Nodes in einem Cluster kann man sich zwischen diversen sogenannten "Flavors" entscheiden.
 

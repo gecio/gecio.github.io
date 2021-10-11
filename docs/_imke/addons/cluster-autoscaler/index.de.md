@@ -5,6 +5,7 @@ permalink: /imke/addons/cluster-autoscaler/
 nav_order: 8100
 parent: Add-On
 ---
+<!-- LTeX:  language=de-DE -->
 
 ## Was ist ein Cluster Autoscaler in Kubernetes?
 

@@ -5,6 +5,7 @@ permalink: /imke/k8sapplications/runningapplications/
 nav_order: 7100
 parent: Anwendungen in Kubernetes
 ---
+<!-- LTeX:  language=de-DE -->
 
 Der Cluster läuft und wir wollen eine Applikation
 betreiben. Als Beispiel verwenden wir einen nginx, der

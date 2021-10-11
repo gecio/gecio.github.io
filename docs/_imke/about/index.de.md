@@ -5,6 +5,7 @@ permalink: /imke/about/
 nav_order: 1000
 has_children: true
 ---
+<!-- LTeX:  language=de-DE -->
 
 ## Was ist die iMKE-Plattform?
 

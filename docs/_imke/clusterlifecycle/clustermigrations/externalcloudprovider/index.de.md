@@ -5,6 +5,7 @@ permalink: /imke/clusterlifecycle/clustermigrations/externalcloudprovider
 nav_order: 4350
 parent: Cluster Lebenszyklus
 ---
+<!-- LTeX:  language=de-DE -->
 
 E ist jetzt möglich alle Cluster die noch den In-tree Cloud Provider verwenden, zum External Cloud Provider zu migrieren.
 

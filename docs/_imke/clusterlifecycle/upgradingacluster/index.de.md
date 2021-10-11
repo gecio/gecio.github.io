@@ -5,6 +5,7 @@ permalink: /imke/clusterlifecycle/upgradingacluster/
 nav_order: 4200
 parent: Cluster Lebenszyklus
 ---
+<!-- LTeX:  language=de-DE -->
 
 Sicherheit des Clusters steht an erster Stelle, hinzu
 kommen noch einige neue Features mit jedem Release. Um

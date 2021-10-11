@@ -5,6 +5,7 @@ permalink: /imke/machinedeployments/
 nav_order: 5000
 has_children: true
 ---
+<!-- LTeX:  language=de-DE -->
 
 Ein Kubernetes-Cluster besteht vereinfacht gesagt aus der Controlplane (dort läuft u. a. die Kubernetes-API, die etcd Datenbank und andere Steuerungskomponenten) und sogenannten Worker-Nodes - (virtuellen) Servern, auf denen die eigentlichen Kubernetes-Applikationen gestartet werden.
 

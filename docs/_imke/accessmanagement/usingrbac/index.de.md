@@ -5,6 +5,7 @@ permalink: /imke/accessmanagement/usingrbac/
 nav_order: 6200
 parent: Access Management
 ---
+<!-- LTeX:  language=de-DE -->
 
 Um einen Benutzer RBAC-basierten Zugriff auf ein Cluster zu geben, klicken Sie im RBAC-Widget auf `Add Binding`:
 

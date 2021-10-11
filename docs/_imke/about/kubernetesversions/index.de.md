@@ -5,6 +5,7 @@ permalink: /imke/about/kubernetesversions/
 nav_order: 1900
 parent: Über iMKE
 ---
+<!-- LTeX:  language=de-DE -->
 
 ## Unterstützte Kubernetes Versionen
 Folgende Kubernetes Versionen unterstützen wir aktuell in iMKE.

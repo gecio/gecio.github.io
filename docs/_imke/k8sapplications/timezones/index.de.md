@@ -5,6 +5,7 @@ permalink: /imke/k8sapplications/timezones/
 nav_order: 7400
 parent: Anwendungen in Kubernetes
 ---
+<!-- LTeX:  language=de-DE -->
 
 Falls Ihre Anwendung Zeitzonenanpassung benötigt, können Sie diesen Guide befolgen, um diese in Kubernetes zu steuern.
 

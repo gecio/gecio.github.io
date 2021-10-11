@@ -5,6 +5,7 @@ permalink: /imke/clusterlifecycle/openstackcredentials/
 nav_order: 4300
 parent: Cluster Lebenszyklus
 ---
+<!-- LTeX:  language=de-DE -->
 
 Es ist möglich die Credentials für einen Cluster zu ändern.
 Das wird vor allem nach dem Ändern eines Passwortes, oder beim Wechsel des Users benötigt.

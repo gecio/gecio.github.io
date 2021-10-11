@@ -5,6 +5,7 @@ permalink: /imke/about/changelog-v2.17/
 nav_order: 1000
 parent: Über iMKE
 ---
+<!-- LTeX:  language=de-DE -->
 
 ## Unterstützte Kubernetes Versionen
 

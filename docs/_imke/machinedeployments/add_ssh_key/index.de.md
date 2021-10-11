@@ -5,6 +5,7 @@ permalink: /imke/machinedeployments/add_ssh_key/
 nav_order: 5400
 parent: Machine Deployments
 ---
+<!-- LTeX:  language=de-DE -->
 
 Die iMKE-Plattform bietet die Möglichkeit, einen SSH-Key auf Worker-Nodes zu installieren. Dies kann zum Beispiel hilfreich sein, wenn man das Cluster oder eine eigene Applikation unmittelbar auf den Worker Nodes debuggen möchte.
 

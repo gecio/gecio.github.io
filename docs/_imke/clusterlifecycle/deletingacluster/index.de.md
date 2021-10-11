@@ -5,6 +5,7 @@ permalink: /imke/clusterlifecycle/deletingacluster/
 nav_order: 4400
 parent: Cluster Lebenszyklus
 ---
+<!-- LTeX:  language=de-DE -->
 
 Einen Cluster in iMKE zu löschen ist sehr schnell machbar.
 Die Voraussetzung für diesen Guide ist ein existierender

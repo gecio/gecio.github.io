@@ -6,6 +6,7 @@ nav_order: 5000
 parent: Cluster Lebenszyklus
 has_children: false
 ---
+<!-- LTeX:  language=de-DE -->
 
 ## Informationen zur Container Runtime Engine
 

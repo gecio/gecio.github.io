@@ -5,6 +5,7 @@ permalink: /imke/about/changelog-v2.13.10/
 nav_order: 1200
 parent: Über iMKE
 ---
+<!-- LTeX:  language=de-DE -->
 
 iMKE aktualisiert von v2.12.4 → v2.13.10
 

@@ -5,6 +5,7 @@ permalink: /imke/gettingstarted/
 nav_order: 2000
 has_children: false
 ---
+<!-- LTeX:  language=de-DE -->
 
 Diese Anleitung beschreibt, wie Sie ihr erstes iMKE-Projekt inkl. einem ersten
 Kubernetes-Cluster erzeugen, wie Sie auf das Cluster zugreifen und anschließend

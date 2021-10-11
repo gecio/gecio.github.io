@@ -5,6 +5,7 @@ permalink: /imke/addons/
 nav_order: 8000
 has_children: true
 ---
+<!-- LTeX:  language=de-DE -->
 
 Innerhalb von iMKE können spezielle, kuratierte, Applikationen, über den Add-On Tab verwaltet werden. In diesem Abschnitt zeigen wir, wie Sie auf der iMKE-Plattform diese Add-Ons installieren und verwalten können.
 

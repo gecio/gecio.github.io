@@ -5,6 +5,7 @@ permalink: /imke/machinedeployments/updatingnodeos/
 nav_order: 5500
 parent: Machine Deployments
 ---
+<!-- LTeX:  language=de-DE -->
 
 ## Flatcar
 

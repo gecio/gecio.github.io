@@ -5,6 +5,7 @@ permalink: /imke/k8sapplications/storageclasses/
 nav_order: 7500
 parent: Anwendungen in Kubernetes
 ---
+<!-- LTeX:  language=de-DE -->
 
 Es gibt eine vorinstalliere Default Storage Class pro Cluster.  
 **Achtung:** Diese wird von iMKE verwaltet und kann **jederzeit überschrieben** werden. Bitte erstellen Sie für Änderungen eine eigene Storage Class.

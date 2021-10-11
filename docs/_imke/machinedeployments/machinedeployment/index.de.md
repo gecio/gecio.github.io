@@ -5,6 +5,7 @@ permalink: /imke/machinedeployments/machinedeployment/
 nav_order: 5100
 parent: Machine Deployments
 ---
+<!-- LTeX:  language=de-DE -->
 
 # Machine Deployment hinzufügen
 

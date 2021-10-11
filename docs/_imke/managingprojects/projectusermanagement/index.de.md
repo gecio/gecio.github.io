@@ -5,6 +5,7 @@ permalink: /imke/managingprojects/projectusermanagement/
 nav_order: 3200
 parent: iMKE-Projekte verwalten
 ---
+<!-- LTeX:  language=de-DE -->
 
 ## Benutzer hinzufügen
 

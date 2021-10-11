@@ -5,6 +5,7 @@ permalink: /imke/k8sapplications/externaldnsanddesignate/
 nav_order: 7300
 parent: Anwendungen in Kubernetes
 ---
+<!-- LTeX:  language=de-DE -->
 
 Um den Aufwand zu reduzieren, und die manuelle Verwaltung Ihrer DNS-Zone zu minimieren, sollte man [External-DNS](https://github.com/kubernetes-sigs/external-dns) verwenden. External-DNS ermöglicht Ihnen DNS-Einträge dynamisch über Kubernetes je nach DNS-Anbieter zu steuern.
 Externen-DNS ist kein eigenständiger DNS-Server, sondern konfiguriert lediglich DNS-Ressourcen in externen DNS-Provider. Beispielsweise (OpenStack Designate, Amazon Route53, Google Cloud DNS, usw.)

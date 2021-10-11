@@ -5,6 +5,7 @@ permalink: /imke/clusterlifecycle/clustertemplates/
 nav_order: 4150
 parent: Cluster Lebenszyklus
 ---
+<!-- LTeX:  language=de-DE -->
 
 ## Was sind Cluster Templates?
 

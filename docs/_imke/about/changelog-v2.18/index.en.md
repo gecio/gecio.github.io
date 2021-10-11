@@ -24,7 +24,7 @@ Please make sure to upgrade all existing clusters running 1.19 at least to 1.20 
 
 * [Cluster Templates](/imke/clusterlifecycle/clustertemplates/) are now supported
 * Older clusters (created before 1.17) can now be [migrated to the external cloud controller manager](../../clusterlifecycle/clustermigrations/externalcloudprovider)
-* `containerd` is now supported as container runtime ([How to migrate your clusters to containerd](../../clusterlifecycle/clustermigrations/containerruntimeengine/))
+* `containerd` is now supported as container runtime ([How to migrate your clusters to containerd](/imke/clusterlifecycle/clustermigrations/containerruntimeengine/))
 
 ## Bugfixes
 

@@ -52,3 +52,7 @@ Zum Abschließen der Migratin muss das Machinedeployment einmalig rotiert werden
 ## Schritt 4 Aufräumen
 
 Der alte Neutron Loadblancer muss noch von Hand gelöscht werden.
+
+# Weitere Informationen
+* [Neutron deprecation in unserer Optimist OpenStack Umgebung](/optimist/migration_loadbalancer/)
+* [Neutron LBaaS Deprecation im OpenStack Wiki](https://wiki.openstack.org/wiki/Neutron/LBaaS/Deprecation)

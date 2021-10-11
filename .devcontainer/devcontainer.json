@@ -34,7 +34,8 @@
 		"eamodio.gitlens",
 		"vscode-icons-team.vscode-icons",
 		"bierner.emojisense",
-		"IBM.output-colorizer"
+		"IBM.output-colorizer",
+		"editorconfig.editorconfig"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [

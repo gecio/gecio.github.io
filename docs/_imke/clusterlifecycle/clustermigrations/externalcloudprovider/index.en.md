@@ -27,27 +27,27 @@ That will trigger the control plane update and migrate al pv to the new cinder c
 
 **Loadblancer will get a new IP**
 
-While migrating all old netron Loadblancer will be replaced with a new Octavia Loadblancer.
+While migrating all old netron loadblancer will be replaced with a new octavia loadblancer.
 
-At this state you will have two lbs, the old neutron Loadblancer with the old IP and a new Octavia Loadblancer with a new IP.
+At this state you will have two lbs, the old neutron loadblancer with the old IP and a new octavia loadblancer with a new IP.
 
 ## Step 2 fix/update IP/DNS setting
 
-You can either update your DNS settings now or move the old FIP from the Neutrol to the new Octavia Loadblancer.
+You can either update your DNS settings now or move the old FIP from the neutron to the new octavia loadblancer.
 
-Changing DNS has no Downtime and should be prepared with a reduction of the TTL before starting the migration.
+Changing DNS has no downtime and should be prepared with a reduction of the TTL before starting the migration.
 
-Change the FIP will lead to a small Downtime, while detatching it from the Neutrol and reattachin to the Octavia Loadblancer.
+Change the FIP will lead to a small downtime, while detatching it from the neutron and reattachin to the octavia loadblancer.
 
-**NOTE: don't recreate your node before finisch this step! That will lead to a downtime, as the old Loadblancer will not be updated**
+**NOTE: don't recreate your node before finisch this step! That will lead to a downtime, as the old loadblancer will not be updated**
 
 ## Step 3 rotate machinedeployment
 
 rotate your machines to finisch the migration.
 [image]
 
-**Note: the old neutron Loadblancer will stop working at that point**
+**Note: the old neutron loadblancer will stop working at that point**
 
 ## Step 4 cleanup
 
-Delete the old neutron Loadblancer.
+Delete the old neutron loadblancer.

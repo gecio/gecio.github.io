@@ -62,7 +62,7 @@
 .nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-link.active {
   background-image: none;
   background-color: $grey-lt-300;
-  border-left: 5px solid #e3006a;
+  border-left: 5px solid #0d9be2;
 }
 
 .nav-list-expander {
@@ -146,7 +146,7 @@ hr {
 a,
 a:visited {
   text-decoration: none;
-  color: #e3006a;
+  color: #0d9be2;
   background-image: none !important;
 }
 
@@ -163,13 +163,13 @@ code {
 
 .search-result-doc {
   font-weight: bold;
-  color: #e3006a;
+  color: #0d9be2;
   opacity: 1 !important;
 }
 
 
 span.na {
-  color: #e3006a !important;
+  color: #0d9be2 !important;
 }
 
 //Requested By Christian Gruber

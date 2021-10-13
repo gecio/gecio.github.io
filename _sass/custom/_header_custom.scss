@@ -26,12 +26,12 @@
   align-items: center;
 
   &:hover {
-    border-color: #e3006a;
+    border-color: #0d9be2;
   }
 
   &.active {
     font-weight: 600;
-    border-color: #e3006a;
+    border-color: #0d9be2;
     color: $link-color;
   }
 }

@@ -19,7 +19,7 @@ Changing the Credentials is as easy as following these steps:
 
 2. Click the three dots, to open the cluster sub menu
 
-    ![Trhee-Dots](three-dots.png)
+    ![Three-Dots](three-dots.png)
 
 3. Select `Edit Provider`
 

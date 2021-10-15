@@ -30,4 +30,4 @@ Das Ändert die Credentials mit folgenden einfachen Schritten:
 
     ![Credentials-Edit](credentials-edit.png)
 
-Kurz nach dem Betätigen des Edit buttons, bekommt ihr ein Pop Up mit der Bestätigung.
+Kurz nach dem Betätigen des Edit Buttons, bekommt ihr ein Pop-up mit der Bestätigung.

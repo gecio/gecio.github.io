@@ -28,13 +28,13 @@ Nun klicken wir auf `Delete`.
 ![Step 3](delete_3.png)
 
 In dem sich öffnenden Fenster wird als Sicherheitsfrage
-der Cluster-Name angefragt. Da wir diesen zwei Schritte vorher
-schon in die Zwischenablage kopiert haben müssen wir diesen
+der Cluster-Name abgefragt. Da wir diesen zwei Schritte vorher
+schon in die Zwischenablage kopiert haben, müssen wir diesen
 nur noch einfügen.
 ![Step 4](delete_4.png)
 
 Da wir alles löschen wollen, lassen wir die beiden Checkboxen
-angehakt. Damit werden auch Volumes und LoadBalancer in
+angekreuzt. Damit werden auch Volumes und Loadbalancer in
 OpenStack gelöscht.
 
 ## Zusammenfassung
@@ -42,7 +42,7 @@ OpenStack gelöscht.
 Folgende Schritte wurden erfolgreich durchgeführt und gelernt:
 
 * Wie lösche ich ein Projekt
-* Wie lösche ich auch in OpenStack alle Ressourcen.
+* Wie lösche ich auch in OpenStack alle Ressourcen
 
-Herzlichen Glückwunsch! Dies sind alle notwendigen Steps um
+Herzlichen Glückwunsch! Dies sind alle notwendigen Schritte um
 einen Kubernetes Cluster in iMKE zu löschen.

@@ -29,7 +29,7 @@ Bitte updaten Sie alle bestehenden Cluster mit Kubernetes Version 1.19 auf minde
 
 ## Bugfixes
 
-* Um [CVE-2021-25741](https://github.com/kubernetes/kubernetes/issues/104980) zu mitigieren wurden die unterstützten Kubernetes-Versionen aktualisiert. Die Controlplanes der Cluster wurden automatisch upgedated. Bitte stellen Sie ein zeitnahes Updates Ihrer Machine Deployments sicher. Bei einem Update der Machine Deployments kann es durch den rollierenden Neustart der Worker-Nodes zu rollierenden Restarts der Deployments und Statefulsets kommen.
+* Um [CVE-2021-25741](https://github.com/kubernetes/kubernetes/issues/104980) zu mitigieren wurden die unterstützten Kubernetes-Versionen aktualisiert. Die Controlplanes der Cluster wurden automatisch upgedatet. Bitte stellen Sie ein zeitnahes Updates Ihrer Machine Deployments sicher. Bei einem Update der Machine Deployments kann es durch den rollierenden Neustart der Worker-Nodes zu rollierenden Restarts der Deployments und Statefulsets kommen.
 
 ## Änderungen in Kubernetes
 

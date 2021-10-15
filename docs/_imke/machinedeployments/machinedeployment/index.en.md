@@ -7,7 +7,7 @@ parent: Machine Deployments
 ---
 # Add Machine Deployment
 
-To add a new Machine Deployment, use the `Add Machine Deployment Button` in the right top corner.
+To add a new Machine Deployment, use the `Add Machine Deployment` Button in the right top corner.
 
 ![add_node_deployment](add_nodedep.png)
 

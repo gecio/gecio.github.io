@@ -3,7 +3,7 @@ title: Cluster Autoscaler
 lang: de
 permalink: /imke/addons/cluster-autoscaler/
 nav_order: 8100
-parent: Add-On
+parent: Add-on
 ---
 <!-- LTeX:  language=de-DE -->
 
@@ -26,12 +26,12 @@ Die Verwendung eines Kubernetes Cluster Autoscalers im iMKE-Cluster muss bestimm
 
 ## Installieren von Kubernetes-Autoscaler auf iMKE-Cluster
 
-Sie können den Kubernetes Autoscaler auf einem laufenden iMKE-Cluster mithilfe des iMKE Addon Mechanismus installieren, der bereits in das iMKE Cluster Dashboard integriert ist.
+Sie können den Kubernetes Autoscaler auf einem laufenden iMKE-Cluster mithilfe des iMKE Add-on Mechanismus installieren, der bereits in das iMKE Cluster Dashboard integriert ist.
 
 
 ### Schritt 1
 
-Erstellen Sie einen iMKE Cluster, indem Sie Ihr Projekt auf dem Dashboard auswählen und auf "Create Cluster" klicken. Weitere Details finden Sie auf [unserer Dokumentationsseite](/imke/clusterlifecycle/creatingacluster/).
+Erstellen Sie einen iMKE Cluster, indem Sie Ihr Projekt auf dem Dashboard auswählen und auf `Create Cluster` klicken. Weitere Details finden Sie auf [unserer Dokumentationsseite](/imke/clusterlifecycle/creatingacluster/).
 
 ### Schritt 2
 
@@ -49,7 +49,7 @@ Wie oben dargestellt, ist der Autoscaler nicht Teil der laufenden Kubernetes-Kom
 
 ### Schritt 3
 
-Fügen Sie den Autoscaler zum Cluster hinzu, indem Sie im Dashboard im Bereich "Addons" auf "Install Addon" klicken.
+Fügen Sie den Autoscaler zum Cluster hinzu, indem Sie im Dashboard im Bereich `Addons` auf `Install Addon` klicken.
 
 ![Step 3.1](overview.png)
 
@@ -57,6 +57,7 @@ Fügen Sie den Autoscaler zum Cluster hinzu, indem Sie im Dashboard im Bereich "
 ![Step 3.2](select.png)
 
 Auf `Install` klicken:
+
 ![Step 3.3](install.png)
 ![Step 3.4](installed.png)
 
@@ -90,7 +91,7 @@ Sie können die Anmerkungen auf MachineDeployments anwenden, sobald der Cluster 
 Führen Sie den folgenden `kubectl` Befehl aus, um die verfügbaren MachineDeployments zu überprüfen:
 
 ```
-$ kubectl get machinedeployments -n kube-system 
+$ kubectl get machinedeployments -n kube-system
 NAME                            AGE   DELETED   REPLICAS   AVAILABLEREPLICAS   PROVIDER    OS        VERSION
 epic-goldwasser-worker-289mgt   1d              2          2                   openstack   flatcar   1.21.5
 ```

@@ -34,7 +34,7 @@ Please make sure to upgrade all existing clusters running 1.19 at least to 1.20 
 
 ### Upgrade notes for Kubernetes 1.21
 
-If you are planning to upgrade to Kubernetes 1.21, please have a look at the [What's new](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.21.md#whats-new-major-themes) section of the official Kubernetes v1.21 release notes and make sure you familiarise yourself with the upcoming changes.
+If you are planning to upgrade to Kubernetes 1.21, please have a look at the [What's new](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.21.md#whats-new-major-themes) section of the official Kubernetes v1.21 release notes and make sure you familiarize yourself with the upcoming changes.
 
 For an overview of the changes, please refer to the [Changes by Kind](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.21.md#changes-by-kind-2) section of the Changelog.
 

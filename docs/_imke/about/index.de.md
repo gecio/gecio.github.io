@@ -26,7 +26,7 @@ Während wir uns um den stabilen Betrieb Ihres Clusters kümmern, haben Sie trot
 * Sie können eine unbegrenzte Anzahl von Clustern über das iMKE-Webinterface verwalten, neue Cluster sind schnell erstellt.
 * Die Kubernetes-Version bestehender Cluster können Sie mit einem einfachen Klick aktualisieren und so Ihre Cluster immer aktuell halten.
 * Selbstverständlich können Sie nicht mehr benötigte Cluster auch mit einem einfachen Klick wieder löschen.
-* Bei Bedarf können Sie auch vollen root-Zugriff auf Ihre Worker-Nodes bekommen (zum Beispiel wenn Sie Ihre selbstentwickelten Applikationen intensiv debuggen wollen).
+* Bei Bedarf können Sie auch vollen root-Zugriff auf Ihre Worker-Nodes bekommen (zum Beispiel, wenn Sie Ihre selbst entwickelten Applikationen intensiv debuggen wollen).
 
 Bei allen Problemen im Clusterbetrieb können Sie sich dabei jederzeit an unseren [24/7-Support](mailto:support@gec.io) wenden. Jenseits der Betriebsleistung der iMKE-Plattform bieten wir mit unserem Professional Service Team auch eine weitergehende Beratung an, helfen können wir beispielsweise bei Fragen zum allgemeinen Applikationsbetrieb auf Kubernetes oder auch spezifisch zum optimalen Anwendungs- und Softwaredesign für Ihr konkretes Vorhaben.
 
@@ -48,7 +48,7 @@ Als Entwicklungsumgebung könnten Sie beispielsweise die folgenden Anwendungen i
 * [Jenkins](https://artifacthub.io/packages/helm/jenkinsci/jenkins) zur Automatisierung Ihrer Entwicklungsworkflows,
 * und [Artifactory](https://artifacthub.io/packages/helm/jfrog/artifactory) um Ihre Buildergebnisse versioniert abzulegen.
 
-Weiterhin könnten Sie jeweils ein Entwicklungs-, Staging- und Produktions-Cluster in iMKE anlegen und Ihre Anwendungsarchitektur mit einfach zu installierenden, bereits via helm paketierten Komponenten unterstützen:
+Weiterhin könnten Sie jeweils ein Entwicklungs-, Staging- und Produktions-Cluster in iMKE anlegen und Ihre Anwendungsarchitektur mit einfach zu installierenden, bereits via Helm paketierten Komponenten unterstützen:
 
 * Beispielsweise mit einem kompletten [Kafka](https://artifacthub.io/packages/helm/bitnami/kafka)-Setup,
 * einer [PostgreSQL](https://artifacthub.io/packages/helm/bitnami/postgresql)-, [MySQL](https://artifacthub.io/packages/helm/bitnami/mysql)- oder [MariaDB](https://artifacthub.io/packages/helm/bitnami/mariadb)-Datenbank,

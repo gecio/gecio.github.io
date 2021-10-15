@@ -3,7 +3,7 @@ title: Cluster Autoscaler
 lang: en
 permalink: /imke/addons/cluster-autoscaler/
 nav_order: 8100
-parent: Add-On
+parent: Add-on
 ---
 
 ## What is a Cluster Autoscaler in Kubernetes?
@@ -19,7 +19,7 @@ The Kubernetes Autoscaler in the iMKE Cluster automatically scaled up/down when 
 
 ## Requirements
 
-Using a Kubernetes cluster autoscaler in the iMKE cluster must meet specific minimum requirement:
+Using a Kubernetes cluster Autoscaler in the iMKE cluster must meet specific minimum requirement:
 
 * Kubernetes cluster running Kubernetes v1.18 or newer is required
 
@@ -47,19 +47,20 @@ As shown above, the Autoscaler is not part of the running Kubernetes components 
 
 ### Step 3
 
-Add the Autoscaler to the Cluster under the addon section on the dashboard by clicking on the "Addons" and then "Install Addon".
+Add the Autoscaler to the Cluster under the addon section on the dashboard by clicking on the `Addons` and then `Install Addon`.
 ![Step 3.1](overview.png)
 
 Select `cluster-autoscaler`:
 ![Step 3.2](select.png)
 
 Select `Install`:
+
 ![Step 3.3](install.png)
 ![Step 3.4](installed.png)
 
 ### Step 4
 
-Go over to the cluster and check the pods in the kube-system namespace using the kubectl command.
+Go over to the cluster and check the pods in the kube-system namespace using the `kubectl` command.
 
 ```bash
 $ kubectl get deployment -n kube-system
@@ -87,7 +88,7 @@ You can apply the annotations to MachineDeployments once the Cluster is provisio
 Run the following `kubectl` command to check the available MachineDeployments:
 
 ```
-$ kubectl get machinedeployments -n kube-system 
+$ kubectl get machinedeployments -n kube-system
 NAME                            AGE   DELETED   REPLICAS   AVAILABLEREPLICAS   PROVIDER    OS        VERSION
 epic-goldwasser-worker-289mgt   1d              2          2                   openstack   flatcar   1.21.5
 ```
@@ -136,7 +137,7 @@ Metadata:
 [...]
 ```
 
-As shown above, the MachineDeployment has been annotated with a minimum of 1 and a maximum of 5. Therefore the Autoscaler will consider only the annotated MachineDeployment on the Cluster.
+As shown above, the MachineDeployment has been annotated with a minimum of 1 and a maximum of 5. Therefore, the Autoscaler will consider only the annotated MachineDeployment on the Cluster.
 
 ## Delete Autoscaler
 

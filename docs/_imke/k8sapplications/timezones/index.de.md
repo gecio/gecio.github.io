@@ -14,10 +14,10 @@ Falls Ihre Anwendung Zeitzonenanpassung benötigt, können Sie diesen Guide befo
 Um diesen Guide erfolgreich abzuschließen brauchen Sie Folgendes:
 
 * `kubectl` [die neueste Version](https://kubernetes.io/de/docs/tasks/tools/install-kubectl/)
-* Ein laufender Kubernetes Cluster, von iMKE erstellt mit laufender Machine Deployment.
+* Ein laufender Kubernetes Cluster, von iMKE erstellt mit laufender Machine Deployment
   * Siehe hierzu auch: [Einen Cluster anlegen](/imke/clusterlifecycle/creatingacluster/)
-* Eine valide Konfigdatei `kubeconfig` für den Cluster.
-  * Siehe hierzu auch: [Mit einem Cluster verbinden](/imke/accessmanagement/connectingtoacluster/).
+* Eine valide Konfigdatei `kubeconfig` für den Cluster
+  * Siehe hierzu auch: [Mit einem Cluster verbinden](/imke/accessmanagement/connectingtoacluster/)
 
 ## Zeitzonen in einer Kubernetes-Umgebung
 

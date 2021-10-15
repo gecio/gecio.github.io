@@ -8,7 +8,7 @@ parent: Cluster Lifecycle
 
 It is now possible to migrate cluster that still uses the in-tree to the external cloud provider.
 
-**This is required to be done before the upgrade to Kubernetes v1.22 as the in-tree provider will be removed in that version.
+**This is required to be done before the upgrade to Kubernetes v1.22** as the in-tree provider will be removed in that version.
 
 You can verify the if you need to migrate in the cluster details page.
 

@@ -32,7 +32,7 @@ Changing the flavor of a node at any point in time is as easy as following these
 
     ![Node-Selection](node-selection.png?resize=1500,700)
 
-1. Select the desired flavor and click the "Save Changes"-button when you're finished.
+1. Select the desired flavor and click the `Save Changes`-button when you're finished.
 
     ![Edit-Node](edit-node.png?resize=600,700)
 

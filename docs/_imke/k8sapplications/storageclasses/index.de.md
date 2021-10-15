@@ -7,8 +7,8 @@ parent: Anwendungen in Kubernetes
 ---
 <!-- LTeX:  language=de-DE -->
 
-Es gibt eine vorinstalliere Default Storage Class pro Cluster.  
-> __Achtung:__ 
+Es gibt eine vorinstalliere Default Storage Class pro Cluster.
+> __Achtung:__
 > Diese wird von iMKE verwaltet und kann **jederzeit überschrieben** werden. Bitte erstellen Sie für Änderungen eine eigene Storage Class.
 
 ```
@@ -23,12 +23,12 @@ NAME                   PROVISIONER                AGE
 cinder-csi (default)   cinder.csi.openstack.org   6h45m
 ```
 
-Der Provisioner is abhängig von der Erstellung des Clusters und der Kubernetes Version.
+Der Provisioner ist abhängig von der Erstellung des Clusters und der Kubernetes Version.
 
-* kubernetes.io/cinder
+* `kubernetes.io/cinder`
     alle Kubernetes Cluster kleiner 1.16 und vor dem 29.10 angelegt.
 
-* cinder.csi.openstack.org
+* `cinder.csi.openstack.org`
     alle Kubernetes Cluster 1.16+ und nach dem 19.10 angelegt.
 
 ## Openstack Volume Types

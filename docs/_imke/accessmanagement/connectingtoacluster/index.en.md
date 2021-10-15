@@ -49,7 +49,7 @@ The name is constructed from two parts:
 * `kubeconfig-admin-`
 * plus the cluster id.
 
- To register the kubeconfig, we use the following command:
+To register the `kubeconfig`, we use the following command:
 
 ```bash
 cd Downloads

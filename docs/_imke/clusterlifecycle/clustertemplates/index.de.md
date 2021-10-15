@@ -9,7 +9,7 @@ parent: Cluster Lebenszyklus
 
 ## Was sind Cluster Templates?
 
-Cluster Templates sind Vorlagen die eine schnelle und einheitliche Erstellung von Kubernetes Clustern ermöglichen. Mit Cluster Templates können Cluster mit wenigen Klicks angelegt werden, ohne das Einstellungen wie z.B. Zugangsdaten, Netzwerkeinstellungen und Verfügbarkeitszonen jedes mal erneut eingegeben werden müssen.
+Cluster Templates sind Vorlagen die eine schnelle und einheitliche Erstellung von Kubernetes Clustern ermöglichen. Mit Cluster Templates können Cluster mit wenigen Klicks angelegt werden, ohne das Einstellungen wie z.B. Zugangsdaten, Netzwerkeinstellungen und Verfügbarkeitszonen jedes Mal erneut eingegeben werden müssen.
 
 ## Erstellung von Cluster Templates
 
@@ -24,6 +24,7 @@ Daraufhin öffnet sich der aus dem Abschnitt [`Einen Cluster anlegen`](/imke/clu
 Nun öffnet sich der Dialog `Save Cluster Template`. Hier kann der gewünschte Name und Speicherbereich festgelegt werden.
 
 Templates können in 2 verschiedenen Bereichen gespeichert werden:
+
 * Auf Projektebene: Alle User des Projekts können das Template nutzen
 * Auf Userebene: Das Template kann in allen Projekten genutzt werden, in dem der User Schreibrechte besitzt. Andere User können das Template nicht nutzen.
 
@@ -43,7 +44,7 @@ Daraufhin werden Sie gefragt wie viele Cluster Sie aus diesem Template erstellen
 
 ![Template Dialog Create Cluster](template_dialog_create_cluster.png)
 
-Darauf hin wird das Cluster bzw die Cluster angelegt. Aus Cluster Template erstellte Cluster sind an dem `template-instance-id` Label erkennbar.
+Darauf hin wird das Cluster bzw. die Cluster angelegt. Aus Cluster Template erstellte Cluster sind an dem `template-instance-id` Label erkennbar.
 
 ![Cluster Overview New Cluster](cluster_overview_new_cluster.png)
 

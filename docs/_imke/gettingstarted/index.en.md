@@ -143,9 +143,9 @@ all the nodes that comprise my cluster":
 kubectl get nodes
 
 NAME                           STATUS   ROLES    AGE   VERSION
-musing-kalam-XXXXXXXXX-ks4xz   Ready    <none>   10m   v1.15.0
-musing-kalam-XXXXXXXXX-txc4w   Ready    <none>   10m   v1.15.0
-musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.15.0
+musing-kalam-XXXXXXXXX-ks4xz   Ready    <none>   10m   v1.21.5
+musing-kalam-XXXXXXXXX-txc4w   Ready    <none>   10m   v1.21.5
+musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.21.5
 ```
 
 ## Cleanup

@@ -24,10 +24,10 @@ cinder-csi (default)   cinder.csi.openstack.org   6h45m
 
 The provisioner is version and creation time dependent.
 
-* kubernetes.io/cinder
+* `kubernetes.io/cinder`
     all Kubernetes Cluster prior 1.16 and created before 29.10
 
-* cinder.csi.openstack.org
+* `cinder.csi.openstack.org`
     all Kubernetes Cluster 1.16+ and created after 19.10
 
 ## Openstack Volume Types

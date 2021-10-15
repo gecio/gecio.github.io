@@ -17,7 +17,7 @@ own infrastructure up-to-date. In this case the following section
 manually by you.
 
 Before you upgrade a cluster, please refer to the target version's [Changelog](/imke/about/)
-and make sure you familiarise yourself with the upcoming changes.
+and make sure you familiarize yourself with the upcoming changes.
 
 One tool that can help to prepare the update will be [kubepug](https://github.com/rikatz/kubepug).
 It checks all deployed resources against the new Kubernetes version and will warn about removals and deprecations.

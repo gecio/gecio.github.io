@@ -22,7 +22,7 @@ Für Hilfe oder weiter Frage, Kontaktieren sie bitte den GEC Support.
 
 ## Schritt 1 Start der Migration
 
-Klicken Sie bitte den Update Button und dann Bestätigen.
+Klicken Sie bitte den Update-Button und dann Bestätigen.
 ![migration needed](migration-needed.png)
 
 Als ersten werden die Prozesse auf der Control Plane upgedatet und alle PV/PVC auf das neue Cinder CSI Plugin migriert.
@@ -39,17 +39,17 @@ Jetzt sollten sie entweder ihre DNS Einträge mit der neuen IP updaten, oder die
 
 Das Ändern des DNS Eintrags sollte ohne Unterbrechung vonstattengehen. Um lange Wartezeiten zu vermeiden, sollte als Vorbereitung die TTL angepasst sein.
 
-Das Umziehen der alten IP(FIP) ist mit einer kurzen Downtime verbunden, während man sie vom alten Neutron löst wird und an den neuen Octavia anhängt.
+Das Umziehen der alten Floating-IP(FIP) ist mit einer kurzen Downtime verbunden, während man sie vom alten Neutron löst wird und an den neuen Octavia anhängt.
 
 > __Wichtig:__
-> Bitte starten Sie keine Workernode Rotation bevor sie diesen Schritt beendet haben. Der alte Loadbalancer wird nicht mehr upgedatet und die Anwendungen werden nicht mehr erreichbar sein.
+> Bitte starten Sie keine Worker-Node Rotation bevor sie diesen Schritt beendet haben. Der alte Loadbalancer wird nicht mehr upgedatet und die Anwendungen werden nicht mehr erreichbar sein.
 
-## Schritt 3 Rotate Machinedeployment
+## Schritt 3 Machinedeployment rotieren
 
 Zum Abschließen der Migration muss das Machinedeployment einmalig rotiert werden.
 ![worker rotation](rotate-nodes.png)
 
-> __Wichtig:__ 
+> __Wichtig:__
 > Der alte Neutron Loadbalancer leitet ab hier den Traffic nicht mehr richtig weiter.**
 
 ## Schritt 4 Aufräumen

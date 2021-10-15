@@ -14,7 +14,7 @@ Dafür benötigt man folgende Schritte:
 - Man muss einen SSH-Key erstellen,
 - Das Cluster muss den `User SSH Key Agent` aktiviert haben,
 - Man muss den SSH-Key zum Projekt hinzufügen und
-- ihn schließlich im Cluster aktivieren.
+- Ihn schließlich im Cluster aktivieren.
 
 In der Regel muss weiterhin den Worker-Nodes noch eine Floating IP zugewiesen werden, damit der Zugriff auf die Worker-Nodes auch netzwerkseitig funktioniert.
 
@@ -88,7 +88,7 @@ Dies gilt auch für die Erstellung eines neuen Clusters im gleichen Projekt.
 
     ![Edit-Cluster](manage-ssh-keys.png)
 
-4. Nun kann der eben erstellte SSH-Key aus einer Drop-Down Liste ausgewählt werden.
+4. Nun kann der eben erstellte SSH-Key aus einer Dropdown Liste ausgewählt werden.
 
     ![Manage-Keys](manage-keys.png)
 

@@ -97,7 +97,7 @@ $ sudo systemctl reboot
 
 ## Ubuntu
 
-Ubuntu support got removed in July 2021. Read here how to update to supported Flatcar OS for existing machine deployments
+Ubuntu support in iMKE got removed in July 2021. Read here how to update to supported Flatcar OS for existing machine deployments
 
 ### Update to Flatcar
 
@@ -129,4 +129,3 @@ In this guide you've learned the following:
 * [Auto-Updating Flatcar Container Linux](https://kinvolk.io/docs/lokomotive/git-main/how-to-guides/auto-update-flatcar/)
 * [FLUO on Github](https://github.com/kinvolk/flatcar-linux-update-operator)
 * [The Flatcar partitioning scheme](https://kinvolk.io/docs/flatcar-container-linux/latest/reference/developer-guides/sdk-disk-partitions/)
-

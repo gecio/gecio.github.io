@@ -9,7 +9,7 @@ parent: iMKE-Projekte verwalten
 
 ### Service Accounts
 
-Service accounts ermöglichen die Nutzung eines langlebigen Tokens, welchen man für Authentifizierung mit der iMKE API nutzen kann.
+Service Accounts ermöglichen die Nutzung eines langlebigen Tokens, welchen man für Authentifizierung mit der iMKE API nutzen kann.
 
 Ein Service Account ist ein spezielles Userkonto, welches einem iMKE **Projekt**, und nicht einem individuellen Endbenutzer gehört. Die Ressourcen des Projekts nehmen die Identität des Service Accounts an, um die iMKE API anzusprechen, so dass die Benutzer nicht direkt involviert sind. Ein Service Account kann einen oder mehrere JTW Tokens haben, welcher für die Authentifizierung bei der iMKE API verwendet werden kann. Ein JWT Token ist standardmäßig 3 Jahre lang gültig.
 
@@ -109,6 +109,6 @@ Es ist möglich, ein Service Account zu löschen und mit dem gleichen Namen neu 
 
 Der Name eines Service Accounts oder Tokens kann nach dem Anlegen geändert werden.
 
-Der Service Account Token ist nur während des Erstellen des Users sichtbar.
+Der Service Account Token ist nur während des Erstellens des Users sichtbar.
 
 Der Benutzer kann einen Token erneuern, aber der vorherige Token wird dabei ungültig.

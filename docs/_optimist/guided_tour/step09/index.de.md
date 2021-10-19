@@ -93,7 +93,7 @@ $ openstack security group rule create allow-ssh-from-anywhere --protocol tcp --
 
 Um zu prüfen, ob die Security Group korrekt angelegt wurde und um eine
 Übersicht über alle zu erhalten, kann folgender Befehl genutzt
-werden, `openstack security group show allow-ssh-from-anywhere:`
+werden, `openstack security group show allow-ssh-from-anywhere`
 
 ```bash
 $ openstack security group show allow-ssh-from-anywhere

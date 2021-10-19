@@ -5,6 +5,7 @@ permalink: /imke/accessmanagement/
 nav_order: 6000
 has_children: true
 ---
+<!-- LTeX:  language=de-DE -->
 
 Prinzipiell gibt es zwei Möglichkeiten, Benutzern Zugriff auf ein iMKE-Cluster zu gewähren:
 
@@ -19,7 +20,7 @@ Erteilt man Benutzern Zugriff auf ein gesamtes iMKE-Projekt (wie [hier](/imke/ma
 
 ![Download kubeconfig](download_kubeconfig.png)
 
-Dabei teilen sich alle Benutzer mit den gleichen Zugriffsrechten effektiv eine kubeconfig, da in diesem Fall einen token-basierte Authentifizierung genutzt wird und je Access-Level ein Token erstellt wird. Wenn der Zugriff für einen Benutzer mit projektweitem Zugriff entzogen werden soll, muss daher die `Revoke Token`-Funktion des Clusters genutzt werden. Bestehende Token werden dann ungültig - und in der Folge müssen sich alle verbliendenen Benutzer eine neue kubeconfig herunterladen.
+Dabei teilen sich alle Benutzer mit den gleichen Zugriffsrechten effektiv eine `kubeconfig`, da in diesem Fall einen token-basierte Authentifizierung genutzt wird und je Access-Level ein Token erstellt wird. Wenn der Zugriff für einen Benutzer mit projektweitem Zugriff entzogen werden soll, muss daher die `Revoke Token`-Funktion des Clusters genutzt werden. Bestehende Token werden dann ungültig - und in der Folge müssen sich alle verbliebenen Benutzer eine neue `kubeconfig` herunterladen.
 
 ## Role-based Access Control (RBAC)
 
@@ -34,4 +35,3 @@ Mehr über Kubernetes RBAC finden Sie [hier](https://kubernetes.io/docs/referenc
 **Weiterführende Themen**
 * [Projektzugriff: Mit einem Cluster verbinden](/imke/accessmanagement/connectingtoacluster/)
 * [Role-Based Access Control (RBAC)](/imke/accessmanagement/usingrbac/)
-* [Das Web Terminal](/imke/accessmanagement/webterminal/)

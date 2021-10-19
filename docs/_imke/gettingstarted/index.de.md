@@ -5,6 +5,7 @@ permalink: /imke/gettingstarted/
 nav_order: 2000
 has_children: false
 ---
+<!-- LTeX:  language=de-DE -->
 
 Diese Anleitung beschreibt, wie Sie ihr erstes iMKE-Projekt inkl. einem ersten
 Kubernetes-Cluster erzeugen, wie Sie auf das Cluster zugreifen und anschließend
@@ -66,7 +67,7 @@ auswählen:
 
 Mit dem Hinzufügen der Credentials und dem Auswählen des OpenStack-Projekts sind alle
 notwendigen Eingaben getätigt, so dass wir mit dem nächsten Schritt fortfahren können. Wenn wir das tun,
-wird automatisch ein eigenes Netzwerk, Subnet sowie eine Security Gruppe für das neue Cluster erstellt.
+wird automatisch ein eigenes Netzwerk, Subnetz sowie eine Security Gruppe für das neue Cluster erstellt.
 
 Es ist allerdings auch möglich, ein existierendes Netzwerk verwenden, um den Cluster zu erstellen.
 Dazu müssen wir das Netzwerk und das Subnetz auswählen. Diese müssen allerdings mit einem Router verbunden sein.
@@ -107,7 +108,7 @@ auf den nach unten gerichteten Pfeil:
 Damit laden wir eine Datei herunter, die sich im Kubernetes-Jargon
 `kubeconfig` nennt. In dieser Datei stehen alle Endpunkte,
 Zertifikate sowie Bereiche des Clusters. Mit dieser Datei ist
-`kubectl`  in der Lage, sich mit dem Cluster zu verbinden.
+`kubectl` in der Lage, sich mit dem Cluster zu verbinden.
 
 Um diese Datei zu nutzen, müssen wir sie auf der Konsole
 registrieren. Dafür gibt es zwei Möglichkeiten:
@@ -145,9 +146,9 @@ hier: "zeige mir alle Nodes meines Clusters":
 kubectl get nodes
 
 NAME                           STATUS   ROLES    AGE   VERSION
-musing-kalam-XXXXXXXXX-ks4xz   Ready    <none>   10m   v1.15.0
-musing-kalam-XXXXXXXXX-txc4w   Ready    <none>   10m   v1.15.0
-musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.15.0
+musing-kalam-XXXXXXXXX-ks4xz   Ready    <none>   10m   v1.21.5
+musing-kalam-XXXXXXXXX-txc4w   Ready    <none>   10m   v1.21.5
+musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.21.5
 ```
 
 ## Aufräumen
@@ -160,5 +161,5 @@ der Cluster-Name angefragt:
 ![Step 4](delete_4.png)
 
 Da wir alles löschen wollen, lassen wir die beiden Checkboxen
-angehakt. Damit werden auch Volumes und LoadBalancer in
+angekreuzt. Damit werden auch Volumes und Loadbalancer in
 OpenStack gelöscht.

@@ -5,6 +5,7 @@ permalink: /imke/managingprojects/
 nav_order: 3000
 has_children: true
 ---
+<!-- LTeX:  language=de-DE -->
 
 Ein iMKE-Projekt ist eine Abstraktionsschicht, um mehrere Kubernetes
 Cluster gemeinsam verwalten zu können.

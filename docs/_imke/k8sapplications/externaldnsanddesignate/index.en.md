@@ -6,17 +6,17 @@ nav_order: 7300
 parent: Kubernetes Applications
 ---
 
-To reduce manual effort and automate the configuration of DNS zones, you may want to use [External DNS](https://github.com/kubernetes-sigs/external-dns). In summary, External DNS allows you to control DNS records dynamically via Kubernetes resources in a DNS provider-agnostic way. External DNS is not a DNS server by itself, but merely configures other DNS providers (e.g. OpenStack Designate, Amazon Route53, Google Cloud DNS, etc.)
+To reduce manual effort and automate the configuration of DNS zones, you may want to use [ExternalDNS](https://github.com/kubernetes-sigs/external-dns). In summary, ExternalDNS allows you to control DNS records dynamically via Kubernetes resources in a DNS provider-agnostic way. External DNS is not a DNS server by itself, but merely configures other DNS providers (e.g. OpenStack Designate, Amazon Route53, Google Cloud DNS, etc.)
 
 ## Prerequisites
 
 To successfully finish this guide, you need the following items.
 
 * `kubectl` [latest version](https://kubernetes.io/de/docs/tasks/tools/install-kubectl/)
-* A running Kubernetes Cluster, created with iMKE, with a ready Machine Deployment.
-  * See [Creating a Cluster](/imke/clusterlifecycle/creatingacluster).
-* A valid `kubeconfig` for your cluster.
-  * See [Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster/).
+* A running Kubernetes Cluster, created with iMKE, with a ready Machine Deployment
+  * See [Creating a Cluster](/imke/clusterlifecycle/creatingacluster)
+* A valid `kubeconfig` for your cluster
+  * See [Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster/)
 * Installed [OpenStack CLI tools](https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html)
 * [OpenStack API access](https://docs.innovo.cloud/guided_tour/en/step04/#credentials)
 * Valid domain
@@ -32,7 +32,7 @@ dns2.ddns.innovo.cloud
 
 ## Creating your DNS Zone
 
-Before starting to use External-DNS you need to add your DNS zones to your DNS provider, in this case, Designate DNS.
+Before starting to use ExternalDNS you need to add your DNS zones to your DNS provider, in this case, Designate DNS.
 
 In our example we will use the test domain name `foobar.cloud.` It's important to create the zones before starting to control the DNS resources via Kubernetes.
 
@@ -229,8 +229,8 @@ Wait a few minutes, and then test the availability over the internet. For exampl
 
 By completing this guide you've accomplished the following:
 
-* Learn what External-DNS is and how to install it
-* Configured External-DNS with Helm to use Designate
+* Learn what ExternalDNS is and how to install it
+* Configured ExternalDNS with Helm to use Designate
 * Created a deployment with nginx and test your connectivity
 
 Congratulations! You now know all required steps to control your DNS resources in Kubernetes!

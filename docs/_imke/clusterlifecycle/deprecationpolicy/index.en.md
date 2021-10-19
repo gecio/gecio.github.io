@@ -12,13 +12,13 @@ The upstream Kubernetes project releases approximately four Kubernetes versions 
 
 From v1.19 onwards, Kubernetes will follow an N-3 support policy. This means that the support window will be extended to one year.
 
-A good visualisation of the period for which each release is/was supported is below:
+A good visualization of the period for which each release is/was supported is below:
 
 ![K8sVersionSupport](k8s_version_support.png)
 
 iMKE aligns loosely to this lifecycle by continuously introducing new versions and deprecating older ones.
 
-After a given Kubernetes version has reached End-of-Life, it will not get any bugfixes or security updates. Hence we can not support it anymore either and have to deprecate it.
+After a given Kubernetes version has reached End-of-Life, it will not get any bugfixes or security updates. Hence, we can not support it anymore either and have to deprecate it.
 
 ## The deprecation process
 
@@ -30,7 +30,7 @@ You can find the list of supported Kubernetes versions and their planned End-of-
 
 **What does an End-of-Life announcement mean for me?**
 
-If an End-of-Life announcement for a given Kubernetes version has been made, customers are asked to upgrade their clusters to a newer version (preferrably the latest one).
+If an End-of-Life announcement for a given Kubernetes version has been made, customers are asked to upgrade their clusters to a newer version (preferably the latest one).
 
 **What happens if I don't update until the EOL date?**
 
@@ -39,7 +39,6 @@ If a customer cluster will not get updated before the removal of an EOL'd Kubern
 **Can I stay on an EOL version forever?**
 
 No, as this would possibly mean serious security issues in the future.
-
 
 ## iMKE Force Upgrade policy
 

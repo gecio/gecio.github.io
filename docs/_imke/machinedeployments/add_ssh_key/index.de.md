@@ -5,6 +5,7 @@ permalink: /imke/machinedeployments/add_ssh_key/
 nav_order: 5400
 parent: Machine Deployments
 ---
+<!-- LTeX:  language=de-DE -->
 
 Die iMKE-Plattform bietet die Möglichkeit, einen SSH-Key auf Worker-Nodes zu installieren. Dies kann zum Beispiel hilfreich sein, wenn man das Cluster oder eine eigene Applikation unmittelbar auf den Worker Nodes debuggen möchte.
 
@@ -13,7 +14,7 @@ Dafür benötigt man folgende Schritte:
 - Man muss einen SSH-Key erstellen,
 - Das Cluster muss den `User SSH Key Agent` aktiviert haben,
 - Man muss den SSH-Key zum Projekt hinzufügen und
-- ihn schließlich im Cluster aktivieren.
+- Ihn schließlich im Cluster aktivieren.
 
 In der Regel muss weiterhin den Worker-Nodes noch eine Floating IP zugewiesen werden, damit der Zugriff auf die Worker-Nodes auch netzwerkseitig funktioniert.
 
@@ -27,7 +28,7 @@ Ist der Agent nicht bei der Erstellung des Clusters aktiviert worden, können na
 
 ### Den Status des User SSH Key Agents überprüfen
 
-Der aktuelle Status des User Key SSH Agents kann auf der Übersichtsseite des CLusters eingesehen werden:
+Der aktuelle Status des User Key SSH Agents kann auf der Übersichtsseite des Clusters eingesehen werden:
 
 ![User SSH Key Agent status](user-ssh-key-agent-status.png)
 
@@ -66,7 +67,7 @@ Die erzeugten Schlüssel (öffentlich und privat) werden standardmäßig in `.ss
     ![SSH-Key-Page](ssh-key-page.png)
 
 4. Zur leichteren Identifikation geben Sie dem Key bitte einen Namen und fügen Sie den öffentlichen (nicht den privaten!)
-   Schlüssel ind as dafür vorgesehene Feld ein:
+   Schlüssel in das dafür vorgesehene Feld ein:
 
     ![Ssh-key](ssh-key.png)
 
@@ -81,29 +82,29 @@ Dies gilt auch für die Erstellung eines neuen Clusters im gleichen Projekt.
 
 2. Um das Cluster-Menü zu öffnen, bitte auf die drei Punkte klicken:
 
-    ![Trhee-Dots](three-dots.png)
+    ![Three-Dots](three-dots.png)
 
 3. Aus dem Menü bitte `Manage SSH keys` wählen:
 
     ![Edit-Cluster](manage-ssh-keys.png)
 
-4. Nach einem Klick auf `+ Add SSH key` kann der eben erstellte SSH-Key aus einer Drop-Down Liste ausgewählt werden.
+4. Nun kann der eben erstellte SSH-Key aus einer Dropdown Liste ausgewählt werden.
 
     ![Manage-Keys](manage-keys.png)
 
-5. Um den Key nun hinzuzufügen, muss abschließend noch der `Add SSH Key`-Button gedrückt werden:
+5. Nach der Auswahl wird der Key in der Liste angezeigt und kann dort bei Bedarf auch wieder gelöscht werden.
 
     ![Key-List](key-list.png)
 
-Dein Key wird nur allen Worker-Nodes in allen Machinedeployments hinzugefügt.
+Dein Key wird nun allen Worker-Nodes in allen Machinedeployments hinzugefügt.
 
-## Einen SSH-Key während der CLuster-Erstellung hinzufügen
+## Einen SSH-Key während der Cluster-Erstellung hinzufügen
 
 Es ist auch möglich, einen SSH-Key bereits zum Zeitpunkt der Cluster Erstellung zu konfigurieren. Das genaue Vorgehen dazu ist im Abschnitt "[Einen Cluster anlegen](/imke/clusterlifecycle/creatingacluster/)" beschrieben.
 
 ## Am Worker anmelden
 
-Sobald den bzw. die SSH-Keys zum CLuster hinzugefügt hat, muss den Worker-Nodes noch eine öffentliche (Floating) IP zugewiesen werden, damit diese netzwerkseitig erreichbar sind.
+Sobald der bzw. die SSH-Keys zum Cluster hinzugefügt wurden, muss den Worker-Nodes noch eine öffentliche (Floating) IP zugewiesen werden, damit diese netzwerkseitig erreichbar sind.
 
 Dazu Editieren Sie die Machinedeployments:
 

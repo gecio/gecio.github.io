@@ -5,17 +5,18 @@ permalink: /imke/managingprojects/projectserviceaccounts/
 nav_order: 3300
 parent: iMKE-Projekte verwalten
 ---
+<!-- LTeX:  language=de-DE -->
 
 ### Service Accounts
 
-Service accounts ermöglichen die Nutzung eines langlebigen Tokens, welchen man für Authentifizierung mit der iMKE API nutzen kann.
+Service Accounts ermöglichen die Nutzung eines langlebigen Tokens, welchen man für Authentifizierung mit der iMKE API nutzen kann.
 
 Ein Service Account ist ein spezielles Userkonto, welches einem iMKE **Projekt**, und nicht einem individuellen Endbenutzer gehört. Die Ressourcen des Projekts nehmen die Identität des Service Accounts an, um die iMKE API anzusprechen, so dass die Benutzer nicht direkt involviert sind. Ein Service Account kann einen oder mehrere JTW Tokens haben, welcher für die Authentifizierung bei der iMKE API verwendet werden kann. Ein JWT Token ist standardmäßig 3 Jahre lang gültig.
 
 ## Kernkonzept
 
 Service Accounts sind Ressourcen eines Projekts. Nur der Eigentümer eines Projekts kann einen Service Account anlegen.
-Es ist nicht notwendig, eine neue Gruppe für die SA zu erstellen, indem wir das SA zu einer der bereits existierenden Gruppen: `editors` oder `viewers` zuweisen möchten.
+Es ist nicht notwendig, eine neue Gruppe für die Service Accounts zu erstellen. Wir können die Service Accounts einer bereits existierenden Gruppen: `Project Manager`, `Editor` oder `Viewer` zuweisen.
 
 Ein Service Account ist automatisch durch ein `UserProjectBinding` mit dem Projekt verknüpft, welche eine Bindung zwischen dem Service Account und dem Projekt definiert. Ein Service Account wird nach dem Löschen eines Projekts automatisch entfernt.
 
@@ -33,11 +34,11 @@ Ein Service Account ist automatisch durch ein `UserProjectBinding` mit dem Proje
 
     ![SA-Add](sa-add.png)
 
-1. Den Namen des Service Accounts und die Gruppe (`Editor` oder `Viewer`) angeben
+1. Den Namen des Service Accounts und die Gruppe (`Project Manager`, `Editor` oder `Viewer`) angeben
 
     ![SA-Name](sa-name.png)
 
-1. Das SA hinzufügen `Add`
+1. Das SA hinzufügen `Add Service Account`
 
     ![SA-Add-SA](sa-add-sa.png)
 
@@ -47,11 +48,11 @@ Nun wurde ein Service Account angelegt. Um einen Token mit dem SA zu verknüpfen
 
     ![SA-Select](sa-select.png)
 
-1. Benutze die `+Add Token` Schaltfläche
+1. Benutze die `+ Add Token` Schaltfläche
 
     ![SA-Add-Token](sa-add-token.png)
 
-1. Einen Namen angeben und den Token mit `Add` hinzufügen
+1. Einen Namen angeben und den Token mit `Add Token` hinzufügen
 
     ![SA-Tokenname](sa-tokenname.png)
 
@@ -108,6 +109,6 @@ Es ist möglich, ein Service Account zu löschen und mit dem gleichen Namen neu 
 
 Der Name eines Service Accounts oder Tokens kann nach dem Anlegen geändert werden.
 
-Der Service Account Token ist nur während des Erstellen des Users sichtbar.
+Der Service Account Token ist nur während des Erstellens des Users sichtbar.
 
 Der Benutzer kann einen Token erneuern, aber der vorherige Token wird dabei ungültig.

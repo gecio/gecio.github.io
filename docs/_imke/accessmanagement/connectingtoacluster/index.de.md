@@ -5,6 +5,7 @@ permalink: /imke/accessmanagement/connectingtoacluster/
 nav_order: 6100
 parent: Access Management
 ---
+<!-- LTeX:  language=de-DE -->
 
 Nachdem wir in iMKE einen Cluster angelegt haben wird
 es Zeit, sich mit diesem zu verbinden. Das ist notwendig um
@@ -25,7 +26,7 @@ Wir klicken rechts oben auf den nach unten gerichteten Pfeil.
 Damit laden wir eine Datei herunter, die sich im Kubernetes-Umfeld
 `kubeconfig` nennt. In dieser Datei stehen alle Endpunkte,
 Zertifikate sowie Bereiche des Clusters. Mit dieser Datei ist
-`kubectl`  in der Lage, sich mit dem Cluster zu verbinden.
+`kubectl` in der Lage, sich mit dem Cluster zu verbinden.
 
 Um diese Datei zu nutzen, müssen wir sie auf der Konsole
 registrieren. Dafür gibt es zwei Möglichkeiten:

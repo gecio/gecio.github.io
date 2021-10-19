@@ -5,6 +5,7 @@ permalink: /imke/clusterlifecycle/creatingacluster/
 nav_order: 4100
 parent: Cluster Lebenszyklus
 ---
+<!-- LTeX:  language=de-DE -->
 
 Einen Cluster in iMKE anzulegen benötigt nur ein paar Klicks.
 Doch bevor wir dies tun können, benötigen wir ein Projekt.
@@ -44,7 +45,7 @@ wird automatisch ein eigenes Netzwerk, Subnet sowie eine Security Gruppe für da
 
 Es ist allerdings auch möglich, ein existierendes Netzwerk verwenden, um den Cluster zu erstellen.
 Dazu müssen wir das Netzwerk und das Subnetz auswählen. Diese müssen allerdings mit einem Router verbunden sein.
-In unserer [OpenStack Dokumentation](/optimist/guided_tour/step10/) ist beschrieben, wie man einen Router erstellen 
+In unserer [OpenStack Dokumentation](/optimist/guided_tour/step10/) ist beschrieben, wie man einen Router erstellen
 und mit einem Netzwerk verbinden kann.
 
 ![Add Cluster Network](create-cluster-network-exist.png)
@@ -52,7 +53,7 @@ und mit einem Netzwerk verbinden kann.
 Im nächsten Schritt definieren wir, wie viele und welche virtuellen Maschinen als Worker-Nodes im Cluster verfügbar
 sein sollen.
 
-Zuerst geben wir dem so genannten `Machine Deployment` einen Namen. Für unser Testcluster nutzen wir dazu den Namensgenerator:
+Zuerst geben wir dem sogenannten `Machine Deployment` einen Namen. Für unser Testcluster nutzen wir dazu den Namensgenerator:
 ![Add Cluster Step 4](add_step4.png)
 
 Danach spezifizieren wir die `Replicas` (Anzahl der Worker-Nodes im Kubernetes-Cluster) und den `Flavor` (den Maschinentyp), welcher
@@ -77,5 +78,5 @@ Folgende Schritte wurden erfolgreich durchgeführt und gelernt:
 * Was ist ein iMKE Cluster
 * Wie erstellt man ein iMKE Cluster
 
-Herzlichen Glückwunsch! Dies sind alle notwendigen Steps um ein Kubernetes Cluster
-in iMKE anzulegen. Wie dieses verwendet werden kann steht auf den nächsten Seiten.
+Herzlichen Glückwunsch! Dies sind alle notwendigen Schritte um ein Kubernetes Cluster
+in iMKE anzulegen. Wie dieses verwendet werden kann, steht auf den nächsten Seiten.

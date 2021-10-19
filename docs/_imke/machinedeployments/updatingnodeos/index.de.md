@@ -5,6 +5,7 @@ permalink: /imke/machinedeployments/updatingnodeos/
 nav_order: 5500
 parent: Machine Deployments
 ---
+<!-- LTeX:  language=de-DE -->
 
 ## Flatcar
 
@@ -96,11 +97,11 @@ $ sudo systemctl reboot
 
 ## Ubuntu
 
-Ubuntu wurde im Juli 2021 aus dem Support genommen, bitte aktualisieren Sie Ihre bestehenden Machine Deployments.
+Ubuntu wurde im Juli 2021 aus dem Support für iMKE genommen, bitte aktualisieren Sie Ihre bestehenden Machine Deployments.
 
-### Auf Flatcar aktualisieren 
+### Auf Flatcar aktualisieren
 
-Um auf Flatcar zu aktualisieren, klicken sie bitte den Machine Deployment Edit Button.
+Um auf Flatcar zu aktualisieren, klicken Sie bitte den `Machine Deployment Edit` Button.
 
 ![Edit Machine Deployment](update_to_flatcar_edit.png)
 
@@ -108,7 +109,7 @@ Dann auf das Flatcar Logo klicken.
 
 ![Change to Flatcar](update_to_flatcar.png)
 
-Es wurde das Image gewechselt und die Autoupdate option angezeigt.
+Es wurde das Image gewechselt und die Autoupdate Option angezeigt.
 
 ![Save Flatcar](update_to_flatcar_save.png)
 

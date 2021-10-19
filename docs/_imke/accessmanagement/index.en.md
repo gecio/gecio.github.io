@@ -19,7 +19,7 @@ Giving users access on a project level (like described [here](/imke/managingproj
 
 ![Download kubeconfig](download_kubeconfig.png)
 
-All users with the same level of project-access effectively share the same kubeconfig. This kubeconfig uses a token-based authentication, and the token is bound to the level of access (read-only/admin access). In case access needs to be removed for such a user, the tokens needs to be revoked and all users need to download their kubeconfig again.
+All users with the same level of project-access effectively share the same `kubeconfig`. This `kubeconfig` uses a token-based authentication, and the token is bound to the level of access (read-only/admin access). In case access needs to be removed for such a user, the tokens needs to be revoked, and all users need to download their `kubeconfig` again.
 
 ## Role-based Access Control (RBAC)
 
@@ -27,11 +27,11 @@ Using role-based access control allows a project admin to provide more fine-grai
 
 ![RBAC option](rbac.png)
 
-A user with this level of access can download a specific kubeconfig, which can be directly downloaded using a direct link (see below). Such a user does not need access to the iMKE Dashboard at all.
+A user with this level of access can download a specific `kubeconfig`, which can be directly downloaded using a direct link (see below). Such a user does not need access to the iMKE Dashboard at all.
 
 More on Kubernetes RBAC can be found [here](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
 
 **Further reading**
+
 * [Project access: Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster/)
 * [Role-Based Access Control (RBAC)](/imke/accessmanagement/usingrbac/)
-* [The Web Terminal](/imke/accessmanagement/webterminal/)

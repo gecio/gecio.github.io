@@ -5,6 +5,7 @@ permalink: /imke/managingprojects/creatingaproject/
 nav_order: 3100
 parent: iMKE-Projekte verwalten
 ---
+<!-- LTeX:  language=de-DE -->
 
 Nach dem Login in iMKE erscheint folgendes Fenster, in dem wir auf
 `Add Project` klicken müssen.

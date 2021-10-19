@@ -14,4 +14,3 @@ Running applications on Kubernetes is a complex topic. In this section we have c
 * [External-DNS with Designate](/imke/k8sapplications/externaldnsanddesignate/)
 * [Time Zone Management](/imke/k8sapplications/timezones/)
 * [StorageClass Setup](/imke/k8sapplications/storageclasses/)
-* [Resizing Volumes](/imke/k8sapplications/resizevolumes/)

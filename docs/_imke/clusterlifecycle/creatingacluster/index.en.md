@@ -54,7 +54,7 @@ in the cluster.
 First, this so called `Machine Deployment` needs a name. For our test cluster we use the random name generator:
 ![Add Cluster Step 4](add_step4.png)
 
-Next, we should specify the `Replicas` (number of worker nodes in your Kubernetes cluster) and the `Flavor` (machine type), which 
+Next, we should specify the `Replicas` (number of worker nodes in your Kubernetes cluster) and the `Flavor` (machine type), which
 defines the amount of CPU and RAM for each worker node:
 ![Add Cluster Step 4.2](add_step4_2.png)
 
@@ -70,7 +70,7 @@ This will open a page with all cluster details:
 
 ## Summary
 
-In this guide, we achieved and learnt the following:
+In this guide, we achieved and learned the following:
 
 * What is an iMKE Cluster
 * How to create an iMKE Cluster

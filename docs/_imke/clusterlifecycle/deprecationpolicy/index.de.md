@@ -5,6 +5,7 @@ permalink: /imke/clusterlifecycle/deprecationpolicy/
 nav_order: 4500
 parent: Cluster Lebenszyklus
 ---
+<!-- LTeX:  language=de-DE -->
 
 ## Deprecation Policy in iMKE
 

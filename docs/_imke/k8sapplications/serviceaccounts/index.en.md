@@ -6,23 +6,23 @@ nav_order: 7200
 parent: Kubernetes Applications
 ---
 
-Limited access to a kubernetes cluster can be achieved using kubernetes service accounts, and the RBAC feature within kubernetes.
+Limited access to a Kubernetes cluster can be achieved using Kubernetes service accounts, and the RBAC feature within Kubernetes.
 
 To achieve this, we will need to create:
 
-- kubernetes service account
+- Kubernetes service account
 - access role
-- role binding for the kubernetes service account to use the access role
+- role binding for the Kubernetes service account to use the access role
 
-All authentication with kubernetes clusters created in IMKE is done using
-bearer tokens. When you create a new kubernetes service account a secret will
+All authentication with Kubernetes clusters created in IMKE is done using
+bearer tokens. When you create a new Kubernetes service account a secret will
 be created for it in the same namespace, and it will be automatically
-removed when you delete the kubernetes service account.
+removed when you delete the Kubernetes service account.
 
-## Creating a kubernetes service account
+## Creating a Kubernetes service account
 
-To create a kubernetes service account run the following command and replace
-`my-serviceaccount` with the name you want to use for the kubernetes service
+To create a Kubernetes service account run the following command and replace
+`my-serviceaccount` with the name you want to use for the Kubernetes service
 account:
 
 ```bash
@@ -55,7 +55,7 @@ kubectl get secret $SECRETNAME -o jsonpath='{.data.token}' --namespace=my-namesp
 Provide the token that has been printed with the name of the service account
 to a developer or third party to allow them to interact with the cluster.
 
-At this point the service account can authenticate with the kubernetes
+At this point the service account can authenticate with the Kubernetes
 cluster, but is unable to use it to do anything. We now need to create a role,
 and a role binding to provide permissions to the service account.
 
@@ -66,7 +66,7 @@ cluster roles. As cluster roles provide access to all namespaces it is
 recommended that you don't use them unless you have to. We will provide
 examples on how to use the namespace restricted roles here.
 
-Roles explicitly whitelist permissions for users (both human and kubernetes
+Roles explicitly whitelist permissions for users (both human and Kubernetes
 service accounts) and when a user has multiple roles they can do anything
 that is granted by any of the roles.
 
@@ -120,9 +120,9 @@ The official kubernetes documentation on [controlling access](https://kubernetes
 
 ## Summary
 
-In this guide we learnt how to use the kubernetes cli to:
+In this guide we learned how to use the Kubernetes CLI to:
 
-- Create a kubernetes service account
+- Create a Kubernetes service account
 - Retrieve the automatically generated bearer token for a service account
-- Create a new role in kubernetes RBAC
-- Create a binding to allow the kubernetes service account to use that role
+- Create a new role in Kubernetes RBAC
+- Create a binding to allow the Kubernetes service account to use that role

@@ -16,7 +16,7 @@ To grant users cluster-wide permissions, leave the switch on `Cluster`, add the 
 
 ![Add a cluserrolebinding](add_binding_cluster.png)
 
-Please note that the user must exist in iMKE, or otherwise he/she will not be able to log in to download the kubeconfig later on.
+Please note that the user must exist in iMKE, or otherwise he/she will not be able to log in to download the `kubeconfig` later on.
 The selectable Roles are predefined `ClusterRoles` which can be viewed by running `kubectl`:
 
 ```bash
@@ -47,7 +47,7 @@ After you completed these steps, the rights should be visible in the RBAC widget
 
 ## Provide users with their kubeconfig
 
-Once you assigned the user a cluster- oder namespace-wide role, you can provide him/her with a link to download the kubeconfig.
+Once you assigned the user a cluster- oder namespace-wide role, you can provide him/her with a link to download the `kubeconfig`.
 
 To do so, hit the `Share kubeconfig` button on the top of the Dashboard:
 
@@ -57,8 +57,8 @@ Next, copy the link and send to the user:
 
 ![Share kubeconfig dialog](share_kubeconfig_dialog.png)
 
-After the user has logged in, the download will start of the kubeconfig will start directly:
+After the user has logged in, the download will start of the `kubeconfig` will start directly:
 
 ![Login page](login.png)
 
-Once a user has downloaded his/her kubeconfig, any further changes made on the RBAC will have *immediate* effect. Especially there is no need to revoke cluster tokens to remove access for a user. Just remove the RoleBindings and access is no longer possible.
+Once a user has downloaded his/her `kubeconfig`, any further changes made on the RBAC will have *immediate* effect. Especially there is no need to revoke cluster tokens to remove access for a user. Just remove the RoleBindings and access is no longer possible.

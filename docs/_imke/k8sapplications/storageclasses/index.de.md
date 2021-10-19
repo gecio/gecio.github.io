@@ -5,8 +5,11 @@ permalink: /imke/k8sapplications/storageclasses/
 nav_order: 7500
 parent: Anwendungen in Kubernetes
 ---
+<!-- LTeX:  language=de-DE -->
 
-Es gibt eine Default Storage Class pro Cluster
+Es gibt eine vorinstalliere Default Storage Class pro Cluster.
+> __Achtung:__
+> Diese wird von iMKE verwaltet und kann **jederzeit überschrieben** werden. Bitte erstellen Sie für Änderungen eine eigene Storage Class.
 
 ```
 kubectl get storageclasses.storage.k8s.io
@@ -20,29 +23,27 @@ NAME                   PROVISIONER                AGE
 cinder-csi (default)   cinder.csi.openstack.org   6h45m
 ```
 
-Der Provisioner is abhängig von der erstellung des Clusters and der Kubernetes Version
+Der Provisioner ist abhängig von der Erstellung des Clusters und der Kubernetes Version.
 
-* kubernetes.io/cinder
+* `kubernetes.io/cinder`
     alle Kubernetes Cluster kleiner 1.16 und vor dem 29.10 angelegt.
 
-* cinder.csi.openstack.org
+* `cinder.csi.openstack.org`
     alle Kubernetes Cluster 1.16+ und nach dem 19.10 angelegt.
-
-Beide sind default StorageClasses für Volumes.
 
 ## Openstack Volume Types
 
-* default <- wird in der Default Class verwendet
-* low-iops
-* high-iops
+Die Openstack Volume Types nach maximal möglichen IOPS sortiert:
 
-We der Name schon andeutet, eine hat mehr IOPS QoS, eine weniger :-)
+* low-iops
+* default <- wird in der Default Class verwendet
+* high-iops
 
 ### Eine eigene Klasse anlegen
 
-Wenn eine der beiden ander Typen benötigt wird, kann man sich eigene Definitionen anlegen.
+Wenn eine der beiden anderen Typen benötigt wird, kann man sich eigene Definitionen anlegen.
 
-bsp.
+Beispiel:
 ```
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
@@ -58,4 +59,4 @@ und anlegen mit `kubectl apply -f storage-class.yaml`
 * `provisioner` Benutzt immer den aktuellen Provisioner. Man findet ihn in der Standardklasse.
 * `type` Benutze immer eine offiziell vom Optimist unterstützten Disk-Type (aktuell low-iops and high-iops).
 
-Um die neue Klasse zu verwenden, muss man die Volume definition mit dem neuen Namen anpassen.
+Um die neue Klasse zu verwenden, passen Sie die Volume Definition mit dem neuen Namen an.

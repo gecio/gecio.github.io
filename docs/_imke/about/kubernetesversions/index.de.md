@@ -5,8 +5,10 @@ permalink: /imke/about/kubernetesversions/
 nav_order: 1900
 parent: Über iMKE
 ---
+<!-- LTeX:  language=de-DE -->
 
 ## Unterstützte Kubernetes Versionen
+
 Folgende Kubernetes Versionen unterstützen wir aktuell in iMKE.
 
 | Version | iMKE Deprecation| iMKE End-of-Life |
@@ -21,6 +23,6 @@ Folgende Kubernetes Versionen unterstützen wir aktuell in iMKE.
 
 ## Force Upgrade Policy
 
-Falls ein Kundencluster von seinem Eigentümer nicht zum angekündigten End-of-Life Datum aktualisiert wird, wird er automatisch automatisch auf die letzte noch unterstützte Version aktualisiert.
+Falls ein Kundencluster von seinem Eigentümer nicht zum angekündigten End-of-Life Datum aktualisiert wird, wird er automatisch auf die letzte noch unterstützte Version aktualisiert.
 
 Sie können mehr über die iMKE Deprecation- und Force-Upgrade-Richtlinie [hier](../../clusterlifecycle/deprecationpolicy) lesen.

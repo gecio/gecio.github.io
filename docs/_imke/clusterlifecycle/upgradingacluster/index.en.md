@@ -17,7 +17,7 @@ own infrastructure up-to-date. In this case the following section
 manually by you.
 
 Before you upgrade a cluster, please refer to the target version's [Changelog](/imke/about/)
-and make sure you familiarise yourself with the upcoming changes.
+and make sure you familiarize yourself with the upcoming changes.
 
 One tool that can help to prepare the update will be [kubepug](https://github.com/rikatz/kubepug).
 It checks all deployed resources against the new Kubernetes version and will warn about removals and deprecations.
@@ -66,8 +66,8 @@ Next we click on the pencil icon to open the update view.
 ![Step 4](update_4.png)
 
 Now, under `kubelet Version` we select the version, for example
-`1.20.7`, which matches the cluster's master version. Confirm the
-update by clicking `Edit Machine Deployment`:
+`1.21.5`, which matches the cluster's master version. Confirm the
+update by clicking `Save Changes`:
 
 ![Step 5](update_5.png)
 
@@ -86,7 +86,7 @@ As a solution to this is a simple bash script, which per-namespace triggers
 the regeneration of all pods.
 <https://github.com/truongnh1992/playing-with-istio/blob/master/upgrade-sidecar.sh>
 
-We can use this as soon as the cluster has completed updating in the web interface.
+We use this after the cluster has been completely updated in a terminal with `kubectl` configured. To get `kubectl` working with your cluster, look at our chapter [Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster/).
 
 ```bash
 curl -o upgrade-node.sh https://raw.githubusercontent.com/truongnh1992/playing-with-istio/master/upgrade-sidecar.sh
@@ -103,7 +103,6 @@ default           Active   36m
 kube-node-lease   Active   36m
 kube-public       Active   36m
 kube-system       Active   36m
-webterminal       Active   4m42s
 
 # So for default namespace we would run:
 ./upgrade-node.sh default

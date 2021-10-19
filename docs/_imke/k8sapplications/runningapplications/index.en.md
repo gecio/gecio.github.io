@@ -29,7 +29,7 @@ you run and manage applications in Kubernetes.
 ### Deployment
 
 The data type `deployment` ensures that an application runs in
-kubernetes and can be updated according to a selected method, for
+Kubernetes and can be updated according to a selected method, for
 example _Rolling_.
 
 We need to create a `deployment` for our nginx example, so Kubernetes
@@ -201,4 +201,4 @@ We learned and achieved the following:
 * How to create a service
 * How to delete an application
 
-Congratulations! You now know all required steps to start and delete applications in kubernetes.
+Congratulations! You now know all required steps to start and delete applications in Kubernetes.

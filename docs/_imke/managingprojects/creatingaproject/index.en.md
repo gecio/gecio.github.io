@@ -25,6 +25,6 @@ This opens a view showing us the project. We find a list of all existing
 clusters and their users, as well as some other controls.
 ![Project View](projectview.png)
 
-Clicking on the side bar opens the navigation in the Project view, which
+Clicking on the sidebar opens the navigation in the Project view, which
 allows us to explore the other areas.
 ![Sidebar](sidebar.png?resize=300)

@@ -5,10 +5,11 @@ permalink: /imke/k8sapplications/runningapplications/
 nav_order: 7100
 parent: Anwendungen in Kubernetes
 ---
+<!-- LTeX:  language=de-DE -->
 
 Der Cluster läuft und wir wollen eine Applikation
 betreiben. Als Beispiel verwenden wir einen nginx, der
-per Load Balancer vor dem Cluster veröffentlicht wird.
+per Loadbalancer vor dem Cluster veröffentlicht wird.
 
 ## Voraussetzungen
 
@@ -23,7 +24,7 @@ Um diesen Guide erfolgreich abzuschließen brauchen Sie Folgendes:
 ## Datentypen
 
 Kubernetes ist im Endeffekt eine große Datenbank. Alle Dinge, die
-es betreibt, speichert der api-server und dementsprechend
+es betreibt, speichert der API-Server und dementsprechend
 lassen sich Applikationen in Kubernetes auch betreiben.
 
 ### Deployment
@@ -90,7 +91,7 @@ kubectl create deployment --dry-run -o yaml --image nginx nginx > deployment.yam
 Als Nächstes benötigen wir einen Service, der die Applikation von
 der Öffentlichkeit aus zugänglich macht. Als Typ wählen wir
 `LoadBalancer`, dies erstellt in OpenStack direkt einen fertig
-konfigurierten LoadBalancer als Einstieg in den Cluster.
+konfigurierten Loadbalancer als Einstieg in den Cluster.
 
 ```bash
 kubectl create service loadbalancer --dry-run --tcp=80 -o yaml nginx
@@ -152,7 +153,7 @@ service/nginx        LoadBalancer   10.10.10.86   <pending>     80:31762/TCP    
 
 Wie wir in der Ausgabe sehen, wurde das Deployment angelegt und ist im Zustand READY.
 Der Service nginx wurde auch angelegt, die EXTERNAL-IP ist jedoch noch
-`pending`. Hier müssen wir ein bisschen warten bis der LoadBalancer
+`pending`. Hier müssen wir ein bisschen warten bis der Loadbalancer
 provisioniert wurde.
 
 Nach etwa 1–2 Minuten kann man das Kommando erneut ausführen und bekommt
@@ -168,7 +169,7 @@ service/kubernetes   NodePort       10.10.10.1    <none>            443:31630/TC
 service/nginx        LoadBalancer   10.10.10.86   185.116.245.169   80:31762/TCP    119s
 ```
 
-Die External IP `185.116.245.169`aus unserem Beispiel ist nun öffentlich
+Die External IP `185.116.245.169` aus unserem Beispiel ist nun öffentlich
 erreichbar und zeigt unsere Instanz von nginx an.
 
 ## Aufräumen
@@ -188,7 +189,7 @@ NAME                 TYPE       CLUSTER-IP   EXTERNAL-IP   PORT(S)         AGE
 service/kubernetes   NodePort   10.10.10.1   <none>        443:31630/TCP   2d23h
 ```
 
-Wie man sieht, ist alles wieder weg und wenn man die IP-Adresse im Browser noch einmal aufruft, wird ein Fehler angezeigt: die Applikation läuft nicht mehr.
+Wie man sieht, ist alles wieder weg und wenn man die IP-Adresse im Browser noch einmal aufruft, wird ein Fehler angezeigt: Die Applikation läuft nicht mehr.
 
 ## Zusammenfassung
 

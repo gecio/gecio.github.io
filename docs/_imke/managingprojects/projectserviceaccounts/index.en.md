@@ -17,9 +17,9 @@ iMKE API. The JWT token by default expires after 3 years.
 
 ## Core Concept
 
-Service accounts are considered as a project's resource. Only the owner of the project can create a service account.
-There is no need to create a new groups for a SA, we want to assign a service account to one of the already defined groups:
-`editors` or `viewers`.
+Service accounts are considered a project's resource. Only the owner of the project can create a service account.
+There is no need to create a new group for a SA, we want to assign a service account to one of the already defined groups:
+`Project Manager`, `Editor` or `Viewer`.
 
 A service account is linked to the project automatically by a `UserProjectBinding` which specifies a binding between a
 service account and a project. A service account will be automatically deleted after project removal.
@@ -38,11 +38,11 @@ service account and a project. A service account will be automatically deleted a
 
     ![SA-Add](sa-add.png)
 
-1. Enter a name for the service account and select the group (either `Editor` or `Viewer`)
+1. Enter a name for the service account and select the group (either `Project Manager`, `Editor` or `Viewer`)
 
     ![SA-Name](sa-name.png)
 
-1. Click `Add`
+1. Click `Add Service Account`
 
     ![SA-Add-SA](sa-add-sa.png)
 
@@ -52,11 +52,11 @@ Now the service account has been created. If you want to associate a token to it
 
     ![SA-Select](sa-select.png)
 
-1. Click on `+Add Token`
+1. Click on `+ Add Token`
 
     ![SA-Add-Token](sa-add-token.png)
 
-1. Enter a name for the token and click `Add`
+1. Enter a name for the token and click `Add Token`
 
     ![SA-Tokenname](sa-tokenname.png)
 

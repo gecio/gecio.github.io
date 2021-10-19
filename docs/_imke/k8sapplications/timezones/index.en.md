@@ -14,9 +14,9 @@ To successfully finish this guide, you need the following items.
 
 * `kubectl` [latest version](https://kubernetes.io/de/docs/tasks/tools/install-kubectl/)
 * A running Kubernetes Cluster, created with iMKE, with a ready Machine Deployment.
-  * See also [Creating a Cluster](/imke/clusterlifecycle/creatingacluster/).
-* A valid `kubeconfig` for your cluster.
-  * See also [Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster/).
+  * See also [Creating a Cluster](/imke/clusterlifecycle/creatingacluster/)
+* A valid `kubeconfig` for your cluster
+  * See also [Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster/)
 
 
 ## Time zones in Kubernetes Environment

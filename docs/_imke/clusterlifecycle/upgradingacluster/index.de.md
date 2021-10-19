@@ -5,6 +5,7 @@ permalink: /imke/clusterlifecycle/upgradingacluster/
 nav_order: 4200
 parent: Cluster Lebenszyklus
 ---
+<!-- LTeX:  language=de-DE -->
 
 Sicherheit des Clusters steht an erster Stelle, hinzu
 kommen noch einige neue Features mit jedem Release. Um
@@ -14,8 +15,8 @@ es sich regelmäßig Kubernetes-Updates zu installieren.
 In besonders kritischen Fällen updaten wir die Cluster API
 automatisch auf die letzte Minor-Version, um auch unsere eigene
 Infrastruktur sicher zu halten. In diesem Fall kann der nächste
-Block übersprungen werden. Nodes müssen dann nämlich dennoch
-selbst geupdated werden.
+Block übersprungen werden. (Worker-)Nodes müssen dann jedoch noch
+selbst upgedatet werden.
 
 Bevor Sie einen Cluster upgraden, lesen Sie bitte das [Changelog](/imke/about/) der Ziel-Kubernetes-Version,
 und stellen Sie sicher, dass Sie sich mit den bevorstehenden Änderungen vertraut machen.
@@ -25,7 +26,7 @@ Es kann die Kompatibilität der benutzten Ressourcen zur neuen Kubernetes-Versio
 
 ## Der Cluster
 
-In Kubernetes teilt sich die Infrastruktur in Master (= Kubernetes Controlplane) und (Worker-)Nodes.
+In Kubernetes teilt sich die Infrastruktur in Master(= Kubernetes Controlplane) und (Worker-)Nodes.
 Bei iMKE Clustern werden die Master verwaltet.
 
 Da mehrere Versionen für die Master angeboten werden, hat man
@@ -66,8 +67,8 @@ aufzumachen.
 ![Step 4](update_4.png)
 
 Bei kubelet Version wählen wir nun die Version aus, welche auch bei
-unserem Cluster Master konfiguriert ist. In diesem Beispiel
-`1.20.7` und bestätigen mit `Edit Machine Deployment`:
+unserer Cluster Control Plane konfiguriert ist. In diesem Beispiel
+`1.21.5` und bestätigen mit `Save Changes`:
 
 ![Step 5](update_5.png)
 
@@ -87,8 +88,7 @@ Als Lösung gibt es ein recht einfaches Bash-Script, welches in einem
 Namespace alle Pods noch einmal neu erstellen lässt:
 <https://github.com/truongnh1992/playing-with-istio/blob/master/upgrade-sidecar.sh>
 
-Dieses nutzen wir, sobald das Cluster komplett geupdated ist im
-WebTerminal.
+Dieses nutzen wir, nachdem das Cluster komplett upgedatet wurde, in einem Terminal mit konfiguriertem `kubectl`. In unserem Kapitel [Mit einem Cluster verbinden](/imke/accessmanagement/connectingtoacluster/) zeigen wir, wie Sie Ihr `kubectl` mit Ihrem Cluster verbinden können.
 
 ```bash
 curl -o upgrade-node.sh https://raw.githubusercontent.com/truongnh1992/playing-with-istio/master/upgrade-sidecar.sh
@@ -105,7 +105,6 @@ default           Active   36m
 kube-node-lease   Active   36m
 kube-public       Active   36m
 kube-system       Active   36m
-webterminal       Active   4m42s
 
 # Wir interessieren uns für default Namespace:
 ./upgrade-node.sh default

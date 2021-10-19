@@ -13,7 +13,7 @@ Here we explain how it comes to it.
 
 ## Finding Nodes Workload
 
-First, let's see how many nodes are in the cluster  and what is the current load of cpu/memory.
+First, let's see how many nodes are in the cluster and what is the current load of cpu/memory.
 
 ![Step 1](get_top_node_1.png)
 
@@ -23,7 +23,7 @@ First the node is *cordoned*, so that no new pods are scheduled to this node.
 
 ![Step 2](get_node_2.png)
 
-Then the node is *drained*,  so it is completely empty and the pods that used to run on the native node are distributed to all other nodes of the cluster.
+Then the node is *drained*, so it is completely empty and the pods that used to run on the native node are distributed to all other nodes of the cluster.
 With only two nodes, everything is placed on exactly the other node, then we will have a high loaded node.
 
 ![Step 3](top_node_3.png)
@@ -33,5 +33,5 @@ When the second node is back after the update, the pods will _not_ be automatica
 ## Some Tips
 
 * We recommend to use at least three nodes, because in that way loads could be better distributed during upgrades.
-* The webterminal has the tool `popeye`, which analyzes the cluster and makes suggestions for improvement based on best practices: <https://gecio.github.io/imke/accessmanagement/webterminal/>
+* The tool 'popeye' analyzes clusters and makes suggestions for improvement based on best practices
 * Upgrade the nodes to the latest version and follow the final step in the guide: <https://gecio.github.io/imke/clusterlifecycle/upgradingacluster/>

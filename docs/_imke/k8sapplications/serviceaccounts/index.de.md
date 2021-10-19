@@ -5,20 +5,21 @@ permalink: /imke/k8sapplications/serviceaccounts/
 nav_order: 7200
 parent: Anwendungen in Kubernetes
 ---
+<!-- LTeX:  language=de-DE -->
 
-Wir können eingeschränkten Zugriff auf unsere Cluster mithilfe von kubernetes
-Service Accounts und dem kubernetes RBAC Feature umsetzen.
+Wir können eingeschränkten Zugriff auf unsere Cluster mithilfe von Kubernetes
+Service Accounts und dem Kubernetes RBAC Feature umsetzen.
 
 Dafür müssen wir folgendes tun:
 
-- einen Kubernetes Service Account anlegen.
-- eine Rolle mit beschränktem Zugriff definieren.
+- Einen Kubernetes Service Account anlegen.
+- Eine Rolle mit beschränktem Zugriff definieren.
 - Dem Kubernetes Service Account diese Rolle zuordnen.
 
 Die Authentifizierung in Kubernetes Clustern die mit iMKE erzeugt werden,
-geschieht über sogenannte bearer tokens. Wenn wir einen neuen Kubernetes
+geschieht über sogenannte `Bearer Token`. Wenn wir einen neuen Kubernetes
 Service Account anlegen, wird ein solches Token oder Secret im jeweiligen
-namespace hinterlegt. Dieses Secret wird gelöscht, wenn der Kubernetes
+Namespace hinterlegt. Dieses Secret wird gelöscht, wenn der Kubernetes
 Service Account gelöscht wird.
 
 ## Anlegen eines Kubernetes Service Accounts

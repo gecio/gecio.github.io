@@ -8,26 +8,41 @@
 		"target": "devcontainer",
 		"context": ".."
 	},
-
-	"mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
-
+	"mounts": [
+		"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+	],
 	// Set *default* container specific settings.json values on container create.
-	"settings": { 
-		// "terminal.integrated.shell.linux": "/bin/bash"
-		"files.insertFinalNewline": true
+	"settings": {
+		"terminal.integrated.defaultProfile.linux": "bash",
+		"git.autofetch": true,
+		"editor.renderFinalNewline": true,
+		"editor.codeLens": true,
+		"editor.insertSpaces": true,
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+		"editor.snippetSuggestions": "none",
+		"workbench.iconTheme": "vscode-icons"
 	},
-
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"ms-azuretools.vscode-docker"
+		"ms-azuretools.vscode-docker",
+		"github.remotehub",
+		"github.vscode-pull-request-github",
+		"valentjn.vscode-ltex",
+		"shardulm94.trailing-spaces",
+		"davidanson.vscode-markdownlint",
+		"eamodio.gitlens",
+		"vscode-icons-team.vscode-icons",
+		"bierner.emojisense",
+		"IBM.output-colorizer",
+		"editorconfig.editorconfig"
 	],
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [4000],
-
+	"forwardPorts": [
+		4000
+	],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "bundle install",
-
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	// "remoteUser": "vscode"
 }

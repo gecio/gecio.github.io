@@ -9,7 +9,7 @@ parent: Cluster Lebenszyklus
 
 Es ist jetzt möglich alle Cluster die noch den In-Tree Cloud Provider verwenden, zum External Cloud Provider zu migrieren.
 
-**Das muss bis spätestens vor dem Kubernetes 1.22 Update geschehen**, in dieser Version wird der In-Tree Provider entfernt.
+**Das muss bis spätestens vor dem Kubernetes 1.21 Update geschehen**, in dieser Version wird der In-Tree Provider entfernt.
 
 Auf der Clusterdetailseite ist der Providerstatus zu sehen.
 

@@ -25,8 +25,8 @@ Start
 To spawn a new stack, we will need a template that starts a VM.
 
 In this tutorial we use
-the [SingleServer.yaml](https://github.com/innovocloud/openstack_examples/blob/master/heat/templates/SingleServer/SingleServer.yaml) from
-our [iNNOVO Github Repository](https://github.com/innovocloud) and recommend you do the same.
+the [SingleServer.yaml](https://github.com/gecio/openstack_examples/blob/master/heat/templates/SingleServer/SingleServer.yaml) from
+our [GECio Github Repository](https://github.com/gecio) and recommend you do the same.
 
 Once we acquired the template, we need to login to the dashboad with the
 password that we changed in step 1.

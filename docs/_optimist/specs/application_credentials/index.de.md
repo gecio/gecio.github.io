@@ -20,9 +20,9 @@ Benutzer können eine Teilmenge ihrer Rollenzuweisungen für ein Projekt an Appl
 
 Application Credentials für Ihr Projekt können über die Befehlszeile oder über das Dashboard generiert werden. Diese werden dem Projekt zugeordnet, in dem sie erstellt werden.
 
-Der einzige erforderliche Parameter zum Erstellen der Anmeldeinformationen ist ein Name, jedoch kann mit dem Parameter `—-secret` ein bestimmtes Secret festgelegt werden. Wenn der Parameter geheim gelassen wird, wird stattdessen automatisch ein Secret in der Ausgabe generiert.
+Der einzige erforderliche Parameter zum Erstellen der Anmeldeinformationen ist ein Name, jedoch kann mit dem Parameter `—-secret` ein bestimmtes Secret festgelegt werden. Ohne Parameter wird stattdessen automatisch ein Secret in der Ausgabe generiert.
 
- Es ist in jedem Fall wichtig, das Secret zu notieren, das Secret vor dem Speichern gehasht wird und nach dem Festlegen nicht wiederhergestellt werden kann. Wenn das Secret verloren geht, sollten neue Application Credential für die Anwendung erstellt werden.
+Es ist in jedem Fall wichtig das Secret zu notieren, da dieses vor dem Speichern gehasht wird und nach dem Festlegen nicht wiederhergestellt werden kann. Wenn das Secret verloren geht, müssen neue Application Credential für die Anwendung erstellt werden.
 
 ### Roles
 
@@ -37,11 +37,11 @@ Im Folgenden sind die verfügbaren Roles aufgeführt, die einem Satz von Applica
 
 ### Expiration
 
-Standardmäßig laufen erstellte Application Credentials nicht ab, jedoch können feste Ablaufdaten/-zeiten für Application Credentials bei der Erstellung festgelegt werden, indem der Parameter `--expires` im Befehl verwendet wird (zum Beispiel: `—expiration '2021-07-15T21: 00:00'`).
+Standardmäßig laufen erstellte Application Credentials nicht ab, jedoch können feste Ablaufdaten/-zeiten für Application Credentials bei der Erstellung festgelegt werden, indem der Parameter `--expires` im Befehl verwendet wird (zum Beispiel: `--expires '2021-07-15T21: 00:00'`).
 
 # Erstellen von Application Credentials über die CLI
 
-Ein Set von Application Credentials kann im gewünschten Projekt über die CLI erstellt werden, das folgende Beispiel zeigt, wie ein Set von Credentials mit den folgenden Parametern erstellt wird:
+Ein Set von Application Credentials kann im gewünschten Projekt über die CLI erstellt werden. Das folgende Beispiel zeigt, wie ein Set von Credentials mit den folgenden Parametern erstellt wird:
 
 - Name: test-credentials
 - Secret: ZYQZm2k6pk
@@ -51,7 +51,7 @@ Ein Set von Application Credentials kann im gewünschten Projekt über die CLI e
 Die neuen Zugangsdaten sollten wie folgt aussehen:
 
 ```bash
-$ openstack application credential create test-credentials --secret ZYQZm2k6pk --role Member --role heat_stack_owner --role load-balancer_member --expiration '2021-07-15T21:00:00'
+$ openstack application credential create test-credentials --secret ZYQZm2k6pk --role Member --role heat_stack_owner --role load-balancer_member --expires '2021-07-15T21:00:00'
 +--------------+----------------------------------------------+
 | Field        | Value                                        |
 +--------------+----------------------------------------------+
@@ -68,7 +68,7 @@ $ openstack application credential create test-credentials --secret ZYQZm2k6pk -
 +--------------+----------------------------------------------+
 ```
 
-Hinweis: Das Secret (ob vom Benutzer festgelegt oder automatisch generiert) wird beim Erstellen der Application Credentials angezeigt. Bitte beachten Sie das Secret zu diesem Zeitpunkt.
+Hinweis: Das Secret (ob vom Benutzer festgelegt oder automatisch generiert) wird nur beim Erstellen der Application Credentials angezeigt. Bitte notieren Sie sich das Secret zu diesem Zeitpunkt.
 
 # Anzeigen von Application Credentials über die CLI
 
@@ -95,17 +95,17 @@ $ openstack application credential delete test-credentials
 
 # Erstellen und Löschen von Application Credentials für Anwendungen über das Optimist Dashboard
 
-Alternativ können Bewerbungsdaten auch über das Optimist Dashboard unter Identität > Bewerbungsdaten generiert werden:
+Alternativ können Application Credentials auch über das Optimist Dashboard unter Identität > Application Credentials generiert werden:
 
 ![](attachments/createappcredentials.png)
 
 Hinweis: Hier können mehrere Rollen ausgewählt werden, indem Sie die Umschalttaste gedrückt halten und durch die Optionen navigieren.
 
-Nach der Erstellung wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, die ID und das Secret zu erfassen. Wenn Sie fertig sind, klicken Sie auf "Close".
+Nach der Erstellung wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, die ID und das Secret zu notieren. Wenn Sie fertig sind, klicken Sie auf "Close".
 
 ![](attachments/secretappcredentials.png)
 
-Die Zugangsdaten hier können auch jederzeit gelöscht werden, indem Sie das Kontrollkästchen markieren, um den zu löschenden Zugangsdatensatz zu markieren und dann auf "DELETE APPLICATION CREDENTIAL" klicken.
+Die Zugangsdaten hier können jederzeit gelöscht werden, indem Sie den zu löschenden Zugangsdatensatz zu markieren und dann auf "DELETE APPLICATION CREDENTIAL" klicken.
 
 ![](attachments/deleteappcredentials.png)
 
@@ -116,7 +116,7 @@ Sobald wir über die CLI oder das Dashboard einen Satz von Application Credentia
 Wir müssen unsere `<name>` und `<secret>` im curl-Befehl verwenden:
 
 ```bash
-$ curl -i -H "Content-Type: application/json" -d ' { "auth": { "identity": { "methods": ["application_credential"],  "application_credential": {  "id": “<id>", "secret": “<secret>"}}}}' "[https://identity.optimist.innovo.cloud/v3/auth/tokens](https://identity.optimist.innovo.cloud/v3/auth/tokens)"
+$ curl -i -H "Content-Type: application/json" -d ' { "auth": { "identity": { "methods": ["application_credential"],  "application_credential": {  "id": “<id>", "secret": “<secret>"}}}}' https://identity.optimist.innovo.cloud/v3/auth/tokens
 ```
 
 Ein erfolgreicher curl-Versuch gibt ein `x-subject-token` aus, erfolglose Versuche mit falschen Anmeldeinformationen führen zu einem 401-Fehler.

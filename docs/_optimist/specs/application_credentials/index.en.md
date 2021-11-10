@@ -37,7 +37,7 @@ Below are the available roles which can be assigned to a set of application cred
 
 ### Expiration
 
-By default, created Application Credentials will not expire, however,  fixed expiration dates/times can be set for credentials upon creation, using the `--expires` parameter in the command (for example: `—expiration '2021-07-15T21:00:00'`).
+By default, created Application Credentials will not expire, however,  fixed expiration dates/times can be set for credentials upon creation, using the `--expires` parameter in the command (for example: `--expires '2021-07-15T21:00:00'`).
 
 # Creating Application Credentials via the CLI
 
@@ -51,7 +51,7 @@ A set of Application Credentials can be created in the desired project via the C
 The new credentials should appear as follows:
 
 ```bash
-$ openstack application credential create test-credentials --secret ZYQZm2k6pk --role Member --role heat_stack_owner --role load-balancer_member --expiration '2021-07-15T21:00:00'
+$ openstack application credential create test-credentials --secret ZYQZm2k6pk --role Member --role heat_stack_owner --role load-balancer_member --expires '2021-07-15T21:00:00'
 +--------------+----------------------------------------------+
 | Field        | Value                                        |
 +--------------+----------------------------------------------+
@@ -116,7 +116,7 @@ Once we have created a set of Application Credentials either via the CLI or dash
 We need to use our `<name>` and `<secret>` in the curl command:
 
 ```bash
-$ curl -i -H "Content-Type: application/json" -d ' { "auth": { "identity": { "methods": ["application_credential"],  "application_credential": {  "id": “<id>", "secret": “<secret>"}}}}' "[https://identity.optimist.innovo.cloud/v3/auth/tokens](https://identity.optimist.innovo.cloud/v3/auth/tokens)"
+$ curl -i -H "Content-Type: application/json" -d ' { "auth": { "identity": { "methods": ["application_credential"],  "application_credential": {  "id": “<id>", "secret": “<secret>"}}}}' https://identity.optimist.innovo.cloud/v3/auth/tokens
 ```
 
 A successful curl attempt will output an `x-subject-token`, unsuccessful attempts where the credentials are incorrect will result in a 401 error.

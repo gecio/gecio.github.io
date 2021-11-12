@@ -147,7 +147,7 @@ Once pip is installed, we can install the OpenStack client:
 To start things off, we'll install pip.
 
 ```
-$ sudo apt-get install python-pip
+$ sudo apt-get install python3-pip
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done
@@ -157,7 +157,7 @@ Next, we'll install virtualenv, which we'll need to set up our virtual
 environment.
 
 ```
-$ sudo apt install python-virtualenv
+$ sudo apt-get install python3-virtualenv
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done

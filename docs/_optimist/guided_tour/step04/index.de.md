@@ -183,7 +183,7 @@ Collecting python-openstackclient
 Zunächst wird auch hier `pip` benötigt, dafür wird `apt-get` genutzt:
 
 ```bash
-$ sudo apt-get install python-pip
+$ sudo apt-get install python3-pip
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done
@@ -193,7 +193,7 @@ Sobald die Installation von `pip` abgeschlossen ist, wird nun die
 Virtuelle Umgebung angelegt:
 
 ```bash
-$ sudo apt install python-virtualenv
+$ sudo apt-get install python3-virtualenv
 Reading package lists... Done
 Building dependency tree
 Reading state information... Done

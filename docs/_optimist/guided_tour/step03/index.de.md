@@ -31,7 +31,7 @@ Stack*.
 Um den Stack auch zu starten, benötigen wir zunächst ein Template,
 welches in dem Stack eine Instanz startet.
 
-Hierfür nutzen wir die [SingleServer.yaml](https://github.com/innovocloud/openstack_examples/blob/master/heat/templates/SingleServer/SingleServer.yaml) aus dem [iNNOVO Github Repository](https://github.com/innovocloud).
+Hierfür nutzen wir die [SingleServer.yaml](https://github.com/gecio/openstack_examples/blob/master/heat/templates/SingleServer/SingleServer.yaml) aus dem [GECio Github Repository](https://github.com/gecio/).
 
 ![](attachments/13536111.png)
 

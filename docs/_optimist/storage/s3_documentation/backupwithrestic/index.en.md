@@ -7,7 +7,7 @@ parent: S3 Kompatiblen Objekt Storage
 grand_parent: Storage
 ---
 
-Restic is a very simple and powerful file-level backup solution, which is rapidly gaining popularity. It can be used in combination with S3 which makes it a great tool to use on Optimist.
+Restic is a very simple and powerful file-level backup solution, which is rapidly gaining popularity. It can be used in combination with S3 which makes it a great tool to use with Optimist.
 
 ## Problem statement
 
@@ -19,12 +19,12 @@ The solution can be as simple as limiting the level of access of the backup soft
 
 ## Background
 
-S3 access control lists (ACLs) enable you to manage access to buckets and objects, but are very limited. They essentially differentiate READ and WRITE permissions:
+[S3 access control lists (ACLs)](/optimist/storage/s3_documentation/security) enable you to manage access to buckets and objects, but they have limitations. They essentially differentiate READ and WRITE permissions:
 
 * READ - Allows grantee to list the objects in the bucket
 * WRITE - Allows grantee to create, overwrite, and delete any object in the bucket
 
-The limitations of ACLs were addressed by the access policy permissions (ACP). We could attach a no-delete policy to the bucket, e.g.
+The limitations of ACLs were addressed by the access policy permissions (ACP). We can attach a no-delete policy to the bucket, e.g.
 
 ```json
 {
@@ -48,9 +48,9 @@ The limitations of ACLs were addressed by the access policy permissions (ACP). W
 }
 ```
 
-Unfortunately, the S3 protocol itself wasn't designed with the concept of WORM (write once read many) backups in mind. Access policy permissions do not differentiate between changing an existing object (which would allow effectively deleting it) and creating a new object.
+Unfortunately, the S3 protocol itself wasn't designed with the concept of WORM (write once read many) backups in mind. Access policy permissions do not differentiate between changing an existing object (which would effectively allow deleting it) and creating a new object.
 
-Attaching the above policy on a bucket does not prevent from overwriting the objects in it.
+Attaching the above policy on a bucket does not prevent the objects in it from being overwritten.
 
 ```bash
 $ s3cmd put testfile s3://appendonly-bucket/testfile
@@ -172,7 +172,7 @@ Oh, right, that doesn't work. That was our goal!
 
 This way,
 
-* the rclone proxy doesn't even run on the `rclonesrv` as a service. It will just be spawned on demand, for the duration of the restic operation. Communication happens over HTTP2 over stdin/stdout, in an encrypted SSH tunnel.
+* The rclone proxy doesn't even run on the `rclonesrv` as a service. It will just be spawned on demand, for the duration of the restic operation. Communication happens over HTTP2 over stdin/stdout, in an encrypted SSH tunnel.
 * Since rclone is running with `--append-only`, it is not possible to delete (or overwrite) snapshots in the S3 bucket.
 * All data (except credentials) is encrypted/decrypted locally, then sent/received via `rclonesrv` to/from S3.
 * All the credentials are **only** stored on `rclonesrv` to communicate with S3.
@@ -183,7 +183,7 @@ Since the command is hard-coded into the SSH configuration for the user's SSH ke
 
 The advantages of this construct are probably clear already by now. Furthermore,
 
-* managing snapshots (both manually and with a retention policy) is only possible on the rclone proxy.
+* Managing snapshots (both manually and with a retention policy) is only possible on the rclone proxy.
 * A single rclone proxy VM (or even a docker container on an isolated VM) can serve multiple backup clients.
 * It is highly recommended to use one key for every server which backs up data.
 * If you'd like to use more than one repository out of a node, you'll need new SSH keys for them. You can then specify which key to use with `-i ~/.ssh/id_ed25519_another_repo` in the `rclone.program` arguments just like you would with SSH.

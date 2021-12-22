@@ -21,7 +21,7 @@ Die Lösung kann so einfach sein, wie die Zugriffsebene der Backup-Software auf 
 
 [S3-Zugriffskontrolllisten (ACLs)](/optimist/storage/s3_documentation/security) ermöglichen Ihnen die Verwaltung des Zugriffs auf Buckets und Objekte, sind jedoch sehr eingeschränkt. Sie unterscheiden im Wesentlichen READ- und WRITE-Berechtigungen:
 
-* READ– Ermöglicht dem Benutzer, die Objekte im Bucket aufzulisten
+* READ – Ermöglicht dem Benutzer, die Objekte im Bucket aufzulisten
 * WRITE - Ermöglicht dem Benutzer, jedes Objekt im Bucket zu erstellen, zu überschreiben und zu löschen
 
 Die Einschränkungen von ACLs wurden durch die Zugriffsrichtlinienberechtigungen (ACP) behoben. Wir könnten dem Bucket eine No-Delete-Richtlinie anhängen, z.B.

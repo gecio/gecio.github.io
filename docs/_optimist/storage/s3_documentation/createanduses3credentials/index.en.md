@@ -12,11 +12,14 @@ Create and Use S3 Credentials
 
 Contents:
 -----------
-- [Create S3 credentials](#creates3credentials)
+- [Create S3 credentials](#create-s3-credentials)
+- [Entering User Data in the Configuration File](#entering-user-data-in-the-configuration-file)
 	- [S3cmd](#s3cmd)
 	- [S3Browser](#s3browser)
 	- [Cyberduck](#cyberduck)
 	- [Boto3](#boto3)
+- [Show s3 credentials](#show-s3-credentials)
+- [Delete s3 credentials](#delete-s3-credentials)
 
 # Create S3 credentials
 
@@ -131,3 +134,28 @@ s3 = boto3.resource('s3',
 ```
 
 This serves as a starting point and is referenced and used in the following scripts.
+
+# Show s3 credentials
+
+In order to show existing Object Storage ec2-credentials we need to use the OpenStack Client and execute the following command there:
+
+`$ openstack ec2 credentials list`
+
+the output will be similar to the below:
+
+```bash
+$ openstack ec2 credentials list
++----------------------------------+----------------------------------+----------------------------------+----------------------------------+
+| Access                           | Secret                           | Project ID                       | User ID                          |
++----------------------------------+----------------------------------+----------------------------------+----------------------------------+
+| aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | 12341234123412341234123412341234 | 32132132132132132132132132132132 |
+| bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb | yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy | 56756756756756756756756756756756 | 65465465465465465465465465465465 |
+| cccccccccccccccccccccccccccccccc | zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz | 89089089089089089089089089089089 | 09809809809809809809809809809809 |
++----------------------------------+----------------------------------+----------------------------------+----------------------------------+
+```
+
+# Delete s3 credentials
+
+In order to delete Object Storage ec2-credentials we need to use the OpenStack Client and execute the following command there:
+
+`$ openstack ec2 credentials delete <access-key>`

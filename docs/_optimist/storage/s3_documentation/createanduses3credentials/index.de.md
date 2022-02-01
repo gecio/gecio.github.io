@@ -12,13 +12,16 @@ S3 Kennung erstellen und einlesen
 
 Inhalt:
 ---------
-- [Benutzerdaten erstellen](#benutzerdatenerstellen)
+- [Credentials erstellen](#credentials-erstellen)
 	- [S3cmd](#s3cmd)
 	- [S3Browser](#s3browser)
 	- [Cyberduck](#cyberduck)
 	- [Boto3](#boto3)
 
-# Benutzerdaten erstellen
+- [Credentials anzeigen](#credentials-anzeigen)
+- [Credentials löschen](#credentials-löschen)
+
+# Credentials erstellen
 
 Damit wir auf den Object Storage zugreifen können, benötigen wir zunächst Login Daten(Credentials).
 Um diese Daten per OpenStackAPI erzeugen zu können, benötigen wir den OpenStackClient und führen dort folgenden Befehl aus:
@@ -135,3 +138,28 @@ s3 = boto3.resource('s3',
 ```
 
 Dies dient als Startpunkt und wird in den folgenden Skripten referenziert und verwendet.
+
+# Credentials anzeigen
+
+Um erstellte Object Storage EC2-Credentials anzuzeigen benötigen wir den OpenstackClient und führen dort folgenden Befehl aus:
+
+`$ openstack ec2 credentials list`
+
+Der Befehl erstellt uns eine Liste mit allen EC2 Credentials, die für den aktuellen Nutzer sichtbar sind.
+
+```bash
+$ openstack ec2 credentials list
++----------------------------------+----------------------------------+----------------------------------+----------------------------------+
+| Access                           | Secret                           | Project ID                       | User ID                          |
++----------------------------------+----------------------------------+----------------------------------+----------------------------------+
+| aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | 12341234123412341234123412341234 | 32132132132132132132132132132132 |
+| bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb | yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy | 56756756756756756756756756756756 | 65465465465465465465465465465465 |
+| cccccccccccccccccccccccccccccccc | zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz | 89089089089089089089089089089089 | 09809809809809809809809809809809 |
++----------------------------------+----------------------------------+----------------------------------+----------------------------------+
+```
+
+# Credentials löschen
+
+Um vorhandene Object Storage EC2-Credentials zu löschen benötigen wir den OpenstackClient und führen dort folgenden Befehl aus:
+
+`$ openstack ec2 credentials delete <access-key>`

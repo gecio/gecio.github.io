@@ -12,8 +12,6 @@ Create and Use S3 Credentials
 
 Contents:
 -----------
-- [Create and Use S3 Credentials](#create-and-use-s3-credentials)
-	- [Contents:](#contents)
 - [Create S3 credentials](#create-s3-credentials)
 - [Entering User Data in the Configuration File](#entering-user-data-in-the-configuration-file)
 	- [S3cmd](#s3cmd)
@@ -139,7 +137,7 @@ This serves as a starting point and is referenced and used in the following scri
 
 # Show s3 credentials
 
-In order to show Object Storage credentials we need to use the OpenStack Client and execute the following command there:
+In order to show existing Object Storage ec2-credentials we need to use the OpenStack Client and execute the following command there:
 
 `$ openstack ec2 credentials list`
 
@@ -158,6 +156,6 @@ $ openstack ec2 credentials list
 
 # Delete s3 credentials
 
-In order to delete Object Storage credentials we need to use the OpenStack Client and execute the following command there:
+In order to delete Object Storage ec2-credentials we need to use the OpenStack Client and execute the following command there:
 
 `$ openstack ec2 credentials delete <access-key>`

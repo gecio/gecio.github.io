@@ -12,15 +12,16 @@ S3 Kennung erstellen und einlesen
 
 Inhalt:
 ---------
-- [Benutzerdaten erstellen](#benutzerdatenerstellen)
+- [Credentials erstellen](#credentials-erstellen)
 	- [S3cmd](#s3cmd)
 	- [S3Browser](#s3browser)
 	- [Cyberduck](#cyberduck)
 	- [Boto3](#boto3)
-- [Benutzerdaten anzeigen](#benutzerdatenanzeigen)
-- [Benutzerdaten löschen](#benutzerdatenlöschen)
 
-# Benutzerdaten erstellen
+- [Credentials anzeigen](#credentials-anzeigen)
+- [Credentials löschen](#credentials-löschen)
+
+# Credentials erstellen
 
 Damit wir auf den Object Storage zugreifen können, benötigen wir zunächst Login Daten(Credentials).
 Um diese Daten per OpenStackAPI erzeugen zu können, benötigen wir den OpenStackClient und führen dort folgenden Befehl aus:
@@ -138,13 +139,13 @@ s3 = boto3.resource('s3',
 
 Dies dient als Startpunkt und wird in den folgenden Skripten referenziert und verwendet.
 
-# Benutzerdaten anzeigen
+# Credentials anzeigen
 
-Um erstellte Object Storage Login Daten(Credentials) anzeigen zu können benötigen wir den OpenstackClient und führen dort folgenden Befehl aus:
+Um erstellte Object Storage EC2-Credentials anzuzeigen benötigen wir den OpenstackClient und führen dort folgenden Befehl aus:
 
 `$ openstack ec2 credentials list`
 
-Der Befehl erstellt uns eine Liste mit allen EC2 Credentials welche erstellt worden sind.
+Der Befehl erstellt uns eine Liste mit allen EC2 Credentials, die für den aktuellen Nutzer sichtbar sind.
 
 ```bash
 $ openstack ec2 credentials list
@@ -157,10 +158,8 @@ $ openstack ec2 credentials list
 +----------------------------------+----------------------------------+----------------------------------+----------------------------------+
 ```
 
-# Benutzerdaten löschen
+# Credentials löschen
 
-Um vorhandene Object Storage Login Daten(Credentials) löschen zu können benötigen wir den OpenstackClient und führen dort folgenden Befehl aus:
+Um vorhandene Object Storage EC2-Credentials zu löschen benötigen wir den OpenstackClient und führen dort folgenden Befehl aus:
 
 `$ openstack ec2 credentials delete <access-key>`
-
-Der Befehl löscht die angegebenen Object Storage Login Daten(Credentials).

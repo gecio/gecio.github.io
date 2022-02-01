@@ -17,6 +17,8 @@ Inhalt:
 	- [S3Browser](#s3browser)
 	- [Cyberduck](#cyberduck)
 	- [Boto3](#boto3)
+- [Benutzerdaten anzeigen](#benutzerdatenanzeigen)
+- [Benutzerdaten löschen](#benutzerdatenlöschen)
 
 # Benutzerdaten erstellen
 
@@ -135,3 +137,30 @@ s3 = boto3.resource('s3',
 ```
 
 Dies dient als Startpunkt und wird in den folgenden Skripten referenziert und verwendet.
+
+# Benutzerdaten anzeigen
+
+Um erstellte Object Storage Login Daten(Credentials) anzeigen zu können benötigen wir den OpenstackClient und führen dort folgenden Befehl aus:
+
+`$ openstack ec2 credentials list`
+
+Der Befehl erstellt uns eine Liste mit allen EC2 Credentials welche erstellt worden sind.
+
+```bash
+$ openstack ec2 credentials list
++----------------------------------+----------------------------------+----------------------------------+----------------------------------+
+| Access                           | Secret                           | Project ID                       | User ID                          |
++----------------------------------+----------------------------------+----------------------------------+----------------------------------+
+| aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx | 12341234123412341234123412341234 | 32132132132132132132132132132132 |
+| bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb | yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy | 56756756756756756756756756756756 | 65465465465465465465465465465465 |
+| cccccccccccccccccccccccccccccccc | zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz | 89089089089089089089089089089089 | 09809809809809809809809809809809 |
++----------------------------------+----------------------------------+----------------------------------+----------------------------------+
+```
+
+# Benutzerdaten löschen
+
+Um vorhandene Object Storage Login Daten(Credentials) löschen zu können benötigen wir den OpenstackClient und führen dort folgenden Befehl aus:
+
+`$ openstack ec2 credentials delete <access-key>`
+
+Der Befehl löscht die angegebenen Object Storage Login Daten(Credentials).

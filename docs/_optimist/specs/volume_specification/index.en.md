@@ -27,7 +27,6 @@ An overview of the three volume types below:
 
 ## Choosing a Volume Type
 You can select one of the three volume types upon creation of a volume with the following command (Unless otherwise specified, the type "default" is always used):
-`$ openstack volume create --type qos-high-iops <volume-name>`
+`$ openstack volume create <volume-name> --size 10 --type high-iops`
 
-The volume type on an existing can later be changed with the following command:
-`$ openstack volume create --type qos-low-iops <volume-name>`
+

@@ -33,7 +33,6 @@ Im Folgenden sind die verfügbaren Roles aufgeführt, die einem Satz von Applica
 - `Member`: Die Rolle "Member" hat nur administrativen Zugriff auf das zugewiesene Projekt.
 - `heat_stack_owner`: Als "heat_stack_owner" können Sie vorhandene HEAT-Templates verwenden und ausführen.
 - `load-balancer_member`: Als „load-balancer_member“ können Sie die Octavia LoadBalancer-Ressourcen nutzen.
-- `reader`: Dies ist eine schreibgeschützte Rolle und erlaubt daher nur Lesezugriff ohne Schreibrechte.
 
 ### Expiration
 

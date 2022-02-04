@@ -33,7 +33,6 @@ Below are the available roles which can be assigned to a set of application cred
 - `Member`: The "member" role only has administrative access to the assigned project.
 - `heat_stack_owner`: As "heat_stack_owner" you are able to use and execute existing HEAT templates.
 - `load-balancer_member`: As a “load-balancer_member" you can use the Octavia LoadBalancer resources.
-- `reader`: This is a read-only role and therefore only allows read-access with no write-permissions.
 
 ### Expiration
 

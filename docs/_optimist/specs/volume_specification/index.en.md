@@ -25,10 +25,6 @@ An overview of the three volume types below:
 | qos-default   | default       | 209715200      | 2500           | 209715200       | 2500           |
 | qos-low-iops  | low-iops      | 52428800       | 300            | 52428800        | 300            |
 
-Minimum IOPS: This is the number of IOPs guaranteed to a volume
-Maximum IOPS: This is the upper limit for IOPS on a volume
-Burst IOPS: This is the maximum IOPS over a short period
-
 ## Choosing a Volume Type
 You can select one of the three volume types upon creation of a volume with the following command (Unless otherwise specified, the type "default" is always used):
 `$ openstack volume create --type qos-high-iops <volume-name>`

@@ -10,7 +10,7 @@ last_modified_date: 2021-04-19
 OpenStack Default Quotas
 ========================
 
-In Optimist we have defined default quotas for the OpenStack Compute service, the OpenStack Block Storage service, and the OpenStack Networking service. These default values are listed below.
+In Optimist we have defined default quotas for the OpenStack Compute service, the OpenStack Block Storage service, and the OpenStack Networking service. We also have separate quotas for the Octavia Loadbalancer service and its associated components. These default values are listed below.
 
 Compute Settings
 ----------------
@@ -55,4 +55,14 @@ Network settings
 | Routers                  |        50           |
 | RBAC Policies            |        100          |
 | Subnetpools              |        Unlimited    |
-| Health Monitors          |        Unlimited    |
+
+Octavia Loadbalancers
+----------------
+
+|**Field**                 |**Value**            |
+|:-------------------------|:--------------------|
+| Load Balancers           | 100                 |
+| Listeners                | 100                 |
+| Pools                    | 100                 |
+| Health Monitors          | 100                 |
+| Members                  | 100                 |

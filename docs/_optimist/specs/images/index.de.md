@@ -28,6 +28,7 @@ Hier ist eine Liste unserer derzeit verfügbaren öffentlichen Images:
 - CentOS 7 - Latest
 - CentOS 8.1 - Latest
 - Debian Buster - Latest
+- Debian 11 Bullseye - Latest
 - Flatcar_Production - Latest
 - Ubuntu 16.04 Xenial Xerus - Latest
 - Ubuntu 18.04 Bionic Beaver - Latest

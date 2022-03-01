@@ -15,7 +15,7 @@ Ab der Version v1.19 folgt Kubernetes einer N-3 Supportrichtlinie. Dies bedeutet
 
 Eine gute Visualisierung des Zeitraums, für den die einzelnen Versionen unterstützt werden/wurden sieht man auf dem folgenden Bild:
 
-![K8sVersionSupport](k8s_version_support.png)
+[![K8sVersionSupport](k8s_version_support.png)](https://endoflife.date/kubernetes)
 
 iMKE folgt diesem Lebenszyklus, indem fortlaufend neue Versionen eingeführt und ältere aus dem Support genommen werden.
 

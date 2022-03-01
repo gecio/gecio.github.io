@@ -7,9 +7,10 @@ parent: Cluster Lebenszyklus
 ---
 <!-- LTeX:  language=de-DE -->
 
-Sicherheit des Clusters steht an erster Stelle, hinzu
-kommen noch einige neue Features mit jedem Release. Um
-hier auf der sicheren und modernen Seite zu sein empfiehlt
+Einen Kubernetes Cluster aktuell zu halten dient mehreren Zwecken.
+Einerseits gewährleistet es die Sicherheit des Clusters. Hinzu
+kommt dass Kubernetes auch einige neue Features mit jedem Release mitbringt.
+Um hier auf der sicheren und modernen Seite zu sein empfiehlt
 es sich regelmäßig Kubernetes-Updates zu installieren.
 
 In besonders kritischen Fällen updaten wir die Cluster API
@@ -87,6 +88,7 @@ voll geplant wird, noch bevor der zweite fertig ist.
 Als Lösung gibt es ein recht einfaches Bash-Script, welches in einem
 Namespace alle Pods noch einmal neu erstellen lässt:
 <https://github.com/truongnh1992/playing-with-istio/blob/master/upgrade-sidecar.sh>
+<!-- the above is a REALLY bad idea as we are linking to contents that can be changed at any time without us noticing ... we need to FIX this -->
 
 Dieses nutzen wir, nachdem das Cluster komplett upgedatet wurde, in einem Terminal mit konfiguriertem `kubectl`. In unserem Kapitel [Mit einem Cluster verbinden](/imke/accessmanagement/connectingtoacluster/) zeigen wir, wie Sie Ihr `kubectl` mit Ihrem Cluster verbinden können.
 

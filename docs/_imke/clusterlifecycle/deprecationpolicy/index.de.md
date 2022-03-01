@@ -48,7 +48,7 @@ Wenn eine Kubernetes-Version das End-of-Life erreicht, müssen wir ihre Unterst�
 
 Es ist wichtig, die folgenden technischen Einschränkungen in Kubernetes hervorzuheben:
 
-* Ein Kubernetes-Cluster (bzw. seine Control Plane) kann jeweils um eine Version aktualisiert werden, z. B. von v1.17 -> v1.18.
+* Ein Kubernetes-Cluster (bzw. seine Control Plane) kann jeweils um eine Version aktualisiert werden, z. B. von v1.21 -> v1.22.
 * Es ist nicht möglich, mehrere Versionen in einem Schritt zu aktualisieren.
 * Es ist nicht möglich, einen Cluster downzugraden.
 

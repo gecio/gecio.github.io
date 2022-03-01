@@ -46,7 +46,7 @@ If a Kubernetes version reaches End-of-Life, we have to remove its support from 
 
 It is important to underline the following technical limitations in Kubernetes:
 
-* A (control-plane of a) Kubernetes cluster can be upgraded by one version at a time, e.g. from v1.17 -> v1.18.
+* A (control-plane of a) Kubernetes cluster can be upgraded by one version at a time, e.g. from v1.21 -> v1.22.
 * It is not possible to upgrade more than one versions at once.
 * It is not possible to downgrade a cluster.
 

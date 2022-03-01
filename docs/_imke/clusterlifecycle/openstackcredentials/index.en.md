@@ -6,12 +6,12 @@ nav_order: 4300
 parent: Cluster Lifecycle
 ---
 
-It is possible to change the Credentials that iMKE is using to create Openstack Resources.
-This could be needed after changing the Password, or we need to use a different account.
+It is possible to change the credentials that iMKE is using to create Openstack resources.
+This could be needed after changing the password, or when we need to use a different account.
 
-## Change the Credentials
+## Change the credentials
 
-Changing the Credentials is as easy as following these steps:
+Changing the credentials is as easy as following these steps:
 
 1. Navigate to the desired cluster.
 
@@ -25,8 +25,8 @@ Changing the Credentials is as easy as following these steps:
 
     ![Edit-Provider](edit-cluster.png)
 
-4. Change Credentials
+4. Change credentials
 
     ![Credentials-Edit](credentials-edit.png)
 
-Soon after performing these steps, a confirmation message pops up, and the Credentials have been changed successfully.
+Soon after performing these steps, a confirmation message pops up, and the credentials have been changed successfully.

@@ -8,7 +8,7 @@ parent: Anwendungen in Kubernetes
 <!-- LTeX:  language=de-DE -->
 
 Um den Aufwand zu reduzieren, und die manuelle Verwaltung Ihrer DNS-Zone zu minimieren, kann man [ExternalDNS](https://github.com/kubernetes-sigs/external-dns) verwenden. ExternalDNS ermöglicht Ihnen DNS-Einträge dynamisch über Kubernetes je nach DNS-Anbieter zu steuern.
-Externen-DNS ist kein eigenständiger DNS-Server, sondern konfiguriert lediglich DNS-Ressourcen in externen DNS-Provider. Beispielsweise (OpenStack Designate, Amazon Route53, Google Cloud DNS, usw.)
+ExternalDNS ist kein eigenständiger DNS-Server, sondern konfiguriert lediglich DNS-Ressourcen in externen DNS-Providern. Beispielsweise (OpenStack Designate, Amazon Route53, Google Cloud DNS, usw.)
 
 ## Voraussetzungen
 
@@ -98,7 +98,7 @@ $ openstack zone show foobar.cloud.
 
 ## Die Installation vom ExternalDNS über Helm
 
-Bitte installieren Sie ExternalDNS in Ihrem Cluster, in unserem Beispiel nutzen wir wie folgendes Helm für die Installation:
+Bitte installieren Sie ExternalDNS in ihrem Cluster. In unserem Beispiel nutzen wir wie folgendes Helm für die Installation:
 
 * [Helm-Installation](https://helm.sh/docs/intro/)
 * ```$ helm repo add stable https://kubernetes-charts.storage.googleapis.com/```

@@ -25,7 +25,7 @@ Im zweiten Schritt muss dann auf `Save` geklickt werden.
 
 Im Anschluss legt iMKE das Projekt an und stellt es in der Übersicht dar.
 Mit einem Klick auf den Eintrag `Team Kubernetes` sind wir
-im Projekt-Umfeld und können das Cluster anlegen.
+im Projekt-Umfeld und können den Cluster anlegen.
 ![Project list](projectlist.png)
 
 Die folgende Seite zeigt das Projekt. Hier sind alle bereits
@@ -41,7 +41,7 @@ Cluster erstellt haben.
 Um einen Cluster anzulegen, klicken wir im gewünschten Projekt oben rechts auf `Create Cluster`.
 ![Add Cluster](projectview_addcluster.png)
 
-Jetzt öffnet sich die erste Seite für den Prozess, einen Cluster anzulegen.
+Jetzt öffnet sich die erste Seite für den Prozess des Cluster anlegens.
 Dazu wählen wir den Provider `openstack` und eine der drei Verfügbarkeitszonen aus, in diesem Beispiel
 nehmen wir `IX2`:
 ![Add Cluster Step 1](add_step1.png)
@@ -93,7 +93,7 @@ die Cluster-Erstellung starten können:
 ![Add Cluster Step 5](add_step5.png)
 
 Nun wird der Cluster erstellt. Um auf die Informationen zugreifen zu können müssen
-wir nun wieder auf die Cluster-Übersicht des Projektes und dort unser Cluster auswählen:
+wir nun wieder auf die Cluster-Übersicht des Projektes und dort unseren Cluster auswählen:
 ![Add Cluster Step 6](add_step6.png)
 
 Nach der Auswahl unseres Clusters kommen wir nun auf die Seite mit allen Cluster-Details:
@@ -123,7 +123,7 @@ nicht zu verändern, folgen wir hier der Variante 2.
 
 Dafür benutzen wir eine Konsole. In den Screenshots verwenden
 wir iTerm2 auf macOS, es funktioniert jedoch auf Linux und Windows
-bash genau so.
+genau so.
 
 Als Erstes müssen wir die heruntergeladene Datei finden.
 Chrome und Firefox laden diese beide normalerweise in den Downloads

@@ -22,9 +22,8 @@ To successfully finish this guide, you need the following items.
 
 ## Data types
 
-In a way, Kubernetes is a big database. Everything running
-in the cluster is tracked by the API server. This is how
-you run and manage applications in Kubernetes.
+Everything running in Kubernetes (inside the cluster) is tracked by the API server.
+This is how you run and manage applications in Kubernetes.
 
 ### Deployment
 

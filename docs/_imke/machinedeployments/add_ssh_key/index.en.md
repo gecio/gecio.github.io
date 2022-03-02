@@ -14,7 +14,7 @@ To achieve this, you will need to:
 - Create a ssh key,
 - Have a cluster with `User SSH Key Agent` enabled,
 - Add the key to the project and
-- Enable it in the Cluster.
+- Enable it in the cluster.
 
 In most cases you also need to assign a Floating IP to your worker nodes to be able to access them.
 
@@ -116,9 +116,8 @@ And ensure `Allocate Floating IP` is selected:
 ![Enable-Floating_IP](enable-fip.png)
 
 Once the node is fully created, and has an external ip, you can access to the node using the key.
-The default user for Ubuntu is `ubuntu` and for Flatcar `core`.
+The default user for Flatcar is `core`.
 
 ```bash
- ssh -A ubuntu@PUBLIC_IP
  ssh -A core@PUBLIC_IP
 ```

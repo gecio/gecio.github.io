@@ -7,7 +7,7 @@ parent: Machine Deployments
 ---
 # Add Machine Deployment
 
-To add a new Machine Deployment, use the `Add Machine Deployment` Button in the right top corner.
+To add a new Machine Deployment, use the `Add Machine Deployment` button in the upper right corner.
 
 ![add_node_deployment](add_nodedep.png)
 
@@ -43,7 +43,7 @@ or the details page:
 
 Machine Deployment can't be renamed. So we need to [create](#add-node-deployment) a second one and [delete](#delete-node-deployment) the old one.
 
-But there is a Gotcha! Deleting a Machine Deployment will delete all nodes at the same time. Depending on our replicas and number of nodes, that can lead to a downtime.
+But there is a gotcha! Deleting a Machine Deployment will delete all nodes at the same time. Depending on our replicas and number of nodes, that can lead to a downtime.
 
 To mitigate this, you should reduce the replica of the Machine Deployment step by step until it is 0 and then delete the Machine Deployment.
 

@@ -1,5 +1,5 @@
 ---
-title: Cluster Backups
+title: Cluster-Backups
 lang: de
 permalink: /imke/clusterbackups/
 nav_order: 5000

@@ -7,10 +7,10 @@ parent: Cluster Lebenszyklus
 ---
 
 
-# Das CNI updaten
+# Das CNI aktualisieren
 
-Auf der Clusterdetailseite kann man sehen, ob ein Update verfügbar ist.  
-Wenn ein grüner Pfeil in der CNI Plugin Box ist, steht ein Update zur verfügung. Klickt die Box, um das Update zu beginnen.
+Auf der Clusterdetailseite kann man sehen, ob ein Update für das CNI verfügbar ist.  
+Wenn ein grüner Pfeil in der CNI Plugin Box angezeigt wird, steht ein Update zur Verfügung. Um das Update zu beginnen, muss auf die Box geklickt werden.
 
 ![Step 1](cni_update_details.png)
 
@@ -18,16 +18,15 @@ In einem Popup werden die verfügbaren Versionen angezeigt. Mit `Change CNI Vers
 
 ![Step 2](cni_update_popup.png)
 
-Das Update läuft im Hintergrund. Wärnend die Netzwerk Pods neustarten kann es zu Paketverlusten auf den einzelnen Workern kommen.  
-Es wird immer nur ein Worker gleichzeitig aktualisiert, so sollte es nicht zu Ausfällen in Deployments mit mehr als einem Replica kommen.
+Das Update läuft im Hintergrund. Während die Netzwerk-Pods im Cluster neustarten, kann es zu Paketverlusten auf den einzelnen Workern kommen.  
+Es wird immer nur ein Worker gleichzeitig aktualisiert, daher sollte es nicht zu Ausfällen in Deployments mit mehr als einem Replica kommen.
 
-Nach dem Update, wenn alle Canal Pods im Daemonset restarted wurden, ist der Cluster wieder voll Einsatzfähig.  
-Sollte es wiedererwarten zu Netzwerkproblemen kommen könnte:
+Nach dem Update, wenn alle Netzwerk-Pods im Daemonset restarted wurden, ist der Cluster wieder voll Einsatzfähig.  
+Sollte es wider Erwarten zu Netzwerkproblemen kommen, können die folgenden Schritte Abhilfe schaffen:
 
-1. ein weiteres rolling restart der Canal Pods helfen. Das ist mit dem kubectl clinet machbar `kubeclt rollout restart daemonset --namespace kube-system canal`
-2. ein rolling recreate der Workernodes kan auch helfen, er kann im Webinterface gestartet werden.
+1. Ein erneuter Rolling Restart der Canal Pods: `kubectl rollout restart daemonset --namespace kube-system canal`
+2. Ein Rolling Recreate der Workernodes kann auch helfen, dies kann im Webinterface gestartet werden.
 
-
-CNI Updates sind nur auf die nächste Minorversion unterstützt. Sollten mehr als eine neue Version verfügbar sein, muss eine nach der anderen aktualisiert werden.
+CNI Updates werden immer nur auf die nächste Minorversion unterstützt. Sollten mehr als eine neue Version verfügbar sein, muss eine nach der anderen aktualisiert werden.
 
 ![Dropdown](cni_update_dropdown.png)

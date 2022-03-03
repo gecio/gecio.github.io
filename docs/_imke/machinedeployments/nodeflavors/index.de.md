@@ -29,13 +29,13 @@ Der Wechsel auf einen anderen Flavor ist denkbar einfach:
 
     ![Clusters](clusters.png?resize=1500,300)
 
-1. Nun klickt man auf das Editieren-Icon derjenigen Node, deren Flavor man ändern möchte. Das Icon erscheint dabei erst dann, wenn man mit der Maus über die entsprechende Node fährt.
+1. Nun klickt man auf das Editieren-Icon desjenigen MachineDeployments, deren Flavor man ändern möchte. Das Icon erscheint dabei erst dann, wenn man mit der Maus über die entsprechende MachineDeployment fährt.
 
-    ![Node-Selection](node-selection.png?resize=1500,700)
+    ![Select_edit_machine_deployment](edit_machine_deployment.png?resize=1500,700)
 
 1. In dem jetzt geöffneten Fenster selektiert man dann den gewünschten Flavor und klickt zuletzt auf `Save Changes`, um den Prozess abzuschließen.
 
-    ![Edit-Node](edit-node.png?resize=600,700)
+    ![Edit-Flavor](edit-flavor.png?resize=600,700)
 
 1. Kurz danach erscheint eine Bestätigungsnachricht auf Ihrem Bildschirm und der Flavor wurde erfolgreich geändert.
 

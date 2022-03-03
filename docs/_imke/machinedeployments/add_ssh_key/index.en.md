@@ -29,7 +29,11 @@ User SSH Key Agent can only be added during cluster creation. If you didn't enab
 
 ### Checking the Status of the User SSH Key Agent
 
-To check if the User SSH Key Agent is enabled for a certain cluster, you can check the cluster status page:
+To check if the User SSH Key Agent is enabled for a certain cluster, you can check the cluster status page. First you need to open the additional cluster information view to be able to do that:
+
+![Show additional cluster info](show_additional_cluster_info.png)
+
+You can now see the status in the lower right corner:
 
 ![User SSH Key Agent status](user-ssh-key-agent-status.png)
 

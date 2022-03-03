@@ -19,26 +19,26 @@ Um dies zu erreichen, brauchen wir:
 **Der Benutzer muss sich vorher einmalig in iMKE anmelden, bevor er verwendet werden kann.**
 
 Zuerst sollten wir das korrekte Projekt auswählen:
-![Projekt selektieren](photo1.png)
+![Projekt selektieren](select_project.png)
 
 Wir klicken dann in der linken Seitenleiste auf `Members`.
-![Members](photo2.png)
+![Members](select_members.png)
 
 Als nächstes, klicken wir oben rechts auf `Add Member`.
-![Add New member](photo3.png)
+![Add New member](add_member.png)
 
 Zum Schluss müssen wir die Benutzer-E-Mail-Adresse und die gewünschte Rolle (Owner, Editor, oder Viewer) eingeben.
-![Add Member Role](photo4.png)
+![Add Member Role](add_member_role.png)
 
 ## Benutzer entfernen
 
 Um einen Benutzer zu entfernen, gehen sie wieder in den Membersbereich des Projektes.
 
 Zuerst müssen wir das Projekt auswählen.
-![Projekt selektieren](photo1.png)
+![Projekt selektieren](select_project.png)
 
 Wir klicken dann in der linken Seitenleiste auf `Members`.
-![Members](photo2.png)
+![Members](select_members.png)
 
 Mit dem Löschen-Symbol kann der Benutzer entfernt werden.
 ![RemoveMember](remove-user.png)

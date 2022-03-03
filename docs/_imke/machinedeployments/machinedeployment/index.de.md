@@ -11,7 +11,7 @@ parent: Machine Deployments
 
 Um ein Machine Deployment hinzuzufügen, `Add Machine Deployment` Button in der oberen rechten Ecke klicken.
 
-![add_node_deployment](add_nodedep.png)
+![add_machine_deployment](add_machine_deployment.png)
 
 Das öffnet den `Add Machine Deployment` Dialog:
 
@@ -25,11 +25,11 @@ Die neuen Nodes werden jetzt angelegt. Den aktuellen Status bekommt man in den M
 
 Das neue Machine Deployment auswählen:
 
-![node_deployment_overview](node_deployment_overview.png)
+![machine_deployment_overview](machine_deployment_overview.png)
 
 …und warten bis alle Nodes Grün sind:
 
-![node_deployment_status](node_deployment_status.png)
+![machine_deployment_status](machine_deployment_status.png)
 
 # Machine Deployments löschen
 

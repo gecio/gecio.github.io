@@ -28,7 +28,11 @@ Ist der Agent nicht bei der Erstellung des Clusters aktiviert worden, können na
 
 ### Den Status des User SSH Key Agents überprüfen
 
-Der aktuelle Status des User Key SSH Agents kann auf der Übersichtsseite des Clusters eingesehen werden:
+Der aktuelle Status des User Key SSH Agents kann auf der Übersichtsseite des Clusters eingesehen werden. Hierzu muss erst die erweiterte Clusteransicht aufgeklappt werden damit diese Information sichtbar wird:
+
+![Show Additional Cluster_Info](show_additional_cluster_info.png)
+
+Nun kann man im unteren Abschnitt den Status des User Key SSH Agents ablesen:
 
 ![User SSH Key Agent status](user-ssh-key-agent-status.png)
 

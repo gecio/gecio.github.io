@@ -9,7 +9,7 @@ parent: Machine Deployments
 
 To add a new Machine Deployment, use the `Add Machine Deployment` button in the upper right corner.
 
-![add_node_deployment](add_nodedep.png)
+![add_machine_deployment](add_machine_deployment.png)
 
 This brings up the `Add Machine Deployment`-dialog, which has the same options as at cluster creation time:
 
@@ -23,11 +23,11 @@ the new nodes will be created. You can look at the progress in the Machine Deplo
 
 Click on the new Machine Deployment:
 
-![node_deployment_overview](node_deployment_overview.png)
+![machine_deployment_overview](machine_deployment_overview.png)
 
 and wait until all nodes are green.
 
-![node_deployment_status](node_deployment_status.png)
+![machine_deployment_status](machine_deployment_status.png)
 
 # Delete Machine Deployment
 
@@ -41,7 +41,7 @@ or the details page:
 
 # Rename Machine Deployment
 
-Machine Deployment can't be renamed. So we need to [create](#add-node-deployment) a second one and [delete](#delete-node-deployment) the old one.
+Machine Deployment can't be renamed. So we need to [create](#add-machine-deployment) a second one and [delete](#delete-machine-deployment) the old one.
 
 But there is a gotcha! Deleting a Machine Deployment will delete all nodes at the same time. Depending on our replicas and number of nodes, that can lead to a downtime.
 

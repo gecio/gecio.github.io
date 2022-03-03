@@ -30,11 +30,11 @@ Changing the flavor of a node at any point in time is as easy as following these
 
 1. Click the Edit-Icon on the node for which you would like to select another flavor. The Icon becomes visible when hovering over the node with your mouse.
 
-    ![Node-Selection](node-selection.png?resize=1500,700)
+    ![edit-machine-deployment](edit-machine-deployment.png?resize=1500,700)
 
 1. Select the desired flavor and click the `Save Changes`-button when you're finished.
 
-    ![Edit-Node](edit-node.png?resize=600,700)
+    ![Edit-Flavor](edit-flavor.png?resize=600,700)
 
 1. Soon after performing these steps, a confirmation message pops up, and your node flavor has been changed successfully.
 

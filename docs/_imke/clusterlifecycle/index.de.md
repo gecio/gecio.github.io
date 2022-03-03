@@ -12,6 +12,7 @@ Das Management von iMKE-basierten Kubernetes-Clustern wird weitergehend von der 
 **Weiterführende Themen**
 * [Einen Cluster anlegen](/imke/clusterlifecycle/creatingacluster/)
 * [Einen Cluster aktualisieren / Kubernetes-Updates](/imke/clusterlifecycle/upgradingacluster/)
+* [Einen Cluster aktualisieren / CNI-Updates](/imke/clusterlifecycle/upgradingcsi/)
 * [Einen Cluster aktualisieren / Openstack-Credentials ändern](/imke/clusterlifecycle/openstackcredentials/)
 * [Einen Cluster löschen](/imke/clusterlifecycle/deletingacluster/)
 * [Deprecation Policy in IMKE](/imke/clusterlifecycle/deprecationpolicy/)

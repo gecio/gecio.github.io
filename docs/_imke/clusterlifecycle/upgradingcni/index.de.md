@@ -28,7 +28,6 @@ Sollte es wiedererwarten zu Netzwerkproblemen kommen könnte:
 2. ein rolling recreate der Workernodes kan auch helfen, er kann im Webinterface gestartet werden.
 
 
-CNI update only supports updates to the next minor version. If you see more than one version in the dropdown, you need to update one by one.
 CNI Updates sind nur auf die nächste Minorversion unterstützt. Sollten mehr als eine neue Version verfügbar sein, muss eine nach der anderen aktualisiert werden.
 
 ![Dropdown](cni_update_dropdown.png)

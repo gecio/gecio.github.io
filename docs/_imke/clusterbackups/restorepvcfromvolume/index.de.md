@@ -1,5 +1,5 @@
 ---
-title: Restore a PVC from an existing Openstack volume
+title: Ein PVC von einem existierenden Openstack Volume wiederherstellen
 lang: de
 permalink: /imke/clusterbackups/restorepvcfromvolume/
 nav_order: 5200

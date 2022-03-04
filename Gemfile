@@ -9,3 +9,5 @@ group :jekyll_plugins do
   gem "jekyll-polyglot"
   gem "jekyll-postfiles"
 end
+
+gem "webrick", "~> 1.7"

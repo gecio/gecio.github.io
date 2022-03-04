@@ -14,11 +14,11 @@ Wenn ein grüner Pfeil in der CNI Plugin Box angezeigt wird, steht ein Update zu
 
 ![Step 1](cni_update_details.png)
 
-In einem Popup werden die verfügbaren Versionen angezeigt. Mit `Change CNI Version` wird er Updateprozess im Cluster begonnen.
+In einem Popup werden die verfügbaren Versionen angezeigt. Mit `Change CNI Version` wird der Updateprozess im Cluster begonnen.
 
 ![Step 2](cni_update_popup.png)
 
-Das Update läuft im Hintergrund. Während die Netzwerk-Pods im Cluster neustarten, kann es zu Paketverlusten auf den einzelnen Workern kommen.  
+Das Update läuft im Hintergrund. Während die Netzwerk-Pods im Cluster neustarten, kann es kurz Paketverlusten auf den einzelnen Workern kommen.  
 Es wird immer nur ein Worker gleichzeitig aktualisiert, daher sollte es nicht zu Ausfällen in Deployments mit mehr als einem Replica kommen.
 
 Nach dem Update, wenn alle Netzwerk-Pods im Daemonset restarted wurden, ist der Cluster wieder voll Einsatzfähig.  

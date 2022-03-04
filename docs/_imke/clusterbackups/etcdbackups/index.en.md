@@ -1,5 +1,5 @@
 ---
-title: Backup and Restore Etcd
+title: Etcd Backups and Restore
 lang: en
 permalink: /imke/clusterbackups/etcdbackups/
 nav_order: 5200
@@ -15,7 +15,7 @@ However, it’s possible to create additional backup configuration if needed.
 
 ## Creating Etcd Backups
 
-EtcdBackups and Restores are resources bounded to a project, and you can manage them in the Project view.
+Etcd Backups and Restores are resources bounded to a project, and you can manage them in the Project view.
 ![Project Etcd Backups](backup_1.png)
 
 To create a new backup, you need to click on the Add Automatic Backup button. You have a choice of preset daily, weekly or monthly backups, or you can create a backup with a custom interval and keep time.

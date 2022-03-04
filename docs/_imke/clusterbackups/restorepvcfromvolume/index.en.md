@@ -8,13 +8,13 @@ parent: Cluster Backups
 
 # Howto restore a PVC from an existing Openstack volume
 
-Normally, creating a PVC (PersistentVolumeClaim) in one of our Kubernetes clusters triggers the creation of a *new* PV (PersistentVolume) in Kubernetes and a new Volume in Openstack respectively. But it is also possible to use an *existing* Openstack volume for that purpose. This document describes how to achieve this.
+Normally, creating a PVC (PersistentVolumeClaim) in one of our Kubernetes clusters triggers the creation of a *new* PV (PersistentVolume) in Kubernetes and a *new* Volume in Openstack respectively. But it is also possible to use an *existing* Openstack volume for that purpose. This document describes how to achieve this.
 
 ## Prerequisites
 
-As a prerequisite, you of course need to have an available, unused volume in Openstack. Thsi could be the case for example if you have deleted a cluster without deleting all atached PVCs before or if you want to move a volume from one cluster to another. In any case, if you follow these instructions, you likely know what you are doing and why.
+As a prerequisite, you of course need to have an available, unused volume in Openstack. This could be the case for example if you have deleted a cluster without deleting all atached PVCs before or if you want to move a volume from one cluster to another. In any case, if you follow these instructions, you likely know what you are doing and why.
 
-TO be able to use an existing Openstack volume in a Kubernetes cluster, we need to find out its ID. To do so, you have go to the [Openstack/Optimist Dashboard](https://dashboard.optimist.innovo.cloud/auth/login/):
+To be able to use an existing Openstack volume in a Kubernetes cluster, we need to find out its ID. To do so, you have go to the [Openstack/Optimist Dashboard](https://dashboard.optimist.innovo.cloud/auth/login/):
 
 ![Openstack Login](openstack-1.png)
 
@@ -48,7 +48,7 @@ spec:
   volumeMode: Filesystem
 ```
 
-Not apply this manifest and check if the PV got created successfully:
+Now apply this manifest and check if the PV got created successfully:
 
 ```bash
 # kubectl apply -f restore-pv.yaml
@@ -62,7 +62,7 @@ This example created a PV named `test-pv-restore` which referenced the existing 
 
 ## Adding the PVC referencing the correct PV
 
-As a next step, as PVC needs to be build which references the PV we just created. To do so, the PVC needs to have the `spec.volumeName`-key set to the PV name:
+As a next step, a PVC needs to be build which references the PV we just created. To do so, the PVC needs to have the `spec.volumeName`-key set to the PV name:
 
 ```yaml
 apiVersion: v1
@@ -115,7 +115,7 @@ spec:
         claimName: test-pvc
 ```
 
-The important part in the above example is that the `claimName` is set correctly to the PVC which we just created. After applying the manifest and creating the Pod, the volume is mounted under */restore* -- which we can check by executing into the pod and opening a shell:
+The important part in the above example is that the `claimName` is set correctly to the PVC which we just created. After applying the manifest and creating the Pod, the volume from our example is mounted under */restore* -- which we can check by executing into the pod and opening a shell:
 
 ```bash
 # kubectl apply -f pvc-example/test-pod.yaml

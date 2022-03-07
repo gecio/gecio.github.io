@@ -8,3 +8,6 @@ has_children: true
 <!-- LTeX:  language=de-DE -->
 
 **Weiterführende Themen**
+
+* [etcd Backup und Wiederherstellung](/imke/clusterbackups/etcdbackups/)
+* [Restore a PVC from an existing Openstack volume](/imke/clusterbackups/restorepvcfromvolume/)

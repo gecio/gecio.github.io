@@ -15,7 +15,7 @@ Ab der Version v1.19 folgt Kubernetes einer N-3 Supportrichtlinie. Dies bedeutet
 
 Eine gute Visualisierung des Zeitraums, für den die einzelnen Versionen unterstützt werden/wurden sieht man auf dem folgenden Bild:
 
-![K8sVersionSupport](k8s_version_support.png)
+[![K8sVersionSupport](k8s_version_support.png)](https://endoflife.date/kubernetes)
 
 iMKE folgt diesem Lebenszyklus, indem fortlaufend neue Versionen eingeführt und ältere aus dem Support genommen werden.
 
@@ -48,7 +48,7 @@ Wenn eine Kubernetes-Version das End-of-Life erreicht, müssen wir ihre Unterst�
 
 Es ist wichtig, die folgenden technischen Einschränkungen in Kubernetes hervorzuheben:
 
-* Ein Kubernetes-Cluster (bzw. seine Control Plane) kann jeweils um eine Version aktualisiert werden, z. B. von v1.17 -> v1.18.
+* Ein Kubernetes-Cluster (bzw. seine Control Plane) kann jeweils um eine Version aktualisiert werden, z. B. von v1.21 -> v1.22.
 * Es ist nicht möglich, mehrere Versionen in einem Schritt zu aktualisieren.
 * Es ist nicht möglich, einen Cluster downzugraden.
 

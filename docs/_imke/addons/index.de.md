@@ -7,7 +7,7 @@ has_children: true
 ---
 <!-- LTeX:  language=de-DE -->
 
-Innerhalb von iMKE können spezielle, kuratierte, Applikationen, über den Add-on Tab verwaltet werden. In diesem Abschnitt zeigen wir, wie Sie auf der iMKE-Plattform diese Add-ons installieren und verwalten können.
+Innerhalb von iMKE können spezielle, kuratierte Applikationen über den Add-on Tab verwaltet werden. In diesem Abschnitt zeigen wir, wie Sie auf der iMKE-Plattform diese Add-ons installieren und verwalten können.
 
 **Weiterführende Themen**
 * [Eine Anwendung in Kubernetes starten](/imke/k8sapplications/runningapplications/)

@@ -14,7 +14,7 @@ From v1.19 onwards, Kubernetes will follow an N-3 support policy. This means tha
 
 A good visualization of the period for which each release is/was supported is below:
 
-![K8sVersionSupport](k8s_version_support.png)
+[![K8sVersionSupport](k8s_version_support.png)](https://endoflife.date/kubernetes)
 
 iMKE aligns loosely to this lifecycle by continuously introducing new versions and deprecating older ones.
 
@@ -46,7 +46,7 @@ If a Kubernetes version reaches End-of-Life, we have to remove its support from 
 
 It is important to underline the following technical limitations in Kubernetes:
 
-* A (control-plane of a) Kubernetes cluster can be upgraded by one version at a time, e.g. from v1.17 -> v1.18.
+* A (control-plane of a) Kubernetes cluster can be upgraded by one version at a time, e.g. from v1.21 -> v1.22.
 * It is not possible to upgrade more than one versions at once.
 * It is not possible to downgrade a cluster.
 

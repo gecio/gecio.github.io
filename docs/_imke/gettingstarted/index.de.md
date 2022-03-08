@@ -8,13 +8,13 @@ has_children: false
 <!-- LTeX:  language=de-DE -->
 
 Diese Anleitung beschreibt, wie Sie ihr erstes iMKE-Projekt inkl. einem ersten
-Kubernetes-Cluster erzeugen, wie Sie auf das Cluster zugreifen und anschließend
-die angelegten Ressourcen wieder vollständig löschen.
+Kubernetes-Cluster erzeugen, wie Sie auf den Cluster zugreifen und anschließend
+die angelegten Ressourcen wieder vollständig löschen können.
 
 ## Das erste Projekt anlegen
 
 Nach dem Login in iMKE erscheint folgendes Fenster, in dem wir auf
-`Add Project` klicken müssen.
+die `Add Project` Schaltfläche klicken müssen.
 ![Add Project](addproject.png)
 
 Danach öffnet sich ein Fenster, in dem wir dem Projekt einen Namen geben.
@@ -25,7 +25,7 @@ Im zweiten Schritt muss dann auf `Save` geklickt werden.
 
 Im Anschluss legt iMKE das Projekt an und stellt es in der Übersicht dar.
 Mit einem Klick auf den Eintrag `Team Kubernetes` sind wir
-im Projekt-Umfeld und können das Cluster anlegen.
+im Projekt-Umfeld und können den Cluster anlegen.
 ![Project list](projectlist.png)
 
 Die folgende Seite zeigt das Projekt. Hier sind alle bereits
@@ -33,20 +33,20 @@ bestehenden Cluster sowie zugehörige User und weitere Kontroll-Mechanismen
 sichtbar.
 ![Project View](projectview.png)
 
-Im Augenblick ist diese Liste noch leer, bis wir unser erstes Kubernetes
+Im Augenblick ist diese Liste noch leer, bis wir unseren ersten Kubernetes
 Cluster erstellt haben.
 
-## Das erste Cluster erstellen
+## Den ersten Cluster erstellen
 
 Um einen Cluster anzulegen, klicken wir im gewünschten Projekt oben rechts auf `Create Cluster`.
 ![Add Cluster](projectview_addcluster.png)
 
-Jetzt öffnet sich die erste Seite für den Prozess, einen Cluster anzulegen.
+Jetzt öffnet sich die erste Seite für den Prozess des Cluster anlegens.
 Dazu wählen wir den Provider `openstack` und eine der drei Verfügbarkeitszonen aus, in diesem Beispiel
 nehmen wir `IX2`:
 ![Add Cluster Step 1](add_step1.png)
 
-Im nächsten Schritt konfigurieren wir die Cluster-Details. In unserem Beispiel nennen wir das Cluster `first-system` und
+Im nächsten Schritt konfigurieren wir die Cluster-Details. In unserem Beispiel nennen wir den Cluster `first-system` und
 wählen die gewünschte Kubernetes-Version aus:
 ![Add Cluster Step 2](add_step2.png)
 
@@ -65,11 +65,11 @@ auswählen:
 ![Add Cluster Step 3.1](add_step3.png)
 ![Add Cluster Step 3.2](add_step3_2.png)
 
-Mit dem Hinzufügen der Credentials und dem Auswählen des OpenStack-Projekts sind alle
+Mit dem Hinzufügen unserer Zugangsdaten und dem Auswählen des OpenStack-Projekts sind alle
 notwendigen Eingaben getätigt, so dass wir mit dem nächsten Schritt fortfahren können. Wenn wir das tun,
-wird automatisch ein eigenes Netzwerk, Subnetz sowie eine Security Gruppe für das neue Cluster erstellt.
+wird automatisch ein eigenes Netzwerk, Subnetz sowie eine Security Gruppe für den neuen Cluster erstellt.
 
-Es ist allerdings auch möglich, ein existierendes Netzwerk verwenden, um den Cluster zu erstellen.
+Es ist allerdings auch möglich ein existierendes Netzwerk zu verwenden um den Cluster zu erstellen.
 Dazu müssen wir das Netzwerk und das Subnetz auswählen. Diese müssen allerdings mit einem Router verbunden sein.
 In unserer [OpenStack Dokumentation](/optimist/guided_tour/step10/) ist beschrieben, wie man einen Router erstellen 
 und mit einem Netzwerk verbinden kann.
@@ -92,16 +92,16 @@ Weiterhin wählen wir `Flatcar` als Betriebssystem für die Worker-Nodes:
 die Cluster-Erstellung starten können:
 ![Add Cluster Step 5](add_step5.png)
 
-Nun wird das Cluster erstellt. Um auf die Informationen zugreifen zu können müssen
-wir nun wieder auf die Cluster-Übersicht des Projektes und dort unser Cluster auswählen:
+Nun wird der Cluster erstellt. Um auf die Informationen zugreifen zu können müssen
+wir nun wieder auf die Cluster-Übersicht des Projektes und dort unseren Cluster auswählen:
 ![Add Cluster Step 6](add_step6.png)
 
-Nach der Auswahl unseres Cluster kommen wir nun auf die Seite mit allen Cluster-Details:
+Nach der Auswahl unseres Clusters kommen wir nun auf die Seite mit allen Cluster-Details:
 ![Add Cluster Step 6.2](add_step6_2.png)
 
 ## Auf das Cluster zugreifen
 
-Um auf das Cluster zuzugreifen, klicken wir oben rechts
+Um auf den Cluster zuzugreifen, klicken wir oben rechts
 auf den nach unten gerichteten Pfeil:
 ![Step 2](connect_2.png)
 
@@ -119,18 +119,18 @@ registrieren. Dafür gibt es zwei Möglichkeiten:
     exportieren.
 
 Der Einfachheit halber und um auf unserem System die Standards
-nicht zu verändern, gehen wir hier mit Variante 2.
+nicht zu verändern, folgen wir hier der Variante 2.
 
 Dafür benutzen wir eine Konsole. In den Screenshots verwenden
 wir iTerm2 auf macOS, es funktioniert jedoch auf Linux und Windows
-bash genau so.
+genau so.
 
 Als Erstes müssen wir die heruntergeladene Datei finden.
 Chrome und Firefox laden diese beide normalerweise in den Downloads
 Ordner. Der Dateiname setzt sich jetzt aus zwei Komponenten zusammen:
 
 * `kubeconfig-admin-`
-* unser Cluster ID
+* unsere Cluster ID
 
 Um diese dann zu registrieren, nutzen wir folgendes Kommando:
 
@@ -139,8 +139,8 @@ cd Downloads
 export KUBECONFIG=$(pwd)/kubeconfig-admin-CLUSTERID
 ```
 
-Nun können wir mit unserem Cluster reden. Das einfachste Kommando ist
-hier: "zeige mir alle Nodes meines Clusters":
+Nun können wir mit unserem Cluster kommunizieren. Das einfachste Kommando ist
+hier: "zeige mir alle Knoten meines Clusters":
 
 ```bash
 kubectl get nodes
@@ -153,11 +153,11 @@ musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.21.5
 
 ## Aufräumen
 
-Um nach diesem ersten Test das Cluster wieder zu löschen, klicken wir auf `Delete`:
+Um nach diesem ersten Test den Cluster wieder zu löschen, klicken wir auf `Delete`:
 ![Step 3](delete_3.png)
 
 In dem sich öffnenden Fenster wird als Sicherheitsfrage
-der Cluster-Name angefragt:
+der Cluster-Name abgefragt:
 ![Step 4](delete_4.png)
 
 Da wir alles löschen wollen, lassen wir die beiden Checkboxen

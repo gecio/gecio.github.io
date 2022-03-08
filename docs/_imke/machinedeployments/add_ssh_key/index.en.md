@@ -14,7 +14,7 @@ To achieve this, you will need to:
 - Create a ssh key,
 - Have a cluster with `User SSH Key Agent` enabled,
 - Add the key to the project and
-- Enable it in the Cluster.
+- Enable it in the cluster.
 
 In most cases you also need to assign a Floating IP to your worker nodes to be able to access them.
 
@@ -29,7 +29,11 @@ User SSH Key Agent can only be added during cluster creation. If you didn't enab
 
 ### Checking the Status of the User SSH Key Agent
 
-To check if the User SSH Key Agent is enabled for a certain cluster, you can check the cluster status page:
+To check if the User SSH Key Agent is enabled for a certain cluster, you can check the cluster status page. First you need to open the additional cluster information view to be able to do that:
+
+![Show additional cluster info](show_additional_cluster_info.png)
+
+You can now see the status in the lower right corner:
 
 ![User SSH Key Agent status](user-ssh-key-agent-status.png)
 
@@ -116,9 +120,8 @@ And ensure `Allocate Floating IP` is selected:
 ![Enable-Floating_IP](enable-fip.png)
 
 Once the node is fully created, and has an external ip, you can access to the node using the key.
-The default user for Ubuntu is `ubuntu` and for Flatcar `core`.
+The default user for Flatcar is `core`.
 
 ```bash
- ssh -A ubuntu@PUBLIC_IP
  ssh -A core@PUBLIC_IP
 ```

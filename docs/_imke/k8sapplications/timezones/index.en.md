@@ -19,13 +19,13 @@ To successfully finish this guide, you need the following items.
   * See also [Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster/)
 
 
-## Time zones in Kubernetes Environment
+## Time zones in Kubernetes environment
 
-### Default Behaviour in Kubernetes Cluster
+### Default behaviour in Kubernetes cluster
 
 Kubernetes clusters inherit the time zone configuration from worker node, so that the default time zone in the Kubernetes cluster is the same as the one in your worker node - it's controlled by the kernel.
 
-### Pod & Container
+### Pods & Containers
 
 While it is not trivial to change the time zone at the cluster level, there is an easy way to achieve this at pod and container level.
 

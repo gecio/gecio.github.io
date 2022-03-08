@@ -7,7 +7,7 @@ parent: Access Management
 ---
 <!-- LTeX:  language=de-DE -->
 
-Um einen Benutzer RBAC-basierten Zugriff auf ein Cluster einzurichten, klicken Sie im RBAC-Widget auf `Add Binding`:
+Um einem Benutzer RBAC-basierten Zugriff auf einem Cluster einzurichten, klicken Sie im RBAC-Widget auf `Add Binding`:
 
 ![RBAC Add Binding](rbac_add.png)
 
@@ -24,7 +24,7 @@ Dabei sollten Sie jedoch beachten, dass der Benutzer prinzipiell für iMKE autor
 kubectl get clusterrole $NAME_OF_CLUSTERROLE -o yaml
 ```
 
-### Namespace-weiter zugriff
+### Namespace-weiter Zugriff
 
 Wenn der Zugriff auf einen Namespace beschränkt werden soll, muss im `Add Binding`-Dialog auf `Namespace` gewechselt sowie die E-Mail-Adresse angegeben werden.
 

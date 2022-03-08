@@ -80,8 +80,8 @@ Wie oben dargestellt, wurde der Autoscaler provisioniert und läuft.
 Der Cluster-Autoscaler berücksichtigt nur MachineDeployments mit gültigen Annotationen. Die Annotationen werden verwendet, um die minimale und maximale Anzahl von Replikas pro MachineDeployment zu steuern. Sie müssen diese Anmerkungen nicht auf alle MachineDeployment-Objekte anwenden, sondern nur auf MachineDeployments, die der Cluster Autoscaler berücksichtigen soll.
 
 ```
-cluster.k8s.io/cluster-api-autoscaler-node-group-min-size - the minimum number of replicas (must be greater than zero)
-cluster.k8s.io/cluster-api-autoscaler-node-group-max-size - the maximum number of replicas
+cluster.k8s.io/cluster-api-autoscaler-node-group-min-size - die kleinste Anzahl an Worker-Knoten im Cluster (muss größer als Null sein!)
+cluster.k8s.io/cluster-api-autoscaler-node-group-max-size - die höchste Anzahl an Worker-Knoten im Cluster
 ```
 
 Sie können die Anmerkungen auf MachineDeployments anwenden, sobald der Cluster bereitgestellt ist und die MachineDeployments erstellt und ausgeführt werden, indem Sie die folgenden Schritte ausführen.

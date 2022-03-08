@@ -1,7 +1,7 @@
 ---
 title: Cluster Lifecycle
 lang: en
-permalink: /imke/managingprojects/clusterlifecycle/
+permalink: /imke/clusterlifecycle/
 nav_order: 4000
 has_children: true
 ---
@@ -11,6 +11,7 @@ The management of an iMKE-Kubernetes-Cluster is handled by the platform itself, 
 **Further reading**
 * [Creating a Cluster](/imke/clusterlifecycle/creatingacluster/)
 * [Updating a Cluster / Kubernetes-Updates](/imke/clusterlifecycle/upgradingacluster/)
+* [Updating a Cluster / CNI-Updates](/imke/clusterlifecycle/upgradingcni/)
 * [Updating a Cluster / Changing Openstack Credentials](/imke/clusterlifecycle/openstackcredentials/)
 * [Deleting a Cluster](/imke/clusterlifecycle/deletingacluster/)
 * [Deprecation Policy in iMKE](/imke/clusterlifecycle/deprecationpolicy/)

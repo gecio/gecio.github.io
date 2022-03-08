@@ -19,26 +19,26 @@ To achieve this, we will need:
 **The user need to log in once, before it is usable.
 
 First, we should select the correct project.
-![Get the Project](photo1.png)
+![Get the Project](select_project.png)
 
 Then click on `Members` in the left sidebar.
-![Member](photo2.png)
+![Member](select_members.png)
 
 Next we click `Add Member` on the top right.
-![Add New member](photo3.png)
+![Add New member](add_member.png)
 
 Finally, we need to enter the user email and their desired role (Owner, Editor, or Viewer).
-![Add Member Role](photo4.png)
+![Add Member Role](add_member_role.png)
 
 ## Remove Users
 
 To remove a User from a Project go back to the member section of the project.
 
 First, we need to go the project.
-![Get the Project](photo1.png)
+![Get the Project](select_project.png)
 
 Then click on `Members` in the left sidebar.
-![Member](photo2.png)
+![Member](select_members.png)
 
 Use the deletion-icon to remove the user.
 ![RemoveMember](remove-user.png)

@@ -7,7 +7,7 @@ parent: Machine Deployments
 ---
 <!-- LTeX:  language=de-DE -->
 
-Die iMKE-Plattform bietet die Möglichkeit, einen SSH-Key auf Worker-Nodes zu installieren. Dies kann zum Beispiel hilfreich sein, wenn man das Cluster oder eine eigene Applikation unmittelbar auf den Worker Nodes debuggen möchte.
+Die iMKE-Plattform bietet die Möglichkeit, einen SSH-Key auf Worker-Nodes zu installieren. Dies kann zum Beispiel hilfreich sein, wenn man den Cluster oder eine eigene Applikation unmittelbar auf den Worker Nodes debuggen möchte.
 
 Dafür benötigt man folgende Schritte:
 
@@ -28,7 +28,11 @@ Ist der Agent nicht bei der Erstellung des Clusters aktiviert worden, können na
 
 ### Den Status des User SSH Key Agents überprüfen
 
-Der aktuelle Status des User Key SSH Agents kann auf der Übersichtsseite des Clusters eingesehen werden:
+Der aktuelle Status des User Key SSH Agents kann auf der Übersichtsseite des Clusters eingesehen werden. Hierzu muss erst die erweiterte Clusteransicht aufgeklappt werden damit diese Information sichtbar wird:
+
+![Show Additional Cluster_Info](show_additional_cluster_info.png)
+
+Nun kann man im unteren Abschnitt den Status des User Key SSH Agents ablesen:
 
 ![User SSH Key Agent status](user-ssh-key-agent-status.png)
 
@@ -116,9 +120,8 @@ Dort sollten Sie sicherstellen, dass `Allocate Floating IP` aktiviert ist:
 
 Wenn sich hier ein Setting ändert, werden alle Worker neu erstellt. Danach kann man sich per SSH einloggen.
 
-Der Standarduser für Ubuntu ist dabei `ubuntu` und für Flatcar `core`.
+Der Standarduser für Flatcar heisst `core`.
 
 ```bash
- ssh -A ubuntu@PUBLIC_IP
  ssh -A core@PUBLIC_IP
 ```

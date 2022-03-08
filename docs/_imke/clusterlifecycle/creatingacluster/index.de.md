@@ -76,7 +76,7 @@ Nach der Auswahl unseres Cluster kommen wir nun auf die Seite mit allen Cluster-
 Folgende Schritte wurden erfolgreich durchgeführt und gelernt:
 
 * Was ist ein iMKE Cluster
-* Wie erstellt man ein iMKE Cluster
+* Wie erstellt man einen iMKE Cluster
 
 Herzlichen Glückwunsch! Dies sind alle notwendigen Schritte um ein Kubernetes Cluster
 in iMKE anzulegen. Wie dieses verwendet werden kann, steht auf den nächsten Seiten.

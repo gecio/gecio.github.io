@@ -6,7 +6,7 @@ nav_order: 6000
 has_children: true
 ---
 
-There are two ways how we can grant other users access to an iMKE cluster:
+There are two ways how you can grant other users access to an iMKE cluster:
 
 * granting users access to a complete iMKE project (which grants access to all clusters in that project as well)
 * use role-based access control (RBAC) to define more fine-grained access control directly to the cluster.

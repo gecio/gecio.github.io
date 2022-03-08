@@ -7,7 +7,7 @@ has_children: false
 ---
 
 
-This Guide describes how to create your first iMKE project with a first Kubernetes
+This guide describes how to create your first iMKE project with a first Kubernetes
 cluster, how to connect to that cluster and how to clean up all resources
 afterwards.
 
@@ -24,7 +24,7 @@ To finish, we click on `Save`.
 
 ![Add Project Modal](addproject_modal.png?resize=600)
 
-Now iMKE creates our Project and adds it to the Overview. With a click on
+Now iMKE creates our project and adds it to the overview. With a click on
 the entry `Team Kubernetes` we enter the project:
 ![Project list](projectlist.png)
 
@@ -36,7 +36,7 @@ At the moment, this list is empty until we create our first managed Kubernetes c
 
 ## Create your first cluster
 
-To create the cluster, we click on `Create Cluster` in the top right corner:
+To create the cluster, we click on `Create Cluster` in the upper right corner:
 ![Add Cluster](projectview_addcluster.png)
 
 This opens the first page of the cluster creation procedure.
@@ -45,7 +45,7 @@ datacenters. In this example, we pick `IX2`:
 ![Add Cluster Step 1](add_step1.png)
 
 In the next step, we have to configure the cluster details. In the example,
-we call our Cluster `first-system` and select the desired Kubernetes version:
+we call our cluster `first-system` and select the desired Kubernetes version:
 ![Add Cluster Step 2](add_step2.png)
 
 For occasional SSH access to worker nodes, we need can optionally deploy an SSH Key.
@@ -62,13 +62,13 @@ in:
 ![Add Cluster Step 3.1](add_step3.png)
 ![Add Cluster Step 3.2](add_step3_2.png)
 
-By adding the credentials and selecting the OpenStack project, we could proceed to the next
+By adding the credentials and selecting the OpenStack project, we will proceed to the next
 step. If we do so, a new and dedicated network, subnet and security group will be created for the cluster
 automatically.
 
 It is also possible to use an **existing** network to create the cluster. For this to work, we have to select
 the network and the subnet from the dropdown menu. Those must be attached to a router.
-Creating a router can be done from the Optimist Dashboard or from the OpenStack command line.
+Creating a router can be done from the Optimist dashboard or from the OpenStack command line.
 Please refer to our [OpenStack documentation](/optimist/guided_tour/step10/) for details how to create the router and attach it.
 ![Add Cluster Network](create-cluster-network-exist.png)
 
@@ -88,7 +88,7 @@ We choose `Flatcar` as the operating system for the worker nodes:
 To finish, we click on `Next`. After we verified all settings, we click on `Create Cluster`.
 ![Add Cluster Step 5](add_step5.png)
 
-Now the cluster is being created. To access the information, we return to the Cluster
+Now the cluster is being created. To access the information, we return to the cluster
 view of the project and click our Cluster's name:
 ![Add Cluster Step 6](add_step6.png)
 
@@ -104,7 +104,7 @@ facing arrow in the top right corner.
 
 This way we download a file which is called `kubeconfig` in
 kubernetes jargon. This file contains all end points, certificates
-and other information about the cluster. The `kubectl`command uses
+and other information about the cluster. The `kubectl` command uses
 this file to connect to the cluster.
 
 To use the `kubeconfig`, we need to register it on the console.
@@ -113,12 +113,12 @@ There are two ways to do this:
 1. `kubectl` by default tries to use the file `.kube/config`
    in your home directory.
 2. We can temporarily use the `kubeconfig` by exporting it to
-   an environment variable.
+   the environment variable KUBECONFIG
 
 To keep things straightforward and to avoid changing standards
 on our system, we choose the second method in the example.
 
-For this we need to open a Terminal. In the screenshots we use
+For this we need to open a terminal. In the screenshots we use
 iTerm2 on macOS, but the examples work the same way when using
 bash on Linux or Windows.
 
@@ -150,7 +150,7 @@ musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.21.5
 
 ## Cleanup
 
-To clean up the cluster we created, we need to click `Delete` in the iMKE-Dashboard:
+To clean up the cluster we created, we need to click `Delete` in the iMKE-dashboard:
 ![Step 3](delete_3.png)
 
 This opens a window where we need to enter the cluster name

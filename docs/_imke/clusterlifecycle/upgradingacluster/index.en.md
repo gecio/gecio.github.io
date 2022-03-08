@@ -85,6 +85,7 @@ be fully scheduled before the second one is ready.
 As a solution to this is a simple bash script, which per-namespace triggers
 the regeneration of all pods.
 <https://github.com/truongnh1992/playing-with-istio/blob/master/upgrade-sidecar.sh>
+<!-- the above is a REALLY bad idea as we are linking to contents that can be changed at any time without us noticing ... we need to FIX this -->
 
 We use this after the cluster has been completely updated in a terminal with `kubectl` configured. To get `kubectl` working with your cluster, look at our chapter [Connecting to a Cluster](/imke/accessmanagement/connectingtoacluster/).
 

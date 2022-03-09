@@ -9,4 +9,4 @@ has_children: true
 **Further reading**
 
 * [etcd Backups and Restore](/imke/clusterbackups/etcdbackups/)
-* [Ein PVC von einem existierenden Openstack Volume wiederherstellen](/imke/clusterbackups/restorepvcfromvolume/)
+* [Restore a PVC from an existing Openstack volume](/imke/clusterbackups/restorepvcfromvolume/)

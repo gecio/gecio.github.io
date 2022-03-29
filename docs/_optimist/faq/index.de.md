@@ -115,3 +115,8 @@ UUID zu verwenden. Zum Beispiel:
 # /boot war auf /dev/sda2 während der Installation
 /dev/disk/by-uuid/f6a0d6f3-b66c-bbe3-47ba-d264464cb5a2 /boot ext4    defaults        0       2
 ```
+
+## Ist es möglich, Multiattached-Volumes auf Cinder zu haben?
+
+Wir unterstützen keine Multiattached-Volumes auf unseren Instances, da für Multiattached-Volumes clusterfähige Dateisysteme erforderlich sind, um den gleichzeitigen Zugriff auf das Dateisystem zu handhaben.
+Versuche, Mutliattached-Volumes ohne clusterfähige Dateisysteme zu verwenden, bergen ein hohes Risiko der Datenbeschädigung, daher ist diese Funktion auf der Optimist-Plattform nicht aktiviert.

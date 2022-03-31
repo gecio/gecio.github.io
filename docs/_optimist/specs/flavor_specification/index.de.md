@@ -35,7 +35,7 @@ Die folgenden Flavor-Typen gelten derzeit als veraltet und die Entfernung dieser
 | s1.medium   |               4 |  8&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   3&thinsp;Gbit/s |
 | s1.large    |               8 | 16&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
 | s1.xlarge   |              16 | 32&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
-| s1.xxlarge  |              30 | 64&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
+| s1.2xlarge  |              30 | 64&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
 
 ## Dedicated CPU Flavors
 
@@ -46,7 +46,7 @@ Die folgenden Flavor-Typen gelten derzeit als veraltet und die Entfernung dieser
 | d1.medium   |              4  | 32&thinsp;GB  | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   3&thinsp;Gbit/s |
 | d1.large    |              8  | 64&thinsp;GB  | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
 | d1.xlarge   |             16  | 128&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
-| d1.xxlarge  |             30  | 256&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
+| d1.2xlarge  |             30  | 256&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
 
 ## m1-Familie
 

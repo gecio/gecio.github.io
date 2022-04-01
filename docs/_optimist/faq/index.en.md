@@ -111,3 +111,8 @@ Change the mountpoint in `/etc/fstab` to use the UUID after fetching the infos w
 # /boot was on /dev/sda2 during installation
 /dev/disk/by-uuid/f6a0d6f3-b66c-bbe3-47ba-d264464cb5a2 /boot ext4    defaults        0       2
 ```
+
+## Is it possible to have multiattached volumes on Cinder?
+
+We do not support multiattached volumes on our instances as cluster-capable file systems are required for multi attach volumes in order to handle concurrent file system access.
+Attempts to use multi-attached volumes without cluster-capable filesystems carries a high risk of data corruption, therefore this feature is not enabled on the Optimist platform.

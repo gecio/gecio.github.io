@@ -77,14 +77,6 @@ The following Flavor Types are currently considered deprecated and the removal o
 | r1.large  |             8 | 32&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   3&thinsp;Gbit/s |
 | r1.xlarge |            16 | 48&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
 
-## HPC Flavors (Deprecated)
-
-| Name       | Virtual Cores |          RAM |         Disk | IOPS Limits (read/write) |        IO throughput (read/write) | Network Bandwidth |
-| :--------- | ------------: | -----------: | -----------: | -----------------------: | --------------------------------: | ----------------: |
-| hpc.micro  |             8 |  4&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   1&thinsp;Gbit/s |
-| hpc.small  |            16 |  8&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   2&thinsp;Gbit/s |
-| hpc.medium |            30 | 16&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   3&thinsp;Gbit/s |
-
 ## Memory Flavors (Deprecated)
 
 | Name       | Virtual Cores |          RAM |         Disk | IOPS Limits (read/write) |        IO throughput (read/write) | Network Bandwidth |

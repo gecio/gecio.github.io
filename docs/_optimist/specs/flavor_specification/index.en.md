@@ -78,7 +78,6 @@ The following Flavor Types are currently considered deprecated and the removal o
 | r1.xlarge |            16 | 48&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
 
 ## Memory Flavors (Deprecated)
-
 | Name       | Virtual Cores |          RAM |         Disk | IOPS Limits (read/write) |        IO throughput (read/write) | Network Bandwidth |
 | :--------- | ------------: | -----------: | -----------: | -----------------------: | --------------------------------: | ----------------: |
 | mem.micro  |             4 | 16&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   1&thinsp;Gbit/s |

@@ -20,7 +20,6 @@ Um die Flavors bestehender Instanzen zu ändern, kann die OpenStack-Option „Re
 # Deprecated Flavor-Typen
 
 Die folgenden Flavor-Typen gelten derzeit als veraltet und die Entfernung dieser Flavor-familien ist für die nahe Zukunft geplant. Wir werden regelmäßig überprüfen, ob diese Flavors noch verwendet werden, wenn nicht, werden wir sie auf privat setzen, um zu vermeiden, dass neue Instanzen damit erstellt werden:
-- HPC Flavors (deprecated)
 - Memory Flavors (deprecated)
 - Windows Flavors (deprecated)
 

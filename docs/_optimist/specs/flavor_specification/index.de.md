@@ -4,7 +4,7 @@ lang: de
 permalink: /optimist/specs/flavor_specification/
 parent: Spezifikationen
 nav_order: 9100
-last_modified_date: 2021-04-19
+last_modified_date: 2022-03-29
 ---
 
 # Flavor Spezifikationen
@@ -13,7 +13,42 @@ Der Begriff "Flavor" bezeichnet im OpenStack-Kontext ein Hardware-Profil, das ei
 sind diverse Standard-Hardwareprofile (Flavors) eingerichtet. Diese haben unterschiedliche Limits und Begrenzungen, welche hier für alle
 verfügbaren Flavors aufgelistet sind.
 
+# Migration zwischen Flavor-Typen
+
+Um die Flavors bestehender Instanzen zu ändern, kann die OpenStack-Option „Resize Instance“ entweder über das Dashboard oder die CLI verwendet werden. Dies führt zu einem Neustart der Instanz, aber der Inhalt der Instanz bleibt erhalten.
+
+# Deprecated Flavor-Typen
+
+Die folgenden Flavor-Typen gelten derzeit als veraltet und die Entfernung dieser Flavor-familien ist für die nahe Zukunft geplant. Wir werden regelmäßig überprüfen, ob diese Flavors noch verwendet werden, wenn nicht, werden wir sie auf privat setzen, um zu vermeiden, dass neue Instanzen damit erstellt werden:
+- HPC Flavors (deprecated)
+- Memory Flavors (deprecated)
+- Windows Flavors (deprecated)
+
+# Flavor-Typen
+
 ## Standard-Flavors
+
+| Bezeichnung | Virtuelle Kerne |          RAM |         Disk | IOPS Limits (read/write) |   IO throughput rate (read/write) | Network Bandwidth |
+| :---------- | --------------: | -----------: | -----------: | -----------------------: | --------------------------------: | ----------------: |
+| s1.micro    |               1 |  2&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   1&thinsp;Gbit/s |
+| s1.small    |               2 |  4&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   2&thinsp;Gbit/s |
+| s1.medium   |               4 |  8&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   3&thinsp;Gbit/s |
+| s1.large    |               8 | 16&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
+| s1.xlarge   |              16 | 32&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
+| s1.2xlarge  |              30 | 64&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
+
+## Dedicated CPU Flavors
+
+| Bezeichnung | Virtuelle Kerne |          RAM  |         Disk | IOPS Limits (read/write) |   IO throughput rate (read/write) | Network Bandwidth |
+| :---------- | ---------------:| ------------: | -----------: | -----------------------: | --------------------------------: | ----------------: |
+| d1.micro    |              1  |  8&thinsp;GB  | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   1&thinsp;Gbit/s |
+| d1.small    |              2  | 16&thinsp;GB  | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   2&thinsp;Gbit/s |
+| d1.medium   |              4  | 32&thinsp;GB  | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   3&thinsp;Gbit/s |
+| d1.large    |              8  | 64&thinsp;GB  | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
+| d1.xlarge   |             16  | 128&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
+| d1.2xlarge  |             30  | 256&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
+
+## m1-Familie
 
 | Bezeichnung | Virtuelle Kerne |          RAM |         Disk | IOPS Limits (read/write) |   IO throughput rate (read/write) | Network Bandwidth |
 | :---------- | --------------: | -----------: | -----------: | -----------------------: | --------------------------------: | ----------------: |
@@ -24,23 +59,6 @@ verfügbaren Flavors aufgelistet sind.
 | m1.xlarge   |              16 | 32&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
 | m1.xxlarge  |              30 | 64&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
 
-## Memory-flavors
-
-| Bezeichnung | Virtuelle Kerne |          RAM |         Disk | IOPS Limits (read/write) |   IO throughput rate (read/write) | Network Bandwidth |
-| :---------- | --------------: | -----------: | -----------: | -----------------------: | --------------------------------: | ----------------: |
-| mem.micro   |               4 | 16&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   1&thinsp;Gbit/s |
-| mem.small   |               8 | 32&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   2&thinsp;Gbit/s |
-| mem.medium  |               8 | 64&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   3&thinsp;Gbit/s |
-
-## Windows-flavors
-
-| Bezeichnung | Virtuelle Kerne |          RAM |         Disk | IOPS Limits (read/write) |   IO throughput rate (read/write) | Network Bandwidth |
-| :---------- | --------------: | -----------: | -----------: | -----------------------: | --------------------------------: | ----------------: |
-| win.micro   |               1 |  2&thinsp;GB | 80&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   1&thinsp;Gbit/s |
-| win.small   |               2 |  8&thinsp;GB | 80&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   2&thinsp;Gbit/s |
-| win.medium  |               4 | 16&thinsp;GB | 80&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   3&thinsp;Gbit/s |
-| win.large   |               8 | 32&thinsp;GB | 80&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
-| win.xlarge  |              16 | 64&thinsp;GB | 80&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
 
 ## e1-Familie (e = equal)
 
@@ -60,3 +78,21 @@ verfügbaren Flavors aufgelistet sind.
 | r1.medium   |               4 | 12&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   2&thinsp;Gbit/s |
 | r1.large    |               8 | 32&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   3&thinsp;Gbit/s |
 | r1.xlarge   |              16 | 48&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
+
+## Memory-flavors (Deprecated)
+
+| Bezeichnung | Virtuelle Kerne |          RAM |         Disk | IOPS Limits (read/write) |   IO throughput rate (read/write) | Network Bandwidth |
+| :---------- | --------------: | -----------: | -----------: | -----------------------: | --------------------------------: | ----------------: |
+| mem.micro   |               4 | 16&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   1&thinsp;Gbit/s |
+| mem.small   |               8 | 32&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   2&thinsp;Gbit/s |
+| mem.medium  |               8 | 64&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   3&thinsp;Gbit/s |
+
+## Windows-flavors (Deprecated)
+
+| Bezeichnung | Virtuelle Kerne |          RAM |         Disk | IOPS Limits (read/write) |   IO throughput rate (read/write) | Network Bandwidth |
+| :---------- | --------------: | -----------: | -----------: | -----------------------: | --------------------------------: | ----------------: |
+| win.micro   |               1 |  2&thinsp;GB | 80&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   1&thinsp;Gbit/s |
+| win.small   |               2 |  8&thinsp;GB | 80&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   2&thinsp;Gbit/s |
+| win.medium  |               4 | 16&thinsp;GB | 80&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   3&thinsp;Gbit/s |
+| win.large   |               8 | 32&thinsp;GB | 80&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
+| win.xlarge  |              16 | 64&thinsp;GB | 80&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |

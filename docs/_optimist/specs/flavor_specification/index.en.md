@@ -19,8 +19,11 @@ To change the flavors of existing instances, the OpenStack "Resize Instance" Opt
 # Deprecated Flavor Types
 
 The following Flavor Types are currently considered deprecated and the removal of these flavor families is planned for the near future. We will regularly check if these flavors are still in use, if not, we will set them to private in order to to avoid new instances being created with them.
-- Memory Flavors (deprecated)
-- Windows Flavors (deprecated)
+- m1-Family (Deprecated)
+- e1-Family (e = equal) (Deprecated)
+- r1-Family (r = ram) (Deprecated)
+- Memory Flavors (Deprecated)
+- Windows Flavors (Deprecated)
 
 # Flavor Types
 
@@ -46,7 +49,7 @@ The following Flavor Types are currently considered deprecated and the removal o
 | d1.xlarge  |            16 | 128&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
 | d1.2xlarge |            30 | 256&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
 
-## m1-Family
+## m1-Family (Deprecated)
 
 | Name       | Virtual Cores |          RAM |         Disk | IOPS Limits (read/write) |        IO throughput (read/write) | Network Bandwidth |
 | :--------- | ------------: | -----------: | -----------: | -----------------------: | --------------------------------: | ----------------: |
@@ -57,7 +60,7 @@ The following Flavor Types are currently considered deprecated and the removal o
 | m1.xlarge  |            16 | 32&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
 | m1.xxlarge |            30 | 64&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
 
-## e1-Family (e = equal)
+## e1-Family (e = equal) (Deprecated)
 
 | Name       | Virtual Cores |          RAM |         Disk | IOPS Limits (read/write) |        IO throughput (read/write) | Network Bandwidth |
 | :--------- | ------------: | -----------: | -----------: | -----------------------: | --------------------------------: | ----------------: |
@@ -67,7 +70,7 @@ The following Flavor Types are currently considered deprecated and the removal o
 | e1.xlarge  |            16 | 16&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
 | e1.xxlarge |            30 | 32&thinsp;GB | 20&thinsp;GB |              1000 / 1000 | 200&thinsp;MB/s / 200&thinsp;MB/s |   4&thinsp;Gbit/s |
 
-## r1-Family (r = ram)
+## r1-Family (r = ram) (Deprecated)
 
 | Name      | Virtual Cores |          RAM |         Disk | IOPS Limits (read/write) |        IO throughput (read/write) | Network Bandwidth |
 | :-------- | ------------: | -----------: | -----------: | -----------------------: | --------------------------------: | ----------------: |

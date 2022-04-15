@@ -28,11 +28,12 @@
 	"extensions": [
 		"github.remotehub",
 		"github.vscode-pull-request-github",
-		"valentjn.vscode-ltex",	// Spelling and grammar checking
+		"valentjn.vscode-ltex",
 		"davidanson.vscode-markdownlint",
 		"eamodio.gitlens",
 		"IBM.output-colorizer",
-		"editorconfig.editorconfig"
+		"editorconfig.editorconfig",
+		"spmeesseman.vscode-taskexplorer"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

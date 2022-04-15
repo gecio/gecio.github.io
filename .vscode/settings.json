@@ -20,6 +20,6 @@
         "**/third_party/**",
         "**/vendor/**",
         "**/work/**",
-        "/workspaces/docs/.devcontainer/post-create.sh"
+        "**/.devcontainer/post-create.sh"
     ]
 }

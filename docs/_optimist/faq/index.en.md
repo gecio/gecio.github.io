@@ -116,3 +116,13 @@ Change the mountpoint in `/etc/fstab` to use the UUID after fetching the infos w
 
 We do not support multiattached volumes on our instances as cluster-capable file systems are required for multi attach volumes in order to handle concurrent file system access.
 Attempts to use multi-attached volumes without cluster-capable filesystems carries a high risk of data corruption, therefore this feature is not enabled on the Optimist platform.
+
+# Why am I unable to load certain pages on the Horizon Dashboard?
+
+Failure to load certain pages is currently a known issue with the Train (18.3.4) release of Horizon. A bug fix is underway.
+
+Pages you may enocunter this issue on are as follows:
+* Compute -> Images -> Select Image -> Reload fails
+* Compute -> KeyPairs -> Select Key -> Reload fails
+* DNS -> Zones -> Select Zone -> Reload fails
+* DNS -> Reverse DNS -> Select Address -> Reload fails

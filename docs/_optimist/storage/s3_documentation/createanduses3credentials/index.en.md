@@ -49,6 +49,10 @@ $ openstack ec2 credentials create
 Once the credentials are available, we need a way to access the S3 compatible ObjectStorage.
 For this, there are different options, in this documentation we present 3 possibilities: [S3cmd](https://s3tools.org/s3cmd) for Linux/Mac, [S3Browser](https://s3browser.com/) for Windows, [Cyberduck](https://cyberduck.io/) and [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html).
 
+### Please note:
+
+S3 credentials can be used with a variety of clients, including AWS. If a region needs to be specified in your configuration please use: `us-east-1`
+
 # Entering User Data in the Configuration File
 
 ## S3cmd

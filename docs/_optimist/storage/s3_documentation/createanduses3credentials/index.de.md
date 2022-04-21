@@ -48,6 +48,10 @@ $ openstack ec2 credentials create
 Nachdem die Zugangsdaten (Credentials) vorliegen, brauchen wir eine Möglichkeit auf den S3 kompatiblen ObjectStorage zuzugreifen.
 Hierfür gibt es die unterschiedliche Möglichkeiten, in der Dokumentation stellen wir hierfür vier Möglichkeiten vor, genauer: [S3cmd](https://s3tools.org/s3cmd) für Linux/Mac, [S3Browser](https://s3browser.com/) für  Windows, [Cyberduck](https://cyberduck.io/) und [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html).
 
+### Bitte beachten Sie:
+
+S3-Anmeldeinformationen können mit einer Vielzahl von Clients verwendet werden, einschließlich AWS. Wenn in Ihrer Konfiguration eine Region angegeben werden muss, verwenden Sie bitte: `us-east-1`
+
 # Benutzerdaten in die Konfigurationsdatei eintragen
 
 ## S3cmd
@@ -105,6 +109,13 @@ Danach öffnet sich ein neues Fenster in dem im Dropdown Menü(2) "Amazon S3" au
 ![](attachments/CreateAndUseS3Crendentials_Cyberduck.png)
 
 Um nun eine Verbindung herzustellen, wird als letzter Schritt auf "Verbinden" geklickt.
+
+Wenn Sie Cyberduck mit Optimist Object Storage verwenden, deaktivieren Sie bitte die Virtual Host Style Requests, da unsere Plattform Anfragen im Pfadstil verwendet, um auf Buckets zu verweisen.
+Dies kann erreicht werden, indem die verborgene Einstellung `s3.bucket.virtualhost.disable` wie folgt auf `true` gesetzt wird:
+
+```
+$ defaults write ~/Library/Preferences/ch.sudo.cyberduck.plist s3.bucket.virtualhost.disable true
+```
 
 ## Boto3
 

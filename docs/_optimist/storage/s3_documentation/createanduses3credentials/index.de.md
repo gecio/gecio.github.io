@@ -106,6 +106,13 @@ Danach öffnet sich ein neues Fenster in dem im Dropdown Menü(2) "Amazon S3" au
 
 Um nun eine Verbindung herzustellen, wird als letzter Schritt auf "Verbinden" geklickt.
 
+Wenn Sie Cyberduck mit Optimist Object Storage verwenden, deaktivieren Sie bitte die Virtual Host Style Requests, da unsere Plattform Anfragen im Pfadstil verwendet, um auf Buckets zu verweisen.
+Dies kann erreicht werden, indem die verborgene Einstellung `s3.bucket.virtualhost.disable` wie folgt auf `true` gesetzt wird:
+
+```
+$ defaults write ~/Library/Preferences/ch.sudo.cyberduck.plist s3.bucket.virtualhost.disable true
+```
+
 ## Boto3
 
 Um Boto3 nutzen zu können, wird ein Paketmanager wie zum Beispiel "pip" benötigt. Die Installation und Nutzung wird im [Schritt 4: "Der Weg vom Horizon auf die Kommandozeile"](/optimist/guided_tour/step04/) unserer Guided Tour erklärt.

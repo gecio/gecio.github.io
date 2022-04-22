@@ -22,7 +22,7 @@ CloudConfig
 -----------
 
 Ist eine Ressource und wird daher auch unter `resources` geführt. (Typ =
-`OS::HEAT::CloudConfig`) 
+`OS::HEAT::CloudConfig`)
 
 Es gibt sehr viele Möglichkeiten, was alles in einer Instanz mit
 CloudConfig bearbeiten werden kann.
@@ -37,7 +37,7 @@ in der `cloud_config` den Befehl `write_files`:
 
 ```yaml
 heat_template_version: 2014-10-16
-  
+
 parameters:
     key_name:
         type: string
@@ -78,19 +78,19 @@ resources:
         type: OS::Neutron::Net
         properties:
             name: BeispielNetzwerk
- 
+
     Port:
         type: OS::Neutron::Port
         properties:
             network: { get_resource: Netzwerk }
             security_groups: { get_resource: Sec_SSH }
- 
+
     Router:
         type: OS::Neutron::Router
         properties:
             external_gateway_info: { "network": { get_param: public_network_id } }
             name: BeispielRouter
- 
+
     Subnet:
         type: OS::Neutron::Subnet
         properties:
@@ -103,7 +103,7 @@ resources:
             cidr: 10.0.0.0/24
             allocation_pools:
             - { start: 10.0.0.10, end: 10.0.0.250 }
-  
+
     Router_Subnet_Bridge:
         type: OS::Neutron::RouterInterface
         depends_on: Subnet
@@ -133,7 +133,7 @@ Wie in [Schritt 11: Zugriff aus dem Internet vorbereiten: Wir ergänzen IPv6](/
 
 ```yaml
 heat_template_version: 2014-10-16
-  
+
 parameters:
     key_name:
         type: string
@@ -150,7 +150,7 @@ resources:
             flavor: m1.small
             networks:
                 - port: { get_resource: Port }
- 
+
     Instanz-Config:
         type: OS::Heat::CloudConfig
         properties:
@@ -172,24 +172,24 @@ resources:
                 runcmd:
                     - [ ifdown, ens3]
                     - [ ifup, ens3]
-      
+
     Netzwerk:
         type: OS::Neutron::Net
         properties:
             name: BeispielNetzwerk
- 
+
     Port:
         type: OS::Neutron::Port
         properties:
             network: { get_resource: Netzwerk }
             security_groups: { get_resource: Sec_SSH }
- 
+
     Router:
         type: OS::Neutron::Router
         properties:
             external_gateway_info: { "network": { get_param: public_network_id } }
             name: BeispielRouter
- 
+
     Subnet:
         type: OS::Neutron::Subnet
         properties:
@@ -202,7 +202,7 @@ resources:
             cidr: 10.0.0.0/24
             allocation_pools:
             - { start: 10.0.0.10, end: 10.0.0.250 }
-  
+
     Router_Subnet_Bridge:
         type: OS::Neutron::RouterInterface
         depends_on: Subnet
@@ -230,7 +230,7 @@ Im letzten Schritt passen wir die Security Group an, damit auch ein Zugriff übe
 
 ```yaml
 heat_template_version: 2014-10-16
-  
+
 parameters:
     key_name:
         type: string
@@ -247,7 +247,7 @@ resources:
             flavor: m1.small
             networks:
                 - port: { get_resource: Port }
- 
+
     Instanz-Config:
         type: OS::Heat::CloudConfig
         properties:
@@ -269,24 +269,24 @@ resources:
                 runcmd:
                     - [ ifdown, ens3]
                     - [ ifup, ens3]
-      
+
     Netzwerk:
         type: OS::Neutron::Net
         properties:
             name: BeispielNetzwerk
- 
+
     Port:
         type: OS::Neutron::Port
         properties:
             network: { get_resource: Netzwerk }
             security_groups: { get_resource: Sec_SSH }
- 
+
     Router:
         type: OS::Neutron::Router
         properties:
             external_gateway_info: { "network": { get_param: public_network_id } }
             name: BeispielRouter
- 
+
     Subnet:
         type: OS::Neutron::Subnet
         properties:
@@ -299,7 +299,7 @@ resources:
             cidr: 10.0.0.0/24
             allocation_pools:
             - { start: 10.0.0.10, end: 10.0.0.250 }
-  
+
     Router_Subnet_Bridge:
         type: OS::Neutron::RouterInterface
         depends_on: Subnet

@@ -47,18 +47,18 @@ $ openstack security group create allow-ssh-from-anywhere --description Beispiel
 ```
 
 Damit eine Security Group nicht nur eine leere Hülle ist, kann der
-Befehl durch weitere Zusätze sinnvoll erweitert werden. 
+Befehl durch weitere Zusätze sinnvoll erweitert werden.
 
 Hier eine kurze Übersicht der wichtigsten Optionen:
 
--   `--protocol` = Definition des genutzten Protokolls (mögliche
+- `--protocol` = Definition des genutzten Protokolls (mögliche
     Optionen: icmp, tcp, udp)
--   `--dst-port` = Gibt den Port oder die Range der Ports an. (22:22 ist
+- `--dst-port` = Gibt den Port oder die Range der Ports an. (22:22 ist
     Port 22, 1:[65535 würde alle Ports
     definieren)]{style="color: rgb(34,34,34);"}
--   `--remote-ip` = Kann eine IP oder IP-Range definieren. (Default um
+- `--remote-ip` = Kann eine IP oder IP-Range definieren. (Default um
     den Zugang über alle IPs zu gewähren ist 0.0.0.0/0
--   `--ingress` bzw. `--egress` = ingress definiert den eingehenden
+- `--ingress` bzw. `--egress` = ingress definiert den eingehenden
     Verkehr, egress den ausgehenden
 
 Da die wichtigsten Optionen nun bekannt sind, kann jetzt eine Security

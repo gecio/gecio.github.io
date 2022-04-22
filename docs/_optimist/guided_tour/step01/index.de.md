@@ -13,11 +13,11 @@ Vorwort
 -------
 
 In diesem Schritt für Schritt Tutorial werden wir uns schrittweise der
-Bedienung von Openstack widmen. 
+Bedienung von Openstack widmen.
 
 Den Anfang macht das Horizon(Dashboard), nach einer kleinen Einführung,
 wird dann auf die Konsole gewechselt und der Abschluss bildet die
-Erstellung eigener Heat-Templates. 
+Erstellung eigener Heat-Templates.
 
 Login
 -----
@@ -51,7 +51,7 @@ Benutzernamen(1) und auf *Settings*(2).
 ![](attachments/13536091.png)
 
 Im sich nun öffnenden Fenster sehen wir zuerst Settings, wo unter
-anderem auch die Sprache umgestellt werden kann. 
+anderem auch die Sprache umgestellt werden kann.
 
 Um das Passwort zu ändern, klicken wir rechts auf *Change Password*(1).
 Hier können nun das Passwort geändert werden. Dafür geben wir zunächst

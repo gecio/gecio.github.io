@@ -8,19 +8,19 @@ nav_order: 9300
 
 # Introduction
 
-Users can create Application Credentials to allow their applications to authenticate to the OpenStack Authentication component (Keystone) without needing to use the user's personal credentials. 
+Users can create Application Credentials to allow their applications to authenticate to the OpenStack Authentication component (Keystone) without needing to use the user's personal credentials.
 
-With application credentials, applications can authenticate with the application credential ID and a secret string which is not the user’s password. This way, the user’s password is not embedded in the application’s configuration. 
+With application credentials, applications can authenticate with the application credential ID and a secret string which is not the user’s password. This way, the user’s password is not embedded in the application’s configuration.
 
 Users can delegate a subset of their role assignments on a project to application credentials, granting the application the same or restricted permissions within a project.
 
-# Requirements for Application Credentials
+## Requirements for Application Credentials
 
 ### Name / Secrets
 
-Application credentials can be generated for your project via the command-line or via the dashboard. These will be associated with the project in which they are created. 
+Application credentials can be generated for your project via the command-line or via the dashboard. These will be associated with the project in which they are created.
 
-The only required parameter to create the credentials is a name, however a specific secret can be set by using the `—-secret` parameter. If the secret parameter is left blank, a secret will instead be auto-generated in the output. 
+The only required parameter to create the credentials is a name, however a specific secret can be set by using the `—-secret` parameter. If the secret parameter is left blank, a secret will instead be auto-generated in the output.
 
 It is important to make note of the secret in either case as the secret is hashed before it is stored and will not be retrievable after it has been set. If the secret is lost, a new application credential should be created.
 
@@ -38,7 +38,7 @@ Below are the available roles which can be assigned to a set of application cred
 
 By default, created Application Credentials will not expire, however,  fixed expiration dates/times can be set for credentials upon creation, using the `--expires` parameter in the command (for example: `--expires '2021-07-15T21:00:00'`).
 
-# Creating Application Credentials via the CLI
+## Creating Application Credentials via the CLI
 
 A set of Application Credentials can be created in the desired project via the CLI, the example below demonstrates how to create a set of credentials with the following parameters:
 
@@ -69,7 +69,7 @@ $ openstack application credential create test-credentials --secret ZYQZm2k6pk -
 
 Note: The secret (whether set by the user or auto-generated) will be displayed upon creation of the credentials. Please take note of the secret at this time.
 
-# Viewing Application Credentials via the CLI
+## Viewing Application Credentials via the CLI
 
 The list of application credentials belonging to a project can be listed with the following command.
 
@@ -84,15 +84,15 @@ $ openstack application credential list
 
 Individual credentials can be viewed using the `$ openstack application credential show <name>` command.
 
-# Deleting Application Credentials via the CLI
+## Deleting Application Credentials via the CLI
 
 Application credentials can be deleted via the CLI with the following command with the name or ID of the specific set of credentials:
 
 ```bash
-$ openstack application credential delete test-credentials
+openstack application credential delete test-credentials
 ```
 
-# Creating and Deleting Application Credentials via the Optimist Dashboard
+## Creating and Deleting Application Credentials via the Optimist Dashboard
 
 Alternatively, Application credentials can also be generated via the Optimist Dashboard under Identity > Application credentials:
 
@@ -108,14 +108,14 @@ The credentials here can also deleted at any point by using the checkbox to high
 
 ![](attachments/deleteappcredentials.png)
 
-# Testing Application credentials
+## Testing Application credentials
 
 Once we have created a set of Application Credentials either via the CLI or dashboard, we can test them by using the following curl command to verify that they are working.
 
 We need to use our `<name>` and `<secret>` in the curl command:
 
 ```bash
-$ curl -i -H "Content-Type: application/json" -d ' { "auth": { "identity": { "methods": ["application_credential"],  "application_credential": {  "id": “<id>", "secret": “<secret>"}}}}' https://identity.optimist.innovo.cloud/v3/auth/tokens
+curl -i -H "Content-Type: application/json" -d ' { "auth": { "identity": { "methods": ["application_credential"],  "application_credential": {  "id": “<id>", "secret": “<secret>"}}}}' https://identity.optimist.innovo.cloud/v3/auth/tokens
 ```
 
 A successful curl attempt will output an `x-subject-token`, unsuccessful attempts where the credentials are incorrect will result in a 401 error.

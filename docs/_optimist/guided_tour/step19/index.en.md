@@ -30,13 +30,13 @@ We'll use it to write the files we mentioned earlier.
 
 ```yaml
 heat_template_version: 2014-10-16
-   
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 
 resources:
     Instanz:
@@ -71,19 +71,19 @@ resources:
         type: OS::Neutron::Net
         properties:
             name: BeispielNetzwerk
-  
+
     Port:
         type: OS::Neutron::Port
         properties:
             network: { get_resource: Netzwerk }
             security_groups: { get_resource: Sec_SSH }
-  
+
     Router:
         type: OS::Neutron::Router
         properties:
             external_gateway_info: { "network": { get_param: public_network_id }
             name: BeispielRouter
-  
+
     Subnet:
         type: OS::Neutron::Subnet
         properties:
@@ -96,21 +96,21 @@ resources:
             cidr: 10.0.0.0/24
             allocation_pools:
             - { start: 10.0.0.10, end: 10.0.0.250 }
-   
+
     Router_Subnet_Bridge:
         type: OS::Neutron::RouterInterface
         depends_on: Subnet
         properties:
             router: { get_resource: Router }
             subnet: { get_resource: Subnet }
- 
- 
+
+
     Floating_IP:
         type: OS::Neutron::FloatingIP
         properties:
             floating_network: { get_param: public_network_id }
             port_id: { get_resource: Port }
-  
+
     Sec_SSH:
         type: OS::Neutron::SecurityGroup
         properties:
@@ -127,13 +127,13 @@ After we've written all the files, as in [Step 11: Prepare access to the interne
 
 ```yaml
 heat_template_version: 2014-10-16
-   
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 resources:
     Instanz:
         type: OS::Nova::Server
@@ -166,24 +166,24 @@ resources:
                 runcmd:
                     - [ ifdown, ens3]
                     - [ ifup, ens3]
-      
+
     Netzwerk:
         type: OS::Neutron::Net
         properties:
             name: BeispielNetzwerk
-  
+
     Port:
         type: OS::Neutron::Port
         properties:
             network: { get_resource: Netzwerk }
             security_groups: { get_resource: Sec_SSH }
-  
+
     Router:
         type: OS::Neutron::Router
         properties:
             external_gateway_info: { "network": { get_param: public_network_id }
             name: BeispielRouter
-  
+
     Subnet:
         type: OS::Neutron::Subnet
         properties:
@@ -196,21 +196,21 @@ resources:
             cidr: 10.0.0.0/24
             allocation_pools:
             - { start: 10.0.0.10, end: 10.0.0.250 }
-   
+
     Router_Subnet_Bridge:
         type: OS::Neutron::RouterInterface
         depends_on: Subnet
         properties:
             router: { get_resource: Router }
             subnet: { get_resource: Subnet }
- 
- 
+
+
     Floating_IP:
         type: OS::Neutron::FloatingIP
         properties:
             floating_network: { get_param: public_network_id }
             port_id: { get_resource: Port }
-  
+
     Sec_SSH:
         type: OS::Neutron::SecurityGroup
         properties:
@@ -225,13 +225,13 @@ To get a connection via IPv6 it's necessary to update the SecurityGroup with rul
 
 ```yaml
 heat_template_version: 2014-10-16
-   
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 resources:
     Instanz:
         type: OS::Nova::Server
@@ -264,24 +264,24 @@ resources:
                 runcmd:
                     - [ ifdown, ens3]
                     - [ ifup, ens3]
-      
+
     Netzwerk:
         type: OS::Neutron::Net
         properties:
             name: BeispielNetzwerk
-  
+
     Port:
         type: OS::Neutron::Port
         properties:
             network: { get_resource: Netzwerk }
             security_groups: { get_resource: Sec_SSH }
-  
+
     Router:
         type: OS::Neutron::Router
         properties:
             external_gateway_info: { "network": { get_param: public_network_id }
             name: BeispielRouter
-  
+
     Subnet:
         type: OS::Neutron::Subnet
         properties:
@@ -294,21 +294,21 @@ resources:
             cidr: 10.0.0.0/24
             allocation_pools:
             - { start: 10.0.0.10, end: 10.0.0.250 }
-   
+
     Router_Subnet_Bridge:
         type: OS::Neutron::RouterInterface
         depends_on: Subnet
         properties:
             router: { get_resource: Router }
             subnet: { get_resource: Subnet }
- 
- 
+
+
     Floating_IP:
         type: OS::Neutron::FloatingIP
         properties:
             floating_network: { get_param: public_network_id }
             port_id: { get_resource: Port }
-  
+
     Sec_SSH:
         type: OS::Neutron::SecurityGroup
         properties:
@@ -320,7 +320,6 @@ resources:
                 - { direction: ingress, remote_ip_prefix: "::/0", port_range_min: 22, port_range_max: 22, protocol: tcp, ethertype: IPv6 }
                 - { direction: ingress, remote_ip_prefix: "::/0", protocol: ipv6-icmp, ethertype: IPv6 }
 ```
-
 
 Conclusion
 ----------

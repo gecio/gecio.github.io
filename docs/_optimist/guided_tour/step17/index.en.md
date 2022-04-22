@@ -24,13 +24,13 @@ First, we'll add a new parameter, the id of the external network and name it
 
 ```yaml
 heat_template_version: 2014-10-16
- 
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 
 resources:
     Instanz:
@@ -41,8 +41,8 @@ resources:
             flavor: m1.small
 ```
 
-Network 
---------- 
+Network
+---------
 
 Next, we'll add the network.
 
@@ -52,13 +52,13 @@ The type for network resources is *`OS::Neutron::Net`*
 
 ```yaml
 heat_template_version: 2014-10-16
- 
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 
 resources:
     Instanz:
@@ -67,7 +67,7 @@ resources:
             key_name: { get_param: key_name }
             image: Ubuntu 16.04 Xenial Xerus - Latest
             flavor: m1.small
-    
+
     Netzwerk:
         type: OS::Neutron::Net
         properties:
@@ -92,13 +92,13 @@ By now, our template will look like this:
 
 ```yaml
 heat_template_version: 2014-10-16
- 
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 
 resources:
     Instanz:
@@ -109,7 +109,7 @@ resources:
             flavor: m1.small
             networks:
                 - port: {get_resource: Port }
-    
+
     Netzwerk:
         type: OS::Neutron::Net
         properties:
@@ -121,23 +121,23 @@ resources:
             network: { get_resource: Netzwerk }
 ```
 
-The router 
+The router
 ------------
 
 Our network will need a router, so now we'll add a *Router* resource, with the
-type *`OS::Neutron::Router`. *
+type *`OS::Neutron::Router`.*
 
 We will use our parameter to define the external network it will use:
 
 ```yaml
 heat_template_version: 2014-10-16
- 
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 
 resources:
     Instanz:
@@ -148,7 +148,7 @@ resources:
             flavor: m1.small
             networks:
                 - port: {get_resource: Port }
-    
+
     Netzwerk:
         type: OS::Neutron::Net
         properties:
@@ -177,13 +177,13 @@ IP version, the IP range and other IP related settings:
 
 ```yaml
 heat_template_version: 2014-10-16
- 
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 
 resources:
     Instanz:
@@ -194,7 +194,7 @@ resources:
             flavor: m1.small
             networks:
                 - port: {get_resource: Port }
-    
+
     Netzwerk:
         type: OS::Neutron::Net
         properties:
@@ -237,13 +237,13 @@ bridge will only be created if *Subnet* is available:
 
 ```yaml
 heat_template_version: 2014-10-16
- 
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 
 resources:
     Instanz:
@@ -254,7 +254,7 @@ resources:
             flavor: m1.small
             networks:
                 - port: {get_resource: Port }
-    
+
     Netzwerk:
         type: OS::Neutron::Net
         properties:
@@ -289,7 +289,7 @@ resources:
         depends_on: Subnet
         properties:
             router: { get_resource: Router }
-            subnet: { get_resource: Subnet } 
+            subnet: { get_resource: Subnet }
 ```
 
 Conclusion

@@ -20,7 +20,7 @@ Der Anfang
 ------------------------
 
 Dieser ist bei jedem Template gleich und ist immer
-`heat_template_version`   
+`heat_template_version`
 
 Für das Beispiel wird Version `2016-10-14` genutzt und somit sieht das
 Template erst einmal so aus:
@@ -39,7 +39,7 @@ description: Ein einfaches Template, um eine Instanz zu erstellen
 ```
 
 Nachdem die Beschreibung in das Template integriert wurde, wird nun eine
-Ressource, also die Instanz hinzugefügt. 
+Ressource, also die Instanz hinzugefügt.
 
 Dabei sind einige Punkte zu beachten, starten wir zunächst mit der
 Ressource.
@@ -66,7 +66,7 @@ anderem in der [offiziellen OpenStack
 Dokumentation](https://docs.openstack.org/developer/heat/template_guide/openstack.html)
 
 Da im Beispiel eine Instanz erstellt werden soll, ist der Typ dann
-folgender: 
+folgender:
 
 ```yaml
 heat_template_version: 2016-10-14

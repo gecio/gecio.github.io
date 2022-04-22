@@ -1,0 +1,7 @@
+MD013: false # Line length
+MD024: # Allow same heading in different sections
+  allow_different_nesting: true
+MD025: # Don't treat frontmatter-title as h1 heading
+  front_matter_title: ^\\s*none\\s*[:=]
+MD026: false # Ignore punctuation in headings
+MD045: false # No need for alt-texts in images

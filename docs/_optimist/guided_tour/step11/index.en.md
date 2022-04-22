@@ -6,11 +6,9 @@ nav_order: 1110
 parent: Guided Tour
 ---
 
-Step 11: Prepare access to the internet: Add IPv6 to our network
-================================================================
+# Step 11: Prepare access to the internet: Add IPv6 to our network
 
-Start
------
+## Start
 
 Now that we have our working network, we will enable IPv6 to our setup.
 
@@ -21,8 +19,7 @@ The cloud images we supply have a predefined primary network interface with
 with [DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol)
 enabled and once we finished this step, IPv6 will work as well.
 
-Subnet
-------
+## Subnet
 
 We already have an IPv6 pool defined, we will use this to create a new
 subnet.
@@ -75,19 +72,17 @@ $ openstack subnet create --network BeispielNetzwerk --ip-version 6 --use-defaul
 +-------------------------+----------------------------------------------------------+
 ```
 
-Router
-------
+## Router
 
 Now that the subnet has been created, we'll add it to the router.
 
 We'll do so by executing this command:
 
 ```bash
-$ openstack router add subnet BeispielRouter BeispielSubnetIPv6
+openstack router add subnet BeispielRouter BeispielSubnetIPv6
 ```
 
-Security Group
---------------
+## Security Group
 
 The security group rules that we've created in step 9 were IPv4 rules, so now
 we'll have to add two more rules for IPv6.
@@ -144,8 +139,7 @@ $ openstack security group rule create --remote-ip "::/0" --protocol ipv6-icmp -
 +-------------------+--------------------------------------+
 ```
 
-Adjustments to the operating system
------------------------------------
+## Adjustments to the operating system
 
 Any new VM based on our images will now have both IPv4 and IPv6 configured, and
 our provided heat templates will also enable IPv6.
@@ -161,28 +155,28 @@ instructions below.
 To properly enable IPv6, we'll have to create the following files with
 the specified content.
 
--   `/etc/dhcp/dhclient6.conf`
+- `/etc/dhcp/dhclient6.conf`
 
-    ```
+    ```text
     timeout 30;
     ```
 
--   `/etc/cloud/cloud.cfg.d/99-disable-network-config.cfg`
+- `/etc/cloud/cloud.cfg.d/99-disable-network-config.cfg`
 
-    ``` 
+    ```text
     network: {config: disabled}
     ```
 
--   `/etc/network/interfaces.d/lo.cfg`
+- `/etc/network/interfaces.d/lo.cfg`
 
-    ```
+    ```text
     auto lo
     iface lo inet loopback
     ```
 
--   `/etc/network/interfaces.d/ens3.cfg`
+- `/etc/network/interfaces.d/ens3.cfg`
 
-    ```
+    ```text
     iface ens3 inet6 auto
         up sleep 5
         up dhclient -1 -6 -cf /etc/dhcp/dhclient6.conf -lf /var/lib/dhcp/dhclient6.ens3.leases -v ens3 || true
@@ -190,7 +184,7 @@ the specified content.
 
 Now that we've created the files, we'll reenable the interface:
 
-```
+```bash
 sudo ifdown ens3 && sudo ifup ens3
 ```
 
@@ -226,15 +220,15 @@ runcmd:
 To properly enable IPv6, we'll have to create the following files with the
 specified content.
 
--   `/etc/sysconfig/network`
+- `/etc/sysconfig/network`
 
-    ```
+    ```text
     NETWORKING_IPV6=yes
     ```
 
--   `/etc/sysconfig/network-scripts/ifcfg-eth0`
+- `/etc/sysconfig/network-scripts/ifcfg-eth0`
 
-    ```
+    ```text
     IPV6INIT=yes
     DHCPV6C=yes
     ```
@@ -278,8 +272,7 @@ runcmd:
         - [ ifup, eth0]
 ```
 
-External access
----------------
+## External access
 
 **Important:** Now that we've enabled IPv6 on the VM, it's reachable from the
 rest of the world on its IPv6 address on the ports that we've allowed in the
@@ -295,8 +288,7 @@ If you want to test the IPv6 reachability but don't have access to a
 machine with IPv6, you can use some web based tools like
 <https://www.subnetonline.com/pages/ipv6-network-tools/online-ipv6-ping.php>
 
-Conclusion
-----------
+## Conclusion
 
 A connection via IPv4 was already established in the last step, access via IPv6 has now also been added.
 

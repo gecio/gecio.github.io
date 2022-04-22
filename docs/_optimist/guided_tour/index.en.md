@@ -8,4 +8,5 @@ has_children: true
 
 Guided Tour
 ------------
+
 From the browser to a self written heat template

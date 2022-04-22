@@ -29,7 +29,7 @@ Der Grundbefehl für das Erstellen einer Instanz in der Kommandozeile
 lautet:
 
 ```bash
-$ openstack server create test
+openstack server create test
 ```
 
 Wenn der Befehl ohne weitere Zusätze ausgeführt wird, erscheint direkt
@@ -156,7 +156,7 @@ $ openstack network create BeispielNetzwerk
 Der Nachteil an diesem Netzwerk ist, dass man die Instanz nicht
 erreichen kann. Soll die Instanz nutzbar sein, wird ein funktionierendes
 Netz benötigt, welches in [Schritt 10](schritt10.md) komplett angelegt
-wird. 
+wird.
 
 Nachdem alle Bestandteile jetzt bekannst sind, kann die erste Instanz
 erstellt werden.

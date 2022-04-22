@@ -61,7 +61,7 @@ Die Instanzen selber werden in einer zweiten Datei `BeispielServer.yaml`
 beschrieben, welche dem gleichen Aufbau wie in den vorigen Schritten
 folgt.
 
-Um `image:` zu füllen kann wahlweise der Image Name oder die Image-ID benutzt werden. 
+Um `image:` zu füllen kann wahlweise der Image Name oder die Image-ID benutzt werden.
 Eine korrekte Image-ID bzw. einen korrekten Namen erhält man mit `openstack image list`.
 
 Es ist wichtig, dass kein Server-Namen definiert wird und
@@ -156,6 +156,6 @@ Abschluss
 ---------
 
 Nachdem am Anfang der Guided Tour noch Instanzen per Hand erstellt
-wurden, können nun bereits mehrere Instanzen gleichzeitig per Template 
-ausgerollt werden und stellen einen guten Startpunkt für die Administration 
+wurden, können nun bereits mehrere Instanzen gleichzeitig per Template
+ausgerollt werden und stellen einen guten Startpunkt für die Administration
 von OpenStack dar.

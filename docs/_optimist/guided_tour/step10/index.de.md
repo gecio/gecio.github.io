@@ -68,9 +68,9 @@ ein zugehöriges Subnet.
 Auch das Subnet hat sehr viele zusätzliche Optionen, für das Beispiel
 werden folgende genutzt:
 
--   `--network` = Gibt an, in welchem Netzwerk das Subnet angelegt
-    werden soll 
--   `--subnet-range` =
+- `--network` = Gibt an, in welchem Netzwerk das Subnet angelegt
+    werden soll
+- `--subnet-range` =
     [CIDR](https://de.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
     des Subnets. Im Beispiel wird `192.168.2.0/24` verwendet
 
@@ -140,14 +140,14 @@ Um eine Verbindung ins Internet zu ermöglichen, benötigt der Router ein
 externes Gateway, welches mit diesem Befehl gesetzt wird:
 
 ```bash
-$ openstack router set BeispielRouter --external-gateway provider
+openstack router set BeispielRouter --external-gateway provider
 ```
 
 Da nun schon die Verbindung hergestellt ist, wird dem Router nun noch das
 Subnet zugewiesen:
 
 ```bash
-$ openstack router add subnet BeispielRouter BeispielSubnet
+openstack router add subnet BeispielRouter BeispielSubnet
 ```
 
 Port

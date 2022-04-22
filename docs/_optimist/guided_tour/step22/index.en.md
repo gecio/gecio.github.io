@@ -99,6 +99,7 @@ $ openstack recordset list foobar.cloud.
 ```
 
 Here we see an "empty shell" of a domain with automatically create NS and SOA entries that are ready for immediate query.
+
 ```bash
 $ dig +short @dns1.ddns.innovo.cloud foobar.cloud NS
 dns1.ddns.innovo.cloud.
@@ -171,6 +172,7 @@ $ openstack recordset create --type A --record 1.2.3.4 foobar.cloud. www
 ```
 
 Result:
+
 ```bash
 $ openstack recordset list foobar.cloud.
 +--------------------------------------+-------------------+------+--------------------------------------------------------------------------------+--------+--------+
@@ -186,6 +188,7 @@ $ openstack recordset list foobar.cloud.
 ```
 
 If the recordsets are active we can use the designated DNS servers
+
 * dns1.ddns.innovo.cloud
 * dns2.ddns.innovo.cloud
 
@@ -204,16 +207,17 @@ $ dig +short @dns1.ddns.innovo.cloud foobar.cloud www.foobar.cloud
 1.2.3.4
 ```
 
-
->        ATTENTION! At this time, this domain (foobar.cloud) is not yet resolvable worldwide.
+> ATTENTION! At this time, this domain (foobar.cloud) is not yet resolvable worldwide.
 
 For this construct to be used worldwide, each domain managed by the Designate must have the delegation to the name servers `dns1.ddns.innovo.cloud` and `dns2.ddns.innovo.cloud` established by the respective registrar.
 
->        Details about our authoritative DNS servers:
->          * dns1.ddns.innovo.cloud: '185.116.244.45' / '2a00:c320:0:1::d'
->          * dns2.ddns.innovo.cloud: '185.116.244.46' / '2a00:c320:0:1::e'
+> Details about our authoritative DNS servers:
+>
+> * dns1.ddns.innovo.cloud: '185.116.244.45' / '2a00:c320:0:1::d'
+> * dns2.ddns.innovo.cloud: '185.116.244.46' / '2a00:c320:0:1::e'
 
 In order to complete the mail records, it is still possible to deposit corresponding A-records for the mail servers
+
 ```bash
 $ openstack recordset create --type A --record 2.3.4.5 foobar.cloud. mx1
 +-------------+--------------------------------------+
@@ -257,6 +261,7 @@ $ openstack recordset create --type A --record 3.4.5.6 foobar.cloud. mx2
 ```
 
 The result after a few seconds:
+
 ```bash
 $ openstack recordset list foobar.cloud.
 +--------------------------------------+-------------------+------+--------------------------------------------------------------------------------+--------+--------+

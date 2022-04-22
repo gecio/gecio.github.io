@@ -36,7 +36,6 @@ single template.
 But let's start with an [example
 template.](https://github.com/innovocloud/openstack_examples/tree/master/heat/templates)
 
-
 This template will create a stack that includes a vm, two security groups, a
 virtual network (including router, port and subnet) and a floating-IP.
 
@@ -93,7 +92,6 @@ install our BEISPIEL key into our VM. We also name our stack
 Finally, we use the `--wait` option to wait and see the creation
 process, if we didn't add this option, the command would complete
 immediately while the creation process would continue in the background.
-
 
 Once the command has completed, we should be able to connect to our VM. First,
 we acquire the floating IP of the VM:

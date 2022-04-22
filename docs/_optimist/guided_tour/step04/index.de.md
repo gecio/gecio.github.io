@@ -6,11 +6,9 @@ nav_order: 1040
 parent: Guided Tour
 ---
 
-Schritt 4: Der Weg vom Horizon auf die Kommandozeile
-====================================================
+# Schritt 4: Der Weg vom Horizon auf die Kommandozeile
 
-Vorwort
--------
+## Vorwort
 
 Auf den ersten Blick kann es komfortabel erscheinen, seine OpenStack
 Umgebung mit dem Horizon Dashboard zu verwalten.
@@ -32,8 +30,7 @@ Cinder, Neutron enthalten sind.
 Da wir auch im weiteren Verlauf der Dokumentation den Client nutzen,
 installieren wir ihn in diesem Schritt.
 
-Installation
-------------
+## Installation
 
 Um den OpenStackClient installieren zu können, wird mindestens [Python
 2.7](https://www.python.org/downloads/release/python-2713/) noch die [Python
@@ -128,7 +125,7 @@ Damit wir den OpenStackClient auch nutzen können, ist es nun notwendig
 dies in die Path Variablen aufzunehmen.
 
 ```bash
-$ export PATH="$HOME/.virtualenvs/openstack/bin/:$PATH"
+export PATH="$HOME/.virtualenvs/openstack/bin/:$PATH"
 ```
 
 Um zu sehen ob alles korrekt funktioniert hat, testen wir die Ausgabe:
@@ -146,7 +143,7 @@ Installation notwendig (Speicherort der Standart Installation:
 
 `pip` wird dann mit dem Befehl `easy_install pip` installiert:
 
-```
+```text
 C:\Python27\Scripts>easy_install pip
 Searching for pip
 Best match: pip 9.0.1
@@ -171,7 +168,7 @@ Nach der erfolgreichen Installation von `pip`, kann direkt mit pip
 install `python-openstackclient` der OpenStackClient auch installiert
 werden:
 
-```
+```text
 C:\Python27\Scripts>pip install python-openstackclient
 Collecting python-openstackclient
   Downloading python_openstackclient-3.12.0-py2.py3-none-any.whl (772kB)
@@ -239,7 +236,7 @@ Damit wir den OpenStackClient auch nutzen können, ist es nun notwendig
 dies in die Path Variablen aufzunehmen.
 
 ```bash
-$ export PATH="$HOME/.virtualenvs/openstack/bin/:$PATH"
+export PATH="$HOME/.virtualenvs/openstack/bin/:$PATH"
 ```
 
 Um zu sehen ob alles korrekt funktioniert hat, testen wir die Ausgabe:
@@ -249,17 +246,16 @@ $ type -a openstack
 openstack is /home/iNNOVO/.virtualenvs/openstack/bin/openstack
 ```
 
-Zugangsdaten
-------------
+## Zugangsdaten
 
 Nachdem der OpenStackClient nun installiert ist, werden noch die
-Zugangsdaten für Openstack  benötigt. 
+Zugangsdaten für Openstack  benötigt.
 
 Diese können direkt im [Horizon
 Dashboard](https://dashboard.optimist.innovo.cloud/identity/) heruntergeladen
 werden.  Dafür loggen wir uns ein und klicken dann rechts oben in der Ecke auf
 die E-Mail-Adresse und dann auf *Download OpenStack RC File v3*.
-Die heruntergeladene Datei trägt den Projektnamen (Projektname.sh), 
+Die heruntergeladene Datei trägt den Projektnamen (Projektname.sh),
 in unserem Beispiel nennen wir sie Beispiel.sh
 
 ### macOS | Linux
@@ -268,25 +264,24 @@ Um die Zugangsdaten in den OpenStackClienten einzulesen, führen wir
 nun folgenden Befehl aus:
 
 ```bash
-$ source Beispiel.sh
+source Beispiel.sh
 ```
 
 ### Windows
 
-Um unter Windows die Zugangsdaten einzulesen, ist es notwendig entweder 
-*PowerShell*, *Git for Windows* oder [*Linux on Windows*](https://docs.microsoft.com/en-us/windows/wsl/install-win10) zu nutzen. 
+Um unter Windows die Zugangsdaten einzulesen, ist es notwendig entweder
+*PowerShell*, *Git for Windows* oder [*Linux on Windows*](https://docs.microsoft.com/en-us/windows/wsl/install-win10) zu nutzen.
 
 Bei *Linux on Windows* und *Git for Windows* via *Git Bash*, wird der gleiche Befehl wie im Beispiel für
 macOS | Linux genutzt:
 
-```
+```bash
 source Beispiel.sh
 ```
 
-
-Bei der Nutzung von *PowerShell* müssen die Variablen einzeln gesetzt werden. 
-Alle notwendigen Variablen befinden sich in der Datei Beispiel.sh und diese kann 
-mit einem Editor geöffnet werden. 
+Bei der Nutzung von *PowerShell* müssen die Variablen einzeln gesetzt werden.
+Alle notwendigen Variablen befinden sich in der Datei Beispiel.sh und diese kann
+mit einem Editor geöffnet werden.
 Um die Variablen zu setzen, kann folgender Befehl genutzt werden:
 
 ```bash
@@ -302,15 +297,14 @@ set-item env:OS_INTERFACE -value "public"
 set-item env:OS_IDENTITY_API_VERSION -value "3"
 ```
 
-Ziel
-----
+## Ziel
 
 Die Installation des OpenStackClienten ist abgeschlossen und die ersten
-Befehle können damit getestet werden. 
+Befehle können damit getestet werden.
 
 Eine Übersicht über alle Befehle, kann mit folgendem Kommando abgerufen
 werden:
 
 ```bash
-$ openstack --help
+openstack --help
 ```

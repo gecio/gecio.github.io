@@ -64,20 +64,20 @@ $ openstack server create BeispielInstanz --flavor m1.small --key-name Beispiel 
 
 Genutzt wurden die folgenden Parameter:
 
--   `--flavor` = Gibt den Flavor (Größe) der Instanz an. Eine Übersicht
+- `--flavor` = Gibt den Flavor (Größe) der Instanz an. Eine Übersicht
     aller verfügbaren Flavors kann mit  `openstack flavor list`
     aufgerufen werden
--   `--key-name` = Der Name des zu verwendenden SSH-Keys
--   `--image` = Gibt an welches Image für die Instanz genutzt wird. Auch
+- `--key-name` = Der Name des zu verwendenden SSH-Keys
+- `--image` = Gibt an welches Image für die Instanz genutzt wird. Auch
     ist es möglich, sich im Vorfeld eine Liste aller verfügbaren Images
     anzusehen \"openstack image list\"
--   `--security-group` = Gibt an, welche Security-Groups genutzt wird
--   `--network` = Mit diesem Parameter kann unter anderem das gewünscht
+- `--security-group` = Gibt an, welche Security-Groups genutzt wird
+- `--network` = Mit diesem Parameter kann unter anderem das gewünscht
     Netzwerk angeben werden (in alten Versionen des
     clients `--nic net-id=<network>`)
 
 Damit die erstellte Instanz über das Internet erreichbar ist, wird noch
-eine IP benötigt, welche zuerst angelegt wird. 
+eine IP benötigt, welche zuerst angelegt wird.
 
 ```bash
 $ openstack floating ip create provider
@@ -104,7 +104,7 @@ Die gerade erstellte IP wird im nächsten Schritt mit der vorher
 erstellten Instanz verbunden.
 
 ```bash
-$ openstack server add floating ip BeispielInstanz 185.116.245.145
+openstack server add floating ip BeispielInstanz 185.116.245.145
 ```
 
 Nutzung
@@ -139,18 +139,18 @@ dem entsprechenden Befehl geschehen.
 Sollte man dies nicht befolgen, kann es dazu führen, dass Bestandteile
 sich nicht löschen lassen.
 
--   Instanz
-    -   `openstack server delete BeispielInstanz`
--   Floating-IP
-    -   `openstack floating ip delete 185.116.245.145`
--   Port
-    -   `openstack port delete BeispielPort`
--   Router
-    -   `openstack router delete BeispielRouter`
--   Subnet
-    -   `openstack subnet delete BeispielSubnet`
--   Netzwerk
-    -   `openstack network delete BeispielNetzwerk`
+- Instanz
+  - `openstack server delete BeispielInstanz`
+- Floating-IP
+  - `openstack floating ip delete 185.116.245.145`
+- Port
+  - `openstack port delete BeispielPort`
+- Router
+  - `openstack router delete BeispielRouter`
+- Subnet
+  - `openstack subnet delete BeispielSubnet`
+- Netzwerk
+  - `openstack network delete BeispielNetzwerk`
 
 Abschluss
 ---------

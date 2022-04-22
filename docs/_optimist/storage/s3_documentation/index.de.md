@@ -43,11 +43,11 @@ Darüberhinaus werden die Daten in ein weiteres RZ auf einen weiteren dedizierte
 Vorteile im Überblick
 -----
 
--  Bereitstellung per API: Die HTTPS-Schnittstelle ist sowohl kompatibel zur Amazon S3 API, also auch zur OpenStack Swift API.
--  unterstützt alle gängigen Betriebssysteme und Programmiersprachen.
--  Volle Skalierbarkeit - Der Storage kann dynamisch genutzt werden.
--  Höchste Ausfallsicherheit dank integrierter Replikation und Spiegelung über 2 unabhängige Rechenzentren.
--  Zugriff ist nahezu von jedem internetfähigen Gerät aus möglich - Somit eine super alternative zu NFS und Co.
--  PAYG Abrechnung nach genutztem Monatsdurchschnitt.
--  Transparente Abrechnung und somit gute Planbarkeit - Keine extra Traffic Kosten oder Kosten für Zugriffe auf die Daten.
--  Automatisierte Verwaltung der Objekte in Buckets mit s3 Lifecycle Policies möglich.
+- Bereitstellung per API: Die HTTPS-Schnittstelle ist sowohl kompatibel zur Amazon S3 API, also auch zur OpenStack Swift API.
+- unterstützt alle gängigen Betriebssysteme und Programmiersprachen.
+- Volle Skalierbarkeit - Der Storage kann dynamisch genutzt werden.
+- Höchste Ausfallsicherheit dank integrierter Replikation und Spiegelung über 2 unabhängige Rechenzentren.
+- Zugriff ist nahezu von jedem internetfähigen Gerät aus möglich - Somit eine super alternative zu NFS und Co.
+- PAYG Abrechnung nach genutztem Monatsdurchschnitt.
+- Transparente Abrechnung und somit gute Planbarkeit - Keine extra Traffic Kosten oder Kosten für Zugriffe auf die Daten.
+- Automatisierte Verwaltung der Objekte in Buckets mit s3 Lifecycle Policies möglich.

@@ -30,7 +30,7 @@ empfohlen für das Löschen die ID zu nutzen, da Namen im Gegensatz zu IDs
 nicht einzigartig sind.
 
 Der OpenStackClient zeigt einem sonst an, dass es mehrere Instanzen mit
-dem entsprechenden Namen gibt. 
+dem entsprechenden Namen gibt.
 
 Um nun eine Liste aller verfügbaren Instanzen zu erhalten, kann
 `openstack server list` als Befehl ausgeführt werden:
@@ -53,8 +53,8 @@ ID der Instanz ausgetauscht wird.
 
 In unserem Beispiel lautet der Befehl also wie folgt:
 
-```bash 
-$ openstack server delete 801b3021-0c00-4566-881e-b50d47152e63
+```bash
+openstack server delete 801b3021-0c00-4566-881e-b50d47152e63
 ```
 
 Bei einer erneuten Ausgabe von `openstack server list`, sollte kein
@@ -75,4 +75,4 @@ wir diese Instanz hier gelöscht.
 Außerdem konnte mit dem Befehl `openstack server list` eine Übersicht
 über alle Instanzen gewonnen werden.
 
-In Schritt 9: Die erste Security-Group wird an den bisherigen Erfahrungen angeknüpft und das gewonnene Wissen um das Thema Security-Groups erweitert. 
+In Schritt 9: Die erste Security-Group wird an den bisherigen Erfahrungen angeknüpft und das gewonnene Wissen um das Thema Security-Groups erweitert.

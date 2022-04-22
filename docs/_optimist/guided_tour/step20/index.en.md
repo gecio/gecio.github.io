@@ -56,7 +56,7 @@ This is the basic structure for our stack, we'll save it as `groups.yaml.`
 
 Now we'll create a template called *exampleserver.yaml,* we'll define
 the VM here.Now we will create a new template `exampleserver.yaml` and
-we will describe the vm here. 
+we will describe the vm here.
 
 Make sure that `name` and `network_id` are not defined.
 
@@ -141,5 +141,4 @@ Conclusion
 ----------
 
 Congratulations, we went from creating a single VM via the web interface
-all the way to creating full stacks with the OpenStack client! Several instances can now be rolled out at the same time using a template and are a good starting point for OpenStack administration. 
-
+all the way to creating full stacks with the OpenStack client! Several instances can now be rolled out at the same time using a template and are a good starting point for OpenStack administration.

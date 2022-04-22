@@ -9,64 +9,79 @@ grand_parent: Storage
 
 # Swift - Serving Static Websites
 
-# Einführung
+## Einführung
+
 Mit Hilfe der Swift-CLI ist es möglich, die Daten in Containern als statische Website auszuliefern. Die folgende Anleitung beschreibt die wichtigsten Schritte, um damit zu beginnen, und enthält auch ein Beispiel.
 
 ## Erste Schritte
 
-## Erstellen eines Containers
+### Erstellen eines Containers
+
 Zunächst erstellen wir einen Container mit dem Namen `example-webpage`, den wir als Basis für diese Anleitung verwenden werden:
+
 ```bash
-$ swift post example-webpage
+swift post example-webpage
 ```
 
-## Den Container öffentlich lesbar machen
+### Den Container öffentlich lesbar machen
+
 Als nächstes müssen wir sicherstellen, dass der Container öffentlich lesbar ist. Weitere Informationen zum Sichern von Containern und zum Festlegen von Bucket-Richtlinien finden Sie [hier](/optimist/storage/s3_documentation/security/):
+
 ```bash
-$ swift post -r '.r:*' example-webpage
+swift post -r '.r:*' example-webpage
 ```
 
-## Indexdatei der Seite setzen
+### Indexdatei der Seite setzen
+
 Setzen Sie die Indexdatei. In diesem Fall wird index.html die Standarddatei sein, die angezeigt wird, wenn die Seite erscheint:
+
 ```bash
-$ swift post -m 'web-index:index.html' example-webpage
+swift post -m 'web-index:index.html' example-webpage
 ```
 
-## Dateiliste aktivieren
+### Dateiliste aktivieren
+
 Optional können wir auch die Dateiliste aktivieren. Wenn Sie mehrere Downloads bereitstellen müssen, ist es sinnvoll, die Verzeichnisliste zu aktivieren:
+
 ```bash
-$ swift post -m 'web-listings: true' example-webpage
+swift post -m 'web-listings: true' example-webpage
 ```
 
-## CSS für Dateilisten aktivieren
+### CSS für Dateilisten aktivieren
+
 Aktivieren Sie ein benutzerdefiniertes Listing-Stylesheet:
+
 ```bash
-$ swift post -m 'web-listings-css:style.css' example-webpage
+swift post -m 'web-listings-css:style.css' example-webpage
 ```
 
-## Fehlerseiten einrichten
+### Fehlerseiten einrichten
+
 Schließlich sollten wir eine benutzerdefinierte Fehlerseite einbinden:
+
 ```bash
-$ swift post -m 'web-error:404error.html' example-webpage
+swift post -m 'web-error:404error.html' example-webpage
 ```
 
-# Beispiel-Webseite
+## Beispiel-Webseite
 
 Lassen Sie uns die Schritte rekapitulieren, die wir bis jetzt unternommen haben, um statische Webseiten zu aktivieren:
+
 ```bash
-$ swift post example-webpage
-$ swift post -r '.r:*' example-webpage
-$ swift post -m 'web-index:index.html' example-webpage
-$ swift post -m 'web-listings: true' example-webpage
-$ swift post -m 'web-listings-css:style.css' example-webpage
-$ swift post -m 'web-error:404error.html' example-webpage
+swift post example-webpage
+swift post -r '.r:*' example-webpage
+swift post -m 'web-index:index.html' example-webpage
+swift post -m 'web-listings: true' example-webpage
+swift post -m 'web-listings-css:style.css' example-webpage
+swift post -m 'web-error:404error.html' example-webpage
 ```
 
 Wenn die obigen Schritte abgeschlossen sind, können wir damit beginnen, unsere statische Webseite anzupassen. Das Folgende demonstriert eine schnelle Einrichtung unter Verwendung unseres Containers `example-webpage`
 
-## Anpassen der Seiten index.html, page.html und 404error.html
+### Anpassen der Seiten index.html, page.html und 404error.html
 
 Dies wird als Startseite dienen, die einen Link zu einer sekundären Seite erstellt.
+
 ```html
 <!-- index.html -->
 <html>
@@ -77,6 +92,7 @@ See the web page <a href="mywebsite/page.html">here</a>.
 ```
 
 Die nächste Seite (page.html) zeigt ein Bild namens `sample.png` an:
+
 ```html
 <!-- page.html -->
 <html>
@@ -85,6 +101,7 @@ Die nächste Seite (page.html) zeigt ein Bild namens `sample.png` an:
 ```
 
 Wir können auch benutzerdefinierte Fehlerseiten hinzufügen. Beachten Sie, dass derzeit nur die Fehler 401 (Nicht autorisiert) und 404 (Nicht gefunden) unterstützt werden. Das folgende Beispiel demonstriert die Erstellung einer 404-Fehlerseite:
+
 ```html
 <!-- 404error.html -->
 <html>
@@ -94,16 +111,19 @@ Wir können auch benutzerdefinierte Fehlerseiten hinzufügen. Beachten Sie, dass
 </html>
 ```
 
-## Hochladen der Dateien index.html und page.html
+### Hochladen der Dateien index.html und page.html
+
 Nachdem die Inhalte der Dateien erstellt wurden, laden Sie die Dateien mit den folgenden Befehlen hoch:
+
 ```bash
-$ swift upload beispiel-webseite index.html
-$ swift upload beispiel-webseite meinewebseite/seite.html
-$ swift upload beispiel-webseite-meine-website/beispiel.png
-$ swift upload beispiel-webseite 404error.html
+swift upload beispiel-webseite index.html
+swift upload beispiel-webseite meinewebseite/seite.html
+swift upload beispiel-webseite-meine-website/beispiel.png
+swift upload beispiel-webseite 404error.html
 ```
 
-## Betrachten der Website
+### Betrachten der Website
+
 Wenn alle oben genannten Schritte abgeschlossen sind, können wir nun unsere neu erstellte Website betrachten. Den Link zur Website finden Sie im Optimist Dashboard > Object Store > Containers über den abgebildeten Link.
 
 Wenn Sie auf den Link klicken, wird unsere neu erstellte Website angezeigt:

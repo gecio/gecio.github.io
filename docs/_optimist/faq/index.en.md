@@ -14,14 +14,14 @@ In this case some components of the OpenstackClient are outdated. You can use th
 to be updated:
 
 ```bash
-$ openstack --debug --help
+openstack --debug --help
 ```
 
 This will show you which components need to be updated, which you can do with the command below. (Replace `<PROJECT>` with the correct
 project):
 
 ```bash
-$ pip install python-<PROJECT>client -U
+pip install python-<PROJECT>client -U
 ```
 
 ## How can I use [VRRP](https://en.wikipedia.org/wiki/Virtual_Router_Redundancy_Protocol)?
@@ -30,7 +30,7 @@ In order to use VRRP, you will need to add a rule to a security group that's ass
 OpenStack client! An example of adding VRRP to a security group would be:
 
 ```bash
-$ openstack security group rule create --remote-ip 10.0.0.0/24 --protocol vrrp --ethertype IPv4 --ingress  default
+openstack security group rule create --remote-ip 10.0.0.0/24 --protocol vrrp --ethertype IPv4 --ingress  default
 ```
 
 ## Is it possible to use ED25519 SSH keys?
@@ -73,7 +73,7 @@ With the name or UUID of the server you wish to resize, resize it using the open
 Specifying the desired new flavor and then the instance name or UUID:
 
 ```bash
-$ openstack server resize --flavor FLAVOR SERVER
+openstack server resize --flavor FLAVOR SERVER
 ```
 
 Resizing can take some time. During this time, the instance status will show as RESIZE.
@@ -81,7 +81,7 @@ Resizing can take some time. During this time, the instance status will show as 
 When the resize completes, the instance status will be VERIFY_RESIZE. You can now confirm the resize to change the status to ACTIVE:
 
 ```bash
-$ openstack server resize --confirm SERVER
+openstack server resize --confirm SERVER
 ```
 
 ### Resizing via the Optimist dashboard

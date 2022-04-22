@@ -26,13 +26,13 @@ will be assigned from and the port that this IP will lead to:
 
 ```yaml
 heat_template_version: 2014-10-16
-  
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 resources:
     Instanz:
         type: OS::Nova::Server
@@ -42,23 +42,23 @@ resources:
             flavor: m1.small
             networks:
                 - port: {get_resource: Port }
-     
+
     Netzwerk:
         type: OS::Neutron::Net
         properties:
             name: BeispielNetzwerk
- 
+
     Port:
         type: OS::Neutron::Port
         properties:
             network: { get_resource: Netzwerk }
- 
+
     Router:
         type: OS::Neutron::Router
         properties:
             external_gateway_info: { "network": { get_param: public_network_id }
             name: BeispielRouter
- 
+
     Subnet:
         type: OS::Neutron::Subnet
         properties:
@@ -71,7 +71,7 @@ resources:
             cidr: 10.0.0.0/24
             allocation_pools:
             - { start: 10.0.0.10, end: 10.0.0.250 }
-  
+
     Router_Subnet_Bridge:
         type: OS::Neutron::RouterInterface
         depends_on: Subnet
@@ -103,13 +103,13 @@ want to allow.
 
 ```yaml
 heat_template_version: 2014-10-16
-  
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 resources:
     Instanz:
         type: OS::Nova::Server
@@ -119,24 +119,24 @@ resources:
             flavor: m1.small
             networks:
                 - port: {get_resource: Port }
-     
+
     Netzwerk:
         type: OS::Neutron::Net
         properties:
             name: BeispielNetzwerk
- 
+
     Port:
         type: OS::Neutron::Port
         properties:
             network: { get_resource: Netzwerk }
             security_groups: { get_resource: Sec_SSH }
- 
+
     Router:
         type: OS::Neutron::Router
         properties:
             external_gateway_info: { "network": { get_param: public_network_id }
             name: BeispielRouter
- 
+
     Subnet:
         type: OS::Neutron::Subnet
         properties:
@@ -149,7 +149,7 @@ resources:
             cidr: 10.0.0.0/24
             allocation_pools:
             - { start: 10.0.0.10, end: 10.0.0.250 }
-  
+
     Router_Subnet_Bridge:
         type: OS::Neutron::RouterInterface
         depends_on: Subnet
@@ -177,6 +177,6 @@ resources:
 Conclusion
 ----------
 
-We can now create a stack that contains a single reachable instance. 
+We can now create a stack that contains a single reachable instance.
 
 In the next step, we will customize the instance using CloudConfig.

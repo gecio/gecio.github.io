@@ -14,7 +14,7 @@ Mit Application Credentials können sich Anwendungen mit der Application Creden
 
 Benutzer können eine Teilmenge ihrer Rollenzuweisungen für ein Projekt an Application Credentials delegieren und der Anwendung dieselben oder eingeschränkte Berechtigungen innerhalb eines Projekts erteilen.
 
-# Anforderungen für Application Credentials
+## Anforderungen für Application Credentials
 
 ### Name / Secrets
 
@@ -38,7 +38,7 @@ Im Folgenden sind die verfügbaren Roles aufgeführt, die einem Satz von Applica
 
 Standardmäßig laufen erstellte Application Credentials nicht ab, jedoch können feste Ablaufdaten/-zeiten für Application Credentials bei der Erstellung festgelegt werden, indem der Parameter `--expires` im Befehl verwendet wird (zum Beispiel: `--expires '2021-07-15T21: 00:00'`).
 
-# Erstellen von Application Credentials über die CLI
+## Erstellen von Application Credentials über die CLI
 
 Ein Set von Application Credentials kann im gewünschten Projekt über die CLI erstellt werden. Das folgende Beispiel zeigt, wie ein Set von Credentials mit den folgenden Parametern erstellt wird:
 
@@ -69,7 +69,7 @@ $ openstack application credential create test-credentials --secret ZYQZm2k6pk -
 
 Hinweis: Das Secret (ob vom Benutzer festgelegt oder automatisch generiert) wird nur beim Erstellen der Application Credentials angezeigt. Bitte notieren Sie sich das Secret zu diesem Zeitpunkt.
 
-# Anzeigen von Application Credentials über die CLI
+## Anzeigen von Application Credentials über die CLI
 
 Die Liste der zu einem Projekt gehörenden Application-Credentials kann mit dem folgenden Befehl aufgelistet werden.
 
@@ -84,15 +84,15 @@ $ openstack application credential list
 
 Einzelne Credentials können mit dem `$ openstack application credential show <name>` Befehl angezeigt werden.
 
-# Löschen von Application Credentials über die CLI
+## Löschen von Application Credentials über die CLI
 
 Application Credentials können über die CLI mit dem folgenden Befehl mit dem Namen oder der ID des spezifischen Satzes von Anmeldeinformationen gelöscht werden:
 
 ```bash
-$ openstack application credential delete test-credentials
+openstack application credential delete test-credentials
 ```
 
-# Erstellen und Löschen von Application Credentials für Anwendungen über das Optimist Dashboard
+## Erstellen und Löschen von Application Credentials für Anwendungen über das Optimist Dashboard
 
 Alternativ können Application Credentials auch über das Optimist Dashboard unter Identität > Application Credentials generiert werden:
 
@@ -108,14 +108,14 @@ Die Zugangsdaten hier können jederzeit gelöscht werden, indem Sie den zu lösc
 
 ![](attachments/deleteappcredentials.png)
 
-# Application Credentials testen
+## Application Credentials testen
 
 Sobald wir über die CLI oder das Dashboard einen Satz von Application Credentials erstellt haben, können wir sie mit dem folgenden curl-Befehl testen, um zu überprüfen, ob sie funktionieren.
 
 Wir müssen unsere `<name>` und `<secret>` im curl-Befehl verwenden:
 
 ```bash
-$ curl -i -H "Content-Type: application/json" -d ' { "auth": { "identity": { "methods": ["application_credential"],  "application_credential": {  "id": “<id>", "secret": “<secret>"}}}}' https://identity.optimist.innovo.cloud/v3/auth/tokens
+curl -i -H "Content-Type: application/json" -d ' { "auth": { "identity": { "methods": ["application_credential"],  "application_credential": {  "id": “<id>", "secret": “<secret>"}}}}' https://identity.optimist.innovo.cloud/v3/auth/tokens
 ```
 
 Ein erfolgreicher curl-Versuch gibt ein `x-subject-token` aus, erfolglose Versuche mit falschen Anmeldeinformationen führen zu einem 401-Fehler.

@@ -43,14 +43,14 @@ click *Next*.
 
 In the next page of the dialog, we supply the following data:
 
--   Stack Name: BeispielServer
--   Creation Timeout: 60
--   Password for User: Please use your own password
--   availability\_zone: ix1
--   flavor\_name: m1.micro
--   key\_name: BeispielKey
--   machine\_name: singleserver
--   public\_network\_id: provider
+- Stack Name: BeispielServer
+- Creation Timeout: 60
+- Password for User: Please use your own password
+- availability\_zone: ix1
+- flavor\_name: m1.micro
+- key\_name: BeispielKey
+- machine\_name: singleserver
+- public\_network\_id: provider
 
 After everything is filled in, we click *Launch* to spawn the stack.
 

@@ -49,14 +49,14 @@ rules.
 
 Some commonly used options are:
 
--   `--protocol`: The protocol that this rule matches. (Example
+- `--protocol`: The protocol that this rule matches. (Example
     arguments: tcp, udp, icmp)
--   `--dst-port`: Destination port range to give access to. (Example
+- `--dst-port`: Destination port range to give access to. (Example
     arguments: 22:22 for port 22 100:200 for ports 100 through 200).
--   `--remote-ip`: Remote IP to allow access from. (Example arguments:
+- `--remote-ip`: Remote IP to allow access from. (Example arguments:
     0.0.0.0/0 for all IP addresses, 1.2.3.0/24 for all IP addresses
     starting with 1.2.3.).
--   `--ingress` or `--egress:` ingress is incoming traffic and egress is
+- `--ingress` or `--egress:` ingress is incoming traffic and egress is
     outgoing traffic (No arguments possible)
 
 We're going to use these options to create a rule for our new seurity group to

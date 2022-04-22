@@ -6,11 +6,9 @@ nav_order: 1040
 parent: Guided Tour
 ---
 
-Step 4: Our way to the console
-==============================
+# Step 4: Our way to the console
 
-Preface
--------
+## Preface
 
 To make the administration of OpenStack as simple as possible, we recommend
 using
@@ -29,8 +27,7 @@ The client will be helpful in our daily OpenStack work, it contains
 Nova, Glance, Cinder and Neutron. We will use the client heavily in our
 Guided Tour. We will walk you through installing it now.
 
-Installation
-------------
+## Installation
 
 To install the OpenStackClient, we need at least [Python
 2.7](https://www.python.org/downloads/release/python-2713/) and also [Python
@@ -55,7 +52,7 @@ To install the OpenStackClient, we need to install
 [pip](https://de.wikipedia.org/wiki/Pip_(Python)). Start the console (Launchpad
 → Console) and type this command:
 
-```
+```bash
 $ easy_install pip
 Searching for pip
 Best match: pip 9.0.1
@@ -71,7 +68,7 @@ Finished processing dependencies for pip
 
 Now we install virtualenv.
 
-``` 
+```bash
 $ pip install virtualenv
 Collecting virtualenv
   Downloading virtualenv-15.1.0-py2.py3-none-any.whl (1.8MB)
@@ -82,7 +79,7 @@ Successfully installed virtualenv-15.1.0
 
 Now that we have virtualenv installed, we can create the virtual environment.
 
-```
+```bash
 $ virtualenv ~/.virtualenvs/openstack
 New python executable in /Users/iNNOVO/.virtualenvs/openstack/bin/python
 Installing setuptools, pip, wheel...done.
@@ -90,7 +87,7 @@ Installing setuptools, pip, wheel...done.
 
 Now that it's created we can activate the virtual environment.
 
-```
+```bash
 $ source ~/.virtualenvs/openstack/bin/activate
 (openstack) $
 ```
@@ -98,38 +95,37 @@ $ source ~/.virtualenvs/openstack/bin/activate
 Now that the virtual environment is activated, we can install the openstack
 client.
 
-```
+```bash
 (openstack) $ pip install python-openstackclient
 ```
 
 As we'll be using other services in our documentation, we'll install these clients as well.
 
-```
+```bash
 (openstack) $ pip install python-heatclient python-designateclient python-octaviaclient
 ```
 
 Now that we're done, we can deactivate our environment.
 
-```
+```bash
 (openstack) $ deactivate
 ```
 
 To finish it off, we'll make sure we can use the client outside of our virtual
 environment.
 
-```
+```bash
 export PATH="$HOME/.virtualenvs/openstack/bin/:$PATH"
 ```
 
 Now we can check, if everything works and it should look like this:
 
-```
+```bash
 $ type -a openstack
 openstack is /home/iNNOVO/.virtualenvs/openstack/bin/openstack
 ```
 
 ### Windows
-
 
 If Python is already installed, we need to navigate to where it's installed
 (standard installation folder C:\Python27\Scripts).
@@ -146,7 +142,7 @@ Once pip is installed, we can install the OpenStack client:
 
 To start things off, we'll install pip.
 
-```
+```bash
 $ sudo apt-get install python3-pip
 Reading package lists... Done
 Building dependency tree
@@ -156,7 +152,7 @@ Reading state information... Done
 Next, we'll install virtualenv, which we'll need to set up our virtual
 environment.
 
-```
+```bash
 $ sudo apt-get install python3-virtualenv
 Reading package lists... Done
 Building dependency tree
@@ -166,7 +162,7 @@ Reading state information... Done
 Now we can create a virtual environment, in which we can install the OpenStack
 client.
 
-```
+```bash
 $ virtualenv ~/.virtualenvs/openstack
 New python executable in /Users/iNNOVO/.virtualenvs/openstack/bin/python
 Installing setuptools, pip, wheel...done.
@@ -174,7 +170,7 @@ Installing setuptools, pip, wheel...done.
 
 Now we activate our freshly created environment.
 
-```
+```bash
 $ source ~/.virtualenvs/openstack/bin/activate
 (openstack) $
 ```
@@ -182,38 +178,37 @@ $ source ~/.virtualenvs/openstack/bin/activate
 Once activated, we can install the
 [OpenStackClient](https://docs.openstack.org/python-openstackclient/latest/):
 
-```
+```bash
 (openstack) $ pip install python-openstackclient
 ```
 
 As we'll use heat in our documentation, we'll also install the heat
 client.
 
-```
+```bash
 (openstack) $ pip install python-heatclient
 ```
 
 Once done, we can deactivate our virtual environment.
 
-```
+```bash
 (openstack) $ deactivate
 ```
 
 To finish up, we'll make sure that we can use our newly installed software.
 
-```
+```bash
 export PATH="$HOME/.virtualenvs/openstack/bin/:$PATH"
 ```
 
 Now we can check, if everything works and it should look like this:
 
-```
+```bash
 $ type -a openstack
 openstack is /home/iNNOVO/.virtualenvs/openstack/bin/openstack
 ```
 
-Credentials
------------
+## Credentials
 
 For the OpenStack client to work, we'll need to supply it with credentials.
 
@@ -228,25 +223,24 @@ We need to source the credentials, which can be easily done
 with this command (IMPORTANT: The command can only be used in the folder where
 the RC file was downloaded):  
 
-```
+```bash
 source EXAMPLE.sh
 ```
 
 ### Windows
 
-
 To source the credentials in windows, it's necessary to use
-*PowerShell*, *Git for Windows* or [*Linux on Windows*](https://docs.microsoft.com/en-us/windows/wsl/install-win10). 
+*PowerShell*, *Git for Windows* or [*Linux on Windows*](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
-If you're using *Git for Windows* or *Linux on Windows*, you can use the same command as described above 
-in the macOS | Linux part. 
+If you're using *Git for Windows* or *Linux on Windows*, you can use the same command as described above
+in the macOS | Linux part.
 
-```
+```bash
 source EXAMPLE.sh
 ```
 
 If *PowerShell* is used, we need to set every variable individually.
-Every needed variable is in the previously downloaded *Beispiel.sh* 
+Every needed variable is in the previously downloaded *Beispiel.sh*
 To set the variables, use the following command:
 
 ```bash
@@ -262,8 +256,7 @@ set-item env:OS_INTERFACE -value "public"
 set-item env:OS_IDENTITY_API_VERSION -value "3"
 ```
 
-Conclusion
-----------
+## Conclusion
 
 We now have an OpenStack client with working credentials, and the first
 commands can be tested.
@@ -271,5 +264,5 @@ commands can be tested.
 An overview of all OpenStack commands can be called up with the following command:
 
 ```bash
-$ openstack --help
+openstack --help
 ```

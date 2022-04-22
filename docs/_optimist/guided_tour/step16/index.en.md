@@ -20,7 +20,7 @@ in reusing templates.
 Now that we have our simple template, we'll get to know heat a bit better by
 adding a variable parameter to our template.
 
-Parameter 
+Parameter
 ---------
 
 In this example, we'll add a parameter for the SSH key. The advantage of this

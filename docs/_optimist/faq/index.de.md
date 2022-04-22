@@ -14,14 +14,14 @@ In diesem Fall ist eine der mit dem OpenStack Client installierten Komponenten n
 aktualisiert werden muss, rufen wir folgenden Befehl auf:
 
 ```bash
-$ openstack --debug --help
+openstack --debug --help
 ```
 
 Hier wird nun vor jedem Punkt angezeigt, was genau der Fehler ist und man kann einfach die jeweilige Komponente mit dem folgenden Befehl
 aktualisieren (`<PROJECT>` muss durch die richtige Komponente ersetzt werden):
 
 ```bash
-$ pip install python-<PROJECT>client -U
+pip install python-<PROJECT>client -U
 ```
 
 ## Wie kann ich [VRRP](https://de.wikipedia.org/wiki/Virtual_Router_Redundancy_Protocol) nutzen?
@@ -30,7 +30,7 @@ Um VRRP nutzen zu können, muss dies in einer Security-Group aktiviert und dann 
 nur mit dem Openstack Client möglich. Zum Beispiel:
 
 ```bash
-$ openstack security group rule create --remote-ip 10.0.0.0/24 --protocol vrrp --ethertype IPv4 --ingress  default
+openstack security group rule create --remote-ip 10.0.0.0/24 --protocol vrrp --ethertype IPv4 --ingress  default
 ```
 
 ## Kann ich ED25519 SSH Keys verwenden?
@@ -72,7 +72,7 @@ Geben Sie den Namen oder die UUID des Servers an, dessen Größe Sie ändern mö
 Geben Sie das gewünschte neue Flavor und dann den Instanznamen oder die UUID an:
 
 ```bash
-$ openstack server resize --flavor FLAVOR SERVER
+openstack server resize --flavor FLAVOR SERVER
 ```
 
 Die Größenänderung kann einige Zeit in Anspruch nehmen. Während dieser Zeit wird der Instanzstatus als RESIZE angezeigt.
@@ -81,7 +81,7 @@ Wenn die Resizing abgeschlossen ist, wird der Instanzstatus VERIFY_RESIZE angeze
 Status auf ACTIVE zu ändern:
 
 ```bash
-$ openstack server resize --confirm SERVER
+openstack server resize --confirm SERVER
 ```
 
 ### Resizing über das Optimist-Dashboard

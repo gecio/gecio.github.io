@@ -6,12 +6,9 @@ nav_order: 1220
 parent: Guided Tour
 ---
 
-Schritt 22: Anlegen eines DNS-Record in Designate
-=================================================
+# Schritt 22: Anlegen eines DNS-Record in Designate
 
-Vorwort
--------
-
+## Vorwort
 
 Die Openstackplattform Optimist enthält eine Technologie namens DNS-as-a-Service (DNSaaS), auch bekannt als Designate.
 DNSaaS enthält eine REST-API für die Domänen- und Datensatzverwaltung, ist multi-tenant und integriert den OpenStack Identity Service (Keystone) für die Authentifizierung.
@@ -100,6 +97,7 @@ $ openstack recordset list foobar.cloud.
 ```
 
 Hier sehen wir eine "leere Hülle" einer Domain mit automatisch erstellen NS und SOA-Einträgen, die sofort zur Abfrage bereit stehen.
+
 ```bash
 $ dig +short @dns1.ddns.innovo.cloud foobar.cloud NS
 dns1.ddns.innovo.cloud.
@@ -171,6 +169,7 @@ $ openstack recordset create --type A --record 1.2.3.4 foobar.cloud. www
 ```
 
 Resultat:
+
 ```bash
 $ openstack recordset list foobar.cloud.
 +--------------------------------------+-------------------+------+--------------------------------------------------------------------------------+--------+--------+
@@ -186,8 +185,9 @@ $ openstack recordset list foobar.cloud.
 ```
 
 Wenn die Recordsets aktiv sind können wir die dafür vorgesehenen DNS-Server
- * dns1.ddns.innovo.cloud
- * dns2.ddns.innovo.cloud
+
+* dns1.ddns.innovo.cloud
+* dns2.ddns.innovo.cloud
 nach diesen Records abfragen.
 
 ```bash
@@ -202,15 +202,18 @@ $ dig +short @dns1.ddns.innovo.cloud foobar.cloud MX
 $ dig +short @dns1.ddns.innovo.cloud foobar.cloud www.foobar.cloud
 1.2.3.4
 ```
->        ACHTUNG! Zu diesem Zeitpunkt ist diese Domaine (foobar.cloud) noch nicht weltweit auflösbar. 
+
+> ACHTUNG! Zu diesem Zeitpunkt ist diese Domaine (foobar.cloud) noch nicht weltweit auflösbar.
 
 Damit dieses Konstrukt weltweit benutzt werden kann, muss jede im Designate verwaltete Domain bei dem jeweiligen Registrar die Delegation zu den Nameservern `dns1.ddns.innovo.cloud` und `dns2.ddns.innovo.cloud` eingerichtet haben.
 
->        Details zu unseren authoritativen DNS-Server:
->          * dns1.ddns.innovo.cloud: '185.116.244.45' / '2a00:c320:0:1::d'
->          * dns2.ddns.innovo.cloud: '185.116.244.46' / '2a00:c320:0:1::e'
+> Details zu unseren authoritativen DNS-Server:
+>
+> * dns1.ddns.innovo.cloud: '185.116.244.45' / '2a00:c320:0:1::d'
+> * dns2.ddns.innovo.cloud: '185.116.244.46' / '2a00:c320:0:1::e'
 
 Um die die Mail-Records abzuschliessen, bietet sich noch an für die Mailserver entsprechende A-Records zu hinterlegen
+
 ```bash
 $ openstack recordset create --type A --record 2.3.4.5 foobar.cloud. mx1
 +-------------+--------------------------------------+
@@ -254,6 +257,7 @@ $ openstack recordset create --type A --record 3.4.5.6 foobar.cloud. mx2
 ```
 
 Das Resultat nach einigen Sekunden:
+
 ```bash
 $ openstack recordset list foobar.cloud.
 +--------------------------------------+-------------------+------+--------------------------------------------------------------------------------+--------+--------+
@@ -270,7 +274,6 @@ $ openstack recordset list foobar.cloud.
 +--------------------------------------+-------------------+------+--------------------------------------------------------------------------------+--------+--------+
 ```
 
-Abschluss
----------
+## Abschluss
 
 In diesem Schritt haben wir gelernt, wie man eine Zone anlegt, einen Recordset konfiguriert und diesen abfragen kann.

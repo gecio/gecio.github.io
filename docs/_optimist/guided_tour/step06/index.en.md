@@ -26,7 +26,7 @@ As mentioned in step 2, there are many ways to create an SSH keypair.
 
 In this step we will create one from the console with this command:
 
-```
+```text
 $ ssh-keygen -t rsa -f Beispiel.key
 Generating public/private rsa key pair.
 Enter passphrase (empty for no passphrase):
@@ -34,7 +34,7 @@ Enter same passphrase again:
 Your identification has been saved in Beispiel.key.
 Your public key has been saved in Beispiel.key.pub.
 The key fingerprint is:
-SHA256:UKSodmr6MFCO1fSqNYAoyM7uX8n/O5a43cPEV5vJXW8 
+SHA256:UKSodmr6MFCO1fSqNYAoyM7uX8n/O5a43cPEV5vJXW8
 The key's randomart image is:
 +---[RSA 2048]----+
 |    .  .o        |
@@ -67,7 +67,7 @@ We will use the command below (in our example, the created keypair is stored in
 `~/.ssh/`, if your keys are saved in a different location, you need to copy the
 keypair to `~/.ssh/`)
 
-```
+```bash
 $ openstack keypair create --public-key ~/.ssh/Beispiel.key.pub Beispiel
 +-------------+-------------------------------------------------+
 | Field       | Value                                           |
@@ -81,7 +81,7 @@ $ openstack keypair create --public-key ~/.ssh/Beispiel.key.pub Beispiel
 We can check if everything worked by listing the keys and seeing the one we
 just uploaded:
 
-```
+```bash
 $ openstack keypair list
 +----------+-------------------------------------------------+
 | Name     | Fingerprint                                     |

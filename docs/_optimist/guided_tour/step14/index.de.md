@@ -26,24 +26,24 @@ Jedes Heat-Template folgt der gleichen Struktur und diese ist wie folgt
 aufgebaut:
 
 ```yaml
-heat_template_version: 2016-10-14 
+heat_template_version: 2016-10-14
  
-description: 
-# Die Beschreibung des Templates (optional) 
+description:
+# Die Beschreibung des Templates (optional)
  
-parameter_groups: 
-# Die Definition der Eingabeparameter Gruppen und deren Reihenfolge 
+parameter_groups:
+# Die Definition der Eingabeparameter Gruppen und deren Reihenfolge
  
-parameters: 
-# Die Definition der Eingabeparameter 
+parameters:
+# Die Definition der Eingabeparameter
  
-resources: 
-# Die Definition der Ressourcen des Templates 
+resources:
+# Die Definition der Ressourcen des Templates
  
-outputs: 
-# Die Definition der Ausgangsparameter 
+outputs:
+# Die Definition der Ausgangsparameter
  
-conditions: 
+conditions:
 # Die Definition der Bedingungen
 ```
 
@@ -56,19 +56,19 @@ sondern hat feste Vorgaben.
 Diese unterscheiden sich in den möglichen Befehlen und aktuell sind
 folgende Daten möglich:
 
--   2013-05-23
--   2014-10-16
--   2015-04-30
--   2015-10-15
--   2016-04-08
--   2016-10-14
--   2017-02-24
+- 2013-05-23
+- 2014-10-16
+- 2015-04-30
+- 2015-10-15
+- 2016-04-08
+- 2016-10-14
+- 2017-02-24
 
 Description
 -----------
 
 Die Description oder auch Beschreibung ist ein komplett optionales
-Feld. 
+Feld.
 
 Das bedeutet, dass das Feld nicht genutzt werden muss.
 
@@ -78,7 +78,7 @@ hingewiesen werden.
 
 Auch besteht die Möglichkeit jederzeit eine Zeile mit dem Zeichen `#`
 auszukommentieren und dadurch das Template nach den jeweiligen
-Bedürfnissen zu verändern oder mehr Kommentare zu verfassen. 
+Bedürfnissen zu verändern oder mehr Kommentare zu verfassen.
 
 Parameter Groups
 ----------------
@@ -96,21 +96,21 @@ zu keinen Problemen führt.
 Jede Parameter Group ist dabei wie folgt aufgebaut:
 
 ```yaml
-parameter_groups: 
-- label: <Name der Gruppe> 
-  description: <Beschreibung der Gruppe> 
-  parameters: 
-  - <Name des Parameters> 
+parameter_groups:
+- label: <Name der Gruppe>
+  description: <Beschreibung der Gruppe>
+  parameters:
+  - <Name des Parameters>
   - <Name des Parameters>
 ```
 
--   `label`: Name der Gruppe.
--   `description`: Dieses Attribut gibt  die Möglichkeit die Parameter
+- `label`: Name der Gruppe.
+- `description`: Dieses Attribut gibt  die Möglichkeit die Parameter
     Gruppe zu beschreiben und so für jeden verständlich zu machen, wofür
     diese genutzt wird.
--   `parameter`: Eine Auflistung aller Parameter die für diese Parameter
+- `parameter`: Eine Auflistung aller Parameter die für diese Parameter
     Gruppe gelten.
--   `Name des Parameters`: Der in der Parameter Sektion definiert wurde.
+- `Name des Parameters`: Der in der Parameter Sektion definiert wurde.
 
 Parameter
 ---------
@@ -123,7 +123,7 @@ individualisieren.
 
 Dabei wird jeder Parameter in einem separaten Block definiert, wobei am
 Anfang immer der Parameter genannt wird und dann weitere Attribute
-diesem zugeordnet werden. 
+diesem zugeordnet werden.
 
 ```yaml
  parameters:
@@ -138,23 +138,23 @@ diesem zugeordnet werden. 
     immutable: <true | false>
 ```
 
--   `Parameter Name`: Der Name des Parameters.
--   `type`: Der Typ des Parameters. Unterstützte Typen: string, number,
+- `Parameter Name`: Der Name des Parameters.
+- `type`: Der Typ des Parameters. Unterstützte Typen: string, number,
     json, comma\_delimited\_list, boolean.
--   `label`: Name des Parameters. (optional)
--   `description`: Dieses Attribut gibt die Möglichkeit den Parameter zu
+- `label`: Name des Parameters. (optional)
+- `description`: Dieses Attribut gibt die Möglichkeit den Parameter zu
     beschreiben und so für jeden verständlich zu machen, wofür dieser
     genutzt wird. (optional)
--   `default`: Der vorgegebene Wert des Parameters. Dieser Wert wird
+- `default`: Der vorgegebene Wert des Parameters. Dieser Wert wird
     genutzt, wenn durch den User kein spezifischer Wert festgelegt
     werden soll. (optional)
--   `hidden`: Gibt an ob der Parameter bei einer Abfrage nach der
+- `hidden`: Gibt an ob der Parameter bei einer Abfrage nach der
     Erstellung angezeigt wird oder versteckt ist. (optional und per
     Default auf *false* gesetzt)
--   `constraints`: Hier kann eine Liste von Vorgaben definiert werden.
+- `constraints`: Hier kann eine Liste von Vorgaben definiert werden.
     Sollten diese beim deployment nicht erfüllt werden, schlägt die
     Erstellung des Stacks fehl.
--   `immutable`: Definiert ob der Parameter aktualisiert werden kann.
+- `immutable`: Definiert ob der Parameter aktualisiert werden kann.
     Für den Fall, dass der Parameter auf *true* gesetzt ist und sich der
     Wert bei einem stack update ändert, schlägt das Update fehl.
 
@@ -162,7 +162,7 @@ Resources
 ---------
 
 Dieser Punkt definiert die aktuell genutzten Resourcen, die bei der Erstellung
-des Stacks genutzt werden. 
+des Stacks genutzt werden.
 
 Dabei wird jede Ressource in einem eigenen Block definiert:
 
@@ -181,29 +181,29 @@ resources:
     condition: <Name der Kondition oder Ausdruck oder boolean>
 ```
 
--   `ID der Ressource`: Diese muss einzigartig im Bereich der Ressourcen
+- `ID der Ressource`: Diese muss einzigartig im Bereich der Ressourcen
     sein. Es darf durchaus ein sprechender Name gewählt werden z. B.
     (`web_network`).
--   `type`: Der Typ der Ressource, wie zum
+- `type`: Der Typ der Ressource, wie zum
     Beispiel `OS::NEUTRON::SecurityGroup` (für eine Security Group).
     (benötigt)
--   `properties`: Eine Liste der Ressourcen spezifischen Eigenschaften.
-    (optional) 
--   `metadata`: Hier können für die jeweilige Ressource spezifische
+- `properties`: Eine Liste der Ressourcen spezifischen Eigenschaften.
+    (optional)
+- `metadata`: Hier können für die jeweilige Ressource spezifische
     Metadaten hinterlegt werden. (optional)
--   `depends_on`: Hier können verschiedene Abhängigkeiten zu anderen
+- `depends_on`: Hier können verschiedene Abhängigkeiten zu anderen
     Ressourcen hinterlegt werden. (optional)
--   `update_policy`: Hier können Update Regeln festgelegt werden. Die
+- `update_policy`: Hier können Update Regeln festgelegt werden. Die
     Voraussetzung dafür ist, dass die entsprechende Resource dies auch
     unterstützt. (optional)
--   `deletion_policy`: Hier werden die Regeln für das Löschen
+- `deletion_policy`: Hier werden die Regeln für das Löschen
     festgelegt. Erlaubt sind Delete, Retain und Snapshot. Mit der
     heat_template_version 2016-10-14 ist nun auch die Kleinschreibung
     der Werte erlaubt
 
--   `external_id`: Falls notwendig, können externe Ressourcen IDs
+- `external_id`: Falls notwendig, können externe Ressourcen IDs
     verwendet werden
--   `condition`: Anhand der Kondition wird entschieden, ob die Ressource
+- `condition`: Anhand der Kondition wird entschieden, ob die Ressource
     erstellt wird oder nicht. (optional)
 
 Output
@@ -226,11 +226,11 @@ outputs:
     condition: <Name der Kondition oder Ausdruck oder boolean>
 ```
 
--   `Name des Parameters`: Dieser muss wieder einzigartig sein.
--   `description`: Es kann eine Beschreibung für den Parameter
+- `Name des Parameters`: Dieser muss wieder einzigartig sein.
+- `description`: Es kann eine Beschreibung für den Parameter
     hinterlegt werden. (optional)
--   `value`: Hier wird der Wert des Parameters vermerkt. (benötigt)
--   `condition`: Hier kann eine Kondition für den Parameter festlegt
+- `value`: Hier wird der Wert des Parameters vermerkt. (benötigt)
+- `condition`: Hier kann eine Kondition für den Parameter festlegt
     werden. (optional)
 
 Condition
@@ -251,16 +251,16 @@ conditions:
   <Name der Condition2>: {Bezeichnung2}
 ```
 
--   `Name der Condition`: Dieser muss wieder einzigartig im Bereich der
+- `Name der Condition`: Dieser muss wieder einzigartig im Bereich der
     Condition sein.
--   `Bezeichnung`: Bei der Bezeichnung wird erwartet, dass sie ein
+- `Bezeichnung`: Bei der Bezeichnung wird erwartet, dass sie ein
     *true* oder *false* zurückgibt.
 
 Abschluss
 ---------
 
 In diesem Schritt wurden wichtige Bestandteile eines Heat-Templates
-vorgestellt. 
+vorgestellt.
 
 Mit diesem Wissen wird im nächsten Schritt das erste eigene
 Heat-Template erstellt.

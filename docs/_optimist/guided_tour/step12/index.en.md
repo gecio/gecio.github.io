@@ -55,18 +55,17 @@ $ openstack server create BeispielInstanz --flavor m1.small --key-name Beispiel 
 
 These parameters are included:
 
--   `--flavor`: The flavor of the the VM. You can get all available
+- `--flavor`: The flavor of the the VM. You can get all available
     flavors with `openstack flavor list`
--   `--key-name`: The key to install on the VM.
--   `--image`: The operating system image to install on the VM. You can
+- `--key-name`: The key to install on the VM.
+- `--image`: The operating system image to install on the VM. You can
     get all available images with `openstack image list`
--   `--security-group`: Specifies the security group.
--   `--network`: Specify the network to attach the VM to.
-
+- `--security-group`: Specifies the security group.
+- `--network`: Specify the network to attach the VM to.
 
 If we want to reach our VM from the internet, we'll nee a floating IP address.
 
-Let's create one: 
+Let's create one:
 
 ```bash
 $ openstack floating ip create provider
@@ -89,10 +88,10 @@ $ openstack floating ip create provider
 +---------------------+--------------------------------------+
 ```
 
-The created IP must be associated with our vm: 
+The created IP must be associated with our vm:
 
-```
-$ openstack server add floating ip BeispielInstanz 185.116.245.145
+```bash
+openstack server add floating ip BeispielInstanz 185.116.245.145
 ```
 
 Usage
@@ -123,18 +122,18 @@ in a logical order.
 If we don't delete them in the order, we will not be allowed to delete
 components that other components depend on.
 
--   Instance
-    -   `openstack server delete BeispielInstanz`
--   Floating-IP
-    -   `openstack floating ip delete 185.116.245.145`
--   Router Port
-    -   `openstack port delete BeispielPort`
--   Router
-    -   `openstack router delete BeispielRouter`
--   Subnet
-    -   `openstack subnet delete BeispielSubnet`
--   Network
-    -   `openstack network delete BeispielNetzwerk`
+- Instance
+  - `openstack server delete BeispielInstanz`
+- Floating-IP
+  - `openstack floating ip delete 185.116.245.145`
+- Router Port
+  - `openstack port delete BeispielPort`
+- Router
+  - `openstack router delete BeispielRouter`
+- Subnet
+  - `openstack subnet delete BeispielSubnet`
+- Network
+  - `openstack network delete BeispielNetzwerk`
 
 Conclusion
 ----------

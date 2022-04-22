@@ -14,7 +14,7 @@ Vorwort
 
 In diesem Schritt beschäftigen wir uns damit, im Horizon Dashboard
 einen Stack zu starten und damit auch das Horizon Dashboard besser
-kennenzulernen. 
+kennenzulernen.
 
 Wichtige Voraussetzung ist an dieser Stelle ein SSH-Key, den wir in
 Schritt 2 erzeugt haben.
@@ -23,7 +23,7 @@ Start
 -----
 
 Um einen Stack zu starten, loggen wir uns zunächst im Horizon Dashboard
-mit denen in [Schritt 1](schritt01.md) geänderten Zugangsdaten ein. 
+mit denen in [Schritt 1](schritt01.md) geänderten Zugangsdaten ein.
 
 Hier navigieren wir über *Orchestration* zu *Stacks* und klicken auf *Launch
 Stack*.
@@ -35,9 +35,9 @@ Hierfür nutzen wir die [SingleServer.yaml](https://github.com/gecio/openstack_e
 
 ![](attachments/13536111.png)
 
-In dem sich nun öffnenden Fenster, wählen wir bei *Template Source* 
+In dem sich nun öffnenden Fenster, wählen wir bei *Template Source*
 **File** aus und nehmen bei *Template File*, die eben heruntergeladene
-`SingleServer.yaml`. 
+`SingleServer.yaml`.
 
 Den Rest belassen wir so wie es ist und klicken auf *Next*.
 
@@ -46,14 +46,14 @@ Den Rest belassen wir so wie es ist und klicken auf *Next*.
 Nun werden weitere Eingaben benötigt, genauer sind das folgende und am
 Ende klicken wir auf Launch:
 
--   Stack Name: BeispielServer
--   Creation Timeout: 60
--   Password for User: Bitte das eigene Passwort eintragen
--   availability\_zone: ix1
--   flavor\_name: m1.micro
--   key\_name: BeispielKey
--   machine\_name: singleserver
--   public\_network\_id: provider
+- Stack Name: BeispielServer
+- Creation Timeout: 60
+- Password for User: Bitte das eigene Passwort eintragen
+- availability\_zone: ix1
+- flavor\_name: m1.micro
+- key\_name: BeispielKey
+- machine\_name: singleserver
+- public\_network\_id: provider
 
 ![](attachments/13536113.png)
 
@@ -72,7 +72,7 @@ Nachdem nun also der Stack und auch die darin enthaltene Instanz
 gestartet wurden, löschen wir jetzt wieder den Stack inklusive Instanz.
 
 Wir könnten auch die Instanz alleine löschen, das kann aber im Nachgang
-zu Problemen beim löschen des Stacks führen. 
+zu Problemen beim löschen des Stacks führen.
 
 Um den Stack zu löschen, wechseln wir in der Navigation wieder auf
 *Orchestration* → *Stacks*.

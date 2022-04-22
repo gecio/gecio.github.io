@@ -9,7 +9,6 @@ parent: Guided Tour
 Step 14: Our first steps with HEAT
 ==================================
 
-
 Start
 -----
 
@@ -22,24 +21,24 @@ The template
 Every heat template follows this structure:
 
 ```yaml
-heat_template_version: 
+heat_template_version:
  
-description: 
+description:
 # The template description
  
-parameter_groups: 
+parameter_groups:
 # Group definitions and their order
  
-parameters: 
+parameters:
 # Parameter definitions
  
-resources: 
-# Resource definitions  
+resources:
+# Resource definitions
  
-outputs: 
+outputs:
 # Definitions of possible outputs
  
-conditions: 
+conditions:
 # Definitions of conditions
 ```
 
@@ -52,13 +51,13 @@ are available to use.
 We can use these versions, although it's recommended to use the latest
 one:
 
--   2013-05-23
--   2014-10-16
--   2015-04-30
--   2015-10-15
--   2016-04-08
--   2016-10-14
--   2017-02-24
+- 2013-05-23
+- 2014-10-16
+- 2015-04-30
+- 2015-10-15
+- 2016-04-08
+- 2016-10-14
+- 2017-02-24
 
 Description
 -----------
@@ -87,18 +86,18 @@ Every parameter should only have one group because of possible errors
 later and the structure looks like this:
 
 ```yaml
-parameter_groups: 
-- label: <name of the group> 
-  description: <description of the group> 
-  parameters: 
-  - <name of the parameter> 
+parameter_groups:
+- label: <name of the group>
+  description: <description of the group>
+  parameters:
+  - <name of the parameter>
   - <name of the parameter>
 ```
 
--  `label`: name of the group
--  `description`: Gives us the possibility to describe the group
--  `parameter`: A list of all parameters in this group
--   `name of the parameter`: the name of the parameter which we had
+- `label`: name of the group
+- `description`: Gives us the possibility to describe the group
+- `parameter`: A list of all parameters in this group
+- `name of the parameter`: the name of the parameter which we had
     defined in the parameter section
 
 Parameter
@@ -125,19 +124,19 @@ the attributes defined underneath:
     immutable: <true | false>
 ```
 
--   `Parameter Name`: Name of the parameter
--   `type`: The type of the parameter (string, number, json,
+- `Parameter Name`: Name of the parameter
+- `type`: The type of the parameter (string, number, json,
     comma\_delimited\_list, boolean)
--   `label`: Name of the parameter (optional)
--   `description`: The description of the parameter (optional)
--   `default`: Default value of the parameter. Will be used, if the
+- `label`: Name of the parameter (optional)
+- `description`: The description of the parameter (optional)
+- `default`: Default value of the parameter. Will be used, if the
     parameter isn't defined (optional)
--   `hidden`:  If the parameter should be hidden in the creation process,
+- `hidden`:  If the parameter should be hidden in the creation process,
     you can set hidden: *true* as parameter (Optional and set to *false*
     by default)
--   `constraints`: You can set a list of constraints. If these aren't
-    fulfilled, the stack creation will fail. 
--   `immutable`: If this parameter is set to true, the parameter can't be
+- `constraints`: You can set a list of constraints. If these aren't
+    fulfilled, the stack creation will fail.
+- `immutable`: If this parameter is set to true, the parameter can't be
     changed with a stack update. (This will raise an error if attempted)
 
 Resources
@@ -161,20 +160,20 @@ resources:
     condition: <condition name>
 ```
 
--   `ID of the resourc`e: Must be unique
--   `type`: type of a resource, for example: OS::NEUTRON::SecurityGroup
+- `ID of the resourc`e: Must be unique
+- `type`: type of a resource, for example: OS::NEUTRON::SecurityGroup
     (for a security group) (required)
--   `properties`: A list of properties for resources (optional) 
--   `metadata`: Metadata belonging to the resource  (optional)
--   `depends_on`: resources that the resource depends on (optional)
--   `update_policy`: We can specify rules for updates, if needed and
+- `properties`: A list of properties for resources (optional)
+- `metadata`: Metadata belonging to the resource  (optional)
+- `depends_on`: resources that the resource depends on (optional)
+- `update_policy`: We can specify rules for updates, if needed and
     possible (optional)
--   `deletion_policy`: Specifies rules for the deletion. The options are
+- `deletion_policy`: Specifies rules for the deletion. The options are
     Delete, Retain and Snapshot. With heat\_template\_version 2016-10-14
     You can also write these in lower-case.
 
--   `external_id`: We can use external IDs if needed.
--   `condition`: We can set specific conditions for this resource to be
+- `external_id`: We can use external IDs if needed.
+- `condition`: We can set specific conditions for this resource to be
     created. (Optional)
 
 Output
@@ -196,10 +195,10 @@ outputs:
     condition: <name of the condition>
 ```
 
--   `name of the output`: Must be unique
--   `description`: If needed, you can describe the output (optional)
--   `value`: Value of the output (needed)
--   `condition`: possible conditions (optional)
+- `name of the output`: Must be unique
+- `description`: If needed, you can describe the output (optional)
+- `value`: Value of the output (needed)
+- `condition`: possible conditions (optional)
 
 Condition
 ---------
@@ -215,8 +214,8 @@ conditions:
   <name of condition 2>: {term2}
 ```
 
--   `name of condition`: must be unique
--   `term`: true or false are expected as a result
+- `name of condition`: must be unique
+- `term`: true or false are expected as a result
 
 Conclusion
 ----------

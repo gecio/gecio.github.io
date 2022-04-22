@@ -19,20 +19,20 @@ Das Template
 ------------
 
 Um nicht bei Null zu starten, dient das Template aus dem vorigen Schritt
-als Vorlage. 
+als Vorlage.
 
 Wichtig ist dabei, dass direkt ein neuer Parameter hinzufügt wird,
 genauer die ID des öffentlichen Netzwerks:
 
 ```yaml
 heat_template_version: 2014-10-16
- 
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 
 resources:
     Instanz:
@@ -56,13 +56,13 @@ Der zugehörige Typ lautet `OS::Neutron::Net`:
 
 ```yaml
 heat_template_version: 2014-10-16
- 
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 
 resources:
     Instanz:
@@ -85,20 +85,20 @@ Der nächste Schritt ist dann der Port, der Typ lautet dafür
 `OS::Neutron::Port`.
 
 Wichtig ist, dass der Port in das bestehende Netzwerk eingegliedert wird
-und die Instanz dem Port zuzuordnen ist. 
+und die Instanz dem Port zuzuordnen ist.
 
 Um dies zu erreichen, wird erneut ein get Befehl genutzt und statt dem
 Parameter eine Ressource eingebunden:
 
 ```yaml
 heat_template_version: 2014-10-16
- 
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 
 resources:
     Instanz:
@@ -123,19 +123,19 @@ Der Router
 ----------
 
 Nachdem Netzwerk und Port, wird nun ein Router (Typ =
-`OS::Neutron::Router`) in das Template eingebunden. 
+`OS::Neutron::Router`) in das Template eingebunden.
 
 Bei diesem Typ ist es wichtig, das öffentliche Netzwerk einzubinden:
 
 ```yaml
 heat_template_version: 2014-10-16
- 
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 
 resources:
     Instanz:
@@ -172,13 +172,13 @@ und die verfügbaren IPs definiert:
 
 ```yaml
 heat_template_version: 2014-10-16
- 
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 
 resources:
     Instanz:
@@ -234,13 +234,13 @@ gebaut, wenn es auch ein Subnet gibt.
 
 ```yaml
 heat_template_version: 2014-10-16
- 
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 
 resources:
     Instanz:

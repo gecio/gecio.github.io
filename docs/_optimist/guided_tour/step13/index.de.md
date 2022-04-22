@@ -21,7 +21,6 @@ wie gewohnt Schritt für Schritt erklärt. Voraussetzung für die folgenden
 Schritte ist die Installation des Paketes `python-heatclient`.
 Siehe [Schritt 4: Der Weg vom Horizon auf die Kommandozeile](/optimist/guided_tour/step04/).
 
-
 Installation
 -------------
 
@@ -46,7 +45,7 @@ Security Groups, ein virtuelles Netzwerk (inkl. Router, Port, Subnet)
 und eine Floating-IP enthalten.
 
 Um den Stack zu erstellen, ist es notwendig, sich im Verzeichnis des
-Templates zu befinden und dann folgenden Befehl zu nutzen: 
+Templates zu befinden und dann folgenden Befehl zu nutzen:
 
 ```bash
 $ openstack stack create -t SingleServer.yaml --parameter key_name=Beispiel SingleServer --wait
@@ -94,7 +93,6 @@ angegeben und mit `SingleServer` wird der Name des Stacks festgelegt.
 
 Der letzte Bestandteil `--wait` zeigt alle Zwischenschritte der
 Erstellung an. (Siehe das obere Bild)
-
 
 Nach kurzer Zeit ist der Stack inkl. Instanz erstellt und kann per SSH
 erreicht werden.

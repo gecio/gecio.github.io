@@ -64,9 +64,9 @@ Now that we have a network, we'll have to create a subnet for it.
 
 The subnet creation command also has a few options, in our example we'll use:
 
--   `--network`: Specifies in which network the subnet will be created
--   `--subnet-range`: [The CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) range
-    for the subnet. In our example it will be `192.168.2.0/24` 
+- `--network`: Specifies in which network the subnet will be created
+- `--subnet-range`: [The CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) range
+    for the subnet. In our example it will be `192.168.2.0/24`
 
 To create a subnet in our existing network we run:
 
@@ -132,13 +132,13 @@ $ openstack router create BeispielRouter
 We need to define the external gateway to be able to access the internet:
 
 ```bash
-$ openstack router set BeispielRouter --external-gateway provider
+openstack router set BeispielRouter --external-gateway provider
 ```
 
 Now we'll add the subnet to the router:
 
 ```bash
-$ openstack router add subnet BeispielRouter BeispielSubnet
+openstack router add subnet BeispielRouter BeispielSubnet
 ```
 
 Port

@@ -13,7 +13,7 @@ Vorwort
 -------
 
 In den vorigen Schritten haben wir bereits einige interessante Bausteine kennengelernt.
-Als nächstes widmen wir uns dem [Object Storage](https://en.wikipedia.org/wiki/Object_storage), der uns interessante Möglichkeiten bietet, Dateien zu speichern. 
+Als nächstes widmen wir uns dem [Object Storage](https://en.wikipedia.org/wiki/Object_storage), der uns interessante Möglichkeiten bietet, Dateien zu speichern.
 
 Der Start (Benutzerdaten)
 -----
@@ -23,7 +23,7 @@ Dafür benötigen wir den OpenStackClienten(siehe [Schritt 4](/optimist/guided_t
 Der Befehl in der Kommandozeile dafür lautet:
 
 ```bash
-$ openstack ec2 credentials create
+openstack ec2 credentials create
 ```
 
 Wenn die Daten korrekt erstellt worden sind, sieht die Ausgabe in etwa so aus:
@@ -50,16 +50,16 @@ Zugriff auf den S3 kompatiblen ObjectStorage
 ---------
 
 Es gibt natürlich verschiedene Optionen auf den ObjectStorage zuzugreifen. Wir empfehlen dafür die Nutzung von [s3cmd](https://s3tools.org/s3cmd)
-Dieses kleine Tool ist einfach zu bedienen und zu nutzen. 
+Dieses kleine Tool ist einfach zu bedienen und zu nutzen.
 
-Da wir bereits in Schritt 4 "pip" als Paketmanager installiert haben und nutzen, können wir S3cmd auch über "pip" installieren: 
+Da wir bereits in Schritt 4 "pip" als Paketmanager installiert haben und nutzen, können wir S3cmd auch über "pip" installieren:
 
 ```bash
-$ pip install s3cmd
+pip install s3cmd
 ```
 
 Da jetzt S3cmd installiert ist, müssen die vorher erstellten Zugangsdaten (Credentials) eingetragen werden, nur so lässt sich S3cmd auch korrekt nutzen.
-Alle wichtigen Informationen finden wir in der .s3cfg , sollte diese noch nicht existieren, erstellen wir diese vorher. 
+Alle wichtigen Informationen finden wir in der .s3cfg , sollte diese noch nicht existieren, erstellen wir diese vorher.
 
 Folgende Daten tragen wir dann in der .s3cfg ein:
 
@@ -80,20 +80,19 @@ Da wir Zugriff auf den S3 kompatiblen Object Storage haben, ist es an der Zeit d
 Alle verfügbaren Befehle von s3cmd können mit folgendem Befehl angezeigt werden:
 
 ```bash
-$ s3cmd --help
+s3cmd --help
 ```
 
-Als Nächstes erstellen wir einen Bucket. 
-Buckets entsprechen dabei im weitesten Sinne Ordnern, die wir für eine Struktur benötigen. 
-Eine Datei kann also nur in einem existierenden Bucket gespeichert werden und der Name vom Bucket selber ist einzigartig (über den gesamten Optimist). 
+Als Nächstes erstellen wir einen Bucket.
+Buckets entsprechen dabei im weitesten Sinne Ordnern, die wir für eine Struktur benötigen.
+Eine Datei kann also nur in einem existierenden Bucket gespeichert werden und der Name vom Bucket selber ist einzigartig (über den gesamten Optimist).
 Wenn also bereits ein Bucket mit dem Namen "Test" besteht, kann dieser nicht erneut angelegt werden.
 Daher ist es aus unserer Sicht eine gute Option, eine UUID zu nutzen und diese dann in der entsprechenden Applikation aufzulösen.
 
-Auch gibt es die Möglichkeit, bei Buckets und auch bei Dateien, zwischen *public* und *private* zu unterscheiden. 
-Alle Buckets die erstellt und Dateien die hochgeladen werden, sind per default *private*, d.h. wenn keine weiteren Einstellungen vorgenommen werden, kann nur der Ersteller auf den Bucket und den Inhalt zugreifen. 
-Dies lässt sich zum Beispiel per *Access Control List (ACL)* ändern. 
+Auch gibt es die Möglichkeit, bei Buckets und auch bei Dateien, zwischen *public* und *private* zu unterscheiden.
+Alle Buckets die erstellt und Dateien die hochgeladen werden, sind per default *private*, d.h. wenn keine weiteren Einstellungen vorgenommen werden, kann nur der Ersteller auf den Bucket und den Inhalt zugreifen.
+Dies lässt sich zum Beispiel per *Access Control List (ACL)* ändern.
 WICHTIG: Sollte man einen kompletten Bucket auf *public* stellen, können auch Informationen über Dateien, in diesem Bucket, die auf *private* gesetzt sind, abgerufen werden.
-
 
 Da wir die wichtigsten Details kennen, ist es Zeit, einen Bucket mit einer UUID zu erstellen:
 
@@ -117,7 +116,7 @@ upload: 'test.yaml' -> 's3://e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml'  [1
 Zugriff auf die Datei erhalten
 ---------
 
-Die generelle URL für den Zugriff auf Dateien lautet im Optimisten *https://s3.es1.fra.optimist.innovo.cloud/Name_des_Buckets/Dateiname*.
+Die generelle URL für den Zugriff auf Dateien lautet im Optimisten *<https://s3.es1.fra.optimist.innovo.cloud/Name_des_Buckets/Dateiname>*.
 
 Damit auf die Datei aus unserem Beispiel zugegriffen werden kann, ist es notwendig, die Einstellung von *private* auf *public* zu ändern.
 Dafür können wir, wie bereits unter dem Punkt "Der Bucket" erwähnt, die *Access Control List (ACL)* nutzen:
@@ -128,8 +127,7 @@ s3://e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml: ACL set to Public  [1 of 1]
 ```
 
 Die Datei kann jetzt über folgenden Link aufgerufen werden:
-https://s3.es1.fra.optimist.innovo.cloud/e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml
-
+<https://s3.es1.fra.optimist.innovo.cloud/e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml>
 
 Um sie wieder auf *private* zu stellen, nutzen wir folgenden Befehl:
 

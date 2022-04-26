@@ -15,7 +15,9 @@ However, it’s possible to create additional backup configuration if needed.
 
 > Before starting please keep in mind that this is *only* an etcd backup and restore. The only thing that is restored is the etcd state, not PVC volumes with application data or similar.
 
-## Creating etcd Backup Schedules
+## Etcd Backups
+
+### Creating etcd Backup Schedules
 
 etcd Backups and Restores are resources bounded to a project, and you can manage them in the Project view.
 
@@ -34,11 +36,21 @@ To see all the available backups, click on a backup you are interested in:
 
 ![Etcd Backups Details](backup_5.png)
 
+### Creating Etcd Backup Snapshots
+
+You can also create one-time backup snapshots, they are set up similarly to the automatic ones, with the difference that they do not have a schedule or keep count set.
+![Etcd Snapshot](snapshot.png)
+![Etcd Snapshot Details](snapshot_details.png)
+
 ## Restoring etcd Backups
 
 If you want to restore a backup, you need to click on the restore from backup icon in the UI.
+### Restoring etcd Backups from Schedule
+![Restore backup from Schedule](backup_6.png)
+### Restoring etcd Backups from Snapshot
 
-![Restore backup button](backup_6.png)
+![Restore backup from Snapshot](restore_snapshot.png)
+
 ![Restore etcd backup for cluster](backup_7.png)
 
 After that the cluster will get paused, etcd will get deleted, and then it will be recreated from the backup. When it’s done, the cluster will be unpaused again.

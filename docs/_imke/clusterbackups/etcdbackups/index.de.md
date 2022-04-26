@@ -16,6 +16,8 @@ Es ist jedoch möglich, bei Bedarf zusätzliche Backup-Schedules zu erstellen.
 
 > Bedenken Sie bitte, dass es sich *nur* um ein etcd-Backup und -Wiederherstellung handelt. Das einzige, was wiederhergestellt wird, ist der etcd-Status, nicht die PVC-Volumes mit Anwendungsdaten oder ähnlichem.
 
+## etcd Backup
+
 ## etcd Backup-Schedules anlegen
 
 etcd Backups und Wiederherstellungen sind an ein Projekt gebundene Ressourcen, die Sie in der Projektansicht verwalten können:
@@ -35,9 +37,21 @@ Um alle verfügbaren Backups zu sehen, klicken Sie auf ein Backup, das Sie inter
 
 ![Etcd Backups Details](backup_5.png)
 
+### etcd Backup-Snapshot anlegen
+Sie können auch einmalige Backup-Snapshots erstellen, die ähnlich wie die automatischen Snapshots eingerichtet sind, mit dem Unterschied, dass für sie kein Zeitplan und keine Aufbewahrungszeit festgelegt sind.
+Etcd-Snapshot](snapshot.png)
+![Etcd Schnappschuss-Details](snapshot_details.png)
+
 ## etcd Backups wiederherstellen
 
 Wenn Sie ein Backup wiederherstellen möchten, müssen Sie auf das Symbol Wiederherstellen aus Backup in der Benutzeroberfläche klicken.
+
+### Wiederherstellung von etcd Backup-Schedules
+
+![Schaltfläche Backup wiederherstellen](backup_6.png)
+### Wiederherstellung von etcd Backup-Snapshot
+
+![Schaltfläche Backup wiederherstellen](restore_snapshot.png)
 
 ![Schaltfläche Backup wiederherstellen](backup_6.png)
 ![etcd-Sicherung für Cluster wiederherstellen](backup_7.png)

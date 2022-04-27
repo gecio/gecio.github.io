@@ -87,8 +87,17 @@ CNI ausgewählt wurde (und der Haken bei Konnectivity ebenfalls gesetzt ist). We
 zum Control-Plane Konnektor *Kopnnectivity* finden sie auf einer eigenen Seite
 [hier](/imke/clusterlifecycle/control-plane-connector).
 
+# Installation des Hubble Addons
 
-# Warning
+Wenn Cilium als CNI verwendet wurde dann hat man die Möglichkeit sich den Netzwerkverkehr des
+Kubernetes Cluster visualisieren zhu lassen. Dazu muss die Komponente *Hubble* über den Addons-Reiter
+installiert werden, nachdem die Clustererstellung erfolgreich beendet wurde.
+
+![install hubble](installing_hubble_addon.png)
+
+
+
+# Warnung
 
 Die Auswahl der CNI kann nur zum Zeitpunkt der Erstellung des Kubernetes Clusters erfolgen. Ein nachträgliches
 Ändern der CNI ist zwar technisch möglich, wird von unserer Plattform aber nicht unterstützt.

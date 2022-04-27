@@ -82,6 +82,15 @@ connector and Konnectivity can be found on [this](/imke/clusterlifecycle/control
 page.
 
 
+# Installation Hubble addon
+
+If Cilium is chosen as a CNI, you can install the graphical visualization addon hubble. This can be
+done after cluster creation has finished successfully via the addons tab at the bottom of the cluster
+overview.
+
+![install hubble](installing_hubble_addon.png)
+
+
 # Final note
 
 The choice of an CNI can only be done once in the creation process of the cluster. While it is technically

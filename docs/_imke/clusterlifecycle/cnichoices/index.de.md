@@ -85,7 +85,7 @@ Dort sind auch weitere Einstellungen wie proxy-Modus und weiter unten auch der C
 Bitte beachten sie dass die Wahl von *eBPF* als proxy-Modus erst zur Verfügung steht wenn Cilium als
 CNI ausgewählt wurde (und der Haken bei Konnectivity ebenfalls gesetzt ist). Weitere Informationen
 zum Control-Plane Konnektor *Kopnnectivity* finden sie auf einer eigenen Seite
-[hier](/imke/clusterlifecycle/control-plane-connector).
+[hier](/imke/clusterlifecycle/controlplaneconnector).
 
 # Installation des Hubble Addons
 

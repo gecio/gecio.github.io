@@ -78,7 +78,7 @@ in the previous step.
 
 Be aware that the choice of the eBPF proxy requires that you choose *Konnectivity* as your control-plane
 connector as well (box beside Konnectivity needs to be checked)! More information on the control-plane
-connector and Konnectivity can be found on [this](/imke/clusterlifecycle/control-plane-connector) dedicated
+connector and Konnectivity can be found on [this](/imke/clusterlifecycle/controlplaneconnector) dedicated
 page.
 
 

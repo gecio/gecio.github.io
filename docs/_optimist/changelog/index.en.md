@@ -13,11 +13,39 @@ All notable changes to the Optimist Platform will be documented on this page.
 
 ## Upcoming
 
-- Upcoming changes to the Optimist platform will be listed here
+Upcoming changes to the Optimist platform will be listed here
+
+### 2022-04-27
+
+- Optimist Heat Upgrade (Train)
+
+### 2022-04-28
+
+- Optimist Horizon Upgrade (Train)
 
 ---
 
 ## Completed
+
+### 2022-02-22
+
+- Optimist Glance Upgrade (Train)
+
+### 2022-02-23
+
+- Optimist Designate Upgrade (Train)
+
+### 2022-03-01
+
+- Optimist Cinder Upgrade (Train)
+
+### 2022-04-05
+
+- Optimist Nova Upgrade (Train)
+
+### 2022-04-21
+
+- Optimist Neutron Upgrade (Train)
 
 ### 2022-02-10
 

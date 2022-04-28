@@ -119,7 +119,7 @@ Attempts to use multi-attached volumes without cluster-capable filesystems carri
 
 ## Why am I unable to reload certain pages on the Horizon Dashboard?
 
-Failure to reload or refresh certain pages is currently a known issue with the Train (18.3.4) release of Horizon. A [bugfix](https://bugs.launchpad.net/horizon/+bug/1968272) is underway.
+With the Train (18.3.4) release of Horizon, there are currently known issues when attempting to reload / refresh certain pages. A [bugfix](https://bugs.launchpad.net/horizon/+bug/1968272) is underway.
 
 Pages you may enocunter this issue on are as follows:
 

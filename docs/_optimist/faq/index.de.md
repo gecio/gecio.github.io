@@ -124,7 +124,8 @@ Versuche, mutli-attached Volumes ohne clusterfähige Dateisysteme zu verwenden, 
 ## Warum kann ich bestimmte Seiten im Horizon Dashboard nicht neu laden?
 
 Fehler beim neu Laden bzw Refresh bestimmter Seiten ist derzeit ein bekanntes Problem mit der Version Train (18.3.4) von Horizon. Eine [Fehlerbehebung](https://bugs.launchpad.net/horizon/+bug/1968272) ist in Arbeit.
-neu Laden bzw Refresh
+
+Betroffene Seiten:
 
 - Compute -> Images -> Select Image -> Neuladen fehlgeschlagen
 - Compute -> KeyPairs -> Select Key -> Neuladen fehlgeschlagen

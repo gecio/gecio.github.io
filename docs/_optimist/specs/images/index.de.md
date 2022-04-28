@@ -13,13 +13,13 @@ Es gibt 4 Arten von Images in OpenStack:
 - **Public Images:** Diese Images werden von uns gepflegt, sind für alle Benutzer verfügbar, werden regelmäßig aktualisiert und zur Verwendung empfohlen.
 - **Community Images:** Ehemals öffentliche Images, die durch neuere Versionen ersetzt wurden. Wir behalten diese Images, bis sie nicht mehr verwendet werden, um Ihre Deployments nicht zu gefährden.
 - **Private Images:** Von Ihnen hochgeladene Images, die nur für Ihr Projekt verfügbar sind.
-- **Shared Images:** Private Abbilder, die entweder durch Sie oder oder mit Ihnen in mehreren Projekten gemeinsam genutzt werden.
+- **Shared Images:** Private Images, die entweder durch Sie oder oder mit Ihnen in mehreren Projekten gemeinsam genutzt werden.
 
 Nur die ersten beiden Typen werden von uns verwaltet.
 
 ## Public und community images
 
-Um Ihren Aufwand so gering wie möglich zu halten, stellen wir Ihnen eine Reihe ausgewählter Abbilder zur Verfügung.
+Um Ihren Aufwand so gering wie möglich zu halten, stellen wir Ihnen eine Reihe ausgewählter Images zur Verfügung.
 
 Aktuell enthält diese Liste:
 
@@ -33,9 +33,9 @@ Aktuell enthält diese Liste:
 - Flatcar Linux
 - Windows Server 2019 (GUI/Core)
 
-Diese Images werden täglich auf neue Versionen überprüft. Die neueste verfügbare Version ist immer ein "public image" und endet auf `Latest`. Alle vorherigen Abbilder werden in "community images" umgewandelt, wir garantieren dabei nicht für eine endlose Verfügbarkeit. Wir werden sie so lange aufbewahren, wie sie aktiv genutzt werden. Community-Images haben das Datum des ersten Uploads in ihrem Namen.
+Diese Images werden täglich auf neue Versionen überprüft. Die neueste verfügbare Version ist immer ein "public image" und endet auf `Latest`. Alle vorherigen Versionen eines Images werden in "community images" umgewandelt, wir garantieren dabei nicht für eine endlose Verfügbarkeit. Wir werden sie so lange aufbewahren, wie sie aktiv genutzt werden. Community-Images haben das Datum des ersten Uploads in ihrem Namen.
 
-OpenStack und viele Deployment-Tools unterstützen die Verwendung dieser Images entweder über den Namen oder über ihre UUID. Durch die Verwendung eines Namens, z.B. `Ubuntu 22.04 Jammy Jellyfish - Latest`, können Sie einfach auf dem neuesten Stand bleiben, indem Sie Ihre Instanzen neu bereitstellen oder neu aufbauen, selbst wenn wir das Image zwischendurch ersetzen. Sie können dieses Verhalten vermeiden, indem Sie stattdessen die UUID verwenden. Dies kann für Cluster-Einsätze nützlich sein, bei denen Sie sicherstellen wollen, dass auf allen Instanzen die gleiche Version des Images läuft.
+OpenStack und viele Deployment-Tools unterstützen die Verwendung dieser Images entweder über den Namen oder über ihre UUID. Durch die Verwendung eines Namens, z.B. `Ubuntu 22.04 Jammy Jellyfish - Latest`, Erhalten sie jeweils die aktuellste Version des jeweiligen Images, indem Sie Ihre Instanzen neu bereitstellen oder neu aufbauen, selbst wenn wir das Image zwischendurch ersetzen. Sie können dieses Verhalten vermeiden, indem Sie stattdessen die UUID verwenden. Dies kann für Cluster-Einsätze nützlich sein, bei denen Sie sicherstellen wollen, dass auf allen Instanzen die gleiche Version des Images läuft.
 
 ## Linux Images
 
@@ -45,13 +45,13 @@ Alle von uns zur Verfügung gestellten Linux-Images sind unmodifiziert und komme
 
 ### Was ist drin?
 
-Leider gibt es keine vorgefertigten Images für Windows-Deployments, daher haben wir eigene gebaut. Unsere Anpassungen sind minimal, gerade genug, um eine einfache Nutzung innerhalb unserer Instanzen zu ermöglichen.
+Leider gibt es keine vorgefertigten Images für Windows-Deployments, haben wir eigene gebaut. Unsere Anpassungen sind minimal, gerade genug, um eine einfache Nutzung innerhalb unserer Instanzen zu ermöglichen.
 
-Unsere Images basieren auf einer regulären Installation von Windows Server 2019 Standard Edition, Version 1809 (LTSC). Wir haben die aktuellsten Treiber für unsere Virtualisierungsinfrastruktur, für die Netzwerkkarte und Festplatten hinzugefügt.
+Unsere Images basieren auf einer regulären Installation von Windows Server 2019 Standard Edition, Version 1809 (LTSC). Unsere Image Builds enthalten die aktuellsten Treiber für unsere Virtualisierungsinfrastruktur, für die Netzwerkkarte und Festplatten hinzugefügt.
 
-Als Nächstes haben wir die neueste OpenSSH-Version für Windows und die neueste Version der PowerShell installiert. Beide sind für die folgenden Schritte erforderlich und ermöglichen Ihnen die erste Verbindung mit Ihrer Instanz.
+Außerdem haben wir die neueste OpenSSH-Version für Windows und die neueste Version der PowerShell installiert. Beide sind für die folgenden Schritte erforderlich und ermöglichen Ihnen die erste Verbindung mit Ihrer Instanz.
 
-Wir haben ebenfalls den RDP-Dienst aktiviert, der für eien Remote-Desktop-Verbindung erforderlich ist. Vergessen Sie nicht, die dafür erforderlichen Sicherheitsgruppen hinzuzufügen, und achten Sie darauf, den Zugriff so weit wie möglich einzuschränken. Außerdem haben wir aus Sicherheitsgründen AutoLogon deaktiviert.
+Des weiteren ist der RDP-Dienst aktiviert, der für eien Remote-Desktop-Verbindung erforderlich ist. Vergessen Sie nicht, die dafür erforderlichen Sicherheitsgruppen hinzuzufügen, und achten Sie darauf, den Zugriff so weit wie möglich einzuschränken. Außerdem haben wir aus Sicherheitsgründen AutoLogon deaktiviert.
 
 Unsere Images sind außerdem mit aktivierten Spectre- und Meltdown-Mitigations ausgestattet. Außerdem mussten wir die Nutzung von zufälligen MAC-Adressen deaktivieren, da unsere virtuellen Netzwerke feste MAC-Adressen voraussetzen.
 
@@ -79,7 +79,7 @@ Wir raten dringend davon ab, veraltete Verfahren wie z.B. ein `admin_pass` über
 
 ## Upload von eigenen Images
 
-Sie können jederzeit Ihre eigenen Abbilder hochladen, anstatt die von uns bereit gestellten zu nutzen. Am einfachsten funktioniert das über die OpenStack-CLI.
+Sie können jederzeit Ihre eigenen Images hochladen, anstatt die von uns bereit gestellten zu nutzen. Am einfachsten funktioniert das über die OpenStack-CLI.
 
 ```bash
 openstack image create \

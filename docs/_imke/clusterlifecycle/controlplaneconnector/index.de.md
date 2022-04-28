@@ -15,9 +15,9 @@ mit seinen worker nodes kommuniziert.
 # Cluster Aufbau
 
 Die iMKE Plattform stellt gemanage'te Kubernetes Dienste für Endkunden zur Verfügung. Aus Gründen
-der Verfügbarkeit, Sicherheit und Stabilität wird die Control-Plane dabei getrennt von den worker
-nodes betrieben. Der Endkunde hat vollständige Kontrolle über die Worker-Knoten (bis hinab auf
-Betriebssystemebene der Kubernetes Worker) welche in dessen eigenem Openstack Tenant laufen.
+der Verfügbarkeit, Sicherheit und Stabilität wird die Control-Plane dabei getrennt von den
+Worker-Knoten betrieben. Der Endkunde hat vollständige Kontrolle über die Worker-Knoten (bis hinab
+auf Betriebssystemebene der Kubernetes Worker) welche in dessen eigenem Openstack Tenant laufen.
 Die Control-Plane wird indes vom Service-Erbringer in dessen eigenem dedizierten Openstack-Tenant
 betrieben. Trotz dieser Trennung muss weiterhin gewährleistet sein dass Contol-Plane und Worker
 miteinander kommunizieren können.
@@ -47,7 +47,7 @@ dazu entsteht bereits bei der Erstellung des Clusters.
 
 Die bisherige von uns benutzte Lösung implementierte diesen Tunnel mittels der openVPN software.
 Diese Lösung hatte jedoch einige Nachteile so dass ein anderes speziell dafür entwickeltes Tool
-dessen Aufgabe übernahm: *Konnectivity*. Es ermöglicht einen deutlich stabileren Aufbau mit
+dessen Aufgabe übernahm *Konnectivity*. Es ermöglicht einen deutlich stabileren Aufbau mit
 deutlich einfacheren Mitteln und wird von der Kubernetes Community entwickelt und gepflegt.
 
 

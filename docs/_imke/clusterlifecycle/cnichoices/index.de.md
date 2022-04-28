@@ -41,18 +41,16 @@ Falls sie sich unsicher sind welches CNI sie wählen sollten, dann wählen sie C
 
 ## Cilium
 
-Cilium ist relativ neu auf dem CNI Markt. Es setzt, im Gegensatz zu Canal, für die Kommunikation zwischen
-den Pods intern auf neuere Technologien wie beispielsweise eBPF. Cilium bietet neben besseren health-checks
-ausserdem mit *hubble* ein Addon zur genaueren Analyse von Netzwerkverkehr innerhalb des Kubernetes
-Clusters an. Zudem bietet es ebenfalls Unterstüzung für feingranulares Filtern des eingehenden und ausgehenden
-Netzwerkverkehrs sowie des Verkehrs innerhalb des Clusters.
+Cilium ist relativ neu auf dem CNI Markt. Es setzt, im Gegensatz zu Canal, für die Konfiguration der
+Kommunikation zwischen den Pods intern auf neuere Technologien wie beispielsweise eBPF. Cilium bietet neben
+besseren health-checks ausserdem mit *hubble* ein Addon zur genaueren Analyse von Netzwerkverkehr innerhalb
+des Kubernetes Clusters an. Zudem bietet es ebenfalls Unterstüzung für feingranulares Filtern des eingehenden
+und ausgehenden Netzwerkverkehrs sowie des Verkehrs innerhalb des Clusters.
 
 Um alle fortgeschrittenen Funktionen von Cilium nutzen zu können ist es notwendig den proxy Modus
-*eBPF* auszuwählen. Dieser erscheint als Wahlmöglichkeit sobald Cilium als CNI gewählt wurde (und der
-Haken bei *Konnectivity* weiter unten gemacht wurde!). Ausserdem muss das Betriebssystemimage des
-kubernetes Workers eine relativ aktuelle Kernelversion anbieten (was auf unseren Flatcar images
-gegeben ist!) Eine Liste der einzuhaltenden Abhängigkeiten für Cilium finden sich hinter
-[diesem Link](https://docs.cilium.io/en/stable/operations/system_requirements/)
+*eBPF* auszuwählen. Dieser erscheint als Wahlmöglichkeit sobald Cilium als CNI gewählt wurde.
+Ausserdem muss das Betriebssystemimage des Kubernetes Workers eine relativ aktuelle Kernelversion anbieten,
+welches auf unseren Flatcar images immer gegeben ist.
 
 An dem Cilium Projekt wird im Moment rege weiterentwickelt so dass regelmäßig neue Features herausgebracht
 und Fehler behoben werden.
@@ -83,9 +81,8 @@ Dort sind auch weitere Einstellungen wie proxy-Modus und weiter unten auch der C
 ![choose proxy](choosing_proxy_mode.png)
 
 Bitte beachten sie dass die Wahl von *eBPF* als proxy-Modus erst zur Verfügung steht wenn Cilium als
-CNI ausgewählt wurde (und der Haken bei Konnectivity ebenfalls gesetzt ist). Weitere Informationen
-zum Control-Plane Konnektor *Kopnnectivity* finden sie auf einer eigenen Seite
-[hier](/imke/clusterlifecycle/controlplaneconnector).
+CNI ausgewählt wurde. Weitere Informationen zum Control-Plane Konnektor *Kopnnectivity* finden sie auf
+einer eigenen Seite [hier](/imke/clusterlifecycle/controlplaneconnector).
 
 # Installation des Hubble Addons
 

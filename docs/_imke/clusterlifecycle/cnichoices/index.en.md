@@ -31,7 +31,7 @@ The CNI solution we used in the past is called *canal*, which is a combination o
 and *calico*. In these setups flannel is used to implement the pod-to-pod communication while calico is
 used enable network policies. This CNI has been around a long time and is thus mature and battle-tested.
 
-Canal supports both *iptables* as well as *ipvs* as proxy modes and runs on almost any OS image.
+Canal supports both *iptables* as well as *ipvs* as proxy modes.
 
 If you are unsure on what to choose, this CNI is the conservative choice.
 
@@ -46,8 +46,7 @@ control of the traffic flow into or out of your cluster as well as inter-cluster
 If you want to utilize Cilium features to the fullest you need to set the proxy mode to *eBPF* after
 choosing the CNI (this can only be done if Konnectivity is chosen as well!). Another requirement for
 Cilium (and especially the eBFP proxy mode) is that the OS image needs to run a fairly recent kernel
-to be able to support all functionality of the CNI (which is the case with our flatcar images!).
-A compatibility matrix can be found [here](https://docs.cilium.io/en/stable/operations/system_requirements/).
+to be able to support all functionality of the CNI which is the case with our flatcar images!
 
 Cilium is under heavy development so new features as well as bugfixes are released regularly.
 
@@ -76,10 +75,10 @@ in the previous step.
 
 ![choose proxy](choosing_proxy_mode.png)
 
-Be aware that the choice of the eBPF proxy requires that you choose *Konnectivity* as your control-plane
-connector as well (box beside Konnectivity needs to be checked)! More information on the control-plane
-connector and Konnectivity can be found on [this](/imke/clusterlifecycle/controlplaneconnector) dedicated
-page.
+The choice of the eBPF proxy implicitely require the use of *Konnectivity* as your control-plane
+connector as well which is the default in all newly created Kubernetes clusters. More information
+on the control-plane connector and Konnectivity can be found on
+[this](/imke/clusterlifecycle/controlplaneconnector) dedicated page.
 
 
 # Installation Hubble addon

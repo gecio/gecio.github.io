@@ -121,11 +121,11 @@ UUID zu verwenden. Zum Beispiel:
 Wir unterstützen keine multi-attached Volumes in der Optimist Platform, da für die Nutzung von multi-attached Volumes clusterfähige Dateisysteme erforderlich sind, um den gleichzeitigen Zugriff auf das Dateisystem zu koordinieren.
 Versuche, mutli-attached Volumes ohne clusterfähige Dateisysteme zu verwenden, bergen ein hohes Risiko der Datenkorruption, daher ist diese Funktion auf der Optimist Plattform nicht aktiviert.
 
-# Warum kann ich bestimmte Seiten im Horizon Dashboard nicht laden?
+## Warum kann ich bestimmte Seiten im Horizon Dashboard nicht laden?
 
 Fehler beim Laden bestimmter Seiten ist derzeit ein bekanntes Problem mit der Version Train (18.3.4) von Horizon. Eine Fehlerbehebung ist in Arbeit.
 
-* Compute -> Images -> Select Image -> Neuladen fehlgeschlagen
-* Compute -> KeyPairs -> Select Key -> Neuladen fehlgeschlagen
-* DNS -> Zones -> Select Zone -> Neuladen fehlgeschlagen
-* DNS -> Reverse DNS -> Select Address -> Neuladen fehlgeschlagen
+- Compute -> Images -> Select Image -> Neuladen fehlgeschlagen
+- Compute -> KeyPairs -> Select Key -> Neuladen fehlgeschlagen
+- DNS -> Zones -> Select Zone -> Neuladen fehlgeschlagen
+- DNS -> Reverse DNS -> Select Address -> Neuladen fehlgeschlagen

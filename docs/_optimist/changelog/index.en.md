@@ -51,6 +51,10 @@ Upcoming changes to the Optimist platform will be listed here
 
 - Neutron LBaaS removed from Optimist
 
+### 2022-01-25
+
+- Optimist Keystone Upgrade (Train)
+
 ### 2021-08-24
 
 - Optimist Cinder Upgrade (Stein)

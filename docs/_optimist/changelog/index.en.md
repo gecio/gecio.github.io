@@ -15,13 +15,13 @@ All notable changes to the Optimist Platform will be documented on this page.
 
 Upcoming changes to the Optimist platform will be listed here
 
-### 2022-04-28
-
-- Optimist Horizon Upgrade (Train)
-
 ---
 
 ## Completed
+
+### 2022-04-28
+
+- Optimist Horizon Upgrade (Train)
 
 ### 2022-04-27
 

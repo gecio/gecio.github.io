@@ -15,3 +15,5 @@ The management of an iMKE-Kubernetes-Cluster is handled by the platform itself, 
 * [Updating a Cluster / Changing Openstack Credentials](/imke/clusterlifecycle/openstackcredentials/)
 * [Deleting a Cluster](/imke/clusterlifecycle/deletingacluster/)
 * [Deprecation Policy in iMKE](/imke/clusterlifecycle/deprecationpolicy/)
+* [Choosing a CNI](/imke/clusterlifecycle/cnichoices/)
+* [Information about the Control-Plane Connector](/imke/clusterlifecycle/controlplaneconnector/)

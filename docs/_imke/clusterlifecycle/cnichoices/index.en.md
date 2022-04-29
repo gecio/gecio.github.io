@@ -16,8 +16,8 @@ This page is providing a small overview of what CNIs are, why they are used and 
 CNI is the abbreviation for ContainerNetworkInterface. Simple put it's a way for kubernetes to describe what
 network functionality is needed to implement pod-to-pod networking inside a kubernetes cluster. There
 are many different (network) environments where kubernetes can be run. To focus more on the kubernetes
-product the kubernetes developers decided to just specify what is required in terms of network functionaliy
-and let other do the implemention. This resulted in many different implementations for Kubernetes networking
+product the kubernetes developers decided to just specify what is required in terms of network functionality
+and let other do the implementation. This resulted in many different implementations for Kubernetes networking
 (CNIs) with very different features for very different environments.
 
 Our Kubernetes platform only supported one CNI implementation for the longest time and therefore did not
@@ -48,7 +48,7 @@ choosing the CNI (this can only be done if Konnectivity is chosen as well!). Ano
 Cilium (and especially the eBFP proxy mode) is that the OS image needs to run a fairly recent kernel
 to be able to support all functionality of the CNI which is the case with our flatcar images!
 
-Cilium is under heavy development so new features as well as bugfixes are released regularly.
+Cilium is under heavy development so new features as well as bug-fixes are released regularly.
 
 If you are interested in a deeper understanding of the network flows inside your kubernetes cluster,
 then this CNI is for you.
@@ -65,7 +65,7 @@ know what you are doing!
 
 # Installing a CNI
 
-In the cluster creation process the Nth(FIXME) step enables you to choose between the two CNIs described
+In the cluster creation process the second step enables you to choose between the two CNIs described
 above.
 
 ![choose CNI](choosing_cni.png)
@@ -75,7 +75,7 @@ in the previous step.
 
 ![choose proxy](choosing_proxy_mode.png)
 
-The choice of the eBPF proxy implicitely require the use of *Konnectivity* as your control-plane
+The choice of the eBPF proxy implicitly require the use of *Konnectivity* as your control-plane
 connector as well which is the default in all newly created Kubernetes clusters. More information
 on the control-plane connector and Konnectivity can be found on
 [this](/imke/clusterlifecycle/controlplaneconnector) dedicated page.

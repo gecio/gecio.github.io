@@ -1,6 +1,6 @@
 ---
 title: Control-Plane Konnektor
-lang: en
+lang: de
 permalink: /imke/clusterlifecycle/controlplaneconnector/
 nav_order: 4250
 parent: Cluster Lebenszyklus

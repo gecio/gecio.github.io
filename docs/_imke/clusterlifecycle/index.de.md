@@ -16,3 +16,5 @@ Das Management von iMKE-basierten Kubernetes-Clustern wird weitergehend von der 
 * [Einen Cluster aktualisieren / Openstack-Credentials ändern](/imke/clusterlifecycle/openstackcredentials/)
 * [Einen Cluster löschen](/imke/clusterlifecycle/deletingacluster/)
 * [Deprecation Policy in IMKE](/imke/clusterlifecycle/deprecationpolicy/)
+* [Eine CNI wählen](/imke/clusterlifecycle/cnichoices/)
+* [Informationen über die Anbindung der Control-Plane](/imke/clusterlifecycle/controlplaneconnector/)

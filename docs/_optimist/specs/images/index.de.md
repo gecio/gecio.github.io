@@ -33,13 +33,13 @@ Aktuell enthält diese Liste:
 - Flatcar Linux
 - Windows Server 2019 (GUI/Core)
 
-Diese Images werden täglich auf neue Versionen überprüft. Die neueste verfügbare Version ist immer ein "public image" und endet auf `Latest`. Alle vorherigen Versionen eines Images werden in "community images" umgewandelt, wir garantieren dabei nicht für eine endlose Verfügbarkeit. Wir werden sie so lange aufbewahren, wie sie aktiv genutzt werden. Community-Images haben das Datum des ersten Uploads in ihrem Namen.
+Diese Images werden täglich auf neue Versionen überprüft. Die neueste verfügbare Version ist immer ein "public image" und endet auf `Latest`. Alle vorherigen Versionen eines Images werden durch unseren Automatismus in "community images" umgewandelt und umbenannt (`latest` wird durch das Datum des ersten Uploads ersetzt), wir garantieren dabei nicht für eine endlose Verfügbarkeit. Wir werden sie so lange aufbewahren, wie sie aktiv genutzt werden. 
 
 OpenStack und viele Deployment-Tools unterstützen die Verwendung dieser Images entweder über den Namen oder über ihre UUID. Durch die Verwendung eines Namens, z.B. `Ubuntu 22.04 Jammy Jellyfish - Latest`, Erhalten sie jeweils die aktuellste Version des jeweiligen Images, indem Sie Ihre Instanzen neu bereitstellen oder neu aufbauen, selbst wenn wir das Image zwischendurch ersetzen. Sie können dieses Verhalten vermeiden, indem Sie stattdessen die UUID verwenden. Dies kann für Cluster-Einsätze nützlich sein, bei denen Sie sicherstellen wollen, dass auf allen Instanzen die gleiche Version des Images läuft.
 
 ## Linux Images
 
-Alle von uns zur Verfügung gestellten Linux-Images sind unmodifiziert und kommen direkt von ihren offiziellen Maintainern. Wir testen sie während des Upload-Prozesses auf Einsatzfähigkeit.
+Alle von uns zur Verfügung gestellten Linux-Images sind unmodifiziert und kommen direkt von ihren offiziellen Maintainern. Wir testen sie während des Upload-Prozesses auf Kompatibilität.
 
 ## Windows Images
 
@@ -51,7 +51,7 @@ Unsere Images basieren auf einer regulären Installation von Windows Server 2019
 
 Außerdem haben wir die neueste OpenSSH-Version für Windows und die neueste Version der PowerShell installiert. Beide sind für die folgenden Schritte erforderlich und ermöglichen Ihnen die erste Verbindung mit Ihrer Instanz.
 
-Des weiteren ist der RDP-Dienst aktiviert, der für eien Remote-Desktop-Verbindung erforderlich ist. Vergessen Sie nicht, die dafür erforderlichen Sicherheitsgruppen hinzuzufügen, und achten Sie darauf, den Zugriff so weit wie möglich einzuschränken. Außerdem haben wir aus Sicherheitsgründen AutoLogon deaktiviert.
+Des weiteren ist der RDP-Dienst aktiviert, der für eine Remote-Desktop-Verbindung erforderlich ist. Vergessen Sie nicht, die dafür erforderlichen Sicherheitsgruppen hinzuzufügen, und achten Sie darauf, den Zugriff so weit wie möglich einzuschränken. Außerdem haben wir aus Sicherheitsgründen AutoLogon deaktiviert.
 
 Unsere Images sind außerdem mit aktivierten Spectre- und Meltdown-Mitigations ausgestattet. Außerdem mussten wir die Nutzung von zufälligen MAC-Adressen deaktivieren, da unsere virtuellen Netzwerke feste MAC-Adressen voraussetzen.
 

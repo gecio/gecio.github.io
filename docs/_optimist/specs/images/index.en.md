@@ -33,7 +33,7 @@ The current list of images is as follows:
 - Flatcar Linux
 - Windows Server 2019 (GUI/Core)
 
-These images are checked for new releases daily. The latest avaiable version is always a public image, and contains the `Latest`-suffix. All previous images are converted to community images, although we cannot guarantee that they will be available forever. We will keep them as long as they are actively used. Community images have the date of the first upload in their name.
+These images are checked for new releases daily. The latest available version is always a public image, and contains the `Latest`-suffix. All previous images are autommatically converted to community images, although we cannot guarantee unlimited availablity. We will keep them as long as they are actively used. Community images have the date of the first upload in their name.
 
 OpenStack and many deployment tools support using these images either by name or by their UUID. By using a name, for example `Ubuntu 22.04 Jammy Jellyfish - Latest`, you can easily stay up to date by redeploying or rebuilding your instances, even if we replace the image in the interim. You can avoid this behaviour by using the UUID instead. This may be useful for cluster deployments, where you want to ensure that all nodes are running the same version of the image.
 

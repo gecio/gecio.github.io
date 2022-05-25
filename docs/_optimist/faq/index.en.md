@@ -33,15 +33,6 @@ OpenStack client! An example of adding VRRP to a security group would be:
 openstack security group rule create --remote-ip 10.0.0.0/24 --protocol vrrp --ethertype IPv4 --ingress  default
 ```
 
-## Is it possible to use ED25519 SSH keys?
-
-For now, it's not possible to use ED25519 SSH keys.
-
-There is a bug in OpenSSL that's needed for the TLS layer in OpenStack. You can track the progress of this bug in these two tickets:
-
-- [OpenSSL Issue #487](https://github.com/openssl/openssl/issues/487)
-- [OpenStack Bugtracker #1555521](https://bugs.launchpad.net/nova/+bug/1555521)
-
 ## Why am I charged for Floating IPs I am not using?
 
 We have to charge for reserved Floating IPs, and most often the case is that you did not remove the Floating IP after deleting the VM that

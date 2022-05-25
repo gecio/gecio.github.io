@@ -33,16 +33,6 @@ nur mit dem Openstack Client möglich. Zum Beispiel:
 openstack security group rule create --remote-ip 10.0.0.0/24 --protocol vrrp --ethertype IPv4 --ingress  default
 ```
 
-## Kann ich ED25519 SSH Keys verwenden?
-
-Aktuell ist die Nutzung von ED25519 SSH-Keys nicht möglich.
-
-Der Grund dafür liegt an der fehlenden Implementierung in OpenSSL, welche für die Bereitstellung von TLS und HTTP Services in OpenStack
-genutzt wird. Der Fortschritt der Entwicklung ist einsehbar unter:
-
-- [OpenSSL Issue #487](https://github.com/openssl/openssl/issues/487)
-- [OpenStack Bugtracker #1555521](https://bugs.launchpad.net/nova/+bug/1555521)
-
 ## Warum werden mir Floating IPs berechnet, die ich gar nicht benutze?
 
 Der Grund dafür ist mit hoher Wahrscheinlichkeit, dass Floating IPs erstellt wurden, aber nach der Benutzung nicht korrekt gelöscht wurden.

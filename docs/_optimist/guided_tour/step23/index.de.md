@@ -136,6 +136,21 @@ $ s3cmd setacl s3://e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml --acl-private
 s3://e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml: ACL set to Private  [1 of 1]
 ```
 
+Rekursives Löschen von Containern mit der OpenStack-CLI
+----
+
+Der Versuch, einen Container mit verbleibenden Objekten zu löschen, ist über die OpenStack-CLI nicht möglich. Wir müssen daher den Inhalt und den Container rekursiv mit dem folgenden Befehl bereinigen:
+
+```bash
+openstack container delete -r example-container
+```
+
+Um Container mit vielen Objekten (100+) zu bereinigen und zu löschen, empfehlen wir den folgenden Ansatz, um Zeitüberschreitungen bei der Verwendung des rekursiven Löschbefehls zu vermeiden:
+
+```bash
+while true; do time openstack container delete -r example-container; sleep 2; done
+```
+
 Abschluss
 ---------
 

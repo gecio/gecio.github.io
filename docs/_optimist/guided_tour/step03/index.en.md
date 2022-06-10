@@ -6,42 +6,38 @@ nav_order: 1030
 parent: Guided Tour
 ---
 
-Step 3: Spawn a new Stack
-=========================
+# Step 3: Spawn a new Stack
 
-Introduction
-------------
+## Introduction
 
-In this step we will use the dashboard to spawn a stack that includes a
+In this step we use the dashboard to spawn a stack that includes a
 VM.
 
-We will also use this step to get better acquainted with the dashboard.
+You will also get better acquainted with the dashboard.
 
-For this step we will need the SSH keypair created in Step 2.
+For this step you need the SSH keypair created in Step 2.
 
-Start
------
+## Start
 
-To spawn a new stack, we will need a template that starts a VM.
+To spawn a new stack, you need a template that starts a VM.
 
-In this tutorial we use
+We recommend using
 the [SingleServer.yaml](https://github.com/gecio/openstack_examples/blob/master/heat/templates/SingleServer/SingleServer.yaml) from
-our [GECio Github Repository](https://github.com/gecio) and recommend you do the same.
+the [GECio Github Repository](https://github.com/gecio).
 
-Once we acquired the template, we need to login to the dashboad with the
-password that we changed in step 1.
+Once you acquired the template, log in to the dashboad with your new
+password (see step 1).
 
-Now we can go to *Orchestration → Stacks* and click on *Launch Stack*:
+Go to *Orchestration → Stacks* and click *Launch Stack*:
 
 ![](attachments/13536111.png)
 
-In the dialog that pops up, we select *File* as our *Template Source*
-and use the downloaded *SingleServer.yaml* as our *Template File*, and
-click *Next*.
+In the dialog that pops up, for *Template Source* select *File*,
+and for *Template File*, use the downloaded *SingleServer.yaml*. Then click *Next*.
 
 ![](attachments/13536112.png)
 
-In the next page of the dialog, we supply the following data:
+In the next dialog window, provide the following data:
 
 - Stack Name: BeispielServer
 - Creation Timeout: 60
@@ -52,34 +48,31 @@ In the next page of the dialog, we supply the following data:
 - machine\_name: singleserver
 - public\_network\_id: provider
 
-After everything is filled in, we click *Launch* to spawn the stack.
+After you have filled in all data, click *Launch* to spawn the stack.
 
 ![](attachments/13536113.png)
 
-The stack will spawn and it will look like this.
+The stack spawn and it looks like this.
 
 ![](attachments/13536114.png)
 
-We can verify, if the stack has started the instance correctly.
+You can verify, if the stack has correctly started the instance.
 
-Navigate to *Compute* -\> *Instances* and the overview should look like
+Navigate to *Compute* -\> *Instances*. The overview should look like
 this:
 
 ![](attachments/13536115.png)
 
-So we have spawned the stack, now we want to delete it including the
+You have spawned the stack. Now we will show you how to want to delete it including the
 VM.
 
-It's also possible to delete only the instance, but this could be
-problematic if you want to delete the stack afterwards.
+It is also possible to delete only the instance, but this might cause problems if you want to delete the stack afterwards.
 
-To delete a stack, you will navigate  to *Orchestration* *-\>* *Stack*
-and click on the `down-arrow` behind the Example Stack, now we can
-choose *`Delete Stack`*.
+To delete a stack, navigate to *Orchestration* *-\>* *Stack*,
+and click on the `down-arrow` behind the Example Stack. Then choose *`Delete Stack`*.
 
 ![](attachments/13536116.png)
 
-Conclusion
-----------
+## Conclusion
 
-We have created our first stack... and then deleted it!
+You created your first stack, and then deleted it.

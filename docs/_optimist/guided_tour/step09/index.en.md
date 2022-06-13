@@ -6,24 +6,21 @@ nav_order: 1090
 parent: Guided Tour
 ---
 
-Step 9: A Security Group
-========================
+# Step 9: A Security Group
 
-Start
------
+## Start
 
 For security reasons, any incoming traffic to a VM is denied.
 
-To be able to access a VM, we need to assign it at least one security
+To be able to access a VM, you need to assign it to least one security
 group.
 
-While it is possible to add all access rules into a single security
-group, it's advisable to use a separate security group per service.
+While you can add all access rules into a single security
+group, it is recmmended using a separate security group for each service.
 
-How-to
-------
+## How-to
 
-The base command for creating security groups is `openstack security group create`, for example:
+The base command for creating a security group is `openstack security group create`, for example:
 
 ```bash
 openstack security group create allow-ssh-from-anywhere --description Beispiel
@@ -44,23 +41,23 @@ openstack security group create allow-ssh-from-anywhere --description Beispiel
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 
-Now that we've created an empty security group, we're going to add some
+Now that you have created an empty security group, we will add some
 rules.
 
 Some commonly used options are:
 
-- `--protocol`: The protocol that this rule matches. (Example
+- `--protocol`: The protocol that this rule matches (example
     arguments: tcp, udp, icmp)
-- `--dst-port`: Destination port range to give access to. (Example
-    arguments: 22:22 for port 22 100:200 for ports 100 through 200).
-- `--remote-ip`: Remote IP to allow access from. (Example arguments:
+- `--dst-port`: Destination port range to give access to (example
+    arguments: 22:22 for port 22 100:200 for ports 100 through 200)
+- `--remote-ip`: Remote IP to allow access from (example arguments:
     0.0.0.0/0 for all IP addresses, 1.2.3.0/24 for all IP addresses
-    starting with 1.2.3.).
+    starting with 1.2.3.)
 - `--ingress` or `--egress:` ingress is incoming traffic and egress is
-    outgoing traffic (No arguments possible)
+    outgoing traffic (no arguments possible)
 
-We're going to use these options to create a rule for our new seurity group to
-actually allow SSH from anywhere:
+We use these options to create a rule for your new seurity group to
+allow SSH from anywhere:
 
 ```bash
 $ openstack security group rule create allow-ssh-from-anywhere --protocol tcp --dst-port 22:22 --remote-ip 0.0.0.0/0
@@ -85,7 +82,7 @@ $ openstack security group rule create allow-ssh-from-anywhere --protocol tcp --
 +-------------------+--------------------------------------+
 ```
 
-Next, we verify if our security group was created correctly:
+Next, we verify if your security group was created correctly:
 
 ```bash
 $ openstack security group show allow-ssh-from-anywhere
@@ -108,9 +105,6 @@ $ openstack security group show allow-ssh-from-anywhere
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 
-Conclusion
-----------
+## Conclusion
 
-After successfully creating the security group, the next step is to add a network.
-
-We will learn how to do this in Step 10: Getting access to the Internet: Creating a network
+You have successfully created the security group. In the next step, you learn how to add a network.

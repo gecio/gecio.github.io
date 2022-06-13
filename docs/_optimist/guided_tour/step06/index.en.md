@@ -6,25 +6,21 @@ nav_order: 1060
 parent: Guided Tour
 ---
 
-Step 6: Create and use our own SSH-Key
-======================================
+# Step 6: Create and use our own SSH-Key
 
-Start
------
+## Start
 
-In order to access our VMs via SSH we need to create an SSH keypair.
+To access your VMs with SSH you need to create an SSH keypair.
 
-If you already have a keypair, we don't need to create a new one. The
-only exception to this is if we the keypair we have is an ED25519
-keypair, these are not usable because of a bug in OpenStack's
-OpenSSL.
+If you already have a keypair, you do not need to create a new one. The
+only exception to this is if you have an ED25519
+keypair. This keypair is not usable due to a bug in the OpenStack OpenSSL.
 
-Creation
---------
+## Creation
 
 As mentioned in step 2, there are many ways to create an SSH keypair.
 
-In this step we will create one from the console with this command:
+Here you will create one from the console using the following command:
 
 ```text
 $ ssh-keygen -t rsa -f Beispiel.key
@@ -49,23 +45,21 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-The command above will generate two files, this is why we refer to it as
-a keypair.
+The command above generates two files, this is why it is referred to as
+keypair.
 
-The two files generated are Beispiel.key (the private key) and
-Beispiel,key.pub (The public key)
+The two generated files are Beispiel.key (private key) and
+Beispiel,key.pub (public key).
 
-**You should keep your private key to yourself, while we will distribute the public key to places where we want access to.**
+**You should always keep your private key at a secure location, while you distribute the public key to places where you want access to.**
 
-Installation
-------------
+## Installation
 
-To start using our new keypair, we need to add it to our OpenStack environment,
-which we'll do with the OpenStack client.
+To start using your new keypair, you need to add it to your OpenStack environment. You will do this with the OpenStack client.
 
-We will use the command below (in our example, the created keypair is stored in
-`~/.ssh/`, if your keys are saved in a different location, you need to copy the
-keypair to `~/.ssh/`)
+Use the command below (in our example, the created keypair is stored in
+`~/.ssh/`. If your keys are saved in a different location, you need to copy the
+keypair to `~/.ssh/`).
 
 ```bash
 $ openstack keypair create --public-key ~/.ssh/Beispiel.key.pub Beispiel
@@ -78,8 +72,8 @@ $ openstack keypair create --public-key ~/.ssh/Beispiel.key.pub Beispiel
 +-------------+-------------------------------------------------+
 ```
 
-We can check if everything worked by listing the keys and seeing the one we
-just uploaded:
+You can check if everything worked by listing the keys. The one you
+just uploaded should be also visible.
 
 ```bash
 $ openstack keypair list
@@ -90,10 +84,9 @@ $ openstack keypair list
 +----------+-------------------------------------------------+
 ```
 
-Conclusion
-----------
+## Conclusion
 
-We have now generated a keypair and uploaded the public key, we can
-use it to log in to our new Instances.
+You have now generated a keypair and uploaded the public key. You can
+use it to log in to your new Instances.
 
-We explain exactly how this works in Step 7.
+We will explain this in step 7.

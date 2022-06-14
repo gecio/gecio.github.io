@@ -6,40 +6,36 @@ nav_order: 1130
 parent: Guided Tour
 ---
 
-Step 13: The structured way to create an instance (with stacks)
-===============================================================
+# Step 13: The structured way to create an instance (with stacks)
 
-Start
------
+## Start
 
-Previously, we created a VM, a security group and a virtual network separately.
+Previously, you created a VM, a security group, and a virtual network separately.
 
-Now we will demonstrate a way to create all these in an integrated way so that
-we can create an entire setup at once. This requires *python-heatclient* to be
-installed, which we've already done in [Step 4: Our way to the console](/optimist/guided_tour/step04/).
+Now you will learn how to create all of them in an integrated way so that
+you can create an entire setup at once. This requires a pre-installed *python-heatclient*, which you already did in [Step 4: Our way to the console](/optimist/guided_tour/step04/).
 
-Installation
-------------
+## Installation
 
-Instead of creating a VM separately, we can create one and all its dependencies
-via a stack.
+Instead of creating a VM separately, you can create it and its dependencies
+using a stack.
 
-This makes it easy to compose an entire set up, which we can then easily create
+This makes it easy to compose an entire setup, which you can then easily create
 and delete at will.
 
-In this step, we will use a pre-made heat template and we'll learn how to
-write one for ourselves in the next few steps.
+In this step, you will use a pre-made heat template and you will learn how to
+write one for yourselve.
 
-All the things that we created in step 9 through 11 are easily expressed in a
+All things you created in step 9 through 11 are easily expressed in a
 single template.
 
-But let's start with an [example
+Let's start with an [example
 template.](https://github.com/innovocloud/openstack_examples/tree/master/heat/templates)
 
-This template will create a stack that includes a vm, two security groups, a
-virtual network (including router, port and subnet) and a floating-IP.
+This template creates a stack that includes a VM, two security groups, a
+virtual network (including router, port, and subnet), and a floating-IP.
 
-When we create the stack, it's important that we're in the same directory as
+When you create the stack, make sure that you are in the same directory as
 the template:
 
 ```bash
@@ -79,21 +75,20 @@ $ openstack stack create -t SingleServer.yaml --parameter key_name=Beispiel Sing
 +---------------------+-------------------------------------------------+
 ```
 
-Here's a short explanation of the command we just executed:
+Here is a short explanation of the executed command:
 
-`openstack stack create` will create the stack, according to the
+`openstack stack create` creates the stack, according to the
 template defined with `-t SingleServer.yaml`
 
 We set the parameter `key_name` with `--parameter key_name=BEISPIEL` to
-fill the `key_name` parameter with BEISPIEL. In this template that will
-install our BEISPIEL key into our VM. We also name our stack
+fill the `key_name` parameter with BEISPIEL (in this template that installs our BEISPIEL key into your VM). We also name our stack
 *SingleServer*.
 
 Finally, we use the `--wait` option to wait and see the creation
-process, if we didn't add this option, the command would complete
-immediately while the creation process would continue in the background.
+process. If you do not add this option, the command completes
+immediately while the creation process continues in the background.
 
-Once the command has completed, we should be able to connect to our VM. First,
+Once the command has completed, you should be able to connect to your VM. First,
 we acquire the floating IP of the VM:
 
 ```bash
@@ -107,7 +102,7 @@ $ openstack stack output show 0f5cdf0e-24cc-4292-a0bc-adf2e9f8618a instance_fip
 +--------------+---------------------------------+
 ```
 
-Now we can log in to our VM:
+Now you can log in to your VM:
 
 ```bash
 $ ssh ubuntu@185.116.245.70
@@ -118,9 +113,8 @@ Warning: Permanently added '185.116.245.70' (ECDSA) to the list of known hosts.
 Enter passphrase for key '/Users/ubuntu/.ssh/id_rsa':
 ```
 
-Conclusion
-----------
+## Conclusion
 
-Using a heat stack, we've recreated steps 9 through 11 in a single command!
+Using a heat stack, you recreated steps 9 through 11 in a single command.
 
-In the following steps we will go into more detail on Heat and show some further examples.
+In the following steps you will get more details on *Heat* and further examples.

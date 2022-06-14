@@ -1,32 +1,29 @@
 ---
-title: "16: Let's get to know HEAT better"
+title: "16: Let us get to know HEAT better"
 lang: en
 permalink: /optimist/guided_tour/step16/
 nav_order: 1160
 parent: Guided Tour
 ---
 
-Step 16: Let's get to know HEAT better
-=======================================
+# Step 16: Let us get to know HEAT better
 
-Start
------
+## Start
 
-At first glance, it might look like that creating a VM via a heat template and
-directly via the OpenStack client take the same time, while this is true if you
-only want to create the VM once, this is true but the real advantage to heat is
-in reusing templates.
+At first glance, it might look like that creating a VM with a *Heat* template, or
+directly with the OpenStack client takes the same time. While this is true if you
+only want to create the VM once, the advantage of using *Heat* is
+that you can reuse the template.
 
-Now that we have our simple template, we'll get to know heat a bit better by
-adding a variable parameter to our template.
+Now that you have your simple template, you get to know *Heat* better by
+adding a variable parameter to your template.
 
-Parameter
----------
+## Parameter
 
-In this example, we'll add a parameter for the SSH key. The advantage of this
-is that we can use a VM with different keys without changing our template.
+In this example, you will add a parameter for the SSH key. The advantage of this
+is that you can use a VM with different keys without changing our template.
 
-We need to define the parameter and also define its type, the proper type for
+You need to define the parameter and also define its type. The proper type for
 what we want to accomplish is `string`:
 
 ```yaml
@@ -37,8 +34,8 @@ parameters:
         type: string
 ```
 
-Now that we've defined our first parameter, we'll add the same resource to
-our template like this:
+Now that you have defined our first parameter, you will add the same resource to
+your template like this:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -57,12 +54,12 @@ resources:
         flavor: m1.small
 ```
 
-Now we'll actually use our parameter, we'll replace *Beispiel* with
-our parameter.
+Now you will actually use your parameter, and will replace *Beispiel* with
+your parameter.
 
-This is done with the get\_param syntax (for getting the parameter).
+You can do this with the get\_param syntax (for getting the parameter).
 
-The template is now ready to use and we can define the key\_name from the
+The template is now ready to use and you can define the key\_name from the
 command line like in our previous command line:
 
 ```yaml
@@ -81,7 +78,6 @@ resources:
         flavor: m1.small
 ```
 
-Conclusion
-------------
+## Conclusion
 
-We've now added a variable parameter to our template! In the next step, we will add the network.
+You have now added a variable parameter to your template. In the next step, you will add the network.

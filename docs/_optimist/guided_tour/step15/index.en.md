@@ -6,22 +6,19 @@ nav_order: 1150
 parent: Guided Tour
 ---
 
-Step 15: The first heat template
-================================
+# Step 15: The first heat template
 
-Start
------
+## Start
 
-In the previous step, we've learnt the basic layout of a heat template, now
-we're going to put that knowledge to use.
+In the previous step, you learnt the basic layout of a heat template. Now
+you are going to put that knowledge to use.
 
-The first template
-------------------
+## The first template
 
-As we've mentioned earlier, our templates needs to start with a version
+As we have mentioned earlier, our template needs to start with a version
 definition.
 
-In this example, we'll use *2016-10-14* as our version. We mentioned other
+In this example, we will use *2016-10-14* as our version. We mentioned other
 versions in the previous step.
 
 Our template now contains this:
@@ -30,8 +27,8 @@ Our template now contains this:
 heat_template_version: 2016-10-14
 ```
 
-Even though it's optional, it's best practice to add a description to our
-templates.
+Even though it is optional, it is best practice to add a description to our
+template.
 
 ```yaml
 heat_template_version: 2016-10-14
@@ -39,15 +36,15 @@ heat_template_version: 2016-10-14
 description: A simple template to deploy a vm
 ```
 
-Next up, we're going to add the resource "Instanz".
+Next, you add the resource "Instanz".
 
-Be sure to pay close attention to the structure of our template and to
+Be sure to pay attention to the structure of our template and to
 indent the "*Instanz*" under *resources*.
 
-To indent, use 4 spaces and take care not to use tab, if you use tabs or an
+To indent, use 4 spaces and make sure not to use tab. If you use tabs or an
 inconsistent amount of spaces, it will cause errors that are hard to find.
 
-The state of our template should look like this:
+The state of your template should look like this:
 
 ```yaml
 heat_template_version: 2016-10-14
@@ -58,16 +55,16 @@ resources:
     Instanz:
 ```
 
-Next, we'll define the type of the resource.
+Next, you define the type of the resource.
 
-A detailed list of all types can be found in the [official OpenStack
+A detailed list of all types is available in the [official OpenStack
 documentation](https://docs.openstack.org/developer/heat/template_guide/openstack.html)
 
-In our example, we'll define *Instanz* as a VM:
+In our example, we define *Instanz* as a VM:
 
 ```yaml
 heat_template_version: 2016-10-14
- 
+
 description: A simple template to deploy a vm
 
 resources:
@@ -75,9 +72,9 @@ resources:
     type: OS::Nova::Server
 ```
 
-Now that we've defined the type, we'll define its properties.
+Now that you have defined the type, you will define its properties.
 
-Let's define the key, image and the flavor:
+Let's define the key, image, and the flavor:
 
 ```yaml
 heat_template_version: 2016-10-14
@@ -93,8 +90,7 @@ resources:
         flavor: m1.small
 ```
 
-Conclusion
------------
+## Conclusion
 
-We've now defined a template that creates a single VM instance, if you want,
-you could run it like we did previously in [Step 13: "The structured way to create an instance (with stacks)"](/optimist/guided_tour/step13/).
+You have now defined a template that creates a single VM instance. If you like,
+you can run it like you did previously in [Step 13: "The structured way to create an instance (with stacks)"](/optimist/guided_tour/step13/).

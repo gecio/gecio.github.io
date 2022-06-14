@@ -6,23 +6,20 @@ nav_order: 1180
 parent: Guided Tour
 ---
 
-Step 18: Our VM will be reachable via IPv4
-==========================================
+# Step 18: Our VM will be reachable via IPv4
 
-Start
------
+## Start
 
-Now that our template defines the full network and can reach the internet,
-we'll have to make it possible to reach the VM from the internet.
+Now that your template defines the full network and can reach the internet,
+you have to make sure to reach the VM from the internet.
 
-Floating-IP
------------
+## Floating-IP
 
-We'll define a floating public IPv4 address, which is a resource with type
+You define a floating public IPv4 address, which is a resource with type
 `OS::Neutron::FloatingIP`.
 
-Please note that it's important to define the external network that this IP
-will be assigned from and the port that this IP will lead to:
+Please note that it is important to define the external network that this IP
+is assigned from and the port that this IP leads to:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -86,19 +83,18 @@ resources:
             port_id: { get_resource: Port }
 ```
 
-Security Groups
----------------
+## Security Groups
 
-If we would create a stack as defined above, the VM would start but it
-wouldn't be reachable. As we've mentioned before, VMs will not receive
+If you would create a stack as defined above, the VM would start but it
+would not be reachable. As mentioned before, VMs do not receive
 traffic without a security group explicitly allowing it.
 
-So, of course, the logical next step is to create a resource with type
+So, the logical next step is to create a resource with type
 `OS::Neutron::SecurityGroup`.
 
-We'll have to define the security group to use on the *Port* and in the
-resource itself, we'll specify the rules themselves. These rules will consist
-of the direction, port range, remote IP prefix and protool that these rules
+You have to define the security group to use on the *Port*. In the
+resource itself, you specify the rules themselves. These rules consist
+of the direction, port range, remote IP prefix, and protocol that these rules
 want to allow.
 
 ```yaml
@@ -174,9 +170,8 @@ resources:
                 - { direction: ingress, remote_ip_prefix: 0.0.0.0/0, protocol: icmp }
 ```
 
-Conclusion
-----------
+## Conclusion
 
-We can now create a stack that contains a single reachable instance.
+You can now create a stack that contains a single reachable instance.
 
-In the next step, we will customize the instance using CloudConfig.
+In the next step, you will customize the instance using CloudConfig.

@@ -6,21 +6,18 @@ nav_order: 1170
 parent: Guided Tour
 ---
 
-Step 17: The network in Heat
-============================
+# Step 17: The network in Heat
 
-Preface
--------
+## Preface
 
-Now that we have a simple template with a parameter, we'll add the network.
+Now that you have a simple template with a parameter, you will add the network.
 
-The template
-------------
+## The template
 
-We'll continue using the template we previously created.
+We continue using the template you previously created.
 
-First, we'll add a new parameter, the id of the external network and name it
-*public\_network\_id,* we'll also define a default *provider*:
+First, you add a new parameter, the ID of the external network, and name it
+*public\_network\_id,*. Also define a default *provider*:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -41,12 +38,11 @@ resources:
             flavor: m1.small
 ```
 
-Network
----------
+## Network
 
-Next, we'll add the network.
+Next, you  add the network.
 
-Like the Vm, the network is a `resource`, so we'll add it to that block.
+Like the VM, the network is a `resource`, so you add it to that block.
 
 The type for network resources is *`OS::Neutron::Net`*
 
@@ -74,21 +70,20 @@ resources:
             name: BeispielNetzwerk
 ```
 
-The port
---------
+## The port
 
-Now that we've defined a network we can add the port, which is a resource with
+Now that you have defined a network you can add the port, which is a resource with
 type *`OS::Neutron::Port`*.
 
-To make sure that sure that this port is used by our VM, we add the *networks*
-property to it and define a *port* property that then uses the *get\_resource*
+To make sure that this port is used by your VM, you add the *networks*
+property to it. You also define a *port* property that then will use the *get\_resource*
 function to link it to the *Port*.
 
-Furthermore, we want to link the port to the network by adding a *network*
+Furthermore, yyou want to link the port to the network by adding a *network*
 property that also uses the *get\_resource* function to link it to the
 *Netzwerk*.
 
-By now, our template will look like this:
+By now, our template looks like this:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -121,13 +116,12 @@ resources:
             network: { get_resource: Netzwerk }
 ```
 
-The router
-------------
+## The router
 
-Our network will need a router, so now we'll add a *Router* resource, with the
+Your network needs a router, so you add a *Router* resource, with the
 type *`OS::Neutron::Router`.*
 
-We will use our parameter to define the external network it will use:
+You use your parameter to define the external network it will use:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -166,14 +160,13 @@ resources:
             name: BeispielRouter
 ```
 
-The subnet
-------------
+## The subnet
 
-Now we want to define a subnet for our network, this is the *Subnet* resource
+Now you define a subnet for your network. This is the *Subnet* resource
 with type *`OS::Neutron::Subnet.`*
 
-It's in the subnet that we'll define IP information like nameserver(s), the
-IP version, the IP range and other IP related settings:
+It is in the subnet where we define IP information like nameserver(s), the
+IP version, the IP range, and other IP related settings:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -225,14 +218,13 @@ resources:
             - { start: 10.0.0.10, end: 10.0.0.250 }
 ```
 
-Subnet bridge
--------------
+## Subnet bridge
 
-Finally, we'll define a subnet bridge with the type
-*`OS::Neutron::RouterInterface`*, this will associate the subnet and the router
+Finally, you define a subnet bridge with type
+*`OS::Neutron::RouterInterface`*. This associates the subnet and the router
 so that VMs in that subnet will use the router.
 
-We wil also define the *depends\_on* property, which makes sure that the subnet
+You also define the *depends\_on* property, which makes sure that the subnet
 bridge will only be created if *Subnet* is available:
 
 ```yaml
@@ -292,8 +284,7 @@ resources:
             subnet: { get_resource: Subnet }
 ```
 
-Conclusion
-----------
+## Conclusion
 
-We have now defined the full network, if this stack is now created, it
-will create a VM and all the components needed to give it connectivity. The next step is to assign a public IP address to the instance.
+You have now defined the full network. If the stack is created, it
+will create a VM and all the required components to give it connectivity. The next step is to assign a public IP address to the instance.

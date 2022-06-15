@@ -12,6 +12,7 @@ With the current release, we support the following Kubernetes versions:
 
 * 1.21.8
 * 1.22.5
+* 1.23.6
 
 ## End of Life announcements
 
@@ -29,13 +30,13 @@ This is a technical release without any new features.
 
 ## Kubernetes related changes
 
-### Upgrade notes for Kubernetes 1.22
+### Upgrade notes for Kubernetes 1.23
 
-If you are planning to upgrade to Kubernetes 1.22, please have a look at the [What's new](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.22.md#whats-new-major-themes) section of the official Kubernetes v1.22 release notes and make sure you familiarise yourself with the upcoming changes.
+If you are planning to upgrade to Kubernetes 1.23, please have a look at the [What's new](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md#whats-new-major-themes) section of the official Kubernetes v1.23 release notes and make sure you familiarise yourself with the upcoming changes.
 
 For an overview of the changes, please refer to the [Changes by Kind](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.22.md#changes-by-kind-2) section of the Changelog.
 
-* [Urgent Upgrade Notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.22.md#urgent-upgrade-notes)
-* [Deprecations](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.22.md#deprecation)
-* [API changes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.22.md#api-change-1)
-* [Features](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.22.md#feature-2)
+* [Urgent Upgrade Notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md#urgent-upgrade-notes)
+* [Deprecations](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md#deprecation)
+* [API changes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md#api-change-4)
+* [Features](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md#feature-7)

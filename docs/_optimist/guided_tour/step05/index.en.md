@@ -10,7 +10,7 @@ parent: Guided Tour
 
 ## Start
 
-Now that you have installed the OpenStack client in step 4, you will learn
+Now that you have installed the OpenStack client in [Step 4](/optimist/guided_tour/step4/), you will learn
 some important commands.
 
 To get more information about a specific subcommand, append the
@@ -150,6 +150,6 @@ VM. Here are some common commands:
 Now you know some common OpenStack commands, and have a better overview
 of the system.
 
-The commands mentioned are required in the next steps and thus form the basis for the rest of the guided tour.
+The mentioned commands are required in the next steps and form the basis for the rest of the guided tour.
 
-In step 6, you will create and use your own SSH key pairs.
+In [Step 6](/optimist/guided_tour/step6/), you will create and use your own SSH key pairs.

@@ -23,7 +23,7 @@ using a stack.
 This makes it easy to compose an entire setup, which you can then easily create
 and delete at will.
 
-In this step, you will use a pre-made heat template and you will learn how to
+In this step, you will use a pre-made heat template and you learn how to
 write one for yourselve.
 
 All things you created in step 9 through 11 are easily expressed in a

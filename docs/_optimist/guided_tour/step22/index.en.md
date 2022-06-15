@@ -1,26 +1,24 @@
 ---
-title: "22: Creating a DNS record in Designate"
+title: "22: Create a DNS record in Designate"
 lang: en
 permalink: /optimist/guided_tour/step22/
 nav_order: 1220
 parent: Guided Tour
 ---
 
-Step 22: Creating a DNS record in Designate
-===========================================
+# Step 22: Create a DNS record in Designate
 
-Start
--------
+## Start
 
 The Openstack Optimist platform includes a technology called DNS-as-a-Service (DNSaaS), also known as Designate.
 DNSaaS includes a REST API for domain and records management, is multi-tenant and integrates the OpenStack Identity Service (Keystone) for authentication.
 
-In this step, we will create a fictitious zone (domain) with MX and A records and deposit the appropriate IP/CNAME.
+In this step, you will create a fictitious zone (domain) with MX and A records and deposit the appropriate IP/CNAME.
 
 -----
 
-In order to start, we first read the access data as in ["Step 4: Our way to the console"](/optimist/guided_tour/step04/) and ensure that the `python-designateclient` is installed (pip install python-openstackclient python-designateclient)
-Then we serve the Openstack client and create a zone for our project first.
+In order to start, you first read the access data as in ["Step 4: Our way to the console"](/optimist/guided_tour/step04/) and ensure that the `python-designateclient` is installed (pip install python-openstackclient python-designateclient)
+Then you serve the Openstack client and create a zone for our project first.
 
 ```bash
 $ openstack zone create --email webmaster@foobar.cloud foobar.cloud.
@@ -48,7 +46,7 @@ $ openstack zone create --email webmaster@foobar.cloud foobar.cloud.
 ```
 
 Note the final "." at the zone/domain to be created.
-The result so far:
+The result so far is:
 
 ```bash
 $ openstack zone list
@@ -85,7 +83,7 @@ $ openstack zone show foobar.cloud.
 Now the domain "foobar.cloud" is registered for our project and ready to use (status: ACTIVE).
 In the next step, we want to create MX records (records for mail servers in this zone) for this domain.
 
-But first let's see what content (recordsets) our new zone already owns.
+But first let us see the content (recordsets) your new zone already owns.
 
 ```bash
 $ openstack recordset list foobar.cloud.
@@ -98,7 +96,7 @@ $ openstack recordset list foobar.cloud.
 +--------------------------------------+---------------+------+--------------------------------------------------------------------------------+--------+--------+
 ```
 
-Here we see an "empty shell" of a domain with automatically create NS and SOA entries that are ready for immediate query.
+Here you see an "empty shell" of a domain with automatically create NS and SOA entries that are ready for immediate query.
 
 ```bash
 $ dig +short @dns1.ddns.innovo.cloud foobar.cloud NS
@@ -110,7 +108,7 @@ dns2.ddns.innovo.cloud. webmaster.foobar.cloud. 1534315524 3507 600 86400 3600
 ```
 
 Creating an MX record:
-Now we can add, modify or delete records within this zone (openstack recordset --help).
+Now you can add, modify, or delete records within this zone (openstack recordset --help).
 For MX records we also set up the typical mail server priorities (10,20), where the lower value is always selected first
 and the second entry serves as backup.
 
@@ -187,7 +185,7 @@ $ openstack recordset list foobar.cloud.
 +--------------------------------------+-------------------+------+--------------------------------------------------------------------------------+--------+--------+
 ```
 
-If the recordsets are active we can use the designated DNS servers
+If the recordsets are active you can use the designated DNS servers:
 
 * dns1.ddns.innovo.cloud
 * dns2.ddns.innovo.cloud
@@ -260,7 +258,7 @@ $ openstack recordset create --type A --record 3.4.5.6 foobar.cloud. mx2
 +-------------+--------------------------------------+
 ```
 
-The result after a few seconds:
+Result after a few seconds:
 
 ```bash
 $ openstack recordset list foobar.cloud.
@@ -278,7 +276,6 @@ $ openstack recordset list foobar.cloud.
 +--------------------------------------+-------------------+------+--------------------------------------------------------------------------------+--------+--------+
 ```
 
-Conclusion
-----------
+## Conclusion
 
-In this step, we learned how to create a zone, configure a record set, and query it.
+In this step, you have learned how to create a zone, configure a record set, and query it.

@@ -1,12 +1,12 @@
 ---
-title: "18: Our VM will be reachable via IPv4"
+title: "18: Your VM will be reachable with IPv4"
 lang: en
 permalink: /optimist/guided_tour/step18/
 nav_order: 1180
 parent: Guided Tour
 ---
 
-# Step 18: Our VM will be reachable via IPv4
+# Step 18: Your VM will be reachable with IPv4
 
 ## Start
 
@@ -18,8 +18,8 @@ you have to make sure to reach the VM from the internet.
 You define a floating public IPv4 address, which is a resource with type
 `OS::Neutron::FloatingIP`.
 
-Please note that it is important to define the external network that this IP
-is assigned from and the port that this IP leads to:
+Note that it is important to define the external network this IP
+is assigned from and the port this IP leads to:
 
 ```yaml
 heat_template_version: 2014-10-16

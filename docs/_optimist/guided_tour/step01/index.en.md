@@ -8,12 +8,12 @@ parent: Guided Tour
 
 # Step 1: The Horizon (Dashboard)
 
-## Preface
+## Start
 
 In this step-by-step tutorial, you will learn how to use OpenStack.
 
-We will start with the Horizon dashboard, then switch to the
-console and finish with writing our own Heat
+You will start with the Horizon dashboard, then switch to the
+console and finish with writing your own Heat
 template.
 
 ## Login
@@ -42,7 +42,7 @@ For security reasons we recommend changing your password after
 you received it from GEC.
 
 To change the password, click your *User name* (1) in right corner of
- Horizon and then click *Settings* (2).
+ Horizon and then *Settings* (2).
 
 ![](attachments/13536091.png)
 
@@ -51,7 +51,7 @@ settings.
 
 To change the password, click *Change Password*
  (1) in the left-side navigation menu. Enter your old password (2), then enter the new
-one (3) and confirm the new one (4).
+one (3), and confirm the new one (4).
 
 To save it, click *Change* (5).
 

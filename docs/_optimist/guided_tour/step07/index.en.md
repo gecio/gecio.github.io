@@ -49,7 +49,7 @@ usage: openstack server create [-h] [-f {json,shell,table,value,yaml}]
 openstack server create: error: argument --flavor is required
 ```
 
-It tells us that you have not specified the flavor your VM.
+It tells us that you have not specified the flavor for your VM.
 
 To specify a flavor, you need to add the flag `--flavor` with a
 flavor argument.
@@ -136,14 +136,14 @@ $ openstack network create BeispielNetzwerk
 ```
 
 Note that this network has no internet connection, and no additional
-configuration. We would not use it for a VM we plan to
+configuration. You would not use it for a VM you plan to
 actually use.
 
-We will create a functional network in step 10.
+You will learn how to create a functional network in [Step 10](/optimist/guided_tour/step10/).
 
-Now to put everything together, and create an our VM. For this example,
-we will use the default security group, the Ubuntu 16.04 image (we'll
-use the ID in the command line) and the previously created network and
+Now we will put everything together, and create a VM. In this example,
+you will use the default security group, the Ubuntu 16.04 image (you
+use the ID in the command line), and the previously created network and
 key:
 
 ```
@@ -279,4 +279,4 @@ shell formatter:
 
 ## Conclusion
 
-You have now created your first Instance, and used some basic OpenStack commands. In step 8 we will delete this instance.
+You have now created your first Instance, and used some basic OpenStack commands. In the next step, you will delete this instance.

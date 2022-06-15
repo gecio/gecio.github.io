@@ -1,12 +1,12 @@
 ---
-title: "09: A Security Group"
+title: "09: Security Group"
 lang: en
 permalink: /optimist/guided_tour/step09/
 nav_order: 1090
 parent: Guided Tour
 ---
 
-# Step 9: A Security Group
+# Step 9: Security Group
 
 ## Start
 
@@ -15,10 +15,10 @@ For security reasons, any incoming traffic to a VM is denied.
 To be able to access a VM, you need to assign it to least one security
 group.
 
-While you can add all access rules into a single security
-group, it is recmmended using a separate security group for each service.
+While you can add all access rules to a single security
+group, we recmmend using a separate security group for each service.
 
-## How-to
+## Create a Security Group
 
 The base command for creating a security group is `openstack security group create`, for example:
 
@@ -41,7 +41,7 @@ openstack security group create allow-ssh-from-anywhere --description Beispiel
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 
-Now that you have created an empty security group, we will add some
+Now that you have created an empty security group, you will add some
 rules.
 
 Some commonly used options are:
@@ -56,7 +56,7 @@ Some commonly used options are:
 - `--ingress` or `--egress:` ingress is incoming traffic and egress is
     outgoing traffic (no arguments possible)
 
-We use these options to create a rule for your new seurity group to
+You use these options to create a rule for your new seurity group to
 allow SSH from anywhere:
 
 ```bash
@@ -82,7 +82,7 @@ $ openstack security group rule create allow-ssh-from-anywhere --protocol tcp --
 +-------------------+--------------------------------------+
 ```
 
-Next, we verify if your security group was created correctly:
+Next, you verify if your security group was created correctly:
 
 ```bash
 $ openstack security group show allow-ssh-from-anywhere

@@ -14,7 +14,7 @@ Even though you already created a VM in [Step 7](/optimist/guided_tour/step07/),
 
 ## Installation
 
-To create this VM, you will add some parameters to the command we used in Step 7:
+To create this VM, you add some parameters to the command we used in [Step 7](/optimist/guided_tour/step07/):
 
 ```bash
 $ openstack server create BeispielInstanz --flavor m1.small --key-name Beispiel --image "Ubuntu 16.04 Xenial Xerus - Latest" --security-group allow-ssh-from-anywhere --network=BeispielNetzwerk
@@ -98,7 +98,7 @@ You now should have a reachable VM.
 To see if all worked correctly, log in to your VM with SSH.
 
 **IMPORTANT**: You can only log in if the specified ssh key exists and is
-accessible (if it does not work, follow the instructions in step 6).
+accessible (if it does not work, follow the instructions in [Step 6](/optimist/guided_tour/step06/)).
 
 ```bash
 $ ssh ubuntu@185.116.245.145
@@ -134,5 +134,5 @@ components that other components depend on.
 
 You have now created a VM based on your knowledge from steps 7 to 11, you can reach it from the internet, and have logged in with SSH.
 
-In the next step, we will break away from individual instances and
-you will create a stack.
+In the next step, you will break away from individual instances and
+ will create a stack.

@@ -15,19 +15,19 @@ you are going to put that knowledge to use.
 
 ## The first template
 
-As we have mentioned earlier, our template needs to start with a version
+As we have mentioned earlier, your template needs to start with a version
 definition.
 
-In this example, we will use *2016-10-14* as our version. We mentioned other
+In this example, you will use *2016-10-14* as your version. We mentioned other
 versions in the previous step.
 
-Our template now contains this:
+Your template now contains this:
 
 ```yaml
 heat_template_version: 2016-10-14
 ```
 
-Even though it is optional, it is best practice to add a description to our
+Even though it is optional, it is best practice to add a description to your
 template.
 
 ```yaml
@@ -60,7 +60,7 @@ Next, you define the type of the resource.
 A detailed list of all types is available in the [official OpenStack
 documentation](https://docs.openstack.org/developer/heat/template_guide/openstack.html)
 
-In our example, we define *Instanz* as a VM:
+In our example, you define *Instanz* as a VM:
 
 ```yaml
 heat_template_version: 2016-10-14

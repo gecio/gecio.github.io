@@ -1,12 +1,12 @@
 ---
-title: "10: Getting access to the Internet; Creating a network"
+title: "10: Get access to the Internet; Create a network"
 lang: en
 permalink: /optimist/guided_tour/step10/
 nav_order: 1100
 parent: Guided Tour
 ---
 
-# Step 10: Getting access to the Internet: Creating a network
+# Step 10: Get access to the Internet: Create a network
 
 ## Start
 

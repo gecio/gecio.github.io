@@ -8,13 +8,13 @@ parent: Guided Tour
 
 # Step 17: The network in Heat
 
-## Preface
+## Start
 
 Now that you have a simple template with a parameter, you will add the network.
 
 ## The template
 
-We continue using the template you previously created.
+You continue using the template you previously created.
 
 First, you add a new parameter, the ID of the external network, and name it
 *public\_network\_id,*. Also define a default *provider*:
@@ -40,7 +40,7 @@ resources:
 
 ## Network
 
-Next, you  add the network.
+Next, you add the network.
 
 Like the VM, the network is a `resource`, so you add it to that block.
 
@@ -79,11 +79,11 @@ To make sure that this port is used by your VM, you add the *networks*
 property to it. You also define a *port* property that then will use the *get\_resource*
 function to link it to the *Port*.
 
-Furthermore, yyou want to link the port to the network by adding a *network*
+Furthermore, you want to link the port to the network by adding a *network*
 property that also uses the *get\_resource* function to link it to the
 *Netzwerk*.
 
-By now, our template looks like this:
+By now, your template looks like this:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -165,7 +165,7 @@ resources:
 Now you define a subnet for your network. This is the *Subnet* resource
 with type *`OS::Neutron::Subnet.`*
 
-It is in the subnet where we define IP information like nameserver(s), the
+It is in the subnet where you define IP information like nameserver(s), the
 IP version, the IP range, and other IP related settings:
 
 ```yaml
@@ -286,5 +286,5 @@ resources:
 
 ## Conclusion
 
-You have now defined the full network. If the stack is created, it
-will create a VM and all the required components to give it connectivity. The next step is to assign a public IP address to the instance.
+You have now defined the full network. When the stack is created, it
+ creates a VM and all the required components to give it connectivity. The next step is to assign a public IP address to the instance.

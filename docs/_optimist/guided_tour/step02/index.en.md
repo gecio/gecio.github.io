@@ -11,7 +11,7 @@ parent: Guided Tour
 ## Start
 
 To continue, you need an SSH keypair. If you already have a keypair and know
-how to use it, you can skip this section and continue with step 3.
+how to use it, you can skip this section and continue with [Step 3](/optimist/guided_tour/step03/).
 
 ## Installation
 
@@ -22,7 +22,7 @@ click *Create Key Pair*.
 
 ![](attachments/13536100.png)
 
-A window appears where you can name the key. In this example, we
+A window appears where you can name the key. In this example, you
 use **BeispielKey**. After you have entered the name, click *Create Keypair.*
 
 ![](attachments/13536101.png)

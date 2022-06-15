@@ -8,11 +8,9 @@ parent: Guided Tour
 
 # Step 8: Delete the first VM
 
-## Preface
-
-In step 7, you created a VM. In this step, you will delete it so that you can reuse its resources.
-
 ## Start
+
+In the previous step, you created a VM. In this step, you will learn how to delete it so that you can reuse its resources.
 
 First of all, you need to acquire the name or the ID of the VM.
 
@@ -30,7 +28,7 @@ $ openstack server list
 +--------------------------------------+--------------+--------+---------------------------------------------------+------------------------------------+
 ```
 
-This returns a list of all your VMs. You find the ID in column "ID", and the name in column "Name".
+This returns a list of all your VMs. You find the ID in column *ID*, and the name in column *Name*.
 
 Now that you have this information, you can delete it:
 
@@ -48,6 +46,6 @@ $
 
 ## Conclusion
 
-You have now learned how to delete Instances. Additionally, with the command `openstack server list` you can get an overview of all instances.
+You have now learned how to delete instances. Additionally, with the command `openstack server list` you can get an overview of all instances.
 
-In step 9, you will focus on security groups.
+In [Step 9](/optimist/guided_tour/step09/), we will focus on security groups.

@@ -1,12 +1,12 @@
 ---
-title: "16: Let us get to know HEAT better"
+title: "16: Get to know HEAT better"
 lang: en
 permalink: /optimist/guided_tour/step16/
 nav_order: 1160
 parent: Guided Tour
 ---
 
-# Step 16: Let us get to know HEAT better
+# Step 16: Get to know HEAT better
 
 ## Start
 

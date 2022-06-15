@@ -1,12 +1,12 @@
 ---
-title: "11: Prepare access to the internet; Add IPv6 to our network"
+title: "11: Prepare access to the Internet; Add IPv6 to your network"
 lang: en
 permalink: /optimist/guided_tour/step11/
 nav_order: 1110
 parent: Guided Tour
 ---
 
-# Step 11: Prepare access to the internet: Add IPv6 to our network
+# Step 11: Prepare access to the Internet: Add IPv6 to your network
 
 ## Start
 
@@ -73,7 +73,7 @@ $ openstack subnet create --network BeispielNetzwerk --ip-version 6 --use-defaul
 
 ## Router
 
-Now that the subnet has been created, we add it to the router.
+Now that the subnet has been created, you add it to the router.
 
 To do so, execute the following command:
 
@@ -83,7 +83,7 @@ openstack router add subnet BeispielRouter BeispielSubnetIPv6
 
 ## Security Group
 
-The security group rules that you created in step 9 were IPv4 rules. Now
+The security group rules that you created in [Step 9](/optimist/guided_tour/step09/) were IPv4 rules. Now
 you have to add two more rules for IPv6.
 
 First, you allow SSH access using IPv6 (::/0 is the equivalent of 0.0.0.0/0

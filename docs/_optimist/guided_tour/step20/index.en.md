@@ -1,29 +1,26 @@
 ---
-title: "20: Build multiple VMs via HEAT"
+title: "20: Build multiple VMs with HEAT"
 lang: en
 permalink: /optimist/guided_tour/step20/
 nav_order: 1200
 parent: Guided Tour
 ---
 
-Step 20: Build multiple VMs via HEAT
-====================================
+# Step 20: Build multiple VMs with HEAT
 
-Start
------
+## Start
 
-Previously, we've only created a single VM, now we're going to create
+Previously, you have only created a single VM. Now you are going to create
 multiple VMs at the same time.
 
-First Steps
------------
+## First Steps
 
-To begin with, we'll spit the template into two parts. We're not doing
-this for any reason except to show that it's possible.
+To begin with, you split the template into two parts. We are not doing
+this for any reason except to show that it is possible.
 
-It's best practice to break big setups up into multiple files.
+It is best practice to break big setups up into multiple files.
 
-First, we'll start with a simple template containing only the network
+First, you start with a simple template containing only the network
 and the port.
 
 ```yaml
@@ -52,16 +49,15 @@ resources:
             - {start: 10.0.0.10, end: 10.0.0.250}
 ```
 
-This is the basic structure for our stack, we'll save it as `groups.yaml.`
+This is the basic structure for your stack, you will save it as `groups.yaml.`
 
-Now we'll create a template called *exampleserver.yaml,* we'll define
-the VM here.Now we will create a new template `exampleserver.yaml` and
-we will describe the vm here.
+Now you create a new template `exampleserver.yaml` and
+you define the VM here.
 
-Make sure that `name` and `network_id` are not defined.
+Make sure that `name` and `network_id` are **not** defined.
 
-Be sure to use a valid value to fill `image:`. You can use the image name or ID.
-You can get either of those by running `openstack image list`.
+Use a valid value to fill `image:`. You can use the image name or ID.
+You get either of them by running `openstack image list`.
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -91,7 +87,7 @@ resources:
       network: { get_param: network_id }
 ```
 
-We'll now change our *groups.yaml* and add a resource group where we'll add
+You now change your `groups.yaml` and add a resource group where you add
 the VMs with the required arguments.
 
 ```yaml
@@ -131,14 +127,13 @@ resources:
             - {start: 10.0.0.10, end: 10.0.0.250}
 ```
 
-Now that we've supplied all the data we can create our stack:
+Now that you have supplied all data, you can create your stack:
 
 ```bash
 openstack stack create -t groups.yaml <Name of the stack>
 ```
 
-Conclusion
-----------
+## Conclusion
 
-Congratulations, we went from creating a single VM via the web interface
-all the way to creating full stacks with the OpenStack client! Several instances can now be rolled out at the same time using a template and are a good starting point for OpenStack administration.
+Congratulations, you went from creating a single VM with the web interface
+all the way to creating full stacks with the OpenStack client. Several instances can now be rolled out at the same time using a template and are a good starting point for the OpenStack administration.

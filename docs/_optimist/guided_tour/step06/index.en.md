@@ -1,12 +1,12 @@
 ---
-title: "06: Create and use our own SSH-Key"
+title: "06: Create and use your own SSH-Key"
 lang: en
 permalink: /optimist/guided_tour/step06/
 nav_order: 1060
 parent: Guided Tour
 ---
 
-# Step 6: Create and use our own SSH-Key
+# Step 6: Create and use your own SSH-Key
 
 ## Start
 
@@ -18,7 +18,7 @@ keypair. This keypair is not usable due to a bug in the OpenStack OpenSSL.
 
 ## Creation
 
-As mentioned in step 2, there are many ways to create an SSH keypair.
+As mentioned in [Step 2](/optimist/guided_tour/step2/), there are many ways to create an SSH keypair.
 
 Here you will create one from the console using the following command:
 
@@ -89,4 +89,4 @@ $ openstack keypair list
 You have now generated a keypair and uploaded the public key. You can
 use it to log in to your new Instances.
 
-We will explain this in step 7.
+We will explain this in [Step 7](/optimist/guided_tour/step7/).

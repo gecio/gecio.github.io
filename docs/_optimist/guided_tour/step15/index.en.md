@@ -10,25 +10,19 @@ parent: Guided Tour
 
 ## Start
 
-In the previous step, you learnt the basic layout of a heat template. Now
-you are going to put that knowledge to use.
+In the previous step, you learned the basic layout of a heat template. Now you can create your own.
 
 ## The first template
 
-As we have mentioned earlier, your template needs to start with a version
-definition.
+As stated earlier, your template needs to start with a version definition.
 
-In this example, you will use *2016-10-14* as your version. We mentioned other
-versions in the previous step.
-
-Your template now contains this:
+Version *2016-10-14* is used for the below example:
 
 ```yaml
 heat_template_version: 2016-10-14
 ```
 
-Even though it is optional, it is best practice to add a description to your
-template.
+Although it is optional, it is best practice to add a description to your template.
 
 ```yaml
 heat_template_version: 2016-10-14
@@ -36,15 +30,15 @@ heat_template_version: 2016-10-14
 description: A simple template to deploy a vm
 ```
 
-Next, you add the resource "Instanz".
+Next, add the resource "Instanz".
 
 Be sure to pay attention to the structure of our template and to
 indent the "*Instanz*" under *resources*.
 
-To indent, use 4 spaces and make sure not to use tab. If you use tabs or an
-inconsistent amount of spaces, it will cause errors that are hard to find.
+To indent, use 4 spaces (not tabs). If you use tabs or an
+inconsistent amount of spaces, it will cause errors that may be hard to locate.
 
-The state of your template should look like this:
+Your template should now look like this:
 
 ```yaml
 heat_template_version: 2016-10-14
@@ -55,12 +49,12 @@ resources:
     Instanz:
 ```
 
-Next, you define the type of the resource.
+Next, define the resource type.
 
 A detailed list of all types is available in the [official OpenStack
 documentation](https://docs.openstack.org/developer/heat/template_guide/openstack.html)
 
-In our example, you define *Instanz* as a VM:
+In our example, you can define *Instanz* as a VM:
 
 ```yaml
 heat_template_version: 2016-10-14
@@ -72,7 +66,7 @@ resources:
     type: OS::Nova::Server
 ```
 
-Now that you have defined the type, you will define its properties.
+Now that you have defined the type, you should next define its properties.
 
 Let's define the key, image, and the flavor:
 
@@ -92,5 +86,4 @@ resources:
 
 ## Conclusion
 
-You have now defined a template that creates a single VM instance. If you like,
-you can run it like you did previously in [Step 13: "The structured way to create an instance (with stacks)"](/optimist/guided_tour/step13/).
+You have now defined a template that creates a single VM instance. If you like, you can run it like you did previously in [Step 13: "The structured way to create an instance (with stacks)"](/optimist/guided_tour/step13/).

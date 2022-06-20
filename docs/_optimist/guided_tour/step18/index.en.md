@@ -1,25 +1,25 @@
 ---
-title: "18: Your VM will be reachable with IPv4"
+title: "18: Making your VM reachable via IPv4"
 lang: en
 permalink: /optimist/guided_tour/step18/
 nav_order: 1180
 parent: Guided Tour
 ---
 
-# Step 18: Your VM will be reachable with IPv4
+# Step 18: Making your VM reachable via IPv4
 
 ## Start
 
-Now that your template defines the full network and can reach the internet,
-you have to make sure to reach the VM from the internet.
+Now that your template has defined the full network and can reach the internet,
+you next need to ensure that the VM is reachable externally.
 
 ## Floating-IP
 
-You define a floating public IPv4 address, which is a resource with type
+Define a floating public IPv4 address, which is a resource with type
 `OS::Neutron::FloatingIP`.
 
 Note that it is important to define the external network this IP
-is assigned from and the port this IP leads to:
+is assigned *from* and the port this IP leads *to*:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -85,17 +85,14 @@ resources:
 
 ## Security Groups
 
-If you would create a stack as defined above, the VM would start but it
-would not be reachable. As mentioned before, VMs do not receive
-traffic without a security group explicitly allowing it.
+If you create a stack as outlined above, the VM would start but it
+would not be reachable. As previously stated, VMs do not receive
+traffic without a security group in place which explicitly allows this.
 
 So, the logical next step is to create a resource with type
 `OS::Neutron::SecurityGroup`.
 
-You have to define the security group to use on the *Port*. In the
-resource itself, you specify the rules themselves. These rules consist
-of the direction, port range, remote IP prefix, and protocol that these rules
-want to allow.
+The security group must be defined to use the *Port*. On the resource itself, the rules are specified. These rules include the direction, port range, remote IP prefix, and protocol that these rules intend to allow.
 
 ```yaml
 heat_template_version: 2014-10-16

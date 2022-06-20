@@ -22,8 +22,7 @@ click *Create Key Pair*.
 
 ![](attachments/13536100.png)
 
-A window appears where you can name the key. In this example, you
-use **BeispielKey**. After you have entered the name, click *Create Keypair.*
+A window appears where you can name the key. In this example, the name **BeispielKey** is used. After you have entered the name, click *Create Keypair.*
 
 ![](attachments/13536101.png)
 

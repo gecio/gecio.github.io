@@ -10,25 +10,24 @@ parent: Guided Tour
 
 ## Start
 
-Previously, you have created a VM from scratch and also learned some basics about HEAT.
-In this step you will boot a VM from an SSD volume. There are different ways to do this.
-In this example, you will use the Horizon (Dashboard) and also modify the HEAT-Template from [Step 18: Your VM will be reachable via IPv4](/optimist/guided_tour/step18/).
+Previously, you created a VM from scratch and also learned some HEAT basics. In this step you will boot a VM from an SSD volume. There are different ways to do this.
+In this step, we will first outline how to do so using Horizon (Dashboard) and secondl outline a different method which modifies the HEAT-Template from [Step 18: Your VM will be reachable via IPv4](/optimist/guided_tour/step18/).
 
 ## The Horizon (Dashboard) way
 
 To get started, you need to log in to Horizon, as described in "Step 1: The Horizon (Dashboard)" [Step 1: The Horizon (Dashboard)](/optimist/guided_tour/step1/).
-Now you create a new volume with *Project → Volumes → Volumes* and a click on *+ CREATE VOLUME*.
+Next, create a new volume with *Project → Volumes → Volumes* and a click on *+ CREATE VOLUME*.
 
 ![](attachments/04052019211.png)
 
-You need to fill in some information in the new overlay; a description for all required points are below. After filling out the form, click on *CREATE VOLUME*
+You need to fill in some information in the new overlay; a description for all required fields are below. After filling out the form, click on *CREATE VOLUME*
 
 - Volume Name: Defines the name of the volume. In our example it will be prefilled with *Ubuntu 16.04 Xenial Xerus - Latest*.
 - Description: If required, you can add a short description. In our example, it is empty.
 - Volume Source: You can choose between *Image* and *No source, empty image*. Please use *Image*.
-- Use image as a source: You can choose any image, here we choose *Ubuntu 16.04 Xenial Xerus - Latest (276.2 MB)*.
+- Use image as a source: You can choose any image, here we used *Ubuntu 16.04 Xenial Xerus - Latest (276.2 MB)*.
 - Type: Three options are available *high-iops*, *low-iops* or *default*. To use the SSD storage, you need to choose *high-iops*.
-- Size: You can define the size of the volume, we use 20 GiB.
+- Size: You can define the size of the volume, we chose 20 GiB.
 - Availability Zone: Again there are three options available *Any Availability Zone*, *es1*, or *ix1*. Use *ix1*.
 
 ![](attachments/04052019212.png)
@@ -38,9 +37,9 @@ After volume creation, it should look like this:
 ![](attachments/04052019213.png)
 
 There are two options to start a VM.
-The first one is to click on the down arrow symbol next to *Edit Volume* as you can see in the picture above and click on *Launch as Instance*.
+The first option is to click on the down arrow symbol next to *Edit Volume* (as pictured above) and click on *Launch as Instance*.
 
-There will be a new overlay where you can choose the name (Instance Name) and the availability zone. Please use the same availability zone as for the image (*ix1*).
+There will be a new overlay where you can choose the name (Instance Name) and the availability zone. Please use the same availability zone as previously used for the image (*ix1*).
 
 ![](attachments/04052019214.png)
 
@@ -48,7 +47,7 @@ Switch to *Source* and choose *Volume* for *Select Boot Source* and click on the
 
 ![](attachments/04052019215.png)
 
-Switch to *Flavor* and choose one of the available flavors with a click on the up-arrow.
+Switch to *Flavor* and choose one of the available flavors by clicking onß the up-arrow.
 
 ![](attachments/04052019216.png)
 
@@ -56,14 +55,13 @@ Next you need to choose a network in *Networks*. Use one of your networks and cl
 
 ![](attachments/04052019217.png)
 
-Now all required settings are set and the VM can be started with *Launch Instance*.
-If needed you can add own security groups(Security Groups) and/or key pairs(Key Pair).
+Now all required settings are in place and the VM can be started with *Launch Instance*.
+If required you can add your own Security Groups and/or Key Pairs.
 
 ## The HEAT way
 
-As explained at the start, you will use the HEAT Template from Step 18.
-It will start a VM anyway, so now you need to adapt it, that it will create an SSD volume and boot from it.
-First you we will add a new parameter "availability_zone":
+This step uses the HEAT Template from Step 18. It will start a VM by default, so the next step is to adapt it, to allow it to create and boot from an SSD volume.
+First, add a new parameter "availability_zone":
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -92,10 +90,10 @@ Now add *boot_ssd* at the end of our template:
             image: "Ubuntu 16.04 Xenial Xerus - Latest"
 ```
 
-For now you have added a new parameter and will use this already in your new volume.
+You have added a new parameter and will use this in your new volume.
 To start the VM from the volume, you need to edit *Instanz* in your template.
-You can delete or comment out *image*, because it is already on your volume.
-Now you add *availability_zone*, *name*, *networks*, and *block_device_mapping*:
+You can delete or comment out *image*, because it is already associated with your volume.
+Now you can add *availability_zone*, *name*, *networks*, and *block_device_mapping*:
 
 ```yaml
     Instanz:
@@ -210,5 +208,5 @@ resources:
 
 ## Conclusion
 
-You have learned to start an instance from a volume and can use SSD storage.
-In addition to this, you have refreshed your heat knowledge and learned how to include a volume.
+You have learned to start an instance from a volume and how to use SSD storage.
+Additionally, you have refreshed your heat knowledge and included a volume.

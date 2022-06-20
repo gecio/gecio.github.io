@@ -1,12 +1,12 @@
 ---
-title: "05: An overview of the most important commands of the OpenStackClient"
+title: "05: An overview of the most important OpenStackClient commands"
 lang: en
 permalink: /optimist/guided_tour/step05/
 nav_order: 1050
 parent: Guided Tour
 ---
 
-# Step 5: An overview of the most important commands of the OpenStackClient
+# Step 5: An overview of the most important OpenStackClient commands
 
 ## Start
 
@@ -16,8 +16,7 @@ some important commands.
 To get more information about a specific subcommand, append the
 `--help` flag to it.
 
-To list all commands, you can use `--help` without any other
-information:
+To list all commands, you can use the `--help` flag:
 
 ```bash
 openstack --help
@@ -25,8 +24,7 @@ openstack --help
 
 ## Server
 
-With the command `openstack server` you can create,
-administrate, or delete a VM.
+With the command `openstack server` you can create, administrate, or delete a VM.
 
 Here is a list of some common commands:
 
@@ -86,7 +84,7 @@ Here are some common commands:
 
 ## Network
 
-To create VMs a network is required. Here are some common network commands:
+To create VMs, a network is required. Here are some common network commands:
 
 - `openstack network create`
     Creates a new network
@@ -135,8 +133,7 @@ Ports connect your VMs to your network. Here are some common commands:
 
 ## Volume
 
-Volumes are persistent storage locations, and will show up as a disk on your
-VM. Here are some common commands:
+Volumes are storage locations that persist across the existence of individual instances. Here are some common commands:
 
 - `openstack volume create`
     Creates a new Volume
@@ -147,9 +144,8 @@ VM. Here are some common commands:
 
 ## Conclusion
 
-Now you know some common OpenStack commands, and have a better overview
-of the system.
+Now you know some common OpenStack commands, and have a better overview of the system.
 
-The mentioned commands are required in the next steps and form the basis for the rest of the guided tour.
+These commands are required in the next steps and form the basis for the rest of the guided tour.
 
 In [Step 6](/optimist/guided_tour/step6/), you will create and use your own SSH key pairs.

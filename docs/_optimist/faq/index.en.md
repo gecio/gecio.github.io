@@ -17,7 +17,7 @@ to be updated, use the following command:
 openstack --debug --help
 ```
 
-The command displays the components that need to be updated. To do this, use the command below. (Replace `<PROJECT>` with the correct
+To update the components, use the command below. (Replace `<PROJECT>` with the correct
 project):
 
 ```bash
@@ -26,8 +26,8 @@ pip install python-<PROJECT>client -U
 
 ## How can I use [VRRP](https://en.wikipedia.org/wiki/Virtual_Router_Redundancy_Protocol)?
 
-To use VRRP, you need to add a rule to a security group that is associated with an actual VM. You can only add this with the
-OpenStack client. An example of adding VRRP to a security group would be:
+To use VRRP, it must first be enabled in a security group which is then assigned to an actual VM. You can only add this with the
+OpenStack client. For example:
 
 ```bash
 openstack security group rule create --remote-ip 10.0.0.0/24 --protocol vrrp --ethertype IPv4 --ingress  default
@@ -35,8 +35,7 @@ openstack security group rule create --remote-ip 10.0.0.0/24 --protocol vrrp --e
 
 ## Why am I charged for Floating IPs I am not using?
 
-We have to charge for reserved Floating IPs, and most often you did not remove the Floating IP after you deleted the VM that
-used it.
+We have to charge for reserved Floating IPs. In this case, there is a high probability that Floating IPs were created but not deleted correctly after use.
 
 To get an overview of your Floating IPs, you can use the Horizon Dashboard, where you can find the list
 _Project_ → _Network_ → _Floating-IPs_.
@@ -67,9 +66,9 @@ Specify the desired new flavor and then the instance name or UUID:
 openstack server resize --flavor FLAVOR SERVER
 ```
 
-Resizing can take some time. During this time, the instance status is RESIZE.
+Resizing can take some time. During this time, the instance status is displayed as RESIZE.
 
-When the resize is complete, the instance status is VERIFY_RESIZE. To change the status to ACTIVE, confirm the resize:
+When the resize is complete, the instance status is displayed as VERIFY_RESIZE. To change the status to ACTIVE, confirm the resize:
 
 ```bash
 openstack server resize --confirm SERVER
@@ -84,8 +83,7 @@ The current flavor is shown. To choose the new flavor, use the "Select a new fla
 
 ## Why are the logs of the compute instance in the optimist dashboard empty?
 
-Due to maintenance work or load balancing of the OpenStack, the instance might have been migrated. In this case, the log file gets cleared.
-New messages will be logged to the file as they occur.
+Due to maintenance work or load redistribution in OpenStack, the instance may have been migrated. In this case, the log file will be recreated and new messages logged here.
 
 ## Why do I get the error "Conflict (HTTP 409)" when creating a swift container?
 
@@ -93,8 +91,8 @@ Swift uses unique names across the entire OpenStack environment. The error messa
 
 ## HowTo Mount Cinder Volumes to Instances by UUID
 
-When attaching multiple Cinder Volumes to an instance, the mount points might be shuffled on every reboot. Mounting the
-volumes by UUID ensures that the proper volumes are reattached to the correct mount points in the event the instance requires a power cycle.
+When attaching multiple Cinder Volumes to an instance, the mount points may be shuffled on every reboot. Mounting the
+volumes by UUID ensures that the correct volumes are reattached to the correct mount points in the event the instance requires a power cycle.
 
 Change the mountpoint in `/etc/fstab` to use the UUID after fetching the infos with `blkid` on e.g.:
 

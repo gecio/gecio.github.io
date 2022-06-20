@@ -12,25 +12,22 @@ parent: Guided Tour
 
 Previously, you created a VM, a security group, and a virtual network separately.
 
-Now you will learn how to create all of them in an integrated way so that
-you can create an entire setup at once. This requires a pre-installed *python-heatclient*, which you already did in [Step 4: Our way to the console](/optimist/guided_tour/step04/).
+Now you will learn how to create all of them at once in an integrated way. This requires a pre-installed *python-heatclient*, which you was already installed in [Step 4: Our way to the console](/optimist/guided_tour/step04/).
 
 ## Installation
 
-Instead of creating a VM separately, you can create it and its dependencies
-using a stack.
+Instead of creating individual manually, any OpenStack resources (e.g. instances, networks, routers, security groups) can also be operated in a defined network; a *stack* (or heat stack).
 
 This makes it easy to compose an entire setup, which you can then easily create
 and delete at will.
 
-In this step, you will use a pre-made heat template and you learn how to
-write one for yourselve.
+In this step, you will use a pre-made heat template and later, will learn how to
+write one yourself.
 
-All things you created in step 9 through 11 are easily expressed in a
+Everything you created in steps 9 through 11 are easily expressed in a
 single template.
 
-Let's start with an [example
-template.](https://github.com/innovocloud/openstack_examples/tree/master/heat/templates)
+Let's start with an [example template.](https://github.com/innovocloud/openstack_examples/tree/master/heat/templates)
 
 This template creates a stack that includes a VM, two security groups, a
 virtual network (including router, port, and subnet), and a floating-IP.
@@ -77,14 +74,14 @@ $ openstack stack create -t SingleServer.yaml --parameter key_name=Beispiel Sing
 
 Here is a short explanation of the executed command:
 
-`openstack stack create` creates the stack, according to the
+The command `openstack stack create` creates the stack, according to the
 template defined with `-t SingleServer.yaml`
 
 We set the parameter `key_name` with `--parameter key_name=BEISPIEL` to
-fill the `key_name` parameter with BEISPIEL (in this template that installs our BEISPIEL key into your VM). We also name our stack
+fill the `key_name` parameter with BEISPIEL (in this template that installs our BEISPIEL key into your VM). We also named our stack
 *SingleServer*.
 
-Finally, we use the `--wait` option to wait and see the creation
+Finally, we used the `--wait` option to wait and observe the creation
 process. If you do not add this option, the command completes
 immediately while the creation process continues in the background.
 
@@ -115,6 +112,6 @@ Enter passphrase for key '/Users/ubuntu/.ssh/id_rsa':
 
 ## Conclusion
 
-Using a heat stack, you recreated steps 9 through 11 in a single command.
+Using a heat stack, you combined steps 9 through 11 in a single command.
 
-In the following steps you will get more details on *Heat* and further examples.
+In the following steps we will look into *Heat* in more detail.

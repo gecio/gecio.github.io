@@ -39,7 +39,7 @@ To log in, click *Connect*.
 ## Change Password
 
 For security reasons we recommend changing your password after
-you received it from GEC.
+receiving it from GEC.
 
 To change the password, click your *User name* (1) in right corner of
  Horizon and then *Settings* (2).

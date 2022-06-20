@@ -16,7 +16,7 @@ The next step is to create a network.
 
 ## The network
 
-You will start with the network. With previous commands, you have
+You will start with the network. As with previous commands, you have
 additional options you can list with `--help`.
 
 To create your network use the following command:
@@ -56,7 +56,7 @@ $ openstack network create BeispielNetzwerk
 
 ## Subnet
 
-Now that you have a network, you have to create a subnet for it.
+Now that you have a network, you need to create a subnet for it.
 
 The subnet creation command also has a few options. In our example, we use:
 
@@ -97,7 +97,7 @@ $ openstack subnet create BeispielSubnet --network BeispielNetzwerk --subnet-ran
 
 ## Router
 
-For your virtual network to be able to reach the internet, you have to
+For your virtual network to be able to reach the internet, you need to
 create a router:
 
 ```bash
@@ -130,7 +130,7 @@ To be able to access the internet, you need to define the external gateway:
 openstack router set BeispielRouter --external-gateway provider
 ```
 
-Now you add the subnet to the router:
+Next, add the subnet to the router:
 
 ```bash
 openstack router add subnet BeispielRouter BeispielSubnet
@@ -141,7 +141,7 @@ openstack router add subnet BeispielRouter BeispielSubnet
 Now that you have your subnet and router, you need to create a port for the
 network.
 
-You can associate the port using the `--network` option:
+You can link the port using the `--network` option:
 
 ```bash
 $ openstack port create BeispielPort --network BeispielNetzwerk

@@ -10,17 +10,16 @@ parent: Guided Tour
 
 ## Start
 
-Now that you have your working network, you will enable IPv6 to your setup.
+Now that you have a working network, the next step is to expand it by enabling IPv6 on your setup.
 
-You do not have to create a new router, as you will use your existing
-one.
+You do not have to create a new router, as the existing one will be used.
 
 The cloud images we supply have a predefined primary network interface with [DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol)
-enabled. Once you have finished this step, IPv6 will work as well.
+enabled. Once you have completed this step, IPv6 will work as well.
 
 ## Subnet
 
-We already have an IPv6 pool defined. You will use it to create a new
+We have already defined an IPv6 pool. It will be used to create a new
 subnet.
 
 Let's list all existing pools:
@@ -34,8 +33,7 @@ $ openstack subnet pool list
 +--------------------------------------+---------------+---------------------+
 ```
 
-You can now use the pool to generate a subnet. It automatically
-forces us to use a prefix length of 64 bits.
+You can now use the pool to generate a subnet. The 64 bit prefix length is fixed for each generated subnet.
 
 You can use the subnet in the creation process, or you can accept the
 default from OpenStack.
@@ -73,7 +71,7 @@ $ openstack subnet create --network BeispielNetzwerk --ip-version 6 --use-defaul
 
 ## Router
 
-Now that the subnet has been created, you add it to the router.
+Now that the subnet has been created, it can be added to the router.
 
 To do so, execute the following command:
 
@@ -84,9 +82,9 @@ openstack router add subnet BeispielRouter BeispielSubnetIPv6
 ## Security Group
 
 The security group rules that you created in [Step 9](/optimist/guided_tour/step09/) were IPv4 rules. Now
-you have to add two more rules for IPv6.
+you need to add two more rules for IPv6.
 
-First, you allow SSH access using IPv6 (::/0 is the equivalent of 0.0.0.0/0
+First, allow SSH access using IPv6 (::/0 is the equivalent of 0.0.0.0/0
 but for IPv6):
 
 ```bash
@@ -140,18 +138,17 @@ $ openstack security group rule create --remote-ip "::/0" --protocol ipv6-icmp -
 
 ## Adjustments to the operating system
 
-Any new VM based on your images will now have both IPv4 and IPv6 configured, and
+Any new VM based on our images will now have both IPv4 and IPv6 configured, and
 our provided heat templates will also enable IPv6.
 
 Many standard vendor images do not have IPv6 configured and only have IPv4 enabled by default.
 
-If you want to enable IPv6 on a VM where it is not enabled, you can follow the
+If you want to enable IPv6 on a VM where it is not already enabled, you can follow the
 instructions below.
 
 ### Ubuntu 16.04
 
-To properly enable IPv6, you have to create the following files with
-the specified content.
+To use IPv6 correctly, the following files must be created with the specified content.
 
 - `/etc/dhcp/dhclient6.conf`
 
@@ -180,13 +177,13 @@ the specified content.
         up dhclient -1 -6 -cf /etc/dhcp/dhclient6.conf -lf /var/lib/dhcp/dhclient6.ens3.leases -v ens3 || true
     ```
 
-Now that you have created the files, you will reenable the interface:
+Now that you have created the files, you can reenable the interface:
 
 ```bash
 sudo ifdown ens3 && sudo ifup ens3
 ```
 
-Once this is completed, you will have working IPv4 and IPv6 addresses.
+Once complete, you will have working IPv4 and IPv6 addresses.
 
 If you want to automate the actions above, you can add this to the *cloud-init*
 part of our heat template (we will go over cloud-init in [Step 19](/optimist/guided_tour/step19/):
@@ -215,8 +212,7 @@ runcmd:
 
 ### CentOS 7
 
-To properly enable IPv6, you have to create the following files with the
-specified content.
+To use IPv6 correctly, the following files must be created with the specified content.
 
 - `/etc/sysconfig/network`
 
@@ -231,13 +227,13 @@ specified content.
     DHCPV6C=yes
     ```
 
-Now that you have created the files, you will reenable the interface:
+Now that you have created the files, you can reenable the interface:
 
 ```bash
 sudo ifdown eth0 && sudo ifup eth0
 ```
 
-Once this is completed, you will have working IPv4 and IPv6 addresses.
+Once complete, you will have working IPv4 and IPv6 addresses.
 
 If you want to automate the actions above, you can add this to the *cloud-init*
 part of our heat template (we will go over cloud-init in [Step 19](/optimist/guided_tour/step19/):
@@ -272,22 +268,21 @@ runcmd:
 
 ## External access
 
-**Important:** Now that you have enabled IPv6 on the VM, it is reachable from the
-rest of the world on its IPv6 address on the ports that you allowed in the
-security group.
+**Important:** This VM can now be reached from anywhere in the world via its IPv6 address (only on the ports that you allowed in the
+security group).
 
 Unlike IPv4, you do not need to assign a floating IP address to be able to reach
 the VM.
 
-If you want to reach the VM with IPv4, you  have to assign a
+If you want to reach the VM with IPv4, you must assign a
 floating IP address.
 
 If you want to test the IPv6 reachability but do not have access to a
-machine with IPv6, you can use some web-based tools, for example:
+machine with IPv6, you can use certain web-based tools, for example:
 <https://www.subnetonline.com/pages/ipv6-network-tools/online-ipv6-ping.php>
 
 ## Conclusion
 
-In the previous step, you already established a connection with IPv4. Now, you also added access with IPv6.
+In the previous step, you established a connection with IPv4. Access via IPv6 has now also been added.
 
 In the next step, the instance from [Step 7](/optimist/guided_tour/step07/) will be used as a template and made accessible from outside.

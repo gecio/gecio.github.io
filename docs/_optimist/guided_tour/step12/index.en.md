@@ -10,11 +10,11 @@ parent: Guided Tour
 
 ## Start
 
-Even though you already created a VM in [Step 7](/optimist/guided_tour/step07/), that VM was not usable as it was not connected to a network, let alone the internet. Let's create one that you can actually log on to.
+Although you already created a VM in [Step 7](/optimist/guided_tour/step07/), the VM was not usable as it was not connected to a network, let alone the internet. Let's create one that you can actually log on to.
 
 ## Installation
 
-To create this VM, you add some parameters to the command we used in [Step 7](/optimist/guided_tour/step07/):
+To create this VM, add some parameters to the command we used in [Step 7](/optimist/guided_tour/step07/):
 
 ```bash
 $ openstack server create BeispielInstanz --flavor m1.small --key-name Beispiel --image "Ubuntu 16.04 Xenial Xerus - Latest" --security-group allow-ssh-from-anywhere --network=BeispielNetzwerk
@@ -93,9 +93,9 @@ openstack server add floating ip BeispielInstanz 185.116.245.145
 
 ## Usage
 
-You now should have a reachable VM.
+You should now have a reachable VM.
 
-To see if all worked correctly, log in to your VM with SSH.
+To check if all worked correctly, log in to your VM with SSH.
 
 **IMPORTANT**: You can only log in if the specified ssh key exists and is
 accessible (if it does not work, follow the instructions in [Step 6](/optimist/guided_tour/step06/)).
@@ -111,11 +111,11 @@ Enter passphrase for key '/Users/ubuntu/.ssh/id_rsa':
 
 ## Clean-Up
 
-If you want to delete all parts you just created, you will have to delete them
-in a logical order.
+If you want to delete all components you just created, you must delete them
+in the following order.
 
-If you do not delete them in the correct order, you will not be allowed to delete
-components that other components depend on.
+If you do not delete them in the correct order, you will be unable to delete
+components that other resources depend on.
 
 - Instance
   - `openstack server delete BeispielInstanz`
@@ -134,5 +134,4 @@ components that other components depend on.
 
 You have now created a VM based on your knowledge from steps 7 to 11, you can reach it from the internet, and have logged in with SSH.
 
-In the next step, you will break away from individual instances and
- will create a stack.
+In the next step, you will break away from individual instances and will create a stack.

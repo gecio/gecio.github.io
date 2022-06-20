@@ -1,22 +1,20 @@
 ---
-title: "09: Security Group"
+title: "09: Security Groups"
 lang: en
 permalink: /optimist/guided_tour/step09/
 nav_order: 1090
 parent: Guided Tour
 ---
 
-# Step 9: Security Group
+# Step 9: Security Groups
 
 ## Start
 
-For security reasons, any incoming traffic to a VM is denied.
+By default, any incoming traffic to a VM is denied.
 
-To be able to access a VM, you need to assign it to least one security
-group.
+To allow access to an instance, at least one security group must be created and assigned to the instance.
 
-While you can add all access rules to a single security
-group, we recmmend using a separate security group for each service.
+While you can add all access rules to a single security group, we recommend using a separate security group for each service.
 
 ## Create a Security Group
 
@@ -41,7 +39,7 @@ openstack security group create allow-ssh-from-anywhere --description Beispiel
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 
-Now that you have created an empty security group, you will add some
+Now that you have created an empty security group, you need to add some
 rules.
 
 Some commonly used options are:
@@ -56,7 +54,7 @@ Some commonly used options are:
 - `--ingress` or `--egress:` ingress is incoming traffic and egress is
     outgoing traffic (no arguments possible)
 
-You use these options to create a rule for your new seurity group to
+You can use these options to create a rule for your new security group to
 allow SSH from anywhere:
 
 ```bash
@@ -82,7 +80,7 @@ $ openstack security group rule create allow-ssh-from-anywhere --protocol tcp --
 +-------------------+--------------------------------------+
 ```
 
-Next, you verify if your security group was created correctly:
+Next, verify if your security group was created correctly:
 
 ```bash
 $ openstack security group show allow-ssh-from-anywhere
@@ -107,4 +105,4 @@ $ openstack security group show allow-ssh-from-anywhere
 
 ## Conclusion
 
-You have successfully created the security group. In the next step, you learn how to add a network.
+You have successfully created a security group. In the next step, you learn how to add a network.

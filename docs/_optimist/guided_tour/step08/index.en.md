@@ -28,7 +28,7 @@ $ openstack server list
 +--------------------------------------+--------------+--------+---------------------------------------------------+------------------------------------+
 ```
 
-This returns a list of all your VMs. You find the ID in column *ID*, and the name in column *Name*.
+This returns a list of all your VMs. You can find the ID in column *ID*, and the name in column *Name*.
 
 Now that you have this information, you can delete it:
 
@@ -36,7 +36,7 @@ Now that you have this information, you can delete it:
 openstack server delete 801b3021-0c00-4566-881e-b50d47152e63
 ```
 
-If you ask for a new list of your VMs, it should return nothing at all:
+If you re-run the command, it should return nothing at all:
 
 ```bash
 $ openstack server list

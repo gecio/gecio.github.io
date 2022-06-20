@@ -10,13 +10,13 @@ parent: Guided Tour
 
 ## Start
 
-Now that you have a simple template with a parameter, you will add the network.
+Now that you have a simple template with a parameter, you can add the network.
 
 ## The template
 
-You continue using the template you previously created.
+Continue using the template you previously created.
 
-First, you add a new parameter, the ID of the external network, and name it
+First, add a new parameter, the ID of the external network, and name it
 *public\_network\_id,*. Also define a default *provider*:
 
 ```yaml
@@ -40,9 +40,9 @@ resources:
 
 ## Network
 
-Next, you add the network.
+Next, add the network.
 
-Like the VM, the network is a `resource`, so you add it to that block.
+Like the VM, the network is a `resource`, it will be added to that block.
 
 The type for network resources is *`OS::Neutron::Net`*
 
@@ -72,18 +72,15 @@ resources:
 
 ## The port
 
-Now that you have defined a network you can add the port, which is a resource with
-type *`OS::Neutron::Port`*.
+Now that you have defined a network you can add the port, which is a resource with type *`OS::Neutron::Port`*.
 
-To make sure that this port is used by your VM, you add the *networks*
-property to it. You also define a *port* property that then will use the *get\_resource*
+To ensure that this port is used by your VM, add the *networks* property to it. Define a *port* property that then will use the *get\_resource*
 function to link it to the *Port*.
 
-Furthermore, you want to link the port to the network by adding a *network*
-property that also uses the *get\_resource* function to link it to the
+Furthermore, you want to link the port to the network by adding a *network* property that also uses the *get\_resource* function to link it to the
 *Netzwerk*.
 
-By now, your template looks like this:
+At this point, your template looks like this:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -118,10 +115,9 @@ resources:
 
 ## The router
 
-Your network needs a router, so you add a *Router* resource, with the
-type *`OS::Neutron::Router`.*
+Your network needs a *Router* resource, with the type *`OS::Neutron::Router`.*
 
-You use your parameter to define the external network it will use:
+With this type it is important to define the external network it will use:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -162,11 +158,9 @@ resources:
 
 ## The subnet
 
-Now you define a subnet for your network. This is the *Subnet* resource
-with type *`OS::Neutron::Subnet.`*
+Next, define a subnet for your network. This is the *Subnet* resource with type *`OS::Neutron::Subnet.`*
 
-It is in the subnet where you define IP information like nameserver(s), the
-IP version, the IP range, and other IP related settings:
+It is in the subnet that you define IP information like nameserver(s), the IP version, the IP range, and other IP-related settings:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -220,12 +214,9 @@ resources:
 
 ## Subnet bridge
 
-Finally, you define a subnet bridge with type
-*`OS::Neutron::RouterInterface`*. This associates the subnet and the router
-so that VMs in that subnet will use the router.
+Finally, define a subnet bridge with type *`OS::Neutron::RouterInterface`*. This associates the subnet with the router to ensure that VMs in that subnet will use the router.
 
-You also define the *depends\_on* property, which makes sure that the subnet
-bridge will only be created if *Subnet* is available:
+Additionally, you can define the *depends\_on* property, which ensures that the subnet bridge will only be created if *Subnet* is available:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -286,5 +277,4 @@ resources:
 
 ## Conclusion
 
-You have now defined the full network. When the stack is created, it
- creates a VM and all the required components to give it connectivity. The next step is to assign a public IP address to the instance.
+You have now created the full network. When the stack is created, it will create a VM and all the required components to give it connectivity. The next step is to assign a public IP address to the instance.

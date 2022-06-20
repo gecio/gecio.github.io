@@ -10,21 +10,20 @@ parent: Guided Tour
 
 ## Start
 
-At first glance, it might look like that creating a VM with a *Heat* template, or
-directly with the OpenStack client takes the same time. While this is true if you
+At first, it may look like that creating a VM with a *Heat* template, or
+alternatively with the OpenStack client takes the same amount of time. While this is true if you
 only want to create the VM once, the advantage of using *Heat* is
 that you can reuse the template.
 
-Now that you have your simple template, you get to know *Heat* better by
-adding a variable parameter to your template.
+Now that you have a simple template, you can familiarise yourself with *Heat* by adding a variable parameter to your template.
 
-## Parameter
+## Parameters
 
 In this example, you will add a parameter for the SSH key. The advantage of this
-is that you can use a VM with different keys without changing our template.
+is that you can use a VM with different keys without changing the template.
 
-You need to define the parameter and also define its type. The proper type for
-what we want to accomplish is `string`:
+Define the parameter and its type. The correct type for
+what we want to accomplish here is `string`:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -34,8 +33,8 @@ parameters:
         type: string
 ```
 
-Now that you have defined our first parameter, you will add the same resource to
-your template like this:
+Now that you have defined the first parameter, you can add the same resource to
+your template as follows:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -54,13 +53,12 @@ resources:
         flavor: m1.small
 ```
 
-Now you will actually use your parameter, and will replace *Beispiel* with
+Now you can actually use your parameter, and can replace *Beispiel* with
 your parameter.
 
-You can do this with the get\_param syntax (for getting the parameter).
+You can do this with the get\_param syntax (to get the parameter).
 
-The template is now ready to use and you can define the key\_name from the
-command line like in our previous command line:
+The template is now ready to use and you can define the key\_name from the command line as demonstrated in our previous command:
 
 ```yaml
 heat_template_version: 2014-10-16

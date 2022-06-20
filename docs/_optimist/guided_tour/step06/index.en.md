@@ -10,17 +10,13 @@ parent: Guided Tour
 
 ## Start
 
-To access your VMs with SSH you need to create an SSH keypair.
-
-If you already have a keypair, you do not need to create a new one. The
-only exception to this is if you have an ED25519
-keypair. This keypair is not usable due to a bug in the OpenStack OpenSSL.
+To access your VMs with SSH you need to create an SSH keypair. If you already have a keypair, you do not need to create a new one.
 
 ## Creation
 
-As mentioned in [Step 2](/optimist/guided_tour/step2/), there are many ways to create an SSH keypair.
+As mentioned in [Step 2](/optimist/guided_tour/step2/), there are several ways to create an SSH keypair.
 
-Here you will create one from the console using the following command:
+You may create one from the console using the following command:
 
 ```text
 $ ssh-keygen -t rsa -f Beispiel.key
@@ -45,17 +41,15 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-The command above generates two files, this is why it is referred to as
-keypair.
+The command above generates two files, i.e. the aforementioned key pair.
 
-The two generated files are Beispiel.key (private key) and
-Beispiel,key.pub (public key).
+The two generated files are Beispiel.key (private key) and Beispiel,key.pub (public key).
 
-**You should always keep your private key at a secure location, while you distribute the public key to places where you want access to.**
+**You should always keep your private key in a secure location, while distributing the public key to places you require access to.**
 
 ## Installation
 
-To start using your new keypair, you need to add it to your OpenStack environment. You will do this with the OpenStack client.
+To start using your new keypair, you need to add it to your OpenStack environment. You can do this with the OpenStack client.
 
 Use the command below (in our example, the created keypair is stored in
 `~/.ssh/`. If your keys are saved in a different location, you need to copy the
@@ -72,8 +66,7 @@ $ openstack keypair create --public-key ~/.ssh/Beispiel.key.pub Beispiel
 +-------------+-------------------------------------------------+
 ```
 
-You can check if everything worked by listing the keys. The one you
-just uploaded should be also visible.
+You can check that this worked by listing the keys. The one you just uploaded should be also visible.
 
 ```bash
 $ openstack keypair list

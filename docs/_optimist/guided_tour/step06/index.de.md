@@ -17,8 +17,7 @@ notwendig, ein Key Pair zu erzeugen und dieses im Gegensatz zu Schritt
 2 auch zu nutzen.
 
 Sollte bereits ein Keypair vorhanden sein, ist es nicht notwendig einen neuen
-zu erstellen. Eine Ausnahme besteht hier für ED25519 SSH Keys, diese können
-aktuell nicht genutzt werden.
+zu erstellen.
 
 Installation
 ------------
@@ -38,7 +37,7 @@ Enter same passphrase again:
 Your identification has been saved in Beispiel.key.
 Your public key has been saved in Beispiel.key.pub.
 The key fingerprint is:
-SHA256:UKSodmr6MFCO1fSqNYAoyM7uX8n/O5a43cPEV5vJXW8 
+SHA256:UKSodmr6MFCO1fSqNYAoyM7uX8n/O5a43cPEV5vJXW8
 The key's randomart image is:
 +---[RSA 2048]----+
 |    .  .o        |

@@ -10,10 +10,9 @@ parent: Guided Tour
 
 ## Start
 
-In the previous steps, you used a pre-made heat template. Now you will learn how a
-heat template works.
+In the previous steps, you used a pre-made heat template. The next step is to understand how heat templates are built.
 
-## The template
+## The Template
 
 Every heat template follows the following structure:
 
@@ -41,11 +40,10 @@ conditions:
 
 ## Heat Template Version
 
-The template version follows a strict pattern and defines what commands
+Template versions have cannot be chosen arbitrarily as they have fixed specifications which define what commands
 are available to use.
 
-You can use the following versions, although it is recommended to use the latest
-one:
+You can use any of the following versions, although we recommended using the latest one:
 
 - 2013-05-23
 - 2014-10-16
@@ -57,13 +55,9 @@ one:
 
 ## Description
 
-The description is an optional section that describes the stack. You can
-put anything you want here.
+The description is an optional section that describes the stack.
 
-We recommend adding a description of how to use the template, what
-it is about, and anything else that is useful. This makes
-it easier to share with others and reminds you what the
-template does in case you have not used it for a while.
+We recommend adding a description of how to use the template, what it is about, any other useful information. This makes it easier to share with others and However, it makes sense, because the template can be described in its basic features and any special features can be pointed out directly.
 
 You can also add comments by starting them with the *\#* character. It can be used to temporarily disable lines, or to add more documentation to
 the template.
@@ -71,13 +65,14 @@ the template.
 ## Parameter Groups
 
 In this section, you can specify the parameters, how they should group,
-and the order of them.
+and their order.
 
-The groups are divided into a list that contains single parameters.
+The groups are divided into a list containing single parameters.
 
-Every parameter should only have one group because of possible errors
+Every parameter should only have one group to avoid possible errors
 later.
-The structure looks like this:
+
+Each parameter group is structured as follows:
 
 ```yaml
 parameter_groups:
@@ -93,12 +88,12 @@ parameter_groups:
 - `parameter`: A list of all parameters in this group
 - `name of the parameter`: Name of the parameter that was defined in the parameter section
 
-## Parameter
+## Parameters
 
 In this section you can specify the required parameters for your template.
 
-Parameters are usually used to make it easy to change certain parts of
-the template, for example, what SSH key is used.
+Parameters are typically used to make it easy to change certain parts of
+the template, for example, which SSH key is used.
 
 Each parameter is defined separately, starting with the name, with
 the attributes defined underneath:
@@ -117,19 +112,19 @@ the attributes defined underneath:
 ```
 
 - `Parameter Name`: Name of the parameter
-- `type`: The type of the parameter (string, number, json,
+- `type`: The parameter type (string, number, json,
     comma\_delimited\_list, boolean)
-- `label`: Name of the parameter (optional)
-- `description`: The description of the parameter (optional)
-- `default`: Default value of the parameter. Will be used, if the
+- `label`: The parameter Name (optional)
+- `description`: Description of the parameter (optional)
+- `default`: Default value of the parameter. Will be used if the
     parameter isn't defined (optional)
-- `hidden`:  If the parameter should be hidden in the creation process,
-    you can set hidden: *true* as parameter (Optional and set to *false*
+- `hidden`:  To hide the parameter in the creation process,
+    you can set hidden: *true* as a parameter (Optional, and set to *false*
     by default)
 - `constraints`: You can set a list of constraints. If these aren't
     fulfilled, the stack creation will fail.
-- `immutable`: If this parameter is set to true, the parameter can't be
-    changed with a stack update. (This will raise an error if attempted)
+- `immutable`: If this parameter is set to true, the parameter cannot be
+    changed during a stack update. (This will generate an error if attempted)
 
 ## Resources
 
@@ -152,26 +147,24 @@ resources:
 ```
 
 - `ID of the resource`: Must be unique
-- `type`: Type of a resource, for example: OS::NEUTRON::SecurityGroup
+- `type`: Resource type, for example: OS::NEUTRON::SecurityGroup
     (for a security group) (required)
 - `properties`: A list of properties for resources (optional)
-- `metadata`: Metadata belonging to the resource  (optional)
-- `depends_on`: Resources that the resource depends on (optional)
-- `update_policy`: Specifies rules for updates, if required (optional)
-- `deletion_policy`: Specifies rules for the deletion. The options are
-    *Delete, Retain* and *Snapshot*. With heat\_template\_version 2016-10-14, you can also write them in lowercase.
-
-- `external_id`: You can use external IDs, if required
+- `metadata`: Metadata for the respective resource (optional)
+- `depends_on`: Various dependencies to other resources can be stored here (optional)
+- `update_policy`: Update rules can be defined here. As a prerequisite, ensure that the corresponding resource also supports this. (optional)
+- `deletion_policy`: Specifies rules for deletion. The options are
+    *Delete, Retain* and *Snapshot*. With heat\_template\_version 2016-10-14, you can also enter them in lowercase.
+- `external_id`: You can use external resource IDs, if required
 - `condition`: You can set specific conditions for this resource to be
-    created (optional)
+    created under (optional)
 
 ## Output
 
 With the output block, you can specify the parameters to be shown after
 creation.
 
-Examples could be the IP address of a VM, or the URL of a deployed web
-application.
+Examples include the IP address of a VM, or the URL of a deployed web application.
 
 Outputs are specified in sub blocks like this:
 
@@ -184,15 +177,15 @@ outputs:
 ```
 
 - `name of the output`: Must be unique
-- `description`: If required, you can describe the output (optional)
+- `description`: A description can be stored here. (optional)
 - `value`: Value of the output (mandatory)
-- `condition`: Possible conditions (optional)
+- `condition`: Possible conditions can be specified here (optional)
 
-## Condition
+## Conditions
 
-Like other sections, conditions can also be specified in a block.
+Conditions based on the parameters entered by the user when creating or updating the stack can also be specified in a block.
 
-You can set conditions, and if they are not fulfilled, the stack creation fails.
+You can set conditions, and if they are not fulfilled, the stack creation fails. The conditions can be linked to resources, resource properties and outputs.
 
 ```yaml
 conditions:
@@ -205,6 +198,5 @@ conditions:
 
 ## Conclusion
 
-You have learned the basic structure of a heat template and can now start
-creating your own.
+You have learned the basic structure of a heat template and can now begin creating your own.
 With this knowledge, you will create your own heat template in the next step.

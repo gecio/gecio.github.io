@@ -10,18 +10,16 @@ parent: Guided Tour
 
 ## Start
 
-Previously, you have only created a single VM. Now you are going to create
+Previous steps outlined how to create a single VM. The next step is to create
 multiple VMs at the same time.
+
+In this step, two VMs that share a common network will be created.
 
 ## First Steps
 
-To begin with, you split the template into two parts. We are not doing
-this for any reason except to show that it is possible.
+To begin with, split the template into two parts. It is best practice to break larger setups up into multiple files.
 
-It is best practice to break big setups up into multiple files.
-
-First, you start with a simple template containing only the network
-and the port.
+First, start with a simple template which contains only the network and the port.
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -49,15 +47,15 @@ resources:
             - {start: 10.0.0.10, end: 10.0.0.250}
 ```
 
-This is the basic structure for your stack, you will save it as `groups.yaml.`
+This is the basic structure for your stack, the file can be saved under the name `groups.yaml.`
 
-Now you create a new template `exampleserver.yaml` and
-you define the VM here.
+Create a new template `exampleserver.yaml` and define the VM here.
 
 Make sure that `name` and `network_id` are **not** defined.
 
 Use a valid value to fill `image:`. You can use the image name or ID.
-You get either of them by running `openstack image list`.
+Exact image names / IDs can be obtained by running `openstack image list`.
+ß
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -87,8 +85,10 @@ resources:
       network: { get_param: network_id }
 ```
 
-You now change your `groups.yaml` and add a resource group where you add
-the VMs with the required arguments.
+You can now modify your `groups.yaml` and add a resource group where you add the VMs with the required arguments.
+After the file has been updated, it can be saved as `exampleserver.yaml`
+
+The next step is to integrate the second template created as a resource group. The number of instances, the names, etc. can also be specified here:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -135,5 +135,4 @@ openstack stack create -t groups.yaml <Name of the stack>
 
 ## Conclusion
 
-Congratulations, you went from creating a single VM with the web interface
-all the way to creating full stacks with the OpenStack client. Several instances can now be rolled out at the same time using a template and are a good starting point for the OpenStack administration.
+Congratulations, you went from creating a single VM with the web interface to creating full stacks with the OpenStack client. Several instances can now be rolled out at the same time using a template, a good starting point for OpenStack administration.

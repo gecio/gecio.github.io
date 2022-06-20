@@ -10,20 +10,16 @@ parent: Guided Tour
 
 ## Start
 
-So far, you have a VM that is reachable with IPv4. You are now going to add IPv6
-support.
+At this point, you have a VM that is reachable with IPv4. The next step is to add IPv6 support.
 
 ## CloudConfig
 
 Cloud config is a resource with type `OS::HEAT::CloudConfig`.
 
-Cloud config can do many things, but in this case you will use it to
-configure IPv6.
+Cloud config hs a variety of uses, but in this case it will be used to configure IPv6.
 
 You will continue using the template that you have been working on in the
 previous steps.
-
-You will use it to write the files we mentioned earlier.
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -118,9 +114,9 @@ resources:
                 - { direction: ingress, remote_ip_prefix: 0.0.0.0/0, protocol: icmp }
 ```
 
-You have created the files and inserted the appropriate content.
+The files have been created and the appropriate content added.
 
-After you have written all files as in [Step 11: Prepare access to the internet: Add IPv6 to our network](/optimist/guided_tour/step11/), it is still required to restart the interface using the command `runcmd`.
+As stated in [Step 11: Prepare access to the internet: Add IPv6 to our network](/optimist/guided_tour/step11/), the interface still needs to be restarted using the command `runcmd`.
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -218,7 +214,7 @@ resources:
                 - { direction: ingress, remote_ip_prefix: 0.0.0.0/0, protocol: icmp }
 ```
 
-To get a connection with IPv6 it is required to update the SecurityGroup with rules for IPv6.
+The last step is to adjust the security group rules to allow access via IPv6.
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -320,6 +316,7 @@ resources:
 
 ## Conclusion
 
-You can now customize instances with `Cloud Init` and make IPv6 usable.
+You can now customize instances with `Cloud Init` and use IPv6 usable.
 
-In the next and final step you will start multiple instances with *Heat*.
+In the final step you will learn how to start multiple instances with *Heat*.
+ß

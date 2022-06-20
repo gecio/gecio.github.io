@@ -10,8 +10,8 @@ nav_order: 9500
 
 There are 4 types of images in OpenStack:
 
-- **Public Images:** These images are maintained by us, available to all users, regularly updated and recommended for use.
-- **Community Images:** Previously public images, which have been superseded by newer versions. We're keeping these images until they're no longer in use, so as not to compromise your deployments.
+- **Public Images:** These images are maintained by us, available to all users, and regularly updated and recommended for use.
+- **Community Images:** Previously public images, which have been superseded by newer versions. We will keep these images until they are no longer in use, so as not to compromise your deployments.
 - **Private Images:** Images uploaded by you that are only available to your project.
 - **Shared Images:** Private images, which are either shared by you, or with you, across multiple different projects.
 
@@ -19,7 +19,7 @@ Only the first two types are maintained by us.
 
 ## Public and community images
 
-For your convenience, we're providing you with a number of selected images.
+For your convenience, we are providing you with a number of selected images.
 
 The current list of images is as follows:
 
@@ -35,23 +35,23 @@ The current list of images is as follows:
 
 These images are checked for new releases daily. The latest available version is always a public image, and contains the `Latest`-suffix. All previous versions of an imags are automatically converted to "community images", renamed (`Latest` is replaced by the date of the first upload), and eventially deleted if they are no longer in use at all.
 
-OpenStack and many deployment tools support using these images either by name or by their UUID. By using a name, for example `Ubuntu 22.04 Jammy Jellyfish - Latest`, you can easily stay up to date by redeploying or rebuilding your instances, even if we replace the image in the interim. You can avoid this behaviour by using the UUID instead. This may be useful for cluster deployments, where you want to ensure that all nodes are running the same version of the image.
+OpenStack and many deployment tools support using these images either by name or by their UUID. By using a name, for example, `Ubuntu 22.04 Jammy Jellyfish - Latest`, you can easily stay up-to-date by redeploying or rebuilding your instances, even if we replace the image in the interim. You can avoid this behaviour by using the UUID instead. This may be useful for cluster deployments, where you want to ensure that all nodes are running the same version of the image.
 
-## Linux Images
+## Linux images
 
-All of our provided linux images are unmodified and come directly from their official maintainers. We test them during the upload process to ensure they are deployable.
+All of our provided Linux images are unmodified and come directly from their official maintainers. We test them during the upload process to ensure they are deployable.
 
-## Windows Images
+## Windows images
 
-### What's inside?
+### What is inside?
 
-Sadly, there are no prebuilt images for windows deployments, so we built our own. Our changes are minimal, just enough to allow easy use within our instances.
+Sadly, there are no prebuilt images for Windows deployments, so we built our own. Our changes are minimal, just enough to allow easy use within our instances.
 
 Our images are based on a regular installation of Windows Server 2019 standard edition, version 1809 (LTSC). We have added the latest drivers for our virtualization infrastructure, for the network card and storage.
 
 Next, we installed the most recent OpenSSH build for windows, and the most recent version of PowerShell. Both are required for the following provisioning steps, and to allow you to initially connect to your instance.
 
-We also enabled the RDP service, which is required for remote desktop connections. Don't forget to add the required security groups for this, and be sure to limit access as much as possible. We have also disabled AutoLogon for security reasons.
+We also enabled the RDP service, which is required for remote desktop connections. Do not forget to add the required security groups for this, and be sure to limit access as much as possible. We have also disabled AutoLogon for security reasons.
 
 Our images also come with Spectre and Meltdown mitigations enabled. Additionally we had to disable the random MAC address generator, since our virtual networks enforce fixed MAC addresses.
 
@@ -75,7 +75,7 @@ net user Administrator $password
 
 We strongly discourage using the previous method, adding `admin_pass` to the instances metadata. This is not encrypted or protected in any way, and is not guaranteed to work due to password security requirements.
 
-**Be aware:** Our Images come **without** product keys or licenses. You will have to provide your own.
+**Be aware:** Our images come **without** product keys or licenses. You will have to provide your own.
 
 ## Uploading your own images
 

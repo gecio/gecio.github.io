@@ -29,7 +29,7 @@ Compute Settings
 | Server Groups            |        10           |
 | Server Group Members     |        10           |
 
-Block Storage settings
+Block Storage Settings
 ----------------------
 
 |**Field**                 |**Value**            |
@@ -41,7 +41,7 @@ Block Storage settings
 | Snapshots                |        100          |
 | Volumes                  |        100          |
 
-Network settings
+Network Settings
 ----------------
 
 |**Field**                 |**Value**            |

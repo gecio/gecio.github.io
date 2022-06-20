@@ -1,5 +1,5 @@
 ---
-title: Swift - Serving a Static Website
+title: Swift - Serving Static Websites
 lang: en
 permalink: /optimist/storage/s3_documentation/swiftservestaticwebsite/
 nav_order: 3160
@@ -11,13 +11,13 @@ grand_parent: Storage
 
 ## Introduction
 
-Using the Swift command line, it is possible to serve the data in containers as a static website. The following guide will outline the main steps to get started, as well as including an example of a website.
+Using the Swift command line, it is possible to serve the data in containers as a static website. The following guide outlines the main steps to get started, as well as including an example of a website.
 
-## First Steps
+## First steps
 
 ### Create a container
 
-We will first create a container named `example-webpage` which we will use as the basis of this guide:
+You will first create a container named `example-webpage` which you will use as the basis of this guide:
 
 ```bash
 swift post example-webpage
@@ -25,7 +25,7 @@ swift post example-webpage
 
 ### Make the container publically readable
 
-Next, we must ensure that the container is publically readable. You can learn more about securing containers and setting bucket policies [here](/optimist/storage/s3_documentation/security/):
+Next, you must ensure that the container is publically readable. You can learn more about securing containers and setting bucket policies [here](/optimist/storage/s3_documentation/security/):
 
 ```bash
 swift post -r '.r:*' example-webpage
@@ -41,7 +41,7 @@ swift post -m 'web-index:index.html' example-webpage
 
 ### Enable file listing
 
-Optionally, we can also enable file listing. If you need to provide multiple downloads, enabling the directory listing makes sense:
+Optionally, you can also enable file listing. If you need to provide multiple downloads, enabling the directory listing makes sense:
 
 ```bash
 swift post -m 'web-listings: true' example-webpage
@@ -57,15 +57,15 @@ swift post -m 'web-listings-css:style.css' example-webpage
 
 ### Set error pages
 
-Finally, we should include a custom error page:
+Finally, you should include a custom error page:
 
 ```bash
 swift post -m 'web-error:404error.html' example-webpage
 ```
 
-## Example Webpage
+## Example web page
 
-Let's recap the steps we have taken so far to enable static webpages:
+Let us recap the steps you have taken so far to enable static web pages:
 
 ```bash
 swift post example-webpage
@@ -76,11 +76,11 @@ swift post -m 'web-listings-css:style.css' example-webpage
 swift post -m 'web-error:404error.html' example-webpage
 ```
 
-Once the steps above have been completed, we can now begin to customise our static webpage. The following demonstrates a quick setup using our container `example-webpage`
+Once the steps above have been completed, you can now begin to customise your static web page. The following demonstrates a quick setup using your container `example-webpage`
 
 ### Customising index.html, page.html, and 404error.html pages
 
-This will serve as the homepage, which will create a link to a secondary page.
+This serves as the homepage, which creates a link to a secondary page.
 
 ```html
 <!-- index.html -->
@@ -91,7 +91,7 @@ See the web page <a href="mywebsite/page.html">here</a>.
 </html>
 ```
 
-The next page (page.html) will display an image called `sample.png`:
+The next page (page.html) displays an image called `sample.png`:
 
 ```html
 <!-- page.html -->
@@ -100,7 +100,7 @@ The next page (page.html) will display an image called `sample.png`:
 </html>
 ```
 
-We can also add custom error pages. Note that currently only 401 (Unauthorized) and 404 (Not Found) errors are supported. The following example demonstrates the creation of a 404 Error page:
+You can also add custom error pages. Note that currently only 401 (Unauthorized) and 404 (Not Found) errors are supported. The following example demonstrates the creation of a 404 Error page:
 
 ```html
 <!-- 404error.html -->
@@ -124,16 +124,16 @@ swift upload example-webpage 404error.html
 
 ### Viewing the website
 
-Once all of the above steps have been completed, we can now view our newly created website. The link to the website can be found on the Optimist Dashboard > Object Store > Containers using the link shown.
+Once all of the above steps have been completed, you can now view your newly created website. The link to the website is available on the *Optimist Dashboard → Object Store → Containers* using the link shown.
 
-Clicking on the link displays our newly created website:
+Clicking on the link displays your newly created website:
 
 ![](attachments/Webpage01.png)
 
-Click on "here" to navigate to the page where we uploaded our sample image:
+Click on "here" to navigate to the page where you uploaded your sample image:
 
 ![](attachments/Webpage02.png)
 
-In the event that we try to navigate to a page which does not exist, our custom 404 page will be displayed:
+In the event that you try to navigate to a page which does not exist, your custom 404 page will be displayed:
 
 ![](attachments/Webpage03.png)

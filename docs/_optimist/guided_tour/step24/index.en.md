@@ -72,7 +72,7 @@ $ openstack loadbalancer list
 
 ## Create LB listener
 
-In our example, we want to create a listener for HTTP on port 80. A listener here - as in other LB solutions - refers to the port of the front end..
+In our example, we want to create a listener for HTTP on port 80. A listener here - as in other LB solutions - refers to the port of the front end.
 
 ```bash
 $ openstack loadbalancer listener create --name Beispiel-listener --protocol HTTP --protocol-port 80 Beispiel-LB
@@ -447,7 +447,7 @@ openstack loadbalancer listener set --timeout_client_data 14400000 <Listener ID>
 openstack loadbalancer listener set --timeout_member_data 14400000 <Listener ID>
 ```
 
-If Octavia tries to start a LB in a network with `port_security_enabled = False`, The LB will end up in ERROR state.
+If Octavia tries to start a LB in a network with `port_security_enabled = False`, the LB will end up in an ERROR state.
 
 ## Conclusion
 

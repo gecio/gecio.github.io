@@ -12,7 +12,7 @@ parent: Guided Tour
 
 Previously, you created a VM, a security group, and a virtual network separately.
 
-Now you will learn how to create all of them at once in an integrated way. This requires a pre-installed *python-heatclient*, which you was already installed in [Step 4: Our way to the console](/optimist/guided_tour/step04/).
+Now you will learn how to create all of them at once in an integrated way. This requires a pre-installed *python-heatclient*, which was already installed in [Step 4: Our way to the console](/optimist/guided_tour/step04/).
 
 ## Installation
 

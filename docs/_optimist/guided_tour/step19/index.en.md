@@ -14,7 +14,7 @@ At this point, you have a VM that is reachable with IPv4. The next step is to ad
 
 ## CloudConfig
 
-Cloud config is a resource with type `OS::HEAT::CloudConfig`.
+Cloud config has resource type `OS::HEAT::CloudConfig`.
 
 Cloud config hs a variety of uses, but in this case it will be used to configure IPv6.
 
@@ -319,4 +319,3 @@ resources:
 You can now customize instances with `Cloud Init` and use IPv6 usable.
 
 In the final step you will learn how to start multiple instances with *Heat*.
-ß

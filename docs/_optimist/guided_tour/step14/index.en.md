@@ -40,7 +40,7 @@ conditions:
 
 ## Heat Template Version
 
-Template versions have cannot be chosen arbitrarily as they have fixed specifications which define what commands
+Template versions cannot be chosen arbitrarily as they have fixed specifications that define which commands
 are available to use.
 
 You can use any of the following versions, although we recommended using the latest one:
@@ -114,7 +114,7 @@ the attributes defined underneath:
 - `Parameter Name`: Name of the parameter
 - `type`: The parameter type (string, number, json,
     comma\_delimited\_list, boolean)
-- `label`: The parameter Name (optional)
+- `label`: The parameter name (optional)
 - `description`: Description of the parameter (optional)
 - `default`: Default value of the parameter. Will be used if the
     parameter isn't defined (optional)
@@ -152,12 +152,11 @@ resources:
 - `properties`: A list of properties for resources (optional)
 - `metadata`: Metadata for the respective resource (optional)
 - `depends_on`: Various dependencies to other resources can be stored here (optional)
-- `update_policy`: Update rules can be defined here. As a prerequisite, ensure that the corresponding resource also supports this. (optional)
+- `update_policy`: Update rules can be defined here. As a prerequisite, ensure that the corresponding resource also supports this (optional).
 - `deletion_policy`: Specifies rules for deletion. The options are
     *Delete, Retain* and *Snapshot*. With heat\_template\_version 2016-10-14, you can also enter them in lowercase.
 - `external_id`: You can use external resource IDs, if required
-- `condition`: You can set specific conditions for this resource to be
-    created under (optional)
+- `condition`: You can set specific conditions which need to be met to allow this resource to be created. (optional)
 
 ## Output
 

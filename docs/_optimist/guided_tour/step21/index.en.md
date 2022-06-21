@@ -11,7 +11,7 @@ parent: Guided Tour
 ## Start
 
 Previously, you created a VM from scratch and also learned some HEAT basics. In this step you will boot a VM from an SSD volume. There are different ways to do this.
-In this step, we will first outline how to do so using Horizon (Dashboard) and secondl outline a different method which modifies the HEAT-Template from [Step 18: Your VM will be reachable via IPv4](/optimist/guided_tour/step18/).
+In this step, we will first outline how to do so using Horizon (Dashboard) and secondly outline a different method which modifies the HEAT-Template from [Step 18: Your VM will be reachable via IPv4](/optimist/guided_tour/step18/).
 
 ## The Horizon (Dashboard) way
 
@@ -47,7 +47,7 @@ Switch to *Source* and choose *Volume* for *Select Boot Source* and click on the
 
 ![](attachments/04052019215.png)
 
-Switch to *Flavor* and choose one of the available flavors by clicking onß the up-arrow.
+Switch to *Flavor* and choose one of the available flavors by clicking on the up-arrow.
 
 ![](attachments/04052019216.png)
 

@@ -52,7 +52,7 @@ You have already installed "pip" as package-manager (in [Step 4](/optimist/guide
 pip install s3cmd
 ```
 
-Since S3cmd is now installed, the previously created credentials must be entered in a file called *.s3cfg* in order to begin using it. The file should located in the user's home directory, for example, `/home/username/`
+Since S3cmd is now installed, the previously created credentials must be entered in a file called *.s3cfg* in order to begin using it. The file should be located in the user's home directory, for example, `/home/username/`
 
 The following process can now be used to create the *.s3cfg* file:
 

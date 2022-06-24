@@ -6,6 +6,13 @@ nav_order: 700
 parent: About iMKE
 ---
 
+## New URL
+
+The iMKE-dasboard will be renamed to GKS-dashboard, as the new name reflects
+the affiliation to German Edge Cloud better than the before.
+With this the domain changes as well. The service will now be reachable via
+the new URL …[https://gks.gec.io](https://gks.gec.io), beginning 1st July 2022.
+
 ## Supported Kubernetes versions
 
 With the current release, we support the following Kubernetes versions:

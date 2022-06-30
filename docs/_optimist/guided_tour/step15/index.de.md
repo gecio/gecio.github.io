@@ -6,31 +6,25 @@ nav_order: 1150
 parent: Guided Tour
 ---
 
-Schritt 15: Das erste eigene Heat Orchestration Template (HOT)
-==============================================================
+# Schritt 15: Das erste eigene Heat Orchestration Template (HOT)
 
-Vorwort
--------
+## Einführung
 
-Im folgenden Schritt sind die wichtigsten Elemente eines Templates
-erläutert worden und auf dieses Wissen, wird in diesem Schritt
-aufgebaut.
+Im vorherigen Schritt haben wir die wichtigsten Elemente eines Templates
+erläutert. In diesem Schritt bauen wir auf dieses Wissen auf.
 
-Der Anfang
-------------------------
+# Der Anfang
 
 Dieser ist bei jedem Template gleich und ist immer
 `heat_template_version`
 
-Für das Beispiel wird Version `2016-10-14` genutzt und somit sieht das
-Template erst einmal so aus:
+Für das Beispiel wird Version `2016-10-14` genutzt:
 
 ```yaml
 heat_template_version: 2016-10-14
 ```
 
-Nachdem die `heat_template_version` festgelegt ist, wird dem Template
-nun eine Beschreibung hinzugefügt:
+Nachdem die `heat_template_version` festgelegt ist, können Sie dem Template eine Beschreibung hinzufügen:
 
 ```yaml
 heat_template_version: 2016-10-14
@@ -38,17 +32,15 @@ heat_template_version: 2016-10-14
 description: Ein einfaches Template, um eine Instanz zu erstellen
 ```
 
-Nachdem die Beschreibung in das Template integriert wurde, wird nun eine
-Ressource, also die Instanz hinzugefügt.
+Nachdem die Beschreibung in das Template integriert wurde, fügem wir nun eine
+Ressource, also die Instanz hinzu.
 
-Dabei sind einige Punkte zu beachten, starten wir zunächst mit der
-Ressource.
+Dabei sind einige Punkte zu beachten. Wir starten zunächst mit der Ressource.
 
-Wichtig ist dabei, dass eine Strukturierung mit Leerzeichen genutzt
-wird.
+Wichtig ist dabei, dass wir eine Strukturierung mit Leerzeichen vornehmen.
 
 Dies dient der Übersichtlichkeit, außerdem würden Tabstops zu Fehlern
-führen und nur so kann das Template korrekt ausgeführt werden:
+führen. Nur so kann das Template korrekt ausgeführt werden:
 
 ```yaml
 heat_template_version: 2016-10-14
@@ -59,11 +51,11 @@ resources:
     Instanz:
 ```
 
-Der nächste Schritt ist dann den Typ der Ressource zu benennen.
+Der nächste Schritt ist, den Typ der Ressource zu benennen.
 
 Eine ausführliche Liste aller verfügbaren Typen befindet sich unter
 anderem in der [offiziellen OpenStack
-Dokumentation](https://docs.openstack.org/developer/heat/template_guide/openstack.html)
+Dokumentation](https://docs.openstack.org/developer/heat/template_guide/openstack.html).
 
 Da im Beispiel eine Instanz erstellt werden soll, ist der Typ dann
 folgender:
@@ -78,9 +70,9 @@ resources:
         type: OS::Nova::Server
 ```
 
-Nach dem Typ sind dann die Eigenschaften der nächste Punkt.
+Nun geben wir die Eigenschaften an.
 
-Im Beispiel soll dies ein SSH-Key, ein Flavor und ein Image sein:
+Im Beispiel ist das ein SSH-Key, ein Flavor und ein Image:
 
 ```yaml
 heat_template_version: 2016-10-14
@@ -96,8 +88,6 @@ resources:
             flavor: m1.small
 ```
 
-Abschluss
-----------
+## Zusammenfassung
 
-Damit ist das Erste eigenes Template fertiggestellt und kann, wenn es
-gespeichert wird, einfach mit dem OpenStackClienten wie in [Schritt 13: "Der strukturierte Weg zu einer Instanz (mit Stacks)"](/optimist/guided_tour/step13/) beschrieben, gestartet werden.
+Sie haben Ihr erstes eigenes Template fertiggestellt. Nachdem Sie es gespeichert habe, können Sie es mit dem OpenStack Client wie in [Schritt 13](/optimist/guided_tour/step13/) beschrieben, starten.

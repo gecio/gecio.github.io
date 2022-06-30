@@ -6,34 +6,25 @@ nav_order: 1190
 parent: Guided Tour
 ---
 
-Schritt 19: Unsere Instanz lernt IPv6
-=====================================
+# Schritt 19: Unsere Instanz lernt IPv6
 
-Vorwort
--------
+## Einführung
 
 Nachdem im letzten Schritt die Instanz mit einer öffentlichen
-IPv4 Adresse versehen wurde und diese auch per SSH erreichbar ist, wird es nun
-Zeit die Instanz selber anzupassen.
+IPv4 Adresse versehen wurde und diese auch mit SSH erreichbar ist, passen wir in diesem Schritt die Instanz an.
 
-Dafür nutzen wir in diesem Schritt CloudConfig und passen auch die Security Group an.
+Dafür nutzen wir CloudConfig und passen auch die Security Group an.
 
-CloudConfig
------------
+## CloudConfig
 
-Ist eine Ressource und wird daher auch unter `resources` geführt. (Typ =
-`OS::HEAT::CloudConfig`)
+`CloudConfig` ist eine Ressource und wird daher unter `resources` geführt (Typ =
+`OS::HEAT::CloudConfig`).
 
-Es gibt sehr viele Möglichkeiten, was alles in einer Instanz mit
-CloudConfig bearbeiten werden kann.
+In einer Instanz kann mit
+`CloudConfig` alles mögliche bearbeitet werden.
+Im diesem Schritt nutzen wir die Ressource, um alles notwendige für IPv6 vorzubereiten.
 
-Im diesem Schritt beschäftigen wir uns damit, alles notwendige für IPv6
-vorzubereiten.
-
-Der Start macht hierbei das erstellen der entsprechenden Dateien mit dem
-notwendigen Inhalt, den wir bereits aus Schritt 11: Zugriff aus
-dem Internet vorbereiten: Wir ergänzen IPv6 kennen und nutzen CloudConfig
-in der `cloud_config` den Befehl `write_files`:
+Wir beginnen mit dem Erstellen der entsprechenden Dateien. Dazu nutzen wir den Inhalt aus [Schritt 11](/optimist/guided_tour/step11/) und  in `cloud_config` den Befehl `write_files`:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -127,9 +118,9 @@ resources:
                 - { direction: ingress, remote_ip_prefix: 0.0.0.0/0, protocol: icmp }
 ```
 
-Wir haben die Dateien erstellt und den entsprechenden Inhalt eingefügt.
+Wir haben nun die Dateien erstellt und den entsprechenden Inhalt eingefügt.
 
-Wie in [Schritt 11: Zugriff aus dem Internet vorbereiten: Wir ergänzen IPv6](/optimist/guided_tour/step11/) beschrieben, ist es noch notwendig das Interface mit dem Befehl `runcmd` neu zustarten.
+Wie in [Schritt 11](/optimist/guided_tour/step11/) beschrieben, muss das Interface mit dem Befehl `runcmd` neu gestartet werden.
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -325,9 +316,8 @@ resources:
                 - { direction: ingress, remote_ip_prefix: "::/0", protocol: ipv6-icmp, ethertype: IPv6 }
 ```
 
-Abschluss
----------
+## Zusammenfassung
 
-Wir haben nun die Möglichkeit Instanzen per Cloud-Init anzupassen und IPv6 nutzbar gemacht.
+Sie wissen nun, wie man Instanzen mit Cloud-Init anpassen und IPv6 nutzen kann.
 
-Im nächsten und letzten Schritt werden wir mehrere Instanzen per Heat starten.
+Im nächsten und letzten Schritt werden wir mehrere Instanzen mit Heat starten.

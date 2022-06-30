@@ -6,88 +6,74 @@ nav_order: 1210
 parent: Guided Tour
 ---
 
-Schritt 21: Eine Instanz von einem SSD-Volume starten
-=====================================================
+# Schritt 21: Eine Instanz von einem SSD-Volume starten
 
-Vorwort
--------
+## Einführung
 
-In den vorigen Schritten haben wir uns bereits eine eigene Instanz erstellt
-und auch die ersten Grundlagen in HEAT sind gelegt.
-Wir werden in diesem Schritt eine Instanz von einem Volume starten
-und dafür den SSD-Speicher nutzen.
-Auch hier gibt es mehrere Wege unser Ziel zu erreichen,
-daher werden wir in diesem Schritt sowohl das Horizon(Dashboard) nutzen,
-als auch unser HEAT Template aus [Schritt 18](/optimist/guided_tour/step18/) weiter modifizieren.
+In den vorherigen Schritten haben Sie bereits eine eigene Instanz erstellt.
+In diesem Schritt lernen Sie wie man eine Instanz von einem Volume startet und dafür den SSD-Speicher nutzt.
+Auch hier gibt es mehrere Wege, um das zu erreichen. Wir werden in diesem Schritt sowohl das Horizon Dashboard nutzen,
+als auch das HEAT-Template aus [Schritt 18](/optimist/guided_tour/step18/) weiter modifizieren.
 
-Der Weg über das Horizon(Dashboard)
------
+## Der Weg über das Horizon Dashboard
 
-Um zu starten, loggen wir uns zunächst wie in
-"Schritt 1: Das Dashboard (Horizon)" erklärt ins Horizon(Dashboard) ein.
-Hier wechseln wir links in der Seitenleiste auf
-Project → Volumes → Volumes und klicken dann rechts auf "+ Create Volume"
+Loggen Sie sich zunächst wie in
+[Schritt 1](/optimist/guided_tour/step01/) erklärt, ins Horizon Dashboard ein.
+Wechseln Sie links in der Seitenleiste auf
+*Project → Volumes → Volumes*  und klicken rechts auf *+ Create Volume*.
 
 ![](attachments/04052019211.png)
 
-In dem sich  öffnenden Fenster geben wir folgende Optionen an
-und klicken dann auf "Create Volume":
+ Machen Sie in dem sich öffnenden Fenster die folgenden Eingaben:
 
-- Volume Name: Hier wird der Name des Volumes vergeben, dieser kann frei gewählt werden. Im Beispiel wird nach der Auswahl des Images automatisch "Ubuntu 16.04 Xenial Xerus - Latest" eingetragen.
-- Description: In diesem Feld kann eine Beschreibung hinzugefügt werden, je nach Bedarf. Im Beispiel wird keine Beschreibung verwendet.
-- Volume Source: Hier kann zwischen "Image" und "No source, empty image" gewählt werden. Für unser Beispiel nutzen wir "Image".
-- Use image as a source: Es kann ein beliebiges Image genutzt werden. Im Beispiel wird "Ubuntu 16.04 Xenial Xerus - Latest (276.2 MB)" verwendet.
-- Type: Hier besteht die Wahl zwischen "high-iops", "low-iops" und "default". Da wir SSD-Speicher nutzen wollen, wählen wir "high-iops" aus.
-- Size: In diesem Feld bestimmen wir die Größe des Volumes, bei unseren Flavors sind es 20 GiB, daher nutzen wir dies auch für unser Beispiel
-- Availability Zone: Hier kann man zwischen 3 Optionen "Any Availability Zone", "es1" oder "ix1" wählen und die entsprechende Zone festlegen. Im Beispiel nutzen wir ix1.
+- `Volume Name`: Vergeben Sie den Namen des *Volumes*. Dieser ist frei wählbar. Im Beispiel wird nach der Auswahl des Images automatisch *Ubuntu 16.04 Xenial Xerus - Latest* eingetragen.
+- `Description`: In diesem Feld können Sie, je nach Bedarf, eine Beschreibung hinzufügen. In unserem Beispiel verwenden wir keine Beschreibung.
+- `Volume Source`: Hier können Sie zwischen *Image* und *No source, empty image* wählen. Für unser Beispiel nutzen wir *Image*.
+- `Use image as a source`: Sie können ein beliebiges Image nutzen. Im Beispiel verwenden wir *Ubuntu 16.04 Xenial Xerus - Latest (276.2 MB)*.
+- `Type`: Hier können Sie zwischen *high-iops*, *low-iops* und *default* wählen. Da wir SSD-Speicher nutzen wollen, wählen Sie *high-iops* aus.
+- `Size`: In diesem Feld bestimmen Sie die Größe des Volumes. Bei unseren Flavors sind es 20 GiB, daher nutzen wir dies auch für unser Beispiel.
+- `Availability Zone`: Hier können Sie zwischen drei Optionen *Any Availability Zone*, *es1* oder *ix1* wählen und die entsprechende Zone festlegen. Im Beispiel nutzen wir *ix1*.
 
 ![](attachments/04052019212.png)
 
-Nachdem das Horizon das Volume korrekt erstellt hat,
-sollte es in etwa so aussehen:
+Klicken Sie anschließend auf *Create Volume*.
+
+Nachdem Horizon das Volume korrekt erstellt hat, sollte es in etwa so aussehen:
 
 ![](attachments/04052019213.png)
 
-Um eine neue Instanz von diesem Volume zu starten, können wir entweder
-rechts auf den Pfeil nach unten, neben "Edit Volume",
-klicken und dann auf "Launch as Instance" oder
-alternativ dazu kann man  auch links in der Seitenleiste auf
-Compute → Instances wechseln und dort auf "Launch Instane" klicken.
+Um eine neue Instanz von diesem Volume zu starten, können Sie rechts auf den Pfeil nach unten neben *Edit Volume*
+klicken und dann auf *Launch as Instance*. Alternativ dazu können Sie links in der Seitenleiste zu
+*Compute → Instances* wechseln und auf *Launch Instance* klicken.
 
-Im sich öffnenden Fenster geben wir der Instanz einen Namen (Instance Name),
-wählen dieselbe Availability Zone wie weiter oben,
-also ix1 und wechseln dann links auf Source.
+Geben Sie in dem sich öffnenden Fenster der Instanz einen Namen (Instance Name),
+wählen dieselbe *Availability Zone* wie weiter oben,
+also *ix1*, und wechseln links auf *Source*.
 
 ![](attachments/04052019214.png)
 
-Unter Source wählen wir Volume als Select Boot Source aus und klicken dann
-neben unserem erstellten Volume auf den Pfeil nach oben.
+Unter *Source* wählen Sie *Volume* als *Select Boot Source* aus und klicken neben dem erstellten Volume auf den Pfeil nach oben.
 
 ![](attachments/04052019215.png)
 
-Nun klicken wir links auf Flavor und wählen einen der möglichen Flavors aus,
-indem wir auf den Pfeil nach oben neben dem gewünschten Flavor klicken.
+Klicken Sie nun links auf *Flavor* und wählen einen der möglichen Flavors aus. Klicken Sie dazu neben dem gewünschten Flavor auf den Pfeil nach oben.
 
 ![](attachments/04052019216.png)
 
-Im nächsten Schritt wählen wir links,
-über den Reiter Networks das Netzwerk für die VM aus.
-Auch hier klicken wir neben dem gewünschten Netzwerk auf den Pfeil nach oben.
+Wählen Sie nun links über den Reiter *Networks* das Netzwerk für die VM aus. Klicken Sie auch hier neben dem gewünschten Netzwerk auf den Pfeil nach oben.
 
 ![](attachments/04052019217.png)
 
-Damit sind alle wichtigen Einstellungen getroffen
-und die Instanz kann mit "Launch Instance" gestartet werden.
-Falls benötigt, können noch eigene Security Groups und/oder
-Key Pairs der Instanz hinzugefügt werden.
+Damit sind alle wichtigen Einstellungen vorhanden und Sie können die Instanz mit *Launch Instance* starten.
+Falls nötig, können Sie der Instanz noch eigene Security Groups und/oder
+Key Pairs hinzufügen.
 
-Der Weg über HEAT
----------------
+## Der Weg über HEAT
 
-Wie bereits im Vorwort erwähnt, nutzen wir unser HEAT Template aus Schritt 18.
+Wie bereits im Vorwort erwähnt, nutzen wir unser HEAT-Template aus [Schritt 18](/optimist/guided_tour/ste18/).
 Dieses Template startet bereits eine Instanz.
 Damit diese nun aber ein SSD-Volume nutzt, bedarf es einiger Änderungen.
-Zunächst fügen wir unseren  Parametern noch die "availability_zone" hinzu:
+Fügen Sie zunächst Ihren Parametern noch die "availability_zone" hinzu:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -103,8 +89,7 @@ parameters:
   default: ix1
 ```
 
-Der nächste Schritt ist am Ende des Templates
-einen eigenen Punkt "boot_ssd" für das Volume hinzuzufügen:
+Als nächstes müssen Sie am Ende des Templates einen eigenen Punkt *boot_ssd* für das Volume hinzufügen:
 
 ```yaml
  boot_ssd:
@@ -117,15 +102,12 @@ einen eigenen Punkt "boot_ssd" für das Volume hinzuzufügen:
             image: "Ubuntu 16.04 Xenial Xerus - Latest"
 ```
 
-Nun haben wir bereits einen Parameter hinzugefügt
-und nutzten diesen auch direkt in unserem neu erstellten Boot-Volume.
-Damit die Instanz auch vom Volume startet,
-überarbeiten wir den Punkt "Instanz" in unserem HEAT-Template .
-Dort können wir den Punkt "image" entfernen
-(im Beispiel ist er per # auskommentiert),
+Nun haben Sie einen Parameter hinzugefügt und nutzten diesen auch direkt in dem neu erstellten Boot-Volume.
+Damit die Instanz auch vom Volume startet, müssenSie den Punkt "Instanz" in Ihrem HEAT-Template überarbeiten.
+Dort können Sie den Punkt *image* entfernen (im Beispiel ist er mit # auskommentiert),
 da dieser ja über das Volume bereitgestellt wird.
-Wir fügen nun noch die "availability_zone", einen Namen "name",
-das Netzwerk "networks" und das Volume "block_device_mapping" hinzu:
+    Fügen Sie nun noch die `availability_zone` , einen Namen  `name`,
+das Netzwerk `networks` und das Volume *block_device_mapping* hinzu:
 
 ```yaml
     Instanz:
@@ -144,7 +126,7 @@ das Netzwerk "networks" und das Volume "block_device_mapping" hinzu:
                   delete_on_termination: "true" } ]
 ```
 
-Damit ist unser HEAT-Template für diesen Schritt fertig und sollte so aussehen:
+Damit ist Ihr HEAT-Template für diesen Schritt fertig und sollte so aussehen:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -238,11 +220,8 @@ resources:
             image: "Ubuntu 16.04 Xenial Xerus - Latest"
 ```
 
-Abschluss
----------
+## Zusammenfassung
 
-In diesem Schritt haben wir gelernt, dass es ohne Weiteres möglich ist,
-eine Instanz auch von einem Volume zu starten
-und auch gleichzeitig schnellen SSD Speicher zu nutzen.
-Außerdem haben wir unsere HEAT-Kenntnisse aufgefrischt
+In diesem Schritt haben Sie gelernt, eine Instanz auch von einem Volume zu starten
+und gleichzeitig einen schnellen SSD Speicher zu nutzen. Außerdem haben Sie Ihre HEAT-Kenntnisse aufgefrischt
 und ein Volume mit eingebunden.

@@ -1,29 +1,25 @@
 ---
-title: "18: Unsere Instanz wird von außen per IPv4 erreichbar"
+title: "18: Unsere Instanz wird von außen über IPv4 erreichbar"
 lang: "de"
 permalink: /optimist/guided_tour/step18/
 nav_order: 1180
 parent: Guided Tour
 ---
 
-Schritt 18: Unsere Instanz wird von außen per IPv4 erreichbar
-=============================================================
+# Schritt 18: Unsere Instanz wird von außen über IPv4 erreichbar
 
-Vorwort
--------
+## Einführung
 
-Im letzten Schritt wurde das komplette Netzwerk eingerichtet
-und es ist nun an der Zeit, die Instanz von außen zu erreichen (u.a. per ICMP
+Im letzten Schritt haben wir das komplette Netzwerk eingerichtet. In diesem Schritt zeigen wir, wie
+die Instanz von außen erreicht werden kann (u.a. über ICMP
 und SSH Zugriff).
 
-Floating-IP
------------
+## Floating-IP
 
-Den Anfang macht die öffentliche IP-Adresse, welche auch als Ressource
-hinzugefügt wird. (Der zugehörige Typ lautet `OS::Neutron::FloatingIP`).
+Zunächst definieren wir die öffentliche IP-Adresse, welche auch als Ressource
+hinzugefügt wird. Der zugehörige Typ lautet `OS::Neutron::FloatingIP`.
 
-Wichtig ist, dass der Floating IP der entsprechende Port und welches das
-öffentliche Netz genutzt wird, mitgeteilt wird:
+Wichtig ist, dass wir der Floating IP den entsprechenden Port und das öffentliche Netz, das genutzt wird, mitteilen:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -87,27 +83,22 @@ resources:
             port_id: { get_resource: Port }
 ```
 
-Security Groups
----------------
+## Security Groups
 
-Wird das oben geschriebene Template gestartet, würde die Instanz
-erstellt werden, nur kann diese aufgrund der voreingestellten Security
-Group nicht erreicht werden.
+Wenn das oben geschriebene Template gestartet wird, würde die Instanz
+zwar erstellt werden, kann aber aufgrund der voreingestellten Security Group nicht erreicht werden.
 
-Um dies zu ändern, wird eine Security Group (Typ
-= `OS::Neutron::SecurityGroup`).
+Um dies zu ändern, legen wir eine Security Group an mit dem Typ
+= `OS::Neutron::SecurityGroup`.
 
-Auch gibt es einige Besonderheiten zu beachten, es wird zum einen mit
-Regeln (rules) gearbeitet und zum anderen müssen selbige noch dem Port
-zugewiesen werden.
+Auch gibt es einige Besonderheiten zu beachten. So wird mit
+Regeln (`rules`) gearbeitet, die dem Port zugewiesen werden müssen.
 
-So kann die `direction` (Richtung des Traffics) in `ingress` (eingehend)
-oder `egress` (ausgehend) eingeteilt, der entsprechende Port oder auch
-die Range der Ports definiert und auch das Protokoll festgelegt
-werden.
+Dann kann die `direction` (Richtung des Traffics) in `ingress` (eingehend)
+oder `egress` (ausgehend) eingeteilt werden. Außerdem können der entsprechende Port oder auch
+die Range der Ports definiert und das Protokoll festgelegt werden.
 
-Außerdem kann mit `remote_ip_prefix` noch festgelegt werden, wer die
-Instanz erreicht (falls nötig).
+Außerdem wird mit `remote_ip_prefix` festgelegt, wer die Instanz erreicht (falls nötig).
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -180,10 +171,8 @@ resources:
                 - { direction: ingress, remote_ip_prefix: 0.0.0.0/0, protocol: icmp }
 ```
 
-Abschluss
----------
+## Zusammenfassung
 
-Die erstellte Instanz ist von außen erreichbar inklusive einer
-öffentliche IP.
+Die erstellte Instanz ist nun von außen erreichbar einschließlich.
 
-Im nächsten Schritt wird die Instanz per CloudConfig angepasst.
+Im nächsten Schritt passen wir die Instanz mit CloudConfig an.

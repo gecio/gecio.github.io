@@ -1,28 +1,22 @@
 ---
-title: "17: Das Netzwerk im Heat"
+title: "17: Das Netzwerk in Heat"
 lang: "de"
 permalink: /optimist/guided_tour/step17/
 nav_order: 1170
 parent: Guided Tour
 ---
 
-Schritt 17: Das Netzwerk im Heat
-================================
+# Schritt 17: Das Netzwerk in Heat
 
-Vorwort
--------
+## Einführung
 
-Im letzten Schritt war ein individueller Parameter das Ziel und in
-diesem das komplette Netzwerk.
+Im letzten Schritt haben wir ein einfaches Template mit einem individuellen Parameter erstellt. In diesem Schritt fügen wir das Netzwerk hinzu.
 
-Das Template
-------------
+## Das Template
 
-Um nicht bei Null zu starten, dient das Template aus dem vorigen Schritt
-als Vorlage.
-
-Wichtig ist dabei, dass direkt ein neuer Parameter hinzufügt wird,
-genauer die ID des öffentlichen Netzwerks:
+Wir verwenden wieder das Template aus dem vorigen Schritt
+als Vorlage und fügen einen neuen Parameter hinzu.
+In unserem Fall ist das die ID des öffentlichen Netzwerks. Wir nennen sie `public_network_id`, und definieren als default `provider`:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -43,14 +37,12 @@ resources:
             flavor: m1.small
 ```
 
-Netzwerk
---------
+## Netzwerk
 
-Nachdem dieser Parameter eingefügt wurde, ist es Zeit das Netzwerk in
-das Template einzufügen.
+Nachdem dieser Parameter eingefügt wurde, fügen wir das Netzwerk in
+das Template hinzu.
 
-Hierbei handelt es sich um eine weitere Ressource und wird unter dem
-Punkt `resources` eingefügt.
+Hierbei handelt es sich um eine weitere Ressource. Diese wird unter `resources` eingefügt.
 
 Der zugehörige Typ lautet `OS::Neutron::Net`:
 
@@ -78,17 +70,15 @@ resources:
             name: BeispielNetzwerk
 ```
 
-Der Port
---------
+## Der Port
 
-Der nächste Schritt ist dann der Port, der Typ lautet dafür
+Nun fügen wir den Port hinzu. Der Typ dafür lautet:
 `OS::Neutron::Port`.
 
-Wichtig ist, dass der Port in das bestehende Netzwerk eingegliedert wird
-und die Instanz dem Port zuzuordnen ist.
+Wichtig ist, dass der Port in das bestehende Netzwerk eingegliedert wird und die Instanz dem Port zugeordnet wird.
 
-Um dies zu erreichen, wird erneut ein get Befehl genutzt und statt dem
-Parameter eine Ressource eingebunden:
+Dazu nutzen wir erneut einen `get` Befehl und binden anstelle des
+Parameters eine Ressource ein:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -119,11 +109,10 @@ resources:
             network: { get_resource: Netzwerk }
 ```
 
-Der Router
-----------
+## Der Router
 
-Nachdem Netzwerk und Port, wird nun ein Router (Typ =
-`OS::Neutron::Router`) in das Template eingebunden.
+Nachdem wir Netzwerk und Port hinzugefügt haben, binden wir einen Router (Typ =
+`OS::Neutron::Router`) in das Template ein.
 
 Bei diesem Typ ist es wichtig, das öffentliche Netzwerk einzubinden:
 
@@ -161,14 +150,11 @@ resources:
             name: BeispielRouter
 ```
 
-Das Subnet
-----------
+## Das Subnet
 
-Der vorletzte Schritt ist das Subnet (Typ = `OS::Neutron::Subnet` )
+Im vorletzten Schritt definieren wir das Subnet (Typ = `OS::Neutron::Subnet` ).
 
-In selbigem werden eigene Nameserver eintragen, die Informationen des
-Netzwerks eingebunden, die IP-Version sowie der IP-Adressraum festgelegt
-und die verfügbaren IPs definiert:
+In diesem tragen wir eigene Nameserver ein, binden die Netzwerk-Informationen ein, legen die IP-Version und den IP-Adressraum fest und definieren die verfügbaren IPs:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -217,20 +203,19 @@ resources:
                 - { start: 10.0.0.10, end: 10.0.0.250 }
 ```
 
-Subnet Bridge
--------------
+## Subnet Bridge
 
-Im letzten Schritt wird eine Subnet Bridge (Typ =
-`OS::Neutron::RouterInterface`) angelegt, also eine Brücke zwischen Router und
+Im letzten Schritt legen wir eine Subnet Bridge (Typ =
+`OS::Neutron::RouterInterface`) an, also eine Brücke zwischen Router und
 Subnet.
 
-Auch gibt es hier eine weitere neue Komponente, genauer `depends_on`.
+Auch gibt es hier eine weitere neue Komponente, `depends_on`.
 
-Damit können wir Resource erstellen lassen, die nur dann gebaut werden,
+Damit können wir Resourcen erstellen lassen, die nur dann gebaut werden,
 wenn es die referenzierte Resource auch gibt.  
 
 In unserem Beispiel wird die Bridge zwischen Subnet und Router nur
-gebaut, wenn es auch ein Subnet gibt.
+gebaut, wenn es ein Subnet gibt.
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -286,9 +271,8 @@ resources:
             subnet: { get_resource: Subnet }
 ```
 
-Abschluss
----------
+## Zusammenfassung
 
-Nachdem nun das komplette Netzwerk eingerichtet wurde, wird im nächsten
-Schritt eine eigene Security Group erstellt und zusätzlich der Instanz
-eine öffentliche IP-Adresse zugewiesen.
+Wir haben nun das komplette Netzwerk eingerichtet. Im nächsten
+Schritt erstellen wir eine eigene Security Group und weisen der Instanz
+eine öffentliche IP-Adresse zu.

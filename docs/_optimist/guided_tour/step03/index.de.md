@@ -6,49 +6,42 @@ nav_order: 1030
 parent: Guided Tour
 ---
 
-Schritt 3: Einen Stack starten
-==============================
+# Schritt 3: Einen Stack starten
 
-Vorwort
--------
+## Einführung
 
-In diesem Schritt beschäftigen wir uns damit, im Horizon Dashboard
-einen Stack zu starten und damit auch das Horizon Dashboard besser
-kennenzulernen.
+In diesem Schritt lernen Sie, im Horizon Dashboard
+einen Stack zu starten.
 
-Wichtige Voraussetzung ist an dieser Stelle ein SSH-Key, den wir in
-Schritt 2 erzeugt haben.
+Wichtige Voraussetzung ist an dieser Stelle ein SSH-Key, den Sie in
+[Schritt 2](/optimist/guided_tour/step02/) erzeugt haben.
 
-Start
------
+## Start
 
-Um einen Stack zu starten, loggen wir uns zunächst im Horizon Dashboard
-mit denen in [Schritt 1](schritt01.md) geänderten Zugangsdaten ein.
+Um einen Stack zu starten, melden Sie sich zunächst im Horizon Dashboard
+mit den in [Schritt 1](/optimist/guided_tour/step01/) geänderten Zugangsdaten ein.
 
-Hier navigieren wir über *Orchestration* zu *Stacks* und klicken auf *Launch
-Stack*.
+Navigieren Sie über *Orchestration* zu *Stacks* und klicken Sie anschließend auf *Launch Stack*.
 
-Um den Stack auch zu starten, benötigen wir zunächst ein Template,
-welches in dem Stack eine Instanz startet.
+Um den Stack zu starten, benötigen Sie zunächst ein Template,
+das in dem Stack eine Instanz startet.
 
-Hierfür nutzen wir die [SingleServer.yaml](https://github.com/gecio/openstack_examples/blob/master/heat/templates/SingleServer/SingleServer.yaml) aus dem [GECio Github Repository](https://github.com/gecio/).
+Nutzen Sie dazu die [SingleServer.yaml](https://github.com/gecio/openstack_examples/blob/master/heat/templates/SingleServer/SingleServer.yaml) Datei aus dem [GECio Github Repository](https://github.com/gecio/).
 
 ![](attachments/13536111.png)
 
-In dem sich nun öffnenden Fenster, wählen wir bei *Template Source*
-**File** aus und nehmen bei *Template File*, die eben heruntergeladene
-`SingleServer.yaml`.
+In dem sich nun öffnenden Fenster, wählen Sie bei *Template Source*
+**File** aus und verwenden Sie bei *Template File*, die zuvor heruntergeladene `SingleServer.yaml` Datei.
 
-Den Rest belassen wir so wie es ist und klicken auf *Next*.
+Belassen Sie den Rest unverändert und klicken Sie auf *Next*.
 
 ![](attachments/13536112.png)
 
-Nun werden weitere Eingaben benötigt, genauer sind das folgende und am
-Ende klicken wir auf Launch:
+Machen Sie nun folgende Eingaben und klicken Sie anschließend auf *Launch*:
 
 - Stack Name: BeispielServer
 - Creation Timeout: 60
-- Password for User: Bitte das eigene Passwort eintragen
+- Password for User: Tragen Sie hier Ihr eigenes Passwort ein
 - availability\_zone: ix1
 - flavor\_name: m1.micro
 - key\_name: BeispielKey
@@ -57,32 +50,30 @@ Ende klicken wir auf Launch:
 
 ![](attachments/13536113.png)
 
-Nun wird der Stack auch direkt gestartet und das Horizon Dashboard
+Nun wird der Stack direkt gestartet und das Horizon Dashboard
 sieht dann so aus:
 
 ![](attachments/13536114.png)
 
-Um nun zu überprüfen ob die Instanz korrekt gestartet wurde, wechseln
-wir in der Navigation auf *Compute* → *Instances* und die Übersicht sieht
-dann wie folgt aus:
+Um zu überprüfen, ob die Instanz korrekt gestartet wurde, wechseln Sie im Navigationsmenü zu *Compute* → *Instances*.
+
+Die Übersicht sieht  wie folgt aus:
 
 ![](attachments/13536115.png)
 
-Nachdem nun also der Stack und auch die darin enthaltene Instanz
-gestartet wurden, löschen wir jetzt wieder den Stack inklusive Instanz.
+Nachdem nun der Stack und die darin enthaltene Instanz
+gestartet wurden, löschen Sie jetzt wieder den Stack inklusive der Instanz.
 
-Wir könnten auch die Instanz alleine löschen, das kann aber im Nachgang
-zu Problemen beim löschen des Stacks führen.
+Sie könnten auch die Instanz alleine löschen, das kann aber im Nachgang
+zu Problemen beim Löschen des Stacks führen.
 
-Um den Stack zu löschen, wechseln wir in der Navigation wieder auf
+Um den Stack zu löschen, wechseln Sie im Navigationsmenü wieder zu
 *Orchestration* → *Stacks*.
 
-Klicken hinter dem Stack, unter *Actions*, auf den Pfeil nach unten und
-wählen dort *Delete Stack*.
+Klicken Sie im Fenster rechts unter *Actions* auf den Pfeil nach unten und wählen dort *Delete Stack*.
 
 ![](attachments/13536116.png)
 
-Abschluss
----------
+## Zusammenfassung
 
-Wir haben unseren ersten Stack erstellt ... und ihn dann gelöscht!
+Sie haben Ihren ersten Stack erstellt und anschließend wieder gelöscht.

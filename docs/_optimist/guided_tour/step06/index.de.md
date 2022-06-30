@@ -1,33 +1,25 @@
 ---
-title: "06: Einen eigenen SSH-Key per Konsole erstellen und nutzen"
+title: "06: Einen eigenen SSH-Key mit der Kommando-Konsole erstellen und nutzen"
 lang: "de"
 permalink: /optimist/guided_tour/step06/
 nav_order: 1060
 parent: Guided Tour
 ---
 
-Schritt 6: Einen eigenen SSH-Key per Konsole erstellen und nutzen
-=================================================================
+# Schritt 6: Einen eigenen SSH-Key mit der Kommando-Konsole erstellen und nutzen
 
-Vorwort
--------
+## Einführung
 
-Um später Zugriff auf den ersten deployten Stack per SSH zu erhalten, ist es
-notwendig, ein Key Pair zu erzeugen und dieses im Gegensatz zu Schritt
-2 auch zu nutzen.
+Um später Zugriff auf den ersten deployten Stack über SSH zu erhalten, muss ein Key Pair erzeugt und im Gegensatz zu [Schritt 2](/optimist/guided_tour/step02/) auch verwendet werden.
 
-Sollte bereits ein Keypair vorhanden sein, ist es nicht notwendig einen neuen
-zu erstellen.
+Falls bereits ein Keypair vorhanden ist, ist es nicht notwendig, einen neuen Key zu erstellen.
 
-Installation
-------------
+## Installation
 
-Wie in Schritt 2 erwähnt, gibt es mehrere Optionen um einen Key zu
+Wie in Schritt 2 erwähnt, gibt es mehrere Möglichkeiten, einen Key zu
 erstellen.
 
-Da wir bereits per Horizon(Dashboard) einen Key erzeugt haben, wird in
-diesem Schritt er direkt über einen Befehl in der Kommandozeile
-erstellt.
+Sie haben bereits mit dem Horizon Dashboard einen Key erzeugt. In  diesem Schritt lernen Sie, den Key mit dem folgenden Befehl in der Kommandozeile zu erstellen.
 
 ```bash
 $ ssh-keygen -t rsa -f Beispiel.key
@@ -52,24 +44,21 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-Mit dem oben genutzten Befehl (`ssh-keygen -t rsa -f Beispiel.key`)
-werden zwei Dateien erzeugt, also das vorher genannte Keypair.
+Mit dem oben genannten Befehl (`ssh-keygen -t rsa -f Beispiel.key`)
+werden zwei Dateien (das Keypair) erzeugt, die `Beispiel.key` Datei und die `Beispiel.key.pub` Datei. Dabei ist
+`Beispiel.key` der private Teil, der nur Ihnen bekannt und an einem sicheren Ort gespeichert sein soll und
+`Beispiel.key.pub`, der als öffentlicher Teil genutzt wird.
 
-Zum einen die `Beispiel.key` Datei und die `Beispiel.key.pub`, dabei ist
-`Beispiel.key` der private Teil, der nur uns bekannt sein soll und
-`Beispiel.key.pub` wird als öffentlicher Teil genutzt.
+## Einsatzort
 
-Einsatzort
-----------
-
-Um den gerade erstellten Key zu nutzen, muss dieser eingebunden und für
+Um den gerade erstellten Key zu nutzen, muss dieser in die OpenStack Umgebung eingebunden und für
 später erstellte Instanzen/Stacks bereit gestellt werden.
 
-Dies geht direkt mit dem vorher installierten OpenStackClient.
+Dies geht direkt mit dem vorher installierten OpenStack Client.
 
-In der Dokumentation gehen wir davon aus, dass der erzeugte Key in
-`~/.ssh/ liegt`, sollte sich dieser an einer anderen Stelle befinden,
-muss das Keypair dorthin kopiert werden oder der Befehl entsprechend
+In dieser Dokumentation gehen wir davon aus, dass der erzeugte Key in
+`~/.ssh/` liegt. Falls er sich an einer anderen Stelle befindet,
+muss das Keypair dorthin kopiert oder der Befehl entsprechend
 angepasst werden:
 
 ```bash
@@ -83,12 +72,12 @@ $ openstack keypair create --public-key ~/.ssh/Beispiel.key.pub Beispiel
 +-------------+-------------------------------------------------+
 ```
 
-Da im weiteren Verlauf der SSH-Key genutzt wird, sollte der Name, der
-statt `Beispiel` vergeben wird, leicht merkbar sein.
+Da im weiteren Verlauf der SSH-Key genutzt wird, sollten Sie einen Namen
+anstelle von `Beispiel` vergeben, den Sie sich leicht merken können.
 
 Um zu überprüfen, ob der Key korrekt abgelegt wurde oder um sich den
-Namen erneut anzeigen zu lassen, nutzt man folgenden
-Befehl:
+Namen erneut anzeigen zu lassen, können Sie folgenden
+Befehl verwenden:
 
 ```bash
 $ openstack keypair list
@@ -99,10 +88,8 @@ $ openstack keypair list
 +----------+-------------------------------------------------+
 ```
 
-Abschluss
----------
+## Zusammenfassung
 
-Da der SSH Key jetzt genutzt werden kann, wird es Zeit weiter vorzugehen und
-eine eigene Instanz zu erstellen.
+Sie haben ein neues SSH Keypair erzeugt und den öffentlichen Key hochgeladen. Sie können den SSH Key nun nutzen und eine eigene Instanz erstellen.
 
-Wie das genau funktioniert, erklären wir in Schritt 7.
+Wie das genau funktioniert, erfahren Sie in [Schritt 7](/optimist/guided_tour/step07/).

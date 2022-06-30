@@ -6,7 +6,6 @@ nav_order: 1000
 has_children: true
 ---
 
-Guided Tour
--------------
+# Guided Tour
 
-Aus dem Browser zum eigenen Stack per Heat
+Vom Browser zum eigenen Stack mit Heat

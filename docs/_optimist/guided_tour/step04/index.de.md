@@ -1,63 +1,54 @@
 ---
-title: "04: Der Weg vom Horizon auf die Kommandozeile"
+title: "04: Der Weg vom Horizon Dashboard zur Kommandozeile"
 lang: "de"
 permalink: /optimist/guided_tour/step04/
 nav_order: 1040
 parent: Guided Tour
 ---
 
-# Schritt 4: Der Weg vom Horizon auf die Kommandozeile
+# Schritt 4: Der Weg vom Horizon Dashboard zur Kommandozeile
 
-## Vorwort
+## Einführung
 
-Auf den ersten Blick kann es komfortabel erscheinen, seine OpenStack
+Auf den ersten Blick mag es komfortabel erscheinen, die OpenStack
 Umgebung mit dem Horizon Dashboard zu verwalten.
 
-Für einfache, nicht wiederkehrende Aufgaben, kann das Horizon Dashboard
-mit seinen grafische Ansichten wirklich hilfreich sein.
+Für einfache, nicht wiederkehrende Aufgaben, ist das Horizon Dashboard mit seinen grafischen Ansichten sehr hilfreich.
 
-Sobald Aufgaben regelmäßig wiederholt werden oder ein komplexerer Stack
-verwaltet werden soll, ist es sinnvoller, den OpenStack Client und auch
-Heat(welches in den späteren Schritten mit erklärt wird) zu verwenden.
+Für sich regelmäßig wiederholende Aufgaben oder für die Verwaltung eines komplexeren Stacks, ist es jedoch sinnvoller, den OpenStack Client und auch Heat (welches in einem späteren Schritt erklärt wird) zu verwenden.
 
-Anfangs mag die Handhabung ungewohnt sein, mit ein wenig Übung kann die
-Arbeit an den eigenen Stacks schnell und effizient erledigt werden.
+Anfangs mag die Handhabung mit OpenStack ungewohnt sein. Mit ein wenig Übung kann die Arbeit an den eigenen Stacks jedoch schnell und effizient erledigt werden.
 
 Der OpenStack Client ist sehr hilfreich bei der Administration der
 OpenStack Umgebung, da dort bereits Komponenten wie Nova, Glance, Heat,
-Cinder, Neutron enthalten sind.
+Cinder, und Neutron enthalten sind.
 
-Da wir auch im weiteren Verlauf der Dokumentation den Client nutzen,
-installieren wir ihn in diesem Schritt.
+Da wir auch im weiteren Verlauf des Tutorials den Client nutzen,
+installieren wir ihn in diesem Kapitel.
 
 ## Installation
 
-Um den OpenStackClient installieren zu können, wird mindestens [Python
-2.7](https://www.python.org/downloads/release/python-2713/) noch die [Python
+Um den OpenStackClient zu installieren, benötigen Sie mindestens [Python
+2.7](https://www.python.org/downloads/release/python-2713/) und die [Python
 Setuptools](https://pypi.python.org/pypi/setuptools) (diese
 sind bei macOS bereits vorinstalliert).
 
-Es gibt verschiedene Optionen die Installation durchzuführen, `pip` hat
-sich hierbei als eine gute Lösung herausgestellt und wird als Grundlage
-in der Dokumentation verwendet.
+Es gibt verschiedene Optionen, die Installation durchzuführen; `pip` hat
+sich hierbei als eine gute Lösung erwiesen und wird als Grundlage
+in dieser Dokumentation verwendet.
 
-Selbiges ist einfach zu bedienen, stellt sicher das die aktuellste
-Version der Pakete genutzt wird und kann im Nachhinein Updates
-einspielen.
+`pip` ist einfach zu bedienen und stellt sicher, dass die aktuellste
+Version der Pakete genutzt wird. Sie können damit auch im Nachhinein Updates einspielen.
 
-Man kann den Client ohne weiteres in root/admin installieren, das kann
-aber zu weiteren Problem führen, daher nutzen wir eine virtuelle
-Umgebung für den Clienten.
+Sie können den Client als root/admin installieren, was aber zu weiteren Problem führen kann. Daher nutzen wir für den Client eine virtuelle
+Umgebung.
 
 ### macOS
 
-Damit nun der [OpenStack
-Client](https://docs.openstack.org/python-openstackclient/latest/) installieren werden
-kann, wird zunächst `pip` benötigt.
+Damit der [OpenStack
+Client](https://docs.openstack.org/python-openstackclient/latest/) installiert werden kann, installieren Sie zunächst `pip`.
 
-Um `pip` zu installieren, wird zunächst die Konsole geöffnet (diese kann
-zum Beispiel über das Launchpad → Konsole geöffnet werden)  und dann
-folgender Befehl ausgeführt:
+Öffnen Sie dazu die Konsole (zum Beispiel über *Launchpad → Konsole*) und führen Sie den folgenden Befehl aus:
 
 ```bash
 $ easy_install pip
@@ -73,8 +64,8 @@ Processing dependencies for pip
 Finished processing dependencies for pip
 ```
 
-Sobald die Installation von `pip` abgeschlossen ist, wird nun die
-Virtuelle Umgebung angelegt:
+Sobald die Installation von `pip` abgeschlossen ist, legen Sie die
+virtuelle Umgebung an:
 
 ```bash
 $ pip install virtualenv
@@ -85,8 +76,8 @@ Installing collected packages: virtualenv
 Successfully installed virtualenv-15.1.0
 ```
 
-Nachdem wir nun mit `virtualenv` eine virtuelle Umgebung nutzen können,
-erstellen wir direkt eine:
+Nachdem Sie nun mit `virtualenv` eine virtuelle Umgebung nutzen können,
+erstellen Sie direkt eine solche Umgebung:
 
 ```bash
 $ virtualenv ~/.virtualenvs/openstack
@@ -94,41 +85,38 @@ New python executable in /Users/iNNOVO/.virtualenvs/openstack/bin/python
 Installing setuptools, pip, wheel...done.
 ```
 
-Jetzt wechseln wir in die erzeugte virtuelle Umgebung:
+Wechseln Sie jetzt in die erzeugte virtuelle Umgebung:
 
 ```bash
 $ source ~/.virtualenvs/openstack/bin/activate
 (openstack) $
 ```
 
-Nachdem dieser Wechsel funktioniert hat, können wir in der geschaffenen
-Umgebung auch direkt den OpenStackClient installieren:
+Anschließend können Sie in der Umgebung direkt den OpenStackClient installieren:
 
 ```bash
 (openstack) $ pip install python-openstackclient
 ```
 
-Da wir im Verlauf der Dokumentation auch andere Services benutzen, installieren wir
-die entsprechenden Clienten gleich mit:
+Da im Verlauf des Tutorials auch andere Services benutzt werden, installieren wir die entsprechenden Klienten gleich mit:
 
 ```bash
 (openstack) $ pip install python-heatclient python-designateclient python-octaviaclient
 ```
 
-Nun verlassen wir die Umgebung auch direkt wieder:
+Verlassen Sie nun die Umgebung wieder:
 
 ```bash
 (openstack) $ deactivate
 ```
 
-Damit wir den OpenStackClient auch nutzen können, ist es nun notwendig
-dies in die Path Variablen aufzunehmen.
+Damit Sie  den OpenStackClient nutzen können, müssen Sie diesen in die Path Variable aufnehmen:
 
 ```bash
 export PATH="$HOME/.virtualenvs/openstack/bin/:$PATH"
 ```
 
-Um zu sehen ob alles korrekt funktioniert hat, testen wir die Ausgabe:
+Um zu sehen, ob alles korrekt funktioniert hat, testen Sie die Ausgabe:
 
 ```bash
 $ type -a openstack
@@ -137,11 +125,9 @@ openstack is /home/iNNOVO/.virtualenvs/openstack/bin/openstack
 
 ### Windows
 
-Um pip zu nutzen, ist zuerst der Wechsel in den Ordner der Python
-Installation notwendig (Speicherort der Standart Installation:
-`C:\Python27\Scripts`).
+Um `pip` nutzen zu können, müssen Sie zuerst in den Installationsordner von  Python wechseln (Standard-Ordner: `C:\Python27\Scripts`).
 
-`pip` wird dann mit dem Befehl `easy_install pip` installiert:
+Um `pip` zu installieren, benutzen Sie den Befehl `easy_install pip`:
 
 ```text
 C:\Python27\Scripts>easy_install pip
@@ -164,9 +150,8 @@ Processing dependencies for pip
 Finished processing dependencies for pip
 ```
 
-Nach der erfolgreichen Installation von `pip`, kann direkt mit pip
-install `python-openstackclient` der OpenStackClient auch installiert
-werden:
+Nach der erfolgreichen Installation von `pip`, können Sie mit `pip
+install python-openstackclient` den OpenStackClient installieren:
 
 ```text
 C:\Python27\Scripts>pip install python-openstackclient
@@ -177,7 +162,7 @@ Collecting python-openstackclient
 
 ### Linux (in diesem Beispiel Ubuntu)
 
-Zunächst wird auch hier `pip` benötigt, dafür wird `apt-get` genutzt:
+Zunächst wird auch hier `pip` benötigt. Wir nutzen dafür `apt-get`:
 
 ```bash
 $ sudo apt-get install python3-pip
@@ -186,8 +171,8 @@ Building dependency tree
 Reading state information... Done
 ```
 
-Sobald die Installation von `pip` abgeschlossen ist, wird nun die
-Virtuelle Umgebung angelegt:
+Sobald die Installation von `pip` abgeschlossen ist, legen Sie die
+Virtuelle Umgebung an:
 
 ```bash
 $ sudo apt-get install python3-virtualenv
@@ -196,8 +181,8 @@ Building dependency tree
 Reading state information... Done
 ```
 
-Nachdem wir nun mit `virtualenv` eine virtuelle Umgebung nutzen können,
-erstellen wir direkt eine:
+Nachdem Sie nun mit `virtualenv` eine virtuelle Umgebung nutzen können,
+erstellen Sie direkt eine solche Umgebung:
 
 ```bash
 $ virtualenv ~/.virtualenvs/openstack
@@ -205,41 +190,39 @@ New python executable in /Users/iNNOVO/.virtualenvs/openstack/bin/python
 Installing setuptools, pip, wheel...done.
 ```
 
-Jetzt wechseln wir in die erzeugte virtuelle Umgebung:
+Wechseln Sie jetzt in die erzeugte virtuelle Umgebung:
 
 ```bash
 $ source ~/.virtualenvs/openstack/bin/activate
 (openstack) $
 ```
 
-Nachdem dieser Wechsel funktioniert hat, können wir in der geschaffenen
-Umgebung auch direkt den OpenStackClient installieren:
+Anschließend können Sie in der Umgebung direkt den OpenStackClient installieren:
 
 ```bash
 (openstack) $ pip install python-openstackclient
 ```
 
 Da wir im Verlauf der Dokumentation auch Heat benutzen, installieren wir
-den entsprechenden Heat Clienten gleich mit:
+den entsprechenden Heat Client gleich mit:
 
 ```bash
 (openstack) $ pip install python-heatclient
 ```
 
-Nun verlassen wir die Umgebung auch direkt wieder:
+Verlassen Sie die Umgebung wieder:
 
 ```bash
 (openstack) $ deactivate
 ```
 
-Damit wir den OpenStackClient auch nutzen können, ist es nun notwendig
-dies in die Path Variablen aufzunehmen.
+Damit Sie den OpenStackClient nutzen können, müssen Sie diesen in die Path Variable aufnehmen:
 
 ```bash
 export PATH="$HOME/.virtualenvs/openstack/bin/:$PATH"
 ```
 
-Um zu sehen ob alles korrekt funktioniert hat, testen wir die Ausgabe:
+Um zu sehen ob alles korrekt funktioniert hat, testen Sie die Ausgabe:
 
 ```bash
 $ type -a openstack
@@ -248,20 +231,17 @@ openstack is /home/iNNOVO/.virtualenvs/openstack/bin/openstack
 
 ## Zugangsdaten
 
-Nachdem der OpenStackClient nun installiert ist, werden noch die
-Zugangsdaten für Openstack  benötigt.
+Nachdem der OpenStackClient installiert ist, benötigen Sie noch die
+Zugangsdaten für Openstack.
 
-Diese können direkt im [Horizon
-Dashboard](https://dashboard.optimist.innovo.cloud/identity/) heruntergeladen
-werden.  Dafür loggen wir uns ein und klicken dann rechts oben in der Ecke auf
-die E-Mail-Adresse und dann auf *Download OpenStack RC File v3*.
-Die heruntergeladene Datei trägt den Projektnamen (Projektname.sh),
-in unserem Beispiel nennen wir sie Beispiel.sh
+Sie können diese direkt im [Horizon
+Dashboard](https://dashboard.optimist.innovo.cloud/identity/) herunterladenn. Loggen Sie sich dazu ein und klicken Sie rechts oben auf die E-Mail-Adresse. Klicken Sie anschließend auf *Download OpenStack RC File v3*.
+Die heruntergeladene Datei trägt den Projektnamen (Projektname.sh). In unserem Beispiel nennen wir sie `Beispiel.sh`.
 
 ### macOS | Linux
 
-Um die Zugangsdaten in den OpenStackClienten einzulesen, führen wir
-nun folgenden Befehl aus:
+Um die Zugangsdaten in den OpenStackClienten einzulesen, führen Sie
+den folgenden Befehl aus:
 
 ```bash
 source Beispiel.sh
@@ -269,20 +249,18 @@ source Beispiel.sh
 
 ### Windows
 
-Um unter Windows die Zugangsdaten einzulesen, ist es notwendig entweder
-*PowerShell*, *Git for Windows* oder [*Linux on Windows*](https://docs.microsoft.com/en-us/windows/wsl/install-win10) zu nutzen.
+Um in Windows die Zugangsdaten einzulesen, müssen Sie entweder
+*PowerShell*, *Git for Windows* oder [*Linux on Windows*](https://docs.microsoft.com/en-us/windows/wsl/install-win10) nutzen.
 
-Bei *Linux on Windows* und *Git for Windows* via *Git Bash*, wird der gleiche Befehl wie im Beispiel für
-macOS | Linux genutzt:
+Bei *Linux on Windows* und *Git for Windows* mithilfe von *Git Bash*, wird der gleiche Befehl wie im Beispiel für macOS | Linux genutzt:
 
 ```bash
 source Beispiel.sh
 ```
 
 Bei der Nutzung von *PowerShell* müssen die Variablen einzeln gesetzt werden.
-Alle notwendigen Variablen befinden sich in der Datei Beispiel.sh und diese kann
-mit einem Editor geöffnet werden.
-Um die Variablen zu setzen, kann folgender Befehl genutzt werden:
+Sie finden alle notwendigen Variablen in der Datei `Beispiel.sh`. Sie können die Datei mit einem Editor öffnen.
+Um die Variablen zu setzen, können Sie den folgenden Befehl benutzen:
 
 ```bash
 set-item env:OS_AUTH_URL -value "https://identity.optimist.innovo.cloud/v3"
@@ -297,13 +275,11 @@ set-item env:OS_INTERFACE -value "public"
 set-item env:OS_IDENTITY_API_VERSION -value "3"
 ```
 
-## Ziel
+## Zusammenfassung
 
-Die Installation des OpenStackClienten ist abgeschlossen und die ersten
-Befehle können damit getestet werden.
+Die Installation des OpenStackClienten ist nun abgeschlossen und Sie können die ersten Befehle damit testen.
 
-Eine Übersicht über alle Befehle, kann mit folgendem Kommando abgerufen
-werden:
+Sie erhalten eine Übersicht über sämtliche Befehle mit dem folgendem Kommando:
 
 ```bash
 openstack --help

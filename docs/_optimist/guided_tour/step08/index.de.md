@@ -6,34 +6,25 @@ nav_order: 1080
 parent: Guided Tour
 ---
 
-Schritt 8: Löschen der ersten eigenen Instanz
-=============================================
+# Schritt 8: Löschen der ersten eigenen Instanz
 
-Vorwort
--------
+## Einführung
 
-Nachdem in Schritt 7: Die erste eigene Instanz die Instanz in
-der Kommandozeile angelegt wurde, wird in diesem Schritt erklärt, wie man eine
-Instanz wieder löscht.
+Nachdem Sie in [Schritt 7](/optimist/guided_tour/step07/), die erste eigene Instanz in der Kommandozeile angelegt haben, erklären wir in diesem Schritt, wie Sie eine Instanz wieder löschen.
 
-Vorgehen
---------
+## Vorgehensweise
 
-Damit eine Instanz generell gelöscht werden kann, wird entweder der
-Name oder die ID der zu löschenden Instanz benötigt.
+Damit Sie eine Instanz löschen können, benötigen Sie entweder den Namen oder die ID der zu löschenden Instanz.
 
-Bei wenigen Instanzen in einem Stack, kann der Name für das Löschen
-verwendet werden.
+Existieren nur wenige Instanzen in einem Stack, können Sie den Namen für das Löschen verwenden.
 
-Sobald allerdings mehrere Instanzen verwendet werden, wird von uns
-empfohlen für das Löschen die ID zu nutzen, da Namen im Gegensatz zu IDs
+Werden allerdings mehrere Instanzen verwendet, empfehlen wir Ihnen, für das Löschen die ID zu nutzen, da Namen im Gegensatz zu IDs
 nicht einzigartig sind.
 
-Der OpenStackClient zeigt einem sonst an, dass es mehrere Instanzen mit
-dem entsprechenden Namen gibt.
+Der OpenStackClient zeigt Ihnen ansonsten an, dass es mehrere Instanzen mit dem entsprechenden Namen gibt.
 
-Um nun eine Liste aller verfügbaren Instanzen zu erhalten, kann
-`openstack server list` als Befehl ausgeführt werden:
+Sie können sich eine Liste aller verfügbaren Instanzen mit dem Befehl
+`openstack server list` anzeigen lassen:
 
 ```bash
 $ openstack server list
@@ -44,12 +35,12 @@ $ openstack server list
 +--------------------------------------+--------------+--------+---------------------------------------------------+------------------------------------+
 ```
 
-Die angezeigte Liste listet alle verfügbaren Instanzen auf und enthält
-neben dem Namen der jeweiligen Instanz, auch die zugehörige ID.
+Die angezeigte Liste enthält alle verfügbaren Instanzen und
+neben dem Namen der jeweiligen Instanz auch die zugehörige ID.
 
-Um die im vorigen Schritt erstelle Instanz zu löschen, wird der Befehl
-`openstack server delete ID` verwendet, wobei "ID" durch die korrekte
-ID der Instanz ausgetauscht wird.
+Um die im vorigen Schritt erstellte Instanz zu löschen, verwenden Sie den Befehl
+`openstack server delete ID`, wobei Sie "ID" durch die korrekte
+ID der Instanz ersetzen müssen.
 
 In unserem Beispiel lautet der Befehl also wie folgt:
 
@@ -66,13 +57,10 @@ $ openstack server list
 $
 ```
 
-Abschluss
----------
+## Zusammenfassung
 
-Nachdem im vorigen Schritt eine Instanz per Hand erstellt wurde, haben
-wir diese Instanz hier gelöscht.
+Nachdem Sie in [Schritt 7](/optimist/guided_tour/step07/) eine Instanz per Hand erstellt haben, haben Sie in diesem Schritt diese Instanz  wieder gelöscht.
 
-Außerdem konnte mit dem Befehl `openstack server list` eine Übersicht
-über alle Instanzen gewonnen werden.
+Außerdem haben Sie gelernt, wie Sie sich mit dem Befehl `openstack server list` eine Liste aller Instanzen anzeigen lassen können.
 
-In Schritt 9: Die erste Security-Group wird an den bisherigen Erfahrungen angeknüpft und das gewonnene Wissen um das Thema Security-Groups erweitert.
+In [Schritt 9](/optimist/guided_tour/step09/) beschäftigen wir uns mit dem Thema Security-Groups.

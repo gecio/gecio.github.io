@@ -8,16 +8,15 @@ parent: Guided Tour
 
 # Schritt 5: Die wichtigsten Befehle des OpenStackClients
 
-## Vorwort
+## Einführung
 
-Nachdem in Schritt 4 der OpenStack Client installiert wurde,
-werden wir in diesem Schritt alle wichtigen Befehle einmal auflisten.
+Nachdem in [Schritt 4](/optimist/guided_tour/step4/) der OpenStack Client installiert wurde, lernen Sie in diesem Schritt alle wichtigen OpenStack fehle kennen.
 
 Die Übersicht der spezifischen Subbefehle kann in der Kommandozeile mit
 einem `--help` hinter dem eigentlichen Befehl separat angezeigt werden.
 
 Um alle Befehle aufzulisten, kann der Schalter `--help` auch ohne
-weitere Angaben von einem Bestandteil  verwendet
+weitere Angaben von einem Bestandteil verwendet
 werden:
 
 ```bash
@@ -26,24 +25,24 @@ openstack --help
 
 ## Server
 
-Mit dem Kommando `openstack server` ist es mögliche eigene Instanz
-zu erstellen, diese zu verwalten, zu löschen und
-andere} administrative Aufgaben durchzuführen.
+Mit dem Kommando `openstack server` können eigene Instanz
+erstellt, verwaltet, gelöscht und
+andere administrative Aufgaben durchgeführt werden.
 
-Hier eine Liste der wichtigsten Kommandos:}
+Hier ist eine Liste der wichtigsten Befehle:
 
 - `openstack server add`
-    Einer bestehenden Instanz können verschiedene Bestandteile (Fixed IP, Floating IP, Security
-    Group, Volume) zugewiesen werden
+    Weist einer bestehenden Instanz verschiedene Bestandteile zu (Fixed IP, Floating IP, Security
+    Group, Volume)
 - `openstack server create`
-    Mit diesem Befehl kann eine neue Instanz erstellt werden
+    Erstellt eine neue Instanz
 - `openstack server delete`
     Löscht die im Befehl angegebene Instanz
 - `openstack server list`
     Listet alle bestehenden Instanzen auf
 - `openstack server remove`
-    Kann verschiedene Bestandteile (Fixed IP, Floating IP, Security
-    Group, Volume) wieder entfernen
+    Entfernt verschiedene Bestandteile (Fixed IP, Floating IP, Security
+    Group, Volume)
 - `openstack server show`
     Zeigt alle verfügbaren Informationen zu der im Befehl genannten
     Instanz an
@@ -51,13 +50,13 @@ Hier eine Liste der wichtigsten Kommandos:}
 ## Stack (Heat)
 
 Genauso wie mit `openstack server ...` Befehlen einzelne Instanzen
-administriert werden, kann man mit `openstack stack ...` ganze
-Stacks verwalten.
+administriert werden, können mit `openstack stack ...` ganze
+Stacks verwaltet werden.
 
-Auch hier eine kurze Auflistung der wichtigsten Befehle:
+Hier ist eine Liste der wichtigsten Befehle:
 
 - `openstack stack create`
-    Kann einen neuen Stack erstellen
+    Erstellt einen neuen Stack
 - `openstack stack list`
     Listet alle bestehenden Stacks auf
 - `openstack stack show`
@@ -71,8 +70,9 @@ Security Groups werden verwendet, um Instanzen eingehende und ausgehende
 Netzwerk-Verbindungen basierend auf IP-Adressen und Ports zu erlauben
 oder zu verbieten.
 
-Auch Security Groups kann man mit dem OpenStackClienten verwalten. Hier
-eine beispielhafte Liste üblicher Aufrufe:
+Security Groups können ebenfalls mit dem OpenStackClient verwaltet werden.
+
+Hier ist eine Liste wichtiger Befehle:
 
 - `openstack security group create`
     Erstellt eine neue Security Group
@@ -90,8 +90,8 @@ eine beispielhafte Liste üblicher Aufrufe:
 
 ## Network
 
-Um später auch Instanzen sinnvoll nutzen zu können, benötigen diesen ein
-Netzwerk, hier eine kurze Auflistung der wichtigsten Befehle um ein
+Um später auch Instanzen sinnvoll nutzen zu können, benötigen diese ein
+Netzwerk. Hier ist eine Liste der wichtigsten Befehle, um ein
 Netzwerk zu erstellen:
 
 - `openstack network create`
@@ -105,27 +105,24 @@ Netzwerk zu erstellen:
 
 ## Router
 
-Damit eine Instanz mit einem Netzwerk verbunden werden kann, ist ein virtueller
-Router notwendig und lässt sich mit diesen Kommando administrieren.
+Damit eine Instanz mit einem Netzwerk verbunden werden kann, ist ein virtueller Router notwendig.
 
-Hier eine kurze Liste der möglichen Befehle:
+Hier ist eine Liste wichtiger Befehle:
 
 - `openstack router create`
     Erstellt einen neuen Router
 - `openstack router delete`
     Löscht einen bestehenden Router
 - `openstack router add port`
-    Weist dem angegebenen Router, den angegebenen Port zu
+    Weist dem angegebenen Router den angegebenen Port zu
 - `openstack router add subnet`
-    Weist dem angegeben Router, das angegebene Subnet zu
+    Weist dem angegeben Router das angegebene Subnet zu
 
 ## Subnet
 
-Um den virtuellen Router korrekt zu betreiben, wird auch ein Subnet
-benötigt, welches mit dem Kommando `openstack subnet` administriert
-werden kann.
+Um den virtuellen Router korrekt betreiben zu können, wird auch ein Subnet benötigt, welches mit dem Kommando `openstack subnet` administriert werden kann.
 
-Möglich Befehle sind:
+Hier ist eine Liste wichtiger Befehle:
 
 - `openstack subnet create`
     Erstellt ein neues Subnet
@@ -137,9 +134,9 @@ Möglich Befehle sind:
 ## Port
 
 Nachdem nun bereits virtuelle Router und Subnets bekannt sind, darf der
-Port nicht fehlen.
+Port nicht fehlen. Ports verbinden die VMs mit dem Netzwerk.
 
-Die wichtigsten Befehle:
+Hier ist eine Liste wichtiger Befehle
 
 - `openstack port create`
     Erstellt einen neuen Port
@@ -151,7 +148,9 @@ Die wichtigsten Befehle:
 ## Volume
 
 Volumes sind persistente Speicherorte, die über die Existenz von
-einzelnen Instanzen hinaus erhalten bleiben. Wichtige Befehle sind:
+einzelnen Instanzen hinaus erhalten bleiben.
+
+Hier ist eine Liste wichtiger Befehle:
 
 - `openstack volume create`
     Erstellt ein neues Volume
@@ -160,13 +159,10 @@ einzelnen Instanzen hinaus erhalten bleiben. Wichtige Befehle sind:
 - `openstack volume show`
     Zeigt alle verfügbaren Informationen zu einem Volume an
 
-## Abschluss
+## Zusammenfassung
 
-In diesem Schritt wurden die wichtigsten Befehle einmal aufgelistet und
-auch mit einer kleinen Erklärung versehen.
+In diesem Schritt sind die wichtigsten OpenStack Befehle aufgelistet und
+erklärt.
+Die Befehle werden für die nächsten Schritten der Guided Tour benötigt.
 
-Die genannten Befehle werden in den nächsten Schritten benötigti und
-bilden somit die Grundlage für die Guided Tour.
-
-In Schritt 6 wird das Thema ein selbst erstelltes SSH Key Pair
-sein.
+In [Schritt 6](/optimist/guided_tour/step6/) zeigen wir, wie Sie ein SSH Key Pair mit der Kommandokonsole erzeugen und benutzen können.

@@ -6,27 +6,21 @@ nav_order: 1200
 parent: Guided Tour
 ---
 
-Schritt 20: Mehrere Instanzen gleichzeitig erstellen
-====================================================
+# Schritt 20: Mehrere Instanzen gleichzeitig erstellen
 
-Vorwort
--------
+## Einführung
 
-Nachdem im Schritt 15 eine Instanz inklusive aller wichtigen
-Einstellungen angelegt wurde, ist der nächste Schritt, mehr als eine
-Instanz per Template zu starten.
+Nachdem Sie in [Schritt 15](/optimist/guided_tour/step15/) eine Instanz inklusive aller wichtigen
+Einstellungen angelegt haben, lernen Sie in diesem Schritt, wie Sie mehr als eine Instanz pro Template starten können.
 
-In diesem Schritt, werden zwei Instanzen erstellt, die ein gemeinsames
-Netzwerk nutzen.
+Dazu erstellen wir zwei Instanzen, die ein gemeinsames Netzwerk nutzen.
 
-Start
------
+## Start
 
-Neben den beiden Instanzen wird auch das Template aufgeteilt und in zwei
-Dateien erstellt.
+Neben den beiden Instanzen teilen wir auch das Template in zwei Dateien auf.
 
-Dies hat verschiedene Teile und den Start macht ein simples Template,
-welches nur ein Net und ein Subnet enthält:
+Wir starten mit einem einfachen Template,
+welches nur ein Netzwerk und ein Subnet enthält:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -54,18 +48,13 @@ resources:
                 - {start: 10.0.0.10, end: 10.0.0.250}
 ```
 
-Dies stellt das Grundgerüst des Stacks dar und wird vorerst als
-`Gruppen.yaml` gespeichert.
+Dieses Template stellt das Grundgerüst des Stacks dar und wird vorerst als `Gruppen.yaml` gespeichert.
 
-Die Instanzen selber werden in einer zweiten Datei `BeispielServer.yaml`
-beschrieben, welche dem gleichen Aufbau wie in den vorigen Schritten
-folgt.
-
-Um `image:` zu füllen kann wahlweise der Image Name oder die Image-ID benutzt werden.
+Die Instanzen selbst beschreiben wir in einer zweiten Datei `BeispielServer.yaml`. Sie haben den gleichen Aufbau wie in den vorigen Schritten.
+Um `image:` zu füllen, kann wahlweise den Image Name oder die Image-ID benutzt werden.
 Eine korrekte Image-ID bzw. einen korrekten Namen erhält man mit `openstack image list`.
 
-Es ist wichtig, dass kein Server-Namen definiert wird und
-`network_id` auch keinen Eintrag erfährt:
+Es ist wichtig, dass kein Server-Namen definiert wird und `network_id` keinen Eintrag hat:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -96,17 +85,11 @@ resources:
             network: { get_param: network_id }
 ```
 
-Nachdem die Datei fertiggestellt wurde, wird diese wie oben beschrieben
-als `BeispielServer.yaml` gespeichert.
+Nachdem wir die Datei fertiggestellt haben, wird diese wie oben beschrieben als `BeispielServer.yaml` gespeichert.
 
-Um weiter fortzufahren, wird die Arbeit am ursprünglichen Template
-(`Gruppen.yaml`) fortgesetzt.
+Als nächstes setzen wir die Arbeit am ursprünglichen Template (`Gruppen.yaml`) fort und binden das zweite erstellte Template als `RessourceGroup` ein.
 
-Hier gilt es nun, das zweite erstellte Template als RessourceGroup
-einzubinden.
-
-Auch ist so direkt die Möglichkeit gegeben, die Anzahl der Instanzen,
-die Namen etc. anzugeben:
+Dadurch können wir direkt die Anzahl der Instanzen, die Namen, usw. angeben:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -145,17 +128,15 @@ resources:
                 - {start: 10.0.0.10, end: 10.0.0.250}
 ```
 
-Nachdem die Arbeit an `Gruppen.yaml` abgeschlossen wurde, kann der so
-erstellte Stack direkt mit dem OpenStackClient gestartet werden:
+Nachdem wir die Arbeit an `Gruppen.yaml` abgeschlossen haben, können wir den so
+erstellten Stack direkt mit dem OpenStackClient starten:
 
 ```bash
 openstack stack create -t Gruppen.yaml <Name des Stacks>
 ```
 
-Abschluss
----------
+## Zusammenfassung
 
-Nachdem am Anfang der Guided Tour noch Instanzen per Hand erstellt
-wurden, können nun bereits mehrere Instanzen gleichzeitig per Template
-ausgerollt werden und stellen einen guten Startpunkt für die Administration
-von OpenStack dar.
+Nachdem Sie am Anfang der Guided Tour noch Instanzen per Hand erstellt
+haben, können Sie nun bereits mehrere Instanzen gleichzeitig über ein Template
+ausrollen. Dies stellt einen guten Ausgangspunkt für die Administration von OpenStack dar.

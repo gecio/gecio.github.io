@@ -6,24 +6,18 @@ nav_order: 1070
 parent: Guided Tour
 ---
 
-Schritt 7: Die erste eigene Instanz
-===================================
+# Schritt 7: Die erste eigene Instanz
 
-Vorwort
--------
+## Einführung
 
-Wir wissen jetzt alles, was nötig ist, um die erste eigene Instanz
-anzulegen und zu starten.
+Sie wissen jetzt alles, was nötig ist, um die erste eigene Instanz anzulegen und zu starten.
 
-Es ist am sinnvollsten, das gleich in einem Stack zu organisieren und
-diesen mit einem Template zu beschreiben, anstatt alle notwendigen
-Arbeitsschritte von Hand durchzuführen.
+Es ist am sinnvollsten, das ganze in einem Stack zu organisieren und
+diesen mit einem Heat-Template oder mit Terraform zu beschreiben, anstatt alle notwendigen Arbeitsschritte von Hand durchzuführen.
 
-Trotzdem erzeugen wir im allerersten Schritt erst mal eine Instanz von
-Hand.
+Um sicher zu gehen, dass Sie die vorherigen Schritte verstanden haben und anwenden können, erzeugen wir jedoch zunächst eine Instanz von Hand.
 
-Installation
-------------
+## Installation
 
 Der Grundbefehl für das Erstellen einer Instanz in der Kommandozeile
 lautet:
@@ -32,7 +26,7 @@ lautet:
 openstack server create test
 ```
 
-Wenn der Befehl ohne weitere Zusätze ausgeführt wird, erscheint direkt
+Wenn Sie den Befehl ohne weitere Zusätze ausführen, erscheint direkt
 eine Fehlermeldung:
 
 ```bash
@@ -58,10 +52,10 @@ openstack server create: error: argument --flavor is required
 
 Der Fehler besagt, dass kein Flavor angegeben ist.
 
-Damit nun eine Instanz gestartet werden kann, wird dem Befehl noch der
-entsprechende Flavor hinzugefügt.
+Damit eine Instanz gestartet werden kann, müssen Sie dem Befehl noch die
+entsprechende Flavor hinzufügen.
 
-Um zu sehen welche Flavors bereit stehen, führen wir folgenden Befehl
+Um zu sehen, welche Flavors vorhanden sind, führen Sie folgenden Befehl
 aus:
 
 ```bash
@@ -80,24 +74,21 @@ $ openstack flavor list
 +--------------------------------------+------------+-------+------+-----------+-------+-----------+
 ```
 
-Sollte man nun den Befehl `openstack stack create Beispiel` mit
+Falls Sie den Befehl `openstack stack create Beispiel` mit
 `--flavor m1.micro` starten, würde erneut eine Fehlermeldung angezeigt
 werden, da weitere Parameter fehlen.
 
-Um eine Instanz über diesen Weg zu starten, wird neben dem
-Flavor(`--flavor`) auch noch der SSH-Key (`--key-name`), das
+Um eine Instanz über diesen Weg zu starten, benötigen Sie neben dem
+Flavor(`--flavor`) auch den SSH-Key (`--key-name`), das
 Image (`--image`), das verfügbare Netz (`--network`, in alten Versionen
 des Clients muss `--nic net_id=` verwendet werden) und eine
-SecurityGroup (`--security-group`) benötigt.
+SecurityGroup (`--security-group`).
 
-Der SSH-Key wurde im letzten Schritt bereits erstellt und braucht so
-nicht erneut angelegt werden.
+Der SSH-Key wurde in einem vorherigen Schritt bereits erstellt und braucht somit nicht erneut angelegt werden.
 
-Damit fehlen noch das Image (`--image`) und das Netz.
+Es fehlen noch das Image (`--image`) und das Netz.
 
-Starten wir zunächst mit dem Image, wie bereits bei dem Flavor, kann
-auch hier eine Übersicht der möglichen Images mit folgendem Befehl
-angezeigt werden:
+Wir starten zunächst mit dem Image. Wie bereits bei dem Flavor, können Sie sich auch hier eine Übersicht der möglichen Images mit dem folgenden Befehl anzeigen lassen:
 
 ```bash
 $ openstack image list
@@ -116,9 +107,7 @@ $ openstack image list
 
 Nun fehlt noch ein Netzwerk.
 
-An dieser Stelle gibt es 2 Möglichkeiten für das Netzwerk, zum einen
-kann man ein sehr simples Netzwerk anlegen und so die Instanz starten,
-dafür nutzt man folgenden Befehl:
+Mit dem folgenden Befehl können Sie ein sehr einfaches Netzwerk anlegen:
 
 ```bash
 $ openstack network create BeispielNetzwerk
@@ -155,15 +144,12 @@ $ openstack network create BeispielNetzwerk
 
 Der Nachteil an diesem Netzwerk ist, dass man die Instanz nicht
 erreichen kann. Soll die Instanz nutzbar sein, wird ein funktionierendes
-Netz benötigt, welches in [Schritt 10](schritt10.md) komplett angelegt
-wird.
+Netz benötigt, welches in [Schritt 10](/optimist/guided_tour/step10/) komplett angelegt wird.
 
-Nachdem alle Bestandteile jetzt bekannst sind, kann die erste Instanz
-erstellt werden.
+Nachdem alle Bestandteile jetzt bekannt sind, können Sie die erste Instanz erstellen.
 
-Dafür wird das `--flavor m1.small`, der SSH-Key aus Schritt 6, das Netzwerk
-von weiter oben, das `--image "Ubuntu 16.04 Xenial Xerus - Latest"` und die
-`--security-group default`:
+Dafür benötigen Sie das `--flavor m1.small`, den SSH-Key aus [Schritt 6](/optimist/guided_tour/step06/), das Netzwerk
+von weiter oben, das `--image "Ubuntu 16.04 Xenial Xerus - Latest"` und die `--security-group default`:
 
 ```bash
 $ openstack server create BeispielServer --flavor m1.small --key-name Beispiel --image 82242d21-d990-4fc2-92a5-c7bd7820e790 --network=BeispielNetzwerk --security-group default
@@ -200,8 +186,7 @@ $ openstack server create BeispielServer --flavor m1.small --key-name Beispiel -
 +-----------------------------+--------------------------------------------------------+
 ```
 
-Weitere mögliche Parameter für die Erstellung einer Instanz können
-mit `--help` abgefragt werden:
+Weitere mögliche Parameter für die Erstellung einer Instanz können Sie mit `--help` abfragen:
 
 ```bash
 $ openstack server create --help
@@ -297,9 +282,7 @@ shell formatter:
   --prefix PREFIX       add a prefix to all variable names
 ```
 
-Abschluss
----------
+## Zusammenfassung
 
-Nachdem wir in diesem Schritt nicht nur eine neue Instanz erstellt ,
-sondern auch noch einige Basis Befehle für OpenStack angewedet haben.
-Werden wir im Schritt 8 diese VM wieder löschen.
+In diesem Schritt haben Sie eine neue Instanz erstellt und einige Basis-Befehle für OpenStack angewendet.
+In [Schritt 8](/optimist/guided_tour/step08/) zeigen wir Ihnen, wie Sie diese VM wieder löschen können.

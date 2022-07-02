@@ -6,27 +6,23 @@ nav_order: 1240
 parent: Guided Tour
 ---
 
-Schritt 24: Der Octavia Loadbalancer
-=================================================
+# Schritt 24: Der Octavia Loadbalancer
 
-Vorwort
--------
+## Einführung
 
 In den vorherigen Schritten haben wir bereits einige interessante Bausteine kennengelernt.
-Als nächstes widmen wir uns dem [Ocatavia Loadbalancer](https://wiki.openstack.org/wiki/Octavia).
+Als nächstes beschäftigen wir uns mit dem [Ocatavia Loadbalancer](https://wiki.openstack.org/wiki/Octavia).
 Octavia ist eine hochverfügbare und skalierbare Open-Source Load-Balancing-Lösung, die für die Arbeit mit OpenStack entwickelt wurde.
 Octavia erledigt das Load-Balancing nach Bedarf, indem es virtuelle Maschinen – auch Amphoren genannt – in seinem Projekt verwaltet und konfiguriert.
-In diesen Amphoren wirkt schlussendlich ein [HAproxy](https://www.haproxy.com/).
+In diesen Amphoren wirkt ein [HAproxy](https://www.haproxy.com/).
 
-Der Start
------
+## Der Start
 
-Für die Nutzung von Octavia ist es notwendig, dass der Client auf dem eigenen System installiert ist. Eine Anleitung für sein System findet man unter [Schritt 4](/optimist/guided_tour/step04/))
+Für die Nutzung von Octavia muss der Client auf dem eigenen System installiert sein. Eine Anleitung dafür finden Sie in [Schritt 4](/optimist/guided_tour/step04/).
 
-Erstellung eines Octavia-Ladbalancer
------
+## Erstellung eines Octavia-Loadbalancer
 
-Für unser Beispiel nutzen wir das aus [Schritt 10](/optimist/guided_tour/step10/) schon bestehende BeispielSubnet.
+Für unser Beispiel nutzen wir das schon bestehende Beispiel-Subnet aus [Schritt 10](/optimist/guided_tour/step10/).
 
 ```bash
 $ openstack loadbalancer create --name Beispiel-LB --vip-subnet-id 32259126-dd37-44d5-922c-99d68ee870cd
@@ -54,7 +50,7 @@ $ openstack loadbalancer create --name Beispiel-LB --vip-subnet-id 32259126-dd37
 +---------------------+--------------------------------------+
 ```
 
-Nun geht Octavia her und spawned seine Amphoreninstanzen im Hintergrund.
+Nun generiert Octavia seine Amphoreninstanzen im Hintergrund.
 
 ```bash
 $ openstack loadbalancer list
@@ -65,7 +61,7 @@ $ openstack loadbalancer list
 +--------------------------------------+-------------+----------------------------------+--------------+---------------------+----------+
 ```
 
-Mit dem provisioning_status `ACTIVE` ist dieser Vorgang erfolgreich abgeschlossen und der erste Octavia-Loadbalancer kann weiter konfiguiert werden.
+Mit dem provisioning_status `ACTIVE` ist dieser Vorgang erfolgreich abgeschlossen und Sie können den ersten Octavia-Loadbalancer weiter konfiguieren.
 
 ```bash
 $ openstack loadbalancer list
@@ -76,10 +72,9 @@ $ openstack loadbalancer list
 +--------------------------------------+-------------+----------------------------------+--------------+---------------------+----------+
 ```
 
-Erstellen eines LB-Listener
------
+## Erstellen eines LB-Listener
 
-In unserem Beispiel wollen wir einen Listener für den HTTP-Port 80 erstellen.
+In unserem Beispiel erstellen wir einen Listener für den HTTP-Port 80.
 
 Als Listener ist hier - vergleichbar mit anderen LB-Lösungen - der Port des Frontends gemeint.
 
@@ -127,11 +122,10 @@ $ openstack loadbalancer listener list
 +--------------------------------------+-----------------+-------------------+----------------------------------+----------+---------------+----------------+
 ```
 
-Erstellen eines LB-Pools
------
+## Erstellen eines LB-Pools
 
-Als LB-Pool ist hier eine Ansammlung aller Objekte (Listeners, Member, etc.) für zum Beispiel eine Region gemeint - vergleichbar mit einem Pool an öffentlichen IP-Adressen aus derer man sich eine belegen kann.
-Einen Pool für unser Beispiel erstellt man wie folgt:
+Mit LB-Pool ist hier eine Ansammlung aller Objekte (Listeners, Member, etc.), für z.B. eine Region gemeint. Dies ist vergleichbar mit einem Pool an öffentlichen IP-Adressen aus denen Sie sich eine Adresse belegen können.
+Für unser Beispiel können Sie einen Pool wie folgt erstellen:
 
 ```bash
 $ openstack loadbalancer pool create --name Beispiel-pool --lb-algorithm ROUND_ROBIN --listener Beispiel-listener --protocol HTTP
@@ -161,8 +155,8 @@ $ openstack loadbalancer pool create --name Beispiel-pool --lb-algorithm ROUND_R
 +----------------------+--------------------------------------+
 ```
 
-Hier sei erwähnt, dass man mit `openstack loadbalancer pool create --help` sich alle möglichen Einstellungen anzeigen lassen kann.
-Die häufigsten Einstellungen und deren Auswahlmöglichkeiten:
+Mit `openstack loadbalancer pool create --help` können Sie sich alle möglichen Einstellungen anzeigen lassen.
+Hier sind die häufigsten Einstellungen und deren Auswahlmöglichkeiten:
 
 ```bash
 --protocol: {TCP,HTTP,HTTPS,TERMINATED_HTTPS,PROXY,UDP}
@@ -180,10 +174,9 @@ $ openstack loadbalancer pool list
 +--------------------------------------+---------------+----------------------------------+---------------------+----------+--------------+----------------+
 ```
 
-Erstellen der LB-`member`
------
+## Erstellen der LB-`member`
 
-Damit unser Loadbalancer weiß, an welche Backends er weiterleiten darf, fehlen uns noch sogenannte `member`, die wir wie folgt definieren:
+Damit unser Loadbalancer weiß, an welche Backends er weiterleiten darf, fehlen noch die sogenannten `member`, die Sie wie folgt definieren:
 
 ```bash
 $ openstack loadbalancer member create --subnet-id 32259126-dd37-44d5-922c-99d68ee870cd --address  10.0.0.11 --protocol-port 80 Beispiel-pool
@@ -208,8 +201,6 @@ $ openstack loadbalancer member create --subnet-id 32259126-dd37-44d5-922c-99d68
 +---------------------+--------------------------------------+
 ```
 
-und
-
 ```bash
 $ openstack loadbalancer member create --subnet-id 32259126-dd37-44d5-922c-99d68ee870cd --address  10.0.0.12 --protocol-port 80 Beispiel-pool
 +---------------------+--------------------------------------+
@@ -233,8 +224,8 @@ $ openstack loadbalancer member create --subnet-id 32259126-dd37-44d5-922c-99d68
 +---------------------+--------------------------------------+
 ```
 
-Hier sei erwähnt, dass die beiden IP's aus 10.0.0.* bereits vorhandene, auf Port 80 lauschende Webserver sind, die eine einfache Webseite mit Info's über ihren Servicenamen ausliefern.
-Unter der Vorraussetzung es handelt sich bei diesen Webservern im folgenden Beispiel um ein Ubuntu/Debian und man hat root-Berechtigungen, könnte man die einfache Webseite schnell erstellen mit:
+Hier sei erwähnt, dass die beiden IP Adressen aus 10.0.0.* bereits vorhandene, auf Port 80 lauschende Webserver sind, die eine einfache Webseite mit Infos über ihren Servicenamen ausliefern.
+Vorrausgesetzt, es handelt sich bei diesen Webservern im folgenden Beispiel um ein Ubuntu/Debian und Sie haben root-Berechtigungen, können Sie die einfache Webseite schnell erstellen mit:
 
 ```bash
 root@BeispielInstanz1:~# apt-get update; apt-get -y install apache2; echo "you hit: you hit: webserver1" > /var/www/html/index.html
@@ -248,7 +239,7 @@ root@BeispielInstanz2:~# apt-get update; apt-get -y install apache2; echo "you h
 
 ```
 
-Das Resultat vom Anlegen der Member können wir wie folgt überprüfen:
+Das Ergebnis vom Anlegen der Member können Sie wie folgt überprüfen:
 
 ```bash
 $ openstack loadbalancer member list Beispiel-pool
@@ -264,19 +255,18 @@ Nun ist das "interne" Konstrukt des Loadbalancers konfiguriert.
 
 Wir haben nun:
 
-* 2 `member` die über Port 80 den tatsächlichen Service bereitstellen und zwischen denen das Loadbalancing stattfindet,
-* einen `pool` für diese `member`,
-* einen `listener`, der auf Port TCP/80 lauscht und ein `ROUND_ROBIN` zu den beiden Endpunkten macht und
-* einen Loadbalancer, über den wir alle Komponenten vereint haben.
+* Zwei `member`, die über Port 80 den tatsächlichen Service bereitstellen und zwischen denen das Loadbalancing stattfindet
+* Einen `pool` für diese `member`
+* Einen `listener`, der auf Port TCP/80 lauscht und ein `ROUND_ROBIN` zu den beiden Endpunkten macht
+* Einen Loadbalancer, über den wir alle Komponenten vereint haben.
 
 Der `operating_status` `NO_MONITOR` wird unter [healthmonitor](schritt24.md#erstellen-eines-healthmonitor) korrigiert.
 
-Erstellen und konfigurieren der Floating-IP
------
+## Erstellen und Konfigurieren der Floating-IP
 
-Damit wir auch den Loadbalancer außerhalb unseres Beispiel-Netzwerk einsetzen können, müssen wir eine FloatingIP reservieren und diese dann mit dem `vip_port_id` des `Beispiel-LB` verknüpfen.
+Damit Sie auch den Loadbalancer außerhalb unseres Beispiel-Netzwerk einsetzen können, müssen Sie eine FloatingIP reservieren und diese dann mit dem `vip_port_id` des `Beispiel-LB` verknüpfen.
 
-Mit folgendem Befehl erstellen wir uns eine Floating IP aus dem `provider`-Netz:
+Mit dem folgendem Befehl erstellen Sie sich eine Floating IP aus dem `provider`-Netz:
 
 ```bash
 $ openstack floating ip create provider
@@ -307,21 +297,21 @@ $ openstack floating ip create provider
 
 ```
 
-Im nächsten Schritt benötigen wir die vip_port_id des Loadbalancers. Diese bekommt man mit folgendem Befehl heraus:
+Im nächsten Schritt benötigen Sie die vip_port_id des Loadbalancers. Diese bekommen Sie mit dem folgendem Befehl angezeigt:
 
 ```bash
 $ openstack loadbalancer show Beispiel-LB -f value -c vip_port_id
 37fc5b34-ee07-49c8-b054-a8d591a9679f
 ```
 
-Mit dem folgendem Befehl weisen wir dem Loadbalancer nun die öffentliche IP Adresse zu. Damit ist der LB (und somit auch die Endpunkte dahinter) aus dem Internet erreichbar.
+Mit dem folgendem Befehl weisen Sie dem Loadbalancer nun die öffentliche IP Adresse zu. Damit ist der LB (und somit auch die Endpunkte dahinter) aus dem Internet erreichbar.
 
 ```bash
 openstack floating ip set --port 37fc5b34-ee07-49c8-b054-a8d591a9679f 185.116.247.133
 
 ```
 
-Wir sind soweit, dass wir unser Loadbalancer-Deployment testen können. Mit folgendem Befehl fragen wir unseren Loadbalancer über Port TCP/80 an und bekommen anschließend eine entsprechende Antwort von den einzelnen `member` zurück:
+Nun können wir unser Loadbalancer-Deployment testen. Mit dem folgendem Befehl fragen wir unseren Loadbalancer über Port TCP/80 an und bekommen anschließend eine entsprechende Antwort von den einzelnen `member` zurück:
 
 ```bash
 $ for ((i=1;i<=10;i++)); do curl http://185.116.247.133; sleep 1; done
@@ -335,8 +325,7 @@ you hit: webserver1
 ... (usw.)
 ```
 
-Erstellen eines healthmonitor
------
+## Erstellen eines Healthmonitor
 
 Mit dem folgenden Befehl erstellen wir einen Monitor, der bei einem Ausfall eines der Backends genau dieses fehlerhafte Backend aus der Lastverteilung nimmt und somit die Webseite oder Applikation weiterhin sauber ausgeliefert wird.
 
@@ -433,18 +422,17 @@ you hit: webserver1
 Mi 22 Mai 2019 17:10:06 CEST
 ```
 
-Bekannte Probleme
------
+## Bekannte Probleme
 
-Wenn sie bei der Zuweisung der öffentliche IP Adresse zum Loadbalancer folgenden Fehler bekommen:
+Sie bekommen bei der Zuweisung der öffentliche IP Adresse zum Loadbalancer folgenden Fehler:
 
 ``
 ResourceNotFound: 404: Client Error for url: https://network.fra.optimist.innovo.cloud/v2.0/floatingips/46c0e8cf-783d-44a0-8256-79f8ae0be7fe, External network 54258498-a513-47da-9369-1a644e4be692 is not reachable from subnet 32259126-dd37-44d5-922c-99d68ee870cd.  Therefore, cannot associate Port 37fc5b34-ee07-49c8-b054-a8d591a9679f with a Floating IP.
 ``
 
-dann fehlt eine Verbindung zwischen ihrem Beispiel-Netz (Router) und dem Provider-Netz ([Schritt 10](/optimist/guided_tour/step10/))
+In diesem Fall fehlt eine Verbindung zwischen Ihrem Beispiel-Netz (Router) und dem Provider-Netz (siehe [Schritt 10](/optimist/guided_tour/step10/)),
 
-Die default-connect-Einstellung der haproxy-Prozesse innerhalb einer Amphore liegen bei 50 Sekunden, d.h. wenn eine Verbindung länger als 50 Sekunden anhalten soll, müssen sie am Listener diese Werte entsprechend konfigurieren.
+Die default-connect-Einstellung der haproxy-Prozesse innerhalb einer Amphore liegen bei 50 Sekunden, d.h. wenn eine Verbindung länger als 50 Sekunden anhalten soll, müssen Sie am Listener diese Werte entsprechend konfigurieren.
 Beispiel für einen Connect mit Timeout:
 
 ```bash
@@ -453,7 +441,7 @@ $ time kubectl -n kube-system exec -ti machine-controller-5f649c5ff4-pksps /bin/
 50.69 real         0.08 user         0.05 sys
 ```
 
-Um in diesem Beispiel den Timeout auf 4h zu erweitern:
+Um in diesem Beispiel den Timeout auf 4h zu erweitern, geben Sie folgenden Befehl ein:
 
 ```bash
 openstack loadbalancer listener set --timeout_client_data 14400000 <Listener ID>
@@ -462,8 +450,7 @@ openstack loadbalancer listener set --timeout_member_data 14400000 <Listener ID>
 
 Wenn Octavia versucht, einen LB mit `port_security_enabled = False` in einem Netzwerk zu starten, wird der LB in den Status ERROR versetzt.
 
-Abschluss
------
+## Zusammenfassung
 
-Es macht durchaus Sinn immer einen Monitor für seinen Pool zu etablieren.
+Es ist sinnvoll, immer einen Monitor für seinen Pool zu etablieren.
 ![](attachments/201905S240012.png)

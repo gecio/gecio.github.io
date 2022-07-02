@@ -7,13 +7,11 @@ nav_order: 9200
 last_modified_date: 2021-04-19
 ---
 
-OpenStack Default Quotas
-========================
+# Default Quotas
 
 Im Optimist haben wir Standardwerte für den OpenStack Compute-Dienst, den OpenStack Block Storage-Dienst und den OpenStack Networking-Dienst definiert. Wir haben auch separate Quotas für den Octavia Loadbalancer-Dienst und die zugehörigen Komponenten. Diese Standardwerte sind unten aufgeführt.
 
-Compute Standardwerte
----------------------
+## Compute Standardwerte
 
 |**Ressource**             |**Wert**             |
 |:-------------------------|:--------------------|
@@ -29,8 +27,7 @@ Compute Standardwerte
 | Server Groups            |        10           |
 | Server Group Members     |        10           |
 
-Block Storage Standardwerte
----------------------------
+## Block Storage Standardwerte
 
 |**Ressource**             |**Wert**             |
 |:-------------------------|:--------------------|
@@ -41,8 +38,7 @@ Block Storage Standardwerte
 | Snapshots                |        100          |
 | Volumes                  |        100          |
 
-Network Standardwerte
----------------------
+## Network Standardwerte
 
 |**Ressource**             |**Wert**             |
 |:-------------------------|:--------------------|
@@ -56,8 +52,7 @@ Network Standardwerte
 | RBAC Policies            |        100          |
 | Subnetpools              |        Unlimited    |
 
-Octavia Loadbalancers
-----------------
+## Octavia Loadbalancers
 
 |**Ressource**             |**Wert**             |
 |:-------------------------|:--------------------|

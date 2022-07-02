@@ -11,7 +11,7 @@ last_modified_date: 2021-03-02
 ## Der Befehl `openstack --help` zeigt bei vielen Punkten "Could not load EntryPoint.parse" an.
 
 In diesem Fall ist eine der mit dem OpenStack Client installierten Komponenten nicht aktuell. Um zu sehen, welche der Komponenten
-aktualisiert werden muss, rufen wir folgenden Befehl auf:
+aktualisiert werden muss, rufen Sie folgenden Befehl auf:
 
 ```bash
 openstack --debug --help
@@ -36,12 +36,12 @@ openstack security group rule create --remote-ip 10.0.0.0/24 --protocol vrrp --e
 ## Warum werden mir Floating IPs berechnet, die ich gar nicht benutze?
 
 Der Grund dafür ist mit hoher Wahrscheinlichkeit, dass Floating IPs erstellt wurden, aber nach der Benutzung nicht korrekt gelöscht wurden.
-Um eine Übersicht über die aktuell verwendeten Floating IPs zu erhalten, kann man zum einen das
+Um eine Übersicht über die aktuell verwendeten Floating IPs zu erhalten, können Sie das
 [Horizon Dashboard](https://dashboard.optimist.innovo.cloud/) nutzen.
 
 Dort befindet sich der entsprechende Punkt unter _Project_ → _Network_ → _Floating-IPs_.
 
-Alternativ der Weg per OpenStack Client:
+Alternativ dazu können Sie auch OpenStack Client benutzen:
 
 ```bash
 $ openstack floating ip list
@@ -56,10 +56,10 @@ $ openstack floating ip list
 
 ### Resizing über die Command Line
 
-Geben Sie den Namen oder die UUID des Servers an, dessen Größe Sie ändern möchten, und ändern Sie die Größe mit dem Befehl
+Geben Sie den Namen oder die UUID des Servers an, dessen Größe Sie ändern möchten. Ändern Sie die Größe mit dem Befehl
 `openstack server resize`.
 
-Geben Sie das gewünschte neue Flavor und dann den Instanznamen oder die UUID an:
+Geben Sie das gewünschte neue Flavor an und anschließend den Instanznamen oder die UUID:
 
 ```bash
 openstack server resize --flavor FLAVOR SERVER
@@ -67,7 +67,7 @@ openstack server resize --flavor FLAVOR SERVER
 
 Die Größenänderung kann einige Zeit in Anspruch nehmen. Während dieser Zeit wird der Instanzstatus als RESIZE angezeigt.
 
-Wenn die Resizing abgeschlossen ist, wird der Instanzstatus VERIFY_RESIZE angezeigt. Sie können nun die Größenänderung bestätigen, um den
+Wenn das Resizing abgeschlossen ist, wird der Instanzstatus VERIFY_RESIZE angezeigt. Sie können nun die Größenänderung bestätigen, um den
 Status auf ACTIVE zu ändern:
 
 ```bash
@@ -76,11 +76,11 @@ openstack server resize --confirm SERVER
 
 ### Resizing über das Optimist-Dashboard
 
-Navigieren Sie auf [Optimist Dashboard → Instances](https://dashboard.optimist.innovo.cloud/project/instances/) zu der Instanz, deren Größe
+Navigieren Sie in [Optimist Dashboard → Instances](https://dashboard.optimist.innovo.cloud/project/instances/) zu der Instanz, deren Größe
 geändert werden soll, und wählen Sie dann _Actions_ → _Resize Flavor_.
 
-Der aktuelle Flavor wird angezeigt, verwenden Sie die Dropdown-Liste "Select a new flavor", um den neuen Flavor auszuwählen und bestätigen
-Sie mit "Resize".
+Der aktuelle Flavor wird angezeigt. Verwenden Sie die Dropdown-Liste _Select a new flavor_, um den neuen Flavor auszuwählen. Bestätigen
+Sie mit _Resize_.
 
 ## Warum ist das Logfile der Compute Instanz im Optimist Dashboard leer?
 
@@ -89,16 +89,16 @@ neu angelegt und neue Meldungen werden wie gewohnt protokolliert.
 
 ## Warum erhalte ich den Fehler "Conflict (HTTP 409)" beim Erstellen eines Swift Containers?
 
-Swift verwendet einzigartige Namen über die gesamte OpenStack Umgebung hinweg. Die Fehlermeldung besagt, dass der gewählte Name bereits in
-Verwendung ist.
+Swift verwendet einzigartige Namen über die gesamte OpenStack Umgebung hinweg. Die Fehlermeldung besagt, dass der gewählte Name bereits
+verwendet wird.
 
 ## Anbringen von Cinder-Volumes an Instanzen per UUID
 
 Wenn Sie mehrere Cinder-Volumes an eine Instanz anhängen, werden die Mount-Punkte möglicherweise bei jedem Neustart neu gemischt. Durch das
-Mounten der Volumes per UUID wird sichergestellt, dass die richtigen Volumes wieder an die richtigen Mount-Punkte angehängt werden, falls
+Mounten der Volumes über UUID wird sichergestellt, dass die richtigen Volumes wieder an die richtigen Mount-Punkte angehängt werden, falls
 für die Instanz ein Aus- und Wiedereinschalten erforderlich ist.
 
-Nachdem Sie die UUID des Volumes mit `blkid` in der Instanz abgerufen haben ändern Sie den Mountpunkt in `/etc/fstab` wie folgt, um die
+Nachdem Sie die UUID des Volumes mit `blkid` in der Instanz abgerufen haben, ändern Sie den Mountpunkt in `/etc/fstab` wie folgt, um die
 UUID zu verwenden. Zum Beispiel:
 
 ```bash

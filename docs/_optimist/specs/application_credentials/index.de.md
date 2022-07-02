@@ -8,7 +8,7 @@ nav_order: 9300
 
 # Einführung
 
-Benutzer können Application Credentials erstellen, damit sich ihre Anwendungen bei der OpenStack-Komponente Keystone authentifizieren können, ohne ihre eigenen Anmeldeinformationen des Benutzers verwenden zu müssen.
+Benutzer können Application Credentials erstellen, damit sich ihre Anwendungen bei der OpenStack-Komponente Keystone authentifizieren können, ohne die eigenen Anmeldeinformationen des Benutzers verwenden zu müssen.
 
 Mit Application Credentials können sich Anwendungen mit der Application Credential-ID und einer geheimen Zeichenfolge authentifizieren, die nicht das Kennwort des Benutzers ist. Auf diese Weise wird das Passwort des Benutzers nicht in die Konfiguration der Anwendung eingebettet.
 
@@ -18,25 +18,25 @@ Benutzer können eine Teilmenge ihrer Rollenzuweisungen für ein Projekt an Appl
 
 ### Name / Secrets
 
-Application Credentials für Ihr Projekt können über die Befehlszeile oder über das Dashboard generiert werden. Diese werden dem Projekt zugeordnet, in dem sie erstellt werden.
+Die Benutzer können die Application Credentials für ihr Projekt über die Befehlszeile oder über das Dashboard generieren. Diese werden dem Projekt zugeordnet, in dem sie erstellt werden.
 
-Der einzige erforderliche Parameter zum Erstellen der Anmeldeinformationen ist ein Name, jedoch kann mit dem Parameter `—-secret` ein bestimmtes Secret festgelegt werden. Ohne Parameter wird stattdessen automatisch ein Secret in der Ausgabe generiert.
+Der einzige erforderliche Parameter zum Erstellen der Anmeldeinformationen ist ein Name, jedoch kann mit dem Parameter `—-secret` ein bestimmtes Secret festgelegt werden. Ohne Parameter wird automatisch ein Secret in der Ausgabe generiert.
 
-Es ist in jedem Fall wichtig das Secret zu notieren, da dieses vor dem Speichern gehasht wird und nach dem Festlegen nicht wiederhergestellt werden kann. Wenn das Secret verloren geht, müssen neue Application Credential für die Anwendung erstellt werden.
+Es ist in jedem Fall wichtig, das Secret zu notieren, da dieses vor dem Speichern gehasht wird und nach dem Festlegen nicht wiederhergestellt werden kann. Wenn das Secret verloren geht, müssen neue Application Credentials für die Anwendung erstellt werden.
 
 ### Roles
 
-Wir empfehlen außerdem, die Roles festzulegen, die die Application Credentials der Anwendung im Projekt haben sollen, da standardmäßig ein neu erstellter Satz von Anmeldeinformationen alle verfügbaren Roles erbt.
+Wir empfehlen außerdem, die Rollen (Roles) festzulegen, die die Application Credentials der Anwendung im Projekt haben sollen, da standardmäßig ein neu erstellter Satz von Anmeldeinformationen alle verfügbaren Rollen erbt.
 
-Im Folgenden sind die verfügbaren Roles aufgeführt, die einem Satz von Application Credentials zugewiesen werden können. Wenn Sie diese Roles mithilfe des Parameters `--role` auf einen Satz von Application Credentials anwenden, beachten Sie bitte, dass bei allen Role-Namen die Groß-/Kleinschreibung beachtet wird:
+Im Folgenden sind die verfügbaren Rollen aufgeführt, die einem Satz von Application Credentials zugewiesen werden können. Wenn diese Rollen mithilfe des Parameters `--role` auf einen Satz von Application Credentials angewendet werden, ist es wichtig, bei allen Rollen-Namen die Groß-/Kleinschreibung zu beachten.
 
 - `Member`: Die Rolle "Member" hat nur administrativen Zugriff auf das zugewiesene Projekt.
-- `heat_stack_owner`: Als "heat_stack_owner" können Sie vorhandene HEAT-Templates verwenden und ausführen.
-- `load-balancer_member`: Als „load-balancer_member“ können Sie die Octavia LoadBalancer-Ressourcen nutzen.
+- `heat_stack_owner`: Die Rolle "heat_stack_owner" kann vorhandene HEAT-Templates verwenden und ausführen.
+- `load-balancer_member`: Die Rolle "load-balancer_member" kann die Octavia LoadBalancer-Ressourcen nutzen.
 
 ### Expiration
 
-Standardmäßig laufen erstellte Application Credentials nicht ab, jedoch können feste Ablaufdaten/-zeiten für Application Credentials bei der Erstellung festgelegt werden, indem der Parameter `--expires` im Befehl verwendet wird (zum Beispiel: `--expires '2021-07-15T21: 00:00'`).
+Standardmäßig laufen erstellte Application Credentials nicht ab, jedoch können feste Ablaufdaten/-zeiten für Application Credentials bei der Erstellung festgelegt werden. Dazu wird der Parameter `--expires` im Befehl verwendet (zum Beispiel: `--expires '2021-07-15T21: 00:00'`).
 
 ## Erstellen von Application Credentials über die CLI
 
@@ -67,7 +67,7 @@ $ openstack application credential create test-credentials --secret ZYQZm2k6pk -
 +--------------+----------------------------------------------+
 ```
 
-Hinweis: Das Secret (ob vom Benutzer festgelegt oder automatisch generiert) wird nur beim Erstellen der Application Credentials angezeigt. Bitte notieren Sie sich das Secret zu diesem Zeitpunkt.
+Hinweis: Das Secret (ob vom Benutzer festgelegt oder automatisch generiert) wird nur beim Erstellen der Application Credentials angezeigt. Es ist wichtig, das Secret zu diesem Zeitpunkt zu notieren.
 
 ## Anzeigen von Application Credentials über die CLI
 
@@ -86,7 +86,7 @@ Einzelne Credentials können mit dem `$ openstack application credential show <n
 
 ## Löschen von Application Credentials über die CLI
 
-Application Credentials können über die CLI mit dem folgenden Befehl mit dem Namen oder der ID des spezifischen Satzes von Anmeldeinformationen gelöscht werden:
+Application Credentials können über die CLI mit dem folgenden Befehl von Anmeldeinformationen gelöscht werden. Dazu wird im Befehl der Name oder die ID des spezifischen Satzes verwendet.
 
 ```bash
 openstack application credential delete test-credentials
@@ -94,25 +94,25 @@ openstack application credential delete test-credentials
 
 ## Erstellen und Löschen von Application Credentials für Anwendungen über das Optimist Dashboard
 
-Alternativ können Application Credentials auch über das Optimist Dashboard unter Identität > Application Credentials generiert werden:
+Alternativ können Application Credentials auch über das Optimist Dashboard unter *Identität* → *Application Credentials* generiert werden:
 
 ![](attachments/createappcredentials.png)
 
-Hinweis: Hier können mehrere Rollen ausgewählt werden, indem Sie die Umschalttaste gedrückt halten und durch die Optionen navigieren.
+Hinweis: Hier können die Benutzer mehrere Rollen auswählen, indem sie die Umschalttaste gedrückt halten und durch die Optionen navigieren.
 
-Nach der Erstellung wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, die ID und das Secret zu notieren. Wenn Sie fertig sind, klicken Sie auf "Close".
+Nach der Erstellung wird ein Dialogfeld angezeigt mit der Aufforderung, die ID und das Secret zu notieren. Danach klickt man auf "Close".
 
 ![](attachments/secretappcredentials.png)
 
-Die Zugangsdaten hier können jederzeit gelöscht werden, indem Sie den zu löschenden Zugangsdatensatz zu markieren und dann auf "DELETE APPLICATION CREDENTIAL" klicken.
+Die Zugangsdaten hier können jederzeit gelöscht werden, indem die Benutzer den zu löschenden Zugangsdatensatz markieren und auf "DELETE APPLICATION CREDENTIAL" klicken.
 
 ![](attachments/deleteappcredentials.png)
 
 ## Application Credentials testen
 
-Sobald wir über die CLI oder das Dashboard einen Satz von Application Credentials erstellt haben, können wir sie mit dem folgenden curl-Befehl testen, um zu überprüfen, ob sie funktionieren.
+Sobald über die CLI oder das Dashboard ein Satz von Application Credentials erstellt wurde, können Benutzer mit dem folgenden curl-Befehl überprüfen, ob sie funktionieren.
 
-Wir müssen unsere `<name>` und `<secret>` im curl-Befehl verwenden:
+Dazu müssen die Benutzer ihr `<name>` und `<secret>` im curl-Befehl verwenden:
 
 ```bash
 curl -i -H "Content-Type: application/json" -d ' { "auth": { "identity": { "methods": ["application_credential"],  "application_credential": {  "id": “<id>", "secret": “<secret>"}}}}' https://identity.optimist.innovo.cloud/v3/auth/tokens

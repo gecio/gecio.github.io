@@ -18,7 +18,7 @@ The worker-nodes of a cluster need to be configured via a `Machine Deployment`. 
 * *Operating System of the Nodes* although the OS of the worker-nodes should not matter for the Kubernetes workloads, it might matter for you and your debugging.
 
 **Further reading**
-* [Sizing: Choosing Node Flavors](/imke/machindeployments/nodeflavors/)
+* [Sizing: Choosing Node Flavors](/imke/machinedeployments/nodeflavors/)
 * [Debugging: Cluster Nodes Usage Rate](/imke/machinedeployments/clusternodesusagerate/)
 * [Debugging: Adding SSH-Keys to worker nodes](/imke/machinedeployments/add_ssh_key/)
-* [Upgrading the OS on Worker-Nodes](/imke/machinedeployments/upgradingnodeos/)
+* [Upgrading the OS on Worker-Nodes](/imke/machinedeployments/updatingnodeos/)

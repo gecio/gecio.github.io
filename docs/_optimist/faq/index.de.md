@@ -110,3 +110,24 @@ UUID zu verwenden. Zum Beispiel:
 
 Wir unterstützen keine multi-attached Volumes in der Optimist Platform, da für die Nutzung von multi-attached Volumes clusterfähige Dateisysteme erforderlich sind, um den gleichzeitigen Zugriff auf das Dateisystem zu koordinieren.
 Versuche, mutli-attached Volumes ohne clusterfähige Dateisysteme zu verwenden, bergen ein hohes Risiko der Datenkorruption, daher ist diese Funktion auf der Optimist Plattform nicht aktiviert.
+
+## Warum kann ich keinen Snapshot einer laufenden Instance erstellen?
+
+Dieses Problem tritt auf, wenn versucht wird, einen Snapshot auf einer laufenden Instanz zu erstellen. Wir können zwei verschiedene Ansätze empfehlen, um dieses Problem zu lösen:
+
+Die erste Option besteht darin, einen Snapshot der laufenden Instanz zu erstellen, indem der `qemu-guest-agent` installiert und ausgeführt wird. Es kann wie folgt installiert und ausgeführt werden:
+
+```bash
+apt install qemu-guest-agent
+systemctl start qemu-guest-agent
+```
+
+Sobald der qemu-guest-agent läuft, kann der Snapshot erstellt werden.
+
+Die zweite Möglichkeit besteht darin, die laufende Instanz zu stoppen, den Snapshot zu erstellen und die Instanz schließlich erneut zu starten. Dies kann über das Horizon Dashboard oder auf der CLI wie folgt erfolgen:
+
+```bash
+openstack server stop ExampleInstance
+openstack server image create --name ExampleInstanceSnapshot ExampleInstance
+openstack server start ExampleInstance
+```

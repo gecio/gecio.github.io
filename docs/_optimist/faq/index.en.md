@@ -107,3 +107,24 @@ Change the mountpoint in `/etc/fstab` to use the UUID after fetching the infos w
 
 We do not support multiattached volumes on our instances as cluster-capable file systems are required for multi attach volumes in order to handle concurrent file system access.
 Attempts to use multi-attached volumes without cluster-capable filesystems carries a high risk of data corruption, therefore this feature is not enabled on the Optimist platform.
+
+## Why am I unable to create a snapshot of a running instance?
+
+This issue occurs when trying to create a snapshot on a running instance. We can recommend two different approaches to solve this problem:
+
+The first option is to take a snapshot of the running instance by installing and running the `qemu-guest-agent`. It can be installed and run as follows:
+
+```bash
+apt install qemu-guest-agent
+systemctl start qemu-guest-agent
+```
+
+Once the qemu-guest-agent is running, the snapshot can be created.
+
+The second option is to stop the running instance, create the snapshot, then finally restart the instance again. This can be done via the Horizon Dashboard or on the CLI as follows:
+
+```bash
+openstack server stop ExampleInstance
+openstack server image create --name ExampleInstanceSnapshot ExampleInstance
+openstack server start ExampleInstance
+```

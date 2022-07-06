@@ -22,4 +22,4 @@ Dagegen können die Worker-Nodes sehr wohl auf verschiedenste Arten konfiguriert
 * [Sizing: Node Flavors konfigurieren](/imke/machinedeployments/nodeflavors/)
 * [Debugging: Auslastung der Cluster-Nodes](/imke/machinedeployments/clusternodesusagerate/)
 * [Debugging: SSH-Keys hinzufügen](/imke/machinedeployments/add_ssh_key/)
-* [Aktualisierung des Betriebssystems auf Worker-Nodes](/imke/machinedeployments/upgradingnodeos/)
+* [Aktualisierung des Betriebssystems auf Worker-Nodes](/imke/machinedeployments/updatingnodeos/)

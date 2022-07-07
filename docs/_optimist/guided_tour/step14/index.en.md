@@ -1,24 +1,20 @@
 ---
-title: "14: Our first steps with HEAT"
+title: "14: Your first steps with HEAT"
 lang: en
 permalink: /optimist/guided_tour/step14/
 nav_order: 1140
 parent: Guided Tour
 ---
 
-Step 14: Our first steps with HEAT
-==================================
+# Step 14: Your first steps with HEAT
 
-Start
------
+## Start
 
-Previously, we used a pre-made heat template, now we'll take a look at how a
-heat template works.
+In the previous steps, you used a pre-made heat template. The next step is to understand how heat templates are built.
 
-The template
-------------
+## The Template
 
-Every heat template follows this structure:
+Every heat template follows the following structure:
 
 ```yaml
 heat_template_version:
@@ -42,14 +38,12 @@ conditions:
 # Definitions of conditions
 ```
 
-Heat Template Version
----------------------
+## Heat Template Version
 
-The template version follows a strict pattern and defines what commands
+Template versions cannot be chosen arbitrarily as they have fixed specifications that define which commands
 are available to use.
 
-We can use these versions, although it's recommended to use the latest
-one:
+You can use any of the following versions, although we recommended using the latest one:
 
 - 2013-05-23
 - 2014-10-16
@@ -59,31 +53,26 @@ one:
 - 2016-10-14
 - 2017-02-24
 
-Description
------------
+## Description
 
-The description is an optional section that describes the stack. You can
-put anything you want here.
+The description is an optional section that describes the stack.
 
-We recommend adding a description with how to use the template, what
-it's meant to create and anything else that's not obvious. This makes
-it easier to share with others and could even remind you what the
-template does in case you've not used it for a while.
+We recommend adding a description of how to use the template, what it is about, any other useful information. This makes it easier to share with others and However, it makes sense, because the template can be described in its basic features and any special features can be pointed out directly.
 
-You can also add comments by starting them with the *\#* character, this
-can be used to temporarily disable lines or to add more documentation to
+You can also add comments by starting them with the *\#* character. It can be used to temporarily disable lines, or to add more documentation to
 the template.
 
-Parameter Groups
-----------------
+## Parameter Groups
 
-In this section you can specify the parameters, how they should group
-and the order of them.
+In this section, you can specify the parameters, how they should group,
+and their order.
 
-The groups are divided into a list, which contains single parameters.
+The groups are divided into a list containing single parameters.
 
-Every parameter should only have one group because of possible errors
-later and the structure looks like this:
+Every parameter should only have one group to avoid possible errors
+later.
+
+Each parameter group is structured as follows:
 
 ```yaml
 parameter_groups:
@@ -94,21 +83,19 @@ parameter_groups:
   - <name of the parameter>
 ```
 
-- `label`: name of the group
-- `description`: Gives us the possibility to describe the group
+- `label`: Name of the group
+- `description`: Description of the group
 - `parameter`: A list of all parameters in this group
-- `name of the parameter`: the name of the parameter which we had
-    defined in the parameter section
+- `name of the parameter`: Name of the parameter that was defined in the parameter section
 
-Parameter
----------
+## Parameters
 
-In this section we can specify parameters which our template requires.
+In this section you can specify the required parameters for your template.
 
-Parameters are usually used to make it easy to change certain parts of
-the template. (Like what SSH key is used.)
+Parameters are typically used to make it easy to change certain parts of
+the template, for example, which SSH key is used.
 
-Each parameter will be separately defined, starting with the name, with
+Each parameter is defined separately, starting with the name, with
 the attributes defined underneath:
 
 ```yaml
@@ -125,22 +112,21 @@ the attributes defined underneath:
 ```
 
 - `Parameter Name`: Name of the parameter
-- `type`: The type of the parameter (string, number, json,
+- `type`: The parameter type (string, number, json,
     comma\_delimited\_list, boolean)
-- `label`: Name of the parameter (optional)
-- `description`: The description of the parameter (optional)
-- `default`: Default value of the parameter. Will be used, if the
+- `label`: The parameter name (optional)
+- `description`: Description of the parameter (optional)
+- `default`: Default value of the parameter. Will be used if the
     parameter isn't defined (optional)
-- `hidden`:  If the parameter should be hidden in the creation process,
-    you can set hidden: *true* as parameter (Optional and set to *false*
+- `hidden`:  To hide the parameter in the creation process,
+    you can set hidden: *true* as a parameter (Optional, and set to *false*
     by default)
 - `constraints`: You can set a list of constraints. If these aren't
     fulfilled, the stack creation will fail.
-- `immutable`: If this parameter is set to true, the parameter can't be
-    changed with a stack update. (This will raise an error if attempted)
+- `immutable`: If this parameter is set to true, the parameter cannot be
+    changed during a stack update. (This will generate an error if attempted)
 
-Resources
----------
+## Resources
 
 This block specifies the resources that will be created, with every resource in
 its own sub block:
@@ -160,30 +146,24 @@ resources:
     condition: <condition name>
 ```
 
-- `ID of the resourc`e: Must be unique
-- `type`: type of a resource, for example: OS::NEUTRON::SecurityGroup
+- `ID of the resource`: Must be unique
+- `type`: Resource type, for example: OS::NEUTRON::SecurityGroup
     (for a security group) (required)
 - `properties`: A list of properties for resources (optional)
-- `metadata`: Metadata belonging to the resource  (optional)
-- `depends_on`: resources that the resource depends on (optional)
-- `update_policy`: We can specify rules for updates, if needed and
-    possible (optional)
-- `deletion_policy`: Specifies rules for the deletion. The options are
-    Delete, Retain and Snapshot. With heat\_template\_version 2016-10-14
-    You can also write these in lower-case.
+- `metadata`: Metadata for the respective resource (optional)
+- `depends_on`: Various dependencies to other resources can be stored here (optional)
+- `update_policy`: Update rules can be defined here. As a prerequisite, ensure that the corresponding resource also supports this (optional).
+- `deletion_policy`: Specifies rules for deletion. The options are
+    *Delete, Retain* and *Snapshot*. With heat\_template\_version 2016-10-14, you can also enter them in lowercase.
+- `external_id`: You can use external resource IDs, if required
+- `condition`: You can set specific conditions which need to be met to allow this resource to be created. (optional)
 
-- `external_id`: We can use external IDs if needed.
-- `condition`: We can set specific conditions for this resource to be
-    created. (Optional)
+## Output
 
-Output
-------
-
-With the output block, we can specify which parameters should be shown after
+With the output block, you can specify the parameters to be shown after
 creation.
 
-Examples of these could be the IP address of a VM or the URL of a deployed web
-application.
+Examples include the IP address of a VM, or the URL of a deployed web application.
 
 Outputs are specified in sub blocks like this:
 
@@ -196,17 +176,15 @@ outputs:
 ```
 
 - `name of the output`: Must be unique
-- `description`: If needed, you can describe the output (optional)
-- `value`: Value of the output (needed)
-- `condition`: possible conditions (optional)
+- `description`: A description can be stored here. (optional)
+- `value`: Value of the output (mandatory)
+- `condition`: Possible conditions can be specified here (optional)
 
-Condition
----------
+## Conditions
 
-Like other sections, conditions can also be specified in a block.
+Conditions based on the parameters entered by the user when creating or updating the stack can also be specified in a block.
 
-You can set conditions, and if they aren't fulfilled, the stack creation will
-fail.
+You can set conditions, and if they are not fulfilled, the stack creation fails. The conditions can be linked to resources, resource properties and outputs.
 
 ```yaml
 conditions:
@@ -214,13 +192,10 @@ conditions:
   <name of condition 2>: {term2}
 ```
 
-- `name of condition`: must be unique
-- `term`: true or false are expected as a result
+- `name of condition`: Must be unique
+- `term`: *true* or *false* are expected as a result
 
-Conclusion
-----------
+## Conclusion
 
-We have learned the basic structure of a heat template and can now start
-creating our own!
-
-With this knowledge, we will create our own heat template in the next step.
+You have learned the basic structure of a heat template and can now begin creating your own.
+With this knowledge, you will create your own heat template in the next step.

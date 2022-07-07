@@ -1,32 +1,25 @@
 ---
-title: "19: We will add IPv6 to our template"
+title: "19: Add IPv6 to your template"
 lang: en
 permalink: /optimist/guided_tour/step19/
 nav_order: 1190
 parent: Guided Tour
 ---
 
-Step 19: We will add IPv6 to our template
-=========================================
+# Step 19: Add IPv6 to your template
 
-Start
------
+## Start
 
-So far, we have a VM that's reachable via IPv4, we're now going to add IPv6
-support.
+At this point, you have a VM that is reachable with IPv4. The next step is to add IPv6 support.
 
-CloudConfig
------------
+## CloudConfig
 
-Cloud config is a resource with type `OS::HEAT::CloudConfig`.
+Cloud config has resource type `OS::HEAT::CloudConfig`.
 
-Cloud config can do many things, but in this case we will use it to
-configure IPv6.
+Cloud config hs a variety of uses, but in this case it will be used to configure IPv6.
 
-We will continue using the template that we've been working on in the
+You will continue using the template that you have been working on in the
 previous steps.
-
-We'll use it to write the files we mentioned earlier.
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -121,9 +114,9 @@ resources:
                 - { direction: ingress, remote_ip_prefix: 0.0.0.0/0, protocol: icmp }
 ```
 
-We have created the files and inserted the appropriate content.
+The files have been created and the appropriate content added.
 
-After we've written all the files, as in [Step 11: Prepare access to the internet: Add IPv6 to our network](/optimist/guided_tour/step11/), it is still necessary to restart the interface using the command `runcmd`.
+As stated in [Step 11: Prepare access to the internet: Add IPv6 to our network](/optimist/guided_tour/step11/), the interface still needs to be restarted using the command `runcmd`.
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -221,7 +214,7 @@ resources:
                 - { direction: ingress, remote_ip_prefix: 0.0.0.0/0, protocol: icmp }
 ```
 
-To get a connection via IPv6 it's necessary to update the SecurityGroup with rules for IPv6
+The last step is to adjust the security group rules to allow access via IPv6.
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -321,9 +314,8 @@ resources:
                 - { direction: ingress, remote_ip_prefix: "::/0", protocol: ipv6-icmp, ethertype: IPv6 }
 ```
 
-Conclusion
-----------
+## Conclusion
 
-We now have the ability to customize instances via Cloud Init and make IPv6 usable.
+You can now customize instances with `Cloud Init` and use IPv6 usable.
 
-In the next and final step we will start multiple instances via heat.
+In the final step you will learn how to start multiple instances with *Heat*.

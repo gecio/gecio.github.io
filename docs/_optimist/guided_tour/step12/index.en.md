@@ -6,18 +6,15 @@ nav_order: 1120
 parent: Guided Tour
 ---
 
-Step 12: A usable VM
-====================
+# Step 12: A usable VM
 
-Start
------
+## Start
 
-Even though we already created a VM in [Step 7](/optimist/guided_tour/step07/), that VM was not usable as it wasn't connected to a network, let alone the internet. Let's create one that we can actually log in to.
+Although you already created a VM in [Step 7](/optimist/guided_tour/step07/), the VM was not usable as it was not connected to a network, let alone the internet. Let's create one that you can actually log on to.
 
-Installation
-------------
+## Installation
 
-To create this VM, we'll add some parameters to the command we used in Step 7:
+To create this VM, add some parameters to the command we used in [Step 7](/optimist/guided_tour/step07/):
 
 ```bash
 $ openstack server create BeispielInstanz --flavor m1.small --key-name Beispiel --image "Ubuntu 16.04 Xenial Xerus - Latest" --security-group allow-ssh-from-anywhere --network=BeispielNetzwerk
@@ -53,19 +50,19 @@ $ openstack server create BeispielInstanz --flavor m1.small --key-name Beispiel 
 +-----------------------------+---------------------------------------------------------------------------+
 ```
 
-These parameters are included:
+The following parameters are included:
 
-- `--flavor`: The flavor of the the VM. You can get all available
-    flavors with `openstack flavor list`
+- `--flavor`: The flavor of the the VM. You get all available
+    flavors with `openstack flavor list`.
 - `--key-name`: The key to install on the VM.
 - `--image`: The operating system image to install on the VM. You can
-    get all available images with `openstack image list`
+    get all available images with `openstack image list`.
 - `--security-group`: Specifies the security group.
-- `--network`: Specify the network to attach the VM to.
+- `--network`: Specifies the network to attach the VM to.
 
-If we want to reach our VM from the internet, we'll nee a floating IP address.
+If you want to reach your VM from the internet, you need a floating IP address.
 
-Let's create one:
+You can create one as follows:
 
 ```bash
 $ openstack floating ip create provider
@@ -88,21 +85,20 @@ $ openstack floating ip create provider
 +---------------------+--------------------------------------+
 ```
 
-The created IP must be associated with our vm:
+The created IP must be associated with your VM:
 
 ```bash
 openstack server add floating ip BeispielInstanz 185.116.245.145
 ```
 
-Usage
------
+## Usage
 
-We now should have a reachable VM.
+You should now have a reachable VM.
 
-To see if all worked correctly, let's try to log in to our VM via SSH.
+To check if all worked correctly, log in to your VM with SSH.
 
-**IMPORTANT**: We can only log in if the specified ssh key exists and is
-accessible. (If this doesn't work, follow the guide in step 6)
+**IMPORTANT**: You can only log in if the specified ssh key exists and is
+accessible (if it does not work, follow the instructions in [Step 6](/optimist/guided_tour/step06/)).
 
 ```bash
 $ ssh ubuntu@185.116.245.145
@@ -113,14 +109,13 @@ Warning: Permanently added '185.116.245.145' (ECDSA) to the list of known hosts.
 Enter passphrase for key '/Users/ubuntu/.ssh/id_rsa':
 ```
 
-Clean-Up
---------
+## Clean-Up
 
-If we want to delete all the parts we just created, we'll have to delete them
-in a logical order.
+If you want to delete all components you just created, you must delete them
+in the following order.
 
-If we don't delete them in the order, we will not be allowed to delete
-components that other components depend on.
+If you do not delete them in the correct order, you will be unable to delete
+components that other resources depend on.
 
 - Instance
   - `openstack server delete BeispielInstanz`
@@ -135,11 +130,8 @@ components that other components depend on.
 - Network
   - `openstack network delete BeispielNetzwerk`
 
-Conclusion
-----------
+## Conclusion
 
-We have now created a VM based on our knowledge from steps from 7 to 11, it's
-reachable from the internet and we've logged in via SSH!
+You have now created a VM based on your knowledge from steps 7 to 11, you can reach it from the internet, and have logged in with SSH.
 
-In the next step, we break away from individual instances and
-create a stack.
+In the next step, you will break away from individual instances and will create a stack.

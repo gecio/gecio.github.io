@@ -1,56 +1,55 @@
 ---
-title: "04: Our way to the console"
+title: "04: Your way to the console"
 lang: en
 permalink: /optimist/guided_tour/step04/
 nav_order: 1040
 parent: Guided Tour
 ---
 
-# Step 4: Our way to the console
+# Step 4: Your way to the console
 
-## Preface
+## Start
 
 To make the administration of OpenStack as simple as possible, we recommend
 using
 the [OpenStackClient](https://docs.openstack.org/python-openstackclient/latest/).
 
-For simple, non-recurring tasks, it can be simpler to use the [Horizon
+For simple, non-recurring tasks, it may be easier to use the [Horizon
 dashboard](https://dashboard.optimist.innovo.cloud).
 
-As soon as tasks begin to recur, or when we want to manage a complex stack, we
-prefer to use the OpenStack client and Heat.
+With recurring tasks, or when you want to manage a complex stack, it is better to use the *OpenStack client* and *Heat*.
 
-At the start this may seem a bit complicated but once we get used to it,
-managing stacks becomes fast and efficient.
+This may be unfamiliar at first, but with some practice, you can quickly and efficiently manage stacks.
 
-The client will be helpful in our daily OpenStack work, it contains
-Nova, Glance, Cinder and Neutron. We will use the client heavily in our
-Guided Tour. We will walk you through installing it now.
+The client is helpful in the administration of the OpenStack environment. It contains
+Nova, Glance, Cinder, and Neutron.
+
+As we use the client heavily in our Guided Tour, we will install it in the next step.
 
 ## Installation
 
-To install the OpenStackClient, we need at least [Python
-2.7](https://www.python.org/downloads/release/python-2713/) and also [Python
+To install the OpenStackClient, you need at least [Python
+2.7](https://www.python.org/downloads/release/python-2713/) and [Python
 Setuptools](https://pypi.python.org/pypi/setuptools) (which are included in
 macOS).
 
-There are a few ways to install the OpenStackClient, in our example, we
-use [pip](https://de.wikipedia.org/wiki/Pip_(Python))
-and we recommend you do the same.
+There are several ways to install the OpenStackClient. In our example, we
+use [pip](https://de.wikipedia.org/wiki/Pip_(Python)),
+and we recommend that you do the same.
 
 "[pip](https://de.wikipedia.org/wiki/Pip_(Python))" is
-easy to use and can also be used as update manager
+easy to use and you can also use it as an update manager
 for [pip](https://de.wikipedia.org/wiki/Pip_(Python)).
 
-It's possible to install the client as root (the administrative user),
-but that can potentially cause some problems, so we will install it in a
+You can install the client as root (the administrative user),
+but that may cause problems. Therefore, you can install it in a
 virtual environment.
 
 ### macOS
 
-To install the OpenStackClient, we need to install
-[pip](https://de.wikipedia.org/wiki/Pip_(Python)). Start the console (Launchpad
-→ Console) and type this command:
+To install the OpenStackClient, you need to install
+[pip](https://de.wikipedia.org/wiki/Pip_(Python)). Start the console (*Launchpad*
+→ *Console*) and type the following command:
 
 ```bash
 $ easy_install pip
@@ -66,7 +65,7 @@ Processing dependencies for pip
 Finished processing dependencies for pip
 ```
 
-Now we install virtualenv.
+Now you can install `virtualenv`.
 
 ```bash
 $ pip install virtualenv
@@ -77,7 +76,7 @@ Installing collected packages: virtualenv
 Successfully installed virtualenv-15.1.0
 ```
 
-Now that we have virtualenv installed, we can create the virtual environment.
+After you have installed `virtualenv`, you can create the virtual environment.
 
 ```bash
 $ virtualenv ~/.virtualenvs/openstack
@@ -85,40 +84,38 @@ New python executable in /Users/iNNOVO/.virtualenvs/openstack/bin/python
 Installing setuptools, pip, wheel...done.
 ```
 
-Now that it's created we can activate the virtual environment.
+Now you may activate the virtual environment.
 
 ```bash
 $ source ~/.virtualenvs/openstack/bin/activate
 (openstack) $
 ```
 
-Now that the virtual environment is activated, we can install the openstack
-client.
+Now you can install the OpenStack client.
 
 ```bash
 (openstack) $ pip install python-openstackclient
 ```
 
-As we'll be using other services in our documentation, we'll install these clients as well.
+Since we use other services in our documentation, you can install these clients as well.
 
 ```bash
 (openstack) $ pip install python-heatclient python-designateclient python-octaviaclient
 ```
 
-Now that we're done, we can deactivate our environment.
+Now that you are done, you can deactivate your environment.
 
 ```bash
 (openstack) $ deactivate
 ```
 
-To finish it off, we'll make sure we can use the client outside of our virtual
-environment.
+Finally, ensure that you can use the client outside of your virtual environment.
 
 ```bash
 export PATH="$HOME/.virtualenvs/openstack/bin/:$PATH"
 ```
 
-Now we can check, if everything works and it should look like this:
+Now you can check that everything works. It should look like this:
 
 ```bash
 $ type -a openstack
@@ -127,20 +124,20 @@ openstack is /home/iNNOVO/.virtualenvs/openstack/bin/openstack
 
 ### Windows
 
-If Python is already installed, we need to navigate to where it's installed
+If Python is already installed, you need to navigate to installation folder
 (standard installation folder C:\Python27\Scripts).
 
-To install "pip" we will use the command `easy_install pip`:
+To install *pip*, use the command `easy_install pip`:
 
 ![](attachments/13533313.png)
 
-Once pip is installed, we can install the OpenStack client:
+Once *pip* is installed, you can install the OpenStack client:
 
 ![](attachments/13533314.png)
 
 ### Linux (in our example Ubuntu)
 
-To start things off, we'll install pip.
+First, install *pip*.
 
 ```bash
 $ sudo apt-get install python3-pip
@@ -149,7 +146,7 @@ Building dependency tree
 Reading state information... Done
 ```
 
-Next, we'll install virtualenv, which we'll need to set up our virtual
+Next, install *virtualenv*, which is required to set up your virtual
 environment.
 
 ```bash
@@ -159,8 +156,7 @@ Building dependency tree
 Reading state information... Done
 ```
 
-Now we can create a virtual environment, in which we can install the OpenStack
-client.
+Now you can create a virtual environment where you install the OpenStack client.
 
 ```bash
 $ virtualenv ~/.virtualenvs/openstack
@@ -168,40 +164,40 @@ New python executable in /Users/iNNOVO/.virtualenvs/openstack/bin/python
 Installing setuptools, pip, wheel...done.
 ```
 
-Now we activate our freshly created environment.
+Then you can activate your newly created environment.
 
 ```bash
 $ source ~/.virtualenvs/openstack/bin/activate
 (openstack) $
 ```
 
-Once activated, we can install the
+Once activated, you can install the
 [OpenStackClient](https://docs.openstack.org/python-openstackclient/latest/):
 
 ```bash
 (openstack) $ pip install python-openstackclient
 ```
 
-As we'll use heat in our documentation, we'll also install the heat
+As we use *Heat* in our documentation, you will also install the *Heat*
 client.
 
 ```bash
 (openstack) $ pip install python-heatclient
 ```
 
-Once done, we can deactivate our virtual environment.
+Once you are done, you can deactivate your virtual environment.
 
 ```bash
 (openstack) $ deactivate
 ```
 
-To finish up, we'll make sure that we can use our newly installed software.
+Finally, ensure that you can use your newly installed software.
 
 ```bash
 export PATH="$HOME/.virtualenvs/openstack/bin/:$PATH"
 ```
 
-Now we can check, if everything works and it should look like this:
+Now you can check that everything works. It should look like this:
 
 ```bash
 $ type -a openstack
@@ -210,16 +206,16 @@ openstack is /home/iNNOVO/.virtualenvs/openstack/bin/openstack
 
 ## Credentials
 
-For the OpenStack client to work, we'll need to supply it with credentials.
+For the OpenStack client to work, you need to supply it with the credentials.
 
-We can download the credentials directly from
+You can download the credentials directly from
 the [Horizon](https://dashboard.optimist.innovo.cloud/identity/)
-dashboard, after we login, click on your mail Adress in the right corner
-and an then on "Download OpenStack RC File v3".
+dashboard. After the login, click on your mail address in the right corner. Then click
+ *Download OpenStack RC File v3*.
 
 ### macOS | Linux
 
-We need to source the credentials, which can be easily done
+You need to source the credentials, which can be easily done
 with this command (IMPORTANT: The command can only be used in the folder where
 the RC file was downloaded):  
 
@@ -229,18 +225,18 @@ source EXAMPLE.sh
 
 ### Windows
 
-To source the credentials in windows, it's necessary to use
+To source the credentials on Windows, you must use
 *PowerShell*, *Git for Windows* or [*Linux on Windows*](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
-If you're using *Git for Windows* or *Linux on Windows*, you can use the same command as described above
-in the macOS | Linux part.
+If you use *Git for Windows* or *Linux on Windows*, you can use the same commands described
+in the macOS | Linux section.
 
 ```bash
 source EXAMPLE.sh
 ```
 
-If *PowerShell* is used, we need to set every variable individually.
-Every needed variable is in the previously downloaded *Beispiel.sh*
+If you use *PowerShell*, you need to set each variable individually.
+All required variables are in the previously downloaded *Beispiel.sh*.
 To set the variables, use the following command:
 
 ```bash
@@ -258,10 +254,9 @@ set-item env:OS_IDENTITY_API_VERSION -value "3"
 
 ## Conclusion
 
-We now have an OpenStack client with working credentials, and the first
-commands can be tested.
+You now have an OpenStack client with working credentials, and can test the commands.
 
-An overview of all OpenStack commands can be called up with the following command:
+To get an overview of all OpenStack commands, run the following command:
 
 ```bash
 openstack --help

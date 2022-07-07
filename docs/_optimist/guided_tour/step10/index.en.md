@@ -1,28 +1,25 @@
 ---
-title: "10: Getting access to the Internet; Creating a network"
+title: "10: Get access to the Internet; Create a network"
 lang: en
 permalink: /optimist/guided_tour/step10/
 nav_order: 1100
 parent: Guided Tour
 ---
 
-Step 10: Getting access to the Internet: Creating a network
-===========================================================
+# Step 10: Get access to the Internet: Create a network
 
-Start
--------
+## Start
 
-So far, we've created a VM and a security group.
+So far, you have created a VM and a security group.
 
-Our next step is to create a network.
+The next step is to create a network.
 
-The network
------------
+## The network
 
-We'll start with the network. As with previous commands, we have
-additional options that we can list with `--help`.
+You will start with the network. As with previous commands, you have
+additional options you can list with `--help`.
 
-Let's create our network:
+To create your network use the following command:
 
 ```bash
 $ openstack network create BeispielNetzwerk
@@ -57,18 +54,17 @@ $ openstack network create BeispielNetzwerk
 +---------------------------+--------------------------------------+
 ```
 
-Subnet
-------
+## Subnet
 
-Now that we have a network, we'll have to create a subnet for it.
+Now that you have a network, you need to create a subnet for it.
 
-The subnet creation command also has a few options, in our example we'll use:
+The subnet creation command also has a few options. In our example, we use:
 
-- `--network`: Specifies in which network the subnet will be created
+- `--network`: Specifies the network where the subnet will be created
 - `--subnet-range`: [The CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) range
-    for the subnet. In our example it will be `192.168.2.0/24`
+    for the subnet. In our example it is `192.168.2.0/24`
 
-To create a subnet in our existing network we run:
+To create a subnet in your existing network, run the following command:
 
 ```bash
 $ openstack subnet create BeispielSubnet --network BeispielNetzwerk --subnet-range 192.168.2.0/24
@@ -99,10 +95,9 @@ $ openstack subnet create BeispielSubnet --network BeispielNetzwerk --subnet-ran
 +-------------------------+--------------------------------------+
 ```
 
-Router
-------
+## Router
 
-For our virtual network to be able to reach the internet, we'll have to
+For your virtual network to be able to reach the internet, you need to
 create a router:
 
 ```bash
@@ -129,25 +124,24 @@ $ openstack router create BeispielRouter
 +-------------------------+--------------------------------------+
 ```
 
-We need to define the external gateway to be able to access the internet:
+To be able to access the internet, you need to define the external gateway:
 
 ```bash
 openstack router set BeispielRouter --external-gateway provider
 ```
 
-Now we'll add the subnet to the router:
+Next, add the subnet to the router:
 
 ```bash
 openstack router add subnet BeispielRouter BeispielSubnet
 ```
 
-Port
-----
+## Port
 
-Now that we have our subnet and router, we need to create a port for the
+Now that you have your subnet and router, you need to create a port for the
 network.
 
-We can associate the port using the `--network` option:
+You can link the port using the `--network` option:
 
 ```bash
 $ openstack port create BeispielPort --network BeispielNetzwerk
@@ -187,8 +181,7 @@ $ openstack port create BeispielPort --network BeispielNetzwerk
 +-----------------------+----------------------------------------------------------------------------+
 ```
 
-Conclusion
-----------
+## Conclusion
 
 After the router, subnet, and port have been created and linked together,
-the setup of the sample network is complete. In the next step we will add IPv6 access.
+the setup of the sample network is complete. In the next step, you will add IPv6 access.

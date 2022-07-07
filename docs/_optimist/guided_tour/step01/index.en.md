@@ -1,67 +1,63 @@
 ---
-title: "01: The Horizon(Dashboard)"
+title: "01: The Horizon (Dashboard)"
 lang: en
 permalink: /optimist/guided_tour/step01/
 nav_order: 1010
 parent: Guided Tour
 ---
 
-Step 1: The Horizon(Dashboard)
-==============================
+# Step 1: The Horizon (Dashboard)
 
-Preface
--------
+## Start
 
-In this step by step tutorial, we will ease you into using OpenStack.
+In this step-by-step tutorial, you will learn how to use OpenStack.
 
-We'll start with the Horizon dashboard, after that we'll switch to the
-console and then finish up with writing our own Heat
+You will start with the Horizon dashboard, then switch to the
+console and finish with writing your own Heat
 template.
 
-Login
------
+## Login
 
-After you have received your credentials, we can log in to the
+After you have received your credentials, you can log on to the
 dashboard.
 
-**IMPORTANT**: There is no automatic way to reset the password, if you
-need a new password, please write an e-mail to <support@gec.io>
+**IMPORTANT**: You cannot automatically reset the password. If you
+need a new password, write an e-mail to <support@gec.io>
 
-The URL for the dashboard is <https://dashboard.optimist.innovo.cloud>
+The URL for the dashboard is
+<https://dashboard.optimist.innovo.cloud>
 
 [![](attachments/13536092.png)](https://dashboard.optimist.innovo.cloud/)
 
-You should see the login form, use *default* for the *Domain* field and also use
-your username and password in the appropriate fields.
+The login form appears. Use *default* for the *Domain* field, and enter
+your user name and password in the relevant fields.
 
 To log in, click *Connect*.
 
 ![](attachments/13536090.png)
 
-Change Password
----------------
+## Change Password
 
-For security reasons we recommend that you change your password after
-you received it from us.
+For security reasons we recommend changing your password after
+receiving it from GEC.
 
-It's easily changed via clicking your *Username*(1) in right corner of
-the Horizon and then clicking *Settings*(2).
+To change the password, click your *User name* (1) in right corner of
+ Horizon and then *Settings* (2).
 
 ![](attachments/13536091.png)
 
-Now you will see the settings page, where you can change various
+The Settings window appears, where you can change various
 settings.
 
-To change the password, click on *Change Password*(1) in the left
-side-navigation and you need to enter your old one(2), enter the new
-one(3) and confirm the new one(4).
+To change the password, click *Change Password*
+ (1) in the left-side navigation menu. Enter your old password (2), then enter the new
+one (3), and confirm the new one (4).
 
-To save it, click *Change*(5).
+To save it, click *Change* (5).
 
 ![](attachments/9701052.png)
 
-Conclusion
-----------
+## Conclusion
 
-You've taken your first steps in the dashboard and changed your
-password!
+You have taken your first steps in the dashboard and successfully changed your
+password.

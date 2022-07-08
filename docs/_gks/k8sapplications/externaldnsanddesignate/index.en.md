@@ -18,7 +18,7 @@ To successfully finish this guide, you need the following items.
 * A valid `kubeconfig` for your cluster
   * See [Connecting to a Cluster](/gks/accessmanagement/connectingtoacluster/)
 * Installed [OpenStack CLI tools](https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html)
-* [OpenStack API access](https://docs.innovo.cloud/guided_tour/en/step04/#credentials)
+* [OpenStack API access](https://docs.gec.io/optimist/guided_tour/step04/#credentials)
 * Valid domain
 
 ## Configure your domain to use Designate

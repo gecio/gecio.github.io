@@ -20,7 +20,7 @@ Um diesen Guide erfolgreich abzuschließen brauchen Sie Folgendes:
 * Eine valide Konfigdatei `kubeconfig` für den Cluster
   * Siehe hierzu auch: [Mit einem Cluster verbinden](/gks/accessmanagement/connectingtoacluster/)
 * Installierte [OpenStack-CLI Werkzeuge](https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html)
-* [OpenStack-API-Zugang](https://docs.innovo.cloud/guided_tour/de/schritt04/#zugangsdaten)
+* [OpenStack-API-Zugang](https://docs.gec.io/de/optimist/guided_tour/step04/#zugangsdaten)
 
 ### Konfigurieren Sie Ihre Domäne zur Verwendung von Designate
 

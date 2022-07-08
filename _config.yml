@@ -104,7 +104,7 @@ collections:
   optimist:
     output: true
     sort_by: nav_order
-  imke:
+  gks:
     output: true
     sort_by: nav_order
 
@@ -119,7 +119,7 @@ defaults:
 
   - scope:
       path: ""
-      type: "imke"
+      type: "gks"
     values:
       layout: "default"
 
@@ -127,8 +127,8 @@ just_the_docs:
   # Define which collections are used in just-the-docs
   collections:
     # Reference the "docs" collection
-    imke:
-      name: IMKE
+    gks:
+      name: GKS
       # Exclude the collection from the navigation
       # Supports true or false (default)
       nav_exclude: false

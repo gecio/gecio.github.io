@@ -34,4 +34,4 @@ When the second node is back after the update, the pods will _not_ be automatica
 
 * We recommend to use at least three nodes, because in that way loads could be better distributed during upgrades.
 * The tool 'popeye' analyzes clusters and makes suggestions for improvement based on best practices
-* Upgrade the nodes to the latest version and follow the final step in the guide: <https://gecio.github.io/gks/clusterlifecycle/upgradingacluster/>
+* Upgrade the nodes to the latest version and follow the final step in the guide: </gks/clusterlifecycle/upgradingacluster/>

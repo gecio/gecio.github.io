@@ -100,4 +100,6 @@ The command to upload images requires these fields at a minimum:
 - `--file`: The source file on your machine
 - Name of the Image: `my-image` for example.
 
+Additionally, to allow the creation of Snapshots on running Instances, we recommend that you include `--property hw_qemu_guest_agent=True` to install the `qemu-guest-agent` upon creation of the new image. Further details can be found in our [FAQ](https://docs.gec.io/de/optimist/faq/#why-am-i-unable-to-create-a-snapshot-of-a-running-instance).
+
 You can also use the dashboard to upload images. Make sure to use the same properties there.

@@ -33,7 +33,7 @@ Aktuell enthält diese Liste:
 - Flatcar Linux
 - Windows Server 2019 (GUI/Core)
 
-Diese Images werden täglich auf neue Versionen überprüft. Die neueste verfügbare Version ist immer ein "public image" und endet auf `Latest`. Alle vorherigen Versionen eines Images werden durch unseren Automatismus in "community images" umgewandelt, umbenannt (`latest` wird durch das Datum des ersten Uploads ersetzt), und bei ausbleibender Verwendung (keinerlei Nutzung) schlussendlich gelöscht. 
+Diese Images werden täglich auf neue Versionen überprüft. Die neueste verfügbare Version ist immer ein "public image" und endet auf `Latest`. Alle vorherigen Versionen eines Images werden durch unseren Automatismus in "community images" umgewandelt, umbenannt (`latest` wird durch das Datum des ersten Uploads ersetzt), und bei ausbleibender Verwendung (keinerlei Nutzung) schlussendlich gelöscht.
 
 OpenStack und viele Deployment-Tools unterstützen die Verwendung dieser Images entweder über den Namen oder über ihre UUID. Durch die Verwendung eines Namens, z.B. `Ubuntu 22.04 Jammy Jellyfish - Latest`, Erhalten sie jeweils die aktuellste Version des jeweiligen Images, indem Sie Ihre Instanzen neu bereitstellen oder neu aufbauen, selbst wenn wir das Image zwischendurch ersetzen. Sie können dieses Verhalten vermeiden, indem Sie stattdessen die UUID verwenden. Dies kann für Cluster-Einsätze nützlich sein, bei denen Sie sicherstellen wollen, dass auf allen Instanzen die gleiche Version des Images läuft.
 
@@ -99,5 +99,7 @@ Dabei müssen mindestens folgende Parameter spezifiziert werden:
 - `--disk-format`: Das Format Ihres Quell-Images, z.B. `qcow2`
 - `--file`: Das Quell-Image auf Ihrem System
 - Name des Abbilds: `my-image` als Beispiel.
+
+Um die Erstellung von Snapshots auf laufenden Instanzen zu ermöglichen, empfehlen wir außerdem, dass Sie `--property hw_qemu_guest_agent=True` einschließen, um den `qemu-guest-agent` bei der Erstellung des neuen Images zu installieren. Weitere Details finden Sie in unseren [FAQ](https://docs.gec.io/de/optimist/faq/#warum-kann-ich-keinen-snapshot-einer-laufenden-instance-erstellen).
 
 Das gleiche funktioniert auch über das Dashboard. Achten Sie hier darauf, alle der obigen Parameter anzugeben.

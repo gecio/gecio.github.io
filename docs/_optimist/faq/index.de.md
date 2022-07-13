@@ -113,16 +113,17 @@ Versuche, mutli-attached Volumes ohne clusterfähige Dateisysteme zu verwenden, 
 
 ## Warum kann ich keinen Snapshot einer laufenden Instance erstellen?
 
-Um konsistente Snapshots bereitzustellen, verwendet die Optimist-Plattform die Property [os_require_quiesce=yes](https://opendev.org/openstack/nova/commit/926e58a179ef373646164bea40dc46b1ebef4748).
-Diese Eigenschaft ermöglicht es `fsfreeze`, den Zugriff auf laufende Instanzen auszusetzen und fortzusetzen, und stellt sicher, dass ein stabiles Image auf der Festplatte beibehalten wird.
+Um konsistente Snapshots zu erstellen, verwendet die Optimist-Plattform das Property [os_require_quiesce=yes](https://opendev.org/openstack/nova/commit/926e58a179ef373646164bea40dc46b1ebef4748).
+Diese Eigenschaft ermöglicht die Nutzung von `fsfreeze`, um den Zugriff auf laufende Instanzen auszusetzen, um einen konsistenten Snapshot der Instanz zu erstellen.
 
-Benutzer müssen daher einen der folgenden Ansätze wählen, um Snapshots auf laufenden Instanzen zu erstellen:
+Zur Erstellung von Snapshots von Instanzen stehen in der Optimist Platform die folgenden Optionen zur Verfügung:
 
-Die erste Option besteht darin, einen Snapshot der laufenden Instanz zu erstellen, indem der `qemu-guest-agent` installiert und ausgeführt wird. Es kann wie folgt installiert und ausgeführt werden:
+Die erste Option besteht darin, einen Snapshot der laufenden Instanz zu erstellen, indem der `qemu-guest-agent` installiert und ausgeführt wird. Dieser kann wie folgt installiert und ausgeführt werden:
 
 ```bash
 apt install qemu-guest-agent
 systemctl start qemu-guest-agent
+systemctl enable qemu-guest-agent
 ```
 
 Außerdem empfehlen wir beim [Hochladen Ihrer eigenen Images](https://docs.gec.io/de/optimist/specs/images/#uploading-your-own-images), dass Sie `--property hw_qemu_guest_agent=True` hinzufügen Installieren Sie dies bei der Erstellung des neuen Images.

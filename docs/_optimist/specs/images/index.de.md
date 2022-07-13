@@ -100,6 +100,7 @@ Dabei müssen mindestens folgende Parameter spezifiziert werden:
 - `--file`: Das Quell-Image auf Ihrem System
 - Name des Abbilds: `my-image` als Beispiel.
 
-Um die Erstellung von Snapshots auf laufenden Instanzen zu ermöglichen, empfehlen wir außerdem, dass Sie `--property hw_qemu_guest_agent=True` einschließen, um den `qemu-guest-agent` bei der Erstellung des neuen Images zu installieren. Weitere Details finden Sie in unseren [FAQ](https://docs.gec.io/de/optimist/faq/#warum-kann-ich-keinen-snapshot-einer-laufenden-instance-erstellen).
+Um die Erstellung von Snapshots auf laufenden Instanzen zu ermöglichen, empfehlen wir außerdem, dass Sie `--property hw_qemu_guest_agent=True` und `qemu-guest-agent` an den von Ihnen erstellten Images setzen.
+Weitere Details finden Sie in unseren [FAQ](https://docs.gec.io/de/optimist/faq/#warum-kann-ich-keinen-snapshot-einer-laufenden-instance-erstellen).
 
 Das gleiche funktioniert auch über das Dashboard. Achten Sie hier darauf, alle der obigen Parameter anzugeben.

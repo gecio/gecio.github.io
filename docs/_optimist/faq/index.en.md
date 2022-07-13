@@ -111,22 +111,23 @@ Attempts to use multi-attached volumes without cluster-capable filesystems carri
 ## Why am I unable to create a snapshot of a running instance?
 
 In order to provide consistent snapshots, the Optimist platform utilises the property [os_require_quiesce=yes](https://opendev.org/openstack/nova/commit/926e58a179ef373646164bea40dc46b1ebef4748).
-This property allows `fsfreeze` to suspend and resume access on running instances and ensures that a stable image is maintained on disk.
+This property allows `fsfreeze` to suspend and resume access on running instances and ensures ensures that a consistent image is created from the disk.
 
-Users must therefore choose one of the following approaches in order to create snapshots on running instances:
+The Optimist Platform supports the following options to facilitate the creation of snapshots on running instances:
 
 The first option is to take a snapshot of the running instance by installing and running the `qemu-guest-agent`. It can be installed and run as follows:
 
 ```bash
 apt install qemu-guest-agent
 systemctl start qemu-guest-agent
+systemctl enable qemu-guest-agent
 ```
 
 Once the qemu-guest-agent is running, the snapshot can be created.
 
 Additionally, when [uploading your own images](https://docs.gec.io/optimist/specs/images/#uploading-your-own-images), we recommend that you include `--property hw_qemu_guest_agent=True` to install this upon creation of the new image.
 
-The second option is to stop the running instance, create the snapshot, then finally restart the instance again. This can be done via the Horizon Dashboard or on the CLI as follows:
+The second option is to stop the running instance, create the snapshot, then start the instance again. This can be done via the Horizon Dashboard or on the CLI as follows:
 
 ```bash
 openstack server stop ExampleInstance

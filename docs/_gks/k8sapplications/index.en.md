@@ -5,12 +5,14 @@ permalink: /gks/k8sapplications/
 nav_order: 7000
 has_children: true
 ---
+# Kubernetes Applications
 
-Running applications on Kubernetes is a complex topic. In this section we have collected some articles which could be of interest with regards to the GKS platform.
+Running applications on Kubernetes is a complex topic. Here we collected some information which might be of interest with regard to the GKS platform.
 
-**Further reading**
+## Learn More
+
 * [Running Applications in Kubernetes](/gks/k8sapplications/runningapplications/)
 * [Managing Service Accounts](/gks/k8sapplications/serviceaccounts/)
-* [External-DNS with Designate](/gks/k8sapplications/externaldnsanddesignate/)
+* [ExternalDNS with Designate](/gks/k8sapplications/externaldnsanddesignate/)
 * [Time Zone Management](/gks/k8sapplications/timezones/)
 * [StorageClass Setup](/gks/k8sapplications/storageclasses/)

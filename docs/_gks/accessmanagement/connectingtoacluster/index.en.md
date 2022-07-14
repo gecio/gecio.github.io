@@ -5,58 +5,59 @@ permalink: /gks/accessmanagement/connectingtoacluster/
 nav_order: 6100
 parent: Access Management
 ---
+# Connecting to a Cluster
 
-After we created a cluster in GKS, it is time to connect to
-it. This is necessary to deploy and manage our applications.
+After you created a cluster in GKS, it is time to connect to
+it. This is necessary to deploy and manage your applications.
 
-## Finding our Cluster
+## Finding Your Cluster
 
-To find a cluster, we need to go to the detail view of the cluster.
-For that, we click on the entry `first-system`:
+To find a cluster, you need to go to the detail view of the cluster.
+For that, click on the entry `first-system`:
 
 ![Step 1](connect_1.png)
 
 ## Getting Access
 
-We click on the downwards facing arrow in the top right corner:
+Click on  `Get Kubeconfic` in the top right corner:
 
 ![Step 2](connect_2.png)
 
-This way we download a file which is called `kubeconfig` in
+This way you download a file which is called `kubeconfig` in
 Kubernetes jargon. This file contains all end points, certificates
-and other information about the cluster. The `kubectl`command uses
+and other information about the cluster. The `kubectl` command uses
 this file to connect to the cluster.
 
-To use the `kubeconfig`, we need to register it on the console.
+To use `kubeconfig`, you need to register it on the console.
 There are two ways to do this:
 
 1. `kubectl` by default tries to use the file `.kube/config`
    in your home directory.
-1. We can temporarily use the `kubeconfig` by exporting it to
+1. You can temporarily use the `kubeconfig` by exporting it to
    an environment variable.
 
 To keep things straightforward and to avoid changing standards
-on our system, we choose the second method in the example.
+on your system, choose the second method in the example.
 
-For this we need to open a Terminal. In the screenshots we use
+For this you need to open a Terminal. In the screenshots we use
 iTerm2 on macOS, but the examples work the same way when using
 bash on Linux or Windows.
 
-First, we need to find the downloaded `kubeconfig` file. Browsers
+First, you need to find the downloaded `kubeconfig` file. Browsers
 like Chrome or Firefox usually store it in the Downloads folder.
-The name is constructed from two parts:
+The name is composed of two parts:
 
 * `kubeconfig-admin-`
-* plus the cluster id.
+* The cluster id
 
-To register the `kubeconfig`, we use the following command:
+To register the `kubeconfig`, use the following command:
 
 ```bash
 cd Downloads
 export KUBECONFIG=$(pwd)/kubeconfig-admin-CLUSTERID
 ```
 
-Now we can interact with the cluster. The simplest command is: "show
+Now you can interact with the cluster. The simplest command is: "show
 all the nodes that comprise my cluster":
 
 ```bash
@@ -70,23 +71,23 @@ musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.20.7
 
 ## Kubernetes Dashboard
 
-In GKS we can access the Kubernetes Dashboard with one click.
-We only need to click on the `Open Dashboard` button on the top right of the cluster view:
+In GKS you can access the Kubernetes dashboard with one click.
+You only need to click on the `Open Dashboard` button on the top right of the cluster view:
 
 ![Step 4](connect_3.png)
 
-Now we see the Kubernetes Dashboard and can explore our cluster
+Now you see the Kubernetes dashboard and can explore your cluster
 graphically:
 
 ![Step 5](connect_4.png)
 
 ## Summary
 
-By completing this guide you've learned the following:
+You've learned the following:
 
 * How to get the `kubectl` configuration file
 * How to configure `kubectl` to use the `kubeconfig`file
-* How to access the Kubernetes Dashboard for a cluster
+* How to access the Kubernetes dashboard for a cluster
 
-Congratulations! Now you know all that's needed to connect to a
-Kubernetes Cluster.
+Congratulations! Now you know all what's needed to connect to a
+Kubernetes cluster.

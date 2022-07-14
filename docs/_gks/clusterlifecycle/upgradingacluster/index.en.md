@@ -5,89 +5,88 @@ permalink: /gks/clusterlifecycle/upgradingacluster/
 nav_order: 4200
 parent: Cluster Lifecycle
 ---
+# Kubernetes Updates
 
 Cluster security is paramount, and new features come with
-each release. In order to stay safe and up-to-date, means
-installing Kubernetes updates on a regular basis.
+each release. In order to stay safe and up-to-date, Kubernetes updates have to be installed on a regular basis.
 
 In especially critical cases, we will automatically update the
 Cluster API to the latest minor version in order to keep our
-own infrastructure up-to-date. In this case the following section
+own infrastructure up-to-date. In this case the below section
 *The Cluster* can be skipped. However, nodes must still be updated
 manually by you.
 
-Before you upgrade a cluster, please refer to the target version's [Changelog](/gks/about/)
-and make sure you familiarize yourself with the upcoming changes.
+Before you upgrade a cluster, refer to the target version's [changelog](/gks/about/)
+and familiarize yourself with the upcoming changes.
 
-One tool that can help to prepare the update will be [kubepug](https://github.com/rikatz/kubepug).
-It checks all deployed resources against the new Kubernetes version and will warn about removals and deprecations.
+One tool that can help to prepare the update is [kubepug](https://github.com/rikatz/kubepug).
+It checks all deployed resources against the new Kubernetes version and warns about removals and deprecations.
 
 ## The Cluster
 
-In Kubernetes the infrastructure is divided into master (= Kubernetes control plane) and (worker-)nodes.
+In Kubernetes, the infrastructure is divided into master (= Kubernetes control plane) and (worker) nodes.
 The master is managed by GKS itself.
 
-Since several versions for the master are offered, you have the
-possibility to choose the version in GKS's web interface. An
-update of the master can be accomplished with a few mouse clicks.
+Since several versions for the master are offered, you can choose the version in the GKS web interface. An
+update of the master can be done with a few mouse clicks.
 
-First, we select the cluster which we'd like to update.
+First, select the cluster you'd like to update.
 
 ![Step 1](update_1.png)
 
-Then we click on the field `Master Version` and choose a new
+Then click on the field `Master Version`, and choose a new
 version for the master.
 
 ![Step 2](update_2a.png)
 
-It is recommended to select `Upgrade Machine Deployments`, as this will upgrade the worker-nodes as well:
+We recommend selecting `Upgrade Machine Deployments`, as this will upgrade the worker nodes as well.
 
 ![Step 2](update_2b.png)
 
 Now GKS automatically updates the master and optionally the
-worker nodes as well, and we are done with this step.
+worker nodes.
 
 ## The Nodes
 
-If the master has been updated without upgrading the Machine Deployments or if a scheduled maintenance of the GKS
-platform has led to an implicit upgrade of the master (normally this just updates a patchlevel), we must still update the nodes.
-The GKS web interface can help us here as well.
+If the master has been updated without upgrading the Machine Deployments, or if a scheduled maintenance of the GKS
+platform has led to an implicit upgrade of the master (normally this just updates a patchlevel), you must still update the nodes.
+The GKS web interface helps you here as well.
 
 It's worth noting that this update process deletes the old nodes and
 replaces them with new ones. This also means that all pods will be
 restarted.
 
-The first step is to click on the Machine Deployment.
+First, click on `Machine Deployments`.
 
 ![Step 3](update_3.png)
 
-Next we click on the pencil icon to open the update view.
+Next, click on the pencil icon to open the update view.
 
 ![Step 4](update_4.png)
 
-Now, under `kubelet Version` we select the version, for example
+Now, under `kubelet Version` select the version, for example
 `1.21.5`, which matches the cluster's master version. Confirm the
-update by clicking `Save Changes`:
+update by clicking `Save Changes`.
 
 ![Step 5](update_5.png)
 
-Now GKS will automatically update the node group to the new version,
-amd Kubernetes will take care of deploying your applications to the
+Now GKS automatically updates the node group to the new version,
+amd Kubernetes takes care of deploying your applications to the
 new nodes.
 
-## Two Node Cluster
+## Two-Node Cluster
 
-Watch out for clusters with two nodes or fewer. GKS uses a rolling update
+Watch out for clusters with two nodes or less. GKS uses a rolling update
 strategy. This means one node after another is swapped. In a cluster
-with two or fewer nodes that means that the first updated node must
+with two or less nodes this means that the first updated node must
 be fully scheduled before the second one is ready.
 
-As a solution to this is a simple bash script, which per-namespace triggers
+A solution to this is a simple bash script, which per-namespace triggers
 the regeneration of all pods.
 <https://github.com/truongnh1992/playing-with-istio/blob/master/upgrade-sidecar.sh>
-<!-- the above is a REALLY bad idea as we are linking to contents that can be changed at any time without us noticing ... we need to FIX this -->
+<!-- the above is a REALLY bad idea as we link to content that can be changed at any time without noticing us ... we need to FIX this -->
 
-We use this after the cluster has been completely updated in a terminal with `kubectl` configured. To get `kubectl` working with your cluster, look at our chapter [Connecting to a Cluster](/gks/accessmanagement/connectingtoacluster/).
+We use this after the cluster has been completely updated in a terminal with `kubectl` configured. To get `kubectl` working with your cluster, look at chapter [Connecting to a Cluster](/gks/accessmanagement/connectingtoacluster/).
 
 ```bash
 curl -o upgrade-node.sh https://raw.githubusercontent.com/truongnh1992/playing-with-istio/master/upgrade-sidecar.sh
@@ -95,7 +94,7 @@ chmod +x upgrade-node.sh
 echo -e "#\!/bin/bash\n$(cat upgrade-node.sh)" > upgrade-node.sh
 ```
 
-Now we must use this script on all of our namespaces.
+Now you must use this script on all of your namespaces.
 
 ```bash
 kubectl get namespace
@@ -110,4 +109,4 @@ kube-system       Active   36m
 Refreshing pods in all Deployments
 ```
 
-Now all pods are cleanly distributed across our nodes.
+Now all pods are cleanly distributed across your nodes.

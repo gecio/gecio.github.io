@@ -5,8 +5,9 @@ permalink: /gks/managingprojects/projectserviceaccounts/
 nav_order: 3300
 parent: Managing GKS-Projects
 ---
+# Managing Service Account Tokens
 
-### Service Accounts
+## Service Accounts
 
 Service accounts allow using a long-lived token that you can use to authenticate with the GKS API.
 
@@ -19,44 +20,44 @@ GKS API. The JWT token by default expires after 3 years.
 
 Service accounts are considered a project's resource. Only the owner of the project can create a service account.
 There is no need to create a new group for a SA, we want to assign a service account to one of the already defined groups:
-`Project Manager`, `Editor` or `Viewer`.
+`Project Manager`, `Editor`, or `Viewer`.
 
 A service account is linked to the project automatically by a `UserProjectBinding` which specifies a binding between a
 service account and a project. A service account will be automatically deleted after project removal.
 
-### Creating a Service Account with Token
+## Creating a Service Account with Token
 
-1. Select the project
+1. Select the project.
 
     ![SA-Projects](sa-projects.png)
 
-1. Go to the Service Accounts page
+1. Go to the Service Accounts page.
 
     ![ServiceAccounts](sa-serviceaccounts.png)
 
-1. Use the `Add Service Account` button
+1. Use the `Add Service Account` button.
 
     ![SA-Add](sa-add.png)
 
-1. Enter a name for the service account and select the group (either `Project Manager`, `Editor` or `Viewer`)
+1. Enter a name for the service account and select the group (either `Project Manager`, `Editor` or `Viewer`).
 
     ![SA-Name](sa-name.png)
 
-1. Click `Add Service Account`
+1. Click `Add Service Account`.
 
     ![SA-Add-SA](sa-add-sa.png)
 
 Now the service account has been created. If you want to associate a token to it, do as follows:
 
-1. Select the service account you just created
+1. Select the service account you just created.
 
     ![SA-Select](sa-select.png)
 
-1. Click on `+ Add Token`
+1. Click on `+ Add Token`.
 
     ![SA-Add-Token](sa-add-token.png)
 
-1. Enter a name for the token and click `Add Token`
+1. Enter a name for the token and click `Add Token`.
 
     ![SA-Tokenname](sa-tokenname.png)
 
@@ -66,7 +67,7 @@ Now the service account has been created. If you want to associate a token to it
 
  > **Important note:** Make sure to save this token at a safe place on your own device. It cannot be displayed again after closing the dashboard window.
 
-### Accessing the API via Service Account Token
+## Accessing the API with the Service Account Token
 
 A client that wants to authenticate itself with a server can then do so by including an `Authorization` request header
 field with the service account token:
@@ -75,7 +76,7 @@ field with the service account token:
 Authorization: Bearer aaa.bbb.ccc
 ```
 
-Example: to get a list of your clusters, you can use the following API call:
+Example: To get a list of your clusters, you can use the following API call:
 
 ```bash
 curl -X GET "https://gks.gec.io/api/v1/projects?displayAll=true" -H "accept: application/json" -H "authorization: Bearer eyJhbXxXXxXxX..."  | jq
@@ -102,7 +103,7 @@ The result will be similar to:
 ]
 ```
 
-### Keeping Track of Service Accounts and Tokens
+## Keeping Track of Service Accounts and Tokens
 
 It is possible to create multiple service accounts for the given project. The service account name must be unique for
 project scope. The service account can have multiple tokens with unique names.
@@ -110,7 +111,7 @@ project scope. The service account can have multiple tokens with unique names.
 The display name of the service account and token is a good way to capture additional information, such as the purpose of
 the service account or token.
 
-### Managing Service Accounts and Tokens
+## Managing Service Accounts and Tokens
 
 It is possible to delete a service account and then create a new service account with the same name. You can do the same
 with service account token.

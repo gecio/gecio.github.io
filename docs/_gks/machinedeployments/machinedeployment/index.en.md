@@ -5,46 +5,48 @@ permalink: /gks/machinedeployments/machinedeployment/
 nav_order: 5100
 parent: Machine Deployments
 ---
-# Add Machine Deployment
+# Machine Deployment
+
+## Adding a Machine Deployment
 
 To add a new Machine Deployment, use the `Add Machine Deployment` button in the upper right corner.
 
 ![add_machine_deployment](add_machine_deployment.png)
 
-This brings up the `Add Machine Deployment`-dialog, which has the same options as at cluster creation time:
+This opens the `Add Machine Deployment`window, which has the same options as at cluster creation time.
 
 ![add_dialog](add_dialog.png)
 
-After pressing `Add Machine Deployment`:
+To create the new nodes, click `Add Machine Deployment`.
 
 ![add_button](add_button.png)
 
-the new nodes will be created. You can look at the progress in the Machine Deployment details.
+You can look at the progress in the Machine Deployment details.
 
-Click on the new Machine Deployment:
+Click on the new Machine Deployment.
 
 ![machine_deployment_overview](machine_deployment_overview.png)
 
-and wait until all nodes are green.
+Wait until all nodes are green.
 
 ![machine_deployment_status](machine_deployment_status.png)
 
-# Delete Machine Deployment
+## Deleting a Machine Deployment
 
-To delete a Machine Deployment use the trash symbol in either the list:
+To delete a Machine Deployment, use the trash symbol in the list.
 
 ![delete_from_list](delete_from_list.png)
 
-or the details page:
+Alternatively, you can use the trash symbol on the details page.
 
 ![delete_from_details](delete_from_details.png)
 
-# Rename Machine Deployment
+## Renaming a Machine Deployment
 
-Machine Deployment can't be renamed. So we need to [create](#add-machine-deployment) a second one and [delete](#delete-machine-deployment) the old one.
+Machine Deployment cannot be renamed. Therefore, you need to [create](#add-machine-deployment) a second one and [delete](#delete-machine-deployment) the old one.
 
-But there is a gotcha! Deleting a Machine Deployment will delete all nodes at the same time. Depending on our replicas and number of nodes, that can lead to a downtime.
+Deleting a Machine Deployment deletes all nodes at the same time. Depending on your replicas and number of nodes this can lead to a downtime.
 
-To mitigate this, you should reduce the replica of the Machine Deployment step by step until it is 0 and then delete the Machine Deployment.
+To mitigate this, you should reduce the replica of the Machine Deployment step-by-step until it is 0 and then delete the Machine Deployment.
 
-The Pods will most likely rescheduled to the new host directly, but it is possible that some pod will end up on old nodes. This will lead to many rescheduled. If that is a problem, it is possible to first cordon all old nodes with `kubectl cordon <node name>` and then slowly reduce the replicas afterwards.
+The pods will be most likely rescheduled to the new host directly, but it might be that some pod will end up on old nodes. This will lead to many rescheduled ones. If this is a problem, you can first cordon all old nodes with `kubectl cordon <node name>` and then slowly reduce the replicas.

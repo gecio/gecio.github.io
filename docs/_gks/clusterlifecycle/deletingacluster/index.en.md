@@ -6,39 +6,39 @@ nav_order: 4400
 parent: Cluster Lifecycle
 ---
 
-It's quick and simple to delete Clusters in GKS. The
-only prerequisite is that you need a running Cluster
-in an GKS Project.
+# Deleting a Cluster
+
+It's quick and simple to delete clusters in the GKS dashboard. The
+only prerequisite is a running cluster
+in a GKS project.
 
 ## Finding the Cluster
 
-To delete a Cluster, we need to go into the Cluster's detail
-view. For this we click on `first-system`:
+To delete a cluster, you need to go into the cluster's detail
+view. For this, click on `first-system`:
 ![Step 1](delete_1.png)
 
-We need to use the cluster name later. To copy it into the
-clipboard, we click on the name:
+You need to use the cluster name later. To copy it into the
+clipboard, click on the name:
 ![Step 2](delete_2.png)
 
 ## Deleting the Cluster
 
-Now we click `Delete`.
+Now click `Delete`.
 ![Step 3](delete_3.png)
 
-This opens a window where we need to enter the cluster name
-to avoid sudden and unwanted deletions. Since we copied the name
-into our clipboard previously, we can simply paste it here.
+This opens a window where you need to enter the cluster name
+to avoid sudden and unwanted deletions. Since you copied the name
+into your clipboard previously, you can simply paste it here.
 ![Step 4](delete_4.png)
 
-Since we also want to free up the resources, we leave both check
+Since we also want to free up the resources, leave both check
 boxes marked. That way, volumes and load balancers provided by
 OpenStack will be removed as well.
 
 ## Summary
 
-We learnt and achieved the following:
+Congratulations! You learned and achieved the following:
 
-* How to delete a Cluster
-* How to delete all Resources in OpenStack as well.
-
-Congratulations! That's all you need to know to delete a Cluster in GKS.
+* How to delete a cluster
+* How to delete all resources in OpenStack as well

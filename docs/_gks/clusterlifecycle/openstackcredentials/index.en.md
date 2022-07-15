@@ -5,28 +5,29 @@ permalink: /gks/clusterlifecycle/openstackcredentials/
 nav_order: 4300
 parent: Cluster Lifecycle
 ---
+# Cluster Lifecycle
 
-It is possible to change the credentials that GKS is using to create Openstack resources.
-This could be needed after changing the password, or when we need to use a different account.
+It is possible to change the credentials that GKS uses to create Openstack resources.
+This could be required after you changed the password, or when you need to use a different account.
 
-## Change the credentials
+## Changing the Credentials
 
-Changing the credentials is as easy as following these steps:
+To change the credentials perform the following steps:
 
 1. Navigate to the desired cluster.
 
     ![Clusters](clusters.png)
 
-2. Click the three dots, to open the cluster sub menu
+2. Click the three dots, to open the cluster submenu.
 
     ![Three-Dots](three-dots.png)
 
-3. Select `Edit Provider`
+3. Select `Edit Provider`.
 
     ![Edit-Provider](edit-cluster.png)
 
-4. Change credentials
+4. Change the credentials.
 
     ![Credentials-Edit](credentials-edit.png)
 
-Soon after performing these steps, a confirmation message pops up, and the credentials have been changed successfully.
+Shortly after performing these steps, a confirmation message pops up, and the credentials have been changed successfully.

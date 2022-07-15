@@ -6,13 +6,14 @@ nav_order: 5000
 parent: Cluster Lifecycle
 has_children: false
 ---
+# Migration Container Runtime Engine
 
 ## General Container Runtime Information
 
 For a long time now Docker (or rather the dockershim to be more precise) has
 been used as the default Container Runtime Engine in the underlying
 infrastructure of Kubernetes. But maintaining this dockershim on the
-development side has become a heaven burden on the Kubernetes maintainers.
+development side has become a heavy burden on the Kubernetes maintainers.
 To reduce this burden the CRI standard has been implemented, but unfortunately
 Docker itself does not implement this standard (hence the dockershim!).
 
@@ -24,26 +25,25 @@ will be containerd.
 
 ## Changing the Container Runtime Engine Config
 
-To upgrade from docker to containerd the following steps are needed:
+To upgrade from Docker to containerd the following steps are needed:
 
-1. edit the cluster configuration
+1. Edit the cluster configuration.
 
    ![edit-cluster-config](edit-cluster.png)
 
-1. change the value of the *Container Runtime* field from *docker* to *containerd* and save the changes
+1. Change the value of the *Container Runtime* field from *docker* to *containerd* and save the changes.
 
    ![switch-cre-config](switch-cre.png)
 
-
 ## Activating the Config Change
 
-For the change to take effect you need to rotate your worker nodes once.
+For the change to take effect, you need to rotate your worker nodes once.
 This can be done by either upgrading to a new Kubernetes version or by
 doing a restart of the rollout of your MachineDeployment. While the prior
-can be done in the webUI easily (and is already covered by [here](/gks/clusterlifecycle/upgradingacluster/)),
+can be done in the Web UI easily (and is already covered by [here](/gks/clusterlifecycle/upgradingacluster/)),
 the latter will be shown below.
 
-1. check which container runtime your workers are currently using:
+1. Check which container runtime your workers are currently using:
 
    ```bash
    $ kubectl describe node  | grep "Container Runtime Version"
@@ -53,22 +53,22 @@ the latter will be shown below.
    ```
 
    Here we see in the output that docker is still used as the container runtime.
-1. restart the MachineDeployment by
-    1. clicking on the MachineDeployment of the cluster
+1. Restart the Machine Deployment as follows:
+    1. Click on the Machine Deployment of the cluster.
 
        ![choose-machinedeployment](choose-machinedeployment.png)
 
-    1. clicking on the restart button
+    1. Click on the Restart button.
 
        ![click-on-restart-button](click-on-restart-button.png)
 
-    1. confirming the restart of the MachineDeployment
+    1. Confirm the restart of the Machine Deployment.
 
        ![confirm-restart](confirm-restart.png)
 
-   Now one after another a new machine will be added and an old machine will be removed after it's workload has been transferred into the rest of the cluster. After the last old machine has been removed the restart of the
+   Now one after another, a new machine will be added and an old machine will be removed after its workload has been transferred into the rest of the cluster. After the last old machine has been removed, the restart of the
    MachineDeployment is complete.
-1. now to check again which container runtime powers your worker nodes now:
+1. Now check again, which container runtime powers your worker nodes:
 
    ```bash
    $ kubectl describe node  | grep "Container Runtime Version"
@@ -82,8 +82,7 @@ from *docker* to *containerd*.
 
 ## Learn More
 
-More background information on the container runtime engines for Kubernetes can be
-found here:
+More background information on the container runtime engines for Kubernetes is available here:
 
 * <https://kubernetes.io/blog/2020/12/02/dockershim-faq/>
 * <https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/>

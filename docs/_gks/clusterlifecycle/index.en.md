@@ -5,15 +5,17 @@ permalink: /gks/clusterlifecycle/
 nav_order: 4000
 has_children: true
 ---
+# Cluster Lifecycle
 
-The management of an GKS-Kubernetes-Cluster is handled by the platform itself, but some tasks still require customer interaction. This is not only true for the obvious cluster creation and deletion tasks, but also true for cluster updates which could require a (rolling) restart of Worker-Nodes, such as Kubernetes updates.
+The management of an GKS-Kubernetes-Cluster is handled by the platform itself, but some tasks still require customer interaction. This is not only true for the cluster creation and deletion tasks, but also true for cluster updates which could require a (rolling) restart of worker nodes, such as Kubernetes updates.
 
-**Further reading**
+## Learn More
+
 * [Creating a Cluster](/gks/clusterlifecycle/creatingacluster/)
-* [Updating a Cluster / Kubernetes-Updates](/gks/clusterlifecycle/upgradingacluster/)
-* [Updating a Cluster / CNI-Updates](/gks/clusterlifecycle/upgradingcni/)
-* [Updating a Cluster / Changing Openstack Credentials](/gks/clusterlifecycle/openstackcredentials/)
+* [Updating a Cluster/Kubernetes Updates](/gks/clusterlifecycle/upgradingacluster/)
+* [Updating a Cluster/CNI Updates](/gks/clusterlifecycle/upgradingcni/)
+* [Updating a Cluster/Changing Openstack Credentials](/gks/clusterlifecycle/openstackcredentials/)
 * [Deleting a Cluster](/gks/clusterlifecycle/deletingacluster/)
-* [Deprecation Policy in GKS](/gks/clusterlifecycle/deprecationpolicy/)
+* [Deprecation Policy](/gks/clusterlifecycle/deprecationpolicy/)
 * [Choosing a CNI](/gks/clusterlifecycle/cnichoices/)
-* [Information about the Control-Plane Connector](/gks/clusterlifecycle/controlplaneconnector/)
+* [Control Plane Connector](/gks/clusterlifecycle/controlplaneconnector/)

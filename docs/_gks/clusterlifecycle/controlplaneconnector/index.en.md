@@ -8,55 +8,50 @@ parent: Control Plane Connector
 
 # Control Plane Connector
 
-This page is providing an overview of how the worker nodes are communicating with the control-plane.
+Here you find an overview of how the worker nodes communicate with the control plane.
 
+## Cluster Setup
 
-# Cluster Setup
-
-The GKS platform is providing managed kubernetes services to end-users. For more reliability the
-control-plane of these kubernetes clusters is isolated from the workers. The end-user has complete
+The GKS platform provides a managed Kubernetes services to end users. For more reliability the
+control plane of these Kubernetes clusters is isolated from the workers. The end user has complete
 control of the worker nodes (right down to the operating system of the VM the worker runs on) in the
-end-users own openstack tenant. The control-plane however is managed by the service provider and runs
-on isolated clusters apart from the worker-nodes in different openstack tenant. Still the worker nodes
-must communicate with the control-plane on a regular bases.
+end user's own Openstack tenant. The control plane however is managed by the service provider and runs
+on isolated clusters apart from the worker nodes in different Openstack tenants. Still the worker nodes
+must communicate with the control plane on a regular bases.
 
+### Communication Initiated from the Worker Nodes to the Control Plane
 
-## Communication initiated from the worker nodes to the control-plane
-
-This direction is easy as the communication with the control-plane is done by the kubernetes api-server
+This direction is easy as the communication with the control plane is done by the Kubernetes API server
 exposing it's service via an publicly accessible IPv4 address. That way components running on the worker
 nodes create a TCP connection from inside their openstack tenants private subnet, exiting the cluster
-via the router's egress to the internet and entering the control-planes' dedicated openstack tenants
-subnet where the respective kubernetes api-server is exposed publicy and then forwarded inside it's
+via the router's egress to the internet and entering the control planes' dedicated openstack tenants
+subnet where the respective Kubernetes API server is exposed publicy and then forwarded inside it's
 private openstack subnet again.
 
-But sometimes the kubernetes api-server needs to initiate the connection to the worker-nodes (mostly
-their kubelet's) either when doing "kubectl port-forward"'s or "kubectl exec"'s or "kubectl logs"'s.
+But sometimes the Kubernetes API server needs to initiate the connection to the worker nodes (mostly
+their kubelet's) either when doing "kubectl port-forward", or "kubectl exec", or "kubectl logs".
 The worker nodes do not expose an endpoint to the internet for easy reachability (which is a good
-thing from a security perspective!).
+thing from a security perspective).
 
+### Communication Initiated from the Control Plane to the Worker Nodes
 
-## Communication initiated from the control-plane to the worker nodes
-
-The trick is to create a VPN from the worker nodes to the control-plane in advance and let the
-control-plane use this tunnel for communication. The configuration for this is done at cluster
+The trick is to create a VPN from the worker nodes to the control plane in advance and let the
+control plane use this tunnel for communication. The configuration for this is done at cluster
 creation time.
 
 The way we have implemented this until recently was by managing an openVPN tunnel. This had some
-drawbacks and has now been replaced by a tool from the kubernetes community dedicated for this
+drawbacks and has now been replaced by a tool from the Kubernetes community dedicated for this
 special purpose: enter *Konnectivity*. This tool offers more reliability by being able to create
 multiple tunnels (instead of only one with the previous solution) much ore easily.
 
-
-# Install/Migration
+## Install/Migration
 
 When creating a new cluster with the GKS platform, setup of Konnectivity is the default. Existing
-clusters can be migrated easily by editing the cluster in the GKS-dashboard and checking the box
-right next to *konnectivity*. This will initiate an automatic and seamless removal of openVPN and
-creation of konnectivity-agent and -server pairs on the worker- and control-plane nodes respectively.
+clusters can be migrated easily by editing the cluster in the GKS dashboard and checking the box
+right next to *Konnectivity*. This will initiate an automatic and seamless removal of openVPN and
+creation of Konnectivity agent and -server pairs on the worker- and control plane nodes respectively.
 
+## Learn More
 
-# Further reading
-
-* [konnectivity](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service)
-* [Github repo for specification](https://github.com/kubernetes-sigs/apiserver-network-proxy)
+* [Konnectivity](https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/#konnectivity-service)
+* [GitHub repo for specification](https://github.com/kubernetes-sigs/apiserver-network-proxy)

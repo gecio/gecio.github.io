@@ -155,6 +155,6 @@ Nach dem Löschen können Sie den Cluster mit dem Befehl `kubectl get deployment
 
 Das war's! Sie haben erfolgreich einen Kubernetes Autoscaler auf einem GKS Cluster bereitgestellt und das gewünschte MachineDeployment annotiert, so das der Autoscaler es berücksichtigen kann. Weitere Ressourcen zu Kubernetes Autoscaler und zur Bereitstellung eines GKS Clusters finden Sie im Abschnitt "Weitere Informationen" weiter unten.
 
-### Weitere Informationen
+## Weitere Informationen
 
 * Erfahren Sie mehr zum Kubernetes Autoscaler [hier](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md#what-is-cluster-autoscaler)

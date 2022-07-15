@@ -5,8 +5,9 @@ permalink: /gks/clusterbackups/
 nav_order: 5000
 has_children: true
 ---
+# Cluster Backups
 
-**Further reading**
+## Learn More
 
-* [etcd Backups and Restore](/gks/clusterbackups/etcdbackups/)
-* [Restore a PVC from an existing Openstack volume](/gks/clusterbackups/restorepvcfromvolume/)
+* [Etcd Backups and Restore](/gks/clusterbackups/etcdbackups/)
+* [Restore a PVC from an Existing Openstack Volume](/gks/clusterbackups/restorepvcfromvolume/)

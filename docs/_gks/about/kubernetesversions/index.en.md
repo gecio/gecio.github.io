@@ -22,8 +22,8 @@ Current supported Kubernetes versions in GKS.
 | v1.16   | 10th Dec 2020   | 10th Dec 2020    |
 | v1.15   | 10th Dec 2020   | 10th Dec 2020    |
 
-## Force upgrade policy
+## Force Upgrade Policy
 
-If a customer cluster is not updated by its owner until the announced End-of-Life date, it will be automatically upgraded to the next supported version.
+If a customer cluster is not updated by its owner until the announced GKS End-of-Life date, it will be automatically upgraded to the next supported version.
 
 You can read more about the GKS deprecation and force upgrade policy [here](../../clusterlifecycle/deprecationpolicy).

@@ -1,29 +1,30 @@
 ---
-title: External-DNS with Designate
+title: ExternalDNS with Designate
 lang: en
 permalink: /gks/k8sapplications/externaldnsanddesignate/
 nav_order: 7300
 parent: Kubernetes Applications
 ---
+# ExternalDNS with Designate
 
-To reduce manual effort and automate the configuration of DNS zones, you may want to use [ExternalDNS](https://github.com/kubernetes-sigs/external-dns). In summary, ExternalDNS allows you to control DNS records dynamically via Kubernetes resources in a DNS provider-agnostic way. External DNS is not a DNS server by itself, but merely configures other DNS providers (e.g. OpenStack Designate, Amazon Route53, Google Cloud DNS, etc.)
+To reduce manual effort and automate the configuration of DNS zones, you may want to use [ExternalDNS](https://github.com/kubernetes-sigs/external-dns). In summary, ExternalDNS allows you to control DNS records dynamically with Kubernetes resources in a DNS provider-agnostic way. ExternalDNS is not a DNS server by itself, but merely configures other DNS providers (for example, OpenStack Designate, Amazon Route53, Google Cloud DNS, and so on.)
 
 ## Prerequisites
 
-To successfully finish this guide, you need the following items.
+To successfully complete the following steps, you need the following:
 
 * `kubectl` [latest version](https://kubernetes.io/de/docs/tasks/tools/install-kubectl/)
-* A running Kubernetes Cluster, created with GKS, with a ready Machine Deployment
-  * See [Creating a Cluster](/gks/clusterlifecycle/creatingacluster)
+* A running Kubernetes cluster created with GKS, with a ready Machine Deployment
+  * For more information, see [Creating a Cluster](/gks/clusterlifecycle/creatingacluster).
 * A valid `kubeconfig` for your cluster
-  * See [Connecting to a Cluster](/gks/accessmanagement/connectingtoacluster/)
+  * For more information, see [Connecting to a Cluster](/gks/accessmanagement/connectingtoacluster/).
 * Installed [OpenStack CLI tools](https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html)
 * [OpenStack API access](https://docs.gec.io/optimist/guided_tour/step04/#credentials)
-* Valid domain
+* A valid domain
 
-## Configure your domain to use Designate
+## Configuring Your Domain to Use Designate
 
-Delegate your domains from your DNS provider to our following DNS name servers so that Designate can control the DNS resources of your domain.
+Delegate your domains from your DNS provider to the following GEC DNS name servers so that Designate can control the DNS resources of your domain.
 
 ```bash
 dns1.ddns.innovo.cloud
@@ -32,11 +33,12 @@ dns2.ddns.innovo.cloud
 
 ## Creating your DNS Zone
 
-Before starting to use ExternalDNS you need to add your DNS zones to your DNS provider, in this case, Designate DNS.
+Before you use ExternalDNS, you need to add your DNS zones to your DNS provider, in this case, Designate DNS.
 
-In our example we will use the test domain name `foobar.cloud.` It's important to create the zones before starting to control the DNS resources via Kubernetes.
+In our example we use the test domain name `foobar.cloud.` It is important to create the zones before starting to control the DNS resources with Kubernetes.
 
-Please note, you must include the final `.` at the end of the zone/domain to be created.
+> **Note:**
+> You must include the final `.` at the end of the zone/domain to be created.
 
 ```bash
 $ openstack zone create --email webmaster@foobar.cloud foobar.cloud.
@@ -63,7 +65,7 @@ $ openstack zone create --email webmaster@foobar.cloud foobar.cloud.
 +----------------+--------------------------------------+
 ```
 
-Next, ensure that zone creation has succeeded.
+Next, make sure that the zone was created successfully.
 
 ```bash
 $ openstack zone list
@@ -97,14 +99,14 @@ $ openstack zone show foobar.cloud.
 +----------------+--------------------------------------+
 ```
 
-## Install External-DNS via Helm
+## Installing ExternalDNS with Helm
 
-Please install External-DNS to your cluster. In our example we will use Helm as follows:
+Install ExternalDNS to your cluster. In our example we will use Helm as follows:
 
 * [Install Helm](https://helm.sh/docs/intro/)
 * ```$ helm repo add stable https://kubernetes-charts.storage.googleapis.com/```
 * ```$ helm repo update```
-* Create this file `values.yaml` and configure it, for more information see [values-external-dns](https://github.com/helm/charts/blob/master/stable/external-dns/values-production.yaml).
+* Create this `values.yaml` file and configure it. For more information, see [values-external-dns](https://github.com/helm/charts/blob/master/stable/external-dns/values-production.yaml).
 
 ```yaml
 ## K8s resources type to be observed for new DNS entries by ExternalDNS
@@ -128,7 +130,7 @@ interval: "1m"
 registry: "txt"
 
 ## TXT Registry Identifier, a name that identifies this instance of External-DNS
-## This value should not change, while the cluter exists
+## This value should not change, while the cluster exists
 ##
 txtOwnerId: "external-dns"
 
@@ -166,9 +168,9 @@ extraEnv:
 * ```$ kubectl create namespace external-dns```
 * ```$ helm upgrade --install external-dns -f values.yaml stable/external-dns  --namespace=external-dns```
 
-## Run your deployment
+## Running Your Deployment
 
-To test the FQDN of the domain, create this example deployment as `nginx.yaml`:
+To test the fully-qualified domain name (FQDN) of the domain, create this example deployment as `nginx.yaml`:
 
 ```yaml
 apiVersion: apps/v1
@@ -207,13 +209,13 @@ spec:
       targetPort: 80
 ```
 
-Apply the configuration to your cluster with
+Apply the configuration to your cluster with:
 
 ```bash
 kubectl apply -f nginx.yaml
 ```
 
-### Confirm the Results
+### Confirming the Results
 
 Check your DNS resources in OpenStack. You should see a similar list with the corresponding DNS records.
 
@@ -221,16 +223,16 @@ Check your DNS resources in OpenStack. You should see a similar list with the co
 openstack recordset list foobar.cloud.
 ```
 
-Wait a few minutes, and then test the availability over the internet. For example, browse to your website. There you should see the following in your browser.
+Wait a few minutes, and then test the availability over the internet. For example, browse to your website. You should see the following in your browser.
 
 ![nginx](nginx.png)
 
 ## Summary
 
-By completing this guide you've accomplished the following:
+By completing these steps, you've accomplished the following:
 
-* Learn what ExternalDNS is and how to install it
+* Learned what ExternalDNS is and how to install it
 * Configured ExternalDNS with Helm to use Designate
-* Created a deployment with nginx and test your connectivity
+* Created a deployment with NGINX and tested the connectivity
 
-Congratulations! You now know all required steps to control your DNS resources in Kubernetes!
+Congratulations! You now know all required steps to control your DNS resources in Kubernetes.

@@ -7,81 +7,83 @@ has_children: true
 ---
 <!-- LTeX:  language=de-DE -->
 
-## Was ist die GKS-Plattform?
+# Über GKS
 
-Die GKS-Plattform stellt **Managed Kubernetes Cluster** bereit. Als Kunde können Sie mit einem einfachen Klick in unserem Webinterface Kubernetes-Cluster erstellen, aktualisieren oder auch wieder löschen.
+## Was ist die GKS Plattform?
+
+Die GKS Plattform stellt **Managed Kubernetes Cluster** bereit. Als Kunde können Sie mit einem einfachen Klick in unserem Web Interface Kubernetes Cluster erstellen, aktualisieren oder auch wieder löschen.
 
 ### Was ist ein "Managed Kubernetes Cluster"?
 
 Kubernetes Cluster bieten eine verfügbare und skalierbare Umgebung für containerisierte Anwendungen.
 
-Bei einem gemanagten Kubernetes Cluster auf unserer GKS-Plattform:
+Bei einem gemanagten Kubernetes Cluster auf unserer GKS Plattform:
 
 * Kümmern wir uns um die zugrundeliegende Server-Infrastruktur und die Kubernetes-Installation.
-* Stellen wir die Skalierbarkeit ihres Clusters sicher und geben Ihnen die Möglichkeit, die Anzahl und Größe Ihrer Worker-Nodes nach Ihren Bedürfnissen frei zu konfigurieren.
+* Stellen wir die Skalierbarkeit Ihres Clusters sicher und geben Ihnen die Möglichkeit, die Anzahl und Größe Ihrer Worker-Nodes nach Ihren Bedürfnissen frei zu konfigurieren.
 * Übernehmen wir das Management und den Betrieb der Kubernetes-Controlplane.
 
-Während wir uns um den stabilen Betrieb Ihres Clusters kümmern, haben Sie trotzdem den Vollzugriff auf das Cluster via einer `kubeconfig`-Datei. Sie haben die volle Kontrolle über alle Ihre Cluster:
+Während wir uns um den stabilen Betrieb Ihres Clusters kümmern, haben Sie trotzdem den Vollzugriff auf den Cluster über eine `kubeconfig`-Datei. Sie haben die volle Kontrolle über Ihre Cluster und können:
 
-* Sie können eine unbegrenzte Anzahl von Clustern über das GKS-Webinterface verwalten, neue Cluster sind schnell erstellt.
-* Die Kubernetes-Version bestehender Cluster können Sie mit einem einfachen Klick aktualisieren und so Ihre Cluster immer aktuell halten.
-* Selbstverständlich können Sie nicht mehr benötigte Cluster auch mit einem einfachen Klick wieder löschen.
-* Bei Bedarf können Sie auch vollen root-Zugriff auf Ihre Worker-Nodes bekommen (zum Beispiel, wenn Sie Ihre selbst entwickelten Applikationen intensiv debuggen wollen).
+* Eine unbegrenzte Anzahl von Clustern über das GKS Web Interface verwalten und neue Cluster schnell erstellen.
+* Die Kubernetes-Version bestehender Cluster mit einem einfachen Klick aktualisieren und so Ihre Cluster immer aktuell halten.
+* Nicht mehr benötigte Cluster mit einem einfachen Klick löschen.
+* Bei Bedarf vollen Root-Zugriff auf Ihre Worker-Nodes bekommen (zum Beispiel, wenn Sie Ihre selbst entwickelten Applikationen intensiv debuggen wollen).
 
-Bei allen Problemen im Clusterbetrieb können Sie sich dabei jederzeit an unseren [24/7-Support](mailto:support@gec.io) wenden. Jenseits der Betriebsleistung der GKS-Plattform bieten wir mit unserem Professional Service Team auch eine weitergehende Beratung an, helfen können wir beispielsweise bei Fragen zum allgemeinen Applikationsbetrieb auf Kubernetes oder auch spezifisch zum optimalen Anwendungs- und Softwaredesign für Ihr konkretes Vorhaben.
+Bei Problemen im Clusterbetrieb können Sie sich jederzeit an unseren [24/7-Support](mailto:support@gec.io) wenden. Jenseits der Betriebsleistung der GKS Plattform bieten wir mit unserem Professional Service Team auch eine weitergehende Beratung an. Wir helfen Ihnen beispielsweise bei allgemeinen Fragen zum Applikationsbetrieb auf Kubernetes oder auch bei spezifischen Fragen zum optimalen Anwendungs- und Softwaredesign für Ihr konkretes Vorhaben.
 
-### Wie kann ich ein "Managed Kubernetes Cluster" benutzen?
+### Wie kann ich einen "Managed Kubernetes Cluster" benutzen?
 
-Selbstverständlich können Sie ein GKS-Cluster so benutzen wie jedes andere Kubernetes-Cluster auch. Da es sich bei einem GKS-Cluster um ein gemanagtes Kubernetes Cluster handelt, können Sie sich dabei voll und ganz auf den Applikationsbetrieb konzentrieren.
+Sie können einen GKS Cluster so benutzen wie jeden anderen Kubernetes Cluster auch. Da es sich bei einem GKS Cluster um einen gemanagten Kubernetes Cluster handelt, können Sie sich dabei voll und ganz auf den Applikationsbetrieb konzentrieren.
 
-Beispielsweise können Sie ein GKS-Cluster nutzen, um bereits [paketierte, containerisierte Anwendungen](https://artifacthub.io/) via [helm](https://helm.sh/) zu installieren:
+Beispielsweise können Sie ein GKS Cluster nutzen, um bereits [paketierte, containerisierte Anwendungen](https://artifacthub.io/) mit Hilfe von [helm](https://helm.sh/) zu installieren, zum Beispiel:
 
-* Beispielsweise eine vollständige [WordPress-Installation](https://artifacthub.io/packages/helm/bitnami/wordpress),
-* ein [Drupal](https://artifacthub.io/packages/helm/bitnami/drupal) CMS,
-* oder eine private [nextcloud](https://artifacthub.io/packages/helm/nextcloud/nextcloud) Filesharing-Umgebung.
+* Eine vollständige [WordPress-Installation](https://artifacthub.io/packages/helm/bitnami/wordpress)
+* Ein [Drupal](https://artifacthub.io/packages/helm/bitnami/drupal) CMS
+* Eine private [nextcloud](https://artifacthub.io/packages/helm/nextcloud/nextcloud) Filesharing-Umgebung
 
 Kubernetes ist dabei selbstverständlich nicht auf bereits fertig paketierte, vollständige Anwendungen beschränkt. Vielmehr ist Kubernetes die natürliche Umgebung, um Ihre eigenen, zeitgemäßen "cloud-native"-Anwendungen zu entwickeln und produktiv zu betreiben.
 
-Als Entwicklungsumgebung könnten Sie beispielsweise die folgenden Anwendungen in einem Kubernetes-Cluster bereitstellen:
+Als Entwicklungsumgebung könnten Sie beispielsweise die folgenden Anwendungen in einem Kubernetes Cluster bereitstellen:
 
-* [Gitlab](https://artifacthub.io/packages/helm/gitlab/gitlab) zur Verwaltung des Sourcecode,
-* [Jenkins](https://artifacthub.io/packages/helm/jenkinsci/jenkins) zur Automatisierung Ihrer Entwicklungsworkflows,
-* und [Artifactory](https://artifacthub.io/packages/helm/jfrog/artifactory) um Ihre Buildergebnisse versioniert abzulegen.
+* [GitLab](https://artifacthub.io/packages/helm/gitlab/gitlab) zur Verwaltung des Sourcecode
+* [Jenkins](https://artifacthub.io/packages/helm/jenkinsci/jenkins) zur Automatisierung Ihrer Entwicklungsworkflows
+* [Artifactory](https://artifacthub.io/packages/helm/jfrog/artifactory) um Ihre Buildergebnisse versioniert abzulegen
 
-Weiterhin könnten Sie jeweils ein Entwicklungs-, Staging- und Produktions-Cluster in GKS anlegen und Ihre Anwendungsarchitektur mit einfach zu installierenden, bereits via Helm paketierten Komponenten unterstützen:
+Weiterhin könnten Sie jeweils einen Entwicklungs-, Staging- und Produktions-Cluster in GKS anlegen und Ihre Anwendungsarchitektur mit einfach zu installierenden und mit Helm paketierten Komponenten unterstützen, zum Beispiel:
 
-* Beispielsweise mit einem kompletten [Kafka](https://artifacthub.io/packages/helm/bitnami/kafka)-Setup,
-* einer [PostgreSQL](https://artifacthub.io/packages/helm/bitnami/postgresql)-, [MySQL](https://artifacthub.io/packages/helm/bitnami/mysql)- oder [MariaDB](https://artifacthub.io/packages/helm/bitnami/mariadb)-Datenbank,
-* oder auch einem kompletten [Prometheus-Monitoring-Stack](https://artifacthub.io/packages/helm/prometheus-community/kube-prometheus-stack) inkl. Prometheus, Alertmanager und Grafana.
+* Einem kompletten [Kafka](https://artifacthub.io/packages/helm/bitnami/kafka)-Setup
+* Einer [PostgreSQL](https://artifacthub.io/packages/helm/bitnami/postgresql)-, [MySQL](https://artifacthub.io/packages/helm/bitnami/mysql)- oder [MariaDB](https://artifacthub.io/packages/helm/bitnami/mariadb)-Datenbank
+* Einem kompletten [Prometheus-Monitoring-Stack](https://artifacthub.io/packages/helm/prometheus-community/kube-prometheus-stack) inkl. Prometheus, Alertmanager und Grafana
 
-Aber dies sind nur Beispiele. Für eine weitergehende Beratung fragen Sie am besten direkt unser [Professional Services Team](mailto:support@gec.io).
+Dies sind nur einige Beispiele. Für eine weitergehende Beratung fragen Sie am besten direkt unser [Professional Services Team](mailto:support@gec.io).
 
-## Wie funktioniert die GKS-Plattform?
+## Wie funktioniert die GKS Plattform?
 
-Die GKS-Plattform selbst basiert ebenfalls auf Kubernetes. Intern läuft die Controlplane eines Kundenclusters in einem dedizierten Kubernetes Namespace, die einzelnen Komponenten der Controlplane sind dabei als Deployments bzw. Statefulsets gestartet:
+Die GKS Plattform selbst basiert ebenfalls auf Kubernetes. Intern läuft die Controlplane eines Kundenclusters in einem dedizierten Kubernetes Namespace. Die einzelnen Komponenten der Controlplane sind dabei als Deployments bzw. Statefulsets gestartet:
 
-* Kubernetes API server
+* Kubernetes API Server
 * Etcd Datenbank
-* controller-manager
-* scheduler
-* machine-controller
-* ...sowie andere Komponenten der Controlplane.
+* Controller-Manager
+* Scheduler
+* Machine-Controller
+* ... andere Komponenten der Controlplane.
 
-Die Controlplane selbst ebenfalls in Kubernetes zu betreiben hat dabei viele Vorteile: einzelne Pods werden automatisch über verschiedene Server verteilt (Scheduling), das gesamte Setup ist skalierbar und weitgehend selbstheilend, da abgestürzte Pods automatisch neugestartet werden.
+Die Controlplane in Kubernetes zu betreiben, hat viele Vorteile: einzelne Pods werden automatisch über verschiedene Server verteilt (Scheduling), das gesamte Setup ist skalierbar und weitgehend selbstheilend, da abgestürzte Pods automatisch neugestartet werden.
 
 ![GKS platform](gks-platform.png)
 
-Die Worker-Nodes eines Kundenclusters werden wiederum als selbstständige VMs im Openstack-Tenant des Kunden betrieben. Der machine-controller in der Controlplane kümmert sich dabei um die automatische Erstellung der VMs sowie ihre Eingliederung in das bestehende Cluster. Dabei können via Webinterface jederzeit neue Nodes ins Cluster hinzugefügt oder auch gelöscht werden. Komplexere Änderungen werden durch den machine-controller in einem "Rolling-Upgrade" durchgeführt - immer eine Worker-Node nach der anderen. So werden Downtimes während eines Upgrades minimiert.
+Die Worker-Nodes eines Kundenclusters werden wiederum als selbstständige VMs im Openstack-Tenant des Kunden betrieben. Der Machine-Controller in der Controlplane kümmert sich dabei um die automatische Erstellung der VMs sowie ihre Eingliederung in den bestehenden Cluster. Dabei können mit dem Web Interface jederzeit neue Knoten im Cluster hinzugefügt oder auch gelöscht werden. Komplexere Änderungen werden durch den Machine-Controller in einem "Rolling-Upgrade" durchgeführt - immer eine Worker-Node nach der anderen. So werden Downtimes während eines Upgrades minimiert.
 
 ## Zertifizierungen
 
 <img src="certified-kubernetes.png" alt="Certified Kubernetes Logo" width="100"/>
 
 GKS ist ein Produkt um effizient Kubernetes Cluster in der GEC Cloud zu betreiben.
-Kunden können über ein übersichtliches Webinterface mit nur ein paar Klicks komplett funktionale
+Kunden können über ein übersichtliches Web Interface mit nur ein paar Klicks komplett funktionale
 und von der [Cloud Native Computing Foundation](https://cncf.io/ck)
 zertifizierte Cluster hochfahren und für Applikations-Deployments verwenden.
 
-Conformance Ergebnisse für unsere Plattform können jederzeit unter
+Conformance Ergebnisse für unsere Plattform können Sie jederzeit unter
 [CNCF Kubernetes Conformance](https://github.com/cncf/k8s-conformance)
-eingesehen werden.
+einsehen.

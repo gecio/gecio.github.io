@@ -7,7 +7,9 @@ parent: GKS-Projekte verwalten
 ---
 <!-- LTeX:  language=de-DE -->
 
-### Service Accounts
+# Service Account Tokens verwalten
+
+## Service Accounts
 
 Service Accounts ermöglichen die Nutzung eines langlebigen Tokens, welchen man für Authentifizierung mit der GKS API nutzen kann.
 
@@ -20,57 +22,57 @@ Es ist nicht notwendig, eine neue Gruppe für die Service Accounts zu erstellen.
 
 Ein Service Account ist automatisch durch ein `UserProjectBinding` mit dem Projekt verknüpft, welche eine Bindung zwischen dem Service Account und dem Projekt definiert. Ein Service Account wird nach dem Löschen eines Projekts automatisch entfernt.
 
-### Erstellen eines Service Accounts mit Token
+## Erstellen eines Service Accounts mit Token
 
-1. Projekt auswählen
+1. Wählen Sie ein Projekt aus.
 
     ![SA-Projects](sa-projects.png)
 
-1. Zur Service Accounts Seite gehen
+1. Gehen Sie zur Service Accounts Seite.
 
     ![ServiceAccounts](sa-serviceaccounts.png)
 
-1. Benutze die `Add Service Account` Schaltfläche
+1. Benutzen Sie die `Add Service Account` Schaltfläche.
 
     ![SA-Add](sa-add.png)
 
-1. Den Namen des Service Accounts und die Gruppe (`Project Manager`, `Editor` oder `Viewer`) angeben
+1. Geben Sie den Namen des Service Accounts und die Gruppe (`Project Manager`, `Editor` oder `Viewer`) an.
 
     ![SA-Name](sa-name.png)
 
-1. Das SA hinzufügen `Add Service Account`
+1. Fügen Sie den SA hinzu mit `Add Service Account`.
 
     ![SA-Add-SA](sa-add-sa.png)
 
-Nun wurde ein Service Account angelegt. Um einen Token mit dem SA zu verknüpfen, soll man folgendermaßen vorgehen:
+Nun wurde ein Service Account angelegt. Um einen Token mit dem SA zu verknüpfen, gehen Sie folgendermaßen vor:
 
-1. Den Service Account auswählen
+1. Wählen Sie den Service Account aus.
 
     ![SA-Select](sa-select.png)
 
-1. Benutze die `+ Add Token` Schaltfläche
+1. Benutzen Sie  die `+ Add Token` Schaltfläche.
 
     ![SA-Add-Token](sa-add-token.png)
 
-1. Einen Namen angeben und den Token mit `Add Token` hinzufügen
+1. Geben Sie einen Namen an und fügen Sie den Token mit `Add Token` hinzu.
 
     ![SA-Tokenname](sa-tokenname.png)
 
-1. Nun wird der generierte Token angezeigt. Dies soll mit dem Pfeil Icon als Datei heruntergeladen oder durch Copy&Paste gesichert werden.
+1. Nun wird der generierte Token angezeigt. Laden Sie diesen mit dem Pfeil Icon als Datei herunter oder sichern Sie ihn mit Copy&Paste.
 
     ![SA-Tokenshown](sa-tokenshown.png)
 
  > **Wichtiger Hinweis:** Stellen Sie sicher, dass dieser Token an einem sicheren Ort und nur auf Ihrem eigenen Gerät gesichert wird. Der Token kann nicht nochmal angezeigt werden, nachdem das Dashboard Fenster geschlossen wurde.
 
-### Zugriff an die API durch einen Service Account Token
+## Zugriff an die API durch einen Service Account Token
 
-Ein Client kann sich bei dem Server authentifizieren, indem er ein `Authorization` Request Header Feld mit dem SA Token inkludiert:
+Ein Client kann sich bei dem Server authentifizieren, indem er ein `Authorization` Request Header Feld mit dem SA Token inkludiert.
 
 ```HTTP
 Authorization: Bearer aaa.bbb.ccc
 ```
 
-Beispiel: Um eine Liste der Clusters abzufragen, kann man den folgenden API-Anruf nutzen:
+Beispiel: Um eine Liste der Cluster abzufragen, können Sie den folgenden API-Aufruf nutzen:
 
 ```bash
 curl -X GET "https://gks.gec.io/api/v1/projects?displayAll=true" -H "accept: application/json" -H "authorization: Bearer eyJhbXxXXxXxX..."  | jq
@@ -97,15 +99,15 @@ Das Ergebnis sieht dann etwa so aus:
 ]
 ```
 
-### Service Accounts und Tokens verfolgen
+## Service Accounts und Tokens verfolgen
 
-Es ist möglich, mehrere Service Accounts für ein Projekt zu erstellen. Der Name des SA muss jedoch eindeutig für das Projekt sein. Ein Service Account kann mehrere Tokens mit eindeutigen Namen haben.
+Es können mehrere Service Accounts für ein Projekt erstellt werden. Der Name des SA muss jedoch eindeutig für das Projekt sein. Ein Service Account kann mehrere Tokens mit eindeutigen Namen haben.
 
 Der Anzeigename des Service Accounts und Tokens ist eine gute Möglichkeit, um weitere, erklärende Informationen - wie zum Beispiel den Zweck des SAs - zu erfassen.
 
-### Service Accounts und Tokens verwalten
+## Service Accounts und Tokens verwalten
 
-Es ist möglich, ein Service Account zu löschen und mit dem gleichen Namen neu zu erstellen. Das Gleiche gilt für den Service Account Token.
+Es ist möglich, einen Service Account zu löschen und mit dem gleichen Namen neu zu erstellen. Das Gleiche gilt für den Service Account Token.
 
 Der Name eines Service Accounts oder Tokens kann nach dem Anlegen geändert werden.
 

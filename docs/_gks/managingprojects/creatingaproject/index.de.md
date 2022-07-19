@@ -6,20 +6,21 @@ nav_order: 3100
 parent: GKS-Projekte verwalten
 ---
 <!-- LTeX:  language=de-DE -->
+# Ein Projekt anlegen
 
-Nach dem Login in GKS erscheint folgendes Fenster, in dem wir auf
-`Add Project` klicken müssen.
+Nach dem Login in GKS erscheint folgendes Fenster, in dem Sie auf
+`Add Project` klicken.
 ![Add Project](addproject.png)
 
-Danach öffnet sich ein Fenster, in dem wir dem Projekt einen Namen geben.
-Als Beispiel verwenden wir hier `Team Kubernetes`.
-Im zweiten Schritt muss dann auf `Save` geklickt werden.
+Geben Sie in dem sich öffnenden Fenster dem Projekt einen Namen.
+Als Beispiel verwenden Sie hier `Team Kubernetes`.
+Klicken Sie danach auf `Save`.
 
 ![Add Project Modal](addproject_modal.png?resize=600)
 
 Im Anschluss legt GKS das Projekt an und stellt es in der Übersicht dar.
-Mit einem Klick auf den Eintrag `Team Kubernetes` sind wir
-im Projekt-Umfeld und können das Cluster anlegen.
+Mit einem Klick auf den Eintrag `Team Kubernetes` sind Sie
+im Projekt-Umfeld und können den Cluster anlegen.
 ![Project list](projectlist.png)
 
 Die folgende Seite stellt das Projekt dar. Hier sind alle bereits
@@ -27,7 +28,7 @@ bestehenden Cluster sowie zugehörige User und weitere Kontroll-Mechanismen
 sichtbar.
 ![Project View](projectview.png)
 
-Mit einem Klick auf die Seitenleiste links öffnen wir die Navigation im
+Mit einem Klick auf die Seitenleiste links öffnen Sie die Navigation im
 Projekt-Umfeld und können die weiteren Bereiche erkunden.
 
 ![Sidebar](sidebar.png?resize=300)

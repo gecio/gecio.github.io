@@ -6,20 +6,21 @@ nav_order: 4500
 parent: Cluster Lebenszyklus
 ---
 <!-- LTeX:  language=de-DE -->
+# Deprecation Policy
 
 ## Deprecation Policy in GKS
 
 Das offizielle Kubernetes Project veröffentlicht ungefähr vier Kubernetes Versionen pro Jahr und markiert die gleiche Anzahl an alten Versionen als veraltet. Bis einschließlich Version 1.18 hatte Kubernetes eine N-2 Supportrichtlinie, sprich die drei neuesten Versionen haben Sicherheits- und Fehlerkorrekturen erhalten.
 
-Ab der Version v1.19 folgt Kubernetes einer N-3 Supportrichtlinie. Dies bedeutet, dass das Support-Fenster auf ein Jahr verlängert wurde.
+Ab Version v1.19 folgt Kubernetes einer N-3 Supportrichtlinie. Dies bedeutet, dass das Support-Fenster auf ein Jahr verlängert wurde.
 
-Eine gute Visualisierung des Zeitraums, für den die einzelnen Versionen unterstützt werden/wurden sieht man auf dem folgenden Bild:
+Eine gute Visualisierung des Zeitraums, für den die einzelnen Versionen unterstützt werden/wurden sehnen Sie auf dem folgenden Bild:
 
 [![K8sVersionSupport](k8s_version_support.png)](https://endoflife.date/kubernetes)
 
 GKS folgt diesem Lebenszyklus, indem fortlaufend neue Versionen eingeführt und ältere aus dem Support genommen werden.
 
-Nachdem eine bestimme Kubernetes-Version das End-of-Life erreicht hat, werden keine Bugfixes oder Sicherheitsupdates mehr veröffentlicht. Daher können wir diese auch nicht mehr unterstützen und müssen sie aus dem Support nehmen.
+Nachdem eine bestimmte Kubernetes-Version das End-of-Life erreicht hat, werden keine Bugfixes oder Sicherheitsupdates mehr veröffentlicht. Daher können wir diese auch nicht mehr unterstützen und müssen sie aus dem Support nehmen.
 
 ## Der Deprecation Prozess
 
@@ -41,18 +42,17 @@ Wenn ein Kundencluster vor dem Entfernen einer veralteten Kubernetes-Version nic
 
 Nein, da dies in der Zukunft möglicherweise zu schwerwiegenden Sicherheitsproblemen führen könnte.
 
-
 ## GKS Force-Upgrade Richtlinie
 
 Wenn eine Kubernetes-Version das End-of-Life erreicht, müssen wir ihre Unterstützung von GKS entfernen, da sie keine Bugfixes oder Sicherheitsupdates mehr erhält. Ab diesem Zeitpunkt ist es nicht mehr möglich, neue Cluster mit dieser Version zu erstellen.
 
-Es ist wichtig, die folgenden technischen Einschränkungen in Kubernetes hervorzuheben:
+> **Hinweis:** Beachten Sie die folgenden technischen Einschränkungen in Kubernetes:
 
-* Ein Kubernetes-Cluster (bzw. seine Control Plane) kann jeweils um eine Version aktualisiert werden, z. B. von v1.21 -> v1.22.
+* Ein Kubernetes-Cluster (bzw. seine Controlplane) kann jeweils um eine Version aktualisiert werden, z. B. von v1.21 → v1.22.
 * Es ist nicht möglich, mehrere Versionen in einem Schritt zu aktualisieren.
 * Es ist nicht möglich, einen Cluster downzugraden.
 
-Für unsere Kunden bedeutet dies, dass sie, wenn sie Ihre Cluster vor dem Entfernen der **nächsten** EOL-Version nicht aktualisieren, das Risiko eingehen, bei dem Entfernen der **nächsten** Version kein Upgrade durchführen zu können.
+Für unsere Kunden bedeutet dies Folgendes: Wenn sie ihre Cluster vor dem Entfernen der **nächsten** EOL-Version nicht aktualisieren, gehen sie das Risiko ein, bei dem Entfernen der **nächsten** Version kein Upgrade durchführen zu können.
 
 Dies würde ein ernstes Problem bedeuten, da ihre einzige Alternative darin besteht, einen neuen Cluster zu erstellen und den Workload von dem alten zu migrieren, da ein Upgrade nicht möglich wäre (da hierfür zwei Versionen in einem Schritt aktualisiert werden müssten).
 
@@ -60,10 +60,10 @@ Um solche Situationen zu vermeiden, müssen wir für Cluster, die mit einer bere
 
 **Was passiert mit meinen Clustern während des Force-Upgrades?**
 
-Wir werden ein automatisiertes Kubernetes-Upgrade für die Control-Plane und für die Machine Deployments initiieren.
+Wir werden ein automatisiertes Kubernetes-Upgrade für die Controlplane und für die Machine Deployments initiieren.
 
-Dies **sollte** zwar funktionieren, aber ein erfolgreiches Upgrade kann aufgrund der Vielfalt der Anwendungen und Anwendungsfälle nicht garantiert werden.
+Dies sollte zwar funktionieren, aber ein erfolgreiches Upgrade kann aufgrund der Vielfalt der Anwendungen und Anwendungsfälle **nicht garantiert** werden.
 
-Änderungen in der Kubernetes API können zu fehlerhaften / inkompatiblen Anwendungen innerhalb des Kubernetes-Clusters führen. **Wir können die Verantwortung für solche Probleme nicht übernehmen**.
+Änderungen in der Kubernetes API können zu fehlerhaften/inkompatiblen Anwendungen innerhalb des Kubernetes-Clusters führen. Wir können die **Verantwortung** für solche Probleme **nicht übernehmen**.
 
 Aus diesem Grund empfehlen wir jedem Kunden, das Kubernetes-Upgrade selbst einzuplanen und durchzuführen.

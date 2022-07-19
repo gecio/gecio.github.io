@@ -9,27 +9,27 @@ parent: Cluster-Backups
 
 # Ein PVC von einem existierenden Openstack Volume wiederherstellen
 
-Wird ein PVC (PersistentVolumeClaim) in einem unserer Cluster angelegt, wird daraufhin normalerweise automatisch ein *neues* PV (PersistentVolume) in Kubernetes sowie ein entsprechendes *neues* Volume in Openstack angelegt. Das neue Volume ist leer und kann direkt genutzt werden. Es ist allerdings auch möglich, ein *bereits existierendes* Openstack-Volume in einem Kubernetes-Cluster zu benutzen. Dieses Dokument beschreibt eine mögliche Vorgehensweise wie dies erreicht werden kann.
+Wird ein PersistentVolumeClaim (PVC) in einem Ihrer Cluster angelegt, wird daraufhin normalerweise automatisch ein *neues* PersistentVolume (PV) in Kubernetes sowie ein entsprechendes *neues* Volume in Openstack angelegt. Das neue Volume ist leer und kann direkt genutzt werden. Es ist allerdings auch möglich, ein *bereits existierendes* Openstack-Volume in einem Kubernetes Cluster zu benutzen. Hier beschreiben wir eine Möglichkeit, wie dies erreicht werden kann.
 
 ## Voraussetzungen
 
-Als wichtigste Voraussetzung sollte natürlich ein freies, aktuell nicht benutztes Openstack-Volume vorhanden sein. Dies könnte zum Beispiel der Fall sein, wenn ein altes Cluster gelöscht, aber im Löschen-Dialog die Option explizit selektiert wurde dass verbundene Volumes *nicht* gelöscht werden oder wenn beispielsweise ein Volume von einem Cluster in ein anderes umgezogen werden soll. In jedem Fall wird es nicht um das Volume an sich, sondern um die darauf vorhandenen Daten gehen, die dem Kubernetes-Cluster jetzt als PVC zur Verfügung gestellt werden sollen.
+Die wichtigste Voraussetzung ist ein freies, aktuell nicht benutztes Openstack-Volume. Dies könnte zum Beispiel der Fall sein, wenn ein alter Cluster gelöscht, aber im Löschen-Dialog die Option explizit selektiert wurde, dass verbundene Volumes *nicht* gelöscht werden sollen oder wenn ein Volume von einem Cluster in ein anderes umgezogen werden soll. In jedem Fall wird es nicht um das Volume an sich gehen, sondern um die darauf vorhandenen Daten, die dem Kubernetes Cluster jetzt als PVC zur Verfügung gestellt werden sollen.
 
-Um ein existierendes Openstack-Volume als PVC in ein Kubernetes-Cluster einzubinden, benötigen wir die ID des Volumes. Um diese herauszufinden, müssen wir uns zuerst in das [Openstack/Optimist Dashboard](https://dashboard.optimist.innovo.cloud/auth/login/) einloggen:
+Um ein existierendes Openstack-Volume als PVC in ein Kubernetes-Cluster einzubinden, benötigen Sie die ID des Volumes. Um diese herauszufinden, müssen Sie sich zuerst in das [Openstack/Optimist Dashboard](https://dashboard.optimist.innovo.cloud/auth/login/) einloggen.
 
 ![Openstack Login](openstack-1.png)
 
-Die Zugangsdaten sind identisch zu den Zugangsdaten, die beim GKS/GKS-Dashboard benutzt werden. Nach dem Login navigieren wir zu `Volumes` und suchen das Volume, welches wir anbinden wollen. Das Volume sollte aktuell an keine andere Instanz/VM gebunden sein und den Status "Available" haben. (Da ein Volume immer nur an eine Instanz gebunden sein kann, sollte das Volume ggf. erst von der alten Instanz getrennt/detached werden, bevor es im Kubernetes-Cluster verwendet werden kann.)
+Die Zugangsdaten sind identisch mit den Zugangsdaten, die Sie für das GKS/GKS-Dashboard benutzen. Navigieren Sie nach dem Login zu `Volumes` und suchen Sie das Volume, welches Sie anbinden wollen. Das Volume darf aktuell an keine andere Instanz/VM gebunden sein und muss den Status "Available" haben. Da ein Volume immer nur an eine Instanz gebunden sein kann, muss das Volume ggf. erst von der alten Instanz getrennt (detached) werden, bevor es im Kubernetes-Cluster verwendet werden kann.
 
 ![Openstack Volume](openstack-2.png)
 
-Nachdem wir das Volume gefunden haben, klicken wir auf den Namen. Auf der Detailseite findet sich dann die ID des Volumes, die wir für den nächsten Schritt benötigen:
+Nachdem Sie das Volume gefunden haben, klicken Sie auf den Namen. Auf der Detailseite finden Sie dann die ID des Volumes, die Sie für den nächsten Schritt benötigen.
 
 ![Openstack Volume ID](openstack-3.png)
 
 ## Erstellen eines PV auf Basis eines existierenden Openstack-Volumes
 
-Um das Volume im Cluster verfügbar zu machen muss im ersten Schritt ein `PersistentVolume`-Manifest vorbereitet werden, welches die ID des Openstack-Volumes im `spec.csi.volumeHandle`-Schlüssel enthält:
+Um das Volume im Cluster verfügbar zu machen, müssen Sie im ersten Schritt ein `PersistentVolume`-Manifest vorbereiten, welches die ID des Openstack-Volumes im `spec.csi.volumeHandle`-Schlüssel enthält.
 
 ```yaml
 apiVersion: v1
@@ -49,7 +49,7 @@ spec:
   volumeMode: Filesystem
 ```
 
-Anschließend erstellen wir das PV via `kubectl` und überprüfen, ob das PV erfolgreich erstellt wurde:
+Anschließend erstellen Sie das PV mit `kubectl` und überprüfen, ob das PV erfolgreich erstellt wurde.
 
 ```bash
 # kubectl apply -f restore-pv.yaml
@@ -59,11 +59,11 @@ NAME              CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM  
 test-pv-restore   3Gi        RWO            Delete           Available           cinder-csi              3s
 ```
 
-In diesem Beispiel haben wir das PV `test-pv-restore` erstellt, das ein bereits existierendes Openstack-Volume referenziert.
+In diesem Beispiel haben Sie das PV `test-pv-restore` erstellt, das ein bereits existierendes Openstack-Volume referenziert.
 
 ## Erstellen eines PVC, das auf das korrekte PV verweist
 
-Im nächsten Schritt müssen wir ein PVC erstellen, welches das eben erzeugte PV referenziert. Um dies zu erreichen, müssen wir im PVC-Manifest den Schlüssel `spec.volumeName` auf den Namen des gerade erstellten PVs setzen:
+Im nächsten Schritt müssen Sie ein PVC erstellen, welches das eben erzeugte PV referenziert. Dazu müssen Sie im PVC-Manifest den Schlüssel `spec.volumeName` auf den Namen des gerade erstellten PVs setzen.
 
 ```yaml
 apiVersion: v1
@@ -79,7 +79,7 @@ spec:
   volumeName: test-pv-restore
 ```
 
-Nach dem Erstellen des PVCs via `kubectl` sollte sich das PVC im Status "Bound" befinden:
+Nach dem Erstellen des PVCs mit `kubectl` sollte sich das PVC im Status "Bound" befinden.
 
 ```bash
 # kubectl apply -f restore-pvc.yaml
@@ -93,7 +93,7 @@ Das PVC "test-pvc" ist damit zur Verwendung bereit.
 
 ## Erstellen eines Test-Pods, der das PVC benutzt
 
-Um die Daten vor der tatsächlichen Verwendung zu überprüfen, können wir einen Test-Pod erstellen, der das PVC benutzt:
+Um die Daten vor der tatsächlichen Verwendung zu überprüfen, können Sie einen Test-Pod erstellen, der das PVC benutzt.
 
 ```yaml
 apiVersion: v1
@@ -116,7 +116,7 @@ spec:
         claimName: test-pvc
 ```
 
-Der wichtige Teil des Manifests ist dabei, dass der `claimName` korrekt auf den Namen des eben erstellten PVCs gesetzt ist. Nachdem der Pod via `kubectl` erzeugt wurde, können wir uns mit dem Pod verbinden. Das Volume ist im o.g. Beispiel im Pfad */restore* gemounted, so dass wir die Daten des Volumes dort finden:
+Der wichtige Teil des Manifests ist dabei, dass der `claimName` korrekt auf den Namen des eben erstellten PVCs gesetzt ist. Nachdem der Pod mit `kubectl` erzeugt wurde, können Sie sich  mit dem Pod verbinden. Das Volume ist im o.g. Beispiel im Pfad */restore* gemounted, so dass Sie die Daten des Volumes dort finden.
 
 ```bash
 # kubectl apply -f pvc-example/test-pod.yaml
@@ -134,4 +134,4 @@ root@test-pod:/# exit
 exit
 ```
 
-Damit haben wir erfolgreich ein bereits existierendes Openstack-Volume an einen Pod in unserem Kubernetes-Cluster angebunden.
+Damit haben Sie erfolgreich ein bereits existierendes Openstack-Volume an einen Pod in Ihrem Kubernetes Cluster angebunden.

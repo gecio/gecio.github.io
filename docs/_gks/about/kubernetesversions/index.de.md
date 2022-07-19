@@ -7,7 +7,7 @@ parent: Über GKS
 ---
 <!-- LTeX:  language=de-DE -->
 
-## Unterstützte Kubernetes Versionen
+# Unterstützte Kubernetes Versionen
 
 Folgende Kubernetes Versionen unterstützen wir aktuell in GKS.
 
@@ -27,4 +27,4 @@ Folgende Kubernetes Versionen unterstützen wir aktuell in GKS.
 
 Falls ein Kundencluster von seinem Eigentümer nicht zum angekündigten End-of-Life Datum aktualisiert wird, wird er automatisch auf die letzte noch unterstützte Version aktualisiert.
 
-Sie können mehr über die GKS Deprecation- und Force-Upgrade-Richtlinie [hier](../../clusterlifecycle/deprecationpolicy) lesen.
+Weitere Informationen über die GKS Deprecation- und Force-Upgrade-Richtlinie  finden Sie [hier](../../clusterlifecycle/deprecationpolicy).

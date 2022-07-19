@@ -6,28 +6,28 @@ nav_order: 8100
 parent: Add-on
 ---
 <!-- LTeX:  language=de-DE -->
+# Cluster Autoscaler
 
 ## Was ist ein Cluster Autoscaler in Kubernetes?
 
-Der Kubernetes Cluster Autoscaler ist ein Tool, das die Anzahl der Worker-Knoten je nach Verbrauch automatisch nach oben oder unten anpasst. Das bedeutet, dass der Autoscaler zum Beispiel einen Cluster automatisch hochskaliert, indem er die Anzahl der Knoten erhöht, wenn nicht genügend Knotenressourcen für das Cluster-Workload-Scheduling vorhanden sind. Aber auch herunterskaliert, wenn die Knotenressourcen ständig im Leerlauf sind oder mehr als genügend Knotenressourcen für das Cluster-Workload-Scheduling vorhanden sind. Kurz gesagt handelt es sich um eine Komponente, die die Größe eines Kubernetes-Clusters automatisch so anpasst, dass alle Pods einen Platz zum Ausführen haben und keine überflüssigen Knoten vorhanden sind.
+Der Kubernetes Cluster Autoscaler ist ein Tool, das die Anzahl der Worker-Nodes je nach Verbrauch automatisch nach oben oder unten anpasst. Das bedeutet, dass der Autoscaler zum Beispiel einen Cluster automatisch hochskaliert, indem er die Anzahl der Knoten erhöht, wenn nicht genügend Knotenressourcen für das Cluster-Workload-Scheduling vorhanden sind. Aber auch herunterskaliert, wenn die Knotenressourcen ständig im Leerlauf sind oder mehr als genügend Knotenressourcen für das Cluster-Workload-Scheduling vorhanden sind. Kurz gesagt handelt es sich um eine Komponente, die die Größe eines Kubernetes-Clusters automatisch so anpasst, dass alle Pods einen Platz zum Ausführen haben und keine überflüssigen Knoten vorhanden sind.
 
 ## Cluster-Autoscaler-Verwendung
 
-Der Kubernetes-Autoscaler im GKS-Cluster skaliert automatisch nach oben/unten, wenn eine der folgenden Bedingungen erfüllt ist:
+Der Kubernetes-Autoscaler im GKS Cluster skaliert automatisch nach oben oder unten, wenn eine der folgenden Bedingungen erfüllt ist:
 
-* Einige Pods konnten im Cluster aufgrund unzureichender Ressourcen nicht ausgeführt werden
-* Es gibt Knoten im Cluster, die über einen längeren Zeitraum (standardmäßig 10 Minuten) nicht ausgelastet waren und ihre Pods auf anderen vorhandenen Knoten platzieren können
+* Einige Pods konnten im Cluster aufgrund unzureichender Ressourcen nicht ausgeführt werden.
+* Es gibt Knoten im Cluster, die über einen längeren Zeitraum (standardmäßig 10 Minuten) nicht ausgelastet waren und ihre Pods auf anderen vorhandenen Knoten platzieren können.
 
 ## Anforderungen
 
-Die Verwendung eines Kubernetes Cluster Autoscalers im GKS-Cluster muss bestimmte Mindestanforderungen erfüllen:
+Die Verwendung eines Kubernetes Cluster Autoscalers im GKS Cluster muss bestimmte Mindestanforderungen erfüllen:
 
 * Kubernetes-Cluster mit Kubernetes v1.18 oder neuer ist erforderlich
 
-## Installieren von Kubernetes-Autoscaler auf GKS-Cluster
+## Installieren von Kubernetes-Autoscaler auf GKS Cluster
 
-Sie können den Kubernetes Autoscaler auf einem laufenden GKS-Cluster mithilfe des GKS Add-on Mechanismus installieren, der bereits in das GKS Cluster Dashboard integriert ist.
-
+Sie können den Kubernetes Autoscaler auf einem laufenden GKS Cluster mithilfe des GKS Add-on Mechanismus installieren, der bereits in das GKS Cluster Dashboard integriert ist.
 
 ### Schritt 1
 
@@ -53,10 +53,10 @@ Fügen Sie den Autoscaler zum Cluster hinzu, indem Sie im Dashboard im Bereich `
 
 ![Step 3.1](overview.png)
 
-`cluster-autoscaler` auswählen:
+Wählen Sie `cluster-autoscaler` aus.
 ![Step 3.2](select.png)
 
-Auf `Install` klicken:
+Klicken Sie auf `Install` :
 
 ![Step 3.3](install.png)
 ![Step 3.4](installed.png)
@@ -75,20 +75,20 @@ openvpn-client                  1/1     1            1           1d
 ```
 Wie oben dargestellt, wurde der Autoscaler provisioniert und läuft.
 
-## MachineDeployments für die automatische Skalierung mit Anmerkungen versehen
+## Machine Deployments für die automatische Skalierung mit Anmerkungen versehen
 
-Der Cluster-Autoscaler berücksichtigt nur MachineDeployments mit gültigen Annotationen. Die Annotationen werden verwendet, um die minimale und maximale Anzahl von Replikas pro MachineDeployment zu steuern. Sie müssen diese Anmerkungen nicht auf alle MachineDeployment-Objekte anwenden, sondern nur auf MachineDeployments, die der Cluster Autoscaler berücksichtigen soll.
+Der Cluster-Autoscaler berücksichtigt nur Machine Deployments mit gültigen Annotationen. Die Annotationen werden verwendet, um die minimale und maximale Anzahl von Replikas pro Machine Deployment zu steuern. Sie müssen diese Anmerkungen nicht auf alle Machine Deployment-Objekte anwenden, sondern nur auf Machine Deployments, die der Cluster Autoscaler berücksichtigen soll.
 
 ```
-cluster.k8s.io/cluster-api-autoscaler-node-group-min-size - die kleinste Anzahl an Worker-Knoten im Cluster (muss größer als Null sein!)
-cluster.k8s.io/cluster-api-autoscaler-node-group-max-size - die höchste Anzahl an Worker-Knoten im Cluster
+cluster.k8s.io/cluster-api-autoscaler-node-group-min-size - die kleinste Anzahl an Worker-Nodes im Cluster (muss größer als Null sein!)
+cluster.k8s.io/cluster-api-autoscaler-node-group-max-size - die höchste Anzahl an Worker-Nodes im Cluster
 ```
 
-Sie können die Anmerkungen auf MachineDeployments anwenden, sobald der Cluster bereitgestellt ist und die MachineDeployments erstellt und ausgeführt werden, indem Sie die folgenden Schritte ausführen.
+Sie können die Anmerkungen auf Machine Deployments anwenden, sobald der Cluster bereitgestellt ist und die Machine Deployments erstellt und ausgeführt werden. Führen Sie die folgenden Schritte aus:
 
 ### Schritt 1
 
-Führen Sie den folgenden `kubectl` Befehl aus, um die verfügbaren MachineDeployments zu überprüfen:
+Führen Sie den folgenden `kubectl` Befehl aus, um die verfügbaren Machine Deployments zu überprüfen:
 
 ```
 $ kubectl get machinedeployments -n kube-system
@@ -98,7 +98,7 @@ epic-goldwasser-worker-289mgt   1d              2          2                   o
 
 ### Step 2
 
-Der Annotatierungsbefehl wird zusammen mit einer der obigen MachineDeployments verwendet, um die gewünschten MachineDeployments mit Anmerkungen zu versehen. In diesem Fall wird `test-cluster-worker-v5drmq` annotiert, um das Minimum und Maximum festzulegen.
+Der Annotatierungsbefehl wird zusammen mit einer der obigen Machine Deployments verwendet, um die gewünschten Machine Deployments mit Anmerkungen zu versehen. In diesem Fall wird `test-cluster-worker-v5drmq` annotiert, um das Minimum und Maximum festzulegen.
 
 Minimum Annotation:
 
@@ -116,7 +116,7 @@ machinedeployment.cluster.k8s.io/epic-goldwasser-worker-289mgt annotated
 
 ### Schritt 3
 
-Überprüfen Sie die Beschreibung von MachineDeployment:
+Überprüfen Sie die Beschreibung von Machine Deployment.
 
 ```bash
 $ kubectl describe machinedeployments -n kube-system epic-goldwasser-worker-289mgt
@@ -140,11 +140,11 @@ Metadata:
 [...]
 ```
 
-Wie oben gezeigt, wurde die MachineDeployment mit einem Minimum von 1 und einem Maximum von 5 annotiert. Daher wird der Autoscaler nur die kommentierte MachineDeployment auf dem Cluster berücksichtigen.
+Wie oben gezeigt, wurde die Machine Deployment mit einem Minimum von 1 und einem Maximum von 5 annotiert. Daher wird der Autoscaler nur die kommentierte Machine Deployment auf dem Cluster berücksichtigen.
 
 ## Autoscaler deinstallieren
 
-Um den Autoscaler zu deinstallieren, klicken Sie im Abschnitt Addons des Cluster-Dashboards auf die drei Punkte vor dem Cluster-Autoscaler und wählen Sie Löschen.
+Um den Autoscaler zu deinstallieren, klicken Sie im Abschnitt Addons des Cluster-Dashboards auf die drei Punkte vor dem Cluster-Autoscaler und wählen Sie `Delete`.
 
 ![edit](edit.png)
 ![delete](delete.png)
@@ -153,8 +153,8 @@ Nach dem Löschen können Sie den Cluster mit dem Befehl `kubectl get deployment
 
 ## Zusammenfassung
 
-Das war's! Sie haben erfolgreich einen Kubernetes Autoscaler auf einem GKS Cluster bereitgestellt und das gewünschte MachineDeployment annotiert, so das der Autoscaler es berücksichtigen kann. Weitere Ressourcen zu Kubernetes Autoscaler und zur Bereitstellung eines GKS Clusters finden Sie im Abschnitt "Weitere Informationen" weiter unten.
+Sie haben erfolgreich einen Kubernetes Autoscaler auf einem GKS Cluster bereitgestellt und das gewünschte Machine Deployment annotiert, so dass der Autoscaler es berücksichtigen kann.
 
-## Weitere Informationen
+## Weiterführende Themen
 
-* Erfahren Sie mehr zum Kubernetes Autoscaler [hier](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md#what-is-cluster-autoscaler)
+Erfahren Sie mehr zum Kubernetes Autoscaler [hier](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/FAQ.md#what-is-cluster-autoscaler).

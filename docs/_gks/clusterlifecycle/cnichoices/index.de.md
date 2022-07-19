@@ -6,44 +6,41 @@ nav_order: 4250
 parent: Cluster Lebenszyklus
 ---
 
-# Die Wahl einer CNI
+# CNI Auswahl
 
-Diese Seite gibt einen Überblick darüber was eine CNI ist, nach welchen Kriterien man eine Auswahl trifft
+Diese Seite gibt einen Überblick darüber, was eine CNI ist, nach welchen Kriterien man eine Auswahl trifft
 und wie man sie im Clustererstellungsprozess auswählt.
 
+## Was ist eine CNI und wofür wird sie gebraucht?
 
-## Was ist eine CNI und warum brauche ich sie?
-
-CNI ist eine Abkürzung für Container Network Interface. Vereinfacht erklärt ist es eine Beschreibung der
-in Kubernetes benötigten Netzwerkfunktionalität um die Kommunikation zwischen Pods und Knoten zu realisieren.
-Da die Netzwerkumgebungen in denen Kubernetes laufen kann sehr verschieden sind haben sich die Entwickler
-von Kubernetes darauf geeinigt sich auf eine standardisierte Schnittstellenbeschreibung der benötigten
+CNI ist eine Abkürzung für Container Network Interface. Vereinfacht erklärt, ist es eine Beschreibung der
+in Kubernetes benötigten Netzwerkfunktionalität, um die Kommunikation zwischen Pods und Knoten zu realisieren.
+Da die Netzwerkumgebungen, in denen Kubernetes läuft, sehr verschieden sind, haben sich die Entwickler
+von Kubernetes darauf geeinigt, sich auf eine standardisierte Schnittstellenbeschreibung der benötigten
 Netzwerkfunktionalität zu beschränken und anderen die Implementierung zu überlassen. Dieser Schritt
 resultierte in der Entstehung vieler verschiedener CNIs mit verschiedenen Funktionen und für verschiedene
 Einsatzzwecke.
 
-Unsere Kubernetes Plattform unterstütze lange Zeit nur eine CNI und hat diese fest als Standard definiert
+Unsere Kubernetes Plattform unterstützte lange Zeit nur eine CNI und hat diese fest als Standard definiert,
 ohne eine Auswahlmöglichkeit zu bieten. Dies hat sich kürzlich geändert. Wir unterstützen nun zwei
-verschiedene CNIs aus denen der Benutzer eine wählen kann die am Besten zu seinen Bedürfnissen passt.
-
+verschiedene CNIs, aus denen der Benutzer eine wählen kann, die am Besten zu seinen Bedürfnissen passt.
 
 ## Canal
 
-Unser langjähriger Standard in Sachen CNI war bislang *canal*. Es handelt sich dabei um die Kombination
-der beiden CNIs *flannel* und *calico*. Flannel realisiert dabei die Netzwerkfunktionalität zwischen den
-Pods während calico sich um die *network policies* kümmert.
+Unser langjähriger Standard in Sachen CNI war bislang *Canal*. Es handelt sich dabei um die Kombination
+der beiden CNIs *Flannel* und *Calico*. Flannel realisiert dabei die Netzwerkfunktionalität zwischen den
+Pods, während calico sich um die *network policies* kümmert.
 
-Die CNI canal gibt es schon sehr lange und besitzt daher auch die nötige Produktionsreife.
+Die CNI Canal gibt es schon sehr lange und besitzt daher auch die nötige Produktionsreife.
 Canal unterstützt sowohl den proxy-Modus *iptables* als auch *ipvs*.
 
-Falls sie sich unsicher sind welches CNI sie wählen sollten, dann wählen sie Canal!
-
+Falls Sie sich unsicher sind, welches CNI sie wählen sollen, dann wählen sie *Canal*.
 
 ## Cilium
 
 Cilium ist relativ neu auf dem CNI Markt. Es setzt, im Gegensatz zu Canal, für die Konfiguration der
 Kommunikation zwischen den Pods intern auf neuere Technologien wie beispielsweise eBPF. Cilium bietet neben
-besseren health-checks außerdem mit *hubble* ein Addon zur genaueren Analyse von Netzwerkverkehr innerhalb
+besseren health-checks außerdem mit *Hubble* ein Add-on zur genaueren Analyse von Netzwerkverkehr innerhalb
 des Kubernetes Clusters an. Zudem bietet es ebenfalls Unterstützung für feingranulares Filtern des eingehenden
 und ausgehenden Netzwerkverkehrs sowie des Verkehrs innerhalb des Clusters.
 
@@ -55,57 +52,51 @@ welches auf unseren Flatcar images immer gegeben ist.
 An dem Cilium Projekt wird im Moment rege weiterentwickelt so dass regelmäßig neue Features herausgebracht
 und Fehler behoben werden.
 
-Wenn sie ein tieferes Verständnis über die Netzwerkflüsse in ihrem Kubernetes Cluster interessiert sind,
-dann wählen sie Cilium als ihre CNI!
-
+Wenn Sie an einem tieferen Verständnis über die Netzwerkflüsse in ihrem Kubernetes Cluster interessiert sind,
+dann wählen Sie Cilium als CNI.
 
 ## Keine
 
-Es ist durchaus möglich komplett andere CNIs in unseren Kubernetes Clustern zu benutzen. Dies wird jedoch
-von unserer Plattform nicht angeboten. Wenn sie dennoch eine andere CNI wünschen haben sie die Möglichkeit
-den Kubernetes Cluster ohne CNI zu erstellen und ihre eigene CNI im Nachhinein auf dem Cluster zu installieren.
+Es ist durchaus möglich, andere CNIs in unseren Kubernetes Clustern zu benutzen. Dies wird jedoch
+von unserer Plattform nicht angeboten. Wenn Sie dennoch eine andere CNI wünschen, können Sie den Kubernetes Cluster ohne CNI erstellen und Ihre eigene CNI im Nachhinein auf dem Cluster installieren.
 Dies bedingt jedoch ein fortgeschrittenes Wissen im Bereich Kubernetes-Netzwerk und sollte nur von Experten
-in diesem Gebiet gewählt werden!
+in diesem Gebiet gewählt werden.
 
+## Installation der CNI
 
-# Installation der CNI
-
-Beim Erstellungsprozess ihres Kubernetes Clusters in Schritt zwei haben sie unter dem Punkt "Network
-Configuration" die Möglichkeit ihre CNI auszuwählen. 
+Beim Erstellungsprozess Ihres Kubernetes Clusters in Schritt zwei können Sie unter dem Punkt "Network
+Configuration" Ihre CNI auswählen.
 
 ![choose CNI](choosing_cni.png)
 
-Dort sind auch weitere Einstellungen wie proxy-Modus und weiter unten auch der Control-Plane Konnektor
+Dort sind auch weitere Einstellungen wie proxy-Modus und weiter unten auch der Controlplane Konnektor
 *Konnectivity* möglich.
 
 ![choose proxy](choosing_proxy_mode.png)
 
-Bitte beachten sie dass die Wahl von *eBPF* als proxy-Modus erst zur Verfügung steht wenn Cilium als
-CNI ausgewählt wurde. Weitere Informationen zum Control-Plane Konnektor *Konnectivity* finden sie auf
+Bitte beachten Sie, dass die Wahl von *eBPF* als proxy-Modus erst zur Verfügung steht, wenn Cilium als
+CNI ausgewählt wurde. Weitere Informationen zum Controlplane Konnektor *Konnectivity* finden sie auf
 einer eigenen Seite [hier](/gks/clusterlifecycle/controlplaneconnector).
 
-# Installation des Hubble Addons
+## Installation des Hubble Add-ons
 
-Wenn Cilium als CNI verwendet wurde dann hat man die Möglichkeit sich den Netzwerkverkehr des
+Wenn Cilium als CNI verwendet wurde, dann hat man die Möglichkeit sich den Netzwerkverkehr des
 Kubernetes Cluster visualisieren zu lassen. Dazu muss die Komponente *Hubble* über den Addons-Reiter
 installiert werden, nachdem die Clustererstellung erfolgreich beendet wurde.
 
 ![install hubble](installing_hubble_addon.png)
 
-
-
-# Warnung
+## Warnung
 
 Die Auswahl der CNI kann nur zum Zeitpunkt der Erstellung des Kubernetes Clusters erfolgen. Ein nachträgliches
-Ändern der CNI ist zwar technisch möglich, wird von unserer Plattform aber nicht unterstützt.
+Ändern der CNI ist zwar technisch möglich, wird aber von unserer Plattform nicht unterstützt.
 
-Im Falle eines manuellen Änderns des CNI im Nachhinein ist die Wahrscheinlichkeit sehr hoch dass es bei Updates
+Im Falle eines manuellen Änderns des CNI im Nachhinein ist die Wahrscheinlichkeit sehr hoch, dass es bei Updates
 der Kubernetes Version zu Komplikationen kommt. Wir raten daher dringend von der nachträglichen manuellen
-Einflussnahme ab. Falls sie generell vorhaben Änderungen an der CNI vorzunehmen, erstellen sie den Cluster
-bitte **ohne** CNI und installieren und warten sie diese danach selber!
+Einflussnahme ab. Falls Sie generell vorhaben, Änderungen an der CNI vorzunehmen, erstellen Sie den Cluster
+ **ohne** CNI und installieren und warten sie diese danach selber.
 
-
-# Weitere Quellen
+## Weiterführende Themen
 
 * [Flannel github page](https://github.com/flannel-io/flannel)
 * [Canal github page](https://github.com/projectcalico/canal)

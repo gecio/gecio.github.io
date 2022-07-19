@@ -6,27 +6,28 @@ nav_order: 7200
 parent: Anwendungen in Kubernetes
 ---
 <!-- LTeX:  language=de-DE -->
+# Kubernetes Service Accounts verwalten
 
-Wir können eingeschränkten Zugriff auf unsere Cluster mithilfe von Kubernetes
+Sie können eingeschränkten Zugriff auf Ihre Cluster mithilfe von Kubernetes
 Service Accounts und dem Kubernetes RBAC Feature umsetzen.
 
-Dafür müssen wir folgendes tun:
+Dafür müssen Sie:
 
-- Einen Kubernetes Service Account anlegen.
-- Eine Rolle mit beschränktem Zugriff definieren.
-- Dem Kubernetes Service Account diese Rolle zuordnen.
+- Einen Kubernetes Service Account anlegen
+- Eine Rolle mit beschränktem Zugriff definieren
+- Dem Kubernetes Service Account diese Rolle zuordnen
 
-Die Authentifizierung in Kubernetes Clustern die mit GKS erzeugt werden,
-geschieht über sogenannte `Bearer Token`. Wenn wir einen neuen Kubernetes
+Die Authentifizierung in Kubernetes Clustern, die mit GKS erzeugt werden,
+geschieht über sogenannte `Bearer Token`. Wenn Sie einen neuen Kubernetes
 Service Account anlegen, wird ein solches Token oder Secret im jeweiligen
 Namespace hinterlegt. Dieses Secret wird gelöscht, wenn der Kubernetes
 Service Account gelöscht wird.
 
 ## Anlegen eines Kubernetes Service Accounts
 
-Um einen Kubernetes Service Account anzulegen, benutzen wir das folgende
-Kommando, wobei wir `my-serviceaccount` mit dem Namen ersetzen, den wir dem
-Kubernetes Service Account geben wollen:
+Um einen Kubernetes Service Account anzulegen, benutzen Sie das folgende
+Kommando. Ersetzen Sie dabei `my-serviceaccount` mit dem Namen, den Sie dem
+Kubernetes Service Account geben wollen.
 
 ```bash
 kubectl apply -f - <<EOF
@@ -39,29 +40,29 @@ EOF
 ```
 
 Dadurch wird im Cluster automatisch ein neues Access Token angelegt. Dieses
-Token trägt einen Namen wir `my-serviceaccount-token-####` wobei die '#'
+Token trägt einen Namen `my-serviceaccount-token-####` wobei die '#'
 zufällige alphanumerische Zeichen sind.
 
-Um die Token in einem Namespace zu sehen, verwenden wir folgendes Kommando:
+Um die Token in einem Namespace zu sehen, verwenden Sie das folgende Kommando:
 
 ```bash
 kubectl get secrets --namespace=my-namespace
 ```
 
-Wir können uns dann das eigentliche Token mit dem folgenden Kommando ausgeben
-lassen (nicht vergessen, '$SECRETNAME' durch den Namen zu ersetzen, der für
-unseren Kubernetes Service Account gilt):
+Sie können sich dann das eigentliche Token mit dem folgenden Kommando ausgeben
+lassen (vergessen Sie nicht, '$SECRETNAME' durch den Namen zu ersetzen, der für
+Ihren Kubernetes Service Account gilt):
 
 ```bash
 kubectl get secret $SECRETNAME -o jsonpath='{.data.token}' --namespace=my-namespace
 ```
 
-Das angezeigte Token können wir zusammen mit dem Namen des Serviceaccounts an
+Das angezeigte Token können Sie zusammen mit dem Namen des Serviceaccounts an
 Dritte übermitteln, um ihnen den Zugriff zu dem Cluster zu ermöglichen.
 
-Jetzt haben wir einen Kubernetes Service Account, der sich an unserem Cluster
+Jetzt haben Sie einen Kubernetes Service Account, der sich an Ihrem Cluster
 authentifizieren kann, aber er hat noch keine Rechte. Im nächsten Schritt
-definieren wir eine Rolle und weisen diese Rolle dem Kubernetes Service
+definieren Sie eine Rolle und weisen diese Rolle dem Kubernetes Service
 Account zu, damit er die entsprechenden Rechte erhält.
 
 ## Definition einer Rolle mit ihren Rechten
@@ -77,7 +78,7 @@ Zugänge als auch für Kubernetes Service Accounts. Wenn ein Account über mehre
 verfügt, bekommt er die kombinierten Rechte aller Rollen.
 
 Um eine Rolle zu definieren, mit der ein Account die Informationen über Pods im
-Namespace `my-namespace` auslesen kann, verwenden wir den folgenden Befehl:
+Namespace `my-namespace` auslesen kann, verwenden Sie den folgenden Befehl:
 
 ```bash
 kubectl apply -f - <<EOF
@@ -93,8 +94,8 @@ rules:
 EOF
 ```
 
-Jetzt wollen wir dem zuvor angelegten Kubernetes Service Account diese Rolle
-zuweisen. Für dieses _role binding_ verwenden wir das folgende Kommando:
+Jetzt wollen Sie dem zuvor angelegten Kubernetes Service Account diese Rolle
+zuweisen. Für dieses _role binding_ verwenden Sie das folgende Kommando:
 
 ```bash
 kubectl create rolebinding read-pods \
@@ -103,7 +104,7 @@ kubectl create rolebinding read-pods \
   --namespace=my-namespace
 ```
 
-Um alle Ressourcen aufzulisten, rufen wir folgendes Kommando auf:
+Um alle Ressourcen aufzulisten, rufen Sie das folgende Kommando auf:
 
 ```bash
 kubectl api-resources
@@ -120,16 +121,18 @@ Für die meisten Ressourcen sind folgende Verben definiert:
 - delete
 - exec
 
-### Weiterführende Informationen
+## Weiterführende Themen
 
-Die offizielle Kubernetes-Dokumentation zu [Zugriffskontrollen](https://kubernetes.io/docs/reference/access-authn-authz/controlling-access/) und [using roles and role bindings in RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
-behandelt das Thema ausführlich.
+In der offiziellen Kubernetes-Dokumentation wird das Thema ausführlich behandelt:
+
+- [Zugriffskontrollen](https://kubernetes.io/docs/reference/access-authn-authz/controlling-access/)
+- [Using roles and role bindings in RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
 
 ## Zusammenfassung
 
-In dieser Anleitung haben wir gelernt, wie wir über die Kommandozeile:
+In diesem Abschnitt haben Sie gelernt, wie Sie über die Kommandozeile:
 
 - Kubernetes Service Accounts anlegen
-- Das automatisch generierte Bearer Token für einen Kubernetes Service Accounts auslesen können
+- Das automatisch generierte Bearer Token für einen Kubernetes Service Accounts auslesen
 - Eine Rolle mithilfe des Kubernetes RBAC Features definieren
-- Mithilfe eines _role bindings_ solche Rollen einem Kubernetes Service Account zuordnen
+- Mithilfe eines _role bindings_ solche Rollen einem Kubernetes Service Account zuordnen können

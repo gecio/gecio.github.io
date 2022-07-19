@@ -10,12 +10,12 @@ parent: Über GKS
 
 Das iMKE-Dashboard wird umbenannt in GKS-Dashboard, da der neue Name besser die
 Zugehörigkeit zur German Edge Cloud widerspiegelt als der vorherige. Auch der
-Domänenname ändert sich damit. Das Dashboard wird ab dem 1. Juli 2022 under der
-URL [http://gks.gec.io](http://gks.gec.io) erreichbar sein.
+Domänenname ändert sich damit. Das Dashboard ist ab dem 1. Juli 2022 unter der
+URL [http://gks.gec.io](http://gks.gec.io) erreichbar.
 
 ## Unterstützte Kubernetes Versionen
 
-Im Rahmen des aktuellen Release werden die folgenden Kubernetes-Versionen unterstützt:
+Im aktuellen Release werden die folgenden Kubernetes-Versionen unterstützt:
 
 * 1.21.8
 * 1.22.5
@@ -25,7 +25,7 @@ Im Rahmen des aktuellen Release werden die folgenden Kubernetes-Versionen unters
 
 Wir werden die Unterstützung der Kubernetes Version v1.21 am 28.06.2022 beenden.
 
-Bitte updaten Sie alle bestehenden Cluster mit Kubernetes Version 1.21 auf mindestens 1.22 bis zu diesem Datum.
+Führen Sie bei allen bestehenden Clustern mit Kubernetes Version 1.21 ein Update auf mindestens Version 1.22 bis zu diesem Datum durch.
 
 ## Neue Funktionen
 
@@ -39,9 +39,9 @@ Das aktuelle Release der Plattform ist ein technisches Release ohne neue Feature
 
 ### Upgrade-Hinweise für Kubernetes 1.23
 
-Wenn Sie ein Upgrade auf Kubernetes 1.23 planen, lesen Sie bitte den Abschnitt [What's New](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md#whats-new-major-themes) des offiziellen Kubernetes v1.23 Changelogs und machen Sie sich mit den bevorstehenden Änderungen vertraut. Es werden diesmal sehr viele beta-Kubernetes APIs entfernt, welches potenziell Änderungen in ihren Software-Ausroll-Prozess zur Folge hat.
+Wenn Sie ein Upgrade auf Kubernetes 1.23 planen, lesen Sie bitte im offiziellen Kubernetes v1.23 Changelog den Abschnitt [What's New](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md#whats-new-major-themes) und machen Sie sich mit den bevorstehenden Änderungen vertraut. Es werden diesmal sehr viele beta-Kubernetes APIs entfernt, was potenziell Änderungen im Software-Ausroll-Prozess zur Folge hat.
 
-Eine Übersicht über die Änderungen finden Sie im Abschnitt [Changes by Kind](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md#changes-by-kind-2) des Changelogs.
+Eine Übersicht über die Änderungen finden Sie im Changelog in Abschnitt [Changes by Kind](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md#changes-by-kind-2).
 
 * [Wichtige Hinweise zum Upgrade](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md#urgent-upgrade-notes)
 * [Deprecations](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.23.md#deprecation)

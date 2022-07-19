@@ -14,7 +14,7 @@ und wie man sie im Clustererstellungsprozess auswählt.
 ## Was ist eine CNI und wofür wird sie gebraucht?
 
 CNI ist eine Abkürzung für Container Network Interface. Vereinfacht erklärt, ist es eine Beschreibung der
-in Kubernetes benötigten Netzwerkfunktionalität, um die Kommunikation zwischen Pods und Knoten zu realisieren.
+in Kubernetes benötigten Netzwerkfunktionalität, um die Kommunikation zwischen Pods und Nodes zu realisieren.
 Da die Netzwerkumgebungen, in denen Kubernetes läuft, sehr verschieden sind, haben sich die Entwickler
 von Kubernetes darauf geeinigt, sich auf eine standardisierte Schnittstellenbeschreibung der benötigten
 Netzwerkfunktionalität zu beschränken und anderen die Implementierung zu überlassen. Dieser Schritt

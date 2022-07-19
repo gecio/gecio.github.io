@@ -73,7 +73,7 @@ Die Controlplane in Kubernetes zu betreiben, hat viele Vorteile: einzelne Pods w
 
 ![GKS platform](gks-platform.png)
 
-Die Worker-Nodes eines Kundenclusters werden wiederum als selbstständige VMs im Openstack-Tenant des Kunden betrieben. Der Machine-Controller in der Controlplane kümmert sich dabei um die automatische Erstellung der VMs sowie ihre Eingliederung in den bestehenden Cluster. Dabei können mit dem Web Interface jederzeit neue Knoten im Cluster hinzugefügt oder auch gelöscht werden. Komplexere Änderungen werden durch den Machine-Controller in einem "Rolling-Upgrade" durchgeführt - immer eine Worker-Node nach der anderen. So werden Downtimes während eines Upgrades minimiert.
+Die Worker-Nodes eines Kundenclusters werden wiederum als selbstständige VMs im Openstack-Tenant des Kunden betrieben. Der Machine-Controller in der Controlplane kümmert sich dabei um die automatische Erstellung der VMs sowie ihre Eingliederung in den bestehenden Cluster. Dabei können mit dem Web Interface jederzeit neue Nodes im Cluster hinzugefügt oder auch gelöscht werden. Komplexere Änderungen werden durch den Machine-Controller in einem "Rolling-Upgrade" durchgeführt - immer eine Worker-Node nach der anderen. So werden Downtimes während eines Upgrades minimiert.
 
 ## Zertifizierungen
 

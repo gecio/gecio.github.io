@@ -78,12 +78,12 @@ Nun aktualisiert GKS automatisch die Node Group auf die neue Version
 und Kubernetes sorgt dafür, dass Ihre Applikationen
 neu auf die aktualisierten Nodes verteilt werden.
 
-## Zwei-Knoten Cluster
+## Zwei-Node Cluster
 
-Aufzupassen ist hier bei Clustern mit zwei Knoten. GKS nutzt ein
+Aufzupassen ist hier bei Clustern mit zwei Nodes. GKS nutzt ein
 rollierendes Update als Update-Strategie. Hierbei wird immer
-ein Knoten nach dem anderen getauscht. Bei einem Cluster mit zwei oder
-weniger Knoten bedeutet dies, dass der zuerst aktualisierte Knoten komplett
+ein Node nach dem anderen getauscht. Bei einem Cluster mit zwei oder
+weniger Nodes bedeutet dies, dass der zuerst aktualisierte Node komplett
 geplant wird, noch bevor der zweite fertig ist.
 
 Als Lösung gibt es ein recht einfaches Bash-Script, welches in einem
@@ -115,4 +115,4 @@ kube-system       Active   36m
 Refreshing pods in all Deployments
 ```
 
-Nun sind alle Pods sauber auf Ihre Knoten verteilt worden.
+Nun sind alle Pods sauber auf Ihre Nodes verteilt worden.

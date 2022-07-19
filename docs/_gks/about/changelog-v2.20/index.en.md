@@ -11,7 +11,7 @@ parent: About GKS
 The iMKE dashboard will be renamed to GEC Kubernetes Servives (GKS) dashboard, as the new name reflects
 the affiliation to German Edge Cloud better than the old one.
 With this name change, the domain changes as well. As of July 1, 2022, the service is reachable with
-the URL …[https://gks.gec.io](https://gks.gec.io).
+the URL [https://gks.gec.io](https://gks.gec.io).
 
 ## Supported Kubernetes Versions
 

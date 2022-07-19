@@ -11,7 +11,7 @@ parent: Über GKS
 Das iMKE-Dashboard wird umbenannt in GKS-Dashboard, da der neue Name besser die
 Zugehörigkeit zur German Edge Cloud widerspiegelt als der vorherige. Auch der
 Domänenname ändert sich damit. Das Dashboard ist ab dem 1. Juli 2022 unter der
-URL [http://gks.gec.io](http://gks.gec.io) erreichbar.
+URL [https://gks.gec.io](http://gks.gec.io) erreichbar.
 
 ## Unterstützte Kubernetes Versionen
 

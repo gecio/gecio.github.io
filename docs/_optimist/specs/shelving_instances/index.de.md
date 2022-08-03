@@ -12,16 +12,16 @@ last_modified_date: 2022-02-02
 ## Einführung
 
 Auf der OpenStack-Plattform haben Sie die Möglichkeit, eine Instanz zurückzustellen. Shelving-Instanzen ermöglichen es Ihnen, eine Instanz zu stoppen, ohne dass sie Ressourcen verbraucht.
-Eine zurückgestellte Instanz sowie die ihr zugewiesenen Ressourcen (z. B. IP-Adresse usw.) werden als bootfähige Instanz beibehalten.
+Eine zurückgestellte Instanz sowie die ihr zugewiesenen Ressourcen (z.B. IP-Adresse, usw.) werden als bootfähige Instanz beibehalten.
 
-Diese Funktion kann als Teil eines Lifecycle-prozesses einer Instanz oder zum Einsparen von Ressourcen verwendet werden.
+Diese Funktion kann als Teil eines Lifecycle-Prozesses einer Instanz oder zum Einsparen von Ressourcen verwendet werden.
 
-## Shelving eine Instanz
+## Shelving einer Instanz
 
 Instanzen auf Openstack können wie folgt abgelegt werden:
 `$ openstack server shelve <server-id>`
 
-## Unshelving eine Instanz
+## Unshelving einer Instanz
 
 Instanzen können mit dem folgenden Befehl Unshelved werden:
 `$ openstack server shelve <server-id>`
@@ -42,12 +42,12 @@ $ openstack server event list <server-id>
 
 ## Warum Shelving verwenden?
 
-Diese Funktion ist nützlich, um Instanzen zu archivieren, die Sie derzeit nicht verwenden, aber nicht löschen möchten. Das Shelving einer Instanz ermöglicht es Ihnen, die Instanzdaten und Ressourcenzuordnungen beizubehalten, aber gibt den Instanz-Memory frei.
+Diese Funktion ist nützlich, um Instanzen zu archivieren, die Sie derzeit nicht verwenden, aber nicht löschen möchten. Das Shelving einer Instanz ermöglicht es Ihnen, die Instanzdaten und Ressourcenzuordnungen beizubehalten, aber gibt das Instanz-Memory frei.
 
-Wenn Sie eine Instanz zurückstellen, generiert der Compute-Dienst ein Snapshot-Bild, das den Status der Instanz erfasst, und lädt es in die Glance-Bildbibliothek hoch. Wenn die Instanz Unshelved ist, wird sie mithilfe des Snapshots neu erstellt.
-Das Snapshot-Image wird gelöscht, wenn die Instanz später Unshelved oder gelöscht wird.
+Wenn Sie eine Instanz zurückstellen, generiert der Compute-Dienst ein Snapshot-Image, das den Status der Instanz erfasst, und lädt es in die Glance-Library hoch. Wenn die Instanz unshelved wird, wird sie mithilfe des Snapshots neu erstellt.
+Das Snapshot-Image wird gelöscht, wenn die Instanz unshelved oder gelöscht wird.
 
 ## Wie funktioniert das abrechnungstechnisch?
 
 Aus Abrechnungssicht wird beim S3-Preismodell nur die Root Disk abgerechnet. Die CPU und der Arbeitsspeicher, die für die jeweilige Vorratsinstanz reserviert wurden, werden nicht in Rechnung gestellt.
-Die Anzahl der genutzten Instanzen verringert sich nicht vom Kontingent, es bleibt gleich ob eine Instanz Shelved wurde oder nicht.
+Die Anzahl der genutzten Instanzen verringert sich nicht vom Quota, es bleibt gleich ob eine Instanz shelved wurde oder nicht.

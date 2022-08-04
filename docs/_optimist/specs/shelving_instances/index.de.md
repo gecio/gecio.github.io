@@ -24,7 +24,7 @@ Instanzen auf Openstack können wie folgt abgelegt werden:
 ## Unshelving einer Instanz
 
 Instanzen können mit dem folgenden Befehl Unshelved werden:
-`$ openstack server shelve <server-id>`
+`$ openstack server unshelve <server-id>`
 
 ## Eventliste für eine Instanz anzeigen
 
@@ -42,12 +42,13 @@ $ openstack server event list <server-id>
 
 ## Warum Shelving verwenden?
 
-Diese Funktion ist nützlich, um Instanzen zu archivieren, die Sie derzeit nicht verwenden, aber nicht löschen möchten. Das Shelving einer Instanz ermöglicht es Ihnen, die Instanzdaten und Ressourcenzuordnungen beizubehalten, aber gibt das Instanz-Memory frei.
+Diese Funktion ist nützlich, um Instanzen zu archivieren, die Sie derzeit nicht verwenden, aber nicht löschen möchten. Das Shelving einer Instanz ermöglicht es Ihnen, die Instanzdaten und Ressourcenzuordnungen beizubehalten, aber gibt CPU und Arbeitsspeicher Ressourcen der Instanz frei.
 
 Wenn Sie eine Instanz zurückstellen, generiert der Compute-Dienst ein Snapshot-Image, das den Status der Instanz erfasst, und lädt es in die Glance-Library hoch. Wenn die Instanz unshelved wird, wird sie mithilfe des Snapshots neu erstellt.
 Das Snapshot-Image wird gelöscht, wenn die Instanz unshelved oder gelöscht wird.
 
-## Wie funktioniert das abrechnungstechnisch?
+## Abrechnung von Shelved Instances
 
-Aus Abrechnungssicht wird beim S3-Preismodell nur die Root Disk abgerechnet. Die CPU und der Arbeitsspeicher, die für die jeweilige Vorratsinstanz reserviert wurden, werden nicht in Rechnung gestellt.
-Die Anzahl der genutzten Instanzen verringert sich nicht vom Quota, es bleibt gleich ob eine Instanz shelved wurde oder nicht.
+Aus Abrechnungssicht wird bei einer Shelved Instance nur die Root Disk der Instanz weiterhin abgerechnet, für diese gilt ab dem Shelving das S3-Preismodell. CPU und Arbeitsspeicher Ressourcen aus dem Flavor der Instanz werden ab dem Zeitpunkt des Shelvings nicht mehr in Rechnung gestellt und nach dem unshelving automatisch wieder berechnet.
+
+Shelving hat keine Auswirkungen auf die Auslastung der Quotas im Projekts. Shelved Ressourcen werden nicht in der Quota freigegeben um jederzeit ausreichend Ressourcen für das unshelving der Instanz im Projekt zu gewährleisten.

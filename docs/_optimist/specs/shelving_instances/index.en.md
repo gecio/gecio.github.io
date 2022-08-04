@@ -24,7 +24,7 @@ Instances can be shelved as follows:
 ## Unshelve an Instance
 
 Instances can be unshelved with the following command:
-`$ openstack server shelve <server-id>`
+`$ openstack server unshelve <server-id>`
 
 ## View Event List for Instances
 
@@ -47,7 +47,8 @@ This feature is useful for archiving instances you are not currently using but d
 When you shelve an instance, the Compute service generates a snapshot image that captures the state of the instance, and uploads it to the Glance image library. If the instance is unshelved, it will be rebuilt using the snapshot.
 The snapshot image will be deleted if the instance is later unshelved or deleted.
 
-## How Does this Work from a Billing Perspective?
+## Billing for Shelved Instances
 
-From a billing perspective, only the Root Disk is billed with the S3 pricing model. The CPU and RAM which has been reserved for the specific shelved insance will not be billed.
-The number of instances used will not be deducted from the quota, it remains the same whether an instance has been shelved or not.
+From a billing perspective, only the root disk of the shelved instance continues to be billed; the S3 price model applies to this from the time of shelving onwards. Once the instance is shelved, CPU and memory resources from the flavor of the instance cease to be billed, however, billing will automatically resume again after unshelving.
+
+Shelving has no effect on the utilization of quotas in the project. Shelved resources do not release their quota to ensure sufficient resources for unshelving the instance in the project at all times.

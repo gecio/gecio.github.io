@@ -126,7 +126,7 @@ systemctl start qemu-guest-agent
 systemctl enable qemu-guest-agent
 ```
 
-Außerdem empfehlen wir beim [Hochladen Ihrer eigenen Images](https://docs.gec.io/de/optimist/specs/images/#uploading-your-own-images), dass Sie `--property hw_qemu_guest_agent=True` hinzufügen Installieren Sie dies bei der Erstellung des neuen Images.
+Außerdem empfehlen wir beim [Hochladen Ihrer eigenen Images](https://docs.gec.io/de/optimist/specs/images/#uploading-your-own-images), dass Sie `--property hw_qemu_guest_agent=True` als Property an Ihren Images hinzufügen.
 
 Sobald der qemu-guest-agent läuft, kann der Snapshot erstellt werden.
 

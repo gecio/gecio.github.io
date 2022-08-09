@@ -3,7 +3,7 @@ title: Creating a Project
 lang: en
 permalink: /gks/managingprojects/creatingaproject/
 nav_order: 3100
-parent: Managing GKS-Projects
+parent: Managing GKS Projects
 ---
 # Creating a Project
 

@@ -3,7 +3,7 @@ title: Managing Service Account Tokens
 lang: en
 permalink: /gks/managingprojects/projectserviceaccounts/
 nav_order: 3300
-parent: Managing GKS-Projects
+parent: Managing GKS Projects
 ---
 # Managing Service Account Tokens
 

@@ -3,7 +3,7 @@ title: Project User Management
 lang: en
 permalink: /gks/managingprojects/projectusermanagement/
 nav_order: 3200
-parent: Managing GKS-Projects
+parent: Managing GKS Projects
 ---
 
 ## Adding Users

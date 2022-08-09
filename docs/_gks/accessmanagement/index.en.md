@@ -38,7 +38,7 @@ If you need to rotate the Kubeconfig login token, proceed as follows:
 
 ![Revoke Menu](revoke-token-menu.png)
 
-Then select the Token and press revoke
+Then select the token and press revoke.
 
 ![Revoke Popup](revoke.png)
 

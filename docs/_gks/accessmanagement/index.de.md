@@ -35,7 +35,7 @@ Mehr Informationen über Kubernetes RBAC finden Sie [hier](https://kubernetes.io
 
 ## Login Tokens resetten
 
-Zum rotieren der Login token.
+Zum Rotieren des Login-Tokens.
 
 ![Revoke Menu](revoke-token-menu.png)
 

@@ -1,11 +1,11 @@
 ---
-title: Project User Management
+title: Managing Users in a Project
 lang: en
 permalink: /gks/managingprojects/projectusermanagement/
 nav_order: 3200
-parent: Managing GKS-Projects
+parent: Managing GKS Projects
 ---
-
+# Managing Users in a Project
 ## Adding Users
 
 You can add a user to an existing GKS project with a couple of clicks.
@@ -19,26 +19,26 @@ To achieve this, you need:
 The user needs to log in once, before it is usable.
 
 First, select the correct project.
-![Get the Project](select_project.png)
+![Get the Project](../images/MP01_User.png)
 
 Then click on `Members` in the left sidebar.
-![Member](select_members.png)
+![Member](../images/MP02_User.png)
 
 Next click `Add Member` on the top right.
-![Add New member](add_member.png)
+![Add New member](../images/MP03_User.png)
 
 Finally, enter the user email and the desired role (Owner, Editor, or Viewer).
-![Add Member Role](add_member_role.png)
+![Add Member Role](../images/MP04_User.png)
 
 ## Removing Users
 
 To remove a user from a project go back to the member section of the project.
 
 First,  go the project.
-![Get the Project](select_project.png)
+![Get the Project](../images/MP01_User.png)
 
 Then click on `Members` in the left sidebar.
-![Member](select_members.png)
+![Member](../images/MP02_User.png)
 
 Use the *Deletion* icon to remove the user.
 ![RemoveMember](remove-user.png)

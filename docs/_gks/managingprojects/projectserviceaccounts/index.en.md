@@ -3,7 +3,7 @@ title: Managing Service Account Tokens
 lang: en
 permalink: /gks/managingprojects/projectserviceaccounts/
 nav_order: 3300
-parent: Managing GKS-Projects
+parent: Managing GKS Projects
 ---
 # Managing Service Account Tokens
 
@@ -28,42 +28,33 @@ service account and a project. A service account will be automatically deleted a
 ## Creating a Service Account with Token
 
 1. Select the project.
-
-    ![SA-Projects](sa-projects.png)
+![Projects](../images/MP05_ServAcc.png)
 
 1. Go to the Service Accounts page.
-
-    ![ServiceAccounts](sa-serviceaccounts.png)
+![ServiceAccounts](../images/MP06_ServAcc.png)
 
 1. Use the `Add Service Account` button.
-
-    ![SA-Add](sa-add.png)
+![SA-Add](../images/MP07_ServAcc.png)
 
 1. Enter a name for the service account and select the group (either `Project Manager`, `Editor` or `Viewer`).
-
-    ![SA-Name](sa-name.png)
+![SA-Name](../images/MP08_ServAcc.png)
 
 1. Click `Add Service Account`.
-
-    ![SA-Add-SA](sa-add-sa.png)
+![SA-Add](../images/MP09_ServAcc.png)
 
 Now the service account has been created. If you want to associate a token to it, do as follows:
 
 1. Select the service account you just created.
-
-    ![SA-Select](sa-select.png)
+![SA-Select](../images/MP10_ServAccTok.png)
 
 1. Click on `+ Add Token`.
-
-    ![SA-Add-Token](sa-add-token.png)
+![SA-Add-Token](../images/MP11_ServAccTok.png)
 
 1. Enter a name for the token and click `Add Token`.
-
-    ![SA-Tokenname](sa-tokenname.png)
+![SA-Tokenname](../images/MP12_ServAccTok.png)
 
 1. Now the generated token will be shown. Download it using the Arrow icon or copy it.
-
-    ![SA-Tokenshown](sa-tokenshown.png)
+![SA-Token](../images/MP13_ServAccTok.png)
 
  > **Important note:** Make sure to save this token at a safe place on your own device. It cannot be displayed again after closing the dashboard window.
 

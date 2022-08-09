@@ -2,7 +2,7 @@
 title: CNI Updates
 lang: en
 permalink: /gks/clusterlifecycle/upgradingcni/
-nav_order: 4250
+nav_order: 4260
 parent: Cluster Lifecycle
 ---
 

@@ -26,4 +26,4 @@ on how you can use the clusters within. You can have multiple projects.
 
 * [How to create a GKS project](/gks/managingprojects/creatingaproject)
 * [How to manage users in a GKS project](/gks/managingprojects/projectusermanagement)
-* [How to manage service sccounts in a GKS project](/gks/managingprojects/projectserviceaccounts/)
+* [How to manage service accounts in a GKS project](/gks/managingprojects/projectserviceaccounts/)

@@ -34,7 +34,7 @@ More information on Kubernetes RBAC is available [here](https://kubernetes.io/do
 
 ## Revoke Tokens
 
-If you need to rotate the Kubeconfig Login tokens.
+If you need to rotate the Kubeconfig login token, proceed as follows:
 
 ![Revoke Menu](revoke-token-menu.png)
 

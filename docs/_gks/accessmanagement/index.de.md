@@ -39,7 +39,7 @@ Zum Rotieren des Login-Tokens.
 
 ![Revoke Menu](revoke-token-menu.png)
 
-Hier den Token auswählen und den revoke button klicken.
+Nun den Token auswählen und den **_revoke_** Knopf drücken.
 
 ![Revoke Popup](revoke.png)
 

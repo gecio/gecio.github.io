@@ -42,7 +42,7 @@ Then select the token and press revoke.
 
 ![Revoke Popup](revoke.png)
 
-Then download new [Kubeconfig][#Project-Based Access], the old one is now invalid.
+Then download the new [Kubeconfig][#Project-Based Access] as the old one is now invalid.
 
 ## Learn More
 

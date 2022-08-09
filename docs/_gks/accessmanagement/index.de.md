@@ -43,7 +43,7 @@ Hier den Token auswählen und den revoke button klicken.
 
 ![Revoke Popup](revoke.png)
 
-Anschließend eine neue [Kubeconfig][#Zugriff via GKS-Projekt] herunterladen, die alte ist jetzt ungültig.
+Anschließend eine neue [Kubeconfig][#Zugriff via GKS-Projekt] herunterladen, da die Vorherige jetzt ungültig ist.
 
 ## Weiterführende Themen
 

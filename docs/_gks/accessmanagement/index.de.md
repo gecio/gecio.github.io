@@ -33,6 +33,18 @@ Benutzer mit diesem Zugriffslevel wiederum haben keinen Zugriff auf das GKS Dash
 
 Mehr Informationen über Kubernetes RBAC finden Sie [hier](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
 
+## Login Tokens resetten
+
+Zum rotieren der Login token.
+
+![Revoke Menu](revoke-token-menu.png)
+
+Hier den Token auswählen und den revoke button klicken.
+
+![Revoke Popup](revoke.png)
+
+Anschließend eine neue [Kubeconfig][#Zugriff via GKS-Projekt] herunterladen, die alte ist jetzt ungültig.
+
 ## Weiterführende Themen
 
 * [Projektzugriff: Mit einem Cluster verbinden](/gks/accessmanagement/connectingtoacluster/)

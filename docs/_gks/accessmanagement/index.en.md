@@ -32,6 +32,18 @@ A user with this level of access can download a specific `kubeconfig`, which can
 
 More information on Kubernetes RBAC is available [here](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
 
+## Revoke Tokens
+
+If you need to rotate the Kubeconfig login token, proceed as follows:
+
+![Revoke Menu](revoke-token-menu.png)
+
+Then select the token and press revoke.
+
+![Revoke Popup](revoke.png)
+
+Then download the new [Kubeconfig][#Project-Based Access] as the old one is now invalid.
+
 ## Learn More
 
 * [Project access: Connecting to a Cluster](/gks/accessmanagement/connectingtoacluster/)

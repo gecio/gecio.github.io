@@ -10,14 +10,14 @@ parent: Add-on
 
 ## Was ist ein Cluster Autoscaler in Kubernetes?
 
-Der Kubernetes Cluster Autoscaler ist ein Tool, das die Anzahl der Worker-Nodes je nach Verbrauch automatisch nach oben oder unten anpasst. Das bedeutet, dass der Autoscaler zum Beispiel einen Cluster automatisch hochskaliert, indem er die Anzahl der Knoten erhöht, wenn nicht genügend Knotenressourcen für das Cluster-Workload-Scheduling vorhanden sind. Aber auch herunterskaliert, wenn die Knotenressourcen ständig im Leerlauf sind oder mehr als genügend Knotenressourcen für das Cluster-Workload-Scheduling vorhanden sind. Kurz gesagt handelt es sich um eine Komponente, die die Größe eines Kubernetes-Clusters automatisch so anpasst, dass alle Pods einen Platz zum Ausführen haben und keine überflüssigen Knoten vorhanden sind.
+Der Kubernetes Cluster Autoscaler ist ein Tool, das die Anzahl der Worker-Nodes je nach Verbrauch automatisch nach oben oder unten anpasst. Das bedeutet, dass der Autoscaler zum Beispiel einen Cluster automatisch hochskaliert, indem er die Anzahl der Nodes erhöht, wenn nicht genügend Node-Ressourcen für das Cluster-Workload-Scheduling vorhanden sind. Aber auch herunterskaliert, wenn die Node-Ressourcen ständig im Leerlauf sind oder mehr als genügend Node-Ressourcen für das Cluster-Workload-Scheduling vorhanden sind. Kurz gesagt handelt es sich um eine Komponente, die die Größe eines Kubernetes-Clusters automatisch so anpasst, dass alle Pods einen Platz zum Ausführen haben und keine überflüssigen Nodes vorhanden sind.
 
 ## Cluster-Autoscaler-Verwendung
 
 Der Kubernetes-Autoscaler im GKS Cluster skaliert automatisch nach oben oder unten, wenn eine der folgenden Bedingungen erfüllt ist:
 
 * Einige Pods konnten im Cluster aufgrund unzureichender Ressourcen nicht ausgeführt werden.
-* Es gibt Knoten im Cluster, die über einen längeren Zeitraum (standardmäßig 10 Minuten) nicht ausgelastet waren und ihre Pods auf anderen vorhandenen Knoten platzieren können.
+* Es gibt Nodes im Cluster, die über einen längeren Zeitraum (standardmäßig 10 Minuten) nicht ausgelastet waren und ihre Pods auf anderen vorhandenen Nodes platzieren können.
 
 ## Anforderungen
 
@@ -73,6 +73,7 @@ coredns                         2/2     2            2           1d
 flatcar-linux-update-operator   1/1     1            1           1d
 openvpn-client                  1/1     1            1           1d
 ```
+
 Wie oben dargestellt, wurde der Autoscaler provisioniert und läuft.
 
 ## Machine Deployments für die automatische Skalierung mit Anmerkungen versehen

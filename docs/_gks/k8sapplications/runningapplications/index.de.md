@@ -9,8 +9,7 @@ parent: Anwendungen in Kubernetes
 # Eine Anwendung in Kubernetes starten
 
 Der Cluster läuft und Sie wollen eine Applikation
-betreiben. Als Beispiel verwenden wir einen NGINX, der
-per Loadbalancer vor dem Cluster veröffentlicht wird.
+betreiben. Als Beispiel verwenden wir einen NGINX, der mittels eines Load Balancers auch außerhalb des Clusters zugreifbar gemacht wird.
 
 ## Voraussetzungen
 

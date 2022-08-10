@@ -75,7 +75,7 @@ werden.
        ![confirm-restart](confirm-restart.png)
 
    Nun werden alle Worker-Nodes nacheinander aus dem Cluster rotiert und
-   durch frische Knoten ersetzt. Nachdem der letzte Knoten durchgetauscht
+   durch frische Nodes ersetzt. Nachdem der letzte Node durchgetauscht
    wurde, ist der Neustart des Machine Deployments abgeschlossen.
 
 1. Prüfen Sie erneut, welche Container Runtime Engine nach dem Neustart läuft.

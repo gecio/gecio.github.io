@@ -13,7 +13,8 @@ need to click on `Add Project`.
 
 This opens a window, where you can give the project a name. In the
 example, `Team Kubernetes` is used.
-To finish, click on `Save`.
+To finish, click on `Save Project`.
+
 ![Add Project](../../gettingstarted/images/GS02_AddProj.png)
 
 Now GKS creates your project and adds it to the Overview. With a click on

@@ -21,7 +21,9 @@ need to click on `Add Project`.
 A window opens, where you can name the project. In the
 example, we use `Team Kubernetes`.
 To finish, click on `Save Project`.
-Add Project](../gettingstarted/images/GS02_AddProj.png)
+(../gett)
+
+![Add Project](../gettingstarted/images/GS02_AddProj.png)
 
 Now GKS creates your project and adds it to the overview. With a click on
 the entry `Team Kubernetes` you enter the project.
@@ -34,7 +36,6 @@ clusters and their users, as well as some other controls. At the moment, this li
 ## Create Your First Cluster
 
 To create the cluster, click on `Create Cluster` in the upper right corner.
-
 ![Add Cluster](../gettingstarted/images/GS05_CreaClus.png)
 
 The first page of the cluster creation procedure opens.

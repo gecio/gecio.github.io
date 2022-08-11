@@ -33,11 +33,11 @@ service account and a project. A service account will be automatically deleted a
 1. Go to the `Service Accounts` page.
 ![ServiceAccounts](../images/MP06_ServAcc.png)
 
-1. Use the `Add Service Account` button.
+1. Use the `Create Service Account` button.
 ![SA-Add](../images/MP07_ServAcc.png)
 
 1. Enter a name for the service account and select the group (either `Project Manager`, `Editor` or `Viewer`).
-![SA-Name](../images/MP08_ServAcc.png)
+![SA-Add](../images/MP08_ServAcc.png)
 
 1. Click `Add Service Account`.
 ![SA-Add](../images/MP09_ServAcc.png)

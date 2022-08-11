@@ -6,6 +6,7 @@ nav_order: 3200
 parent: Managing GKS Projects
 ---
 # Managing Users in a Project
+
 ## Adding Users
 
 You can add a user to an existing GKS project with a couple of clicks.
@@ -14,7 +15,6 @@ To achieve this, you need:
 
 * The project name
 * The user email
-
 
 The user needs to log in once, before it is usable.
 
@@ -25,9 +25,11 @@ Then click on `Members` in the left sidebar.
 ![Member](../images/MP02_User.png)
 
 Next click `Add Member` on the top right.
+
 ![Add New member](../images/MP03_User.png)
 
 Finally, enter the user email and the desired role (Owner, Editor, or Viewer).
+
 ![Add Member Role](../images/MP04_User.png)
 
 ## Removing Users
@@ -41,7 +43,7 @@ Then click on `Members` in the left sidebar.
 ![Member](../images/MP02_User.png)
 
 Use the *Deletion* icon to remove the user.
-![RemoveMember](remove-user.png)
+![RemoveMember](../images/MP05_User.png)
 
 ## Offboarding Users
 

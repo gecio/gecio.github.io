@@ -28,12 +28,11 @@ will be containerd.
 To upgrade from Docker to containerd the following steps are needed:
 
 1. Edit the cluster configuration.
-
-   ![edit-cluster-config](edit-cluster.png)
+![edit-cluster-config](../../images/MigContRun01.png)
 
 1. Change the value of the *Container Runtime* field from *docker* to *containerd* and save the changes.
 
-   ![switch-cre-config](switch-cre.png)
+![switch-cre-config](../../images/MigContRun02.png)
 
 ## Activating the Config Change
 
@@ -55,20 +54,18 @@ the latter will be shown below.
    Here we see in the output that docker is still used as the container runtime.
 1. Restart the Machine Deployment as follows:
     1. Click on the Machine Deployment of the cluster.
-
-       ![choose-machinedeployment](choose-machinedeployment.png)
+![choose-machinedeployment](../../images/MigContRun03.png)
 
     1. Click on the Restart button.
-
-       ![click-on-restart-button](click-on-restart-button.png)
+![click-on-restart-button](../../images/MigContRun04.png)
 
     1. Confirm the restart of the Machine Deployment.
 
-       ![confirm-restart](confirm-restart.png)
+ ![confirm-restart](../../images/MigContRun05.png)
 
    Now one after another, a new machine will be added and an old machine will be removed after its workload has been transferred into the rest of the cluster. After the last old machine has been removed, the restart of the
    MachineDeployment is complete.
-1. Now check again, which container runtime powers your worker nodes:
+2. Now check again, which container runtime powers your worker nodes:
 
    ```bash
    $ kubectl describe node  | grep "Container Runtime Version"

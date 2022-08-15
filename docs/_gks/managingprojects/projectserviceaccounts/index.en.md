@@ -28,7 +28,7 @@ service account and a project. A service account will be automatically deleted a
 ## Creating a Service Account with Token
 
 1. Select the project.
-![Projects](../images/MP05_ServAcc.png)
+![Projects](../images/MP05a_ServAcc.png)
 
 1. Go to the `Service Accounts` page.
 ![ServiceAccounts](../images/MP06_ServAcc.png)

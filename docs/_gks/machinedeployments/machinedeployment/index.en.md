@@ -10,36 +10,33 @@ parent: Machine Deployments
 ## Adding a Machine Deployment
 
 To add a new Machine Deployment, use the `Add Machine Deployment` button in the upper right corner.
-
-![add_machine_deployment](add_machine_deployment.png)
+![add_machine_deployment](../images/MachDepl01.png)
 
 This opens the `Add Machine Deployment`window, which has the same options as at cluster creation time.
 
-![add_dialog](add_dialog.png)
+Add your data, and click `Add Machine Deployment` to create the new nodes.
 
-To create the new nodes, click `Add Machine Deployment`.
-
-![add_button](add_button.png)
+![add_dialog](../images/MachDepl03.png)
 
 You can look at the progress in the Machine Deployment details.
 
 Click on the new Machine Deployment.
 
-![machine_deployment_overview](machine_deployment_overview.png)
+![machine_deployment_overview](../images/MachDepl04.png)
 
 Wait until all nodes are green.
 
-![machine_deployment_status](machine_deployment_status.png)
+![machine_deployment_status](../images/MachDepl05.png)
 
 ## Deleting a Machine Deployment
 
 To delete a Machine Deployment, use the trash symbol in the list.
 
-![delete_from_list](delete_from_list.png)
+![delete_from_list](../images/MachDepl06.png)
 
 Alternatively, you can use the trash symbol on the details page.
 
-![delete_from_details](delete_from_details.png)
+![delete_from_details](../images/MachDepl07.png)
 
 ## Renaming a Machine Deployment
 

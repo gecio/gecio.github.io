@@ -5,6 +5,7 @@ permalink: /gks/machinedeployments/updatingnodeos/
 nav_order: 5500
 parent: Machine Deployments
 ---
+# Updating the OS of Worker Nodes
 
 ## Flatcar
 
@@ -20,11 +21,11 @@ ensuring that only one node is rebooting at once.
 
 Using the auto-update functionality is enabled by default. The following screenshot shows the creation of a machine deployment with auto-updater enabled:
 
-![Create Machine Deployment with autoupdater](autoupdate_flatcar.png)
+![Create Machine Deployment with autoupdater](../images/UpdOSNode01.png)
 
 If you would like to take care of OS updates (and the reboots) yourself, you can disable the automatic updates of the worker nodes by selecting the `Disable auto-update` checkbox:
 
-![Create Machine Deployment without autoupdater](autoupdate_flatcar_disable.png)
+![Create Machine Deployment without autoupdater](../images/UpdOSNode02.png)
 
 > We highly encourage our users to use the auto-update feature to keep your infrastructure safe.
 
@@ -32,25 +33,25 @@ If you would like to take care of OS updates (and the reboots) yourself, you can
 
 To check if your nodes receive automatic OS-updates, click on the machine deployment:
 
-![Open Machine Deployment](autoupdate_open_md.png)
+![Open Machine Deployment](../images/UpdOSNode03.png)
 
 Check if the `Disable auto-update` option has a green checkmark in front of it (auto-updater is off):
 
-![Autoupdater off](autoupdate_disabled.png)
+![Autoupdater off](../images/UpdOSNode04.png)
 
 Or check if it's greyed out (auto-updater is on):
 
-![Autoupdater on](autoupdate_enabled.png)
+![Autoupdater on](../images/UpdOSNode05.png)
 
 ### Enabling/Disabling Auto-Updater on an Existing Machine Deployment
 
 To change the status of the auto-updater, click on the "edit" button of the machine deployment.
 
-![Edit Machine Deployment](autoupdate_edit_md.png)
+![Edit Machine Deployment](../images/UpdOSNode06.png)
 
 (De)-select the checkbox accordingly.
 
-![Modify MD Autoupdater](autoupdate_flatcar_modify.png)
+![Modify MD Autoupdater](../images/UpdOSNode07.png)
 
 After clicking on `Save Changes`, all worker nodes will perform a rolling update and reboot.
 
@@ -83,7 +84,7 @@ $ sudo update_engine_client -status
 The Update-Engine client now downloads the latest available release of Flatcar and adjusts
 the boot order automatically so that the new release will be activated at the next boot.
 
-![Update Engine](fc_update_engine.gif)
+![Update Engine](../images/fc_update_engine.gif)
 
 As soon as the status has changed from `UPDATE_STATUS_UPDATE_AVAILABLE` to `UPDATE_STATUS_DOWNLOADING`,
 and then to `UPDATE_STATUS_UPDATED_NEED_REBOOT`, you can reboot the worker node and repeat the steps
@@ -103,15 +104,15 @@ Ubuntu support in GKS was removed in July 2021. Read here how to update to suppo
 
 To update from Ubuntu to Flatcar, click on the edit button of the machine deployment.
 
-![Edit Machine Deployment](update_to_flatcar_edit.png)
+![Edit Machine Deployment](../images/update_to_flatcar_edit.png)
 
 Then click on the flatcar logo.
 
-![Change to Flatcar](update_to_flatcar.png)
+![Change to Flatcar](../images/UpdOSNode08Ubuntu.png)
 
 It changed the Image and enabled the auto-update feature.
 
-![Save Flatcar](update_to_flatcar_save.png)
+![Save Flatcar](../images/UpdOSNode09Ubuntu.png)
 
 The node is recreated, and your cluster is up-to-date.
 

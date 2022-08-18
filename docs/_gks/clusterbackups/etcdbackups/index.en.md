@@ -21,23 +21,23 @@ However, it’s possible to create additional backup configuration if needed.
 ### Creating Etcd Backup Schedules
 
 etcd backups and restores are resources bounded to a project. You can manage them in the Project view.
-![Etcd Backups](../../clusterlifecycle/images/etcdbck01.png)
+![Etcd Backups](../images/etcdbck01.png)
 
 To create a new backup schedule, you need to click on the `Add Automatic Backup` button. You have a choice of preset daily, weekly, or monthly backups, or you can create a backup with a custom interval and keep time:
-![Etcd Backups Configuration](../../clusterlifecycle/images/etcdbck02.png)
-![Add new Backup](../../clusterlifecycle/images/etcdbck03.png)
+![Etcd Backups Configuration](../images/etcdbck02.png)
+![Add new Backup](../images/etcdbck03.png)
 
 To see all available backups, click on a backup you are interested in:
-![Etcd Backups Details](../../clusterlifecycle/images/etcdbck04.png)
+![Etcd Backups Details](../images/etcdbck04.png)
 
 You will see the list of the completed backups:
-![Etcd Backups Details](../../clusterlifecycle/images/etcdbck05.png)
+![Etcd Backups Details](../images/etcdbck05.png)
 
 ### Creating Etcd Backup Snapshots
 
 You can also create one-time backup snapshots. They are set up similarly to the automatic ones, with the difference that they do not have a schedule or keep count set.
-![Etcd Snapshot](../../clusterlifecycle/images/etcdbck06.png)
-![Etcd Snapshot Details](../../clusterlifecycle/images/etcdbck07.png)
+![Etcd Snapshot](../images/etcdbck06.png)
+![Etcd Snapshot Details](../images/etcdbck07.png)
 
 ## Restoring Etcd Backups
 
@@ -45,19 +45,19 @@ If you want to restore a backup, you need to click on the restore from backup ic
 
 ### Restoring Etcd Backups from Schedule
 
-![Restore backup from Schedule](../../clusterlifecycle/images/etcdbck08.png)
+![Restore backup from Schedule](../images/etcdbck08.png)
 
 ### Restoring Etcd Backups from Snapshot
 
-![Restore backup from Snapshot](../../clusterlifecycle/images/etcdbck09.png)
-![Restore etcd backup for cluster](../../clusterlifecycle/images/etcdbck10.png)
+![Restore backup from Snapshot](../images/etcdbck09.png)
+![Restore etcd backup for cluster](../images/etcdbck10.png)
 
 After that the cluster gets paused, etcd gets deleted, and then it is recreated from the backup. When it’s done, the cluster is unpaused again.
 In the meantime, an EtcdRestore object is created in the project, and you can observe its progress in the EtcdRestore list.
 
 In the cluster view, you may notice that your cluster is in a Restoring state, and you can not interact with it until it is done.
-![Cluster Restoring](../../clusterlifecycle/images/etcdbck11.png)
+![Cluster Restoring](../images/etcdbck11.png)
 
 When it’s done, the cluster gets unpaused and unblocked, so you can use it.
 The Etcd Restore goes into a Completed state.
-![Etcd Restore Completed](../../clusterlifecycle/images/etcdbck12.png)
+![Etcd Restore Completed](../images/etcdbck12.png)

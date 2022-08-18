@@ -2,7 +2,7 @@
 title: Connecting to a Cluster
 lang: en
 permalink: /gks/accessmanagement/connectingtoacluster/
-nav_order: 6100
+nav_order: 7100
 parent: Access Management
 ---
 # Connecting to a Cluster
@@ -15,13 +15,13 @@ it. This is necessary to deploy and manage your applications.
 To find a cluster, you need to go to the detail view of the cluster.
 For that, click on the entry `first-system`:
 
-![Step 1](connect_1.png)
+![Step 1](../images/ConnClus01.png)
 
 ## Getting Access
 
 Click on  `Get Kubeconfic` in the top right corner:
 
-![Step 2](connect_2.png)
+![Step 2](../images/ConnClus02.png)
 
 This way you download a file which is called `kubeconfig` in
 Kubernetes jargon. This file contains all end points, certificates
@@ -74,12 +74,12 @@ musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.20.7
 In GKS you can access the Kubernetes dashboard with one click.
 You only need to click on the `Open Dashboard` button on the top right of the cluster view:
 
-![Step 4](connect_3.png)
+![Step 4](../images/ConnClus03.png)
 
 Now you see the Kubernetes dashboard and can explore your cluster
 graphically:
 
-![Step 5](connect_4.png)
+![Step 5](../images/ConnClus04.png)
 
 ## Summary
 

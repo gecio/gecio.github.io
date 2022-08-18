@@ -6,7 +6,7 @@ nav_order: 4500
 parent: Cluster Lifecycle
 ---
 
-## Deprecation Policy
+# Deprecation Policy
 
 The upstream Kubernetes project releases approximately four Kubernetes versions a year and deprecates the same number of old versions. Up to v1.18, Kubernetes followed an N-2 support policy, meaning that the 3 most recent minor versions received security and bug fixes.
 

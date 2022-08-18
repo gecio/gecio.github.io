@@ -16,7 +16,7 @@ As a prerequisite, you need an existing, unused volume in Openstack. This could 
 
 To be able to use an existing Openstack volume in a Kubernetes cluster, you need to find out its ID. To do so, go to the [Openstack/Optimist Dashboard](https://dashboard.optimist.innovo.cloud/auth/login/):
 
-![Openstack Login](openstack-1.png)
+![Openstack Login](../images/RestPVC01.png)
 
 Log in with your credentials. The credentials of the Kubernetes UI and Openstack dashboard are identical. Once you are logged in, navigate to `Volumes` and search for the volume which you want to use. That volume should not be used by any machine and should have the status "Available". (Note: A volume can only be used by one instance at a time, so if it is still in use, you have to detach it from the old instance first.)
 

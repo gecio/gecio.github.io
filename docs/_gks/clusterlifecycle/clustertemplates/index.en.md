@@ -25,6 +25,7 @@ Templates can be saved in 2 different scopes:
 
 * On project level: All users of the project can use the template.
 * On user level: The template can be used in all projects where the user has write access. Other users cannot use the template.
+
 ![Save Cluster Template](../images/ClusTempl03.png)
 
 Confirm the selection with the `Save Cluster Template` button. The cluster template has now been created.

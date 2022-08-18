@@ -2,7 +2,7 @@
 title: Kubernetes Applications
 lang: en
 permalink: /gks/k8sapplications/
-nav_order: 7000
+nav_order: 8000
 has_children: true
 ---
 # Kubernetes Applications

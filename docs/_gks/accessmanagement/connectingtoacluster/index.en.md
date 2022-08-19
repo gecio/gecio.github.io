@@ -1,32 +1,32 @@
 ---
-title: Connecting to a Cluster
+title: Project-Based Access
 lang: en
 permalink: /gks/accessmanagement/connectingtoacluster/
 nav_order: 7100
 parent: Access Management
 ---
-# Connecting to a Cluster
+# Project-Based Access
 
-After you created a cluster in GKS, it is time to connect to
-it. This is necessary to deploy and manage your applications.
+> **Note:** This is the recommended method of granting users access to a cluster.
 
-## Finding Your Cluster
+Giving users access on project level provides them access to **all** clusters in this project. Users with this level of access can log in to the GKS dashboard, view, edit (dependent on the level of access), or create clusters.
 
-To find a cluster, you need to go to the detail view of the cluster.
-For that, click on the entry `first-system`:
+All users with the same level of project-access share the same `kubeconfig` file. This `kubeconfig` uses a token-based authentication, and the token is bound to the level of access (read-only/admin access).
+
+## Connnecting to a Cluster
+
+After you created a cluster in GKS, you need to connect to
+it to deploy and manage your applications.
+
+To find your cluster, go to the detail view of the cluster by clicking on the entry `first-system`:
 
 ![Step 1](../images/ConnClus01.png)
 
-## Getting Access
-
-Click on  `Get Kubeconfic` in the top right corner:
+Click on `Get Kubeconfic` in the top right corner.
 
 ![Step 2](../images/ConnClus02.png)
 
-This way you download a file which is called `kubeconfig` in
-Kubernetes jargon. This file contains all end points, certificates
-and other information about the cluster. The `kubectl` command uses
-this file to connect to the cluster.
+This way you download the `kubeconfig` file. All users with the same level of project-access share the same `kubeconfig`file. The file contains all end points, certificates, and other information about the cluster. The `kubectl` command uses this file to connect to the cluster.
 
 To use `kubeconfig`, you need to register it on the console.
 There are two ways to do this:
@@ -81,13 +81,7 @@ graphically:
 
 ![Step 5](../images/ConnClus04.png)
 
-## Summary
+## Learn More
 
-You've learned the following:
-
-* How to get the `kubectl` configuration file
-* How to configure `kubectl` to use the `kubeconfig`file
-* How to access the Kubernetes dashboard for a cluster
-
-Congratulations! Now you know all what's needed to connect to a
-Kubernetes cluster.
+* [Managing GKS Projects](/gks/managingprojects/creatingaproject/)
+* [Revoking Tokens](/gks/accessmanagement/connectingtoacluster/)

@@ -7,7 +7,17 @@ parent: Access Management
 ---
 # Role-Based Access Control (RBAC)
 
-To grant a user access with RBAC, expand the RBAC-widget and click `Add Binding`:
+Using role-based access control allows a project admin to provide more fine-grained access based on predefined `ClusterRoles` and `Roles`. With the GKS dashboard, the admin can easily create (cluster-wide) `ClusterRoleBindings` and (namespace-scoped) `RoleBindings`:
+
+![RBAC option](../../accessmanagement/images/AccMgmt02.png)
+
+A user with this level of access can download a specific `kubeconfig`, which can be directly downloaded with a direct link (see below). Such a user does not need access to the GKS dashboard at all.
+
+More information on Kubernetes RBAC is available [here](https://kubernetes.io/docs/reference/access-authn-authz/rbac/).
+
+## Granting User Access with RBAC
+
+To grant a user access with RBAC, expand the RBAC-widget, and click `Add Binding`:
 
 ![RBAC Add Binding](../images/RBAC01.png)
 
@@ -60,6 +70,6 @@ Next, copy the link and send it to the user:
 
 After the user has logged in, the download of `kubeconfig` will start directly:
 
-![Login page](login.png)
+![Login page](../images/RBAC08.png)
 
 Once a user has downloaded `kubeconfig`, any further changes made on the RBAC will have *immediate* effect. Especially there is no need to revoke cluster tokens to remove access for a user. Just remove the RoleBindings and access is no longer possible.

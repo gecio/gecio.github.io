@@ -2,7 +2,7 @@
 title: Updating the OS of Worker Nodes
 lang: en
 permalink: /gks/machinedeployments/updatingnodeos/
-nav_order: 5500
+nav_order: 6500
 parent: Machine Deployments
 ---
 # Updating the OS of Worker Nodes

@@ -14,7 +14,7 @@ From v1.19 onwards, Kubernetes follows an N-3 support policy. This means that th
 
 A good visualization of the support period for each release is available below:
 
-[![K8sVersionSupport](k8s_version_support.png)](https://endoflife.date/kubernetes)
+[![K8sVersionSupport](../images/k8s_version_support.png)](https://endoflife.date/kubernetes)
 
 GKS aligns loosely to this lifecycle by continuously introducing new versions and deprecating older ones.
 

@@ -2,7 +2,7 @@
 title: Adding an SSH Key to an Existing Cluster
 lang: en
 permalink: /gks/machinedeployments/add_ssh_key/
-nav_order: 5400
+nav_order: 6400
 parent: Machine Deployments
 ---
 # Adding an SSH Key to an Existing Cluster
@@ -118,7 +118,7 @@ To achieve this, you have to edit the `Machine Deployment`:
 
 Make sure `Allocate Floating IP` is selected:
 
-![Enable-Floating_IP](enable-fip.png)
+![Enable-Floating_IP](../images/SSH14.png)
 
 Once the node is fully created and has an external IP, you can access the node with the key.
 The default user for Flatcar is `core`.

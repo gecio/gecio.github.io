@@ -20,11 +20,11 @@ To be able to use an existing Openstack volume in a Kubernetes cluster, you need
 
 Log in with your credentials. The credentials of the Kubernetes UI and Openstack dashboard are identical. Once you are logged in, navigate to `Volumes` and search for the volume which you want to use. That volume should not be used by any machine and should have the status "Available". (Note: A volume can only be used by one instance at a time, so if it is still in use, you have to detach it from the old instance first.)
 
-![Openstack Volume](openstack-2.png)
+![Openstack Volume](../images/RestPVC02.png)
 
 After you found the volume you want to use, click on its name. This brings you to the volume details page where you can find the ID of the volume. Note down this ID.
 
-![Openstack Volume ID](openstack-3.png)
+![Openstack Volume ID](../images/RestPVC03.png)
 
 ## Adding the PV with the Existing Volume
 

@@ -12,13 +12,12 @@ The management of an GKS-Kubernetes-Cluster is handled by the platform itself, b
 ## Learn More
 
 * [Creating a Cluster](/gks/clusterlifecycle/creatingacluster/)
-* [Using Cluster Templates](/gks/clusterlifecycle/clustertemplates)
+* [Using Cluster Templates](/gks/clusterlifecycle/clustertemplates/)
 * [Updating a Cluster/Kubernetes Updates](/gks/clusterlifecycle/upgradingacluster/)
 * [Choosing a CNI](/gks/clusterlifecycle/cnichoices/)
 * [Updating a Cluster/CNI Updates](/gks/clusterlifecycle/upgradingcni/)
 * [Control Plane Connector](/gks/clusterlifecycle/controlplaneconnector/)
 * [Updating a Cluster/Changing Openstack Credentials](/gks/clusterlifecycle/openstackcredentials/)
-* [External Cloud Provider Migration](/gks/clusterlifecycle/clustermigrations)
 * [Deleting a Cluster](/gks/clusterlifecycle/deletingacluster/)
 * [Deprecation Policy](/gks/clusterlifecycle/deprecationpolicy/)
 * [Migrating the Container Runtime Engine](/gks/clusterlifecycle/containerruntimeengine/)

@@ -225,7 +225,7 @@ openstack recordset list foobar.cloud.
 
 Wait a few minutes, and then test the availability over the internet. For example, browse to your website. You should see the following in your browser.
 
-![nginx](nginx.png)
+![nginx](../images/extDNSnginx.png)
 
 ## Summary
 

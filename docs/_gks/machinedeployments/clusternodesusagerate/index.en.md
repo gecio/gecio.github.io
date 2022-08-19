@@ -2,7 +2,7 @@
 title: Cluster Nodes Usage Rate
 lang: en
 permalink: /gks/machinedeployments/clusternodesusagerate/
-nav_order: 5300
+nav_order: 6300
 parent: Machine Deployments
 ---
 # Cluster Nodes Usage Rate
@@ -16,18 +16,18 @@ Here we explain the reason for it.
 
 First, we check how many nodes are in the cluster and the current load of CPU/memory.
 
-![Step 1](get_top_node_1.png)
+![Step 1](../images/NodeUse01.png)
 
 The command `kubectl top node` shows the current node usage. In the example, there are two running nodes.
 
 First the node is *cordoned*, so that no new pods are scheduled to this node.
 
-![Step 2](get_node_2.png)
+![Step 2](../images/NodeUse02.png)
 
 Then the node is *drained* so that it is made completely empty, and the pods that were previously running on the native node are distributed to all other nodes in the cluster.
 With only two nodes, everything is placed on exactly the other node and then we have a high load on this node.
 
-![Step 3](top_node_3.png)
+![Step 3](../images/NodeUse03.png)
 
 When the second node is back after the update, the pods are **not** automatically distributed to both nodes. This leads to the initially observed imbalance.
 

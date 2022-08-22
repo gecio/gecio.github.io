@@ -2,7 +2,7 @@
 title: Adding an SSH Key to an Existing Cluster
 lang: en
 permalink: /gks/machinedeployments/add_ssh_key/
-nav_order: 5400
+nav_order: 6400
 parent: Machine Deployments
 ---
 # Adding an SSH Key to an Existing Cluster
@@ -23,7 +23,7 @@ In most cases you also need to assign a Floating IP to your worker nodes to be a
 
 To manage SSH keys on the worker nodes, you must enable the `User SSH Key Agent` during cluster creation:
 
-![User SSH Key Agent during Create cluster](user-ssh-key-agent-create.png)
+![User SSH Key Agent during Create cluster](../images/SSH01.png)
 
 If you do not activate this setting during cluster creation, you cannot add/modify SSH keys later on. You can only add the
 User SSH Key Agent during cluster creation. If you did not enable the User SSH Key Agent during cluster creation, you cannot enable it later on.
@@ -32,11 +32,11 @@ User SSH Key Agent during cluster creation. If you did not enable the User SSH K
 
 To check if the User SSH Key Agent is enabled for a certain cluster, check the cluster status page. To do so, open the additional cluster information view.
 
-![Show additional cluster info](show_additional_cluster_info.png)
+![Show additional cluster info](../images/SSH02.png)
 
 You can now see the status in the lower right corner.
 
-![User SSH Key Agent status](user-ssh-key-agent-status.png)
+![User SSH Key Agent status](../images/SSH03.png)
 
 If the User SSH Key Agent is activated, you can add SSH keys any time as described below.
 
@@ -63,19 +63,19 @@ An SSH key will be created. The default path for the SSH key is: `~/.ssh/id_rsa.
 
 1. Select the project.
 
-    ![Projects](projects.png)
+![Projects](../images/SSH04.png)
 
 2. Go to the SSH Key page.
 
-    ![Project-Menu](project-menu.png)
+![Project-Menu](../images/SSH05.png)
 
 3. Use the `Add SSH Key` button.
 
-    ![SSH-Key-Page](ssh-key-page.png)
+![SSH-Key-Page](../images/SSH06.png)
 
 4. Name the key and paste the public SSH key that was created by `ssh-keygen` (not the private key!).
 
-    ![Ssh-key](ssh-key.png)
+    ![Ssh-key](../images/SSH07.png)
 
 Now you can use the key in any cluster in this project.
 
@@ -83,23 +83,23 @@ Now you can use the key in any cluster in this project.
 
 1. Select a cluster where you want to add the key.
 
-    ![Cluster](clusters.png)
+    ![Cluster](../images/SSH08.png)
 
 2. Click the three dots, to open the cluster submenu.
 
-    ![Three-Dots](three-dots.png)
+    ![Three-Dots](../images/SSH09.png)
 
 3. Select `Manage SSH keys`.
 
-    ![Edit-Cluster](manage-ssh-keys.png)
+    ![Edit-Cluster](../images/SSH10.png)
 
 4. Now the newly created SSH key can be selected from a drop-down list.
 
-    ![Manage-Keys](manage-keys.png)
+    ![Manage-Keys](../images/SSH11.png)
 
 5. After the selection, the key is displayed in the list and can also be deleted from it if required.
 
-    ![Key-List](key-list.png)
+    ![Key-List](../images/SSH12.png)
 
 Your key will now be added to all worker nodes in all machine deployments.
 
@@ -114,11 +114,11 @@ Once you added the SSH key to the cluster, you need to attach a Floating IP to t
 
 To achieve this, you have to edit the `Machine Deployment`:
 
-![Edit-MD](edit_machine_deployment.png)
+![Edit-MD](../images/SSH13.png)
 
 Make sure `Allocate Floating IP` is selected:
 
-![Enable-Floating_IP](enable-fip.png)
+![Enable-Floating_IP](../images/SSH14.png)
 
 Once the node is fully created and has an external IP, you can access the node with the key.
 The default user for Flatcar is `core`.

@@ -2,7 +2,7 @@
 title: Machine Deployments
 lang: en
 permalink: /gks/machinedeployments/
-nav_order: 5000
+nav_order: 6000
 has_children: true
 ---
 # Machine Deployments

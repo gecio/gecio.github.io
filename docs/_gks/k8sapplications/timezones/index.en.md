@@ -2,9 +2,10 @@
 title: Time Zone Management
 lang: en
 permalink: /gks/k8sapplications/timezones/
-nav_order: 7400
+nav_order: 8400
 parent: Kubernetes Applications
 ---
+# Time Zone Management
 
 In case your application requires time zone switching you can follow this guide.
 

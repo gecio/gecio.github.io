@@ -2,7 +2,7 @@
 title: Control Plane Connector
 lang: en
 permalink: /gks/clusterlifecycle/controlplaneconnector/
-nav_order: 4250
+nav_order: 4280
 parent: Control Plane Connector
 ---
 

@@ -9,23 +9,23 @@ parent: Managing GKS Projects
 
 After logging into GKS, you see the following window, where you
 need to click on `Add Project`.
-![Add Project](addproject.png)
+![Add Project](../../gettingstarted/images/GS01_AddProj.png)
 
 This opens a window, where you can give the project a name. In the
 example, `Team Kubernetes` is used.
-To finish, click on `Save`.
+To finish, click on `Save Project`.
 
-![Add Project Modal](addproject_modal.png?resize=600)
+![Add Project](../../gettingstarted/images/GS02_AddProj.png)
 
 Now GKS creates your project and adds it to the Overview. With a click on
 the entry `Team Kubernetes` you enter the project and can create
 the cluster.
-![Project list](projectlist.png)
+![Project list](../../gettingstarted/images/GS03_AddProj.png)
 
 This opens a view showing you the project. You find a list of all existing
-clusters and their users, as well as some other controls.
-![Project View](projectview.png)
+clusters and their users, as well as some other controls. This list is empty until you create your first managed Kubernetes cluster.
+![Project list](../../gettingstarted/images/GS04a_AddProj.png)
 
 Clicking on the sidebar opens the navigation in the Project view, which
 allows you to explore the other areas.
-![Sidebar](sidebar.png?resize=300)
+![Project list](../../gettingstarted/images/GS04b_AddProj.png)

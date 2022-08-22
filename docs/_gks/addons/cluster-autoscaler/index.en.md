@@ -2,7 +2,7 @@
 title: Cluster Autoscaler
 lang: en
 permalink: /gks/addons/cluster-autoscaler/
-nav_order: 8100
+nav_order: 9100
 parent: Add-on
 ---
 # Cluster Autoscaler
@@ -49,15 +49,17 @@ As shown above, the Autoscaler is not part of the running Kubernetes components 
 ### Step 3
 
 Add the Autoscaler to the cluster under the addon section on the dashboard by clicking on  `Addons` and then `Install Addon`.
-![Step 3.1](overview.png)
+
+![overview](../images/Autoscaler01.png)
 
 Select `cluster-autoscaler`.
-![Step 3.2](select.png)
+
+![select](../images/Autoscaler02.png)
 
 Select `Install`.
 
-![Step 3.3](install.png)
-![Step 3.4](installed.png)
+![install](../images/Autoscaler03.png)
+![installed](../images/Autoscaler04.png)
 
 ### Step 4
 
@@ -145,8 +147,8 @@ As shown above, the Machine Deployment has been annotated with a minimum of 1 an
 
 To delete the Autoscaler, click on the three dots in front of the Cluster Autoscaler in the Addons section of the cluster dashboard and select `Delete`.
 
-![edit](edit.png)
-![delete](delete.png)
+![edit](../images/Autoscaler05.png)
+![delete](../images/Autoscaler06.png)
 
 Once it has been deleted, you can check the cluster to ensure that the Autoscaler has been deleted with the `kubectl get deployment -n kube-system` command.
 

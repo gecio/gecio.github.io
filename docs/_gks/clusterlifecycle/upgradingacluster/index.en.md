@@ -32,16 +32,16 @@ update of the master can be done with a few mouse clicks.
 
 First, select the cluster you'd like to update.
 
-![Step 1](update_1.png)
+![Step 1](../images/KubUpd01.png)
 
 Then click on the field `Master Version`, and choose a new
 version for the master.
 
-![Step 2](update_2a.png)
+![Step 2](../images/KubUpd02.png)
 
 We recommend selecting `Upgrade Machine Deployments`, as this will upgrade the worker nodes as well.
 
-![Step 2](update_2b.png)
+![Step 2](../images/KubUpd03.png)
 
 Now GKS automatically updates the master and optionally the
 worker nodes.
@@ -58,17 +58,17 @@ restarted.
 
 First, click on `Machine Deployments`.
 
-![Step 3](update_3.png)
+![Step 3](../images/KubUpd04.png)
 
 Next, click on the pencil icon to open the update view.
 
-![Step 4](update_4.png)
+![Step 4](../images/KubUpd05.png)
 
 Now, under `kubelet Version` select the version, for example
-`1.21.5`, which matches the cluster's master version. Confirm the
+`1.23.6`, which matches the cluster's master version. Confirm the
 update by clicking `Save Changes`.
 
-![Step 5](update_5.png)
+![Step 5](../images/KubUpd06.png)
 
 Now GKS automatically updates the node group to the new version,
 amd Kubernetes takes care of deploying your applications to the

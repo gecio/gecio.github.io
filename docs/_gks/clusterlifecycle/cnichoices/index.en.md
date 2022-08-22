@@ -61,13 +61,11 @@ Be aware that this is only for the most advanced users of Kubernetes who know wh
 
 In the cluster creation process, the second step enables you to choose between the two CNIs described
 above.
-
-![choose CNI](choosing_cni.png)
+![choose CNI](../images/CNIChoice01.png)
 
 After choosing your CNI you may need to choose a proxy mode as well, depending on the CNI chosen
 in the previous step.
-
-![choose proxy](choosing_proxy_mode.png)
+![choose proxy](../images/CNIChoice02.png)
 
 The choice of the eBPF proxy implicitly requires the use of *Konnectivity* as your control-plane
 connector as well, which is the default in all newly created Kubernetes clusters. More information
@@ -78,8 +76,7 @@ on the control-plane connector and Konnectivity is available [here](/gks/cluster
 If Cilium is chosen as a CNI, you can install the graphical visualization addon Hubble. This can be
 done after the cluster creation has finished successfully with the Addons tab at the bottom of the cluster
 overview.
-
-![install hubble](installing_hubble_addon.png)
+![install hubble](../images/CNIChoice03.png)
 
 ## Final Note
 

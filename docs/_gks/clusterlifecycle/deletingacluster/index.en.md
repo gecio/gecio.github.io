@@ -15,22 +15,24 @@ in a GKS project.
 ## Finding the Cluster
 
 To delete a cluster, you need to go into the cluster's detail
-view. For this, click on `first-system`:
-![Step 1](delete_1.png)
+view. For this, click on `first-system`.
+![Cluster Details](../images/DelClus01.png)
 
 You need to use the cluster name later. To copy it into the
-clipboard, click on the name:
-![Step 2](delete_2.png)
+clipboard, click on the name.
+![Cluster Details](../images/DelClus02.png)
 
 ## Deleting the Cluster
 
 Now click `Delete`.
-![Step 3](delete_3.png)
+
+![Add Cluster Delete](../images/DelClus03.png)
 
 This opens a window where you need to enter the cluster name
 to avoid sudden and unwanted deletions. Since you copied the name
 into your clipboard previously, you can simply paste it here.
-![Step 4](delete_4.png)
+
+![Add Cluster Delete](../../gettingstarted/images/GS20_DelClus.png)
 
 Since we also want to free up the resources, leave both check
 boxes marked. That way, volumes and load balancers provided by

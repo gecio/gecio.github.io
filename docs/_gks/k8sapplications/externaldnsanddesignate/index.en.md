@@ -2,7 +2,7 @@
 title: ExternalDNS with Designate
 lang: en
 permalink: /gks/k8sapplications/externaldnsanddesignate/
-nav_order: 7300
+nav_order: 8300
 parent: Kubernetes Applications
 ---
 # ExternalDNS with Designate
@@ -225,7 +225,7 @@ openstack recordset list foobar.cloud.
 
 Wait a few minutes, and then test the availability over the internet. For example, browse to your website. You should see the following in your browser.
 
-![nginx](nginx.png)
+![nginx](../images/extDNSnginx.png)
 
 ## Summary
 

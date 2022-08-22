@@ -139,7 +139,7 @@ export KUBECONFIG=$(pwd)/kubeconfig-admin-CLUSTERID
 ```
 
 Nun können Sie mit Ihrem Cluster kommunizieren. Das einfachste Kommando ist
-hier: "zeige mir alle Knoten meines Clusters".
+hier, sich alle Nodes seines Clusters anzeigen zu lassen:
 
 ```bash
 kubectl get nodes

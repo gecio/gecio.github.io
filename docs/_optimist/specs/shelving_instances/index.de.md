@@ -49,6 +49,6 @@ Das Snapshot-Image wird gelöscht, wenn die Instanz unshelved oder gelöscht wir
 
 ## Abrechnung von Shelved Instances
 
-Aus Abrechnungssicht wird bei einer Shelved Instance nur die Root Disk der Instanz weiterhin abgerechnet, für diese gilt ab dem Shelving das S3-Preismodell. CPU und Arbeitsspeicher Ressourcen aus dem Flavor der Instanz werden ab dem Zeitpunkt des Shelvings nicht mehr in Rechnung gestellt und nach dem unshelving automatisch wieder berechnet.
+Aus Abrechnungssicht wird bei einer Shelved Instance nur die Root Disk der Instanz weiterhin abgerechnet. CPU und Arbeitsspeicher Ressourcen aus dem Flavor der Instanz werden ab dem Zeitpunkt des Shelvings nicht mehr in Rechnung gestellt und nach dem unshelving automatisch wieder berechnet.
 
 Shelving hat keine Auswirkungen auf die Auslastung der Quotas im Projekts. Shelved Ressourcen werden nicht in der Quota freigegeben um jederzeit ausreichend Ressourcen für das unshelving der Instanz im Projekt zu gewährleisten.

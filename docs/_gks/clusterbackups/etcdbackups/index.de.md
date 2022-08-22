@@ -45,7 +45,7 @@ Sie können auch einmalige Backup-Snapshots erstellen, die ähnlich wie die auto
 
 ## Etcd Backups wiederherstellen
 
-Wenn Sie ein Backup wiederherstellen möchten, müssen Sie auf das Symbol Wiederherstellen aus Backup in der Benutzeroberfläche klicken.
+Wenn Sie ein Backup wiederherstellen möchten, müssen Sie auf das Wiederherstellungssymbol für das Backup in der Benutzeroberfläche klicken (Restore Cluster from Snapshot).
 
 ### Wiederherstellung von etcd Backup-Schedules
 

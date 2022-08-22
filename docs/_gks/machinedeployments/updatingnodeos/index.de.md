@@ -17,8 +17,8 @@ GKS bietet die Funktionalität, um das Betriebssystem von Flatcar-basierten Work
 Diese Funktion installiert automatisch alle Updates auf den Worker-Nodes, die vom Upstream-Anbieter (Kinvolk) für Flatcar veröffentlicht werden.
 
 Die Auto-Update-Funktion verwendet [FLUO](https://github.com/kinvolk/flatcar-linux-update-operator), den Flatcar Linux Update Operator im Hintergrund.
-Wenn nach dem Aktualisieren des Systems ein Neustart erforderlich ist, wird der Knoten vor dem Neustart evakuiert. Der Operator koordiniert den Neustart
-mehrerer Knoten im Cluster, und stellt sicher, dass immer nur ein Knoten gleichzeitig neu gestartet wird.
+Wenn nach dem Aktualisieren des Systems ein Neustart erforderlich ist, wird der Node vor dem Neustart evakuiert. Der Operator koordiniert den Neustart
+mehrerer Nodes im Cluster, und stellt sicher, dass immer nur ein Node gleichzeitig neu gestartet wird.
 
 Die Verwendung der Auto-Update-Funktion ist standardmäßig aktiviert. Der folgende Screenshot zeigt die Erstellung eines Machine Deployments mit aktiviertem Auto-Updater:
 
@@ -32,7 +32,7 @@ Wenn Sie sich selbst um Betriebssystemaktualisierungen (und Neustarts) kümmern 
 
 #### Prüfen der Auto-Updater-Einstellungen eines Clusters
 
-Um zu prüfen, ob Ihre Knoten automatische Betriebssystemaktualisierungen erhalten, klicken Sie auf das Machine-Deployment:
+Um zu prüfen, ob Ihre Nodes automatische Betriebssystemaktualisierungen erhalten, klicken Sie auf das Machine-Deployment:
 
 ![Machine Deployment öffnen](autoupdate_open_md.png)
 

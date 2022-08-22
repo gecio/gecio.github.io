@@ -16,7 +16,7 @@ Ab Version v1.19 folgt Kubernetes einer N-3 Supportrichtlinie. Dies bedeutet, da
 
 Eine gute Visualisierung des Zeitraums, für den die einzelnen Versionen unterstützt werden/wurden sehnen Sie auf dem folgenden Bild:
 
-[![K8sVersionSupport](k8s_version_support.png)](https://endoflife.date/kubernetes)
+[![K8sVersionSupport](../images/k8s_version_support.png)](https://endoflife.date/kubernetes)
 
 GKS folgt diesem Lebenszyklus, indem fortlaufend neue Versionen eingeführt und ältere aus dem Support genommen werden.
 

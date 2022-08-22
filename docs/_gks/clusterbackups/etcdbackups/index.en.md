@@ -2,7 +2,7 @@
 title: Etcd Backups and Restore
 lang: en
 permalink: /gks/clusterbackups/etcdbackups/
-nav_order: 5200
+nav_order: 5100
 parent: Cluster Backups
 ---
 

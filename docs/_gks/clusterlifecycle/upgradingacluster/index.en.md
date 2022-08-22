@@ -34,7 +34,7 @@ First, select the cluster you'd like to update.
 
 ![Step 1](../images/KubUpd01.png)
 
-Then click on the field `Master Version`, and choose a new
+Then click on the field `Control Plane`, and choose a new
 version for the master.
 
 ![Step 2](../images/KubUpd02.png)

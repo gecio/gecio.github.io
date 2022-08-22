@@ -2,21 +2,21 @@
 title: CNI Updates
 lang: de
 permalink: /gks/clusterlifecycle/upgradingcni/
-nav_order: 4250
+nav_order: 4260
 parent: Cluster Lebenszyklus
 ---
 
 
-# Das CNI aktualisieren
+# CNI Updates
 
 Auf der Clusterdetailseite kann man sehen, ob ein Update für das CNI verfügbar ist.
 Wenn ein grüner Pfeil in der CNI Plugin Box angezeigt wird, steht ein Update zur Verfügung. Um das Update zu beginnen, müssen Sie auf die Box klicken.
 
-![Step 1](cni_update_details.png)
+![Step 1](../images/CNIUpd01.png)
 
 In einem Popup werden die verfügbaren Versionen angezeigt. Mit `Change CNI Version` wird der Updateprozess im Cluster begonnen.
 
-![Step 2](cni_update_popup.png)
+![Step 2](../images/CNIUpd02.png)
 
 Das Update läuft im Hintergrund. Während die Netzwerk-Pods im Cluster neu starten, kann es kurz zu Paketverlusten auf den einzelnen Workern kommen.
 Es wird immer nur ein Worker gleichzeitig aktualisiert, daher sollte es nicht zu Ausfällen in Deployments mit mehr als einem Replica kommen.
@@ -29,4 +29,4 @@ Sollte es wider Erwarten zu Netzwerkproblemen kommen, können die folgenden Schr
 
 CNI Updates werden immer nur auf die nächste Minorversion unterstützt. Sollte mehr als eine neue Version verfügbar sein, muss eine nach der anderen aktualisiert werden.
 
-![Dropdown](cni_update_dropdown.png)
+![Step 3](../images/CNIUpd03.png)

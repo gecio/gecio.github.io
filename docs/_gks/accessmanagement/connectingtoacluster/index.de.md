@@ -1,30 +1,34 @@
 ---
-title: Mit einem Cluster verbinden
+title: Projekt-Basierter Zugriff
 lang: de
 permalink: /gks/accessmanagement/connectingtoacluster/
-nav_order: 6100
+nav_order: 7100
 parent: Access Management
 ---
 <!-- LTeX:  language=de-DE -->
-# Mit einem Cluster verbinden
+# Projekt-Basierter Zugriff
 
-Nachdem Sie in GKS einen Cluster angelegt haben, zeigen wir Ihnen, wie Sie sich mit diesem verbinden. Das ist notwendig, um
+**Hinweis:** Dies ist die empfohlene Methode, anderen Benutzern Zugriff auf einen Cluster zu gewähren.
+
+Erteilt man Benutzern Zugriff auf ein gesamtes GKS-Projekt, bekommen Benutzer automatisch Zugriff auf **alle** Cluster innerhalb dieses Projektes. Die Benutzer können sich in GKS einloggen und nach Auswahl des Projektes alle Cluster sehen bzw. je nach gewährten Zugriffsrechten auch bestehende Cluster editieren oder neue Cluster anlegen.
+
+Dabei teilen sich alle Benutzer mit den gleichen Zugriffsrechten eine `kubeconfig`-Datei. Diese Datei nutzt eine Token-basierte Authentifizierung und abhängig vom Access-Level (read-only/admin access) wird ein Token erstellt.
+
+## Mit einem Cluster verbinden
+
+Nachdem Sie in GKS einen Cluster angelegt haben, müssen Sie sich mit diesem verbinden. Das ist notwendig, um
 Applikationen zu deployen und zu managen.
-
-## Den Cluster finden
 
 Um einen Cluster zu finden, müssen Sie in die Detailansicht
 des Clusters gehen.
 Hierfür klicken Sie auf den Eintrag `first-system`.
-![Step 1](connect_1.png)
+![Step 1](../images/ConnClus01.png)
 
-## Die Zugangsdaten herunterladen
+Klicken Sie anschließend rechts oben auf `Get Kubeconfic`.
 
-Klicken Sie rechts oben auf den nach unten gerichteten Pfeil.
-![Step 2](connect_2.png)
+![Step 2](../images/ConnClus02.png)
 
-Damit laden Sie eine Datei herunter, die sich im Kubernetes-Umfeld
-`kubeconfig` nennt. In dieser Datei stehen alle Endpunkte,
+Damit laden Sie `kubeconfig`-Datei herunter. In dieser Datei stehen alle Endpunkte,
 Zertifikate sowie Bereiche des Clusters. Mit dieser Datei kann
 `kubectl` sich mit dem Cluster verbinden.
 
@@ -72,19 +76,13 @@ musing-kalam-XXXXXXXXX-vc4g2   Ready    <none>   10m   v1.20.7
 
 In GKS können Sie mit einem Klick auf das Kubernetes Dashboard zugreifen.
 Um dies im Browser zu öffnen, klicken Sie oben rechts auf die Schaltfläche `Open Dashboard`.
-![Step 3](connect_3.png)
+![Step 4](../images/ConnClus03.png)
 
 Nun sehen Sie das Kubernetes Dashboard und können
 Ihren Cluster grafisch erkunden.
-![Step 4](connect_4.png)
+![Step 5](../images/ConnClus04.png)
 
-## Zusammenfassung
+## Weiterführende Informationen
 
-Folgende Schritte wurden erfolgreich durchgeführt:
-
-* Wie komme ich an meine `kubectl` Konfiguration?
-* Wie konfiguriere ich `kubectl` auf meinem Computer?
-* Wie verbinde ich mich mit dem Kubernetes Dashboard?
-
-Herzlichen Glückwunsch! Dies sind alle notwendigen Schritte, um sich
-mit einem Kubernetes Cluster zu verbinden.
+* [GKS-Projekte verwalten](/gks/managingprojects/creatingaproject/)
+* [Revoking Tokens](/gks/accessmanagement/connectingtoacluster/)

@@ -3,7 +3,7 @@ title: Ein PVC von einem existierenden Openstack Volume wiederherstellen
 lang: de
 permalink: /gks/clusterbackups/restorepvcfromvolume/
 nav_order: 5200
-parent: Cluster-Backups
+parent: Cluster Backups
 ---
 <!-- LTeX:  language=de-DE -->
 
@@ -17,15 +17,15 @@ Die wichtigste Voraussetzung ist ein freies, aktuell nicht benutztes Openstack-V
 
 Um ein existierendes Openstack-Volume als PVC in ein Kubernetes-Cluster einzubinden, benötigen Sie die ID des Volumes. Um diese herauszufinden, müssen Sie sich zuerst in das [Openstack/Optimist Dashboard](https://dashboard.optimist.innovo.cloud/auth/login/) einloggen.
 
-![Openstack Login](openstack-1.png)
+![Openstack Login](../images/RestPVC01.png)
 
 Die Zugangsdaten sind identisch mit den Zugangsdaten, die Sie für das GKS/GKS-Dashboard benutzen. Navigieren Sie nach dem Login zu `Volumes` und suchen Sie das Volume, welches Sie anbinden wollen. Das Volume darf aktuell an keine andere Instanz/VM gebunden sein und muss den Status "Available" haben. Da ein Volume immer nur an eine Instanz gebunden sein kann, muss das Volume ggf. erst von der alten Instanz getrennt (detached) werden, bevor es im Kubernetes-Cluster verwendet werden kann.
 
-![Openstack Volume](openstack-2.png)
+![Openstack Volume](../images/RestPVC02.png)
 
 Nachdem Sie das Volume gefunden haben, klicken Sie auf den Namen. Auf der Detailseite finden Sie dann die ID des Volumes, die Sie für den nächsten Schritt benötigen.
 
-![Openstack Volume ID](openstack-3.png)
+![Openstack Volume ID](../images/RestPVC03.png)
 
 ## Erstellen eines PV auf Basis eines existierenden Openstack-Volumes
 

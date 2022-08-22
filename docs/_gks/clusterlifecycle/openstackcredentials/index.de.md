@@ -19,18 +19,18 @@ Mit den folgenden einfachen Schritten, können Sie die Credentials ändern:
 
 1. Wählen Sie den gewünschten Cluster aus.
 
-    ![Clusters](clusters.png)
+    ![Clusters](../images/OSCred01.png)
 
 1. Klicken Sie auf die drei Punkte, um das Untermenü zu öffnen.
 
-    ![Three-Dots](three-dots.png)
+    ![Three-Dots](../images/OSCred02.png)
 
 1. Wählen Sie `Edit Provider`.
 
-    ![Edit-Provider](edit-cluster.png)
+    ![Edit-Provider](../images/OSCred03.png)
 
 1. Ändern Sie die Credentials.
 
-    ![Credentials-Edit](credentials-edit.png)
+    ![Credentials-Edit](../images/OSCred04.png)
 
 Kurz nach dem Sie Ihre Eingaben gespeichert haben, erscheint ein Pop-up mit der Bestätigung, dass die Credentials erfolgreich geändert wurden.

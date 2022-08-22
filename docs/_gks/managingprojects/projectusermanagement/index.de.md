@@ -12,37 +12,37 @@ parent: GKS-Projekte verwalten
 
 Sie können mit ein paar Klicks einen Benutzer zu einem vorhandenen GKS-Projekt hinzufügen.
 
-Dazu brauchen Sie:
+> **Hinweis:** Der Benutzer muss sich vorher einmalig in GKS anmelden, bevor er verwendet werden kann.
+
+Damit Sie den Benutzer hinzufügen können, brauchen Sie:
 
 * Den Projektnamen
 * Die Benutzer-E-Mail
 
-**Der Benutzer muss sich vorher einmalig in GKS anmelden, bevor er verwendet werden kann.**
-
 Wählen Sie zuerst das korrekte Projekt aus.
-![Projekt selektieren](select_project.png)
+![Get the Project](../images/MP01_User.png)
 
 Klicken Sie dann in der linken Seitenleiste auf `Members`.
-![Members](select_members.png)
+![Members](../images/MP02_User.png)
 
 Als nächstes klicken Sie oben rechts auf `Add Member`.
-![Add New member](add_member.png)
+![Add New member](../images/MP03_User.png)
 
 Geben Sie zum Schluss die Benutzer-E-Mail-Adresse und die gewünschte Rolle (Owner, Editor, oder Viewer) ein.
-![Add Member Role](add_member_role.png)
+![Add Member Role](../images/MP04_User.png)
 
 ## Benutzer entfernen
 
 Um einen Benutzer zu entfernen, gehen Sie wieder in den Members-Bereich des Projekts.
 
 Wählen Sie zuerst das Projekt aus.
-![Projekt selektieren](select_project.png)
+![Get the Project](../images/MP01_User.png)
 
 Klicken Sie dann in der linken Seitenleiste auf `Members`.
-![Members](select_members.png)
+![Member](../images/MP02_User.png)
 
 Mit dem Löschen-Symbol können Sie den Benutzer entfernen.
-![RemoveMember](remove-user.png)
+![RemoveMember](../images/MP05_User.png)
 
 ## Benutzer Offboarding
 

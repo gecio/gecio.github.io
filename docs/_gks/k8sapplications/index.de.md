@@ -2,7 +2,7 @@
 title: Anwendungen in Kubernetes
 lang: de
 permalink: /gks/k8sapplications/
-nav_order: 7000
+nav_order: 8000
 has_children: true
 ---
 <!-- LTeX:  language=de-DE -->

@@ -2,7 +2,7 @@
 title: Nutzungsrate der Cluster Nodes
 lang: de
 permalink: /gks/machinedeployments/clusternodesusagerate/
-nav_order: 5300
+nav_order: 6300
 parent: Machine Deployments
 ---
 <!-- LTeX:  language=de-DE -->
@@ -17,18 +17,18 @@ Hier erklären wir, wie es dazu kommt.
 
 Als Erstes schauen wir, wie viele Nodes im Cluster sind, und wie ihre Auslastung ist.
 
-![Step 1](get_top_node_1.png)
+![Step 1](../images/NodeUse01.png)
 
 Der Befehl `kubectl top node` zeigt die aktuelle Node-Auslastung. Im Beispiel haben wie zwei laufende (running) Nodes.
 
 Erst wird der Node "cordoned" - also deaktiviert, damit keine neuen Pods auf dem Node gestartet werden.
 
-![Step 2](get_node_2.png)
+![Step 2](../images/NodeUse02.png)
 
 Dann wird der Node "drained" - also komplett leer gemacht und die bisher auf dem gedrainten Node laufenden Pods auf alle anderen Nodes des Clusters verteilt.
 Bei nur zwei Nodes wird also alles immer auf den anderen Node platziert.
 
-![Step 3](top_node_3.png)
+![Step 3](../images/NodeUse03.png)
 
 Wenn der zweite Node nach dem Update wieder läuft, werden die Pods _nicht_ automatisch auf beide Nodes verteilt. Dadurch kommt es zu dem eingangs beobachteten Ungleichgewicht.
 

@@ -13,10 +13,12 @@ Das Verwalten von GKS-basierten Kubernetes-Clustern wird weitestgehend von der G
 ## Weiterführende Themen
 
 * [Einen Cluster anlegen](/gks/clusterlifecycle/creatingacluster/)
+* [Cluster Templates](/gks/clusterlifecycle/clustertemplates/)
 * [Einen Cluster aktualisieren/Kubernetes-Updates](/gks/clusterlifecycle/upgradingacluster/)
-* [Einen Cluster aktualisieren/CNI-Updates](/gks/clusterlifecycle/upgradingcsi/)
-* [Einen Cluster aktualisieren/Openstack-Credentials ändern](/gks/clusterlifecycle/openstackcredentials/)
+* [CNI Auswahl](/gks/clusterlifecycle/cnichoices/)
+* [CNI Updates](/gks/clusterlifecycle/upgradingcni/)
+* [Anbindung der Controlplane](/gks/clusterlifecycle/controlplaneconnector/)
+* [Openstack-Credentials ändern](/gks/clusterlifecycle/openstackcredentials/)
 * [Einen Cluster löschen](/gks/clusterlifecycle/deletingacluster/)
 * [Deprecation Policy](/gks/clusterlifecycle/deprecationpolicy/)
-* [CNI Auswahl](/gks/clusterlifecycle/cnichoices/)
-* [Informationen über die Anbindung der Controlplane](/gks/clusterlifecycle/controlplaneconnector/)
+* [Migration Container Runtime Engine](/gks/clusterlifecycle/containerruntimeengine/)

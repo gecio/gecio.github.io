@@ -2,10 +2,11 @@
 title: Verwaltung der Zeitzonen
 lang: de
 permalink: /gks/k8sapplications/timezones/
-nav_order: 7400
+nav_order: 8400
 parent: Anwendungen in Kubernetes
 ---
 <!-- LTeX:  language=de-DE -->
+# Verwaltung der Zeitzonen
 
 Falls Ihre Anwendung Zeitzonenanpassung benötigt, können Sie diesen Guide befolgen, um diese in Kubernetes zu steuern.
 

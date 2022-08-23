@@ -2,7 +2,7 @@
 title: Eine Anwendung in Kubernetes starten
 lang: de
 permalink: /gks/k8sapplications/runningapplications/
-nav_order: 7100
+nav_order: 8100
 parent: Anwendungen in Kubernetes
 ---
 <!-- LTeX:  language=de-DE -->
@@ -200,7 +200,7 @@ Herzlichen Glückwunsch! Sie haben folgende Schritte erfolgreich durchgeführt u
 * Wie lege ich ein Deployment an?
 * Was ist ein Service?
 * Wie lege ich einen Service an
-* Wie lösche ich die Applikation wieder`?
+* Wie lösche ich die Applikation wieder?
 
 Dies sind alle notwendigen Schritte, um in Kubernetes
 Applikationen zu starten.

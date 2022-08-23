@@ -26,41 +26,41 @@ Ein Service Account ist automatisch durch ein `UserProjectBinding` mit dem Proje
 
 1. Wählen Sie ein Projekt aus.
 
-    ![SA-Projects](sa-projects.png)
+    ![Projects](../images/MP05a_ServAcc.png)
 
 1. Gehen Sie zur Service Accounts Seite.
 
-    ![ServiceAccounts](sa-serviceaccounts.png)
+    ![ServiceAccounts](../images/MP06_ServAcc.png)
 
 1. Benutzen Sie die `Add Service Account` Schaltfläche.
 
-    ![SA-Add](sa-add.png)
+    ![SA-Add](../images/MP07_ServAcc.png)
 
 1. Geben Sie den Namen des Service Accounts und die Gruppe (`Project Manager`, `Editor` oder `Viewer`) an.
 
-    ![SA-Name](sa-name.png)
+    ![SA-Add](../images/MP08_ServAcc.png)
 
 1. Fügen Sie den SA hinzu mit `Add Service Account`.
 
-    ![SA-Add-SA](sa-add-sa.png)
+    ![SA-Add](../images/MP09_ServAcc.png)
 
 Nun wurde ein Service Account angelegt. Um einen Token mit dem SA zu verknüpfen, gehen Sie folgendermaßen vor:
 
 1. Wählen Sie den Service Account aus.
 
-    ![SA-Select](sa-select.png)
+    ![SA-Select](../images/MP10_ServAccTok.png)
 
 1. Benutzen Sie  die `+ Add Token` Schaltfläche.
 
-    ![SA-Add-Token](sa-add-token.png)
+    ![SA-Token](../images/MP13_ServAccTok.png)
 
 1. Geben Sie einen Namen an und fügen Sie den Token mit `Add Token` hinzu.
 
-    ![SA-Tokenname](sa-tokenname.png)
+    ![SA-Tokenname](../images/MP12_ServAccTok.png)
 
 1. Nun wird der generierte Token angezeigt. Laden Sie diesen mit dem Pfeil Icon als Datei herunter oder sichern Sie ihn mit Copy&Paste.
 
-    ![SA-Tokenshown](sa-tokenshown.png)
+    ![SA-Token](../images/MP13_ServAccTok.png)
 
  > **Wichtiger Hinweis:** Stellen Sie sicher, dass dieser Token an einem sicheren Ort und nur auf Ihrem eigenen Gerät gesichert wird. Der Token kann nicht nochmal angezeigt werden, nachdem das Dashboard Fenster geschlossen wurde.
 

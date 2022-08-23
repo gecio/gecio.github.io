@@ -3,7 +3,7 @@ title: Cluster Autoscaler
 lang: en
 permalink: /gks/addons/cluster-autoscaler/
 nav_order: 9100
-parent: Add-on
+parent: Add-On
 ---
 # Cluster Autoscaler
 

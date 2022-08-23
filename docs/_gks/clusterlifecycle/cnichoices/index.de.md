@@ -55,24 +55,17 @@ und Fehler behoben werden.
 Wenn Sie an einem tieferen Verständnis über die Netzwerkflüsse in ihrem Kubernetes Cluster interessiert sind,
 dann wählen Sie Cilium als CNI.
 
-## Keine
-
-Es ist durchaus möglich, andere CNIs in unseren Kubernetes Clustern zu benutzen. Dies wird jedoch
-von unserer Plattform nicht angeboten. Wenn Sie dennoch eine andere CNI wünschen, können Sie den Kubernetes Cluster ohne CNI erstellen und Ihre eigene CNI im Nachhinein auf dem Cluster installieren.
-Dies bedingt jedoch ein fortgeschrittenes Wissen im Bereich Kubernetes-Netzwerk und sollte nur von Experten
-in diesem Gebiet gewählt werden.
-
 ## Installation der CNI
 
 Beim Erstellungsprozess Ihres Kubernetes Clusters in Schritt zwei können Sie unter dem Punkt "Network
 Configuration" Ihre CNI auswählen.
 
-![choose CNI](choosing_cni.png)
+![choose CNI](../images/CNIChoice01.png)
 
 Dort sind auch weitere Einstellungen wie proxy-Modus und weiter unten auch der Controlplane Konnektor
 *Konnectivity* möglich.
 
-![choose proxy](choosing_proxy_mode.png)
+![choose proxy](../images/CNIChoice02.png)
 
 Bitte beachten Sie, dass die Wahl von *eBPF* als proxy-Modus erst zur Verfügung steht, wenn Cilium als
 CNI ausgewählt wurde. Weitere Informationen zum Controlplane Konnektor *Konnectivity* finden sie auf
@@ -84,7 +77,7 @@ Wenn Cilium als CNI verwendet wurde, dann hat man die Möglichkeit sich den Netz
 Kubernetes Cluster visualisieren zu lassen. Dazu muss die Komponente *Hubble* über den Addons-Reiter
 installiert werden, nachdem die Clustererstellung erfolgreich beendet wurde.
 
-![install hubble](installing_hubble_addon.png)
+![install hubble](../images/CNIChoice03.png)
 
 ## Warnung
 

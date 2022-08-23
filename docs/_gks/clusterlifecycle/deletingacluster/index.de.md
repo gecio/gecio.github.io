@@ -17,22 +17,22 @@ Cluster in einem Projekt.
 Um einen Cluster zu löschen, müssen Sie in die Detailansicht
 des Clusters gehen.
 Hierfür klicken Sie auf den Eintrag `first-system`.
-![Step 1](delete_1.png)
+![Cluster Details](../images/DelClus01.png)
 
 Für die folgenden Schritte müssen Sie sich den Cluster-Namen merken. Um diesen
 in die Zwischenablage zu kopieren, klicken Sie auf den Namen.
-![Step 2](delete_2.png)
+![Cluster Details](../images/DelClus02.png)
 
 ## Einen Cluster löschen
 
 Klicken Sie dazu auf `Delete`.
-![Step 3](delete_3.png)
+![Add Cluster Delete](../images/DelClus03.png)
 
 In dem sich öffnenden Fenster wird als Sicherheitsfrage
 der Cluster-Name abgefragt. Da Sie diesen vorher
 schon in die Zwischenablage kopiert haben, müssen Sie diesen
 nur noch einfügen.
-![Step 4](delete_4.png)
+![Add Cluster Delete](../../gettingstarted/images/GS20_DelClus.png)
 
 Da Sie alles löschen wollen, lassen Sie die beiden Checkboxen
 angekreuzt. Damit werden auch die Volumes und der Loadbalancer in

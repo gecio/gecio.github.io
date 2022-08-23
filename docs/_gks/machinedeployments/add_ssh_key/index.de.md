@@ -1,14 +1,14 @@
 ---
-title: SSH Key einem Cluster hinzufügen
+title: SSH-Key einem Cluster hinzufügen
 lang: de
 permalink: /gks/machinedeployments/add_ssh_key/
-nav_order: 5400
+nav_order: 6400
 parent: Machine Deployments
 ---
 <!-- LTeX:  language=de-DE -->
-# SSH Key einem Cluster hinzufügen
+# SSH-Key einem Cluster hinzufügen
 
-Mit der GKS-Plattform können Sie einen SSH-Key auf Worker-Nodes installieren. Dies kann zum Beispiel hilfreich sein, wenn Sie den Cluster oder eine eigene Applikation unmittelbar auf den Worker-Nodes debuggen möchten.
+Mit der GKS-Plattform können Sie einen SSH-ey auf Worker-Nodes installieren. Dies kann zum Beispiel hilfreich sein, wenn Sie den Cluster oder eine eigene Applikation unmittelbar auf den Worker-Nodes debuggen möchten.
 
 Dafür müssen Sie folgende Schritte ausführen:
 
@@ -23,7 +23,7 @@ In der Regel muss den Worker-Nodes noch eine Floating IP zugewiesen werden, dami
 
 Um SSH-Keys verwalten zu können, muss der `User SSH Key Agent` im Rahmen der Erstellung des Clusters aktiviert worden sein.
 
-![User SSH Key Agent during Create cluster](user-ssh-key-agent-create.png)
+![User SSH Key Agent during Create cluster](../images/SSH01.png)
 
 Ist der Agent nicht bei der Erstellung des Clusters aktiviert worden, können Sie nachträglich keine SSH-Keys zum Cluster hinzufügen bzw. ändern. Weiterhin kann auch der User SSH Key Agent nur während der Erstellung des Clusters aktiviert werden, eine nachträgliche Aktivierung ist nicht möglich.
 
@@ -31,11 +31,11 @@ Ist der Agent nicht bei der Erstellung des Clusters aktiviert worden, können Si
 
 Sie können den aktuellen Status des User SSH Key Agents auf der Übersichtsseite des Clusters einsehen. Klappen Sie dazu die erweiterte Clusteransicht auf.
 
-![Show Additional Cluster_Info](show_additional_cluster_info.png)
+![Show additional cluster info](../images/SSH02.png)
 
 Nun können Sie im unteren Abschnitt den Status des User SSH Key Agents ablesen.
 
-![User SSH Key Agent status](user-ssh-key-agent-status.png)
+![User SSH Key Agent status](../images/SSH03.png)
 
 Wenn der Agent aktiviert ist, können Sie jederzeit SSH-Keys zum Cluster hinzufügen oder ändern.
 
@@ -61,20 +61,20 @@ Die erzeugten Schlüssel (öffentlich und privat) werden standardmäßig in `.ss
 
 1. Wählen Sie zuerst das richtige Projekt aus.
 
-    ![Projects](projects.png)
+    ![Projects](../images/SSH04.png)
 
-2. Gehen Sie danach zur SSH-Key-Seite.
+2. Gehen Sie danach zur SSH-Key Seite.
 
-    ![Project-Menu](project-menu.png)
+    ![Project-Menu](../images/SSH05.png)
 
 3. Benutzen Sie die "Add SSH Key"-Schaltfläche.
 
-    ![SSH-Key-Page](ssh-key-page.png)
+    ![SSH-Key-Page](../images/SSH06.png)
 
 4. Um den Schlüssel leichter identifizieren zu können, geben Sie dem Key einen Namen und fügen Sie den öffentlichen (nicht den privaten!)
    Schlüssel in das dafür vorgesehene Feld ein.
 
-    ![Ssh-key](ssh-key.png)
+   ![Ssh-key](../images/SSH07.png)
 
 Jetzt können Sie den Key in jedem Cluster des Projekts benutzen.
 Dies gilt auch für die Erstellung eines neuen Clusters im gleichen Projekt.
@@ -83,25 +83,25 @@ Dies gilt auch für die Erstellung eines neuen Clusters im gleichen Projekt.
 
 1. Wählen Sie den Cluster aus.
 
-    ![Cluster](clusters.png)
+    ![Cluster](../images/SSH08.png)
 
 2. Um das Cluster-Menü zu öffnen, klicken Sie auf die drei Punkte.
 
-    ![Three-Dots](three-dots.png)
+   ![Three-Dots](../images/SSH09.png)
 
 3. Wählen Sie im Menü `Manage SSH keys` aus.
 
-    ![Edit-Cluster](manage-ssh-keys.png)
+    ![Edit-Cluster](../images/SSH10.png)
 
 4. Nun können Sie den eben erstellten SSH-Key aus einer Dropdown Liste auswählen.
 
-    ![Manage-Keys](manage-keys.png)
+   ![Manage-Keys](../images/SSH11.png)
 
 5. Nach der Auswahl wird der Key in der Liste angezeigt und kann dort bei Bedarf auch wieder gelöscht werden.
 
-    ![Key-List](key-list.png)
+    ![Key-List](../images/SSH12.png)
 
-Dein Key wird nun allen Worker-Nodes in allen Machine Deployments hinzugefügt.
+Der Key wird nun allen Worker-Nodes in allen Machine Deployments hinzugefügt.
 
 ## Einen SSH-Key während der Cluster-Erstellung hinzufügen
 
@@ -109,17 +109,17 @@ Es ist auch möglich, einen SSH-Key bereits zum Zeitpunkt der Cluster Erstellung
 
 ## Am Worker anmelden
 
-Sobald der bzw. die SSH-Keys zum Cluster hinzugefügt wurden, muss den Worker-Nodes noch eine öffentliche (Floating) IP zugewiesen werden, damit diese netzwerkseitig erreichbar sind.
+Sobald der oder die SSH-Keys zum Cluster hinzugefügt wurden, muss den Worker-Nodes noch eine öffentliche (Floating) IP zugewiesen werden, damit diese netzwerkseitig erreichbar sind.
 
 Dazu Editieren Sie die Machine Deployments.
 
-![Edit-MD](edit_machine_deployment.png)
+![Edit-MD](../images/SSH13.png)
 
 Dort sollten Sie sicherstellen, dass `Allocate Floating IP` aktiviert ist.
 
-![Enable-Floating_IP](enable-fip.png)
+![Enable-Floating_IP](../images/SSH14.png)
 
-Wenn sich hier ein Setting ändert, werden alle Worker neu erstellt. Danach kann man sich per SSH-Key einloggen.
+Wenn sich hier ein Setting ändert, werden alle Worker neu erstellt. Danach kann man sich über den SSH-Key einloggen.
 
 Der Standarduser für Flatcar heisst `core`.
 

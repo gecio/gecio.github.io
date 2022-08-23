@@ -37,16 +37,16 @@ Update des Masters ist mit ein paar Mausklicks erledigt.
 
 Als Erstes gehen Sie zu dem Cluster, für den Sie ein Update durchführen wollen.
 
-![Step 1](update_1.png)
+![Step 1](../images/KubUpd01.png)
 
-Klicken Sie in das Feld `Master Version` und wählen Sie eine
+Klicken Sie in das Feld `Control Plane` und wählen Sie eine
 neue Version für den Master aus.
 
-![Step 2](update_2a.png)
+![Step 2](../images/KubUpd02.png)
 
 Wir empfehlen, dabei direkt `Upgrade Machine Deployments` zu aktivieren, um die Worker-Nodes gleich mit upzugraden.
 
-![Step 2](update_2b.png)
+![Step 2](../images/KubUpd03.png)
 
 Jetzt aktualisiert GKS den Master (und ggf. auch die Nodes) selbstständig und Sie sind mit
 diesem Schritt fertig.
@@ -61,18 +61,18 @@ alle Pods neu gestartet.
 
 Im ersten Schritt klicken Sie auf das Machine Deployment.
 
-![Step 3](update_3.png)
+![Step 3](../images/KubUpd04.png)
 
 Klicken Sie auf das Editier- (Bleistift-)Symbol, um die Update-Ansicht
 zu öffnen.
 
-![Step 4](update_4.png)
+![Step 4](../images/KubUpd05.png)
 
 Bei der kubelet Version wählen Sie die Version aus, die auch bei
 Ihrem Cluster Controlplane konfiguriert ist (in diesem Beispiel
 `1.21.5`) und bestätigen Sie mit `Save Changes`.
 
-![Step 5](update_5.png)
+![Step 5](../images/KubUpd06.png)
 
 Nun aktualisiert GKS automatisch die Node Group auf die neue Version
 und Kubernetes sorgt dafür, dass Ihre Applikationen

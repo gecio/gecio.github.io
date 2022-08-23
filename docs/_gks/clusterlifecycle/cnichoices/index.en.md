@@ -50,13 +50,6 @@ Cilium is under heavy development so new features as well as bug-fixes are relea
 If you are interested in a deeper understanding of the network flows inside your Kubernetes cluster,
 then this CNI is for you.
 
-## None
-
-There is also the possibility to install a custom CNI yourself. In that case you choose *None* as
-CNI and the installation will skip the installation step for a CNI.
-
-Be aware that this is only for the most advanced users of Kubernetes who know what they are doing.
-
 ## Installing a CNI
 
 In the cluster creation process, the second step enables you to choose between the two CNIs described

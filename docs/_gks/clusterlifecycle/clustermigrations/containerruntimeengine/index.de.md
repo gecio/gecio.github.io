@@ -2,7 +2,7 @@
 title: Migration Container Runtime Engine
 lang: de
 permalink: /gks/clusterlifecycle/clustermigrations/containerruntimeengine/
-nav_order: 5000
+nav_order: 4600
 parent: Cluster Lebenszyklus
 has_children: false
 ---
@@ -34,10 +34,10 @@ müssen Sie folgende Schritte ausführen:
 
 1. Editieren Sie die Cluster Konfiguration.
 
-   ![edit-cluster-config](edit-cluster.png)
+   ![edit-cluster-config](../../images/MigContRun01.png)
 
 1. Ändern Sie den Wert des Feldes *Container Runtime* von *docker* nach *containerd* und speichern Sie anschließend die Änderungen.
-   ![switch-cre-config](switch-cre.png)
+   ![switch-cre-config](../../images/MigContRun02.png)
 
 ## Ausführung der Migration
 
@@ -64,15 +64,15 @@ werden.
 1. Starten Sie das Machine Deployment neu:
     1. Wählen Sie das Machine Deployment im Cluster-Bildschirm.
 
-       ![choose-machinedeployment](choose-machinedeployment.png)
+       ![choose-machinedeployment](../../images/MigContRun03.png)
 
     1. Drücken Sie die Restart-Schaltfläche im Machine Deployment Bildschirm.
 
-       ![click-on-restart-button](click-on-restart-button.png)
+       ![click-on-restart-button](../../images/MigContRun04.png)
 
     1. Bestätigen Sie, dass der Neustart des Machine Deployments wirklich durchgeführt werden soll.
 
-       ![confirm-restart](confirm-restart.png)
+       ![confirm-restart](../../images/MigContRun05.png)
 
    Nun werden alle Worker-Nodes nacheinander aus dem Cluster rotiert und
    durch frische Nodes ersetzt. Nachdem der letzte Node durchgetauscht

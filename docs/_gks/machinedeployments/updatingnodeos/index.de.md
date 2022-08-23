@@ -2,7 +2,7 @@
 title: Aktualisierung des Betriebssystems auf Worker-Nodes
 lang: de
 permalink: /gks/machinedeployments/updatingnodeos/
-nav_order: 5500
+nav_order: 6500
 parent: Machine Deployments
 ---
 <!-- LTeX:  language=de-DE -->
@@ -22,11 +22,11 @@ mehrerer Nodes im Cluster, und stellt sicher, dass immer nur ein Node gleichzeit
 
 Die Verwendung der Auto-Update-Funktion ist standardmäßig aktiviert. Der folgende Screenshot zeigt die Erstellung eines Machine Deployments mit aktiviertem Auto-Updater:
 
-![Machine Deployment mit autoupdater erstellen](autoupdate_flatcar.png)
+![Create Machine Deployment with autoupdater](../images/UpdOSNode01.png)
 
 Wenn Sie sich selbst um Betriebssystemaktualisierungen (und Neustarts) kümmern möchten, können Sie die automatischen Aktualisierungen der Worker-Nodes deaktivieren, indem Sie das Kontrollkästchen `Disable auto-update` aktivieren:
 
-![Machine Deployment ohne autoupdater erstellen](autoupdate_flatcar_disable.png)
+![Create Machine Deployment without autoupdater](../images/UpdOSNode02.png)
 
 > Wir empfehlen unseren Benutzern dringend, die Auto-Updater-Funktion zu verwenden, um die Sicherheit ihrer Infrastruktur zu gewährleisten.
 
@@ -34,25 +34,25 @@ Wenn Sie sich selbst um Betriebssystemaktualisierungen (und Neustarts) kümmern 
 
 Um zu prüfen, ob Ihre Nodes automatische Betriebssystemaktualisierungen erhalten, klicken Sie auf das Machine-Deployment:
 
-![Machine Deployment öffnen](autoupdate_open_md.png)
+![Open Machine Deployment](../images/UpdOSNode03.png)
 
 Kontrollieren Sie, ob vor dem Kästchen `Disable auto-update` ein grünes Häkchen angezeigt wird (die automatische Aktualisierung ist deaktiviert):
 
-![Autoupdater an](autoupdate_enabled.png)
+![Autoupdater off](../images/UpdOSNode04.png)
 
-oder ob es ausgegraut ist (die automatische Aktualisierung ist an):
+Oder prüfen Sie, ob es ausgegraut ist (die automatische Aktualisierung ist an):
 
-![Autoupdater aus](autoupdate_disabled.png)
+![Autoupdater on](../images/UpdOSNode05.png)
 
 #### Aktivieren / Deaktivieren des automatischen Updaters für ein vorhandenes Machine-Deployment
 
 Um den Status des automatischen Updaters zu ändern, klicken Sie auf die Schaltfläche `Edit Machine Deployment` der Machine-Deployment.
 
-![Edit Machine Deployment](autoupdate_edit_md.png)
+![Edit Machine Deployment](../images/UpdOSNode06.png)
 
 (De)aktivieren Sie das Kontrollkästchen entsprechend.
 
-![MD Autoupdater ändern](autoupdate_flatcar_modify.png)
+![Modify MD Autoupdater](../images/UpdOSNode07.png)
 
 Nachdem Sie auf `Save Changes` geklickt haben, führen alle Worker-Nodes ein rollierendes Update durch und starten neu.
 
@@ -85,7 +85,7 @@ $ sudo update_engine_client -status
 Der Update-Engine-Client lädt jetzt die letzte verfügbare Version von Flatcar herunter und passt
 automatisch die Boot-Reihenfolge so an, dass beim nächsten Boot schon die neue Version gebootet wird.
 
-![Update Engine](fc_update_engine.gif)
+![Update Engine](../images/fc_update_engine.gif)
 
 Wenn der Status sich von `UPDATE_STATUS_UPDATE_AVAILABLE` in `UPDATE_STATUS_DOWNLOADING`,
 und danach in `UPDATE_STATUS_UPDATED_NEED_REBOOT` geändert hat, können Sie den Worker-Node rebooten
@@ -105,15 +105,15 @@ Ubuntu wurde im Juli 2021 aus dem Support für GKS genommen, aktualisieren Sie d
 
 Um auf Flatcar zu aktualisieren, klicken Sie auf die `Machine Deployment Edit` Schaltfläche.
 
-![Edit Machine Deployment](update_to_flatcar_edit.png)
+![Edit Machine Deployment](../images/update_to_flatcar_edit.png)
 
 Dann klicken Sie auf das Flatcar Logo.
 
-![Change to Flatcar](update_to_flatcar.png)
+![Change to Flatcar](../images/UpdOSNode08Ubuntu.png)
 
 Es wurde das Image gewechselt und die Autoupdate Option angezeigt.
 
-![Save Flatcar](update_to_flatcar_save.png)
+![Save Flatcar](../images/UpdOSNode09Ubuntu.png)
 
 Die Nodes werden nun neu gebaut und der Cluster ist wieder aktuell.
 

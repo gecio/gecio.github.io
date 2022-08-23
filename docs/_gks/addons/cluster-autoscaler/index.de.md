@@ -51,15 +51,15 @@ Wie oben dargestellt, ist der Autoscaler nicht Teil der laufenden Kubernetes-Kom
 
 Fügen Sie den Autoscaler zum Cluster hinzu, indem Sie im Dashboard im Bereich `Addons` auf `Install Addon` klicken.
 
-![Step 3.1](overview.png)
+![overview](../images/Autoscaler01.png)
 
 Wählen Sie `cluster-autoscaler` aus.
-![Step 3.2](select.png)
+![select](../images/Autoscaler02.png)
 
 Klicken Sie auf `Install` :
 
-![Step 3.3](install.png)
-![Step 3.4](installed.png)
+![install](../images/Autoscaler03.png)
+![installed](../images/Autoscaler04.png)
 
 ### Schritt 4
 
@@ -97,7 +97,7 @@ NAME                            AGE   DELETED   REPLICAS   AVAILABLEREPLICAS   P
 epic-goldwasser-worker-289mgt   1d              2          2                   openstack   flatcar   1.21.5
 ```
 
-### Step 2
+### Schritt 2
 
 Der Annotatierungsbefehl wird zusammen mit einer der obigen Machine Deployments verwendet, um die gewünschten Machine Deployments mit Anmerkungen zu versehen. In diesem Fall wird `test-cluster-worker-v5drmq` annotiert, um das Minimum und Maximum festzulegen.
 
@@ -147,8 +147,8 @@ Wie oben gezeigt, wurde die Machine Deployment mit einem Minimum von 1 und einem
 
 Um den Autoscaler zu deinstallieren, klicken Sie im Abschnitt Addons des Cluster-Dashboards auf die drei Punkte vor dem Cluster-Autoscaler und wählen Sie `Delete`.
 
-![edit](edit.png)
-![delete](delete.png)
+![edit](../images/Autoscaler05.png)
+![delete](../images/Autoscaler06.png)
 
 Nach dem Löschen können Sie den Cluster mit dem Befehl `kubectl get deployment -n kube-system` überprüfen, um sicherzustellen, dass der Autoscaler gelöscht wurde.
 

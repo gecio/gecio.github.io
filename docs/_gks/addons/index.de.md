@@ -1,16 +1,15 @@
 ---
-title: Add-on
+title: Add-On
 lang: de
 permalink: /gks/addons/
-nav_order: 8000
+nav_order: 9000
 has_children: true
 ---
 <!-- LTeX:  language=de-DE -->
-# Add-on
+# Add-On
 
-Innerhalb von GKS können spezielle, kuratierte Applikationen über den Add-on Tab verwaltet werden. In diesem Abschnitt zeigen wir, wie Sie auf der GKS Plattform diese Add-ons installieren und verwalten können.
+Innerhalb von GKS können spezielle, kuratierte Applikationen als Add-ons betrieben werden. In diesem Abschnitt zeigen wir, wie Sie auf der GKS Plattform diese Add-ons installieren und verwalten können.
 
 ## Weiterführende Themen
 
-* [Eine Anwendung in Kubernetes starten](/gks/k8sapplications/runningapplications/)
-* [External-DNS mit Designate](/gks/k8sapplications/externaldnsanddesignate/)
+* [Cluster Autoscaler](../addons/cluster-autoscaler/)

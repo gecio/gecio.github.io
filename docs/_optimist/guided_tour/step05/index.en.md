@@ -35,7 +35,7 @@ Here is a list of some common commands:
     Creates a VM
 - `openstack server delete`
     Deletes a VM
-- `openstack sever list`
+- `openstack server list`
     Shows a list of all VMs
 - `openstack server remove`
     Removes parameters (Fixed IP, Floating IP, Security
@@ -88,7 +88,7 @@ To create VMs, a network is required. Here are some common network commands:
 
 - `openstack network create`
     Creates a new network
-- `openstack nerwork list`
+- `openstack network list`
     Shows a list of all networks
 - `openstack network show`
     Shows all important information about a network

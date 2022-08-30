@@ -70,7 +70,7 @@ zu öffnen.
 
 Bei der kubelet Version wählen Sie die Version aus, die auch bei
 Ihrem Cluster Controlplane konfiguriert ist (in diesem Beispiel
-`1.21.5`) und bestätigen Sie mit `Save Changes`.
+`1.23.6`) und bestätigen Sie mit `Save Changes`.
 
 ![Step 5](../images/KubUpd06.png)
 

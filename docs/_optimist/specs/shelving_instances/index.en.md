@@ -16,6 +16,10 @@ A shelved instance, as well as its assigned resources (such as IP address etc), 
 
 This feature may be used as part of an instance life cycle process or to conserve resources.
 
+**Warnung**
+
+Aufgrund der relativ großen Disksize bei den l1 Flavors raten wir bei diesen Flavors von shelving ab
+
 ## Shelve an Instance
 
 Instances can be shelved as follows:

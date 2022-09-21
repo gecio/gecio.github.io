@@ -16,6 +16,10 @@ Eine zurückgestellte Instanz sowie die ihr zugewiesenen Ressourcen (z.B. IP-Adr
 
 Diese Funktion kann als Teil eines Lifecycle-Prozesses einer Instanz oder zum Einsparen von Ressourcen verwendet werden.
 
+**Warnung**
+
+Aufgrund der relativ großen Disksize bei den l1 Flavors raten wir bei diesen Flavors von shelving ab
+
 ## Shelving einer Instanz
 
 Instanzen auf Openstack können wie folgt abgelegt werden:

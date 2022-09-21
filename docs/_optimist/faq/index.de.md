@@ -82,6 +82,10 @@ geändert werden soll, und wählen Sie dann _Actions_ → _Resize Flavor_.
 Der aktuelle Flavor wird angezeigt, verwenden Sie die Dropdown-Liste "Select a new flavor", um den neuen Flavor auszuwählen und bestätigen
 Sie mit "Resize".
 
+**Warnung**
+
+Dies gilt nicht für l1 (localstorage) Flavors ! Ein Resize Ihrer Instanz ist bei diesen Flavors, aus technischen Gründen, nicht möglich. Um bei Ihren l1 Instanzen einen Resize durchzuführeren empfehlen wir ein HA Cluster Setup über die gegebenen Availability Zones um dann Ihre Instanzen sicher durchzurollieren.
+
 ## Warum ist das Logfile der Compute Instanz im Optimist Dashboard leer?
 
 Bedingt durch Wartungsarbeiten oder einem Umverteilen der Last im OpenStack wurde die Instanz verschoben. In diesem Fall wird das Logfile

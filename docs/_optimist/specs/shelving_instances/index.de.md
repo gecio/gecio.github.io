@@ -16,9 +16,11 @@ Eine zurückgestellte Instanz sowie die ihr zugewiesenen Ressourcen (z.B. IP-Adr
 
 Diese Funktion kann als Teil eines Lifecycle-Prozesses einer Instanz oder zum Einsparen von Ressourcen verwendet werden.
 
-**Warnung**
+{: .alert .alert-error }
 
-Aufgrund der relativ großen Disksize bei den l1 Flavors raten wir bei diesen Flavors von shelving ab
+**WARNUNG**  
+Dies gilt nicht für l1 (localstorage) Flavors!  
+Bitte lesen Sie für weitere Informationen [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features)
 
 ## Shelving einer Instanz
 

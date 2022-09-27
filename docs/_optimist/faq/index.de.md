@@ -84,8 +84,9 @@ Sie mit "Resize".
 
 {: .alert .alert-error }
 
-WARNUNG  
-Dies gilt nicht für l1 (localstorage) Flavors ! Ein Resize Ihrer Instanz ist bei diesen Flavors, aus technischen Gründen, nicht möglich. Um bei Ihren l1 Instanzen einen Resize durchzuführeren empfehlen wir ein HA Cluster Setup über die gegebenen Availability Zones um dann Ihre Instanzen sicher durchzurollieren.
+**WARNUNG**  
+Dies gilt nicht für l1 (localstorage) Flavors!  
+Bitte lesen Sie für weitere Informationen [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features)
 
 ## Warum ist das Logfile der Compute Instanz im Optimist Dashboard leer?
 

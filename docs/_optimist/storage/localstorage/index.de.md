@@ -21,6 +21,7 @@ Datensicherheit und Verfügbarkeit
 Da Ihre Daten direkt durch Ihre Instanz auf unser Storage des lokalen Hypervisors gebunden ist, sollten Sie darauf achten diese Daten über ein HA Konzept, über die gegebenen GEC Availability Zones zu verteilen. Die Hypervisoren unterliegen unseren Compliance Patch Cycle wo wir die Hypervisoren nacheinander durchbooten müssen. Dies wird innerhalb einer Availability Zone, ein Server nach dem andrern, innernhalb eines festgelegten Maintainace Window geschehen.
 
 **Standard Maintainance**
+<!-- TODO: Wartungsfenster definieren -->
 
 | Fenster | Tag | Zeit |
 |:---|---|---:|

@@ -52,7 +52,7 @@ The following Flavor Types are currently considered deprecated and the removal o
 
 ### Localstorage Flavors
 
-| Bezeichnung | Kerne  |   RAM  |  Disk    | IOPS Limits (read/write) | IO throughput rate (read/write) | Network Bandwidth |
+| Name       | Cores |   RAM  |  Disk | IOPS Limits (read/write) | IO throughput (read/write) | Network Bandwidth |
 | :---------- | -----: | -----: | -------: | -----------------------: | ------------------------------: | ----------------: |
 | l1.micro    |    1   |   8 GB |   300 GB |            25000 / 10000 |             125 MB/s / 60 MB/s  |          1 Gbit/s |
 | l1.small    |    2   |  16 GB |   600 GB |            50000 / 25000 |             250 MB/s / 125 MB/s |          1 Gbit/s |

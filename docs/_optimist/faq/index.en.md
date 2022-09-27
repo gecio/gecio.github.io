@@ -81,6 +81,12 @@ choose: _Actions_ → \_Resize Flavor:.
 
 The current flavor is shown. To choose the new flavor, use the "Select a new flavor" dropdown list, and confirm with "Resize".
 
+{: .alert .alert-error }
+
+**WARNING**  
+This does not apply to l1 (localstorage) flavors  
+For more information please see [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features)
+
 ## Why are the logs of the compute instance in the optimist dashboard empty?
 
 Due to maintenance work or load redistribution in OpenStack, the instance may have been migrated. In this case, the log file will be recreated and new messages logged here.

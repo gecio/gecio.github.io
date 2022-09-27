@@ -16,9 +16,11 @@ A shelved instance, as well as its assigned resources (such as IP address etc), 
 
 This feature may be used as part of an instance life cycle process or to conserve resources.
 
-**Warning**
+{: .alert .alert-error }
 
-We do not recommend attempting to shelve l1 flavors due to their relatively large disk size.
+**WARNING**  
+This does not apply to l1 (localstorage) flavors  
+For more information please see [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features)
 
 ## Shelve an Instance
 

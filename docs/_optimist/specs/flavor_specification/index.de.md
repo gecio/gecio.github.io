@@ -17,6 +17,12 @@ verfügbaren Flavors aufgelistet sind.
 
 Um die Flavors bestehender Instanzen zu ändern, kann die OpenStack-Option „Resize Instance“ entweder über das Dashboard oder die CLI verwendet werden. Dies führt zu einem Neustart der Instanz, aber der Inhalt der Instanz bleibt erhalten.
 
+{: .alert .alert-error }
+
+**WARNUNG**  
+Dies gilt nicht für l1 (localstorage) Flavors!  
+Bitte lesen Sie für weitere Informationen [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features)
+
 ## Deprecated Flavor-Typen
 
 Die folgenden Flavor-Typen gelten derzeit als veraltet und die Entfernung dieser Flavor-familien ist für die nahe Zukunft geplant. Wir werden regelmäßig überprüfen, ob diese Flavors noch verwendet werden, wenn nicht, werden wir sie auf privat setzen, um zu vermeiden, dass neue Instanzen damit erstellt werden:

@@ -16,6 +16,12 @@ various standard hardware profiles (flavors). These have different limits, which
 
 To change the flavors of existing instances, the OpenStack "Resize Instance" Option can be used either via the Dashboard or the CLI. This will result in a reboot of the Instance but the content of the instance will be preserved.
 
+{: .alert .alert-error }
+
+**WARNING**  
+This does not apply to l1 (localstorage) flavors  
+For more information please see [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features)
+
 ## Deprecated Flavor Types
 
 The following Flavor Types are currently considered deprecated and the removal of these flavor families is planned for the near future. We will regularly check if these flavors are still in use, if not, we will set them to private in order to to avoid new instances being created with them.

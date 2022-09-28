@@ -18,9 +18,10 @@ Mit Localstorage ist hier gemeint das sich der Storage Ihrer Instanzen direkt au
 Datensicherheit und Verfügbarkeit
 -----
 
-Da Ihre Daten direkt durch Ihre Instanz auf unser Storage des lokalen Hypervisors gebunden ist, sollten Sie darauf achten diese Daten über ein HA Konzept, über die gegebenen GEC Availability Zones zu verteilen. Die Hypervisoren unterliegen unseren Compliance Patch Cycle wo wir die Hypervisoren nacheinander durchbooten müssen. Dies wird innerhalb einer Availability Zone, ein Server nach dem andrern, innernhalb eines festgelegten Maintainace Window geschehen.
+Da Ihre Daten direkt durch Ihre Instanz auf dem Storage des lokalen Hypervisors gebunden ist, sollten Sie darauf achten diese Daten über ein HA Konzept, über die gegebenen GEC Availability Zones zu verteilen. Die Hypervisoren unterliegen unseren Compliance Patch Cycle wo wir die Hypervisoren nacheinander durchbooten müssen. Dies wird innerhalb einer Availability Zone, ein Server nach dem andrern, innernhalb eines festgelegten Maintainace Window geschehen.
+Das Storage Array ist gegen Ausfall Einzelkomponenten geschützt, dies bezieht sich jedoch nur innerhalb des einzelnen Hypervisors. Beim ersetzen von Einzelkomponenen, durch Hardwaredefekt, kann es kurzfristig zur eingeschränkten Verfügbarkeit und Performance kommen bis der Zustand wiederhergestellt ist.
 
-**Standard Maintainance**
+**Standard Maintenance**
 <!-- TODO: Wartungsfenster definieren -->
 
 | Fenster | Tag | Zeit |

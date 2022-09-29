@@ -1,5 +1,5 @@
 ---
-title: Openstack Application Credentials benutzen
+title: Openstack Applikation Credentials benutzen
 lang: de
 permalink: /gks/clusterlifecycle/applicationcredentials/
 nav_order: 4300
@@ -108,3 +108,8 @@ Danach startet im Hintergrund der automatische Austauschprozess für
 die neuen Zugangsdaten.
 
 ![Neue Application Credentials speichern](../images/AppCreds04.png)
+
+# Glossar
+
+Auf dieser Seite werden die Worte *Applikationsuser*, *Applikationsbenutzer*
+und *Application Credentials* im Kontext von Openstack synonym verwendet.

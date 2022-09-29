@@ -13,6 +13,7 @@ Folgende Kubernetes Versionen unterstützen wir aktuell in GKS.
 
 | Version | GKS Deprecation| GKS End-of-Life |
 |---------|-----------------|------------------|
+| v1.24   |                 |                  |
 | v1.23   |                 |                  |
 | v1.22   | 19.07.2022      | 18.10.2022       |
 | v1.21   | 04.03.2022      | 28.06.2022       |

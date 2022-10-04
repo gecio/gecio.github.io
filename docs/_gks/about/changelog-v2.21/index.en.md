@@ -24,19 +24,19 @@ Make sure to upgrade all existing clusters running on version 1.22 at least to v
 
 ### Project overview site
 
-We added a project overview site which shows a condenst overview the project.
+We added a project overview page that gives an overview of the content of the project.
 
 It is possible to change back to the old page in the user setting.
 
 ### New CNI Versionen
 
-Canal wa updated to v3.23 und Cilium to v1.12. Please update your CNI in the cluster.
+Canal was updated to v3.23 and Cilium to v1.12. Please update your CNI in the cluster.
 
 ## Kubernetes Related Changes
 
 ### Upgrade Notes for Kubernetes 1.24
 
-If you are planning to upgrade to Kubernetes 1.24, refer to the [What's new](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.24.md#whats-new-major-themes) section of the official Kubernetes v1.23 release notes and make sure that you familiarise yourself with the upcoming changes.
+If you are planning to upgrade to Kubernetes 1.24, refer to the [What's new](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.24.md#whats-new-major-themes) section of the official Kubernetes v1.24 release notes and make sure that you familiarise yourself with the upcoming changes.
 
 For an overview of the changes, refer to the [Changes by Kind](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.24.md#changes-by-kind) section of the Changelog.
 

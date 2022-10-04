@@ -30,15 +30,15 @@ It is possible to change back to the old page in the user setting.
 
 ### New CNI Versionen
 
-Canal wa updated to 3.23 und Cilium to 1.12. Pleae update your CNI in the cluster.
+Canal wa updated to v3.23 und Cilium to v1.12. Please update your CNI in the cluster.
 
 ## Kubernetes Related Changes
 
-### Upgrade Notes for Kubernetes 1.23
+### Upgrade Notes for Kubernetes 1.24
 
 If you are planning to upgrade to Kubernetes 1.24, refer to the [What's new](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.24.md#whats-new-major-themes) section of the official Kubernetes v1.23 release notes and make sure that you familiarise yourself with the upcoming changes.
 
-For an overview of the changes, refer to the [Changes by Kind](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.24.md#changes-by-kind-2) section of the Changelog.
+For an overview of the changes, refer to the [Changes by Kind](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.24.md#changes-by-kind) section of the Changelog.
 
 * [Urgent Upgrade Notes](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.24.md#urgent-upgrade-notes)
 * [Deprecations](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.24.md#deprecation)

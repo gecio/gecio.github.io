@@ -9,7 +9,7 @@ last_modified_date: 2022-03-29
 
 # Flavor Spezifikationen
 
-Der Begriff "Flavor" bezeichnet im OpenStack-Kontext ein Hardware-Profil, das eine virtuelle Maschine nutzt bzw. nutzen kann. Im Optimist
+"Flavor" bezeichnet im OpenStack-Kontext ein Hardware-Profil, das eine virtuelle Maschine nutzt bzw. nutzen kann. Im Optimist
 sind diverse Standard-Hardwareprofile (Flavors) eingerichtet. Diese haben unterschiedliche Limits und Begrenzungen, welche hier für alle
 verfügbaren Flavors aufgelistet sind.
 
@@ -19,13 +19,13 @@ Um die Flavors bestehender Instanzen zu ändern, kann die OpenStack-Option „Re
 
 {: .alert .alert-error }
 
-**WARNUNG**  
-Dies gilt nicht für l1 (localstorage) Flavors!  
-Bitte lesen Sie für weitere Informationen [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features)
+**WARNUNG**
+Dies gilt nicht für l1 (localstorage) Flavors.
+Weitere Informationen  finden Sie unter [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features).
 
 ## Deprecated Flavor-Typen
 
-Die folgenden Flavor-Typen gelten derzeit als veraltet und die Entfernung dieser Flavor-familien ist für die nahe Zukunft geplant. Wir werden regelmäßig überprüfen, ob diese Flavors noch verwendet werden, wenn nicht, werden wir sie auf privat setzen, um zu vermeiden, dass neue Instanzen damit erstellt werden:
+Die folgenden Flavor-Typen gelten derzeit als veraltet und für die nahe Zukunft ist geplant, diese Flavor-Familien zu entfernen. Wir werden regelmäßig überprüfen, ob diese Flavors noch verwendet werden. Falls dies nicht der Fall ist, werden wir sie auf privat setzen, um zu vermeiden, dass neue Instanzen damit erstellt werden:
 
 - m1-Familie (deprecated)
 - e1-Familie (e = equal) (deprecated)

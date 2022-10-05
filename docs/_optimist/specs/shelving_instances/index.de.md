@@ -18,9 +18,9 @@ Diese Funktion kann als Teil eines Lifecycle-Prozesses einer Instanz oder zum Ei
 
 {: .alert .alert-error }
 
-**WARNUNG**  
-Dies gilt nicht für l1 (localstorage) Flavors!  
-Bitte lesen Sie für weitere Informationen [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features)
+**WARNUNG**
+Dies gilt nicht für l1 (localstorage) Flavors.
+Weitere Informationen finden Sie unter [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features).
 
 ## Shelving einer Instanz
 
@@ -34,7 +34,7 @@ Instanzen können mit dem folgenden Befehl Unshelved werden:
 
 ## Eventliste für eine Instanz anzeigen
 
-Sie können den Shelving/Unshelving-Verlauf jedes Servers anzeigen, indem Sie die Ereignisliste anzeigen:
+Sie können den Shelving/Unshelving-Verlauf jedes Servers anzeigen, indem Sie sich die Ereignisliste anzeigen lassen:
 
 ```bash
 $ openstack server event list <server-id>
@@ -48,13 +48,13 @@ $ openstack server event list <server-id>
 
 ## Warum Shelving verwenden?
 
-Diese Funktion ist nützlich, um Instanzen zu archivieren, die Sie derzeit nicht verwenden, aber nicht löschen möchten. Das Shelving einer Instanz ermöglicht es Ihnen, die Instanzdaten und Ressourcenzuordnungen beizubehalten, aber gibt CPU und Arbeitsspeicher Ressourcen der Instanz frei.
+Diese Funktion ist nützlich, um Instanzen zu archivieren, die Sie derzeit nicht verwenden, aber nicht löschen möchten. Das Shelving einer Instanz ermöglicht es Ihnen, die Instanzdaten und Ressourcenzuordnungen beizubehalten, gibt aber CPU und Arbeitsspeicher Ressourcen der Instanz frei.
 
 Wenn Sie eine Instanz zurückstellen, generiert der Compute-Dienst ein Snapshot-Image, das den Status der Instanz erfasst, und lädt es in die Glance-Library hoch. Wenn die Instanz unshelved wird, wird sie mithilfe des Snapshots neu erstellt.
 Das Snapshot-Image wird gelöscht, wenn die Instanz unshelved oder gelöscht wird.
 
 ## Abrechnung von Shelved Instances
 
-Aus Abrechnungssicht wird bei einer Shelved Instance nur die Root Disk der Instanz weiterhin abgerechnet. CPU und Arbeitsspeicher Ressourcen aus dem Flavor der Instanz werden ab dem Zeitpunkt des Shelvings nicht mehr in Rechnung gestellt und nach dem unshelving automatisch wieder berechnet.
+Bei einer Shelved Instance wird nur die Root Disk der Instanz weiterhin abgerechnet. CPU- und Arbeitsspeicher- Ressourcen aus dem Flavor der Instanz werden ab dem Zeitpunkt des Shelvings nicht mehr in Rechnung gestellt und nach dem unshelving automatisch wieder berechnet.
 
-Shelving hat keine Auswirkungen auf die Auslastung der Quotas im Projekts. Shelved Ressourcen werden nicht in der Quota freigegeben um jederzeit ausreichend Ressourcen für das unshelving der Instanz im Projekt zu gewährleisten.
+Shelving hat keine Auswirkungen auf die Auslastung der Quotas im Projekt. Shelved Ressourcen werden nicht in der Quota freigegeben, um jederzeit ausreichend Ressourcen für das unshelving der Instanz im Projekt zu gewährleisten.

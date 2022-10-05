@@ -12,18 +12,18 @@ grand_parent: Storage
 ## Inhalt:
 
 - [S3cmd](#s3cmd)
-- [S3Browser](#s3browser)
+- [S3 Browser](#s3browser)
 - [Cyberduck](#cyberduck)
 - [Boto3](#boto3)
 
-Zum Hochladen Ihrer Daten wie zum Beispiel (Dokumente, Fotos, Videos, usw.) ist es zunächst notwendig einen [Bucket zu erstellen](/optimist/storage/s3_documentation/createanddeletebucket/).
-Eine Datei kann dabei nur in einem Bucket gespeichert werden.
+Zum Hochladen Ihrer Daten (z.B. Dokumente, Fotos, Videos, usw.) muss zunächst ein [Bucket](/optimist/storage/s3_documentation/createanddeletebucket/) erstellt werden.
+Eine Datei kann nur in einem Bucket gespeichert werden.
 
 ## S3cmd
 
-### Objekt hochladen
+### Hochladen eines Objekts
 
-Um eine Datei hochzuladen, nutzt man folgenden Befehl:
+Nutzen Sie den folgenden Befehl, um eine Datei hochzuladen:
 
 ```bash
 s3cmd put NameDerDatei s3://NameDesBuckets/NameDerDatei
@@ -37,9 +37,9 @@ upload: 'innovo.txt' -> 's3://innovo-test/innovo.txt'  [1 of 1]<font></font>
  95 of 95   100% in    0s   176.63 B/s  done
 ```
 
-### Objekt löschen
+### Löschen eines Objekts
 
-Um eine Datei zu löschen, nutzt man folgenden Befehl:
+Nutzen Sie den folgenden Befehl, um eine Datei zu löschen:
 
 ```bash
 s3cmd del s3://NameDesBuckets/NameDerDatei
@@ -52,51 +52,52 @@ $ s3cmd del s3://innovo-test/innovo.txt<font></font>
 delete: 's3://innovo-test/innovo.txt'
 ```
 
-## S3Browser
+## S3 Browser
 
-### Objekt hochladen
+### Hochladen eines Objekts
 
-Nach dem öffnen von S3Browser, klicken wir auf den gewünschten "Bucket"(1), wähle dann "Upload"(2) und zu letzt "Upload file(s)"(3)
+Nach dem Öffnen von S3 Browser, klicken Sie auf den gewünschten *Bucket* (1), wählen Sie *Upload* (2) und anschließend *Upload file(s)* (3).
 
 ![](attachments/UploadAndDeleteObject1.png)
 
-Hier wählen wir nun die entsprechende Datei(1) aus und klicken auf Öffnen(2).
+Wählen Sie die entsprechende Datei (1) aus und klicken Sie auf *Öffnen* (2).
 
 ![](attachments/UploadAndDeleteObject2.png)
 
-### Objekt löschen
+### Löschen eines Objekts
 
-Um eine Datei zu löschen, wird dieser mit einem linken Mausklick markiert(1). Danach wird auf "Delete"(2) geklickt.
+Um eine Datei zu löschen, markieren Sie diese mit einem linken Mausklick (1) und klicken Sie anschließend auf *Delete* (2).
 
 ![](attachments/UploadAndDeleteObject3.png)
 
-Die darauf folgende Abfrage wird mit "Ja" bestätigt.
+Bestätigen Sie die darauf folgende Abfrage mit *Ja*.
 
 ## Cyberduck
 
-### Objekt hochladen
+### Hochladen eines Objekts
 
-Nach dem Öffnen von Cyberduck, klicken wir auf den gewünschten Bucket(1), klicken dann auf Aktion(2) und dort auf Upload(3).
+Nach dem Öffnen von Cyberduck, klicken Sie auf den gewünschten Bucket (1), anschließend auf *Aktion* (2) und auf *Upload* (3).
 
 ![](attachments/UploadAndDeleteObject4.png)
 
-Hier wählen wir nun unsere Wunsch-Datei und klicken auf Upload.
+Wählen Sie Ihre Wunsch-Datei aus und klicken Sie auf *Upload*.
 
-### Objekt löschen
+### Löschen eines Objekts
 
-Um eine Datei zu löschen, wird dieser mit einem linken Mausklick markiert(1). Gelöscht wird sie dann über "Aktion"(2) und "Löschen"(3).
+Um eine Datei zu löschen, markieren Sie diese mit einem linken Mausklick (1). Löschen Sie dann über *Aktion* (2) und *Löschen* (3) die Datei.
 
 ![](attachments/UploadAndDeleteObject5.png)
 
-Die Bestätigung erfolgt dann über das erneute klicken auf "Löschen".
+Bestätigen Sie die Löschung durch erneutes Klicken auf *Löschen*.
 
 ## Boto3
 
-Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](/optimist/storage/s3_documentation/createanduses3credentials/#boto3)
+Bei boto3 brauchen Sie zunächst die S3 Kennung, damit ein Script nutzbar ist. Details finden Sie unter: [S3 Kennung erstellen und einlesen #boto3](/optimist/storage/s3_documentation/createanduses3credentials/#boto3).
 
-### Objekt hochladen
+### Hochladen eines Objekts
 
-Um nun eine Datei hochzuladen, müssen wir einen Clienten nutzen und den Bucket angeben in welchen die Datei hochgeladen werden soll.
+Um eine Datei hochzuladen, müssen Sie einen Client nutzen und den Bucket angeben, in dem die Datei hochgeladen werden soll.
+
 Eine Option sieht so aus:
 
 ```bash
@@ -107,7 +108,7 @@ s3 = boto3.client('s3')
 s3.upload_file(Bucket='iNNOVO-Test', Key='innovo.txt')
 ```
 
-Ein komplettes Script für boto 3 inkl. Authentifizierung kann so aussehen:
+Ein komplettes Script für boto 3 einschließlich Authentifizierung kann so aussehen:
 
 ```python
 #!/usr/bin/env/python
@@ -130,10 +131,11 @@ s3 = boto3.client('s3')
 s3.upload_file(Bucket='iNNOVO-Test', Key='innovo.txt')
 ```
 
-### Objekt löschen
+### Löschen eines Objekts
 
-Wie beim hochladen einer Datei, wird zunächst ein Client benötigt um dann die Datei zu löschen.
-Dafür geben wir neben der Datei selber, auch noch den Bucket an, in dem die Datei gespeichert ist.
+Wie beim Hochladen einer Datei, wird zunächst ein Client benötigt und dann die Datei gelöscht.
+Dafür geben wir neben der Datei auch den Bucket an, in dem die Datei gespeichert ist.
+
 Eine Option sieht so aus:
 
 ```bash
@@ -144,7 +146,7 @@ s3 = boto3.client('s3')
 s3.delete_object(Bucket='iNNOVO-Test', Key='innovo.txt')
 ```
 
-Ein komplettes Script für boto 3 inkl. Authentifizierung kann so aussehen:
+Ein komplettes Script für boto 3 einschließlich Authentifizierung kann so aussehen:
 
 ```python
 #!/usr/bin/env/python

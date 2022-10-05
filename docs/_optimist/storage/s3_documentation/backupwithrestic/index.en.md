@@ -1,5 +1,5 @@
 ---
-title: Secure Backups with Restic and Rclone
+title: Secure backups with restic and rclone
 lang: en
 permalink: /optimist/storage/s3_documentation/backupwithrestic/
 nav_order: 3170
@@ -13,9 +13,9 @@ Restic is a very simple and powerful file-level backup solution, which is rapidl
 
 When performing file-level backups of a node into S3, the backup software needs write permissions for the S3 bucket.
 
-But if an attacker gains access to the machine, he can also destroy the backups in the bucket, since the S3 credentials are present on the compromised system.
+But if attackers gain access to the machine, they can also destroy the backups in the bucket, since the S3 credentials are present on the compromised system.
 
-The solution can be as simple as limiting the level of access of the backup software to the bucket. Unfortunately, this isn't trivial with S3.
+The solution can be as simple as limiting the level of access of the backup software to the bucket. Unfortunately, this is not trivial with S3.
 
 ## Background
 
@@ -24,7 +24,7 @@ The solution can be as simple as limiting the level of access of the backup soft
 * READ - Allows grantee to list the objects in the bucket
 * WRITE - Allows grantee to create, overwrite, and delete any object in the bucket
 
-The limitations of ACLs were addressed by the access policy permissions (ACP). We can attach a no-delete policy to the bucket, e.g.
+The limitations of ACLs were addressed by the access policy permissions (ACP). We can attach a no-delete policy to the bucket, for example:
 
 ```json
 {
@@ -48,7 +48,7 @@ The limitations of ACLs were addressed by the access policy permissions (ACP). W
 }
 ```
 
-Unfortunately, the S3 protocol itself wasn't designed with the concept of WORM (write once read many) backups in mind. Access policy permissions do not differentiate between changing an existing object (which would effectively allow deleting it) and creating a new object.
+Unfortunately, the S3 protocol itself was not designed with the concept of WORM (write once read many) backups in mind. Access policy permissions do not differentiate between changing an existing object (which would effectively allow deleting it) and creating a new object.
 
 Attaching the above policy on a bucket does not prevent the objects in it from being overwritten.
 
@@ -66,29 +66,29 @@ upload: 'testfile' -> 's3://appendonly-bucket/testfile' [1 of 1]
 
 ## Proposed solution
 
-Since an attacker on a compromised system will always have access to the S3 credentials and every service running on the system - including restic itself, proxies, etc. - we need a second, locked-down VM which can restrict delete operations. Restic can be integrated perfectly with rclone, so we'll use it in this example.
+Since an attacker on a compromised system will always have access to the S3 credentials and every service running on the system - including restic itself, proxies, etc. - we need a second, locked-down VM which can restrict delete operations. Restic can be integrated perfectly with rclone, so we will use it in this example.
 
-### Our environment
+### Our Environment
 
 * `appsrv`: the system which has access to the files we would like to backup
 * `rclonesrv`: the system running the rclone proxy (and nothing else, to minimise the attack surface)
 
 ### Set up the rclone proxy
 
-1. Install rclone on the `rclonesrv`
+1. Install rclone on the `rclonesrv`:
 
     ```bash
     sudo apt install rclone
     ```
 
-1. Create user for rclone
+1. Create user for rclone:
 
     ```bash
     sudo useradd -m rcloneproxy
     sudo su - rcloneproxy
     ```
 
-1. Create rclone backend configuration
+1. Create rclone backend configuration:
 
     ```bash
     mkdir -p .config/rclone
@@ -119,7 +119,7 @@ Since an attacker on a compromised system will always have access to the S3 cred
 
 ### Configure the appserver
 
-1. Generate an SSH-Keypair on `appsrv` with the user you're performing the backup with:
+1. Generate an SSH-Keypair on `appsrv` with the user you are performing the backup with:
 
     ```bash
     ssh-keygen -o -a 256 -t ed25519 -C "$(hostname)-$(date +'%d-%m-%Y')"
@@ -166,24 +166,24 @@ repository b71c391e opened successfully, password is correct
 Remove(<snapshot/2738e9693b>) returned error, retrying after 446.577749ms: blob not removed, server response: 403 Forbidden (403)
 ```
 
-Oh, right, that doesn't work. That was our goal!
+Right, that does not work. That was our goal.
 
 ## Summary
 
-This way,
+This way:
 
-* The rclone proxy doesn't even run on the `rclonesrv` as a service. It will just be spawned on demand, for the duration of the restic operation. Communication happens over HTTP2 over stdin/stdout, in an encrypted SSH tunnel.
+* The rclone proxy does not even run on the `rclonesrv` as a service. It will just be spawned on demand, for the duration of the restic operation. Communication happens over HTTP2 over stdin/stdout, in an encrypted SSH tunnel.
 * Since rclone is running with `--append-only`, it is not possible to delete (or overwrite) snapshots in the S3 bucket.
 * All data (except credentials) is encrypted/decrypted locally, then sent/received via `rclonesrv` to/from S3.
 * All the credentials are **only** stored on `rclonesrv` to communicate with S3.
 
-Since the command is hard-coded into the SSH configuration for the user's SSH key, there is no way to use the the keys to get access to the rclone proxy.
+Since the command is hard-coded into the SSH configuration for the user's SSH key, there is no way to use the keys to get access to the rclone proxy.
 
 ## Some more thoughts
 
-The advantages of this construct are probably clear already by now. Furthermore,
+The advantages of this construct are probably clear already by now. Furthermore:
 
 * Managing snapshots (both manually and with a retention policy) is only possible on the rclone proxy.
 * A single rclone proxy VM (or even a docker container on an isolated VM) can serve multiple backup clients.
 * It is highly recommended to use one key for every server which backs up data.
-* If you'd like to use more than one repository out of a node, you'll need new SSH keys for them. You can then specify which key to use with `-i ~/.ssh/id_ed25519_another_repo` in the `rclone.program` arguments just like you would with SSH.
+* If you like to use more than one repository out of a node, you need new SSH keys for them. You can then specify which key to use with `-i ~/.ssh/id_ed25519_another_repo` in the `rclone.program` arguments just like you would with SSH.

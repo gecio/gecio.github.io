@@ -1,5 +1,5 @@
 ---
-title: Versionierung aktivieren/deaktivieren und wie eine versioniertes Objekt gelöscht wird
+title: Versionierung aktivieren/deaktivieren und ein versioniertes Objekt löschen
 lang: de
 permalink: /optimist/storage/s3_documentation/versioning/
 nav_order: 3140
@@ -7,92 +7,90 @@ parent: S3 Kompatiblen Objekt Storage
 grand_parent: Storage
 ---
 
-# Versionierung aktivieren/deaktivieren und wie eine versioniertes Objekt gelöscht wird
+# Versionierung aktivieren/deaktivieren und ein versioniertes Objekt löschen
 
 ## Inhalt:
 
 - [S3cmd](#s3cmd)
-- [S3Browser](#s3browser)
+- [S3 Browser](#s3browser)
 - [Cyberduck](#cyberduck)
 - [Boto3](#boto3)
 
-Versionierung ermöglicht es, mehrere Versionen eines Objekts in einem Bucket aufzubewahren.
-So können Beispielsweise innovo.txt (Version 1) und innovo.txt (Version 2) in einem einzigen Bucket speichern.
+Durch Versionierung können mehrere Versionen eines Objekts in einem Bucket aufbewahrt werden.
+So können Sie beispielsweise `innovo.txt` (Version 1) und `innovo.txt` (Version 2) in einem einzigen Bucket speichern.
 Die Versionierung kann Sie vor den Folgen von unbeabsichtigtem Überschreiben oder Löschen bewahren.
 
 ## S3cmd
 
-Mit S3cmd ist es nicht möglich die Versionierung einzuschalten und/oder versionierte Dateien zu löschen.
+Mit S3cmd ist es nicht möglich, die Versionierung zu aktivieren oder versionierte Dateien zu löschen.
 
-## S3Browser
+## S3 Browser
 
-### Versionierung einschalten
+### Versionierung aktivieren
 
-Um die Versionierung zu aktivieren, markieren wir den gewünschten Bucket(1).
-Machen auf den Bucket einen rechten Mausklick und klicken dann auf "Edit Versioning Settings"(2).
+Um die Versionierung zu aktivieren, markieren Sie den gewünschten Bucket (1) mit einem rechten Mausklick. Klicken Sie dann auf *Edit Versioning Settings* (2).
 
 ![](attachments/Versioning1.png)
 
-Im sich öffnenden Fenster klicken wir in die Checkbox von "Enable versioning for bucket"(1) und bestätigen dies mit "OK"(2).
+Markieren Sie in dem sich öffnenden Fenster die Checkbox von *Enable versioning for bucket* (1). Bestätigen Sie mit *OK* (2).
 
 ![](attachments/Versioning2.png)
 
 ### Versionierung deaktivieren
 
-Um die Versionierung zu deaktivieren, markieren wir den gewünschten Bucket(1).
-Klicken dann mit einem rechten Mausklick auf den Bucket und dann auf "Edit Versioning Settings"(2).
+Um die Versionierung zu deaktivieren, markieren Sie den gewünschten Bucket (1) mit einem rechten Mausklick. Klicken Sie dann auf *Edit Versioning Settings* (2).
 
 ![](attachments/Versioning3.png)
 
-Im sich öffnenden Fenster entfernen wir die Checkbox bei "Enable versioning for bucket"(1) und bestätigen dies mit "OK"(2).
+Entfernen Sie im sich öffnenden Fenster die Checkbox bei *Enable versioning for bucket* (1). Bestätigen Sie mit *OK* (2).
 
 ![](attachments/Versioning4.png)
 
 ### Versionierte Datei löschen
 
-Dies ist in der Free-Version von S3Browser nicht möglich.
+Dies ist in der Free-Version von S3 Browser nicht möglich.
 
 ## Cyberduck
 
 Um die verschiedenen Version einer Datei zu sehen, müssen versteckte Dateien angezeigt werden.
-Diese Option findet man unter Darstellung(1) → Versteckte Dateien anzeigen(2)
+Diese Option finden Sie unter *Darstellung* (1) → *Versteckte Dateien anzeigen* (2).
 
 ![](attachments/Versioning5.png)
 
-### Versionierung einschalten
+### Versionierung aktivieren
 
-Nach dem Öffnen von Cyberduck, klicken wir auf eine Datei, wo wir die Versionierung(1) für aktivieren wollen.
-Danach auf Aktion(2) und auf Info(3).
+Nach dem Öffnen von Cyberduck, klicken Sie auf die Datei, für die Sie die Versionierung (1) aktivieren wollen.
+Klicken Sie anschließend auf *Aktion* (2) und auf *Info* (3).
 
 ![](attachments/Versioning6.png)
 
-Danach öffnet sich das folgende Fenster, hier setzen wir den Haken bei "Bucket Versionierung"(1):
+Danach öffnet sich das folgende Fenster. Setzen Sie hier den Haken bei *Bucket Versionierung* (1):
 
 ![](attachments/Versioning7.png)
 
 ### Versionierung deaktivieren
 
-Um die Versionierung zu deaktivieren, markieren wir wieder eine Datei(1), gehen auf Aktion(2) und auf Info(3).
+Um die Versionierung zu deaktivieren, markieren Sie wieder eine Datei (1). Gehen Sie dann auf *Aktion* (2) und *Info* (3).
 
 ![](attachments/Versioning8.png)
 
-In dem sich öffnenden Fenster wird der Haken bei "Bucket Versionierung" entfernt.
+Entfernen Sie in dem sich öffnenden Fenster den Haken bei *Bucket Versionierung*.
 
 ![](attachments/Versioning9.png)
 
 ### Versionierte Datei löschen
 
-Hier wird einfach die zu löschende Datei markiert(1) und über Aktion(2) → Löschen(3) entfernt.
+Markieren Sie die zu löschende Datei (1) und entfernen Sie diese über *Aktion* (2) → *Löschen* (3).
 
 ![](attachments/Versioning10.png)
 
 ## Boto3
 
-Bei boto3 brauchen wir zunächst die S3 Kennung, damit ein Script nutzbar ist. Für Details: [S3 Kennung erstellen und einlesen #boto3](/optimist/storage/s3_documentation/createanduses3credentials/#boto3).
+Bei boto3 brauchen Sie zunächst die S3 Kennung, damit ein Script nutzbar ist. Details finden Sie unter: [S3 Kennung erstellen und einlesen #boto3](/optimist/storage/s3_documentation/createanduses3credentials/#boto3).
 
-### Versionierung einschalten
+### Versionierung aktivieren
 
-Um nun einen Bucket zu erstellen, müssen wir einen Clienten nutzen und den Bucket dann erstellen.
+Um einen Bucket zu erstellen, müssen Sie einen Client nutzen und anschließend den Bucket erstellen.
 Eine Option sieht so aus:
 
 ```bash
@@ -103,7 +101,7 @@ bucket = s3.Bucket('iNNOVO-Test')
 bucket.configure_versioning(True)
 ```
 
-Ein komplettes Script für boto 3 inkl. Authentifizierung kann so aussehen:
+Ein komplettes Script für boto 3 einschließlich Authentifizierung kann so aussehen:
 
 ```python
 #!/usr/bin/env/python
@@ -128,7 +126,7 @@ bucket.configure_versioning(True)
 
 ### Versionierung deaktivieren
 
-Wie bei der Aktivierung der Versionierung wird zunächst der Bucket benötigt um dann die Versionierung zu deaktivieren.
+Wie bei der Aktivierung der Versionierung benötigen Sie zunächst den Bucket, um die Versionierung zu deaktivieren.
 Eine Option sieht so aus:
 
 ```bash
@@ -139,7 +137,7 @@ bucket = s3.Bucket('iNNOVO-Test')
 bucket.configure_versioning(False)
 ```
 
-Ein komplettes Script für boto 3 inkl. Authentifizierung kann so aussehen:
+Ein komplettes Script für boto 3 einschließlich Authentifizierung kann so aussehen:
 
 ```python
 #!/usr/bin/env/python
@@ -164,7 +162,7 @@ bucket.configure_versioning(False)
 
 ### Versioniertes Objekt löschen
 
-Um ein versioniertes Objekt komplett zu löschen, ist folgender Befehl hilfreich:
+Um ein versioniertes Objekt komplett zu löschen, ist der folgende Befehl hilfreich:
 
 ```bash
 ## Angabe des Buckets in dem das versionierte Objekt gelöscht werden soll

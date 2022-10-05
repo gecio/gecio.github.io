@@ -7,17 +7,17 @@ parent: S3 Kompatiblen Objekt Storage
 grand_parent: Storage
 ---
 
-# Swift - Serving Static Websites
+# Swift - Serving a Static Website
 
 ## Einführung
 
-Mit Hilfe der Swift-CLI ist es möglich, die Daten in Containern als statische Website auszuliefern. Die folgende Anleitung beschreibt die wichtigsten Schritte, um damit zu beginnen, und enthält auch ein Beispiel.
+Mit Hilfe der Swift-CLI können die Daten in Containern als statische Website ausgeliefert werden. Die folgende Anleitung enthält die wichtigsten Schritte und ein Beispiel.
 
 ## Erste Schritte
 
 ### Erstellen eines Containers
 
-Zunächst erstellen wir einen Container mit dem Namen `example-webpage`, den wir als Basis für diese Anleitung verwenden werden:
+Zunächst wird ein Container mit dem Namen `example-webpage` erstellt, der als Basis für diese Anleitung verwendet wird:
 
 ```bash
 swift post example-webpage
@@ -25,39 +25,39 @@ swift post example-webpage
 
 ### Den Container öffentlich lesbar machen
 
-Als nächstes müssen wir sicherstellen, dass der Container öffentlich lesbar ist. Weitere Informationen zum Sichern von Containern und zum Festlegen von Bucket-Richtlinien finden Sie [hier](/optimist/storage/s3_documentation/security/):
+Als nächstes wird sichergestellt, dass der Container öffentlich lesbar ist. Weitere Informationen zum Sichern von Containern und zum Festlegen von Bucket-Richtlinien finden Sie [hier](/optimist/storage/s3_documentation/security/):
 
 ```bash
 swift post -r '.r:*' example-webpage
 ```
 
-### Indexdatei der Seite setzen
+### Setzen der Indexdatei der Seite
 
-Setzen Sie die Indexdatei. In diesem Fall wird index.html die Standarddatei sein, die angezeigt wird, wenn die Seite erscheint:
+Nun wird die Indexdatei gesetzt. In diesem Fall ist `index.html` die Standarddatei und wird angezeigt, wenn die Seite erscheint:
 
 ```bash
 swift post -m 'web-index:index.html' example-webpage
 ```
 
-### Dateiliste aktivieren
+### Aktivieren der Dateiliste
 
-Optional können wir auch die Dateiliste aktivieren. Wenn Sie mehrere Downloads bereitstellen müssen, ist es sinnvoll, die Verzeichnisliste zu aktivieren:
+Optional kann auch die Dateiliste aktiviert werden. Wenn mehrere Downloads bereitgestellt werden müssen, ist es sinnvoll, die Verzeichnisliste zu aktivieren:
 
 ```bash
 swift post -m 'web-listings: true' example-webpage
 ```
 
-### CSS für Dateilisten aktivieren
+### Aktivieren von CSS für Dateilisten
 
-Aktivieren Sie ein benutzerdefiniertes Listing-Stylesheet:
+Mit dem folgenden Befehl wird ein benutzerdefiniertes Listing-Stylesheet aktiviert:
 
 ```bash
 swift post -m 'web-listings-css:style.css' example-webpage
 ```
 
-### Fehlerseiten einrichten
+### Einrichten von Fehlerseiten
 
-Schließlich sollten wir eine benutzerdefinierte Fehlerseite einbinden:
+Mit dem folgenden Befehl wird eine benutzerdefinierte Fehlerseite eingebunden:
 
 ```bash
 swift post -m 'web-error:404error.html' example-webpage
@@ -65,7 +65,7 @@ swift post -m 'web-error:404error.html' example-webpage
 
 ## Beispiel-Webseite
 
-Lassen Sie uns die Schritte rekapitulieren, die wir bis jetzt unternommen haben, um statische Webseiten zu aktivieren:
+Hier ist nochmal eine Zusammenfassung der Schritte, wie statische Webseiten aktiviert werden können:
 
 ```bash
 swift post example-webpage
@@ -76,11 +76,11 @@ swift post -m 'web-listings-css:style.css' example-webpage
 swift post -m 'web-error:404error.html' example-webpage
 ```
 
-Wenn die obigen Schritte abgeschlossen sind, können wir damit beginnen, unsere statische Webseite anzupassen. Das Folgende demonstriert eine schnelle Einrichtung unter Verwendung unseres Containers `example-webpage`
+Nachdem die obigen Schritte abgeschlossen sind, kann die statische Webseite angepasst werden. Nachfolgend wird gezeigt, wie man schnell eine Seite mit dem Container `example-webpage` einrichten kann.
 
 ### Anpassen der Seiten index.html, page.html und 404error.html
 
-Dies wird als Startseite dienen, die einen Link zu einer sekundären Seite erstellt.
+Diese Seite dient als Startseite und erstellt einen Link zu einer sekundären Seite.
 
 ```html
 <!-- index.html -->
@@ -100,7 +100,7 @@ Die nächste Seite (page.html) zeigt ein Bild namens `sample.png` an:
 </html>
 ```
 
-Wir können auch benutzerdefinierte Fehlerseiten hinzufügen. Beachten Sie, dass derzeit nur die Fehler 401 (Nicht autorisiert) und 404 (Nicht gefunden) unterstützt werden. Das folgende Beispiel demonstriert die Erstellung einer 404-Fehlerseite:
+Es  können auch benutzerdefinierte Fehlerseiten hinzugefügt werden. Derzeit werden nur die Fehler 401 (Nicht autorisiert) und 404 (Nicht gefunden) unterstützt. Das folgende Beispiel zeigt, wie eine 404-Fehlerseite erstellt wird:
 
 ```html
 <!-- 404error.html -->
@@ -113,7 +113,7 @@ Wir können auch benutzerdefinierte Fehlerseiten hinzufügen. Beachten Sie, dass
 
 ### Hochladen der Dateien index.html und page.html
 
-Nachdem die Inhalte der Dateien erstellt wurden, laden Sie die Dateien mit den folgenden Befehlen hoch:
+Nachdem die Inhalte der Dateien erstellt wurden, können die Dateien mit den folgenden Befehlen hochgeladen werden:
 
 ```bash
 swift upload beispiel-webseite index.html
@@ -124,16 +124,16 @@ swift upload beispiel-webseite 404error.html
 
 ### Betrachten der Website
 
-Wenn alle oben genannten Schritte abgeschlossen sind, können wir nun unsere neu erstellte Website betrachten. Den Link zur Website finden Sie im Optimist Dashboard > Object Store > Containers über den abgebildeten Link.
+Wenn alle oben genannten Schritte abgeschlossen sind, kann man die neu erstellte Website anschauen. Der Link zur Website befindet sich im *Optimist Dashboard* → *Object Store* → *Containers* über den abgebildeten Link.
 
-Wenn Sie auf den Link klicken, wird unsere neu erstellte Website angezeigt:
+Durch Klicken auf den Link wird die neu erstellte Website angezeigt:
 
 ![](attachments/Webpage01.png)
 
-Klicken Sie auf "here", um zu der Seite zu navigieren, auf der wir unser Beispielbild hochgeladen haben:
+Durch Klicken auf *here*, navigiert man zu der Seite, auf der das Beispielbild hochgeladen wurde:
 
 ![](attachments/Webpage02.png)
 
-Für den Fall, dass wir versuchen, zu einer Seite zu navigieren, die nicht existiert, wird unsere benutzerdefinierte 404-Seite angezeigt:
+Für den Fall, dass man zu einer Seite navigiert, die nicht existiert, wird die benutzerdefinierte 404-Seite angezeigt:
 
 ![](attachments/Webpage03.png)

@@ -31,5 +31,6 @@ Nachfolgend eine Übersicht der drei Volume-Typen:
 
 ## Auswählen eines Volume-Typs
 
-Sie können beim Erstellen eines Volumes mit dem folgenden Befehl einen der drei Volume-Typen auswählen (Wenn nicht anders angegeben, wird immer der Typ „Standard“ verwendet):
+Sie können beim Erstellen eines Volumes mit dem folgenden Befehl einen der drei Volume-Typen auswählen. Wenn nicht anders angegeben, wird der Typ *Standard* verwendet.
+
 `$ openstack volume create <volume-name> --size 10 --type high-iops`

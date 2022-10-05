@@ -10,28 +10,28 @@ parent: Networking
 
 ## Motivation
 
-The question often arises of whether it is possible to share a network between two OpenStack projects. In this document, we will explain what is needed and how this can be implemented.
+The question often arises as to whether it is possible to share a network between two OpenStack projects. Here we explain the requirements and how it can be implemented.
 
 ## Share Network
 
 ### If access to both projects is available:
 
-In order to share the network, we needto use the [OpenStackClient](https://docs.openstack.org/python-openstackclient/latest/), the Project ID into which the network is to be shared, as well as the Network ID of the network to be shared.
+To share the network, you need to use the [OpenStackClient](https://docs.openstack.org/python-openstackclient/latest/), the Project ID into which the network is to be shared, as well as the Network ID of the network to be shared.
 
-The Project ID can be found in the output under "id" if we use the following command:
+You can find the Project ID in the output under "id" using the following command:
 
 ```bash
 openstack project show <Name of Project> -f value -c id
 ```
 
-Next, we need the Network ID of the network to be shared. We can find this in the output under "id" if the following command is used:
+Next, you need the Network ID of the network to be shared. You can find this in the output under "id" using the following command:
 
 ```bash
 openstack network show <Name of Network> -f value -c id
 ```
 
 With the obtained IDs, the network can now be shared into the corresponding project.
-To do this, we use Role-Based Access Control (RBAC):
+To do this, use Role-Based Access Control (RBAC):
 
 ```bash
 openstack network rbac create --type network --action access_as_shared --target-project <ID of Project> <ID of Network to share>
@@ -39,31 +39,31 @@ openstack network rbac create --type network --action access_as_shared --target-
 
 ### If access to both projects is not available:
 
-In this case, the network can only be shared by support after the approval of the other project owner.
+In this case, the network can only be shared by the Support team after the approval of the other project owner.
 
-To share a network with a project, please send us an e-mail to [support@gec.io](mailto:support@gec.io) with the following information:
+To share a network with a project, send an e-mail to [support@gec.io](mailto:support@gec.io) with the following information:
 
 - Name and ID of the network to be shared
-- Name and ID of the project in which the network should be visible
+- Name and ID of the project where the network should be visible
 
 ## Important information about shared networks
 
-When accessing a shared network, there are limitations that must be considered. One limitation is that no remote security groups can be used.
+When accessing a shared network, there are limitations to consider. One limitation is that you cannot use remote security groups.
 Additionally, there is no insight into ports and IP addresses from the other project.
-Therefore, one can also specify any specific IP addresses for new ports in a subnet (in the shared network), as it would be possible to find IPs that are already in use.
+Therefore, you can also specify any specific IP addresses for new ports in a subnet (in the shared network), as it would be possible to find IPs that are already in use.
 
-In order to make use of the shared network, there is the option to create a new port. This then receives a random IP address to use, for example, to add a router through this port.
+To use the shared network, there is the option to create a new port. This then receives a random IP address to use, for example, to add a router through this port.
 This is not possible in the Horizon dashboard; we need to use the [OpenStackClient](https://docs.openstack.org/python-openstackclient/latest/).
 
-Please ensure that no spaces or special characters are used in names, as using these can lead to problems.
+Make sure not to use  spaces or special characters in names, since using these could lead to problems.
 
-First, we create the port and specify the shared network there:
+First, you create the port and specify the shared network there:
 
 ```bash
 openstack port create --network <ID of shared Networks> <Name of Ports>
 ```
 
-Now, for example, a router can be created and then mapped to the newly created port:
+Now, for example, you can create a router and then map to the newly created port:
 
 ```bash
 ##Creation of the router

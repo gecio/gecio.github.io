@@ -13,13 +13,13 @@ Compute Localstorage für Ihre Instanzen
 Was genau ist Compute Localstorage?
 -----
 
-Mit Localstorage ist hier gemeint das sich der Storage Ihrer Instanzen direkt auf dem Hypervisor (Server) befindet. Das Localstorage feature, nutzbar über unsere l1 Flavors, sind für Anwendungen gedacht die geringe Latenz erfordern.
+Beim Localstorage befindet sich der Storage Ihrer Instanzen direkt auf dem Hypervisor (Server). Die Localstorage Funktion ist   über unsere l1 Flavors verfügbar und für Anwendungen vorgesehen, die eine geringe Latenz erfordern.
 
 Datensicherheit und Verfügbarkeit
 -----
 
-Da Ihre Daten direkt durch Ihre Instanz auf dem Storage des lokalen Hypervisors gebunden ist, sollten Sie darauf achten diese Daten über ein HA Konzept, über die gegebenen GEC Availability Zones zu verteilen. Die Hypervisoren unterliegen unseren Compliance Patch Cycle wo wir die Hypervisoren nacheinander durchbooten müssen. Dies wird innerhalb einer Availability Zone, ein Server nach dem andrern, innernhalb eines festgelegten Maintainace Window geschehen.
-Das Storage Array ist gegen Ausfall Einzelkomponenten geschützt, dies bezieht sich jedoch nur innerhalb des einzelnen Hypervisors. Beim ersetzen von Einzelkomponenen, durch Hardwaredefekt, kann es kurzfristig zur eingeschränkten Verfügbarkeit und Performance kommen bis der Zustand wiederhergestellt ist.
+Da Ihre Daten direkt durch Ihre Instanz auf dem Storage des lokalen Hypervisors gebunden sind, empfiehlt es sich, diese Daten mithilfe eines HA Konzepts über die gegebenen GEC Availability Zonen zu verteilen. Die Hypervisor unterliegen unserem Compliance Patch Zyklus, bei dem  die Hypervisoren nacheinander gebootet werden müssen. Dabei wird innerhalb einer Availability Zone und innerhalb eines festgelegten Wartungsfensters ein Server nach dem anderen gebootet.
+Das Storage Array ist gegen den Ausfall von Einzelkomponenten geschützt. Dies bezieht sich jedoch nur innerhalb eines einzelnen Hypervisors. Beim Ersetzen von Einzelkomponenten aufgrund eines Hardwaredefekts, kann es bis zur Wiederherstellung kurzfristig zu einer eingeschränkten Verfügbarkeit und Performance kommen.
 
 **Standard Maintenance**
 <!-- TODO: Wartungsfenster definieren -->
@@ -32,21 +32,21 @@ Das Storage Array ist gegen Ausfall Einzelkomponenten geschützt, dies bezieht s
 Openstack Features
 -----
 
-Openstack bietet Ihnen viele Features im Umgang mit Ihren Instanzen, wie z.B. resize, shelving, snapshot. Wenn Sie für Ihre Instanzen l1 Flavors verwenden möchten bitte beachten Sie dabei folgendes
+OpenStack bietet Ihnen viele Funktionen für  Ihre Instanzen, wie z.B. resize, shelving oder snapshot. Wenn Sie für Ihre Instanzen l1 Flavors verwenden möchten, beachten Sie bitte folgendes:
 
-_Resize:_ Die Option Resize wird Ihnen angezeit, aber es ist technisch nicht möglich eine Instanz basierend auf einem l1 Flavor zu resizen. Sie können jedoch dem jedoch entgegengehen in dem Sie ein Cluster Setup (Applicationsbezogen) mit l1 Flavors machen, größere l1 Flavors parallel starten und Ihre Daten von den alten l1 auf die neuen l1 Flavors rollen.
+_Resize:_ Die Option Resize wird Ihnen angezeigt, aber technisch ist es nicht möglich, eine auf einem l1 Flavor basierende Instanz zu resizen. Sie können das umgehen, in dem Sie einen Cluster (Applikationsbezogen) mit l1 Flavors aufsetzen, größere l1 Flavors parallel starten und Ihre Daten von den alten l1 Flavors auf die neuen l1 Flavors rollen.
 
-_Shelving/Snapshoting:_ Beide features sind möglich, aber aufgrund der disk size innerhalb der l1 Flavors raten wir davon ab, weil der zugehörige Upload lange dauern wird. Hier Empfieht sich das nutzen Ihrer externen Backup Lösung Applicationsbezogen.
+_Shelving/Snapshoting:_ Beide Features sind möglich, aber aufgrund der Disk Size innerhalb der l1 Flavors raten wir wegen der langen Uploadzeiten davon ab. Hier empfiehlt es sich, die für die Applikation vorgesehene externe Backup-Lösung zu nutzen.
 
-Löschung der Instanz
+Löschen der Instanz
 -----
 
-Bei der Löschung Ihrer Instanz werden von unserem System Ihre Daten mehrfach überschrieben wie es in unserer Policy beschrieben ist.
+Beim Löschen Ihrer Instanz werden von unserem System wie in unserer Policy beschrieben, Ihre Daten mehrfach überschrieben.
 
 Apendix: Flavor Benchmarks
 -----
 
-Als Entscheidungshilfe welcher Flavor für Sie der richtige ist haben wir ausgibige Benchmarks erstellen lassen. Dies sind die maximal zu erreichende (bis zu) Werte. Die Benchmarks wurden auf komplett leeren Instanzen gemacht, d.h. kein laufender Prozess außer FIO.
+Als Entscheidungshilfe welcher Flavor für Sie der richtige ist, haben wir ausgiebige Benchmarks erstellen lassen. Dies sind die maximal zu erreichenden (bis zu) Werte. Die Benchmarks wurden auf leeren Instanzen, also ohne laufendem Prozess außer FIO, gemacht.
 
 **Sequencial Write**
 

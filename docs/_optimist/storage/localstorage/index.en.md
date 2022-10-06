@@ -17,7 +17,7 @@ With Localstorage, the storage of your instances is located directly on the hype
 
 Since your data is directly bound yb your instance on our local hypervisor storage, we recommend that you distribute this data via a HA concept, over the provided GEC Availability Zones. The hypervisors are subject to our compliance patch cycle where we must boot through the hypervisors one by one. This will be performed per Availability Zone, one server at a time, within a defined Maintainace Window.
 
-**Standard Maintainance Windows**
+## Standard Maintainance Windows
 
 | Window | Availability Zone | Months | Weekly | Day | Time |
 |:---|---|---|---|---|---:|

@@ -7,22 +7,18 @@ parent: Storage
 has_children: false
 ---
 
-Compute Localstorage für Ihre Instanzen
-=================================================
+# Compute Localstorage für Ihre Instanzen
 
-Was genau ist Compute Localstorage?
------
+## Was genau ist Compute Localstorage?
 
 Beim Localstorage befindet sich der Storage Ihrer Instanzen direkt auf dem Hypervisor (Server). Die Localstorage Funktion ist   über unsere l1 Flavors verfügbar und für Anwendungen vorgesehen, die eine geringe Latenz erfordern.
 
-Datensicherheit und Verfügbarkeit
------
+## Datensicherheit und Verfügbarkeit
 
 Da Ihre Daten direkt durch Ihre Instanz auf dem Storage des lokalen Hypervisors gebunden sind, empfiehlt es sich, diese Daten mithilfe eines HA Konzepts über die gegebenen GEC Availability Zonen zu verteilen. Die Hypervisor unterliegen unserem Compliance Patch Zyklus, bei dem  die Hypervisoren nacheinander gebootet werden müssen. Dabei wird innerhalb einer Availability Zone und innerhalb eines festgelegten Wartungsfensters ein Server nach dem anderen gebootet.
 Das Storage Array ist gegen den Ausfall von Einzelkomponenten geschützt. Dies bezieht sich jedoch nur innerhalb eines einzelnen Hypervisors. Beim Ersetzen von Einzelkomponenten aufgrund eines Hardwaredefekts, kann es bis zur Wiederherstellung kurzfristig zu einer eingeschränkten Verfügbarkeit und Performance kommen.
 
-**Standard Wartungsfenster**
-<!-- TODO: Wartungsfenster definieren -->
+## Standard Wartungsfenster
 
 | Fenster | Availability Zone | Monat | Wöchentlich | Tag | Zeit |
 |:---|---|---|---|---|---:|
@@ -30,8 +26,7 @@ Das Storage Array ist gegen den Ausfall von Einzelkomponenten geschützt. Dies b
 | 2 | IX1 | Februar, Mai, August, November | 25% der Hypervisors | Mittwoch | 10:00 Uhr - 15:00 Uhr |
 | 3 | IX2 | März, Juni, September, Dezember | 25% der Hypervisors | Mittwoch | 10:00 Uhr - 15:00 Uhr |
 
-Openstack Features
------
+## Openstack Features
 
 OpenStack bietet Ihnen viele Funktionen für  Ihre Instanzen, wie z.B. resize, shelving oder snapshot. Wenn Sie für Ihre Instanzen l1 Flavors verwenden möchten, beachten Sie bitte folgendes:
 
@@ -39,7 +34,6 @@ _Resize:_ Die Option Resize wird Ihnen angezeigt, aber technisch ist es nicht m�
 
 _Shelving/Snapshotting:_ Beide Features sind möglich, aber aufgrund der Disk Size innerhalb der l1 Flavors raten wir wegen der langen Uploadzeiten davon ab. Hier empfiehlt es sich, die für die Applikation vorgesehene externe Backup-Lösung zu nutzen.
 
-Löschen der Instanz
------
+## Löschen der Instanz
 
 Beim Löschen Ihrer Instanz werden von unserem System wie in unserer Policy beschrieben, Ihre Daten mehrfach überschrieben.

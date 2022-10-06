@@ -19,8 +19,8 @@ This feature may be used as part of an instance life cycle process or to conserv
 {: .alert .alert-error }
 
 **WARNING**  
-This does not apply to l1 (localstorage) flavors  
-For more information please see [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features)
+This does not apply to l1 (localstorage) flavors.  
+For more information please see [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features).
 
 ## Shelve an Instance
 

@@ -84,8 +84,8 @@ The current flavor is shown. To choose the new flavor, use the "Select a new fla
 {: .alert .alert-error }
 
 **WARNING**  
-This does not apply to l1 (localstorage) flavors  
-For more information please see [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features)
+This does not apply to l1 (localstorage) flavors.  
+For more information please see [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features).
 
 ## Why are the logs of the compute instance in the optimist dashboard empty?
 

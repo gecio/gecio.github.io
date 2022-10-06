@@ -84,8 +84,8 @@ Sie mit "Resize".
 
 {: .alert .alert-error }
 
-**WARNUNG**
-Dies gilt nicht für l1 (localstorage) Flavors.
+**WARNUNG**  
+Dies gilt nicht für l1 (localstorage) Flavors.  
 Weitere Informationen finden Sie unter [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features).
 ## Warum ist das Logfile der Compute Instanz im Optimist Dashboard leer?
 

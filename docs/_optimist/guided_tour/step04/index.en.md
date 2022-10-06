@@ -80,7 +80,7 @@ After you have installed `virtualenv`, you can create the virtual environment.
 
 ```bash
 $ virtualenv ~/.virtualenvs/openstack
-New python executable in /Users/iNNOVO/.virtualenvs/openstack/bin/python
+New python executable in /Users/GEC/.virtualenvs/openstack/bin/python
 Installing setuptools, pip, wheel...done.
 ```
 
@@ -119,7 +119,7 @@ Now you can check that everything works. It should look like this:
 
 ```bash
 $ type -a openstack
-openstack is /home/iNNOVO/.virtualenvs/openstack/bin/openstack
+openstack is /home/GEC/.virtualenvs/openstack/bin/openstack
 ```
 
 ### Windows
@@ -160,7 +160,7 @@ Now you can create a virtual environment where you install the OpenStack client.
 
 ```bash
 $ virtualenv ~/.virtualenvs/openstack
-New python executable in /Users/iNNOVO/.virtualenvs/openstack/bin/python
+New python executable in /Users/GEC/.virtualenvs/openstack/bin/python
 Installing setuptools, pip, wheel...done.
 ```
 
@@ -201,7 +201,7 @@ Now you can check that everything works. It should look like this:
 
 ```bash
 $ type -a openstack
-openstack is /home/iNNOVO/.virtualenvs/openstack/bin/openstack
+openstack is /home/GEC/.virtualenvs/openstack/bin/openstack
 ```
 
 ## Credentials

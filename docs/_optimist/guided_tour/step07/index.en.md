@@ -15,8 +15,7 @@ In the previous steps, you learned everything you need to create a VM.
 In general, it is best to create VMs as part of a stack, and to create
 these stacks with *Heat*, or other automation tools like *Terraform*.
 
-To ensure that you know the basics, this step deals with creating a single VM
-manually.
+To ensure that you know the basics, this step deals with creating a single VM manually.
 
 ## Installation
 

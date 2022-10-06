@@ -6,26 +6,26 @@ nav_order: 1090
 parent: Guided Tour
 ---
 
-Schritt 9: Die erste Security-Group
-===================================
+# Schritt 9: Die erste Security-Group
 
-Vorwort
--------
+## Einführung
 
 Standardmäßig ist jeglicher Zugriff auf eine Instanz von außerhalb
-verboten. Um Zugriff auf eine Instanz zu erlauben, muss (mindestens)
+verboten. Um Zugriff auf eine Instanz zu erlauben, muss mindestens
 eine Security Group definiert und der Instanz zugewiesen werden.
 
 Es ist möglich, alle Zugriffsregeln in einer Security Group
-zusammenzufassen, doch für komplexe Stacks macht es Sinn, die Regeln
+zusammenzufassen, doch für komplexe Stacks ist es sinnvoll, die Regeln
 nach Aufgabe einzelner Instanzen in eigenen Security Groups zu
 hinterlegen.
 
-Vorgehen
---------
+## Vorgehensweise
 
-Der Grundbefehl für das erstellen einer Security Group lautet
-`openstack security group create allow-ssh-from-anywhere --description Beispiel`:
+Der Grundbefehl für das Erstellen einer Security Group lautet:
+
+`openstack security group create allow-ssh-from-anywhere`
+
+Beispiel:
 
 ```bash
 $ openstack security group create allow-ssh-from-anywhere --description Beispiel
@@ -46,10 +46,10 @@ $ openstack security group create allow-ssh-from-anywhere --description Beispiel
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 
-Damit eine Security Group nicht nur eine leere Hülle ist, kann der
-Befehl durch weitere Zusätze sinnvoll erweitert werden.
+Damit eine Security Group nicht nur eine leere Hülle ist, können Sie den
+Befehl durch weitere Zusätze sinnvoll erweitern.
 
-Hier eine kurze Übersicht der wichtigsten Optionen:
+Hier ist eine kurze Übersicht der wichtigsten Optionen:
 
 - `--protocol` = Definition des genutzten Protokolls (mögliche
     Optionen: icmp, tcp, udp)
@@ -61,11 +61,9 @@ Hier eine kurze Übersicht der wichtigsten Optionen:
 - `--ingress` bzw. `--egress` = ingress definiert den eingehenden
     Verkehr, egress den ausgehenden
 
-Da die wichtigsten Optionen nun bekannt sind, kann jetzt eine Security
-Group erstellt werden, die es erlaubt theoretisch Zugriff per SSH zu
-erhalten.
+Da die wichtigsten Optionen nun bekannt sind, können Sie jetzt eine Security Group erstellen, mit der Sie theoretisch von überall Zugriff mit SSH erhalten.
 
-Der Befehl lautet
+Der Befehl lautet:
 `openstack security group rule create allow-ssh-from-anywhere --protocol tcp --dst-port 22:22 --remote-ip 0.0.0.0/0`
 
 ```bash
@@ -92,8 +90,9 @@ $ openstack security group rule create allow-ssh-from-anywhere --protocol tcp --
 ```
 
 Um zu prüfen, ob die Security Group korrekt angelegt wurde und um eine
-Übersicht über alle zu erhalten, kann folgender Befehl genutzt
-werden, `openstack security group show allow-ssh-from-anywhere`
+Übersicht über alle Gruppen zu erhalten, können Sie folgenden Befehl verwenden:
+
+ `openstack security group show allow-ssh-from-anywhere`
 
 ```bash
 $ openstack security group show allow-ssh-from-anywhere
@@ -116,11 +115,6 @@ $ openstack security group show allow-ssh-from-anywhere
 +-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 
-Abschluss
----------
+## Zusammenfassung
 
-Nach dem erfolgreichen erstellen der Security-Group, ist der nächste
-Schritt ein Netzwerk hinzuzufügen.
-
-Dies erfolgt im Schritt 10: Zugriff aus dem Internet vorbereiten: Ein
-Netzwerk anlegen.
+Sie haben erfolgreich eine Security-Group erstellt. Im nächsten Schritt lernen Sie, wie man ein Netzwerk hinzufügt.

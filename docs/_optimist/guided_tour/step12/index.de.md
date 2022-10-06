@@ -6,24 +6,19 @@ nav_order: 1120
 parent: Guided Tour
 ---
 
-Schritt 12: Eine nutzbare Instanz
-=================================
+# Schritt 12: Eine nutzbare Instanz
 
-Vorwort
--------
+## Einführung
 
-In [Schritt 7](/optimist/guided_tour/step07/) wurde bereits eine Instanz erstellt, diese konnte jedoch nur genutzt werden, wenn man ein paar Schritte übersprungen hat und das entsprechende Netzwerk mit erstellt.
+In [Schritt 7](/optimist/guided_tour/step07/) wurde bereits eine Instanz erstellt. Diese konnte jedoch nur genutzt werden, wenn ein paar Schritte übersprungen und das entsprechende Netzwerk mit erstellt wurden.
 
-Es gab nur so die Möglichkeit eine Verbindung zu dieser herzustellen.
+Nur so konnte eine Verbindung zu dieser Instanz hergestellt werden.
 
-Daher werden wir in diesem Schritt eine Instanz erstellen, die diese
-Problematik nicht mehr hat.
+In diesem Schritt werden wir eine Instanz erstellen, die diese Problematik nicht mehr hat.
 
-Installation
-------------
+## Installation
 
-Damit die Instanz all die fehlenden Einstellungen enthält, wird der
-Befehl aus Schritt 7 modifiziert:
+Damit die Instanz alle fehlenden Einstellungen enthält, modifizieren wir den Befehl aus [Schritt 7](/optimist/guided_tour/step07/):
 
 `openstack server create BeispielInstanz --flavor m1.small --key-name Beispiel --image "Ubuntu 16.04 Xenial Xerus - Latest" --security-group allow-ssh-from-anywhere --network=BeispielNetzwerk`
 
@@ -100,25 +95,22 @@ $ openstack floating ip create provider
 +---------------------+--------------------------------------+
 ```
 
-Die gerade erstellte IP wird im nächsten Schritt mit der vorher
-erstellten Instanz verbunden.
+Im nächsten Schritt wird die gerade erstellte IP mit der vorher erstellten Instanz verbunden.
 
 ```bash
 openstack server add floating ip BeispielInstanz 185.116.245.145
 ```
 
-Nutzung
--------
+## Nutzung
 
 Die erstellte Instanz ist nun erreichbar.
 
-Um zu testen, ob alle Schritte funktionieren, stellen wir nun eine
+Um zu testen, ob alle Schritte funktionieren, stellen wir eine
 Verbindung per SSH her.
 
 Wichtig ist hierbei, dass eine Verbindung nur funktioniert, wenn der
 weiter oben genutzte SSH Key auch existiert und verwendet wird
-(Siehe Schritt 6: Einen eigenen SSH-Key per Konsole erstellen und
-nutzen):
+(siehe [Schritt 6](/optimist/guided_tour/step06/)):
 
 ```bash
 $ ssh ubuntu@185.116.245.145
@@ -129,15 +121,13 @@ Warning: Permanently added '185.116.245.145' (ECDSA) to the list of known hosts.
 Enter passphrase for key '/Users/ubuntu/.ssh/id_rsa':
 ```
 
-Clean-Up
---------
+## Clean-Up
 
 Für den Fall, dass die in den vorigen Schritten erstellten Bestandteile
 wieder gelöscht werden sollen, muss das in folgender Reihenfolge, mit
 dem entsprechenden Befehl geschehen.
 
-Sollte man dies nicht befolgen, kann es dazu führen, dass Bestandteile
-sich nicht löschen lassen.
+Sollte man dies nicht befolgen, kann es dazu führen, dass Bestandteile sich nicht löschen lassen.
 
 - Instanz
   - `openstack server delete BeispielInstanz`
@@ -152,12 +142,8 @@ sich nicht löschen lassen.
 - Netzwerk
   - `openstack network delete BeispielNetzwerk`
 
-Abschluss
----------
+## Zusammenfassung
 
-In den Schritten 7 bis 11 wurde eine Instanz Schritt für Schritt erstellt und
-jeder Schritt hat einen Teilbereich hinzugefügt (inklusive Netzwerk und einer
-eigenen Security-Group).
+In den Schritten 7 bis 11 wurde eine Instanz erstellt und mit jedem Schritt ein Teilbereich hinzugefügt (inklusive Netzwerk und einer eigenen Security-Group).
 
-Im nächsten Schritt lösen wir uns von einzelnen Instanzen und
-erstellen einen Stack.
+Im nächsten Schritt lösen wir uns von einzelnen Instanzen und erstellen einen Stack.

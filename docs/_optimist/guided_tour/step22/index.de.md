@@ -8,17 +8,17 @@ parent: Guided Tour
 
 # Schritt 22: Anlegen eines DNS-Record in Designate
 
-## Vorwort
+## Einführung
 
-Die Openstackplattform Optimist enthält eine Technologie namens DNS-as-a-Service (DNSaaS), auch bekannt als Designate.
+Die Openstack Plattform Optimist enthält eine Technologie namens DNS-as-a-Service (DNSaaS), auch bekannt als Designate.
 DNSaaS enthält eine REST-API für die Domänen- und Datensatzverwaltung, ist multi-tenant und integriert den OpenStack Identity Service (Keystone) für die Authentifizierung.
 
-Wir werden in diesem Schritt eine fiktive Zone (Domain) mit MX und A-Records erstellen und die entsprechende IP/CNAME hinterlegen.
+In diesem Schritt lernen Sie, wie Sie eine fiktive Zone (Domain) mit MX und A-Records erstellen und die entsprechende IP/CNAME hinterlegen können.
 
------
+## Start
 
-Um zu starten, lesen wir uns zunächst wie in ["Schritt 4: Der Weg vom Horizon auf die Kommandozeile"](/optimist/guided_tour/step04/) erklärt die Zugangsdaten ein und sorgen dafür das der `python-designateclient` installiert ist (pip install python-openstackclient python-designateclient)
-Anschliessend bedienen wir den Openstack-Client und erstellen zuerst eine Zone für unser Projekt.
+Lesen Sie zunächst wie in [Schritt 4](/optimist/guided_tour/step04/) erklärt, die Zugangsdaten ein und stellen Sie sicher, dass der `python-designateclient` installiert ist (pip install python-openstackclient python-designateclient).
+Bedienen Sie anschliessend den Openstack-Client und erstellen Sie eine Zone für unser Projekt.
 
 ```bash
 $ openstack zone create --email webmaster@foobar.cloud foobar.cloud.
@@ -45,7 +45,7 @@ $ openstack zone create --email webmaster@foobar.cloud foobar.cloud.
 +----------------+--------------------------------------+
 ```
 
-Man beachte den abschliessenden "." an der zu erstellenden Zone/Domain.
+Beachten Sie den abschliessenden "." an der zu erstellenden Zone/Domain.
 Das Resultat bisher:
 
 ```bash
@@ -81,9 +81,9 @@ $ openstack zone show foobar.cloud.
 ```
 
 Nun ist die Domain "foobar.cloud" für unser Projekt registriert und einsatzbereit (status: ACTIVE).
-Wir wollen im nächsten Schritt MX-Records (Datensätze für Mailserver in dieser Zone) für diese Domain erstellen.
+Erstellen Sie nun MX-Records (Datensätze für Mailserver in dieser Zone) für diese Domain.
 
-Doch zuerst schauen wir, welche Inhalte (Recordsets) unsere neue Zone bereits jetzt besitzt.
+Schauen Sie zuerst, welche Inhalte (Recordsets) Ihre neue Zone bereits besitzt.
 
 ```bash
 $ openstack recordset list foobar.cloud.
@@ -96,7 +96,7 @@ $ openstack recordset list foobar.cloud.
 +--------------------------------------+---------------+------+--------------------------------------------------------------------------------+--------+--------+
 ```
 
-Hier sehen wir eine "leere Hülle" einer Domain mit automatisch erstellen NS und SOA-Einträgen, die sofort zur Abfrage bereit stehen.
+Hier sehen Sie eine "leere Hülle" einer Domain mit automatisch erstellen NS und SOA-Einträgen, die sofort zur Abfrage bereit stehen.
 
 ```bash
 $ dig +short @dns1.ddns.innovo.cloud foobar.cloud NS
@@ -108,8 +108,9 @@ dns2.ddns.innovo.cloud. webmaster.foobar.cloud. 1534315524 3507 600 86400 3600
 ```
 
 Anlegen eines MX-Records:
-Nun können wir Datensätze innerhalb dieser Zone hinzufügen, verändern oder löschen (openstack recordset --help).
-Als nächstes fügen wir einen MX und einen A-Record hinzu. Bei den MX-Records richten wir auch gleich die typischen Mailserver-Prioritäten (10,20) mit ein. Wobei immer der niedrigere Wert als erstes angesteuert wird und der zweite Eintrag als "Backup" dient.
+
+Nun können Sie Datensätze innerhalb dieser Zone hinzufügen, verändern oder löschen (openstack recordset --help).
+Fügen Sie als nächstes einen MX und einen A-Record hinzu. Bei den MX-Records richten Sie auch gleich die typischen Mailserver-Prioritäten (10,20) mit ein. Hier wird immer der niedrigere Wert als erstes angesteuert. Der zweite Eintrag dient als "Backup" .
 
 ```bash
 $ openstack recordset create --record '10 mx1.foobar.cloud.' --record '20 mx2.foobar.cloud.' --type MX foobar.cloud. foobar.cloud.
@@ -184,11 +185,10 @@ $ openstack recordset list foobar.cloud.
 +--------------------------------------+-------------------+------+--------------------------------------------------------------------------------+--------+--------+
 ```
 
-Wenn die Recordsets aktiv sind können wir die dafür vorgesehenen DNS-Server
+Wenn die Recordsets aktiv sind, können Sie die dafür vorgesehenen DNS-Server nach diesen Records abfragen:
 
 * dns1.ddns.innovo.cloud
 * dns2.ddns.innovo.cloud
-nach diesen Records abfragen.
 
 ```bash
 $ dig +short @dns1.ddns.innovo.cloud foobar.cloud NS
@@ -212,7 +212,7 @@ Damit dieses Konstrukt weltweit benutzt werden kann, muss jede im Designate verw
 > * dns1.ddns.innovo.cloud: '185.116.244.45' / '2a00:c320:0:1::d'
 > * dns2.ddns.innovo.cloud: '185.116.244.46' / '2a00:c320:0:1::e'
 
-Um die die Mail-Records abzuschliessen, bietet sich noch an für die Mailserver entsprechende A-Records zu hinterlegen
+Um die Mail-Records abzuschliessen, bietet es sich an, für die Mailserver entsprechende A-Records zu hinterlegen.
 
 ```bash
 $ openstack recordset create --type A --record 2.3.4.5 foobar.cloud. mx1
@@ -256,7 +256,7 @@ $ openstack recordset create --type A --record 3.4.5.6 foobar.cloud. mx2
 +-------------+--------------------------------------+
 ```
 
-Das Resultat nach einigen Sekunden:
+Hier ist das Ergebnis nach einigen Sekunden:
 
 ```bash
 $ openstack recordset list foobar.cloud.
@@ -274,6 +274,6 @@ $ openstack recordset list foobar.cloud.
 +--------------------------------------+-------------------+------+--------------------------------------------------------------------------------+--------+--------+
 ```
 
-## Abschluss
+## Zusammenfassung
 
-In diesem Schritt haben wir gelernt, wie man eine Zone anlegt, einen Recordset konfiguriert und diesen abfragen kann.
+In diesem Schritt haben Sie gelernt, wie man eine Zone anlegt, einen Recordset konfiguriert und diesen abfragen kann.

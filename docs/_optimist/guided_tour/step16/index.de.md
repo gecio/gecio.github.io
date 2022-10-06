@@ -6,31 +6,25 @@ nav_order: 1160
 parent: Guided Tour
 ---
 
-Schritt 16: Wir lernen Heat besser kennen
-=========================================
+# Schritt 16: Wir lernen Heat besser kennen
 
-Vorwort
--------
+## Einführung
 
-Bisher konnte der Eindruck entstehen, das Heat und das manuelle
-Erstellen per Kommandozeile genau so viel Zeit in Anspruch nimmt, was
-beim einmaligen Erstellen auch stimmt.
+Bisher konnte bei Ihnen der Eindruck erweckt werden, dass das Erstellen einer VM mit *Heat* und das manuelle
+Erstellen mit der Kommandozeile gleich viel Zeit in Anspruch nimmt. Das stimmt auch beim einmaligen Erstellen der VM.
+Der Vorteil von *Heat* besteht jedoch darin, dass das Template für weitere VMs wiederverwendet und weiterentwickelt werden kann.
 
-Dadurch das nun ein Template existiert, können wir diese Grundlage immer
-wieder nutzen und im Zweifel weiter entwickeln.
+Wie das geht zeigen wir Ihnen in diesem Schritt. Dazu fügen wir zusätzliche Parameter in das Template ein.
 
-Damit dies auch möglich ist, wird in diesem Schritt weiter auf Heat
-eingegangen.
+## Parameter
 
-Parameter
----------
+Zunächst ist es sinnvoll, bekannte oder individuelle  Parameter zu definieren.
 
-Da das Ganze aufgebaut werden soll, ist es zunächst sinnvoll, bekannte
-oder individuelle Parameter zu definieren.
+In unserem Beispiel ersetzen wir den vorgegebenen SSH-Key und definieren ihn anstelle eines festen Werts als individuellen Parameter, der beim Start angegeben werden kann. Das hat den Vorteil, dass für eine VM andere Schlüssel verwendet werden können, ohne dass die Vorlage geändert werden muss.
 
-In diesem Kontext wird der vorgegebene SSH-Key ersetzt und statt einem
-festen Wert, wird er als individueller Parameter definiert, der beim
-Start angegeben werden kann:
+Wie Sie bereits wissen, beginnt das Template mit der Version und wird mit `parameters` fortgeführt.
+
+Danach wird ein individueller Name vergeben und der Typ angegeben. In unserem Fall verwenden wir als Typ `string`:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -40,18 +34,9 @@ parameters:
     type: string
 ```
 
-Wie bisher gelernt, beginnt das Template mit der Version und wird dann
-mit `parameters` fortgeführt.
+Nachdem wir den Parameter festgelegt haben, nutzen wir das vorige Template als Vorlage und ergänzen es.
 
-Nach dem Parameter wird der Name, welcher individuell benannt werden
-kann, vergeben.
-
-Auch ist es notwendig den Typ anzugeben, in diesem Fall ist es `string`.
-
-Nachdem der Parameter festgelegt ist, nutzen wir als Vorlage das vorige
-Template und ergänzen es.
-
-Damit sieht das Template dann so aus:
+Das Template sieht dann so aus:
 
 ```yaml
 heat_template_version: 2014-10-16
@@ -70,13 +55,11 @@ resources:
       flavor: m1.small
 ```
 
-Um das Template zu komplettieren, wird `key_name` durch den vorher
-definierten Parameter ersetzt.
+Um das Template zu vervollständigen, ersetzen wir `key_name` durch den vorher definierten Parameter.
 
 Der Befehl dafür lautet `get_param`.
 
-Dieser sagt aus, dass er einen definierten Parameter nutzen soll und
-damit das Template weiß, welchen Parameter er nutzen soll, ergänzen wir
+Dieser Befehl sagt aus, dass ein definierter Parameter genutzt werden soll. Damit das Template weiß, welchen Parameter es nutzen soll, ergänzen wir
 den Befehl `get_param` um `key_name`:
 
 ```yaml
@@ -95,8 +78,6 @@ resources:
       flavor: m1.small
 ```
 
-Abschluss
----------
+## Zusammenfassung
 
-Das Template wurde jetzt bereits über einen frei definierbaren Parameter
-erweitert und im nächsten Schritt wird das Netzwerk hinzugefügt.
+Wir haben das Template mit einem frei definierbaren Parameter erweitert. Im nächsten Schritt fügen wir das Netzwerk hinzu.

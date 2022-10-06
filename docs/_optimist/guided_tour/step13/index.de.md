@@ -6,46 +6,36 @@ nav_order: 1130
 parent: Guided Tour
 ---
 
-Schritt 13: Der strukturierte Weg zu einer Instanz (mit Stacks)
-===============================================================
+# Schritt 13: Der strukturierte Weg zu einer Instanz (mit Stacks)
 
-Vorwort
--------
+## Einführung
 
-Nachdem die erste Instanz, inklusive einer Security Group und virtuellem
-Netzwerk, in einem sehr aufwendigen Prozess per Hand angelegt wurde,
-wird in diesem Schritt eine Alternative aufgezeigt.
+Nachdem wir die erste Instanz, inklusive einer Security Group und virtuellem
+Netzwerk, in einem sehr aufwendigen Prozess per Hand angelegt haben,
+zeigen wir in diesem Schritt eine Alternative auf.
 
-Wie diese funktioniert und was es hierbei zu beachten gibt, wird auch
-wie gewohnt Schritt für Schritt erklärt. Voraussetzung für die folgenden
-Schritte ist die Installation des Paketes `python-heatclient`.
-Siehe [Schritt 4: Der Weg vom Horizon auf die Kommandozeile](/optimist/guided_tour/step04/).
+Voraussetzung für die folgenden
+Schritte ist die Installation des Paketes `python-heatclient` (siehe [Schritt 4](/optimist/guided_tour/step04/)).
 
-Installation
--------------
+## Installation
 
-Anstatt einzelne Instanzen von Hand anzulegen, kann man beliebige
+Anstatt einzelne Instanzen von Hand anzulegen, können beliebige
 OpenStack Resourcen (z.B. Instanzen, Netzwerke, Router, Security Groups)
-auch in einem definierten Verbund, einem so genannten **Stack** (oder Heat
-Stack) betreiben.
+auch in einem definierten Verbund, einem sogenannten **Stack** (oder Heat
+Stack) betrieben werden.
 
-Dadurch werden sie logisch zusammengefaßt und können einfach erstellt
-und gelöscht werden -- je nach Verwendungszweck.
+Dadurch werden sie logisch zusammengefaßt und können -- je nach Verwendungszweck -- einfach erstellt
+und gelöscht werden.
 
-Wir verwenden in diesem Schritt Heat-Templates, die auch Grundlage für
-folgende Schritte sind.
+Für die folgenden Schritte verwenden wir Heat-Templates als Grundlage.
 
-Die bisherigen Schritte 9 bis 11, lassen sich einfach in einem Template
-zusammenfassen.
+Die bisherigen Schritte 9 bis 11, lassen sich einfach in einem Template zusammenfassen.
 
-Um nicht zu theoretisch zu bleiben, gibt es ein Template unter [BeispielTemplates](https://github.com/innovocloud/openstack_examples/tree/master/heat/templates).
+Hierzu gibt es ein Template unter [BeispielTemplates](https://github.com/innovocloud/openstack_examples/tree/master/heat/templates).
 
-Dieses Template erstellt einen Stack, in diesem ist eine Instanz, zwei
-Security Groups, ein virtuelles Netzwerk (inkl. Router, Port, Subnet)
-und eine Floating-IP enthalten.
+Dieses Template erstellt einen Stack, in dem eine Instanz, zwei Security Groups, ein virtuelles Netzwerk (inkl. Router, Port, Subnet) und eine Floating-IP enthalten sind.
 
-Um den Stack zu erstellen, ist es notwendig, sich im Verzeichnis des
-Templates zu befinden und dann folgenden Befehl zu nutzen:
+Um den Stack erstellen zu können, müssen wir ins Verzeichnis des Templates wechseln und den folgenden Befehl ausführen:
 
 ```bash
 $ openstack stack create -t SingleServer.yaml --parameter key_name=Beispiel SingleServer --wait
@@ -84,21 +74,19 @@ $ openstack stack create -t SingleServer.yaml --parameter key_name=Beispiel Sing
 +---------------------+-------------------------------------------------+
 ```
 
-Der Befehl `openstack stack create` erstellt dabei den Stack, mit
+Der Befehl `openstack stack create` erstellt dabei den Stack. Mit
 `-t SingleServer.yaml` wird festgelegt, dass das angegebene Template
 verwendet werden soll.
 
-Außerdem wird mit `--parameter key_name=BEISPIEL` noch ein SSH-Schlüssel
-angegeben und mit `SingleServer` wird der Name des Stacks festgelegt.
+Mit `--parameter key_name=BEISPIEL` wird  ein SSH-Schlüssel
+angegeben und mit `SingleServer` der Name des Stacks festgelegt.
 
-Der letzte Bestandteil `--wait` zeigt alle Zwischenschritte der
-Erstellung an. (Siehe das obere Bild)
+Der letzte Bestandteil `--wait` zeigt alle Zwischenschritte der Erstellung an (siehe das obere Bild).
 
-Nach kurzer Zeit ist der Stack inkl. Instanz erstellt und kann per SSH
-erreicht werden.
+Nach kurzer Zeit ist der Stack einschließlich der Instanz erstellt und kann mit SSH erreicht werden.
 
-Die notwendige IP lässt sich mit folgendem Befehl herausfinden, wichtig
-ist dabei die korrekte ID zu nutzen:
+Die notwendige IP findet man mit dem folgenden Befehl heraus, wichtig
+ist dabei, die korrekte ID zu nutzen:
 
 ```bash
 $ openstack stack output show 0f5cdf0e-24cc-4292-a0bc-adf2e9f8618a instance_fip
@@ -111,7 +99,7 @@ $ openstack stack output show 0f5cdf0e-24cc-4292-a0bc-adf2e9f8618a instance_fip
 +--------------+---------------------------------+
 ```
 
-Nun stellen wir noch die Verbindung per SSH her:
+Nun stellen wir noch die Verbindung über SSH her:
 
 ```bash
 $ ssh ubuntu@185.116.245.70
@@ -122,11 +110,8 @@ Warning: Permanently added '185.116.245.70' (ECDSA) to the list of known hosts.
 Enter passphrase for key '/Users/ubuntu/.ssh/id_rsa':
 ```
 
-Abschluss
----------
+## Zusammenfassung
 
-Wir haben die Schritte 9 bis 11 in einem Heat-Template zusammengefaßt
-und können sie nun leicht wiederholen.
+Wir haben die bisherigen Schritte 9 bis 11 in einem Heat-Template zusammengefaßt.
 
-In den folgenden Schritten gehen wir weiter auf Heat ein und zeigen
-weiterführende Beispiele.
+In den folgenden Schritten gehen wir weiter auf Heat ein und zeigen weitere Beispiele.

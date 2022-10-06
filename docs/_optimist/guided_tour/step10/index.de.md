@@ -6,25 +6,21 @@ nav_order: 1100
 parent: Guided Tour
 ---
 
-Schritt 10: Zugriff aus dem Internet vorbereiten: Ein Netzwerk anlegen
-======================================================================
+# Schritt 10: Zugriff aus dem Internet vorbereiten: Ein Netzwerk anlegen
 
-Vorwort
--------
+## Einführung
 
-In Schritt 7 wurde zuerst eine Instanz manuell erstellt und in Schritt 9
-dann eine Security Group.
+In [Schritt 7](/optimist/guided_tour/step07/) haben wir zuerst eine Instanz manuell erstellt und in [Schritt 9](/optimist/guided_tour/step09/ dann eine Security Group.
 
-Nun ist der nächste Schritt ein virtuelles Netzwerk zu erstellen.
+In diesem Schritt erstellen wir ein virtuelles Netzwerk.
 
-Netzwerk
---------
+## Netzwerk
 
-Den Start dafür macht das eigentliche Netzwerk. Wie bisher gibt es
-mehrere zusätzliche Optionen, die wie gewohnt mit dem Zusatz `--help`
-aufgelistet werden können.
+Wir beginnen mit dem Netzwerk. Wie bisher gibt es
+mehrere zusätzliche Optionen, die wir wie gewohnt mit dem Zusatz `--help`
+auflisten können.
 
-Um das Netzwerk zu erstellen, nutzen wir den Befehl:
+Um das Netzwerk zu erstellen, nutzen Sie den Befehl:
 
 ```bash
 $ openstack network create BeispielNetzwerk
@@ -59,14 +55,12 @@ $ openstack network create BeispielNetzwerk
 +---------------------------+--------------------------------------+
 ```
 
-Subnet
-------
+## Subnet
 
-Da das Netzwerk nun angelegt wurde, ist der nächste logische Schritt,
-ein zugehöriges Subnet.
+Da das Netzwerk nun angelegt wurde, ist der nächste logische Schritt, ein zugehöriges Subnet anzulegen.
 
-Auch das Subnet hat sehr viele zusätzliche Optionen, für das Beispiel
-werden folgende genutzt:
+Auch das Subnet hat viele zusätzliche Optionen. Für das Beispiel
+nutzen wir folgende:
 
 - `--network` = Gibt an, in welchem Netzwerk das Subnet angelegt
     werden soll
@@ -106,11 +100,9 @@ $ openstack subnet create BeispielSubnet --network BeispielNetzwerk --subnet-ran
 +-------------------------+--------------------------------------+
 ```
 
-Router
-------
+## Router
 
-Damit das Subnet auch sinnvoll genutzt werden kann, wird noch ein virtueller
-Router benötigt:
+Damit das Subnet auch sinnvoll genutzt werden kann, wird noch ein virtueller Router benötigt:
 
 ```bash
 $ openstack router create BeispielRouter
@@ -137,21 +129,19 @@ $ openstack router create BeispielRouter
 ```
 
 Um eine Verbindung ins Internet zu ermöglichen, benötigt der Router ein
-externes Gateway, welches mit diesem Befehl gesetzt wird:
+externes Gateway, welches wir mit diesem Befehl setzen:
 
 ```bash
 openstack router set BeispielRouter --external-gateway provider
 ```
 
-Da nun schon die Verbindung hergestellt ist, wird dem Router nun noch das
-Subnet zugewiesen:
+Da nun schon die Verbindung hergestellt ist, weisen wir dem Router nun noch das Subnet zu:
 
 ```bash
 openstack router add subnet BeispielRouter BeispielSubnet
 ```
 
-Port
-----
+## Port
 
 Nachdem nun bereits der Router und das Subnet erstellt wurden, fehlt im
 letzten Schritt noch der zugehörige Port.
@@ -197,9 +187,8 @@ $ openstack port create BeispielPort --network BeispielNetzwerk
 +-----------------------+----------------------------------------------------------------------------+
 ```
 
-Abschluss
----------
+## Zusammenfassung
 
-Nachdem Router, Subnet und Port angelegt und diese miteinander verknüpft
-wurden, ist die Einrichtung des Beispielnetzwerks abgeschlossen und im
-nächsten Schritt fügen wir noch den Zugriff per IPv6 hinzu.
+Nachdem wir Router, Subnet und Port angelegt und diese miteinander verknüpft
+haben, ist die Einrichtung des Beispielnetzwerks abgeschlossen. Im
+nächsten Schritt fügen wir noch den Zugriff mit IPv6 hinzu.

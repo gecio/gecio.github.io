@@ -1,6 +1,6 @@
 ---
 title: Localstorage
-lang: de
+lang: "de"
 permalink: /optimist/storage/localstorage/
 nav_order: 3200
 parent: Storage

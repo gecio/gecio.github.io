@@ -1,6 +1,6 @@
 ---
 title: "20: Mehrere Instanzen gleichzeitig erstellen"
-lang: de
+lang: "de"
 permalink: /optimist/guided_tour/step20/
 nav_order: 1200
 parent: Guided Tour

@@ -1,6 +1,6 @@
 ---
 title: Role-Based Access Control (RBAC)
-lang: de
+lang: "de"
 permalink: /gks/accessmanagement/usingrbac/
 nav_order: 7200
 parent: Access Management

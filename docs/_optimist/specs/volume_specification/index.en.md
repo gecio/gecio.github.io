@@ -1,6 +1,6 @@
 ---
 title: Volume Specifications
-lang: en
+lang: "en"
 permalink: /optimist/specs/volume_specification/
 parent: Specifications
 nav_order: 9400

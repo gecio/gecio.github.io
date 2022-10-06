@@ -1,6 +1,6 @@
 ---
 title: Images
-lang: en
+lang: "en"
 permalink: /optimist/specs/images/
 parent: Specifications
 nav_order: 9500

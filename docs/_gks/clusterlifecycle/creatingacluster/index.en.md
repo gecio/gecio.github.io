@@ -1,6 +1,6 @@
 ---
 title: Creating a Cluster
-lang: en
+lang: "en"
 permalink: /gks/clusterlifecycle/creatingacluster/
 nav_order: 4100
 parent: Cluster Lifecycle

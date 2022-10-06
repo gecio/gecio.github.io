@@ -1,6 +1,6 @@
 ---
 title: "16: Wir lernen Heat besser kennen"
-lang: de
+lang: "de"
 permalink: /optimist/guided_tour/step16/
 nav_order: 1160
 parent: Guided Tour
@@ -26,7 +26,7 @@ Parameter
 ---------
 
 Da das Ganze aufgebaut werden soll, ist es zunächst sinnvoll, bekannte
-oder individuelle Parameter zu definieren. 
+oder individuelle Parameter zu definieren.
 
 In diesem Kontext wird der vorgegebene SSH-Key ersetzt und statt einem
 festen Wert, wird er als individueller Parameter definiert, der beim
@@ -49,9 +49,9 @@ kann, vergeben.
 Auch ist es notwendig den Typ anzugeben, in diesem Fall ist es `string`.
 
 Nachdem der Parameter festgelegt ist, nutzen wir als Vorlage das vorige
-Template und ergänzen es. 
+Template und ergänzen es.
 
-Damit sieht das Template dann so aus: 
+Damit sieht das Template dann so aus:
 
 ```yaml
 heat_template_version: 2014-10-16

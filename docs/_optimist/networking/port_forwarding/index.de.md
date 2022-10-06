@@ -1,6 +1,6 @@
 ---
 title: Port Forwarding auf Floating IPs
-lang: de
+lang: "de"
 permalink: /optimist/networking/port_forwarding/
 parent: Netzwerke
 nav_order: 2100

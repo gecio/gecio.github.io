@@ -1,6 +1,6 @@
 ---
 title: "16: Get to know HEAT better"
-lang: en
+lang: "en"
 permalink: /optimist/guided_tour/step16/
 nav_order: 1160
 parent: Guided Tour

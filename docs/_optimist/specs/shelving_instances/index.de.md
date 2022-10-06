@@ -1,6 +1,6 @@
 ---
 title: Shelving-Instanzen
-lang: de
+lang: "de"
 permalink: /optimist/specs/shelving_instances/
 parent: Spezifikationen
 nav_order: 9500

@@ -1,6 +1,6 @@
 ---
 title: Controlplane Konnektor
-lang: de
+lang: "de"
 permalink: /gks/clusterlifecycle/controlplaneconnector/
 nav_order: 4280
 parent: Cluster Lebenszyklus

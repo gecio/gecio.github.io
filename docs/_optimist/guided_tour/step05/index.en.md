@@ -1,6 +1,6 @@
 ---
 title: "05: An overview of the most important OpenStackClient commands"
-lang: en
+lang: "en"
 permalink: /optimist/guided_tour/step05/
 nav_order: 1050
 parent: Guided Tour

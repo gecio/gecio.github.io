@@ -1,6 +1,6 @@
 ---
 title: Add-On
-lang: en
+lang: "en"
 permalink: /gks/addons/
 nav_order: 9000
 has_children: true

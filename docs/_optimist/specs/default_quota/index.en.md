@@ -1,6 +1,6 @@
 ---
 title: Default Quotas
-lang: en
+lang: "en"
 permalink: /optimist/specs/default_quota/
 parent: Specifications
 nav_order: 9200

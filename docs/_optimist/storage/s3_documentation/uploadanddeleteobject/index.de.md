@@ -1,6 +1,6 @@
 ---
 title: Ein Objekt hochladen und löschen
-lang: de
+lang: "de"
 permalink: /optimist/storage/s3_documentation/uploadanddeleteobject/
 nav_order: 3130
 parent: S3 Kompatiblen Objekt Storage

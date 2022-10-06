@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-lang: en
+lang: "en"
 permalink: /gks/gettingstarted/
 nav_order: 2000
 has_children: false

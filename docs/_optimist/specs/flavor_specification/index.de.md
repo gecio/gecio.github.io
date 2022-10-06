@@ -1,6 +1,6 @@
 ---
 title: Flavor Spezifikationen
-lang: de
+lang: "de"
 permalink: /optimist/specs/flavor_specification/
 parent: Spezifikationen
 nav_order: 9100

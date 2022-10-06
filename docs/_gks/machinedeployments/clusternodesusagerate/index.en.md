@@ -1,6 +1,6 @@
 ---
 title: Cluster Nodes Usage Rate
-lang: en
+lang: "en"
 permalink: /gks/machinedeployments/clusternodesusagerate/
 nav_order: 6300
 parent: Machine Deployments

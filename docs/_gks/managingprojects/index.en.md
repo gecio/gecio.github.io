@@ -1,6 +1,6 @@
 ---
 title: Managing GKS Projects
-lang: en
+lang: "en"
 permalink: /gks/managingprojects/
 nav_order: 3000
 has_children: true

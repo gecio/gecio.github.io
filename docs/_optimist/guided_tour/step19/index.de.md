@@ -1,6 +1,6 @@
 ---
 title: "19: Unsere Instanz lernt IPv6"
-lang: de
+lang: "de"
 permalink: /optimist/guided_tour/step19/
 nav_order: 1190
 parent: Guided Tour

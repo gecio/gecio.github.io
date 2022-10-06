@@ -1,6 +1,6 @@
 ---
 title: FAQ
-lang: en
+lang: "en"
 permalink: /optimist/faq/
 nav_order: 8000
 last_modified_date: 2021-03-02

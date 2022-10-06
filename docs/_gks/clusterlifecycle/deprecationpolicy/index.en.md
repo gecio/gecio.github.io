@@ -1,6 +1,6 @@
 ---
 title: Deprecation Policy
-lang: en
+lang: "en"
 permalink: /gks/clusterlifecycle/deprecationpolicy/
 nav_order: 4500
 parent: Cluster Lifecycle

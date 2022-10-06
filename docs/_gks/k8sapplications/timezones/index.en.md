@@ -1,6 +1,6 @@
 ---
 title: Time Zone Management
-lang: en
+lang: "en"
 permalink: /gks/k8sapplications/timezones/
 nav_order: 8400
 parent: Kubernetes Applications
@@ -18,7 +18,6 @@ To successfully finish this guide, you need the following items.
   * See also [Creating a Cluster](/gks/clusterlifecycle/creatingacluster/)
 * A valid `kubeconfig` for your cluster
   * See also [Connecting to a Cluster](/gks/accessmanagement/connectingtoacluster/)
-
 
 ## Time zones in Kubernetes environment
 
@@ -53,15 +52,19 @@ spec:
 ```
 
 Save this definition file as `busybox.yaml` and apply it to the cluster:
+
 ```bash
-$ kubectl apply -f busybox.yaml
+kubectl apply -f busybox.yaml
 ```
 
 Wait a moment until the pod deployment has been finished and query the time from the container:
+
 ```bash
-$ kubectl exec busybox-sleep -it -- date
+kubectl exec busybox-sleep -it -- date
 ```
+
 You would get a similar output, in our example the time zone is `UTC`:
+
 ```bash
 Wed Feb 26 10:57:53 UTC 2020
 ```
@@ -96,15 +99,19 @@ spec:
 Basically, it's the same definition, file but with a volume named `timezone-config` which set the container's `localtime` to your time zone.
 
 Save this definition file as `busybox-2.yaml` and apply it to the cluster:
+
 ```bash
-$ kubectl apply -f busybox-2.yaml
+kubectl apply -f busybox-2.yaml
 ```
 
 After waiting a moment until the deployment has been finished query the time from the container:
+
 ```bash
-$ kubectl exec busybox-sleep-2 -it -- date
+kubectl exec busybox-sleep-2 -it -- date
 ```
+
 You should get an output that shows the Berlin local time:
+
 ```bash
 Wed Feb 26 11:01:04 CET 2020
 ```

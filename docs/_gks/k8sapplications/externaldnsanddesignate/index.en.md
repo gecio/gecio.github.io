@@ -1,6 +1,6 @@
 ---
 title: ExternalDNS with Designate
-lang: en
+lang: "en"
 permalink: /gks/k8sapplications/externaldnsanddesignate/
 nav_order: 8300
 parent: Kubernetes Applications

@@ -1,6 +1,6 @@
 ---
 title: Running Applications in Kubernetes
-lang: en
+lang: "en"
 permalink: /gks/k8sapplications/runningapplications/
 nav_order: 8100
 parent: Kubernetes Applications

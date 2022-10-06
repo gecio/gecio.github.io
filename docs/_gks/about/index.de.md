@@ -1,6 +1,6 @@
 ---
 title: Über GKS
-lang: de
+lang: "de"
 permalink: /gks/about/
 nav_order: 1000
 has_children: true

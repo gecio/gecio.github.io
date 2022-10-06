@@ -1,6 +1,6 @@
 ---
 title: "11: Zugriff aus dem Internet vorbereiten; Wir ergänzen IPv6"
-lang: de
+lang: "de"
 permalink: /optimist/guided_tour/step11/
 nav_order: 1110
 parent: Guided Tour
@@ -85,12 +85,12 @@ Router
 ------
 
 Da nun das IPv6 Netz auch erstellt ist, werden wir in diesem Schritt das
-neue Netz mit dem in Schritt 10 erstellten Router verbinden. 
+neue Netz mit dem in Schritt 10 erstellten Router verbinden.
 
 Dafür nutzen wir den Befehl:
 
 ```bash
-$ openstack router add subnet BeispielRouter BeispielSubnetIPv6
+openstack router add subnet BeispielRouter BeispielSubnetIPv6
 ```
 
 Security Group
@@ -167,7 +167,7 @@ vorkonfiguriert, weshalb tatsächlich nur die IPv4 Adresse in der VM
 ankommt.
 
 Nutzt man unsere bereitgestellten Heat Templates, sind die notwendigen
-Anpassungen bereits im Template enthalten. 
+Anpassungen bereits im Template enthalten.
 
 Um dies auch bei bestehenden Instanzen nachträglich auch zu ermöglichen,
 gibt es hier für verschiedene Distributionen einen Anleitung.
@@ -177,26 +177,26 @@ gibt es hier für verschiedene Distributionen einen Anleitung.
 Um IPv6 korrekt nutzen zu können, müssen folgende Dateien, mit dem
 angegeben Inhalt erstellt werden.
 
--   `/etc/dhcp/dhclient6.conf`
+- `/etc/dhcp/dhclient6.conf`
 
     ```
     timeout 30;
     ```
 
--   `/etc/cloud/cloud.cfg.d/99-disable-network-config.cfg`
+- `/etc/cloud/cloud.cfg.d/99-disable-network-config.cfg`
 
     ```
     network: {config: disabled}
     ```
 
--   `/etc/network/interfaces.d/lo.cfg`
+- `/etc/network/interfaces.d/lo.cfg`
 
     ```
     auto lo
     iface lo inet loopback
     ```
 
--   `/etc/network/interfaces.d/ens3.cfg`
+- `/etc/network/interfaces.d/ens3.cfg`
 
     ```
     iface ens3 inet6 auto
@@ -207,7 +207,7 @@ angegeben Inhalt erstellt werden.
 Im Anschluss wird das entsprechende Interface neugestartet:
 
 ```bash
-$ sudo ifdown ens3 && sudo ifup ens3
+sudo ifdown ens3 && sudo ifup ens3
 ```
 
 Die VM hat jetzt eine weitere IPv6 Adresse auf dem Interface, auf dem
@@ -246,13 +246,13 @@ runcmd:
 Die genannten Parameter müssen den angegebenen Dateien neu hinzugefügt
 oder falls diese bereits vorhanden sind ergänzt werden:
 
--   `/etc/sysconfig/network`
+- `/etc/sysconfig/network`
 
     ```
     NETWORKING_IPV6=yes
     ```
 
--   `/etc/sysconfig/network-scripts/ifcfg-eth0`
+- `/etc/sysconfig/network-scripts/ifcfg-eth0`
 
     ```
     IPV6INIT=yes
@@ -262,7 +262,7 @@ oder falls diese bereits vorhanden sind ergänzt werden:
 Anschließend wird das entsprechende Interface neugestartet:
 
 ```bash
-$ sudo ifdown eth0 && sudo ifup eth0
+sudo ifdown eth0 && sudo ifup eth0
 ```
 
 Die VM hat jetzt eine weitere IPv6 Adresse auf dem Interface, auf dem
@@ -325,6 +325,6 @@ Abschluss
 ---------
 
 Nachdem im letzten Schritt bereits eine Verbindung per IPv4 erfolgte,
-wurde nun auch noch der Zugriff per IPv6 hinzugefügt. 
+wurde nun auch noch der Zugriff per IPv6 hinzugefügt.
 
 Im nächsten Schritt wird dann die Instanz aus [Schritt 7](/optimist/guided_tour/step07/) als Vorlage genutzt und erreichbar von außen.

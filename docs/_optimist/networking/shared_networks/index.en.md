@@ -1,6 +1,6 @@
 ---
 title: Shared Networks
-lang: en
+lang: "en"
 permalink: /optimist/networking/shared_networks/
 nav_order: 2200
 parent: Networking

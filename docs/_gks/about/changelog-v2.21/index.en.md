@@ -1,6 +1,6 @@
 ---
 title: GKS Changelog v2.21
-lang: en
+lang: "en"
 permalink: /gks/about/changelog-v2.21/
 nav_order: 600
 parent: About GKS

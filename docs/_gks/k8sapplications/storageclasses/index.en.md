@@ -1,6 +1,6 @@
 ---
 title: StorageClass Setup
-lang: en
+lang: "en"
 permalink: /gks/k8sapplications/storageclasses/
 nav_order: 8500
 parent: Kubernetes Applications

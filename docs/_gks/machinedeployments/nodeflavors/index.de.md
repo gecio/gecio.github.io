@@ -1,6 +1,6 @@
 ---
 title: Node-Flavors konfigurieren
-lang: de
+lang: "de"
 permalink: /gks/machinedeployments/nodeflavors/
 nav_order: 6200
 parent: Machine Deployments

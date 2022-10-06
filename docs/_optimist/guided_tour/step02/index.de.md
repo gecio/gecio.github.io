@@ -1,6 +1,6 @@
 ---
 title: "02: SSH-Key per Horizon anlegen"
-lang: de
+lang: "de"
 permalink: /optimist/guided_tour/step02/
 nav_order: 1020
 parent: Guided Tour

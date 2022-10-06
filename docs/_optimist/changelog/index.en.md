@@ -1,6 +1,6 @@
 ---
 title: Changelog
-lang: en
+lang: "en"
 permalink: /optimist/changelog/
 nav_order: 10000
 ---

@@ -1,6 +1,6 @@
 ---
 title: Projekt-Basierter Zugriff
-lang: de
+lang: "de"
 permalink: /gks/accessmanagement/connectingtoacluster/
 nav_order: 7100
 parent: Access Management

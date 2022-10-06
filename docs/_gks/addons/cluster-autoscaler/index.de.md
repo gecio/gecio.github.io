@@ -1,6 +1,6 @@
 ---
 title: Cluster Autoscaler
-lang: de
+lang: "de"
 permalink: /gks/addons/cluster-autoscaler/
 nav_order: 9100
 parent: Add-On

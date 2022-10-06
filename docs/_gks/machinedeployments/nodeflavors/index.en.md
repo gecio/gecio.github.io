@@ -1,6 +1,6 @@
 ---
 title: Choosing Node Flavors/Sizes
-lang: en
+lang: "en"
 permalink: /gks/machinedeployments/nodeflavors/
 nav_order: 6200
 parent: Machine Deployments

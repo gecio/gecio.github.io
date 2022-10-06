@@ -1,6 +1,6 @@
 ---
 title: Revoking Tokens
-lang: en
+lang: "en"
 permalink: /gks/accessmanagement/revokingtoken/
 nav_order: 7300
 parent: Access Management

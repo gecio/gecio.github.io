@@ -1,6 +1,6 @@
 ---
 title: Openstack Credentials ändern
-lang: de
+lang: "de"
 permalink: /gks/clusterlifecycle/openstackcredentials/
 nav_order: 4300
 parent: Cluster Lebenszyklus

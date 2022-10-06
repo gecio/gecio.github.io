@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Willkommen!
-lang: de
+lang: "de"
 permalink: /
 ---
 

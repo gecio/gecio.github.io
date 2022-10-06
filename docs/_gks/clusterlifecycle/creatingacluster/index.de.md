@@ -1,6 +1,6 @@
 ---
 title: Einen Cluster anlegen
-lang: de
+lang: "de"
 permalink: /gks/clusterlifecycle/creatingacluster/
 nav_order: 4100
 parent: Cluster Lebenszyklus
@@ -30,7 +30,6 @@ nehmen Sie `IX2`:
 Im nächsten Schritt konfigurieren Sie die Cluster-Details. In dem Beispiel nennen Sie den Cluster `first-system` und
 wählen die gewünschte Kubernetes-Version aus.
 ![Add Cluster Details](../../gettingstarted/images/GS07_CreaClus.png)
-
 
 Für den gelegentlichen SSH-Zugriff auf Worker-Nodes können Sie optional einen öffentlichen SSH-Schlüssel hinterlegen.
 Zum Hinzufügen eines SSH-Keys klicken Sie auf `Add SSH Key`.

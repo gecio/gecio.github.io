@@ -1,6 +1,6 @@
 ---
 title: "13: The structured way to create an instance (with stacks)"
-lang: en
+lang: "en"
 permalink: /optimist/guided_tour/step13/
 nav_order: 1130
 parent: Guided Tour

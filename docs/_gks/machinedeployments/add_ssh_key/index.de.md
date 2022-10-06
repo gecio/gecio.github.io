@@ -1,6 +1,6 @@
 ---
 title: SSH-Key einem Cluster hinzufügen
-lang: de
+lang: "de"
 permalink: /gks/machinedeployments/add_ssh_key/
 nav_order: 6400
 parent: Machine Deployments

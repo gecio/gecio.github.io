@@ -1,6 +1,6 @@
 ---
 title: "19: Add IPv6 to your template"
-lang: en
+lang: "en"
 permalink: /optimist/guided_tour/step19/
 nav_order: 1190
 parent: Guided Tour

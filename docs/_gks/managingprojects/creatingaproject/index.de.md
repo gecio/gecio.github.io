@@ -1,6 +1,6 @@
 ---
 title: Ein Projekt anlegen
-lang: de
+lang: "de"
 permalink: /gks/managingprojects/creatingaproject/
 nav_order: 3100
 parent: GKS-Projekte verwalten

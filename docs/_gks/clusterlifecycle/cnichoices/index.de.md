@@ -1,6 +1,6 @@
 ---
 title: CNI Auswahl
-lang: de
+lang: "de"
 permalink: /gks/clusterlifecycle/cnichoices/
 nav_order: 4250
 parent: Cluster Lebenszyklus

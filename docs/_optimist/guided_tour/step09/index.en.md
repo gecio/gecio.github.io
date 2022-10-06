@@ -1,6 +1,6 @@
 ---
 title: "09: Security Groups"
-lang: en
+lang: "en"
 permalink: /optimist/guided_tour/step09/
 nav_order: 1090
 parent: Guided Tour

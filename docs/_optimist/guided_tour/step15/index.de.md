@@ -1,6 +1,6 @@
 ---
 title: "15: Das erste eigene Heat Orchestration Template (HOT)"
-lang: de
+lang: "de"
 permalink: /optimist/guided_tour/step15/
 nav_order: 1150
 parent: Guided Tour

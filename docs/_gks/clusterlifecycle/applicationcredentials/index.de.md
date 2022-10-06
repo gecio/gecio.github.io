@@ -1,6 +1,6 @@
 ---
 title: Openstack Applikation Credentials benutzen
-lang: de
+lang: "de"
 permalink: /gks/clusterlifecycle/applicationcredentials/
 nav_order: 4300
 parent: Cluster Lebenszyklus
@@ -40,13 +40,11 @@ Benutzer das Managen der Openstack-Ressourcen aller Umgebungen
 (Projekte) ermöglichen und trotzdem die größtmögliche Isolation
 zwischen den Umgebungen gewährleisten.
 
-
 ## Openstack Applikations-User anlegen
 
 Eine detaillierte Beschreibung dazu was Openstack Applikations-User
 genau sind und wie sie angelegt werden findet man in unserer
 [Openstack-Dokumentation hier](https://docs.gec.io/de/optimist/specs/application_credentials/).
-
 
 ## Erstellen von GKS-Clustern mit Openstack Applikations-Usern
 
@@ -66,9 +64,8 @@ Nach der Eingabe der *Application Credentials* beginnt im Hintergrund
 die Erstellung des Kubernetes Clusters wie bereits zuvor in der
 Dokumentation beschrieben. Zuvor gibt es nochmal die Möglichkeit
 die Eingabe auf der Zusammenfassungsseite in Schritt 5 zu überprüfen.
-Hier findet sich nun nur noch die _applicationID_ anstelle von
+Hier findet sich nun nur noch die *applicationID* anstelle von
 Domäne, Benutzer- und Projektname des Openstack Projekts.
-
 
 ## Austauschen von Openstack Applikations-Usern in bestehenden GKS-Clustern
 

@@ -1,6 +1,6 @@
 ---
 title: Supported Kubernetes Versions
-lang: en
+lang: "en"
 permalink: /gks/about/kubernetesversions/
 nav_order: 1900
 parent: About GKS

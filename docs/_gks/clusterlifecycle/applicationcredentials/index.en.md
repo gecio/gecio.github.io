@@ -1,6 +1,6 @@
 ---
 title: Using Openstack Application Credentials
-lang: en
+lang: "en"
 permalink: /gks/clusterlifecycle/applicationcredentials/
 nav_order: 4300
 parent: Cluster Lifecycle
@@ -40,7 +40,7 @@ The creation of Openstack Application Credentials is best described in the
 When creating a GKS cluster in the GKS-dashboard the user is prompted for Openstack
 credentials in step 3 (Settings) of the cluster creation wizard. Default is set to *User Credentials*,
 but there is another tab to it's right named *Application Credentials*. Clicking that tab will
-change the number of fields in the form slightly: there is no need to specify the project 
+change the number of fields in the form slightly: there is no need to specify the project
 nor the projectID as *Application Credentials* are automatically bound/scoped to a single project.
 
 ![Entering Application Credentials](../images/AppCreds01.png)
@@ -80,4 +80,3 @@ Now the automation will start a process in the background to replace the old *Ap
 set with the one newly entered.
 
 ![Choose Application Credentials Tab](../images/AppCreds04.png)
-

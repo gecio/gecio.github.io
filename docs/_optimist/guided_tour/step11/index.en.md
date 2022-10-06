@@ -1,6 +1,6 @@
 ---
 title: "11: Prepare access to the Internet; Add IPv6 to your network"
-lang: en
+lang: "en"
 permalink: /optimist/guided_tour/step11/
 nav_order: 1110
 parent: Guided Tour

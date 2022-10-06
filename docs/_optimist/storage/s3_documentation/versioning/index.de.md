@@ -1,6 +1,6 @@
 ---
 title: Versionierung aktivieren/deaktivieren und wie eine versioniertes Objekt gelöscht wird
-lang: de
+lang: "de"
 permalink: /optimist/storage/s3_documentation/versioning/
 nav_order: 3140
 parent: S3 Kompatiblen Objekt Storage

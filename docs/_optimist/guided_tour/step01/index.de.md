@@ -1,6 +1,6 @@
 ---
 title: "01: Das Dashboard (Horizon)"
-lang: de
+lang: "de"
 permalink: /optimist/guided_tour/step01/
 nav_order: 1010
 parent: Guided Tour

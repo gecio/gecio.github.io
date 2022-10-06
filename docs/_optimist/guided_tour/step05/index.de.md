@@ -1,6 +1,6 @@
 ---
 title: "05: Die wichtigsten Befehle des OpenStackClients"
-lang: de
+lang: "de"
 permalink: /optimist/guided_tour/step05/
 nav_order: 1050
 parent: Guided Tour

@@ -1,6 +1,6 @@
 ---
 title: Cluster Templates
-lang: en
+lang: "en"
 permalink: /gks/clusterlifecycle/clustertemplates/
 nav_order: 4150
 parent: Cluster Lifecycle

@@ -1,6 +1,6 @@
 ---
 title: "04: Your way to the console"
-lang: en
+lang: "en"
 permalink: /optimist/guided_tour/step04/
 nav_order: 1040
 parent: Guided Tour

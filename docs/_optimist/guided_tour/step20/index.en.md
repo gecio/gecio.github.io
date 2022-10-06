@@ -1,6 +1,6 @@
 ---
 title: "20: Build multiple VMs with HEAT"
-lang: en
+lang: "en"
 permalink: /optimist/guided_tour/step20/
 nav_order: 1200
 parent: Guided Tour

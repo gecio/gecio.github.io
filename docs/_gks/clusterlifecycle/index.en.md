@@ -1,6 +1,6 @@
 ---
 title: Cluster Lifecycle
-lang: en
+lang: "en"
 permalink: /gks/clusterlifecycle/
 nav_order: 4000
 has_children: true

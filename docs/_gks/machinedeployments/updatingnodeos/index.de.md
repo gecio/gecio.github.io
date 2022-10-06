@@ -1,6 +1,6 @@
 ---
 title: Aktualisierung des Betriebssystems auf Worker-Nodes
-lang: de
+lang: "de"
 permalink: /gks/machinedeployments/updatingnodeos/
 nav_order: 6500
 parent: Machine Deployments
@@ -78,8 +78,8 @@ $ sudo systemctl start update-engine.service
 Nun können Sie nach verfügbaren Updates suchen und sie installieren lassen.
 
 ```bash
-$ sudo update_engine_client -check_for_update
-$ sudo update_engine_client -status
+sudo update_engine_client -check_for_update
+sudo update_engine_client -status
 ```
 
 Der Update-Engine-Client lädt jetzt die letzte verfügbare Version von Flatcar herunter und passt
@@ -92,7 +92,7 @@ und danach in `UPDATE_STATUS_UPDATED_NEED_REBOOT` geändert hat, können Sie den
 und den Vorgang für alle Worker-Nodes durchführen.
 
 ````bash
-$ sudo systemctl reboot
+sudo systemctl reboot
 ````
 
 > Wir empfehlen unseren Benutzern dringend, die Auto-Updater-Funktion zu verwenden, um die Sicherheit ihrer Infrastruktur zu gewährleisten.

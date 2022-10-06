@@ -1,6 +1,6 @@
 ---
 title: Storage
-lang: en
+lang: "en"
 permalink: /optimist/storage/
 has_children: true
 nav_order: 3000

@@ -1,6 +1,6 @@
 ---
 title: "14: Your first steps with HEAT"
-lang: en
+lang: "en"
 permalink: /optimist/guided_tour/step14/
 nav_order: 1140
 parent: Guided Tour

@@ -1,6 +1,6 @@
 ---
 title: "18: Making your VM reachable via IPv4"
-lang: en
+lang: "en"
 permalink: /optimist/guided_tour/step18/
 nav_order: 1180
 parent: Guided Tour

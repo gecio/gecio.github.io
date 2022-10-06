@@ -1,6 +1,6 @@
 ---
 title: Eine Anwendung in Kubernetes starten
-lang: de
+lang: "de"
 permalink: /gks/k8sapplications/runningapplications/
 nav_order: 8100
 parent: Anwendungen in Kubernetes

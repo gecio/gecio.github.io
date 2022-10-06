@@ -1,6 +1,6 @@
 ---
 title: Benutzer Management im Projekt
-lang: de
+lang: "de"
 permalink: /gks/managingprojects/projectusermanagement/
 nav_order: 3200
 parent: GKS-Projekte verwalten

@@ -1,6 +1,6 @@
 ---
 title: Access Management
-lang: de
+lang: "de"
 permalink: /gks/accessmanagement/
 nav_order: 7000
 has_children: true

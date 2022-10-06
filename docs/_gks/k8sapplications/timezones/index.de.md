@@ -1,6 +1,6 @@
 ---
 title: Verwaltung der Zeitzonen
-lang: de
+lang: "de"
 permalink: /gks/k8sapplications/timezones/
 nav_order: 8400
 parent: Anwendungen in Kubernetes
@@ -55,13 +55,13 @@ spec:
 Legen Sie die oben genannte Datei z. B. als `busybox.yaml` an und wenden Sie diese Pod-Deklaration an:
 
 ```bash
-$ kubectl apply -f busybox.yaml
+kubectl apply -f busybox.yaml
 ```
 
 Warten Sie einen Augenblick, bis Ihr Deployment gestartet ist und fragen Sie die Zeit vom Container ab:
 
 ```bash
-$ kubectl exec busybox-sleep -it -- date
+kubectl exec busybox-sleep -it -- date
 ```
 
 Sie sollten einen ähnlichen Output erhalten, in dem z. B. die Zeitzone `UTC` zu sehen ist:
@@ -102,13 +102,13 @@ Grundsätzlich ist es die selbe Deklarationsdatei, aber ergänzt um ein Volume n
 Speichern Sie die oben genannte Datei als `busybox-2.yaml` und wenden Sie diese Pod-Deklaration in Kubernetes an:
 
 ```bash
-$ kubectl apply -f busybox-2.yaml
+kubectl apply -f busybox-2.yaml
 ```
 
 Nachdem Sie gewartet haben, bis das Deployment gestartet ist, fragen Sie die Zeit vom neuen Container ab:
 
 ```bash
-$ kubectl exec busybox-sleep-2 -it -- date
+kubectl exec busybox-sleep-2 -it -- date
 ```
 
 Sie sollten einen Output erhalten, in dem die Berliner Zeitzone zu sehen ist:

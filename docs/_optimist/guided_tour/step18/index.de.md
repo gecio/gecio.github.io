@@ -1,6 +1,6 @@
 ---
 title: "18: Unsere Instanz wird von außen per IPv4 erreichbar"
-lang: de
+lang: "de"
 permalink: /optimist/guided_tour/step18/
 nav_order: 1180
 parent: Guided Tour
@@ -27,13 +27,13 @@ Wichtig ist, dass der Floating IP der entsprechende Port und welches das
 
 ```yaml
 heat_template_version: 2014-10-16
- 
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 
 resources:
 
@@ -111,13 +111,13 @@ Instanz erreicht (falls nötig).
 
 ```yaml
 heat_template_version: 2014-10-16
- 
+
 parameters:
     key_name:
         type: string
     public_network_id:
         type: string
-        default: provider 
+        default: provider
 
 resources:
 

@@ -1,6 +1,6 @@
 ---
 title: Application Credentials
-lang: en
+lang: "en"
 permalink: /optimist/specs/application_credentials/
 parent: Specifications
 nav_order: 9300

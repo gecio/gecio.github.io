@@ -1,6 +1,6 @@
 ---
 title: Updating the OS of Worker Nodes
-lang: en
+lang: "en"
 permalink: /gks/machinedeployments/updatingnodeos/
 nav_order: 6500
 parent: Machine Deployments
@@ -77,8 +77,8 @@ $ sudo systemctl start update-engine.service
 Now you can check for available updates and install them.
 
 ```bash
-$ sudo update_engine_client -check_for_update
-$ sudo update_engine_client -status
+sudo update_engine_client -check_for_update
+sudo update_engine_client -status
 ```
 
 The Update-Engine client now downloads the latest available release of Flatcar and adjusts
@@ -91,7 +91,7 @@ and then to `UPDATE_STATUS_UPDATED_NEED_REBOOT`, you can reboot the worker node 
 for all nodes in the machine deployment.
 
 ````bash
-$ sudo systemctl reboot
+sudo systemctl reboot
 ````
 
 > We highly recommend using the auto-updater feature, in order to ensure the security and integrity of your infrastructure.

@@ -1,6 +1,6 @@
 ---
 title: S3 Kompatiblen Objekt Storage
-lang: de
+lang: "de"
 permalink: /optimist/storage/s3_documentation/
 nav_order: 3100
 parent: Storage

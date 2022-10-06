@@ -1,6 +1,6 @@
 ---
 title: Einen Cluster löschen
-lang: de
+lang: "de"
 permalink: /gks/clusterlifecycle/deletingacluster/
 nav_order: 4400
 parent: Cluster Lebenszyklus

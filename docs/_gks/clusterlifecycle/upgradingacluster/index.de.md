@@ -1,6 +1,6 @@
 ---
 title: Kubernetes Updates
-lang: de
+lang: "de"
 permalink: /gks/clusterlifecycle/upgradingacluster/
 nav_order: 4200
 parent: Cluster Lebenszyklus

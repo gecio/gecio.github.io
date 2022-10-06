@@ -173,6 +173,6 @@ resources:
 
 ## Zusammenfassung
 
-Die erstellte Instanz ist nun von außen erreichbar einschließlich.
+Die erstellte Instanz ist nun von außen erreichbar.
 
 Im nächsten Schritt passen wir die Instanz mit CloudConfig an.

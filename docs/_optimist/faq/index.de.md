@@ -26,8 +26,7 @@ pip install python-<PROJECT>client -U
 
 ## Wie kann ich [VRRP](https://de.wikipedia.org/wiki/Virtual_Router_Redundancy_Protocol) nutzen?
 
-Um VRRP nutzen zu können, müssen Sie dies in einer Security-Group aktivieren und den jeweiligen Instanzen zuordnen werden. Aktuell ist dies
-nur mit dem Openstack Client möglich. Zum Beispiel:
+Um VRRP nutzen zu können, müssen Sie dies in einer Security-Group aktivieren und den jeweiligen Instanzen zuordnen werden. Zum Beispiel:
 
 ```bash
 openstack security group rule create --remote-ip 10.0.0.0/24 --protocol vrrp --ethertype IPv4 --ingress  default

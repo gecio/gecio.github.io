@@ -36,8 +36,7 @@ $ openstack subnet pool list
 +--------------------------------------+---------------+---------------------+
 ```
 
-Aus diesem Pool können Sie sich nun eigene Subnetze generieren lassen. Die Prefixlänge von 64 Bit ist dabei pro generiertem Subnet fest
-vorgegeben.
+Aus diesem Pool können Sie sich nun eigene Subnetze generieren lassen. Die Prefixlänge von 64 Bit ist dabei pro generiertem Subnet fest vorgegeben.
 
 Bei der Erstellung der Pools können Sie die Subnets direkt mit angeben.
 oder Sie überlassen es OpenStack.
@@ -154,132 +153,6 @@ Anpassungen bereits im Template enthalten.
 
 Um dies auch bei bestehenden Instanzen nachträglich zu ermöglichen,
 gibt es hier für verschiedene Linux-Distributionen eine Anleitung.
-
-### Ubuntu 16.04
-
-Um IPv6 korrekt nutzen zu können, müssen folgende Dateien mit dem
-angegeben Inhalt erstellt werden.
-
-- `/etc/dhcp/dhclient6.conf`
-
-    ```
-    timeout 30;
-    ```
-
-- `/etc/cloud/cloud.cfg.d/99-disable-network-config.cfg`
-
-    ```
-    network: {config: disabled}
-    ```
-
-- `/etc/network/interfaces.d/lo.cfg`
-
-    ```
-    auto lo
-    iface lo inet loopback
-    ```
-
-- `/etc/network/interfaces.d/ens3.cfg`
-
-    ```
-    iface ens3 inet6 auto
-        up sleep 5
-        up dhclient -1 -6 -cf /etc/dhcp/dhclient6.conf -lf /var/lib/dhcp/dhclient6.ens3.leases -v ens3 || true
-    ```
-
-Im Anschluss wird das entsprechende Interface neu gestartet:
-
-```bash
-sudo ifdown ens3 && sudo ifup ens3
-```
-
-Die VM hat jetzt eine weitere IPv6 Adresse auf dem Interface, auf dem
-vorher nur die IPv4 Adresse existierte und kann somit auch über IPv6
-korrekt erreicht werden.
-
-Damit Sie die beschriebenen Punkte nicht jedes mal manuell abarbeiten
-müssen, können Sie die folgende `cloud-init` Konfiguration verwenden (was
-`cloud-init` genau ist, erklären wir in [Schritt 19](/optimist/guided_tour/step19)):
-
-```yaml
-#cloud-config
-write_files:
-        - path: /etc/dhcp/dhclient6.conf
-          content: "timeout 30;"
-        - path: /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
-          content: "network: {config: disabled}"
-        - path: /etc/network/interfaces.d/lo.cfg
-          content: |
-              auto lo
-              iface lo inet loopback
-        - path: /etc/network/interfaces.d/ens3.cfg
-          content: |
-              iface ens3 inet6 auto
-                  up sleep 5
-                  up dhclient -1 -6 -cf /etc/dhcp/dhclient6.conf -lf /var/lib/dhcp/dhclient6.ens3.leases -v ens3 || true
-
-runcmd:
-        - [ ifdown, ens3]
-        - [ ifup, ens3]
-```
-
-### CentOS 7
-
-Die genannten Parameter müssen den angegebenen Dateien neu hinzugefügt
-oder falls diese bereits vorhanden sind, ergänzt werden:
-
-- `/etc/sysconfig/network`
-
-    ```
-    NETWORKING_IPV6=yes
-    ```
-
-- `/etc/sysconfig/network-scripts/ifcfg-eth0`
-
-    ```
-    IPV6INIT=yes
-    DHCPV6C=yes
-    ```
-
-Anschließend wird das entsprechende Interface neu gestartet:
-
-```bash
-sudo ifdown eth0 && sudo ifup eth0
-```
-
-Die VM hat jetzt eine weitere IPv6 Adresse auf dem Interface, auf dem vorher nur die IPv4 Adresse existierte und kann somit auch über IPv6 korrekt erreicht werden.
-
-Damit Sie die beschriebenen Punkte nicht jedes mal manuell abarbeiten
-müssen, können Sie die folgende `cloud-init` Konfiguration verwenden (was
-`cloud-init` genau ist, erklären wir für Ubuntu 16.04 in [Schritt 19](/optimist/guided_tour/step19/)):
-
-```yaml
-#cloud-config
-write_files:
-        - path: /etc/sysconfig/network
-          owner: root:root
-          permissions: '0644'
-          content: |
-              NETWORKING=yes
-              NOZEROCONF=yes
-              NETWORKING_IPV6=yes
-        - path: /etc/sysconfig/network-scripts/ifcfg-eth0
-          owner: root:root
-          permissions: '0644'
-          content: |
-              DEVICE="eth0"
-              BOOTPROTO="dhcp"
-              ONBOOT="yes"
-              TYPE="Ethernet"
-              USERCTL="yes"
-              PEERDNS="yes"
-              PERSISTENT_DHCLIENT="1"
-              IPV6INIT=yes
-              DHCPV6C=yes
-runcmd:
-        - [ ifdown, eth0]
-        - [ ifup, eth0]
-```
 
 ## Externer Zugriff
 

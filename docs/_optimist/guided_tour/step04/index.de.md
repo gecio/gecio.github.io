@@ -81,7 +81,7 @@ erstellen Sie direkt eine solche Umgebung:
 
 ```bash
 $ virtualenv ~/.virtualenvs/openstack
-New python executable in /Users/iNNOVO/.virtualenvs/openstack/bin/python
+New python executable in /Users/GEC/.virtualenvs/openstack/bin/python
 Installing setuptools, pip, wheel...done.
 ```
 
@@ -120,7 +120,7 @@ Um zu sehen, ob alles korrekt funktioniert hat, testen Sie die Ausgabe:
 
 ```bash
 $ type -a openstack
-openstack is /home/iNNOVO/.virtualenvs/openstack/bin/openstack
+openstack is /home/GEC/.virtualenvs/openstack/bin/openstack
 ```
 
 ### Windows
@@ -186,7 +186,7 @@ erstellen Sie direkt eine solche Umgebung:
 
 ```bash
 $ virtualenv ~/.virtualenvs/openstack
-New python executable in /Users/iNNOVO/.virtualenvs/openstack/bin/python
+New python executable in /Users/GEC/.virtualenvs/openstack/bin/python
 Installing setuptools, pip, wheel...done.
 ```
 
@@ -226,7 +226,7 @@ Um zu sehen ob alles korrekt funktioniert hat, testen Sie die Ausgabe:
 
 ```bash
 $ type -a openstack
-openstack is /home/iNNOVO/.virtualenvs/openstack/bin/openstack
+openstack is /home/GEC/.virtualenvs/openstack/bin/openstack
 ```
 
 ## Zugangsdaten

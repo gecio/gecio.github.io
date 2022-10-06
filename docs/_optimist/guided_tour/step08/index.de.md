@@ -18,8 +18,7 @@ Damit Sie eine Instanz löschen können, benötigen Sie entweder den Namen oder 
 
 Existieren nur wenige Instanzen in einem Stack, können Sie den Namen für das Löschen verwenden.
 
-Werden allerdings mehrere Instanzen verwendet, empfehlen wir Ihnen, für das Löschen die ID zu nutzen, da Namen im Gegensatz zu IDs
-nicht einzigartig sind.
+Werden allerdings mehrere Instanzen verwendet, empfehlen wir Ihnen, für das Löschen die ID zu nutzen, da Namen im Gegensatz zu IDs nicht einzigartig sind.
 
 Der OpenStackClient zeigt Ihnen ansonsten an, dass es mehrere Instanzen mit dem entsprechenden Namen gibt.
 

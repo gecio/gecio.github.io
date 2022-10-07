@@ -17,7 +17,7 @@ With Localstorage, the storage of your instances is located directly on the hype
 
 Since your data is directly bound by your instance on our local hypervisor storage, we recommend that you distribute this data via a HA concept, over the provided Availability Zones.
 The storage backend of the local storage instances is protected against the failure of individual storage media in the array, however, the resulting redundancy compared to the Ceph-based instances only exists within the hypervisor node providing the instance.
-When replacing individual components following a hardware issue, there may be limited availability and performance for a short time before recovery.
+When replacing individual components following a hardware issue, there may be limited availability and performance for a short time until recovery.
 The hypervisors are subject to our defined patch cycle where we must boot through the hypervisors one by one. This will be performed per Availability Zone, one server at a time, within a defined Maintainace Window.
 As the instances are using local storage, the maintenance work cannot be carried out uninterrupted, unlike flavors based on Ceph storage. Consequently, there is a regular maintenance window for l1 Flavors. Within each Availability Zone, one server after the other is updated and rebooted during the defined maintenance window. Within the maintenance window, running instances are shut down by our system and stopped after 10 minutes.
 

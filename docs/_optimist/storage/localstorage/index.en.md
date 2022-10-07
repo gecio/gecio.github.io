@@ -15,15 +15,17 @@ With Localstorage, the storage of your instances is located directly on the hype
 
 ## Data security and availability
 
-Since your data is directly bound yb your instance on our local hypervisor storage, we recommend that you distribute this data via a HA concept, over the provided GEC Availability Zones. The hypervisors are subject to our compliance patch cycle where we must boot through the hypervisors one by one. This will be performed per Availability Zone, one server at a time, within a defined Maintainace Window.
+Since your data is directly bound by your instance on our local hypervisor storage, we recommend that you distribute this data via a HA concept, over the provided Availability Zones.
+The storage backend of the local storage instances is protected against the failure of individual storage media in the array, however, the resulting redundancy compared to the Ceph-based instances only exists within the hypervisor node providing the instance.
+When replacing individual components following a hardware issue, there may be limited availability and performance for a short time before recovery.
+The hypervisors are subject to our defined patch cycle where we must boot through the hypervisors one by one. This will be performed per Availability Zone, one server at a time, within a defined Maintainace Window.
+As the instances are using local storage, the maintenance work cannot be carried out uninterrupted, unlike flavors based on Ceph storage. Consequently, there is a regular maintenance window for l1 Flavors. Within each Availability Zone, one server after the other is updated and rebooted during the defined maintenance window. Within the maintenance window, running instances are shut down by our system and stopped after 10 minutes.
 
 ## Standard Maintainance Windows
 
-| Window | Availability Zone | Months | Weekly | Day | Time |
-|:---|---|---|---|---|---:|
-| 1 | ES1 | January, April, July, October | 25% of the hypervisors | Wednesday | 10 a.m - 3 p.m |
-| 2 | IX1 | February, May, August, November | 25% of the hypervisors | Wednesday | 10 a.m - 3 p.m |
-| 3 | IX2 | March, June, September, December | 25% of the hypervisors | Wednesday | 10 a.m - 3 p.m |
+| Interval | day | time |
+|:---|---|---:|
+| weekly | Wednesday | 10:00 a.m. - 4:00 p.m. |
 
 ## OpenStack Features
 
@@ -35,4 +37,4 @@ _Shelving/Snapshotting:_ Both features are possible, but due to the larger disk 
 
 ## Deleting instances
 
-When you delete your instance, our system will overwrite your data multiple times as outlined in our policy.
+Deleting instances based on l1 flavors can take a long time due to the background process for deleting the data.

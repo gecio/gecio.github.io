@@ -17,29 +17,31 @@ This allows the user to connect two private networks to each other. To achieve t
 
 Before we can create a VPN, we need two separate networks to connect to each other. For this guide, we will create these networks in two different OpenStack projects which will be referred to as "left" and "right".
 The following steps have to be repeated for both networks ("left" and "right"), assuming you want to connect two different OpenStack clusters.
-For the sake of simplicity, this guide will only demonstrate how to create the left network, as the steps to create the right network are exactly the same (for OpenStack) with exception to naming and subnet prefix.  
-In this example, we will be using the subnet prefix `2001:db8:1:33bc::/64` for the left network and `2001:db8:1:33bd::/64` for the right.  
+For the sake of simplicity, this guide will only demonstrate how to create the left network. For OpenStack, the steps to create the right network are exactly the same with exception to naming and subnet prefix
+In this example, we will be using the subnet prefix `2001:db8:1:33bc::/64` for the left network and `2001:db8:1:33bd::/64` for the right.
+
 **If you already have two networks you would like to connect via Site-to-Site VPN, you can skip to [creating IKE and IPSec policies](#Create-IKE-and-IPSec-policies-on-both-sides)**.
 
 #### Using Horizon (GUI)
 
 1. Create the left network with a new subnet.
 
-Within your project, navigate to Network > Networks and click Create Network.
+Within your project, navigate to _Network → Networks_ and click _Create Network_.
 
 [![](attachments/horizon_create_network.png)](https://dashboard.optimist.innovo.cloud/project/networks/)
 
-Give your new network a name, select "Enable Admin State" to enable the network and "Create Subnet" to create the network and subnet all in one step. Click next.
+Give your new network a name, select _Enable Admin State_ to enable the network and _Create Subnet_ to create the network and subnet all in one step. Click _Next_.
 
 [![](attachments/horizon_create_network_network.png)](https://dashboard.optimist.innovo.cloud/project/networks/)
 
-Assign a name to your new network subnet, select "Enter Network Address manually" and enter your desired subnet within "Network Address", if you would like to use your own subnet.
-To use a subnet from a predefined pool instead, select "Allocate Network Address from a pool" and pick a pool. Click next.  
-_For documentation purposes, we will be using our own previously mentioned prefixes._
+Assign a name to your new network subnet, select _Enter Network Address manually_ and enter your desired subnet within _Network Address_, if you would like to use your own subnet.
+To use a subnet from a predefined pool instead, select _Allocate Network Address from a pool_ and pick a pool. Click _Next_.
+
+**For documentation purposes, we will be using our own previously mentioned prefixes.**
 
 [![](attachments/horizon_create_network_subnet.png)](https://dashboard.optimist.innovo.cloud/project/networks/)
 
-Select "Enable DHCP" and "IPv6 Address Configuration Mode" "DHCPV6 STATEFUL". Allocation pools will be generated automatically. Click create.
+Select _Enable DHCP_ and _IPv6 Address Configuration Mode_ "DHCPV6 STATEFUL". Allocation pools will be generated automatically. Click _Create_.
 
 [![](attachments/horizon_create_network_subnet_details.png)](https://dashboard.optimist.innovo.cloud/project/networks/)
 
@@ -123,11 +125,11 @@ $ openstack subnet create \
 
 1. Create a router with the provider network as an external gateway.
 
-Within your project, navigate to Network > Routers and click Create Router.
+Within your project, navigate to _Network → Routers_ and click _Create Router_.
 
 [![](attachments/horizon_create_router.png)](https://dashboard.optimist.innovo.cloud/project/routers/)
 
-Give your new router a name, select "Enable Admin State" to enable the router and "PROVIDER" as "External Network". Click Create Router.
+Give your new router a name, select _Enable Admin State_ to enable the router and "PROVIDER" as "External Network". Click Create Router.
 
 [![](attachments/horizon_create_router_details.png)](https://dashboard.optimist.innovo.cloud/project/routers/)
 
@@ -170,15 +172,15 @@ $ openstack router set vpnaas-left-router --external-gateway provider
 
 #### Using Horizon (GUI)
 
-Within your project, navigate to Network > Routers and select the previously created router.
+Within your project, navigate to _Network → Routers_ and select the previously created router.
 
 [![](attachments/horizon_select_router.png)](https://dashboard.optimist.innovo.cloud/project/routers/)
 
-Select Interfaces and click Add Interface.
+Select _Interfaces_ and click _Add Interface_.
 
 [![](attachments/horizon_router_interfaces_add.png)](https://dashboard.optimist.innovo.cloud/project/routers/)
 
-Select your subnet and click Submit.
+Select your subnet and click _Submit_.
 
 [![](attachments/horizon_router_interfaces_add_details.png)](https://dashboard.optimist.innovo.cloud/project/routers/)
 
@@ -207,21 +209,21 @@ The IKE and IPSec policies need to be configured identically on both sides. For 
 
 1. Create the IKE policy
 
-Within your project, navigate to Network > VPN, select IKE Policies and click Add IKE Policy.
+Within your project, navigate to _Network → VPN_, select _IKE Policies_ and click _Add IKE Policy_.
 
 [![](attachments/horizon_create_ike_policy.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
 
-Give your IKE policy a name, and fill in the IKE policy parameters. Click Add.
+Give your IKE policy a name, and fill in the IKE policy parameters. Click _Add_.
 
 [![](attachments/horizon_create_ike_policy_details.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
 
 2. Create the IPSec policy.
 
-Still within Network > VPN, select IPSec Policies and click Add IPsec Policy.
+Still within _Network → VPN_, select IPSec Policies and click _Add IPsec Policy_.
 
 [![](attachments/horizon_create_ipsec_policy.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
 
-Give your IPSec policy a name, and fill in the IPSec policy parameters. Click Add.
+Give your IPSec policy a name, and fill in the IPSec policy parameters. Click _Add_.
 
 [![](attachments/horizon_create_ipsec_policy_details.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
 
@@ -283,11 +285,11 @@ $ openstack vpn ipsec policy create \
 
 #### Using Horizon (GUI)
 
-Within your project, navigate to Network > VPN, select VPN Services and click Add VPN Service.
+Within your project, navigate to _Network → VPN_, select _VPN Services_ and click _Add VPN Service_.
 
 [![](attachments/horizon_create_vpn.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
 
-Give your VPN service a name, select your router and "Enable Admin State". A subnet is not needed as we will be using endpoint groups. Click Add.
+Give your VPN service a name, select your router and _Enable Admin State_. A subnet is not needed as we will be using endpoint groups. Click _Add_.
 
 [![](attachments/horizon_create_vpn_details.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
 
@@ -321,19 +323,19 @@ $ openstack vpn service create vpnaas-left-vpn --router vpnaas-left-router
 
 1. Create the local endpoint group for the left side.
 
-Within your project, navigate to Network > VPN, select Endpoint Groups and click Add Endpoint Group.
+Within your project, navigate to _Network → VPN_, select _Endpoint Groups_ and click _Add Endpoint Group_.
 
 [![](attachments/horizon_create_endpoint_group.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
 
-Give your endpoint group a name, select the type "Subnet" and select your subnet under "Local System Subnets". Click Add.
+Give your endpoint group a name, select the _Type_ "Subnet" and select your subnet under _Local System Subnets_. Click _Add_.
 
 [![](attachments/horizon_create_endpoint_group_left_local_details.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
 
 2. Create the peer endpoint group for the left side.
 
-Still within Network > VPN, Endpoint Groups, click Add Endpoint Group again.
+Still within _Network → VPN_, Endpoint Groups, click _Add Endpoint Group_ again.
 
-Give your endpoint group a name, select the type "CIDR" and enter the subnet of the right side. Click Add.
+Give your endpoint group a name, select the _Type_ "CIDR" and enter the subnet of the right side. Click _Add_.
 
 [![](attachments/horizon_create_endpoint_group_left_remote_details.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
 
@@ -383,7 +385,7 @@ $ openstack vpn endpoint group create \
 
 #### Using Horizon (GUI)
 
-Within your project, navigate to Network > VPN, select IPSec Site Connections and click Add IPSec Site Connection.
+Within your project, navigate to _Network → VPN_, select _IPSec Site Connections_ and click _Add IPSec Site Connection_.
 
 [![](attachments/horizon_create_site_connection.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
 

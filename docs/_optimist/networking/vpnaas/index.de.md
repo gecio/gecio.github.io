@@ -1,6 +1,6 @@
 ---
 title: VPN as a Service
-lang: de
+lang: "de"
 permalink: /optimist/networking/vpnaas/
 nav_order: 2300
 parent: Netzwerke

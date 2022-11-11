@@ -41,4 +41,5 @@ Deleting instances based on l1 flavors can take a long time due to the backgroun
 The process is compliant with our current Baseline Deletion Policy.
 
 **INFO**
+
 We are currently examining ways to speed up the deletion in the future, but it must be ensured that the data cannot be recovered.

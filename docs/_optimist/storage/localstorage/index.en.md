@@ -40,4 +40,5 @@ _Shelving/Snapshotting:_ Both features are possible, but due to the larger disk 
 Deleting instances based on l1 flavors can take a long time due to the background process for deleting the data.
 The process is compliant with our current Baseline Deletion Policy.
 
-Please note: This policy is subject to change. We are internally discussing and exploring solutions to speed up the deletion process while remaining compliant.
+**INFO**
+We are currently examining ways to speed up the deletion in the future, but it must be ensured that the data cannot be recovered.

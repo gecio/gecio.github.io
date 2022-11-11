@@ -36,6 +36,6 @@ _Shelving/Snapshotting:_ Beide Features sind möglich, aber aufgrund der Disk Si
 ## Löschen der Instanz
 
 Das Löschen von Instanzen basierend auf l1-Flavors kann aufgrund des Hintergrundprozesses zum Löschen der Daten lange dauern.
-Der Prozess entspricht unserer aktuellen Baseline-Löschungsrichtlinie.
+Der Prozess richtet sich nach unserer aktuellen Grundrichtlinie zur Löschung und Vernichtung von Informationen
 
 Bitte beachten Sie: Diese Richtlinie kann sich ändern. Wir diskutieren und prüfen intern Lösungen, um den Löschvorgang zu beschleunigen und gleichzeitig konform zu bleiben.

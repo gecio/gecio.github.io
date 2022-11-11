@@ -15,7 +15,7 @@ Beim Localstorage befindet sich der Storage Ihrer Instanzen direkt auf dem Hyper
 
 ## Datensicherheit und Verfügbarkeit
 
-Da Ihre Daten direkt durch Ihre Instanz auf dem Storage des lokalen Hypervisors gebunden sind, empfiehlt es sich, diese Daten mithilfe eines HA Konzepts über die gegebenen Availability Zonen zu verteilen. 
+Da Ihre Daten direkt durch Ihre Instanz auf dem Storage des lokalen Hypervisors gebunden sind, empfiehlt es sich, diese Daten mithilfe eines HA Konzepts über die gegebenen Availability Zonen zu verteilen.
 Das Storage Backend der Localstorage Instanzen ist gegen einen Ausfall einzelner Speichermedien des Arrays geschützt, die dadurch hergestellte Redundanz besteht jedoch gegenüber der Ceph basierten Instanzen nur innerhalb des Hypervisor Nodes welcher die Instanz bereitstellt. Beim Ersetzen von Einzelkomponenten auf Grund eines Hardwaredefekts, kann es bis zur Wiederherstellung kurzfristig zu einer eingeschränkten Verfügbarkeit und Performance kommen.
 Die Hypervisor unterliegen einem definierten Patch Zyklus, bei dem die Hypervisoren nacheinander gebootet werden müssen. Durch den Localstorage der Instanzen können die Wartungsarbeiten nicht wie bei den auf Ceph Storage basierten Flavors unterbrechungsfrei durchgeführt werden. Aus diesem Grund existiert für l1 Flavors ein regelmäßiges Wartungsfenster. Dabei wird innerhalb einer Availability Zone und innerhalb des festgelegten Wartungsfensters ein Server nach dem anderen aktualisiert und rebootet. Innerhalb des Wartungsfensters werden laufende Instanzen von unserem System heruntergefahren und nach 10 Minuten gestoppt.
 
@@ -35,4 +35,8 @@ _Shelving/Snapshotting:_ Beide Features sind möglich, aber aufgrund der Disk Si
 
 ## Löschen der Instanz
 
-Das Löschen von Instanzen basierend auf l1 Flavors kann durch den im Hintergrund laufenden Prozess zur Löschung der Daten längere Zeit in Anspruch nehmen.
+Das Löschen von Instanzen basierend auf l1-Flavors kann aufgrund des Hintergrundprozesses zum Löschen der Daten lange dauern.
+
+**INFO**
+
+Wir prüfen derzeit Möglichkeiten um das Löschen zukünftig zu Beschleunigen, es muss dabei jedoch gewährleistet werden das die Daten nicht wiederhergestellt werden können.

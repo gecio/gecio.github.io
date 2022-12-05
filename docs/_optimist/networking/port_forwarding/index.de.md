@@ -88,5 +88,3 @@ Um eine Port Forwarding-Regel von einer Floating IP zu entfernen, benötigen wir
 Mit dem folgenden Befehl lässt sich die Konfiguration für ein Floating IP Port Forwarding löschen:
 
 `$ openstack floating ip port forwarding delete <Floating-ip> <port-forwarding-id>`
-
-test

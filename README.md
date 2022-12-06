@@ -5,8 +5,6 @@
 # GEC Customer Documentation
 
 This repository contains the customer documentation for GEC.
-
-[![Open in VSCode](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/gecio/gecio.github.io)
 </div>
 
 <br><br>

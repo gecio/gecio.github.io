@@ -16,11 +16,11 @@ Eine zurückgestellte Instanz sowie die ihr zugewiesenen Ressourcen (z.B. IP-Adr
 
 Diese Funktion kann als Teil eines Lifecycle-Prozesses einer Instanz oder zum Einsparen von Ressourcen verwendet werden.
 
-{: .alert .alert-error }
-
-**WARNUNG**  
-Dies gilt nicht für l1 (localstorage) Flavors.  
-Weitere Informationen finden Sie unter [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features).
+{: .warning-title }
+>Warnung
+>
+>Dies gilt nicht für l1 (localstorage) Flavors.
+>Weitere Informationen finden Sie unter [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features).
 
 ## Shelving einer Instanz
 

@@ -82,11 +82,12 @@ geändert werden soll. Wählen Sie anschließend _Actions_ → _Resize Flavor_.
 Der aktuelle Flavor wird angezeigt. Verwenden Sie die Dropdown-Liste "Select a new flavor", wählen Sie den neuen Flavor aus und bestätigen
 Sie mit "Resize".
 
-{: .alert .alert-error }
+{: .warning-title }
+>Warnung
+>
+>Dies gilt nicht für l1 (localstorage) Flavors.
+>Weitere Informationen finden Sie unter [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features).
 
-**WARNUNG**  
-Dies gilt nicht für l1 (localstorage) Flavors.  
-Weitere Informationen finden Sie unter [Storage → Localstorage](/optimist/storage/localstorage/#openstack-features).
 ## Warum ist das Logfile der Compute Instanz im Optimist Dashboard leer?
 
 Bedingt durch Wartungsarbeiten oder einem Umverteilen der Last im OpenStack wurde die Instanz verschoben. In diesem Fall wird das Logfile

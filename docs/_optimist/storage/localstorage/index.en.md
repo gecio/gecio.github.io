@@ -23,9 +23,9 @@ As the instances are using local storage, the maintenance work cannot be carried
 
 ## Standard Maintainance Windows
 
-| Interval | day | time |
+| Interval | day | time (in UTC) |
 |:---|---|---:|
-| weekly | Wednesday | 10:00 a.m. - 4:00 p.m. |
+| weekly | Wednesday | 9:00 a.m. - 4:00 p.m. |
 
 ## OpenStack Features
 
@@ -34,11 +34,3 @@ OpenStack provides many ways to handle your instances, such as resizing, shelvin
 _Resize:_ The resize option will be displayed, but it is technically not possible to resize an instance based on an l1 flavor. However, you can address this by doing a cluster setup (application based) with l1 flavors, running larger l1 flavors in parallel and rolling your data from the old l1 to the new l1 flavors.
 
 _Shelving/Snapshotting:_ Both features are possible, but due to the larger disk size within l1 flavors we do not recommend this, as the associated upload will take much longer. In this case we recommend using your external backup solution.
-
-## Deleting instances
-
-Deleting instances based on l1 flavors can take a long time due to the background process for deleting the data.
-
-**INFO**
-
-We are currently examining ways to speed up the deletion in the future, but it must be ensured that the data cannot be recovered.

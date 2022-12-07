@@ -21,9 +21,9 @@ Die Hypervisor unterliegen einem definierten Patch Zyklus, bei dem die Hyperviso
 
 ## Standard Wartungsfenster
 
-| Intervall | Tag | Zeit |
+| Intervall | Tag | Zeit (in UTC) |
 |:---|---|---:|
-| wöchentlich | Mittwoch | 10:00 Uhr - 16:00 Uhr |
+| wöchentlich | Mittwoch | 9:00 Uhr - 16:00 Uhr |
 
 ## Openstack Features
 
@@ -32,11 +32,3 @@ OpenStack bietet Ihnen viele Funktionen für Ihre Instanzen, wie z.B. resize, sh
 _Resize:_ Die Option Resize wird Ihnen angezeigt, aber technisch ist es nicht möglich, eine auf einem l1 Flavor basierende Instanz zu resizen. Sie können das umgehen, in dem Sie einen Cluster (Applikationsbezogen) mit l1 Flavors aufsetzen, größere l1 Flavors parallel starten und Ihre Daten von den alten l1 Flavors auf die neuen l1 Flavors rollen. Dies gilt auch bei einem wechsel von einem andren Flavor zu l1 Flavors.
 
 _Shelving/Snapshotting:_ Beide Features sind möglich, aber aufgrund der Disk Size innerhalb der l1 Flavors raten wir wegen der langen Uploadzeiten davon ab. Hier empfiehlt es sich, die für die Applikation vorgesehene externe Backup-Lösung zu nutzen.
-
-## Löschen der Instanz
-
-Das Löschen von Instanzen basierend auf l1-Flavors kann aufgrund des Hintergrundprozesses zum Löschen der Daten lange dauern.
-
-**INFO**
-
-Wir prüfen derzeit Möglichkeiten um das Löschen zukünftig zu Beschleunigen, es muss dabei jedoch gewährleistet werden das die Daten nicht wiederhergestellt werden können.

@@ -17,4 +17,4 @@ Prinzipiell gibt es zwei Möglichkeiten, Benutzern Zugriff auf einen GKS Cluster
 
 * [Projekt-Basierter Zugriff: Mit einem Cluster verbinden](/gks/accessmanagement/connectingtoacluster/)
 * [Role-Based Access Control (RBAC)](/gks/accessmanagement/usingrbac/)
-* [Revoking Tokens](/gks/accessmanagement/revokingtokens)
+* [Revoking Tokens](/gks/accessmanagement/revokingtoken)

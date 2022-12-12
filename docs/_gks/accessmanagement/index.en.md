@@ -16,4 +16,4 @@ There are two ways how to grant other users access to an GKS cluster:
 
 * [Project-Based Access: Connecting to a Cluster](/gks/accessmanagement/connectingtoacluster/)
 * [Role-Based Access Control (RBAC)](/gks/accessmanagement/usingrbac/)
-* [Revoking Tokens](/gks/accessmanagement/revokingtokens)
+* [Revoking Tokens](/gks/accessmanagement/revokingtoken)

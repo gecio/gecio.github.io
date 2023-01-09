@@ -30,6 +30,7 @@ The current list of images is as follows:
 - Debian 10 (Buster)
 - CentOS 8
 - CentOS 7
+- CoreOS (stable)
 - Flatcar Linux
 - Windows Server 2019 (GUI/Core)
 

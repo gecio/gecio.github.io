@@ -74,6 +74,12 @@ Status auf ACTIVE zu ändern:
 openstack server resize --confirm SERVER
 ```
 
+{: .warning-title }
+
+> Warnung
+>
+> Die Größenänderung wird nach einer Stunde automatisch bestätigt, falls sie vorher nicht manuell bestätigt oder rückgängig gemacht wurde.
+
 ### Resizing über das Optimist-Dashboard
 
 Gehen Sie zu [Optimist Dashboard → Instances](https://dashboard.optimist.innovo.cloud/project/instances/) und navigieren Sie zu der Instanz, deren Größe

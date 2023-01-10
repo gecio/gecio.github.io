@@ -74,6 +74,10 @@ When the resize is complete, the instance status is displayed as VERIFY_RESIZE. 
 openstack server resize --confirm SERVER
 ```
 
+{: .warning }
+
+Resizes are confirmed automatically after 1 hour, if not confirmed or reverted manually.
+
 ### Resizing with the Optimist dashboard
 
 On [Optimist Dashboard → Instances](https://dashboard.optimist.innovo.cloud/project/instances/) navigate to the instance to resize, then

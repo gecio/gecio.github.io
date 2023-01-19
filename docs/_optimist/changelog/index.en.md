@@ -1,19 +1,19 @@
 ---
 title: Changelog
-lang: en
+lang: "en"
 permalink: /optimist/changelog/
 nav_order: 10000
 ---
 
 # Changelog Optimist
 
-All notable changes to the Optimist Platform will be documented on this page.
+All notable changes to the Optimist Platform are documented on this page.
 
 ---
 
 ## Upcoming
 
-Upcoming changes to the Optimist platform will be listed here
+Upcoming changes to the Optimist platform are listed here
 
 ---
 

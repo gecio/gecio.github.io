@@ -1,35 +1,32 @@
 ---
 title: "07: The first VM"
-lang: en
+lang: "en"
 permalink: /optimist/guided_tour/step07/
 nav_order: 1070
 parent: Guided Tour
 ---
 
-Step 7: The first VM
-====================
+# Step 7: The first VM
 
-Start
------
+## Start
 
-In the previous steps, we've learnt everything needed to create a VM.
+In the previous steps, you learned everything you need to create a VM.
 
-On average, it's more useful to create VMs as part of a stack, and to create
-these stacks via Heat or other automation tools like Terraform.
+In general, it is best to create VMs as part of a stack, and to create
+these stacks with *Heat*, or other automation tools like *Terraform*.
 
-To make sure that we know the basics, this step is about creating a single VM
+To ensure that you know the basics, this step deals with creating a single VM
 manually.
 
-Installation
-------------
+## Installation
 
 The basic command to create a single VM is:
 
 ```
-$ openstack server create test
+openstack server create test
 ```
 
-If you execute this command as shown above, this error will be returned:
+If you execute the above command, the following error is returned:
 
 ```
 usage: openstack server create [-h] [-f {json,shell,table,value,yaml}]
@@ -52,12 +49,12 @@ usage: openstack server create [-h] [-f {json,shell,table,value,yaml}]
 openstack server create: error: argument --flavor is required
 ```
 
-It tells us that we have not specified what flavor our VM should be.
+It tells us that you have not specified a flavor for your VM.
 
-To specify a flavor, we will need to add the flag `--flavor` with a
+To specify a flavor, you need to add the flag `--flavor` with a
 flavor argument.
 
-Let's take a look at what flavours are available:
+With the following command you can see the available flavors:
 
 ```
 $ openstack flavor list
@@ -75,19 +72,17 @@ $ openstack flavor list
 +--------------------------------------+------------+-------+------+-----------+-------+-----------+
 ```
 
-If we would add `--flavor m1.micro` to our command and execute it, it
-would still not work as OpenStack needs some more data before it has
-enough to start a new VM.
+If you add `--flavor m1.micro` to the command and execute it, it
+will still return an error as OpenStack needs more data to start a new VM.
 
-Besides flavor, we need to supply the key to be installed (`--key-name`),
-the operating system image to install (`--image`), what network the VM will run
-on (`--network`) and what security group needs to be applied to it
+In addition to flavors, you need to supply the key (`--key-name`) and the operating system image to be installed (`--image`), the network the VM will run
+on (`--network`), and the security group to be applied to it
 (`--security-group`).
 
-We already created a security group in a previous step, so we will need
-to acquire an image and a network to create our first VM.
+You already created a security group in a previous step, so you need
+to acquire an image and a network to create your first VM.
 
-Let's take a look what images are already available:
+With the following command you can see the available images:
 
 ```
 $ openstack image list
@@ -104,7 +99,7 @@ $ openstack image list
 +--------------------------------------+---------------------------------------+--------+
 ```
 
-Next up is to select a nework, let's create a simple network with this
+Next, you have to select a nework. You can create a simple network with the following
 command:
 
 ```
@@ -140,15 +135,14 @@ $ openstack network create BeispielNetzwerk
 +---------------------------+--------------------------------------+
 ```
 
-Beware that this network has no internet connection, and no additional
-configuration, it is not something we would use for a VM we plan to
-actually use.
+Note that this network has no internet connection, and no additional
+configuration.
 
-We will create a functional network in step 10.
+You will learn how to create a functional network in [Step 10](/optimist/guided_tour/step10/).
 
-Now to put everything together, and create an our VM. For this example,
-we will use the default security group, the Ubuntu 16.04 image (we'll
-use the ID in the command line) and the previously created network and
+Now we will put everything together, and create a VM. In this example,
+you will use the default security group, the Ubuntu 16.04 image (you
+use the ID in the command line), and the previously created network and
 key:
 
 ```
@@ -185,7 +179,7 @@ $ openstack server create BeispielServer --flavor m1.small --key-name Beispiel -
 +-----------------------------+--------------------------------------------------------+
 ```
 
-To see all the possible parameters during the creation of a VM, we can
+To see all possible parameters during the creation of a VM, you can
 use `--help`:
 
 ```
@@ -282,7 +276,6 @@ shell formatter:
   --prefix PREFIX       add a prefix to all variable names
 ```
 
-Conclusion
-----------
+## Conclusion
 
-We have now created our first Instance, and used some basic OpenStack commands. In Step 8 we will delete this Instance.
+You have now created your first Instance using basic OpenStack commands. In the next step, you will delete this instance.

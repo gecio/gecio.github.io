@@ -1,6 +1,6 @@
 ---
 title: Images
-lang: de
+lang: "de"
 permalink: /optimist/specs/images/
 parent: Spezifikationen
 nav_order: 9500
@@ -30,6 +30,7 @@ Aktuell enthält diese Liste:
 - Debian 10 (Buster)
 - CentOS 8
 - CentOS 7
+- CoreOS (stable)
 - Flatcar Linux
 - Windows Server 2019 (GUI/Core)
 

@@ -1,32 +1,29 @@
 ---
 title: "23: Object Storage (S3 compatible)"
-lang: en
+lang: "en"
 permalink: /optimist/guided_tour/step23/
 nav_order: 1230
 parent: Guided Tour
 ---
 
-Step 23: Object Storage (S3 compatible)
-=================================================
+# Step 23: Object Storage (S3 compatible)
 
-Preface
--------
+## Start
 
-In our previous steps, we learned about various building blocks in OpenStack.
-Now we will take a look at the [Object Storage](https://en.wikipedia.org/wiki/Object_storage), which gives us some interesting possibilities to save data.
+In the previous steps, you learned about various building blocks in OpenStack.
+Now we will take a look at the [Object Storage](https://en.wikipedia.org/wiki/Object_storage), which offers some interesting ways to save data.
 
-Credentials
------
+## Credentials
 
-We will need another set of credentials to get access to the Object Storage.
-Therefore, we will need the OpenStackClient (as mentioned in [Step 4](/optimist/guided_tour/step04/)), to create the credentials via the OpenStack API.
-Run the following command to create the credentials::
+The first step is to obtain login data (ec2 credentials) in order to access Object Storage.
+Therefore, you need the OpenStackClient (as mentioned in [Step 4: Our way to the console"](/optimist/guided_tour/step04/)), to create the credentials with the OpenStack API.
+To create the credentials, run the following command:
 
 ```bash
 openstack ec2 credentials create
 ```
 
-If everything works fine, it should look like this:
+The output should look like this:
 
 ```bash
 $ openstack ec2 credentials create
@@ -43,28 +40,27 @@ $ openstack ec2 credentials create
 +------------+-----------------------------------------------------------------+
 ```
 
-Once the credentials are created we need some tooling to interact with the ObjectStorage.
+Once the credentials have been created, you need some tools to interact with the ObjectStorage.
 
-How to get access to the ObjectStorage (S3 compatible)
----------
+## How to get access to the ObjectStorage (S3 compatible)
 
-There are several tools available to interact with the ObjectStore, however we recommend [s3cmd](https://s3tools.org/s3cmd) as it is easy to control and use.
+There are several tools available which allow us to interact with Object Storage, however we recommend using [s3cmd](https://s3tools.org/s3cmd) as it is straightforward to use and handle.
 
-We’ve already installed "pip" as package-manager (in Step 4) and can use it to install  [s3cmd](https://s3tools.org/s3cmd):
+You have already installed "pip" as package-manager (in [Step 4](/optimist/guided_tour/step04/)) you can also use it to install [s3cmd](https://s3tools.org/s3cmd):
 
 ```bash
 pip install s3cmd
 ```
 
-After the installation it’s necessary to enter the credentials in the *.s3cfg* .
-It's located in the user's home directory, e.g. /home/username/
-If the .s3cfg isn’t already there, please create it.
+Since S3cmd is now installed, the previously created credentials must be entered in a file called *.s3cfg* in order to begin using it. The file should be located in the user's home directory, for example, `/home/username/`
+
+The following process can now be used to create the *.s3cfg* file:
 
 ```bash
 touch .s3cfg
 ```
 
-Now you can open the .s3cfg with your preffered text editor (i.e. vi, vim, nano) and input your credentials:
+You can open *.s3cfg* with your preferred text editor (for example, *vi, vim, nano*) and enter your credentials as follows:
 
 ```bash
 access_key = <your access_key>
@@ -76,39 +72,35 @@ secret_key = <your secret_key>
 use_https = True
 ```
 
-The bucket
----------
+## The bucket
 
-After we have access to the ObjectStorage (S3 compatible), let’s start to work with it.
-If needed, you can see all s3cmd commands with:
+After you have access to *ObjectStorage* (S3 compatible), you can start working with it.
+If required, you can see all s3cmd commands with:
 
 ```bash
 s3cmd --help
 ```
 
-Now we will create a bucket.
-Buckets are similar to folders, which we need for a structure.
-A file can only be saved in a bucket and it is also important, that the name is unique (for all customers)
-If there is already a bucket with the name „test, there is no possibility to create another one with the name „test“
-We recommend a UUID for a bucket.
+You can now create a bucket. In the broadest sense, buckets are similar to folders, which are required for a structure.
+A file can only be saved in a bucket. It is important that the name is unique (for all customers).
+If there is already a bucket available with the name *test*, you cannot create another one with the name *test*.
+We recommend using a UUID and then resolving it in the corresponding application.
 
-Also, there is the possibility to differentiate between public and private buckets.
-All buckets are by default private and can only be accessed by the creator of the bucket.
-If needed, it can be changed as an example via the *Access Control List (ACL)*.
-IMPORTANT: If you set a bucket to public, all files in it are reachable. We recommend to set only files public.
+You can also differentiate between *public* and *private* buckets.
+By default, all buckets are private, and only the creator of the bucket can access them.
+If needed, you can change it, for example with the *Access Control List (ACL)*.
+IMPORTANT: If you set a bucket to public, all files in it are reachable. Information about files in this bucket that are set to private can also be retrieved. We recommend only setting specific files to public.
 
-After some basics, it’s time to create a bucket with a UUID:
+Now that we know the key details, it is time to create a bucket with a UUID:
 
 ```bash
 $ s3cmd mb s3://e4d05df3-aa8e-4a37-b1b5-2745d189b189
 Bucket 's3://e4d05df3-aa8e-4a37-b1b5-2745d189b189/' created
 ```
 
-Upload a file
----------
+## Upload a file
 
-After the creation of a bucket, let's upload a file.
-Therefore, we use the command `s3cmd put file_name s3://bucket_name` and a possible outcome can look like this:
+After the bucket has been created, let's upload a file with the command `s3cmd put file_name s3://bucket_name`. The outcome should be similar to the below:
 
 ```bash
 $ s3cmd put test.yaml s3://e4d05df3-aa8e-4a37-b1b5-2745d189b189
@@ -116,30 +108,28 @@ upload: 'test.yaml' -> 's3://e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml'  [1
  4218 of 4218   100% in    0s     4.61 kB/s  done
 ```
 
-Get access to the files
----------
+## Get access to the files
 
-As we already mentioned there is the possibility to reach the files. The general URL for this is *<https://s3.es1.fra.optimist.innovo.cloud/bucket_name/file_name>*
+The general URL for accessing files in Optimist is *<https://s3.es1.fra.optimist.innovo.cloud/bucket_name/file_name>*.
 
-To get access to our example file, we need to change the settings from *private* to *public*.
-We will use the *Access Control List (ACL)* for this:
+To get access to your example file, you need to change the settings from *private* to *public*.
+To do this, use the *Access Control List (ACL)*:
 
 ```bash
 $ s3cmd setacl s3://e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml --acl-public
 s3://e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml: ACL set to Public  [1 of 1]
 ```
 
-Now it's possible to download the file and the link for it is:
+Now you can access the file with the following link:
 <https://s3.es1.fra.optimist.innovo.cloud/e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml>
 
-If you want to set the file again *private*, use this command:
+To set the file to *private* once again, use this command:
 
 ```bash
 $ s3cmd setacl s3://e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml --acl-private
 s3://e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml: ACL set to Private  [1 of 1]
 ```
 
-Conclusion
----------
+## Conclusion
 
-We made our first steps in an S3 compatible Storage and also learned some basics to use it.
+You have taken your first steps with S3 compatible storage.

@@ -1,6 +1,6 @@
 ---
 title: S3 Security
-lang: de
+lang: "de"
 permalink: /optimist/storage/s3_documentation/security/
 nav_order: 3150
 parent: S3 Compatible Object Storage

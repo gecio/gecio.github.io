@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Welcome!
-lang: en
+lang: "en"
 permalink: /
+nav_exclude: true
 ---
 
 # Welcome!

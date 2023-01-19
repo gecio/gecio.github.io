@@ -22,6 +22,8 @@ language_labels:
   en: English
   de: Deutsch
 
+nav_external_links: []
+
 # Footer
 footer_navigation:
   previous:
@@ -104,7 +106,7 @@ collections:
   optimist:
     output: true
     sort_by: nav_order
-  imke:
+  gks:
     output: true
     sort_by: nav_order
 
@@ -112,14 +114,14 @@ collections_dir: docs
 
 defaults:
   - scope:
-      path: ""
+      path: "**/*.md"
       type: "optimist"
     values:
       layout: "default"
 
   - scope:
-      path: ""
-      type: "imke"
+      path: "**/*.md"
+      type: "gks"
     values:
       layout: "default"
 
@@ -127,8 +129,8 @@ just_the_docs:
   # Define which collections are used in just-the-docs
   collections:
     # Reference the "docs" collection
-    imke:
-      name: IMKE
+    gks:
+      name: GKS
       # Exclude the collection from the navigation
       # Supports true or false (default)
       nav_exclude: false
@@ -146,4 +148,31 @@ just_the_docs:
       # Supports true or false (default)
       search_exclude: false
 
+# To disable support for mermaid diagrams (https://mermaid-js.github.io/mermaid/),
+# comment out the `mermaid` and `version` keys below
+# By default, consuming the theme as a gem leaves mermaid disabled; it is opt-in
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "9.1.6"
+  # Put any additional configuration, such as setting the theme, in _includes/mermaid_config.js
+  # See also docs/ui-components/code
 
+gh_edit_link: false # show or hide edit this page link
+
+callouts_level: quiet # or loud
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red

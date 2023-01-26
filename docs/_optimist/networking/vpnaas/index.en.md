@@ -319,6 +319,10 @@ $ openstack vpn service create vpnaas-left-vpn --router vpnaas-left-router
 
 ### Create the endpoint groups
 
+{: .warning }
+
+When using multiple subnets, make sure your VPN endpoint supports routing multiple subnets through the same connection. While OpenStack does, for implementations that do not support this, multiple endpoint groups need to be created, one for each subnet.
+
 #### Using Horizon (GUI)
 
 1. Create the local endpoint group for the left side.
@@ -382,6 +386,10 @@ $ openstack vpn endpoint group create \
 ```
 
 ### Create the site connections
+
+{: .warning }
+
+Just like with the endpoint groups, if your VPN endpoint does not support routing multiple subnets through the same connection, you need to create multiple site connections, one for each subnet/endpoint group.
 
 #### Using Horizon (GUI)
 

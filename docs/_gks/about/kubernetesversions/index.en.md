@@ -13,7 +13,7 @@ Current supported Kubernetes versions in GKS.
 | Version | GKS Deprecation | GKS End-of-Life |
 |---------|-----------------|-----------------|
 | v1.24   |                 |                 |
-| v1.23   | 31th Jan 2023   | 4th Apr 2023    |
+| v1.23   | 31th Jan 2023   | 18th Apr 2023   |
 | v1.22   | 19th Jul 2022   | 18th Oct 2022   |
 | v1.21   | 4th Mar 2022    | 28th Jun 2022   |
 | v1.20   | 22nd Nov 2021   | 1st Mar 2022    |

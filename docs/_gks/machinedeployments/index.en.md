@@ -24,3 +24,4 @@ The worker nodes of a cluster need to be configured with a `Machine Deployment`.
 * [Debugging: Cluster Nodes Usage Rate](/gks/machinedeployments/clusternodesusagerate/)
 * [Debugging: Adding SSH Keys to Worker Nodes](/gks/machinedeployments/add_ssh_key/)
 * [Upgrading the OS on Worker Nodes](/gks/machinedeployments/updatingnodeos/)
+* [Cluster Nodes in multiple Availability Zones](/gks/machinedeployments/multipleavailabilityzones/)

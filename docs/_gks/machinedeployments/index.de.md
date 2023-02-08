@@ -25,3 +25,4 @@ Dagegen können die Worker-Nodes sehr wohl auf verschiedenste Arten konfiguriert
 * [Debugging: Auslastung der Cluster Nodes](/gks/machinedeployments/clusternodesusagerate/)
 * [Debugging: SSH-Keys hinzufügen](/gks/machinedeployments/add_ssh_key/)
 * [Aktualisierung des Betriebssystems auf Worker-Nodes](/gks/machinedeployments/updatingnodeos/)
+* [Cluster Maschinen in multiplen Verfügbarkeitszonen](/gks/machinedeployments/multipleavailabilityzones/)

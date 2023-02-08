@@ -40,7 +40,7 @@ This will leave the pod in pending state unable to be run correctly as it
 is missing it's storage which is anchored to the old AZ and cannot be
 moved or migrated automatically.
 
-There are to solutions to such a scenario. The first would be to invest
+There are two solutions to such a scenario. The first would be to invest
 in cross-AZ storage (which is pricey and not available at all locations).
 
 The second would be to pin the pod to a specific AZ. This can be done
@@ -83,8 +83,8 @@ spec:
 ### spread across multiple AZs for high-availability
 
 There is a way to achieve higher availability by creating more pods
-and use (anti-)affinity to make sure no two pods from the same
-kind run in the same AZ. As this whole topic is about storage we
+and use (anti-)affinity to make sure two pods of the same application
+ido not run in the same AZ. As this whole topic is about storage we
 need to choose a StatefulSet for this, otherwise it will not be
 possible for the kubernetes scheduler to connect the pods with
 it's respective storages (persistent volumes and their claims).

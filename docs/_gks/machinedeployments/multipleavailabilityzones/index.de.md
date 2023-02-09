@@ -1,7 +1,7 @@
 ---
 title: Mehrere Availability-Zones
 lang: "de"
-permalink: /gks/machinedeployments/multipleavailibilityzones/
+permalink: /gks/machinedeployments/multipleavailabilityzones/
 nav_order: 6600
 parent: Machine Deployments
 ---

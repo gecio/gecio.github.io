@@ -1,5 +1,5 @@
 ---
-title: Mehrere Verfügbarkeitszonen
+title: Mehrere Availability-Zones
 lang: "de"
 permalink: /gks/machinedeployments/multipleavailibilityzones/
 nav_order: 6600
@@ -7,26 +7,26 @@ parent: Machine Deployments
 ---
 <!-- LTeX:  language=de-DE -->
 
-# Mehrere Verfügbarkeitszonen
+# Mehrere Availability-Zones
 
 ## Einleitung
 
-Ein *machine deployment* ist immer an einer Verfügbarkeitszone (im
-Weiteren VZ abgekürzt) gebunden, eine Maschine zu jedem Zeitpunkt
-immer nur in einer Verfügbarkeitszone existieren kann und *machine
+Ein *machine deployment* ist immer an eine Availability-Zone (im
+Weiteren AZ abgekürzt) gebunden, da eine Maschine zu jedem Zeitpunkt
+immer nur in einer Availability-Zone existieren kann und *machine
 deployments* generell nicht aus Maschinen verschiedener
-Verfügbarkeitszonen bestehen. Dies beschränkt den nutzbaren
-persistenten Speicher für Pods auf die jeweilige Verfügbarkeitszone in
+Availability-Zones bestehen. Dies beschränkt den nutzbaren
+persistenten Speicher für Pods auf die jeweilige Availability-Zone in
 der der Pod das erste mal ge-schedule'd wurde.
 
 
-## Setups in einer Verfügbarkeitszone
+## Setups in einer Availability-Zone
 
 Im Normalfall hat ein Kubernetes Cluster zum Erstellungszeitpunkt nur
-ein *machine deployment*, welches in genau einer Verfügbarkeitszone
+ein *machine deployment*, welches in genau einer Availability-Zone
 liegt und somit keinerlei Probleme bereitet. Wenn ein Pod auf einer
 Maschine dieses *machine deployments* laufen soll und persistenten
-Speicher braucht, fordert er einfach Speicher aus dieser Verfügbarkeitszone
+Speicher braucht, fordert er einfach Speicher aus dieser Availability-Zone
 an. Sollte der Pod von seiner Maschine verdrängt werden, wählt
 Kubernetes automatisch eine passende Maschine mit hinreichend
 Ressourcen aus und fährt den Pod auf seinem neuen Ziel wieder hoch.
@@ -35,40 +35,37 @@ nahtlos an der neuen Maschine zur Verfügung gestellt und der Pod
 kann wie erwartet normal hochfahren.
 
 
-## Setups in mehreren Verfügbarkeitszonen
+## Setups in mehreren Availability-Zones
 
-### Setups beschränkt auf einer von mehreren Verfügbarkeitszonen
+### Setups beschränkt auf einer von mehreren Availability-Zones
 
 Man kann mehr als ein *machine deployment* haben. Wenn man sich für
-ein zweites (oder n-tes) entscheidet kann man wählen, in welcher
-Verfügbarkeitszone dieses neue *machine deployment* liegen soll.
-Es ist möglich das neue *machine deployment* in dieselbe Verfügbarkeitszone
-zu stellen wie das Erste oder es in eine der anderen VZn (dies
+ein Zweites (oder N-tes) entscheidet kann man wählen, in welcher
+Availability-Zone dieses neue *machine deployment* liegen soll.
+Es ist möglich das neue *machine deployment* in dieselbe Availability-Zone
+zu stellen wie das Erste oder es in eine der anderen AZ (dies
 ist abhängig vom geplanten Verwendungszweck; beides kann sinnvoll sein).
 
-Existieren zwei *machine deployments* in zwei verschiedenen Verfügbarkeitszonen
-so kann es passieren dass ein Pod von seiner Maschine in VZ A verdrängt
-wird und der Kubernetes Scheduler einen neuen Pod in der VZ B einplant
+Existieren zwei *machine deployments* in zwei verschiedenen Availability-Zones
+so kann es passieren dass ein Pod von seiner Maschine in AZ A verdrängt
+wird und der Kubernetes Scheduler einen neuen Pod in der AZ B einplant
 und laufen lassen will. Der Pod wird jedoch im Status *pending* verbleiben
 und in der Beschreibung einen Fehler hinterlassen dass es nicht möglich
 ist die Voraussetzungen für das Hochfahren dieses Pods zu erfüllen.
 
 Der Grund hierfür liegt im bereits oben beschriebenen Verhalten dass
-der persistente Speicher ebenfalls an eine Verfügbarkeitszone gebunden
+der persistente Speicher ebenfalls an eine Availability-Zone gebunden
 ist und nicht automatisch migriert werden kann.
 
-Es gibt zwei Lösungsmöglichkeiten. Entweder man investiert in einen
-persistenten Speicher der VZ-übergreifend angeboten wird (sehr teuer
-und nicht in allen Lokationen verfügbar). Eine Alternative ist es
-Kubernetes beizubringen diese Art von Pod (Applikation) explizit nur
-in einer bestimmten Verfügbarkeitszone zu platzieren. Dies kann
+Eine Lösung ist es Kubernetes beizubringen diese Art von Pod (Applikation)
+explizit nur in einer bestimmten Availability-Zone zu platzieren. Dies kann
 sowohl mit einem Deployment, StatefulSet oder Daemonset erreicht werden.
 
 Dieses Kubernetes Feature heißt *affinity* und kann Pods sowohl
 an (oder gegen) seine eigenen oder andere Pods als auch gegen Nodes
 verwendet werden.
 
-Hier ein Beispiel für ein Deployment welches in der VZ ES1 konfiguriert
+Hier ein Beispiel für ein Deployment welches in der AZ ES1 konfiguriert
 wird:
 
 
@@ -97,23 +94,23 @@ spec:
                 - es1
       ...
 ```
-(Die drei aufeinander folgenden Punkt symbolisieren dass hier Zeilen
+(Die drei aufeinander folgenden Punkte symbolisieren dass hier Zeilen
  aus Gründen der einfacheren Lesbarkeit unterschlagen wurden. Das
  Deployment wird ohne diese unterschlagenen Zeilen nicht funktionieren!)
 
 
-### Setups verteilt über mehrere Verfügbarkeitszonen
+### Setups verteilt über mehrere Availability-Zones
 
 Um die Verfügbarkeit der eigenen Applikation zu erhöhen ist es gängig,
-diese in zwei verschiedenen Verfügbarkeitszonen zu platzieren, um den
-Verlust einer ganzen Verfügbarkeitszone mitigieren zu können (natürlich
+diese in zwei verschiedenen Availability-Zones zu platzieren, um den
+Verlust einer ganzen Availability-Zone mitigieren zu können (natürlich
 muss die Applikation dies auch unterstützen aber das setzen wir hier
 mal als gegeben voraus).
 
 Um dies zu Erreichen muss man Kubernetes so konfigurieren dass es
-zwei Repliken einer Applikation immer in zwei verschiedene
-Verfügbarkeitszonen hochfährt. Zusätzlich muss die jeweilige Applikation
-in derselben VZ bleiben in der der persistente Speicher liegt.
+zwei Repliken einer Applikation immer in zwei verschiedenen
+Availability-Zones hochfährt. Zusätzlich muss die jeweilige Applikation
+in derselben AZ bleiben in der der persistente Speicher liegt.
 
 Dies kann mit der *podAntiAffinity* aus dem folgenden Beispiel
 erreicht werden. In diesem Fall wählen wir ein StatefulSet
@@ -146,7 +143,7 @@ spec:
             topologyKey: topology.kubernetes.io/zone
       ...
 ```
-(Wieder symbolisieren die drei aufeinander folgenden Punkt dass hier Zeilen
+(Wieder symbolisieren die drei aufeinander folgenden Punkte dass hier Zeilen
  aus Gründen der einfacheren Lesbarkeit unterschlagen wurden. Das
  StatefulSet wird ohne diese unterschlagenen Zeilen nicht funktionieren!)
 

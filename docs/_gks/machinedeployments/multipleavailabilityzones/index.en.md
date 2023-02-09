@@ -40,12 +40,9 @@ This will leave the pod in pending state unable to be run correctly as it
 is missing it's storage which is anchored to the old AZ and cannot be
 moved or migrated automatically.
 
-There are two solutions to such a scenario. The first would be to invest
-in cross-AZ storage (which is pricey and not available at all locations).
-
-The second would be to pin the pod to a specific AZ. This can be done
-with a kubernetes feature called affinity, which can be specified on
-either a deployment, statefulset or daemonset. With affinity you can
+A solution to this scenario would be to pin the pod to a specific AZ. This
+can be done with a kubernetes feature called affinity, which can be specified
+on either a deployment, statefulset or daemonset. With affinity you can
 specify that a pod should only run in a specific AZ. This would make
 sure that if a pod gets evicted from a machine it will only ever be
 scheduled on a machine in that specific AZ. Here is an example for a

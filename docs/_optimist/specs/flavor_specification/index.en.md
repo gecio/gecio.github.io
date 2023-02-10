@@ -59,7 +59,7 @@ The following Flavor Types are currently considered deprecated and the removal o
 | Name       | Cores |   RAM  |  Disk | IOPS Limits (read/write) | IO throughput (read/write) | Network Bandwidth |
 | :---------- | -----: | -----: | -------: | -----------------------: | ------------------------------: | ----------------: |
 | l1.micro    |    1   |   8 GB |   300 GB |            25000 / 10000 |             125 MB/s / 60 MB/s  |          1 Gbit/s |
-| l1.small    |    2   |  16 GB |   600 GB |            50000 / 25000 |             250 MB/s / 125 MB/s |          1 Gbit/s |
+| l1.small    |    2   |  16 GB |   600 GB |            50000 / 25000 |             250 MB/s / 125 MB/s |          2 Gbit/s |
 | l1.medium   |    4   |  32 GB |  1200 GB |           100000 / 50000 |             500 MB/s / 250 MB/s |          3 Gbit/s |
 | l1.large    |    8   |  64 GB |  2500 GB |          100000 / 100000 |            1000 MB/s / 500 MB/s |          4 Gbit/s |
 | l1.xlarge   |   16   | 128 GB |  5000 GB |          100000 / 100000 |           2000 MB/s / 1125 MB/s |          4 Gbit/s |

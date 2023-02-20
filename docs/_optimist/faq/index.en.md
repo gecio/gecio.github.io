@@ -113,3 +113,4 @@ Change the mountpoint in `/etc/fstab` to use the UUID after fetching the infos w
 
 We do not support multiattached volumes on our instances as cluster-capable file systems are required for multi attach volumes to handle concurrent file system access.
 Attempts to use multi-attached volumes without cluster-capable file systems carry a high risk of data corruption, therefore this feature is not enabled on the Optimist platform.
+

@@ -2,7 +2,7 @@
 image: mcr.microsoft.com/devcontainers/jekyll:2-bullseye
 # Functions that should be executed before the build script is run
 before_script:
-  - .devcontainer/post-create.sh
+  - /bin/sh .devcontainer/post-create.sh
 pages:
   script:
     - bundle exec jekyll build -d public

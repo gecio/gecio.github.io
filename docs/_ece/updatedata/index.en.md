@@ -1,7 +1,7 @@
 ---
 title: Changing Lifecycle Policies
 lang: "en"
-permalink: /ece/updatedata/
+permalink: /ece/updateilm/
 has_children: false
 nav_order: 2000
 ---

@@ -103,6 +103,9 @@ exclude:
 
 # Collections
 collections:
+  ece:
+    output: true
+    sort_by: nav_order
   optimist:
     output: true
     sort_by: nav_order
@@ -113,6 +116,12 @@ collections:
 collections_dir: docs
 
 defaults:
+  - scope:
+      path: "**/*.md"
+      type: "ece"
+    values:
+      layout: "default"
+
   - scope:
       path: "**/*.md"
       type: "optimist"
@@ -129,6 +138,10 @@ just_the_docs:
   # Define which collections are used in just-the-docs
   collections:
     # Reference the "docs" collection
+    ece:
+      name: Elastic Cloud Enterprise
+      nav_exclude: false
+      search_exclude: false
     gks:
       name: GKS
       # Exclude the collection from the navigation

@@ -29,7 +29,7 @@ ein neues Passwort, schreiben Sie uns bitte eine E-Mail
 an <support@gec.io>.
 
 Hierzu wechseln wir im Browser auf folgende
-URL: <https://.optimist.gec.io/>
+URL: <https://optimist.gec.io/>
 
 [![](attachments/13536093.png)](https://dashboard.optimist.gec.io/)
 

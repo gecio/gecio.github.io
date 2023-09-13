@@ -118,7 +118,7 @@ from botocore.client import Config
 
 ## Authentifizierung
 s3 = boto3.resource('s3',
-                        endpoint_url='https://s3.es1.fra.optimist.innovo.cloud',<font></font>
+                        endpoint_url='https://s3.es1.fra.optimist.gec.io',<font></font>
                         aws_access_key_id='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',<font></font>
                         aws_secret_access_key='bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb',<font></font>
                     )
@@ -155,7 +155,7 @@ from botocore.client import Config
 
 ## Authentifizierung
 s3 = boto3.resource('s3',
-                        endpoint_url='https://s3.es1.fra.optimist.innovo.cloud',
+                        endpoint_url='https://s3.es1.fra.optimist.gec.io',
                         aws_access_key_id='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
                         aws_secret_access_key='bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb',
                     )

@@ -439,7 +439,7 @@ Bekannte Probleme
 Wenn sie bei der Zuweisung der öffentliche IP Adresse zum Loadbalancer folgenden Fehler bekommen:
 
 ``
-ResourceNotFound: 404: Client Error for url: https://network.fra.optimist.innovo.cloud/v2.0/floatingips/46c0e8cf-783d-44a0-8256-79f8ae0be7fe, External network 54258498-a513-47da-9369-1a644e4be692 is not reachable from subnet 32259126-dd37-44d5-922c-99d68ee870cd.  Therefore, cannot associate Port 37fc5b34-ee07-49c8-b054-a8d591a9679f with a Floating IP.
+ResourceNotFound: 404: Client Error for url: https://network.fra.optimist.gec.io/v2.0/floatingips/46c0e8cf-783d-44a0-8256-79f8ae0be7fe, External network 54258498-a513-47da-9369-1a644e4be692 is not reachable from subnet 32259126-dd37-44d5-922c-99d68ee870cd.  Therefore, cannot associate Port 37fc5b34-ee07-49c8-b054-a8d591a9679f with a Floating IP.
 ``
 
 dann fehlt eine Verbindung zwischen ihrem Beispiel-Netz (Router) und dem Provider-Netz ([Schritt 10](/optimist/guided_tour/step10/))

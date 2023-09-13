@@ -100,7 +100,7 @@ Da ein Angreifer auf einem kompromittierten System immer Zugriff auf die S3-Anme
     access_key_id = 111122223333444455556666
     secret_access_key = aaaabbbbccccddddeeeeffffgggghhhh
     region = eu-central-1
-    endpoint = s3.es1.fra.optimist.innovo.cloud
+    endpoint = s3.es1.fra.optimist.gec.io
     acl = private
     bucket_acl = private
     upload_concurrency = 8

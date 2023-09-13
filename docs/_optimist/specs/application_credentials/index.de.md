@@ -115,7 +115,7 @@ Sobald wir über die CLI oder das Dashboard einen Satz von Application Credentia
 Wir müssen unsere `<name>` und `<secret>` im curl-Befehl verwenden:
 
 ```bash
-curl -i -H "Content-Type: application/json" -d ' { "auth": { "identity": { "methods": ["application_credential"],  "application_credential": {  "id": “<id>", "secret": “<secret>"}}}}' https://identity.optimist.innovo.cloud/v3/auth/tokens
+curl -i -H "Content-Type: application/json" -d ' { "auth": { "identity": { "methods": ["application_credential"],  "application_credential": {  "id": “<id>", "secret": “<secret>"}}}}' https://identity.optimist.gec.io/v3/auth/tokens
 ```
 
 Ein erfolgreicher curl-Versuch gibt ein `x-subject-token` aus, erfolglose Versuche mit falschen Anmeldeinformationen führen zu einem 401-Fehler.

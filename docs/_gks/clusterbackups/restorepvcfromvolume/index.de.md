@@ -15,7 +15,7 @@ Wird ein PersistentVolumeClaim (PVC) in einem Ihrer Cluster angelegt, wird darau
 
 Die wichtigste Voraussetzung ist ein freies, aktuell nicht benutztes Openstack-Volume. Dies könnte zum Beispiel der Fall sein, wenn ein alter Cluster gelöscht, aber im Löschen-Dialog die Option explizit selektiert wurde, dass verbundene Volumes *nicht* gelöscht werden sollen oder wenn ein Volume von einem Cluster in ein anderes umgezogen werden soll. In jedem Fall wird es nicht um das Volume an sich gehen, sondern um die darauf vorhandenen Daten, die dem Kubernetes Cluster jetzt als PVC zur Verfügung gestellt werden sollen.
 
-Um ein existierendes Openstack-Volume als PVC in ein Kubernetes-Cluster einzubinden, benötigen Sie die ID des Volumes. Um diese herauszufinden, müssen Sie sich zuerst in das [Openstack/Optimist Dashboard](https://dashboard.optimist.innovo.cloud/auth/login/) einloggen.
+Um ein existierendes Openstack-Volume als PVC in ein Kubernetes-Cluster einzubinden, benötigen Sie die ID des Volumes. Um diese herauszufinden, müssen Sie sich zuerst in das [Openstack/Optimist Dashboard](https://dashboard.optimist.gec.io/auth/login/) einloggen.
 
 ![Openstack Login](../images/RestPVC01.png)
 

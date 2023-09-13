@@ -15,7 +15,7 @@ using
 the [OpenStackClient](https://docs.openstack.org/python-openstackclient/latest/).
 
 For simple, non-recurring tasks, it may be easier to use the [Horizon
-dashboard](https://dashboard.optimist.innovo.cloud).
+dashboard](https://dashboard.optimist.gec.io).
 
 With recurring tasks, or when you want to manage a complex stack, it is better to use the *OpenStack client* and *Heat*.
 
@@ -209,7 +209,7 @@ openstack is /home/iNNOVO/.virtualenvs/openstack/bin/openstack
 For the OpenStack client to work, you need to supply it with the credentials.
 
 You can download the credentials directly from
-the [Horizon](https://dashboard.optimist.innovo.cloud/identity/)
+the [Horizon](https://dashboard.optimist.gec.io/identity/)
 dashboard. After the login, click on your mail address in the right corner. Then click
  *Download OpenStack RC File v3*.
 
@@ -240,7 +240,7 @@ All required variables are in the previously downloaded *Beispiel.sh*.
 To set the variables, use the following command:
 
 ```bash
-set-item env:OS_AUTH_URL -value "https://identity.optimist.innovo.cloud/v3"
+set-item env:OS_AUTH_URL -value "https://identity.optimist.gec.io/v3"
 set-item env:OS_PROJECT_ID -value "Projekt ID eintragen"
 set-item env:OS_PROJECT_NAME -value "Namen eintrage"
 set-item env:OS_USER_DOMAIN_NAME -value "Default"

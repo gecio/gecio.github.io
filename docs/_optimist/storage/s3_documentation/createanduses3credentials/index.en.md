@@ -35,7 +35,7 @@ $ openstack ec2 credentials create
 | Field      | Value                                                           |
 +------------+-----------------------------------------------------------------+
 | access     | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa                                 |
-| links      | {u'self': u'https://identity.optimist.innovo.cloud/v3/users/bbb |
+| links      | {u'self': u'https://identity.optimist.gec.io/v3/users/bbb |
 |            | bbbbbbbbbbbbbbbbbbbbbbbbbbbbb/credentials/OS-                   |
 |            | EC2/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}                           |
 | project_id | cccccccccccccccccccccccccccccccc                                |
@@ -66,8 +66,8 @@ We then enter the following data in the .s3cfg and save it:
 access_key = aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 check_ssl_certificate = True
 check_ssl_hostname = True
-host_base = s3.es1.fra.optimist.innovo.cloud
-host_bucket = s3.es1.fra.optimist.innovo.cloud
+host_base = s3.es1.fra.optimist.gec.io
+host_bucket = s3.es1.fra.optimist.gec.io
 secret_key = dddddddddddddddddddddddddddddddd
 use_https = True
 ```
@@ -85,7 +85,7 @@ Here we enter the following values and click on "Add new account".
 ```text
 * Account Name: Freely selectable name for the account.
 * Account Type: S3 Compatible Storage
-* REST Endpoint: s3.es1.fra.optimist.innovo.cloud
+* REST Endpoint: s3.es1.fra.optimist.gec.io
 * Signature Version: Signature V2
 * Access Key ID: The corresponding Access Key (in our example: ddddddddddddddddddddddddddddddddddddd)
 * Secret Access Key: The corresponding secret (in our example: ddddddddddddddddddddddddddddddddddddd)
@@ -97,7 +97,7 @@ To use Cyberduck it is first necessary to download the application [here](https:
 After installing and running the program for the first time, click on "New connection". (1)
 A new window opens in which "Amazon S3" is selected in the dropdown menu (2). The following data is then required:
 
-- Server(3): s3.es1.fra.optimist.innovo.cloud
+- Server(3): s3.es1.fra.optimist.gec.io
 - Access Key ID(4): The corresponding Access Key (in our example: ddddddddddddddddddddddddddddddddddddd)
 - Secret Access Key(5): The corresponding Secret (In the example: dddddddddddddddddddddddddddddddddd)
 
@@ -116,7 +116,7 @@ After the successful installation of Boto3 it is now usable; it is important tha
 Therefore, the configuration section which is shown below, is always part of subsequent scripts used later.
 For this we create a Python file such as "Example.py" and add the following content:
 
-- endpoint_url: s3.es1.fra.optimist.innovo.cloud
+- endpoint_url: s3.es1.fra.optimist.gec.io
 - aws_access_key_id: The corresponding Access Key (in our example: dddddddddddddddddddddddddddddddddddd)
 - aws_secret_access_key: The corresponding Secret (In the example: dddddddddddddddddddddddddddddddddd)
 
@@ -127,7 +127,7 @@ import boto3
 from botocore.client import Config
 
 s3 = boto3.resource('s3',
-                        endpoint_url='https://s3.es1.fra.optimist.innovo.cloud',
+                        endpoint_url='https://s3.es1.fra.optimist.gec.io',
                         aws_access_key_id='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
                         aws_secret_access_key='dddddddddddddddddddddddddddddddd',
                     )

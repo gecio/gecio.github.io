@@ -252,7 +252,7 @@ Nachdem der OpenStackClient nun installiert ist, werden noch die
 Zugangsdaten für Openstack  benötigt.
 
 Diese können direkt im [Horizon
-Dashboard](https://dashboard.optimist.innovo.cloud/identity/) heruntergeladen
+Dashboard](https://dashboard.optimist.gec.io/identity/) heruntergeladen
 werden.  Dafür loggen wir uns ein und klicken dann rechts oben in der Ecke auf
 die E-Mail-Adresse und dann auf *Download OpenStack RC File v3*.
 Die heruntergeladene Datei trägt den Projektnamen (Projektname.sh),
@@ -285,7 +285,7 @@ mit einem Editor geöffnet werden.
 Um die Variablen zu setzen, kann folgender Befehl genutzt werden:
 
 ```bash
-set-item env:OS_AUTH_URL -value "https://identity.optimist.innovo.cloud/v3"
+set-item env:OS_AUTH_URL -value "https://identity.optimist.gec.io/v3"
 set-item env:OS_PROJECT_ID -value "Projekt ID eintragen"
 set-item env:OS_PROJECT_NAME -value "Namen eintrage"
 set-item env:OS_USER_DOMAIN_NAME -value "Default"

@@ -25,7 +25,7 @@ dashboard.
 need a new password, write an e-mail to <support@gec.io>
 
 The URL for the dashboard is
-<https://.optimist.gec.io>
+<https://optimist.gec.io>
 
 [![](attachments/13536093.png)](https://optimist.gec.io/)
 

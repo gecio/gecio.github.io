@@ -15,7 +15,7 @@ using
 the [OpenStackClient](https://docs.openstack.org/python-openstackclient/latest/).
 
 For simple, non-recurring tasks, it may be easier to use the [Horizon
-dashboard](https://dashboard.optimist.gec.io).
+dashboard](https://optimist.gec.io).
 
 With recurring tasks, or when you want to manage a complex stack, it is better to use the *OpenStack client* and *Heat*.
 
@@ -209,7 +209,7 @@ openstack is /home/iNNOVO/.virtualenvs/openstack/bin/openstack
 For the OpenStack client to work, you need to supply it with the credentials.
 
 You can download the credentials directly from
-the [Horizon](https://dashboard.optimist.gec.io/identity/)
+the [Horizon](https://optimist.gec.io/identity/)
 dashboard. After the login, click on your mail address in the right corner. Then click
  *Download OpenStack RC File v3*.
 

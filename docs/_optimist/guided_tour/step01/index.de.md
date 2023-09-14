@@ -31,7 +31,7 @@ an <support@gec.io>.
 Hierzu wechseln wir im Browser auf folgende
 URL: <https://optimist.gec.io/>
 
-[![](attachments/13536093.png)](https://dashboard.optimist.gec.io/)
+[![](attachments/13536093.png)](https://optimist.gec.io/)
 
 Im sich öffnenden Fenster wählen wir bei Domain *default*, und tragen den
 zugesendeten Benutzer (User-Name) sowie das zugehörige Passwort(Password) ein

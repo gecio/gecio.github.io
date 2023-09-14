@@ -252,7 +252,7 @@ Nachdem der OpenStackClient nun installiert ist, werden noch die
 Zugangsdaten für Openstack  benötigt.
 
 Diese können direkt im [Horizon
-Dashboard](https://dashboard.optimist.gec.io/identity/) heruntergeladen
+Dashboard](https://optimist.gec.io/identity/) heruntergeladen
 werden.  Dafür loggen wir uns ein und klicken dann rechts oben in der Ecke auf
 die E-Mail-Adresse und dann auf *Download OpenStack RC File v3*.
 Die heruntergeladene Datei trägt den Projektnamen (Projektname.sh),

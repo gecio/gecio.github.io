@@ -80,7 +80,7 @@ Resizes are confirmed automatically after 1 hour, if not confirmed or reverted m
 
 ### Resizing with the Optimist dashboard
 
-On [Optimist Dashboard → Instances](https://dashboard.optimist.gec.io/project/instances/) navigate to the instance to resize, then
+On [Optimist Dashboard → Instances](https://optimist.gec.io/project/instances/) navigate to the instance to resize, then
 choose: _Actions_ → \_Resize Flavor:.
 
 The current flavor is shown. To choose the new flavor, use the "Select a new flavor" dropdown list, and confirm with "Resize".

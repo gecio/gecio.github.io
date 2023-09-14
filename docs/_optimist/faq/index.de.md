@@ -37,7 +37,7 @@ openstack security group rule create --remote-ip 10.0.0.0/24 --protocol vrrp --e
 
 Der Grund dafür ist mit hoher Wahrscheinlichkeit, dass Floating IPs erstellt wurden, aber nach der Benutzung nicht korrekt gelöscht wurden.
 Um eine Übersicht über die aktuell verwendeten Floating IPs zu erhalten, können Sie das
-[Horizon Dashboard](https://dashboard.optimist.gec.io/) nutzen.
+[Horizon Dashboard](https://optimist.gec.io/) nutzen.
 
 Dort befindet sich der entsprechende Punkt unter _Project_ → _Network_ → _Floating-IPs_.
 
@@ -82,7 +82,7 @@ openstack server resize --confirm SERVER
 
 ### Resizing über das Optimist-Dashboard
 
-Gehen Sie zu [Optimist Dashboard → Instances](https://dashboard.optimist.gec.io/project/instances/) und navigieren Sie zu der Instanz, deren Größe
+Gehen Sie zu [Optimist Dashboard → Instances](https://optimist.gec.io/project/instances/) und navigieren Sie zu der Instanz, deren Größe
 geändert werden soll. Wählen Sie anschließend _Actions_ → _Resize Flavor_.
 
 Der aktuelle Flavor wird angezeigt. Verwenden Sie die Dropdown-Liste "Select a new flavor", wählen Sie den neuen Flavor aus und bestätigen

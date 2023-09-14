@@ -28,22 +28,22 @@ In diesem Beispiel verwenden wir das Subnetz-Präfix `2001:db8:1:33bc::/64` für
 
 Navigieren Sie innerhalb Ihres Projekts zu _Network → Networks_ und klicken Sie auf _Create Network_.
 
-[![](attachments/horizon_create_network.png)](https://dashboard.optimist.gec.io/project/networks/)
+[![](attachments/horizon_create_network.png)](https://optimist.gec.io/project/networks/)
 
 Geben Sie dem neuen Netzwerk einen Namen und wählen Sie _Enable Admin State_ , um das Netzwerk zu aktivieren. Wählen Sie anschließend _Create Subnet_ aus, um das Netzwerk und Subnetz in einem Schritt zu erzeugen. Klicken Sie danach auf _Next_.
 
-[![](attachments/horizon_create_network_network.png)](https://dashboard.optimist.gec.io/project/networks/)
+[![](attachments/horizon_create_network_network.png)](https://optimist.gec.io/project/networks/)
 
 Geben Sie Ihrem neuen Netzwerk-Subnetz einen Namen und wählen Sie _Enter Network Address manually_ aus. Falls Sie Ihr eigenes Subnetz verwenden möchten, geben Sie Ihr gewünschtes Subnetz in _Network Address_ ein.
 Falls Sie ein Subnetz von einem vordefinierten Pool verwenden möchten, wählen Sie _Allocate Network Address from a pool_ und wählen Sie einen Pool aus. Klicken Sie anschließend auf _Next_.
 
 **Für Dokumentationszwecke verwenden wir die vorher genannten Präfixe.**
 
-[![](attachments/horizon_create_network_subnet.png)](https://dashboard.optimist.gec.io/project/networks/)
+[![](attachments/horizon_create_network_subnet.png)](https://optimist.gec.io/project/networks/)
 
 Wählen Sie _Enable DHCP_ und unter _IPv6 Address Configuration Mode_ DHCPV6 STATEFUL aus. Die Allokationspools werden automatisch erzeugt. Klicken Sie auf _Create_.
 
-[![](attachments/horizon_create_network_subnet_details.png)](https://dashboard.optimist.gec.io/project/networks/)
+[![](attachments/horizon_create_network_subnet_details.png)](https://optimist.gec.io/project/networks/)
 
 #### Verwenden von CLI
 
@@ -127,11 +127,11 @@ $ openstack subnet create \
 
 Navigieren Sie innerhalb Ihres Projekts zu _Network → Routers_ und klicken Sie auf _Create Router_.
 
-[![](attachments/horizon_create_router.png)](https://dashboard.optimist.gec.io/project/routers/)
+[![](attachments/horizon_create_router.png)](https://optimist.gec.io/project/routers/)
 
 Geben Sie dem neuen Router einen Namen. Wählen Sie _Enable Admin State_, um den Router zu aktivieren. Wählen Sie "PROVIDER" als _External Network_ und klicken Sie auf _Create Router_.
 
-[![](attachments/horizon_create_router_details.png)](https://dashboard.optimist.gec.io/project/routers/)
+[![](attachments/horizon_create_router_details.png)](https://optimist.gec.io/project/routers/)
 
 #### Verwenden von CLI
 
@@ -174,15 +174,15 @@ $ openstack router set vpnaas-left-router --external-gateway provider
 
 Navigieren Sie innerhalb Ihres Projekts zu _Network → Routers_ und wählen Sie den zuvor erzeugten Router aus.
 
-[![](attachments/horizon_select_router.png)](https://dashboard.optimist.gec.io/project/routers/)
+[![](attachments/horizon_select_router.png)](https://optimist.gec.io/project/routers/)
 
 Wählen Sie _Interfaces_ und klicken Sie auf _Add Interface_.
 
-[![](attachments/horizon_router_interfaces_add.png)](https://dashboard.optimist.gec.io/project/routers/)
+[![](attachments/horizon_router_interfaces_add.png)](https://optimist.gec.io/project/routers/)
 
 Wählen Sie Ihr Subnetz aus und klicken Sie auf _Submit_.
 
-[![](attachments/horizon_router_interfaces_add_details.png)](https://dashboard.optimist.gec.io/project/routers/)
+[![](attachments/horizon_router_interfaces_add_details.png)](https://optimist.gec.io/project/routers/)
 
 #### Verwenden von CLI
 
@@ -211,21 +211,21 @@ Die IKE und IPSec Policies müsssen auf beiden Seiten identisch konfiguriert wer
 
 Navigieren Sie innerhalb Ihres Projekts zu _Network → VPN_, wählen Sie _IKE Policies_ aus und klicken Sie auf _Add IKE Policy_.
 
-[![](attachments/horizon_create_ike_policy.png)](https://dashboard.optimist.gec.io/project/vpn/)
+[![](attachments/horizon_create_ike_policy.png)](https://optimist.gec.io/project/vpn/)
 
 Geben Sie Ihrer IKE Policy einen Namen und geben Sie die IKE Policy Parameter ein. Klicken Sie anschließend auf _Add_.
 
-[![](attachments/horizon_create_ike_policy_details.png)](https://dashboard.optimist.gec.io/project/vpn/)
+[![](attachments/horizon_create_ike_policy_details.png)](https://optimist.gec.io/project/vpn/)
 
 2. Erzeugen Sie die IPSec Policy.
 
 Sie befinden sich noch immer innerhalb von _Network → VPN_. Wählen Sie _IPSec Policies_ aus und klicken Sie auf _Add IPsec Policy_.
 
-[![](attachments/horizon_create_ipsec_policy.png)](https://dashboard.optimist.gec.io/project/vpn/)
+[![](attachments/horizon_create_ipsec_policy.png)](https://optimist.gec.io/project/vpn/)
 
 Geben Sie Ihrer IPSec Policy einen Namen und geben Sie die IPSec Policy Parameter ein. Klicken Sie anschließend auf _Add_.
 
-[![](attachments/horizon_create_ipsec_policy_details.png)](https://dashboard.optimist.gec.io/project/vpn/)
+[![](attachments/horizon_create_ipsec_policy_details.png)](https://optimist.gec.io/project/vpn/)
 
 #### Verwenden von CLI
 
@@ -287,11 +287,11 @@ $ openstack vpn ipsec policy create \
 
 Navigieren Sie innerhalb Ihres Projekts zu _Network → VPN_. Wählen Sie _VPN Services_ aus und klicken Sie auf _Add VPN Service_.
 
-[![](attachments/horizon_create_vpn.png)](https://dashboard.optimist.gec.io/project/vpn/)
+[![](attachments/horizon_create_vpn.png)](https://optimist.gec.io/project/vpn/)
 
 Geben Sie Ihrem VPN Service einen Namen. Wählen Sie Ihren Router aus und selektieren Sie _Enable Admin State_. Ein Subnetz wird nicht benötigt, da wir die Endpoint Gruppen verwenden. Klicken Sie anschließend auf _Add_.
 
-[![](attachments/horizon_create_vpn_details.png)](https://dashboard.optimist.gec.io/project/vpn/)
+[![](attachments/horizon_create_vpn_details.png)](https://optimist.gec.io/project/vpn/)
 
 #### Verwenden von CLI
 
@@ -329,11 +329,11 @@ Bei Verwendung mehrerer Subnetze muss sichergestellt werden, dass der VPN-Endpun
 
 Navigieren Sie innerhalb Ihres Projekts zu _Network → VPN_. Wählen Sie _Endpoint Groups_ aus und klicken Sie auf _Add Endpoint Group_.
 
-[![](attachments/horizon_create_endpoint_group.png)](https://dashboard.optimist.gec.io/project/vpn/)
+[![](attachments/horizon_create_endpoint_group.png)](https://optimist.gec.io/project/vpn/)
 
 Geben Sie Ihrer Endpoint Gruppe einen Namen. Wählen Sie als Typ _Subnet_ und wählen Sie unter _Local System Subnets_ Ihr Subnetz aus. Klicken Sie anschließend auf _Add_.
 
-[![](attachments/horizon_create_endpoint_group_left_local_details.png)](https://dashboard.optimist.gec.io/project/vpn/)
+[![](attachments/horizon_create_endpoint_group_left_local_details.png)](https://optimist.gec.io/project/vpn/)
 
 2. Erzeugen Sie die Peer Endpoint Gruppe für die linke Seite.
 
@@ -341,7 +341,7 @@ Sie befinden sich noch immer innerhalb von _Network → VPN_ und _Endpoint Group
 
 Geben Sie Ihrer Endpoint Gruppe einen Namen. Wählen Sie den Typ _CIDR_ und geben Sie das Subnetz für die rechte Seite ein. Klicken Sie anschließend auf _Add_.
 
-[![](attachments/horizon_create_endpoint_group_left_remote_details.png)](https://dashboard.optimist.gec.io/project/vpn/)
+[![](attachments/horizon_create_endpoint_group_left_remote_details.png)](https://optimist.gec.io/project/vpn/)
 
 #### Verwenden von CLI
 
@@ -395,12 +395,12 @@ Wie auch bei den Endpunktgruppen müssen Sie, wenn Ihr VPN-Endpunkt das Routing 
 
 Navigieren Sie innerhalb Ihres Projekts zu _Network → VPN_. Wählen Sie _IPSec Site Connections_ aus und klicken Sie auf _Add IPSec Site Connection_.
 
-[![](attachments/horizon_create_site_connection.png)](https://dashboard.optimist.gec.io/project/vpn/)
+[![](attachments/horizon_create_site_connection.png)](https://optimist.gec.io/project/vpn/)
 
 Geben Sie Ihrer Verbindung einen Namen. Wählen Sie den vorher erzeugten VPN Service, die lokale Endpoint Guppe und die IKE und IPSec Policy, den Pre-Shared Key, die Peer IP und die Router Identity.
 In dieser Anleitung nutzen wir `2001:db8::4:703` als IP Addresse des rechten Routers.
 
-[![](attachments/horizon_create_site_connection_details.png)](https://dashboard.optimist.gec.io/project/vpn/)
+[![](attachments/horizon_create_site_connection_details.png)](https://optimist.gec.io/project/vpn/)
 
 #### Verwenden von CLI
 

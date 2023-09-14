@@ -31,7 +31,7 @@ $ openstack ec2 credentials create
 | Field      | Value                                                           |
 +------------+-----------------------------------------------------------------+
 | access     | <your access_key>                                               |
-| links      | {u'self': u'https://identity.optimist.innovo.cloud/v3/users/    |
+| links      | {u'self': u'https://identity.optimist.gec.io/v3/users/    |
 |            | user-id/credentials/OS-EC2/access_key'}                         |
 | project_id | <your project_id>                                               |
 | secret     | <your secret_key>                                               |
@@ -66,8 +66,8 @@ You can open *.s3cfg* with your preferred text editor (for example, *vi, vim, na
 access_key = <your access_key>
 check_ssl_certificate = True
 check_ssl_hostname = True
-host_base = s3.es1.fra.optimist.innovo.cloud
-host_bucket = s3.es1.fra.optimist.innovo.cloud
+host_base = s3.es1.fra.optimist.gec.io
+host_bucket = s3.es1.fra.optimist.gec.io
 secret_key = <your secret_key>
 use_https = True
 ```
@@ -110,7 +110,7 @@ upload: 'test.yaml' -> 's3://e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml'  [1
 
 ## Get access to the files
 
-The general URL for accessing files in Optimist is *<https://s3.es1.fra.optimist.innovo.cloud/bucket_name/file_name>*.
+The general URL for accessing files in Optimist is *<https://s3.es1.fra.optimist.gec.io/bucket_name/file_name>*.
 
 To get access to your example file, you need to change the settings from *private* to *public*.
 To do this, use the *Access Control List (ACL)*:
@@ -121,7 +121,7 @@ s3://e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml: ACL set to Public  [1 of 1]
 ```
 
 Now you can access the file with the following link:
-<https://s3.es1.fra.optimist.innovo.cloud/e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml>
+<https://s3.es1.fra.optimist.gec.io/e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml>
 
 To set the file to *private* once again, use this command:
 

@@ -34,7 +34,7 @@ $ openstack ec2 credentials create
 | Field      | Value                                                           |
 +------------+-----------------------------------------------------------------+
 | access     | aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa                                 |
-| links      | {u'self': u'https://identity.optimist.innovo.cloud/v3/users/bbb |
+| links      | {u'self': u'https://identity.optimist.gec.io/v3/users/bbb |
 |            | bbbbbbbbbbbbbbbbbbbbbbbbbbbbb/credentials/OS-                   |
 |            | EC2/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'}                           |
 | project_id | cccccccccccccccccccccccccccccccc                                |
@@ -67,8 +67,8 @@ Folgende Daten tragen wir dann in der .s3cfg ein:
 access_key = aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 check_ssl_certificate = True
 check_ssl_hostname = True
-host_base = s3.es1.fra.optimist.innovo.cloud
-host_bucket = s3.es1.fra.optimist.innovo.cloud
+host_base = s3.es1.fra.optimist.gec.io
+host_bucket = s3.es1.fra.optimist.gec.io
 secret_key = dddddddddddddddddddddddddddddddd
 use_https = True
 ```
@@ -116,7 +116,7 @@ upload: 'test.yaml' -> 's3://e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml'  [1
 Zugriff auf die Datei erhalten
 ---------
 
-Die generelle URL für den Zugriff auf Dateien lautet im Optimisten *<https://s3.es1.fra.optimist.innovo.cloud/Name_des_Buckets/Dateiname>*.
+Die generelle URL für den Zugriff auf Dateien lautet im Optimisten *<https://s3.es1.fra.optimist.gec.io/Name_des_Buckets/Dateiname>*.
 
 Damit auf die Datei aus unserem Beispiel zugegriffen werden kann, ist es notwendig, die Einstellung von *private* auf *public* zu ändern.
 Dafür können wir, wie bereits unter dem Punkt "Der Bucket" erwähnt, die *Access Control List (ACL)* nutzen:
@@ -127,7 +127,7 @@ s3://e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml: ACL set to Public  [1 of 1]
 ```
 
 Die Datei kann jetzt über folgenden Link aufgerufen werden:
-<https://s3.es1.fra.optimist.innovo.cloud/e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml>
+<https://s3.es1.fra.optimist.gec.io/e4d05df3-aa8e-4a37-b1b5-2745d189b189/test.yaml>
 
 Um sie wieder auf *private* zu stellen, nutzen wir folgenden Befehl:
 

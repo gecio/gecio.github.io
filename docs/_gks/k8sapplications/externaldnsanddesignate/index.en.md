@@ -152,7 +152,7 @@ resources:
 ##
 extraEnv:
   - name: OS_AUTH_URL
-    value: https://identity.optimist.innovo.cloud/v3
+    value: https://identity.optimist.gec.io/v3
   - name: OS_REGION_NAME
     value: fra
   - name: OS_USERNAME

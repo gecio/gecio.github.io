@@ -28,22 +28,22 @@ In this example, we will be using the subnet prefix `2001:db8:1:33bc::/64` for t
 
 Within your project, navigate to _Network → Networks_ and click _Create Network_.
 
-[![](attachments/horizon_create_network.png)](https://dashboard.optimist.innovo.cloud/project/networks/)
+[![](attachments/horizon_create_network.png)](https://optimist.gec.io/project/networks/)
 
 Give your new network a name, select _Enable Admin State_ to enable the network and _Create Subnet_ to create the network and subnet all in one step. Click _Next_.
 
-[![](attachments/horizon_create_network_network.png)](https://dashboard.optimist.innovo.cloud/project/networks/)
+[![](attachments/horizon_create_network_network.png)](https://optimist.gec.io/project/networks/)
 
 Assign a name to your new network subnet, select _Enter Network Address manually_ and enter your desired subnet within _Network Address_, if you would like to use your own subnet.
 To use a subnet from a predefined pool instead, select _Allocate Network Address from a pool_ and pick a pool. Click _Next_.
 
 **For documentation purposes, we will be using our own previously mentioned prefixes.**
 
-[![](attachments/horizon_create_network_subnet.png)](https://dashboard.optimist.innovo.cloud/project/networks/)
+[![](attachments/horizon_create_network_subnet.png)](https://optimist.gec.io/project/networks/)
 
 Select _Enable DHCP_ and _IPv6 Address Configuration Mode_ "DHCPV6 STATEFUL". Allocation pools will be generated automatically. Click _Create_.
 
-[![](attachments/horizon_create_network_subnet_details.png)](https://dashboard.optimist.innovo.cloud/project/networks/)
+[![](attachments/horizon_create_network_subnet_details.png)](https://optimist.gec.io/project/networks/)
 
 #### Using the CLI
 
@@ -127,11 +127,11 @@ $ openstack subnet create \
 
 Within your project, navigate to _Network → Routers_ and click _Create Router_.
 
-[![](attachments/horizon_create_router.png)](https://dashboard.optimist.innovo.cloud/project/routers/)
+[![](attachments/horizon_create_router.png)](https://optimist.gec.io/project/routers/)
 
 Give your new router a name, select _Enable Admin State_ to enable the router and "PROVIDER" as "External Network". Click Create Router.
 
-[![](attachments/horizon_create_router_details.png)](https://dashboard.optimist.innovo.cloud/project/routers/)
+[![](attachments/horizon_create_router_details.png)](https://optimist.gec.io/project/routers/)
 
 #### Using the CLI
 
@@ -174,15 +174,15 @@ $ openstack router set vpnaas-left-router --external-gateway provider
 
 Within your project, navigate to _Network → Routers_ and select the previously created router.
 
-[![](attachments/horizon_select_router.png)](https://dashboard.optimist.innovo.cloud/project/routers/)
+[![](attachments/horizon_select_router.png)](https://optimist.gec.io/project/routers/)
 
 Select _Interfaces_ and click _Add Interface_.
 
-[![](attachments/horizon_router_interfaces_add.png)](https://dashboard.optimist.innovo.cloud/project/routers/)
+[![](attachments/horizon_router_interfaces_add.png)](https://optimist.gec.io/project/routers/)
 
 Select your subnet and click _Submit_.
 
-[![](attachments/horizon_router_interfaces_add_details.png)](https://dashboard.optimist.innovo.cloud/project/routers/)
+[![](attachments/horizon_router_interfaces_add_details.png)](https://optimist.gec.io/project/routers/)
 
 #### Using the CLI
 
@@ -211,21 +211,21 @@ The IKE and IPSec policies need to be configured identically on both sides. For 
 
 Within your project, navigate to _Network → VPN_, select _IKE Policies_ and click _Add IKE Policy_.
 
-[![](attachments/horizon_create_ike_policy.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
+[![](attachments/horizon_create_ike_policy.png)](https://optimist.gec.io/project/vpn/)
 
 Give your IKE policy a name, and fill in the IKE policy parameters. Click _Add_.
 
-[![](attachments/horizon_create_ike_policy_details.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
+[![](attachments/horizon_create_ike_policy_details.png)](https://optimist.gec.io/project/vpn/)
 
 2. Create the IPSec policy.
 
 Still within _Network → VPN_, select IPSec Policies and click _Add IPsec Policy_.
 
-[![](attachments/horizon_create_ipsec_policy.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
+[![](attachments/horizon_create_ipsec_policy.png)](https://optimist.gec.io/project/vpn/)
 
 Give your IPSec policy a name, and fill in the IPSec policy parameters. Click _Add_.
 
-[![](attachments/horizon_create_ipsec_policy_details.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
+[![](attachments/horizon_create_ipsec_policy_details.png)](https://optimist.gec.io/project/vpn/)
 
 #### Using the CLI
 
@@ -287,11 +287,11 @@ $ openstack vpn ipsec policy create \
 
 Within your project, navigate to _Network → VPN_, select _VPN Services_ and click _Add VPN Service_.
 
-[![](attachments/horizon_create_vpn.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
+[![](attachments/horizon_create_vpn.png)](https://optimist.gec.io/project/vpn/)
 
 Give your VPN service a name, select your router and _Enable Admin State_. A subnet is not needed as we will be using endpoint groups. Click _Add_.
 
-[![](attachments/horizon_create_vpn_details.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
+[![](attachments/horizon_create_vpn_details.png)](https://optimist.gec.io/project/vpn/)
 
 #### Using the CLI
 
@@ -329,11 +329,11 @@ When using multiple subnets, make sure your VPN endpoint supports routing multip
 
 Within your project, navigate to _Network → VPN_, select _Endpoint Groups_ and click _Add Endpoint Group_.
 
-[![](attachments/horizon_create_endpoint_group.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
+[![](attachments/horizon_create_endpoint_group.png)](https://optimist.gec.io/project/vpn/)
 
 Give your endpoint group a name, select the _Type_ "Subnet" and select your subnet under _Local System Subnets_. Click _Add_.
 
-[![](attachments/horizon_create_endpoint_group_left_local_details.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
+[![](attachments/horizon_create_endpoint_group_left_local_details.png)](https://optimist.gec.io/project/vpn/)
 
 2. Create the peer endpoint group for the left side.
 
@@ -341,7 +341,7 @@ Still within _Network → VPN_, Endpoint Groups, click _Add Endpoint Group_ agai
 
 Give your endpoint group a name, select the _Type_ "CIDR" and enter the subnet of the right side. Click _Add_.
 
-[![](attachments/horizon_create_endpoint_group_left_remote_details.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
+[![](attachments/horizon_create_endpoint_group_left_remote_details.png)](https://optimist.gec.io/project/vpn/)
 
 #### Using the CLI
 
@@ -395,12 +395,12 @@ Just like with the endpoint groups, if your VPN endpoint does not support routin
 
 Within your project, navigate to _Network → VPN_, select _IPSec Site Connections_ and click _Add IPSec Site Connection_.
 
-[![](attachments/horizon_create_site_connection.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
+[![](attachments/horizon_create_site_connection.png)](https://optimist.gec.io/project/vpn/)
 
 Give your connection a name, select the previously created VPN service, local endpoint group, IKE and IPSec policy, Pre-Shared Key, Peer IP and router identity.
 For the purposes of this guide, we will assume that `2001:db8::4:703` is the IP address of the right router.
 
-[![](attachments/horizon_create_site_connection_details.png)](https://dashboard.optimist.innovo.cloud/project/vpn/)
+[![](attachments/horizon_create_site_connection_details.png)](https://optimist.gec.io/project/vpn/)
 
 #### Using the CLI
 

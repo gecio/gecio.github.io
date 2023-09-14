@@ -25,9 +25,9 @@ dashboard.
 need a new password, write an e-mail to <support@gec.io>
 
 The URL for the dashboard is
-<https://dashboard.optimist.innovo.cloud>
+<https://optimist.gec.io>
 
-[![](attachments/13536092.png)](https://dashboard.optimist.innovo.cloud/)
+[![](attachments/13536093.png)](https://optimist.gec.io/)
 
 The login form appears. Use *default* for the *Domain* field, and enter
 your user name and password in the relevant fields.

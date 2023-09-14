@@ -14,7 +14,7 @@ Normally, creating a PVC (PersistentVolumeClaim) in one of our Kubernetes cluste
 
 As a prerequisite, you need an existing, unused volume in Openstack. This could be the case, for example, if you have deleted a cluster without deleting all attached PVCs before, or if you want to move a volume from one cluster to another.
 
-To be able to use an existing Openstack volume in a Kubernetes cluster, you need to find out its ID. To do so, go to the [Openstack/Optimist Dashboard](https://dashboard.optimist.innovo.cloud/auth/login/):
+To be able to use an existing Openstack volume in a Kubernetes cluster, you need to find out its ID. To do so, go to the [Openstack/Optimist Dashboard](https://optimist.gec.io/auth/login/):
 
 ![Openstack Login](../images/RestPVC01.png)
 

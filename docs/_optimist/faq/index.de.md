@@ -123,3 +123,29 @@ UUID zu verwenden. Beispiel:
 Wir unterstützen keine multi-attached Volumes in der Optimist Platform, da für die Nutzung von multi-attached Volumes clusterfähige Dateisysteme erforderlich sind, um den gleichzeitigen Zugriff auf das Dateisystem zu koordinieren.
 Versuche, multi-attached Volumes ohne clusterfähige Dateisysteme zu verwenden, bergen ein hohes Risiko für Datenkorruption, daher ist diese Funktion auf der Optimist Plattform nicht aktiviert.
 
+## Warum kann ich keinen Snapshot einer laufenden Instance erstellen?
+
+Um konsistente Snapshots zu erstellen, verwendet die Optimist-Plattform das Property [os_require_quiesce=yes](https://opendev.org/openstack/nova/commit/926e58a179ef373646164bea40dc46b1ebef4748).
+Diese Eigenschaft ermöglicht die Nutzung von `fsfreeze`, um den Zugriff auf laufende Instanzen auszusetzen, um einen konsistenten Snapshot der Instanz zu erstellen.
+
+Zur Erstellung von Snapshots von Instanzen stehen in der Optimist Platform die folgenden Optionen zur Verfügung:
+
+Die erste Option besteht darin, einen Snapshot der laufenden Instanz zu erstellen, indem der `qemu-guest-agent` installiert und ausgeführt wird. Dieser kann wie folgt installiert und ausgeführt werden:
+
+```bash
+apt install qemu-guest-agent
+systemctl start qemu-guest-agent
+systemctl enable qemu-guest-agent
+```
+
+Außerdem empfehlen wir beim [Hochladen Ihrer eigenen Images](https://docs.gec.io/de/optimist/specs/images/#uploading-your-own-images), dass Sie `--property hw_qemu_guest_agent=True` als Property an Ihren Images hinzufügen.
+
+Sobald der qemu-guest-agent läuft, kann der Snapshot erstellt werden.
+
+Die zweite Möglichkeit besteht darin, die laufende Instanz zu stoppen, den Snapshot zu erstellen und die Instanz schließlich erneut zu starten. Dies kann über das Horizon Dashboard oder auf der CLI wie folgt erfolgen:
+
+```bash
+openstack server stop ExampleInstance
+openstack server image create --name ExampleInstanceSnapshot ExampleInstance
+openstack server start ExampleInstance
+```

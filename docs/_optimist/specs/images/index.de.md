@@ -26,6 +26,7 @@ Aktuell enthält diese Liste:
 - Ubuntu 22.04 LTS (Jammy Jellyfish)
 - Ubuntu 20.04 LTS (Focal Fossa)
 - Ubuntu 18.04 LTS (Bionic Beaver)
+- Debian 12 (Bookworm)
 - Debian 11 (Bullseye)
 - Debian 10 (Buster)
 - CentOS 8

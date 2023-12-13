@@ -1,30 +1,24 @@
 ---
-title: "24: Der Octavia Loadbalancer"
+title: Octavia Loadbalancers
 lang: "de"
-permalink: /optimist/guided_tour/step24/
-nav_order: 1240
-parent: Guided Tour
+permalink: /optimist/networking/octavia_loadbalancer/
+parent: Networking
+nav_order: 2300
 ---
 
-Schritt 24: Der Octavia Loadbalancer
-=================================================
+# Der Octavia Loadbalancer
 
-Vorwort
--------
+## Vorwort
 
-In den vorherigen Schritten haben wir bereits einige interessante Bausteine kennengelernt.
-Als nächstes widmen wir uns dem [Ocatavia Loadbalancer](https://wiki.openstack.org/wiki/Octavia).
-Octavia ist eine hochverfügbare und skalierbare Open-Source Load-Balancing-Lösung, die für die Arbeit mit OpenStack entwickelt wurde.
+[Octavia](https://wiki.openstack.org/wiki/Octavia) ist eine hochverfügbare und skalierbare Open-Source Load-Balancing-Lösung, die für die Arbeit mit OpenStack entwickelt wurde.
 Octavia erledigt das Load-Balancing nach Bedarf, indem es virtuelle Maschinen – auch Amphoren genannt – in seinem Projekt verwaltet und konfiguriert.
 In diesen Amphoren wirkt schlussendlich ein [HAproxy](https://www.haproxy.com/).
 
-Der Start
------
+## Der Start
 
 Für die Nutzung von Octavia ist es notwendig, dass der Client auf dem eigenen System installiert ist. Eine Anleitung für sein System findet man unter [Schritt 4](/optimist/guided_tour/step04/))
 
-Erstellung eines Octavia-Ladbalancer
------
+## Erstellung eines Octavia-Ladbalancer
 
 Für unser Beispiel nutzen wir das aus [Schritt 10](/optimist/guided_tour/step10/) schon bestehende BeispielSubnet.
 
@@ -76,8 +70,7 @@ $ openstack loadbalancer list
 +--------------------------------------+-------------+----------------------------------+--------------+---------------------+----------+
 ```
 
-Erstellen eines LB-Listener
------
+## Erstellen eines LB-Listener
 
 In unserem Beispiel wollen wir einen Listener für den HTTP-Port 80 erstellen.
 
@@ -127,8 +120,7 @@ $ openstack loadbalancer listener list
 +--------------------------------------+-----------------+-------------------+----------------------------------+----------+---------------+----------------+
 ```
 
-Erstellen eines LB-Pools
------
+## Erstellen eines LB-Pools
 
 Als LB-Pool ist hier eine Ansammlung aller Objekte (Listeners, Member, etc.) für zum Beispiel eine Region gemeint - vergleichbar mit einem Pool an öffentlichen IP-Adressen aus derer man sich eine belegen kann.
 Einen Pool für unser Beispiel erstellt man wie folgt:
@@ -180,8 +172,7 @@ $ openstack loadbalancer pool list
 +--------------------------------------+---------------+----------------------------------+---------------------+----------+--------------+----------------+
 ```
 
-Erstellen der LB-`member`
------
+## Erstellen der LB-`member`
 
 Damit unser Loadbalancer weiß, an welche Backends er weiterleiten darf, fehlen uns noch sogenannte `member`, die wir wie folgt definieren:
 
@@ -271,8 +262,7 @@ Wir haben nun:
 
 Der `operating_status` `NO_MONITOR` wird unter [healthmonitor](schritt24.md#erstellen-eines-healthmonitor) korrigiert.
 
-Erstellen und konfigurieren der Floating-IP
------
+## Erstellen und konfigurieren der Floating-IP
 
 Damit wir auch den Loadbalancer außerhalb unseres Beispiel-Netzwerk einsetzen können, müssen wir eine FloatingIP reservieren und diese dann mit dem `vip_port_id` des `Beispiel-LB` verknüpfen.
 
@@ -335,8 +325,7 @@ you hit: webserver1
 ... (usw.)
 ```
 
-Erstellen eines healthmonitor
------
+## Erstellen eines healthmonitor
 
 Mit dem folgenden Befehl erstellen wir einen Monitor, der bei einem Ausfall eines der Backends genau dieses fehlerhafte Backend aus der Lastverteilung nimmt und somit die Webseite oder Applikation weiterhin sauber ausgeliefert wird.
 
@@ -433,8 +422,65 @@ you hit: webserver1
 Mi 22 Mai 2019 17:10:06 CEST
 ```
 
-Bekannte Probleme
------
+## Monitoring mit Prometheus
+
+Der Octavia Amphora-Driver bietet einen Prometheus-Endpunkt. Auf diese Weise können Sie Metriken von Octavia-Loadbalancern sammeln.
+
+Um einen Prometheus-Endpunkt zu einem vorhandenen Octavia-Load-Balancer hinzuzufügen, erstellen Sie einen Listener mit dem Protokoll `PROMETHEUS`. Dadurch wird der Endpunkt als `/metrics` auf dem Listener aktiviert. Der Listener unterstützt alle Funktionen eines Octavia-Load-Balancers, z. B. allowed_cidrs, unterstützt jedoch nicht das Anhängen von Pools oder L7-Richtlinien. Alle Metriken werden durch die Octavia-Objekt-ID (UUID) der Ressourcen identifiziert.
+
+Hinweis: Derzeit werden UDP- und SCTP-Metriken nicht über Prometheus-Endpunkte gemeldet, wenn der Amphora-Provider verwendet wird.
+
+Um beispielsweise einen Prometheus-Endpunkt auf Port 8088 für den Load Balancer `lb1` zu erstellen, führen Sie den folgenden Befehl aus:
+
+```bash
+$ openstack loadbalancer listener create --name stats-listener --protocol PROMETHEUS --protocol-port 8088 lb1
++-----------------------------+--------------------------------------+
+| Field                       | Value                                |
++-----------------------------+--------------------------------------+
+| admin_state_up              | True                                 |
+| connection_limit            | -1                                   |
+| created_at                  | 2021-10-03T01:44:25                  |
+| default_pool_id             | None                                 |
+| default_tls_container_ref   | None                                 |
+| description                 |                                      |
+| id                          | fb57d764-470a-4b6b-8820-627452f55b96 |
+| insert_headers              | None                                 |
+| l7policies                  |                                      |
+| loadbalancers               | b081ed89-f6f8-48cb-a498-5e12705e2cf9 |
+| name                        | stats-listener                       |
+| operating_status            | OFFLINE                              |
+| project_id                  | 4c1caeee063747f8878f007d1a323b2f     |
+| protocol                    | PROMETHEUS                           |
+| protocol_port               | 8088                                 |
+| provisioning_status         | PENDING_CREATE                       |
+| sni_container_refs          | []                                   |
+| timeout_client_data         | 50000                                |
+| timeout_member_connect      | 5000                                 |
+| timeout_member_data         | 50000                                |
+| timeout_tcp_inspect         | 0                                    |
+| updated_at                  | None                                 |
+| client_ca_tls_container_ref | None                                 |
+| client_authentication       | NONE                                 |
+| client_crl_container_ref    | None                                 |
+| allowed_cidrs               | None                                 |
+| tls_ciphers                 | None                                 |
+| tls_versions                | None                                 |
+| alpn_protocols              | None                                 |
+| tags                        |                                      |
++-----------------------------+--------------------------------------+
+```
+
+Sobald der PROMETHEUS-Listener AKTIV ist, können Sie Prometheus so konfigurieren, dass es Metriken vom Load Balancer sammelt, indem Sie die Datei prometheus.yml aktualisieren.
+
+```yaml
+[scrape_configs]
+- job_name: 'Octavia LB1'
+  static_configs:
+  - targets: ['192.0.2.10:8088']
+```
+
+
+## Bekannte Probleme
 
 Wenn sie bei der Zuweisung der öffentliche IP Adresse zum Loadbalancer folgenden Fehler bekommen:
 
@@ -462,8 +508,7 @@ openstack loadbalancer listener set --timeout_member_data 14400000 <Listener ID>
 
 Wenn Octavia versucht, einen LB mit `port_security_enabled = False` in einem Netzwerk zu starten, wird der LB in den Status ERROR versetzt.
 
-Abschluss
------
+## Abschluss
 
 Es macht durchaus Sinn immer einen Monitor für seinen Pool zu etablieren.
 ![](attachments/201905S240012.png)

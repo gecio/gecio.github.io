@@ -1,18 +1,16 @@
 ---
-title: "24: The Octavia Loadbalancer"
+title: Octavia Loadbalancers
 lang: "en"
-permalink: /optimist/guided_tour/step24/
-nav_order: 1240
-parent: Guided Tour
+permalink: /optimist/networking/octavia_loadbalancer/
+parent: Networking
+nav_order: 2300
 ---
 
-# Step 24: The Octavia Loadbalancer
+# The Octavia Loadbalancer
 
 ## Preface
 
-In the previous steps we learned about some interesting OpenStack features.
-Next, let's have a look at the [Ocatavia Loadbalancer](https://wiki.openstack.org/wiki/Octavia).
-Octavia is a highly-available and scalable open source load balancing solution designed to work with OpenStack. Octavia handles load balancing services by managing and configuring a fleet of virtual machines – also known as amphorae – in its project. These amphorae run a [HAproxy](https://www.haproxy.com/).
+[Octavia](https://wiki.openstack.org/wiki/Octavia) is a highly-available and scalable open source load balancing solution designed to work with OpenStack. Octavia handles load balancing services by managing and configuring a fleet of virtual machines – also known as amphorae – in its project. These amphorae run a [HAproxy](https://www.haproxy.com/).
 
 ## First Steps
 
@@ -420,6 +418,64 @@ you hit: webserver1
 Mi 22 Mai 2019 17:10:06 CEST
 ```
 
+## Monitoring with Prometheus
+
+The Octavia amphora driver provides a Prometheus endpoint. This allows you to collect metrics from Octavia load balancers.
+
+To add a Prometheus endpoint on an existing Octavia load balancer, create a listener with the protocol `PROMETHEUS`. This will enable the endpoint as `/metrics` on the listener. The listener supports all the features of an Octavia load balancer, such as allowed_cidrs, but it does not support attaching pools or L7 policies. All metrics are identified by the Octavia object ID (UUID) of the resources.
+
+Note: Currently, UDP and SCTP metrics are not reported via Prometheus endpoints when using the amphora provider.
+
+For example, to create a Prometheus endpoint on port 8088 for load balancer `lb1`, run the following command:
+
+```bash
+$ openstack loadbalancer listener create --name stats-listener --protocol PROMETHEUS --protocol-port 8088 lb1
++-----------------------------+--------------------------------------+
+| Field                       | Value                                |
++-----------------------------+--------------------------------------+
+| admin_state_up              | True                                 |
+| connection_limit            | -1                                   |
+| created_at                  | 2021-10-03T01:44:25                  |
+| default_pool_id             | None                                 |
+| default_tls_container_ref   | None                                 |
+| description                 |                                      |
+| id                          | fb57d764-470a-4b6b-8820-627452f55b96 |
+| insert_headers              | None                                 |
+| l7policies                  |                                      |
+| loadbalancers               | b081ed89-f6f8-48cb-a498-5e12705e2cf9 |
+| name                        | stats-listener                       |
+| operating_status            | OFFLINE                              |
+| project_id                  | 4c1caeee063747f8878f007d1a323b2f     |
+| protocol                    | PROMETHEUS                           |
+| protocol_port               | 8088                                 |
+| provisioning_status         | PENDING_CREATE                       |
+| sni_container_refs          | []                                   |
+| timeout_client_data         | 50000                                |
+| timeout_member_connect      | 5000                                 |
+| timeout_member_data         | 50000                                |
+| timeout_tcp_inspect         | 0                                    |
+| updated_at                  | None                                 |
+| client_ca_tls_container_ref | None                                 |
+| client_authentication       | NONE                                 |
+| client_crl_container_ref    | None                                 |
+| allowed_cidrs               | None                                 |
+| tls_ciphers                 | None                                 |
+| tls_versions                | None                                 |
+| alpn_protocols              | None                                 |
+| tags                        |                                      |
++-----------------------------+--------------------------------------+
+```
+
+Once the PROMETHEUS listener is ACTIVE, you can configure Prometheus to collect metrics from the load balancer by updating the prometheus.yml file.
+
+```yaml
+[scrape_configs]
+- job_name: 'Octavia LB1'
+  static_configs:
+  - targets: ['192.0.2.10:8088']
+```
+
+
 ## Known Issues
 
 If you get the following error when assigning the public IP address to the loadbalancer:
@@ -453,3 +509,5 @@ If Octavia tries to start a LB in a network with `port_security_enabled = False`
 
 It always makes sense to establish a monitor for your pool.
 ![](attachments/201905S240012.png)
+
+

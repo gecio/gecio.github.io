@@ -15,7 +15,7 @@ verfügbaren Flavors aufgelistet sind.
 
 ## Migration zwischen Flavor-Typen
 
-Um die Flavors bestehender Instanzen zu ändern, kann die OpenStack-Option „Resize Instance“ entweder über das Dashboard oder die CLI verwendet werden. Dies führt zu einem Neustart der Instanz, aber der Inhalt der Instanz bleibt erhalten.
+Um die Flavors bestehender Instanzen zu ändern, kann die OpenStack-Option [„Resize Instance“](/optimist/faq/#wie-kann-ich-den-flavor-einer-instanz-ändern-instance-resize) entweder über das Dashboard oder die CLI verwendet werden. Dies führt zu einem Neustart der Instanz, aber der Inhalt der Instanz bleibt erhalten. Bitte beachten Sie, dass die Größe von Flavors nur von `small` auf `large` geändert werden kann (und nicht umgekehrt).
 
 {: .warning-title }
 >Warnung

@@ -112,6 +112,9 @@ collections:
   gks:
     output: true
     sort_by: nav_order
+  edge:
+    output: true
+    sort_by: nav_order
 
 collections_dir: docs
 
@@ -127,12 +130,18 @@ defaults:
       type: "optimist"
     values:
       layout: "default"
+  - scope:
+      path: "**/*.md"
+      type: "edge"
+    values:
+      layout: "default"
 
   - scope:
       path: "**/*.md"
       type: "gks"
     values:
       layout: "default"
+
 
 just_the_docs:
   # Define which collections are used in just-the-docs
@@ -150,7 +159,10 @@ just_the_docs:
       # Exclude the collection from the search
       # Supports true or false (default)
       search_exclude: false
-
+    edge:
+      name: Oncite Open Edition
+      nav_exclude: false
+      search_exclude: false
     optimist:
       # Give the collection a name
       name: Optimist

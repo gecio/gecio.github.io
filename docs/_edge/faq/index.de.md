@@ -154,12 +154,16 @@ Nein, das ist nicht vorgesehen.
 Anstelle des Benutzers "operation" muss für Windows VMs der Benutzer des ausgewählten images verwendet werden. Oft Administrator.
 
 ## General
-Wie können die Hardware Server runter/hoch gefahren werden? z.B. bei einer kurzfristigen Stromabschaltung.
+
+### Wie können die Hardware Server runter/hoch gefahren werden? z.B. bei einer kurzfristigen Stromabschaltung.
 Aktuell nur per Anfrage im Jira Helpdesk
 
 ### Starten die Server nach Strom automatisch?
 Die Server Starten automatisch aber die Edge ist nicht automatisch nutzbar, die bei einem geregelten Herunterfahren die CEPH Replikation deaktiviert wird.
 Diese muss bei einem Neustart wieder aktiviert werden.
+
+### Wenn das beigefügte Windows Image ausgewählt ist, ist da bereits eine Lizenz mit dabei. Um was für eine Lizenz handelt es sich?
+Es handelt sich um eine Trial Lizenz von Microsoft. Bei Windows VM's, ist der Kunde für den Erwerb und das Einfügen einer Lizenz verantwortlich.
 
 ### NVLink und NVSwitches
 NV Link und NVSwitches verbinden NVidia Grafikkarten zum direkten Austausch von Daten zwischen den Grafikkarten.

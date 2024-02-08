@@ -20,13 +20,13 @@ Sonst ist der zugriff auch über die Openstack CLI möglich
 ### Wie kann die Plattengröße einer bestehenden VM erweitert werden?
 Dies ist in der aktuellen Openstack Version nicht möglich.
 
-### Wie kann ich den Router bearbeiten und Konfigurieren?
+%### Wie kann ich den Router bearbeiten und Konfigurieren?
 
 
-### Wie kann man einen SSH key einer vorhandenen VM hinzufügen?
+%### Wie kann man einen SSH key einer vorhandenen VM hinzufügen?
 
 
-### Terraform API
+%### Terraform API
 
 
 ### Welche Subnetze gibt es
@@ -45,7 +45,7 @@ Die Einhaltung der Zonen erfolgt im OperationsCenter über die Security Rules un
 
 ## Operations Center
 ### Wie werden User hinzugefügt?
-Der Zugriff auf das Operations Center  wird über Fraunhofer SSO realisiert. Nachdem Benutzer sich angemeldet haben können sie durch Projekteigentümer zu einem Projekt hinzugefügt werden.
+Der Zugriff auf das Operations Center  wird über SSO realisiert. Nachdem Benutzer sich angemeldet haben können sie durch Projekteigentümer zu einem Projekt hinzugefügt werden.
 
 Jeder Nutzer kann eigene Projekte anlegen.
 
@@ -112,14 +112,11 @@ Die Projekte vom Operations Center  sind auch in Horizon sichtbar. Projekte, die
 ### Wie können VMs gestartet werden?
 Der Start von VMs ist über die Schaltfläche "Starten" im Operations Center möglich.
 
-### Starten die Server nach einem Stromausfall automatisch?
-Nein.
-
 ### Wie kann die Plattengröße einer bestehenden VM erweitert werden?
 Es ist nicht möglich.
 
 ### Wie können externe/interne User gelöscht werden?
-Interne User werden über das Fraunhoffer SSO authentifiziert. Werden sie dort deaktiviert, werden sie automatisch gesperrt.
+Interne User werden über das SSO authentifiziert. Werden sie dort deaktiviert, werden sie automatisch gesperrt.
 
 Externe Benutzer können in der Übersicht der Externen Benutzer im Operations Center  von Administratoren gelöscht werden.
 
@@ -131,6 +128,20 @@ Es können im Operations Center  keine zusätzlichen Routen eingerichtet werden.
 
 ### Wie kann man einen SSH key einer vorhandenen VM hinzufügen?
 Es ist nicht möglich SSH keys nach der Erstellung einer VM über das Operations Center  hinzuzufügen. Dies müssen direkt in der VM hinzugefügt werden.
+
+### Volumegrößen
+Das Operations Center erlaubt das Anlegen von Volumes in unterschiedlichen Größen. Die Liste kann auf Anfrage erweitert werden.
+
+### Kann das Operations Center per API konfiguriert werden
+Nein, das ist nicht vorgesehen.
+
+### Wie kann ich mich bei einer Windows VM anmelden? Der User operation funktioniert nicht mit dem eingegebenen Passwort.
+Anstelle des Benutzers "operation" muss für Windows VMs der Benutzer des ausgewählten images verwendet werden. Oft Administrator.
+
+## General
+
+### Starten die Server nach einem Stromausfall automatisch?
+Nein.
 
 ### Zonen
 
@@ -144,16 +155,6 @@ Als spezial Zone kann auf Anfrage eine Lab Zone eingerichtet werden mit direkt V
 
 Die Zonen werden durch das Operations Center verwaltet. Bei Projekten, die in Openstack angelegt werden, ist der Nutzer selbst verantwortlich.
 
-### Volumegrößen
-Das Operations Center erlaubt das Anlegen von Volumes in unterschiedlichen Größen. Die Liste kann auf Anfrage erweitert werden.
-
-### Kann das Operations Center per API konfiguriert werden
-Nein, das ist nicht vorgesehen.
-
-### Wie kann ich mich bei einer Windows VM anmelden? Der User operation funktioniert nicht mit dem eingegebenen Passwort.
-Anstelle des Benutzers "operation" muss für Windows VMs der Benutzer des ausgewählten images verwendet werden. Oft Administrator.
-
-## General
 
 ### Wie können die Hardware Server runter/hoch gefahren werden? z.B. bei einer kurzfristigen Stromabschaltung.
 Aktuell nur per Anfrage im Jira Helpdesk

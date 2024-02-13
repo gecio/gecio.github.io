@@ -11,16 +11,13 @@ parent: Operations Center
 
 ## Übersicht
 
-Die Kunden-OpenStack-Projekte und das Operations Center über das OpenStack Project VPN Gateway kommunizieren.
-Das OpenStack Project VPN Gateway hat eine öffentliche IP-Adresse. Es authentifiziert und leitet den Datenverkehr über die verschiedenen Ports zum jeweiligen VPN-Server weiter.
-In der Regel hat jedes Projekt einen VPN-Server.
-In dieser Konfiguration hat jedes VPN-Gateway eine öffentliche IP-Adresse, die für alle VPN-Server gültig ist.
+Dieser Abschnitt veranschaulicht, wie die Nutzer mit dem Kundenprojekte von OpenStack über das OpenStack-Projekt-VPN-Gateway kommunizieren. Das OpenStack-Projekt-VPN-Gateway verwendet eine einzige öffentliche IP-Adresse. Es authentifiziert und leitet den Datenverkehr über verschiedene Ports zu den jeweiligen VPN-Servern weiter. Typischerweise hat jedes Projekt seinen eigenen VPN-Server. In dieser Konfiguration hat jedes VPN-Gateway eine einzige öffentliche IP-Adresse, die für alle VPN-Server gültig ist.
 
-![VPNaaS Übersicht](./vpn_overview.png)
+![VPNaaS Überblick](./vpn_overview.png)
 
 ## Zweck
 
-GEC bietet eine VPNaaS-Lösung, die es dem Kunden ermöglicht, seine Anwendungen und Systeme mit den Systemen der Projektpartner zu integrieren. Ein externer Partner ist entweder eine Person, die mit ihrem Computer auf das Projekt zugreift, oder ein Kommunikationssystem.
+GEC bietet eine VPNaaS-Lösung an, die es dem Kunden ermöglicht, ihre Anwendungen und Systeme mit den Systemen von Projektpartner zu integrieren. Externer Partner können Einzelpersonen sein, die mit ihren Computern oder Kommunikationssystemen auf das Projekt zugreifen.
 
 ## Anforderungen
 
@@ -30,31 +27,31 @@ Die VPNaaS-Lösung hat folgende Anforderungen:
 
 ## Einschränkungen
 
-Die VPNaaS-Lösung hat folgende Einschränkungen:
+Die VPNaaS-Lösung unterliegt den folgenden Einschränkungen:
 
-- Die Anzahl der VPN-Server ist durch den vordefinierten Portbereich im Gateway begrenzt.
-- Die Anzahl der Benutzer in einem Netzwerk ist auf 250 begrenzt.
-- Die Gateway- und Serverkonfiguration kann nach der Erstellung nicht geändert werden und muss neu erstellt werden.
-- Nach der Neuerstellung sind alle OVPN-Konfigurationen ungültig.
+- Die Anzahl der VPN-Server wird durch den vordefinierten Portbereich im Gateway begrenzt.
+- Das Netzwerk unterstützt bis zu 250 Benutzer.
+- Konfigurationsänderungen am Gateway und Server sind nach der Erstellung nicht möglich; sie müssen neu erstellt werden.
+- Nach der Neuerstellung werden alle OVPN-Konfigurationen ungültig.
 
 ## Komponenten und Kommunikationsfluss
 
-Hier sehen Sie den Kommunikationsfluss zwischen dem Operations Center und den Kunden-VPN-Servern. Der Kunde sendet eine Anfrage, und das VPN-Gateway authentifiziert und verteilt die Anfragen an den jeweiligen VPN-Server.
+Dieser Abschnitt umreißt den Kommunikationsfluss zwischen dem Operations Center und den Kunden-VPN-Servern. Der Kunde initiiert eine Anfrage, und das VPN-Gateway authentifiziert und leitet die Anfragen an den jeweiligen VPN-Server weiter.
 
-![VPN-Komponenten und Kommunikationsfluss](./communicationflow.png)
+![VPN Komponenten und Kommunikationsfluss](./communicationflow.png)
 
-### VPN-Gateway
+### VPN Gateway
 
-Das VPN-Gateway ist der zentrale Verwaltungshub dec GEC.
-Es wird verwendet, um VPN-Server zu verwalten und externe Verbindungen zuzulassen.
-Da nur eine öffentliche IP-Adresse verfügbar ist, werden IPtable-Regeln verwendet, um sicherzustellen, dass die Verbindungen beim richtigen VPN-Server ankommen.
-Hierfür ist ein Wide Area Network (WAN)-Netzwerk und ein mit dem VPN-Gateway verbundenes VPN Transfer Network erforderlich.
-Das VPN-Gateway verwaltet nur VPN-Server und Proxyverbindungen zu und von den VPN-Servern, sodass der Datenverkehr nur dort endet, wo er benötigt wird.
+Das VPN-Gateway dient als zentrale Managementzentrale für GEC.
+Es verwaltet VPN-Server und die Externe Verbindungen.
+Mit nur einer öffentlichen IP-Adresse stellen IPtable-Regeln sicher, dass Verbindungen zum richtigen VPN-Server geleitet werden.
+Diese Einrichtung erfordert ein Wide Area Network (WAN) und ein mit dem VPN-Gateway verbundenes VPN-Transfernetzwerk.
+Das VPN-Gateway verwaltet ausschließlich VPN-Server und Proxy-Verbindungen zu und von diesen Servern, um sicherzustellen, dass der Datenverkehr sein beabsichtigtes Ziel erreicht.
 
-### VPN-Server
+### VPN Server
 
-Der VPN-Server verwendet OpenVPN für die VPN-Verbindung zum Kundenetzwerk.
-Diese Netzwerkverbindung befindet sich in einem anderen Virtual Routing and Forwarding (VRF), um zusätzliche Isolation zu bieten, ohne andere Ports zu öffnen.
+Der VPN-Server verwendet OpenVPN, um VPN-Verbindungen mit dem Kundennetzwerk herzustellen.
+Diese Netzwerkverbindung arbeitet in einem eigenen Virtual Routing and Forwarding (VRF), um die Isolation zu verbessern, ohne zusätzliche Ports freizugeben.
 Externe Verbindungen werden über das VPN-Gateway geroutet.
 Der API-Server für den VPN-Server verwaltet den auf der Maschine laufenden OpenVPN-Server.
 
@@ -62,25 +59,25 @@ Der API-Server für den VPN-Server verwaltet den auf der Maschine laufenden Open
 
 ### WAN
 
-- Nur die für die vorhandenen VPN-Server erforderlichen Ports sind geöffnet.
-- SSH wird nicht verwendet.
+- Nur die für die bestehende VPN-Server erforderlichen Ports sind geöffnet.
+- SSH ist deaktiviert.
 - Virtual Routing and Forwarding (VRF)-Trennung ist verfügbar.
 - Sicherheitsgruppen erlauben nur die VPN-Server-Portbereiche.
 - Firewall-Regeln sind vorhanden und werden bei Bedarf angepasst.
 
 ### VPNaaS
 
-- Separates VRF zum WAN.
+- Separate VRF wird für WAN verwendet.
 - Firewall-Regeln sind vorhanden und werden bei Bedarf angepasst.
-- SSH und API sind verfügbar.
-- SSH-Schlüssel werden verwendet.
+- SSH- und API-Zugriff werden bereitgestellt.
+- SSH-Schlüsselauthentifizierung wird verwendet.
 
 ## Server- und Benutzerverwaltung
 
 ### Serverstatus
 
 1. Klicken Sie auf die VPN-Ressource.
-2. Überprüfen Sie unter Eigenschaften den Status. Um die Konfiguration bearbeiten zu können, muss der Status aktiv sein.
+2. Überprüfen Sie den Status unter Eigenschaften. Die Konfigurationsbearbeitung ist nur möglich, wenn der Status aktiv ist.
 ![Benutzerressource](./vpnaas_active-resource.png)
 
 ### Benutzer hinzufügen
@@ -90,10 +87,10 @@ Der API-Server für den VPN-Server verwaltet den auf der Maschine laufenden Open
 *Voraussetzungen*: Sie können nur Benutzer auswählen, die zuvor dem Projekt hinzugefügt wurden.
 
 1. Gehen Sie zur VPN-Konfiguration.
-2. Wählen Sie den Benutzer aus, den Sie als VPN-Benutzer hinzufügen möchten.
+2. Wählen Sie den gewünschten Benutzer aus, um ihn als VPN-Benutzer hinzuzufügen.
 ![Benutzererstellung](./vpnaas_select-new-user.png)
 
-3. Klicken Sie auf Speichern. Der Benutzer wird sofort hinzugefügt.
+3. Speichern Sie die Auswahl. Der Benutzer wird sofort hinzugefügt.
 ![Bestätigen Sie die Benutzererstellung](./vpnaas_save-new-user.png)
 
 ### OVPN-Konfiguration und Passphrase erhalten

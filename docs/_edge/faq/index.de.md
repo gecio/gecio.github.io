@@ -25,20 +25,19 @@ Dies ist in der aktuellen Openstack Version nicht möglich.
 
 ### Welche Subnetze gibt es
 
-Es gibt immer die folgenden Subnetze:
+Die folgenden Subnetze sind immer vorhanden:
 
 * public
 * shared
 * private/internal
 
-Auf Anfrage kann ein viertes netz erstellt werden: Lab
-
-Dieses ist zur direkten Anbindung gedacht ohne die Baraccuda Firewall.
+Auf Anfrage kann ein viertes Netzwerk, Labor, für eine direkte Verbindung ohne die Barracuda Firewall erstellt werden.
 
 ### Wie erfolgt die Trennung der Subnetze:
 
-Die Netzwerke sind rein virtuell über OpenVSwitch realisiert.
-Die Einhaltung der Zonen erfolgt im OperationsCenter über die Security Rules und Security Groups das sind IPFilter Regeln im Openstack Neutron.
+Subnetze werden über OpenVSwitch virtualisiert zur garantierten Trennung können Securityregeln angelegt werden.
+Diese Regeln sind durch IPFilter Regeln in OpenStack Neutron dar.
+Die Einhaltung von Zonen wird im Operations Center über Sicherheitsregeln und Sicherheitsgruppen verwaltet.
 
 ## Operations Center
 

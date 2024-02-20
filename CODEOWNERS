@@ -9,3 +9,4 @@
 # subdirectories.
 /docs/_optimist @gecio/optimist
 /docs/_gks      @gecio/gks
+/docs/_edge      @gecio/ooe

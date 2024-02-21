@@ -1,7 +1,7 @@
 ---
 title: FAQ
 lang: "en"
-permalink: /edge/faq
+permalink: /edge/faq/
 has_children: false
 nav_order: 8000
 ---

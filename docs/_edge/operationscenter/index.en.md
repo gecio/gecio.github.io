@@ -1,7 +1,7 @@
 ---
 title: Operations Center
 lang: "en"
-permalink: /edge/operationscenter
+permalink: /edge/operationscenter/
 has_children: true
 nav_order: 2000
 ---

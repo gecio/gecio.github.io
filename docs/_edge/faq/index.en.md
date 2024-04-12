@@ -77,11 +77,20 @@ On the home page of each project via the member list.
 
 ### How are flavors managed?
 
-Flavors are managed in OpenStack. Each "public" flavor is available for configuration in the OC.
+Flavors are managed in OpenStack. Each "public" flavor is available for configuration in Operations Center.
+
+If a "public" flavor should no longer be selectable in Operations Center when creating a VM, the metadata of the flavor can be changed accordingly.
+To do this, select the flavor in Horizon, click on "Update Metadata", enter *visibility* in the "Custom" field and add it with "+". The field now appears under "Existing Metadata". Enter the value "false" here and
+save the change.
+The flavor can now no longer be selected when creating a new VM. Existing VMs that use this flavor are not affected and can still be managed in Operations Center.
+
+Flavors cannot be restricted to individual users.
 
 ### Are flavors allowed to be deleted?
 
 Yes, but only if it's ensured that no VM is using the flavor. Deletion is done via Horizon.
+
+If a flavor is deleted that is still in use, each project that has a VM using that flavor cannot be managed in Operations Center any more.
 
 ### Where can logs be viewed if a VM has been created but doesn't appear?
 

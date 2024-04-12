@@ -99,6 +99,10 @@ Auf der Startseite jedes Projektes über die Mitgliederliste.
 
 Flavor werden in Openstack verwaltet. Jedes "public" Flavor steht im OC zur Konfiguration bereit.
 
+Falls ein "public" Flavor nicht mehr im Operations Center beim Erstellen einer VM auswählbar sein soll, dann können die Metadaten des Flavors entsprechend geändert werden.
+Dazu in Horizon das Flavor auswählen, auf "Aktualisiere Metadaten" klicken und im Feld "Custom" *visibility* eintragen und mit "+" hinzufügen. Das Feld taucht jetzt unter "Existing Metadata" auf. Hier den Wert "false" eintragen und die Änderung speichern.
+Das Flavor kann jetzt nicht mehr beim erstellen einer neuen VM ausgewählt werden. Bestehende VMs die dieses Flavor benutzen werden nicht beeinflusst und können weiterhin im Operations Center verwaltet werden.
+
 Flavor können nicht auf einzelne Benutzer beschränkt werden.
 
 ### Dürfen Flavor gelöscht werden

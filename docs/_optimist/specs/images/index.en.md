@@ -23,9 +23,9 @@ For your convenience, we're providing you with a number of selected images.
 
 The current list of images is as follows:
 
+- Ubuntu 24.04 LTS (Noble Numbat)
 - Ubuntu 22.04 LTS (Jammy Jellyfish)
 - Ubuntu 20.04 LTS (Focal Fossa)
-- Ubuntu 18.04 LTS (Bionic Beaver)
 - Debian 12 (Bookworm)
 - Debian 11 (Bullseye)
 - Debian 10 (Buster)

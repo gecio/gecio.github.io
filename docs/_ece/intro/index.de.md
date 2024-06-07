@@ -107,7 +107,7 @@ Wir empfehlen hierfür den Elastic Agent in Zusammenarbeit mit dem Fleet Server.
 - Prüfen Sie in Kibana Ihre Index Templates und Lifecycle Policies, damit Sie Ihre Daten den von Ihnen gewünschten Tiers Hot, Warm, Cold, Frozen (und Delete) zuweisen können. Die von Elastic automatisch angelegten Lifecycle Policies haben häufig nur ein Hot Tier ohne Ablaufdatum konfiguriert. Weitere Informationen finden Sie hier: [https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html).
 Dies gilt insbesondere für die standardmäßig deployten Lifecycle Policies **logs** und **metrics**, die bei Verwendung des Elastic Agents die relevantesten Policies sind.
 
-Ein Beispiel für die Konfiguration einer Policy, bei der die Daten nach 70 Tagen gelöscht werden, finden Sie hier: [Aktualisieren der Standard Lifecycle Policies](/ece/updatedata/).
+Ein Beispiel für die Konfiguration einer Policy, bei der die Daten nach 70 Tagen gelöscht werden, finden Sie hier: [Aktualisieren der Standard Lifecycle Policies](/ece/updateilm/).
 
 ## Support-Leistungen von GEC
 

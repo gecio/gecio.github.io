@@ -9,7 +9,7 @@ permalink: pretty
 
 # Theme
 theme: "just-the-docs"
-color_scheme: gec
+color_scheme: wiit
 
 # i18n
 languages: ["en", "de"]
@@ -36,14 +36,14 @@ footer_navigation:
 footer_external_links:
   de:
     - label: Website
-      url: https://gec.io
+      url: https://wiit.cloud
     - label: Impressum
       url: https://gec.io/impressum/
     - label: Datenschutz
       url: https://gec.io/datenschutz/
   en:
     - label: Website
-      url: https://gec.io
+      url: https://wiit.cloud
     - label: Imprint
       url: https://gec.io/impressum/
     - label: Data Privacy
@@ -52,10 +52,10 @@ footer_external_links:
 footer_hosted_with_love:
   de:
     label: "Mit liebe gehostet bei GitHub"
-    url: https://github.com/gecio/gecio.github.io
+    url: https://github.com/wiit-ag/docs
   en:
     label: "Hosted with love on GitHub"
-    url: https://github.com/gecio/gecio.github.io
+    url: https://github.com/wiit-ag/docs
 
 # Plugins
 plugins:

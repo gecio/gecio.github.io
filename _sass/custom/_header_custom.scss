@@ -11,7 +11,7 @@
   margin-bottom: 0;
 }
 
-.language-list-item + .language-list-item {
+.language-list-item+.language-list-item {
   margin-left: $sp-2;
 }
 
@@ -26,12 +26,12 @@
   align-items: center;
 
   &:hover {
-    border-color: #e50043;
+    border-color: #0B194A;
   }
 
   &.active {
     font-weight: 600;
-    border-color: #e50043;
+    border-color: #0B194A;
     color: $link-color;
   }
 }

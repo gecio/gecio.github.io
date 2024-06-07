@@ -103,7 +103,7 @@ We recommend performing the following steps to increase the security of your ECE
 - To avoid connection problems to your cluster, make sure to disable [sniffing](https://www.elastic.co/de/blog/elasticsearch-sniffing-best-practices-what-when-why-how) in the Elasticsearch clients used (e.g. fluentd). Elastic Agent, Filebeat etc. automatically behave correctly.
 - If you want to migrate data from your existing Elastic cluster to your new deployment, you can find some methods in the Elastic documentation: [https://www.elastic.co/guide/en/cloud-enterprise/current/ece-migrating-data.html](https://www.elastic.co/guide/en/cloud-enterprise/current/ece-migrating-data.html).
 - In Kibana, review your index templates and lifecycle policies so you can assign your data to your desired Hot, Warm, Cold, Frozen (and delete) tiers. The lifecycle policies automatically created by Elastic often only have one hot tier configured without an expiry date (see: [https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html)). This applies in particular to the automatically deployed lifecycle policies **logs** and **metrics**, which are the most relevant policies when using the Elastic Agent.
-For an example of configuring a policy that deletes data after 70 days, see: [Update the "Default" ILM](/ece/updatedata/).
+For an example of configuring a policy that deletes data after 70 days, see: [Update the "Default" ILM](/ece/updateilm/).
 
 ## Support Services by GEC
 
